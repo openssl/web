@@ -44,21 +44,26 @@ foreach $f (keys %wmls) {
     $s = "(3)";
     if ($d eq "apps") {
 	$s="(1)";
-	if ($pag eq "config") {
-	    $s="(5)";
-	}
-    } elsif ($d eq "crypto") {
-	if ($pag eq "des_modes") {
-	    $s="(7)";
-	}
+    } else {
+    	$s = "(3)";
     }
+
+    open(PODFILE,"<$f") || die "Couldn't open $f: $!\n";
+    while(<PODFILE>) {
+	if (/=for\s+comment\s+openssl_manual_section:(\S+)/)
+		{
+		$s="($1)";
+		last;
+		}
+    }
+
+    seek(PODFILE, 0, 0);
 
     $page{$pag . $s} = $fs;
     $dependencies{$f} = $pag . $s;
 
     $/ = "";
     $name = 0;
-    open(PODFILE,"<$f") || die "Couldn't open $f: $!\n";
     while(<PODFILE>) {
 	chop;
 	s/\n/ /gm;
