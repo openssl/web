@@ -4,6 +4,7 @@
 
 <snb>
   <snb_button id=tarballs txt="Tarballs"     url=".">
+  <snb_button id=license  txt="License"      url="license.html">
   <snb_button id=repos    txt="Repository"   url="repos.html">
   <snb_button id=mirror   txt="Mirror"       url="mirror.html">
   <snb_button id=cvstrac  txt="CVS"          url="http://cvs.openssl.org/">

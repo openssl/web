@@ -20,7 +20,9 @@ related documentation.
 
 <p>
 OpenSSL is based on the excellent SSLeay library developed by Eric A. Young
-and Tim J. Hudson. The OpenSSL toolkit is licensed under an Apache-style
+and Tim J. Hudson. The OpenSSL toolkit <a href="$(ROOT)/source/license.html">is
+licensed</a>
+under an Apache-style
 licence, which basically means that you are free to get and use it for
 commercial and non-commercial purposes subject to some simple license
 conditions.

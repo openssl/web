@@ -1,0 +1,13 @@
+#!wml -olicense.html@u+x
+
+#use wml::openssl area=source page=license
+
+<title>Source, License</title>
+
+<h1>License</h1>
+This is a copy of the current LICENSE file inside the CVS repository.
+<p>
+
+<pre>
+#include '/e/openssl/exp/openssl/LICENSE'
+</pre>
