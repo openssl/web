@@ -1,0 +1,150 @@
+OpenSSL Security Advisory [30 July 2002]
+
+This advisory consists of two independent advisories, merged, and is
+an official OpenSSL advisory.
+
+Advisory 1
+==========
+
+A.L. Digital Ltd and The Bunker (http://www.thebunker.net/) are
+conducting a security review of OpenSSL, under the DARPA program
+CHATS.
+
+Vulnerabilities
+---------------
+
+All four of these are potentially remotely exploitable.
+
+1. The client master key in SSL2 could be oversized and overrun a
+    buffer. This vulnerability was also independently discovered by
+    consultants at Neohapsis (http://www.neohapsis.com/) who have also
+    demonstrated that the vulerability is exploitable. Exploit code is
+    NOT available at this time.
+
+2. The session ID supplied to a client in SSL3 could be oversized and
+    overrun a buffer.
+
+3. The master key supplied to an SSL3 server could be oversized and
+    overrun a stack-based buffer. This issues only affects OpenSSL
+    0.9.7 before 0.9.7-beta3 with Kerberos enabled.
+
+4. Various buffers for ASCII representations of integers were too
+    small on 64 bit platforms.
+
+The Common Vulnerabilities and Exposures project (cve.mitre.org) has
+assigned the name CAN-2002-0656 to issues 1-2, CAN-2002-0657 to issue
+3, and CAN-2002-0655 to issue 4.
+
+In addition various potential buffer overflows not known to be
+exploitable have had assertions added to defend against them.
+
+Who is affected?
+----------------
+
+Everyone using OpenSSL 0.9.6d or earlier, or 0.9.7-beta2 or earlier or
+current development snapshots of 0.9.7 to provide SSL or TLS is
+vulnerable, whether client or server. 0.9.6d servers on 32-bit systems
+with SSL 2.0 disabled are not vulnerable.
+
+SSLeay is probably also affected.
+
+Recommendations
+---------------
+
+Apply the attached patch to OpenSSL 0.9.6d, or upgrade to OpenSSL
+0.9.6e. Recompile all applications using OpenSSL to provide SSL or
+TLS.
+
+A patch for 0.9.7 is available from the OpenSSL website
+(http://www.openssl.org/).
+
+Servers can disable SSL2, alternatively disable all applications using
+SSL or TLS until the patches are applied. Users of 0.9.7 pre-release
+versions with Kerberos enabled will also have to disable Kerberos.
+
+Client should be disabled altogether until the patches are applied.
+
+Known Exploits
+--------------
+
+There are no know exploits available for these vulnerabilities. As
+noted above, Neohapsis have demonstrated internally that an exploit is
+possible, but have not released the exploit code.
+
+References
+----------
+
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0655
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0656
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0657
+
+Acknowledgements
+----------------
+
+The project leading to this advisory is sponsored by the Defense
+Advanced Research Projects Agency (DARPA) and Air Force Research
+Laboratory, Air Force Materiel Command, USAF, under agreement number
+F30602-01-2-0537.
+
+The patch and advisory were prepared by Ben Laurie.
+
+
+
+Advisory 2
+==========
+
+Vulnerabilities
+---------------
+
+The ASN1 parser can be confused by supplying it with certain invalid
+encodings.
+
+The Common Vulnerabilities and Exposures project (cve.mitre.org) has
+assigned the name CAN-2002-0659 to this issue.
+
+Who is affected?
+----------------
+
+Any OpenSSL program which uses the ASN1 library to parse untrusted
+data. This includes all SSL or TLS applications, those using S/MIME
+(PKCS#7) or certificate generation routines.
+
+Recommendations
+---------------
+
+Apply the patch to OpenSSL, or upgrade to OpenSSL 0.9.6e. Recompile
+all applications using OpenSSL.
+
+Users of 0.9.7 pre-release versions should apply the patch or upgrade
+to 0.9.7-beta3 or later. Recompile all applications using OpenSSL.
+
+Exploits
+--------
+
+There are no known exploits for this vulnerability.
+
+References
+----------
+
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0659
+
+Acknowledgements
+----------------
+
+This vulnerability was discovered by Adi Stav <stav@mercury.co.il>
+and James Yonan <jim@ntlp.com> independently. The patch is partly
+based on a version by Adi Stav.
+
+The patch and advisory were prepared by Dr. Stephen Henson.
+
+
+
+
+Combined patches for OpenSSL 0.9.6d:
+http://www.openssl.org/news/patch_20020730_0_9_6d.txt
+
+Combined patches for OpenSSL 0.9.7 beta 2:
+http://www.openssl.org/news/patch_20020730_0_9_7.txt
+
+URL for this Security Advisory:
+http://www.openssl.org/news/secadv_20020730.txt
