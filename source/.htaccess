@@ -10,5 +10,6 @@ RewriteRule  ^((cvs|exp).*)$  http://www.openssl.org/source/$1 [R,L]
 
 #   backward compatibility
 RewriteRule  ^cvs/(.*)$        http://cvs.openssl.org/     [R,L]
+RewriteRule  ^exp/CHANGES$     http://cvs.openssl.org/getfile?f=openssl/CHANGES [R,L]
 RewriteRule  ^exp/(.*)$        http://cvs.openssl.org/     [R,L]
 
