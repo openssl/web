@@ -38,7 +38,7 @@ $l=""; $n=0; $pre=0; $snip=0;
 while (<FP>) {
     next if /^=+$/;
     if (/^----- snip:start -----/) {
-	print "<listing><pre>" unless $snip;
+	print "<pre><listing>" unless $snip;
 	$snip=1;
     }
     if ($snip) {
@@ -46,7 +46,7 @@ while (<FP>) {
 	print;
     }
     if ($snip && /^----- snip:end -----/) {
-	print "</pre></listing>";
+	print "</listing></pre>";
 	$snip=0;
 	goto cont;
     }
