@@ -36,7 +36,10 @@ OpenSSL) related stuff.
     <item name="SSLeay Certificate Cookbook"
           info="A cookbook on creating certificates and distributing them"
           url="http://www.ultranet.com/~fhirsch/Papers/cook/ssl_cook.html">
-    <item name="OpenSSL for VMS"
+	<item name="Open Source PKI book"
+		  info="Information on how to operate a CA with OpenSSL"
+		  url="http://ospkibook.sourceforge.net/">
+	<item name="OpenSSL for VMS"
           info="A port of OpenSSL to the VMS environment"
           url="http://www.free.lp.se/openssl/">
 </ul>
