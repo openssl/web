@@ -155,7 +155,7 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
           url="ftp://ftp.obdev.at/pub/Products/sslproxy/">
     <item name="OpenSSH"
           info="A port of the OpenSSL-based SSH package derived from OpenBSD"
-          url="http://violet.ibs.com.au/openssh/">
+          url="http://www.openssh.com/">
     <item name="FISH"
           info="An OpenSSL-based SSH client for OpenVMS"
           url="http://www.free.lp.se/fish/">
