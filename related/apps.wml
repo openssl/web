@@ -135,5 +135,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="M2Crypto"
           info="A SWIG based glue code for interfacing OpenSSL with Python"
           url="http://www.post1.com/home/ngps/">
+    <item name="Sendmail-TLS"
+          info="A wrapper for the Sendmail MTA to support SSL connections"
+          url="http://opensource.3gi.com/sendmail-tls/">
 </ul>
 
