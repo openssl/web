@@ -21,9 +21,9 @@
 
 #   insert information about the webpage
 <info style=comment domainname="openssl.org"
-      copyright="1998,1999 The OpenSSL Project, http://www.openssl.org/">
+      copyright="1998-2000 The OpenSSL Project, http://www.openssl.org/">
 <info style=meta domainname="openssl.org"
-      copyright="1998,1999 The OpenSSL Project, http://www.openssl.org/">
+      copyright="1998-2000 The OpenSSL Project, http://www.openssl.org/">
 
 #   insert overideable title container
 <title*>OpenSSL: <<PAGE_TITLE>></title*>

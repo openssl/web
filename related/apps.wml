@@ -34,7 +34,7 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
           info="An SSL encryption wrapper for standard network daemons"
           url="http://mike.daewoo.com.pl/computer/stunnel/">
     <item name="sslwrap"
-          info="Annother SSL encryption wrapper for standard network daemons"
+          info="Another SSL encryption wrapper for standard network daemons"
           url="http://www.rickk.com/sslwrap/">
     <item name="sslfd"
           info="A nice wrapper for the SSLeay libraries using standard file descriptors"
@@ -148,7 +148,7 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
           info="A Trust Management System based on OpenSSL"
           url="http://www.cis.upenn.edu/~keynote/">
     <item name="tund"
-          info="FreeBSD's IP over IP tunneling deamon"
+          info="FreeBSD's IP over IP tunneling daemon"
           url="http://www.chg.ru/~ks/tund/">
     <item name="sslproxy"
           info="Another TCP/SSL relay/tunneling program"

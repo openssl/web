@@ -23,7 +23,7 @@ Tarballs containing snapshots of the latest CVS repository states can be found
 under <a
 href="ftp://ftp.openssl.org/snapshot/">ftp://ftp.openssl.org/snapshot/</a>.
 They are created on a daily basis. These snapshots are provided for
-convinience only. When you really want to keep yourself up-to-date please use
+convenience only. When you really want to keep yourself up-to-date please use
 the bandwidth-friendly RSYNC service to directly mirror the CVS repository
 instead.
 
