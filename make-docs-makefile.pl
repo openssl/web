@@ -81,7 +81,7 @@ print "		for f in \$(PODSHOME)/\$\$d/*.pod; do \\\n";
 print "			fs=\"`echo \$\$f | sed -e 's,^\$(PODSHOME)/,,'`\"; \\\n";
 print "			pag=\"`basename \$\$f .pod`\"; \\\n";
 print "			if [ \"\$\$d\" = \"apps\" ]; then if [ \"\$\$pag\" = \"config\" ]; then s='(5)'; else s='(1)'; fi; else s='(3)'; fi; \\\n";
-print "			for i in `sed -e '1,/^=head1 *NAME *\$\$/d' -e '/^=head1 *DESCRIPTION *\$\$/,\$\$d' -e '/^=head1 *SYNOPSIS *\$\$/,\$\$d' -e '/^\$\$/d' < \$\$f | awk 'BEGIN { FOO=1; } { if (FOO == 1) print \$\$0; } / - / { FOO=0; }' | sed -e 's/ - .*\$\$//' -e 's/,/ /g'`; do \\\n";
+print "			for i in `sed -e '1,/^=head1 *NAME *\$\$/d' -e '/^=head1 *DESCRIPTION *\$\$/,\$\$d' -e '/^=head1 *SYNOPSIS *\$\$/,\$\$d' -e '/^\$\$/d' < \$\$f | awk 'BEGIN { FOO=1; } /^- / { FOO=0; } { if (FOO == 1) print \$\$0; } / -/ { FOO=0; }' | sed -e 's/ -.*\$\$//' -e 's/,/ /g'`; do \\\n";
 print "				echo \"\$\$i\$\$s \$\${fs}:\" >> pod2html-dircache; \\\n";
 print "			done; \\\n";
 print "			echo \"\$\$pag\$\$s \$\${fs}:\" >> pod2html-dircache; \\\n";
