@@ -110,7 +110,7 @@ foreach $l (keys %page) {
 
 #Build a Makefile and send it on stdout.
 #
-$DOCS="\t" . join(" \\\n\t",values %wmls);
+$DOCS="\t" . join(" \\\n\t",sort(values %wmls));
 
 print <<END_OF_SECTION1;
 PODSHOME=$PODSHOME
@@ -145,7 +145,7 @@ print <<END_OF_SECTION2;
 	echo '  \$\@'; \\
 	sed -e '/^FILE\$\$/,\$\$d' < make-docs-makefile.template | sed -e 's,PAGE,'\$\$pag',' -e 's,SECTION,'\$\$s',' > \$\@; \\
 	cat < \$\$pod | \\
-	PERL5LIB=docs pod2html --htmlroot=.. --podroot=\$(PODSHOME) --podpath=\$(PODSDIRS) | sed -e '1,/<BODY>/d' -e '/<\\/BODY>/,\$\$d' >> \$\@; \\
+	PERL5LIB=docs pod2html --htmlroot=.. --podroot=\$(PODSHOME) --podpath=\$(PODSDIRS) | sed -e '1,/<BODY>/d' -e '/<\\/BODY>/,\$\$d' -e 's/^\\(  *\\)#/\\1\\\\#/' >> \$\@; \\
 	sed -e '1,/^FILE\$\$/d' < make-docs-makefile.template | sed -e 's,PAGE,'\$\$pag',' -e 's,SECTION,'\$\$s',' >> \$\@
 
 END_OF_SECTION2
