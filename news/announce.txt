@@ -1,56 +1,31 @@
 
-  OpenSSL version 0.9.5 released
+  OpenSSL version 0.9.5a released
   ===============================
 
   OpenSSL - The Open Source toolkit for SSL/TLS
   http://www.openssl.org/
 
   The OpenSSL project team is pleased to announce the release of version
-  0.9.5 of our open source toolkit for SSL/TLS.  This new OpenSSL version
-  incorporates over 150 changes and bugfixes to the toolkit (for a complete
-  list see http://www.openssl.org/source/exp/CHANGES).
+  0.9.5a of our open source toolkit for SSL/TLS.  This new OpenSSL version
+  is a bugfix release and incorporates 26 changes and bugfixes to the
+  toolkit (for a complete list see http://www.openssl.org/source/exp/CHANGES).
 
   The most significant changes are:
 
-     o S/MIME support in new 'smime' command
-     o Documentation for the OpenSSL command line application
-     o Automation of 'req' application
-     o Fixes to make s_client, s_server work under Windows
-     o Support for multiple fieldnames in SPKACs
-     o New SPKAC command line utilty and associated library functions
-     o Options to allow passwords to be obtained from various sources
-     o New public key PEM format and options to handle it
-     o Many other fixes and enhancements to command line utilities
-     o Usable certificate chain verification
-     o Certificate purpose checking
-     o Certificate trust settings
-     o Support of authority information access extension
-     o Extensions in certificate requests
-     o Simplified X509 name and attribute routines
-     o Initial (incomplete) support for international character sets
-     o New DH_METHOD, DSA_METHOD and enhanced RSA_METHOD
-     o Read only memory BIOs and simplified creation function
-     o TLS/SSL protocol bugfixes: Accept TLS 'client hello' in SSL 3.0
-       record; allow fragmentation and interleaving of handshake and other
-       data
-     o TLS/SSL code now "tolerates" MS SGC
-     o Work around for Netscape client certificate hang bug
-     o RSA_NULL option that removes RSA patent code but keeps other
-       RSA functionality
-     o Memory leak detection now allows applications to add extra information
-       via a per-thread stack
-     o PRNG robustness improved
-     o EGD support
-     o BIGNUM library bug fixes
-     o Faster DSA parameter generation
-     o Enhanced support for Alpha Linux
-     o Experimental MacOS support
+      o Bug fixes for Win32, SuSE Linux, NeXTSTEP and FreeBSD 2.2.8 
+      o Shared library support for HPUX and Solaris-gcc
+      o Support of Linux/IA64
+      o Assembler support for Mingw32
+      o New 'rand' application
+      o New way to check for existence of algorithms from scripts
 
-  We consider OpenSSL 0.9.5 to be the best version of OpenSSL available and
-  we strongly recommend that users of older versions, especially of old SSLeay
-  versions, upgrade as soon as possible.  OpenSSL 0.9.5 is available for
-  download via HTTP and FTP from the following master locations (the various
-  FTP mirrors you can find under http://www.openssl.org/source/mirror.html):
+  We consider OpenSSL 0.9.5a to be the best version of OpenSSL available.
+  However, since this is mostly a bugfix release of 0.9.5, we only strongly
+  recommend an upgrade if you have encountered problems with version 0.9.5.
+  Still, if you run something older than 0.9.5, we strongly recommend that
+  you upgrade as soon as possible.  OpenSSL 0.9.5a is available for download
+  via HTTP and FTP from the following master locations (the various FTP
+  mirrors you can find under http://www.openssl.org/source/mirror.html):
 
     o http://www.openssl.org/source/
     o ftp://ftp.openssl.org/source/
