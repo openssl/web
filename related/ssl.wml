@@ -47,7 +47,7 @@ Security (TLS) protocols.
           url="http://www.w3.org/Protocols/HTTP/1.1/draft-ietf-http-v11-spec-rev-06.txt">
     <item name="HyperText Transfer Protocol (HTTP), Version 1.0 (RFC 1945)"
           info="The application layer protocol Apache+mod_ssl uses over SSL/TLS"
-          url="http://ds.internic.net/rfc/rfc1945.txt">
+          url="http://www.ietf.org/rfc/rfc1945.txt">
     <item name="Internet X.509 Public Key Infrastructure (PKIX)"
           info="The IETF Working Group for PKIX"
           url="http://www.imc.org/ietf-pkix/">
