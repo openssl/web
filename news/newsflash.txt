@@ -1,3 +1,5 @@
+21-Mar-2001: Beta 2 of OpenSSL 0.9.6a is now <a href="ROOT/source/">available</a>, please test it now
+21-Mar-2001: Beta 2 of OpenSSL 0.9.6a [engine] is now <a href="ROOT/source/">available</a>, please test it now
 13-Mar-2001: Beta 1 of OpenSSL 0.9.6a is now <a href="ROOT/source/">available</a>, please test it now
 13-Mar-2001: Beta 1 of OpenSSL 0.9.6a [engine] is now <a href="ROOT/source/">available</a>, please test it now
 04-Nov-2000: New <a href="ROOT/about/">development team member</a>: Lutz J&auml;nicke
