@@ -2,16 +2,14 @@
 ##  .htaccess -- Apache per-dir config
 ##
 
-<Limit GET>
-order allow,deny
-allow from all
-</Limit>
-
-Options       ExecCGI Includes Indexes FollowSymLinks
-IndexOptions  FancyIndexing
-
 RewriteEngine on
-RewriteRule   ^cvs$        cvsweb.cgi        [NS]
-RewriteRule   ^cvs/(.*)$   cvsweb.cgi/$1     [NS]
-RewriteRule   ^exp/(.*)$   cvsweb.cgi/exp/$1 [NS]
+
+#   redirect to original site when running on mirrors
+RewriteCond  %{SERVER_NAME}   !=www.openssl.org
+RewriteRule  ^((cvs|exp).*)$  http://www.openssl.org/source/$1 [R,L]
+
+#   rewrite nice URLs to ugly internal CGI stuff
+RewriteRule  ^cvs$            cvsweb.cgi        [NS]
+RewriteRule  ^cvs/(.*)$       cvsweb.cgi/$1     [NS]
+RewriteRule  ^exp/(.*)$       cvsweb.cgi/exp/$1 [NS]
 
