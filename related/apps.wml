@@ -75,6 +75,9 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="JavaSSL"
           info="A Java package which uses JNI to wrap SSLeay to provide an SSLSocket class"
           url="http://www.bpsinfo.com/javassl/">
+    <item name="ITISSL"
+          info="A Java 2 Implementation of the SSL API based on SSLeay"
+          url="http://sponsor.iti.informatik.tu-darmstadt.de/itissl/">
     <item name="SSLJava"
           info="A Java NET.DLL replacement which deals with SSLeay"
           url="http://noc.kpnw.org/~scott/">
