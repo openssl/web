@@ -8,10 +8,8 @@
 
 This file summarizes all types of changes to the OpenSSL toolkit, i.e.
 changes between each patchlevel.  Take this list as a reference for concrete
-and detailed information about every single change. The presented contents is
-the contents of the <tt>CHANGES</tt> file inside the latest release. When
-you're interested in bleeding-edge unreleased changes, look at the <cvs
-href="CHANGES">current CVS state</cvs> of this file.
+and detailed information about every single change. The presented contents
+reflects the current state of the <tt>CHANGES</tt> file inside the CVS repository. 
 
 <p>
 <!--#include virtual="changelog.cgi" -->
