@@ -165,5 +165,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="mini_httpd"
           info="A very small webserver, but capable of HTTPS through OpenSSL"
           url="http://www.acme.com/software/mini_httpd/">
+    <item name="Pavuk"
+          info="Another webgrabber with HTTPS support through OpenSSL"
+          url="http://www.idata.sk/~ondrej/pavuk/">
 </ul>
 
