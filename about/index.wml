@@ -61,7 +61,7 @@ The current OpenSSL development team consists of (in alphabetical order):
 <tr><td>Lutz J&auml;nicke</td>       <td ><a href="mailto:jaenicke@openssl.org">jaenicke@openssl.org</a></td> <td><a href="mailto:Lutz.Jaenicke@aet.tu-cottbus.de">Lutz.Jaenicke@aet.tu-cottbus.de</a></td> <td>DE</td> </tr>
 <tr><td>Ben Laurie</td>          <td ><a href="mailto:ben@openssl.org">ben@openssl.org</a></td> <td><a href="mailto:ben@algroup.co.uk">ben@algroup.co.uk</a></td> <td>UK</td> </tr>
 <tr><td>Richard Levitte</td>     <td ><a href="mailto:levitte@openssl.org">levitte@openssl.org</a></td> <td><a href="mailto:levitte@stacken.kth.se">levitte@stacken.kth.se</a></td> <td>SE</td> </tr>
-<tr><td>Bodo M&ouml;ller</td>        <td ><a href="mailto:bodo@openssl.org">bodo@openssl.org</a></td> <td><a href="mailto:bmoeller@acm.org">bmoeller@acm.org</a></td> <td>US</td> </tr>
+<tr><td>Bodo M&ouml;ller</td>        <td ><a href="mailto:bodo@openssl.org">bodo@openssl.org</a></td> <td><a href="mailto:bmoeller@acm.org">bmoeller@acm.org</a></td> <td>DE</td> </tr>
 <tr><td>Ulf M&ouml;ller</td>         <td ><a href="mailto:ulf@openssl.org">ulf@openssl.org</a></td> <td><a href="mailto:mail@ulfm.de">mail@ulfm.de</a></td> <td>DE</td> </tr>
 <tr><td>Andy Polyakov</td>       <td ><a href="mailto:appro@openssl.org">appro@openssl.org</a></td> <td><a href="mailto:appro@fy.chalmers.se">appro@fy.chalmers.se</a></td> <td>SE</td> </tr>
 <tr><td>Geoff Thorpe</td>        <td ><a href="mailto:geoff@openssl.org">geoff@openssl.org</a></td> <td><a href="mailto:geoff@geoffthorpe.net">geoff@geoffthorpe.net</a></td> <td>QC</td> </tr>
