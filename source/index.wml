@@ -9,7 +9,7 @@ Here you can find all distribution tarballs (and sometimes corresponding patches
 of the various OpenSSL release versions. Alternatively you can also download them 
 via FTP from the OpenSSL FTP area under <a
 href="ftp://ftp.openssl.org/source/">ftp://ftp.openssl.org/source/</a>.
-Tarballs containing a snapshot of the latest develpment version can be found 
+Tarballs containing a snapshot of the latest development version can be found 
 under <a href="ftp://ftp.openssl.org/snapshot/">ftp://ftp.openssl.org/snapshot/</a>.
 
 <p>
