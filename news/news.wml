@@ -1,0 +1,16 @@
+#!wml -ochangelog.html@u+x
+
+#use wml::openssl area=news page=changelog 
+
+<title>News, Summary</title>
+
+<h1>NEWS</h1>
+
+This file summarizes all the changes to the OpenSSL toolkit, i.e.
+changes between each patchlevel. The presented contents
+reflects the current state of the <tt>NEWS</tt> file inside the CVS repository. 
+
+Details can be found in the <a href="changelog.html">ChangeLog</a>.
+<p>
+<!--#include virtual="news.cgi" -->
+
