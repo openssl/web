@@ -177,5 +177,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="Fetchmail"
           info="A remote-mail retrieval and forwarding utility with OpenSSL support"
           url="http://www.tuxedo.org/~esr/fetchmail/">
+    <item name="Lynx/SSL"
+          info="An SSL patch for the popular terminal-based browser Lynx"
+          url="http://www.moxienet.com/lynx/">
 </ul>
 
