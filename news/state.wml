@@ -9,7 +9,7 @@ Here is a short summary of the current development and release state
 of the OpenSSL project.
 
 <ul>
-<li>Next proposed release: OpenSSL <b>0.9.7</b><br>
+<li>Next proposed release: OpenSSL <b>0.9.7</b>, currently in feature freeze.
 <li>The current <a href="$(ROOT)/source/cvs/">CVS Source Code State</a>.
 </ul>
 
