@@ -189,5 +189,8 @@ the old SSLeay package or the new OpenSSL package.
     <item name="INN"
           info="The Usenet system InterNetNews has support for SSL/TLS via OpenSSL"
           url="http://www.isc.org/products/INN/">
+    <item name="BIND"
+          info="Berkeley Internet Name Domain (BIND) supports DNSSEC via OpenSSL"
+          url="http://www.isc.org/products/BIND/">
 </ul>
 
