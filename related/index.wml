@@ -12,7 +12,9 @@ OpenSSL) related stuff.
     <item name="OpenSSL"
           info="The official home of the OpenSSL project"
           url="http://www.openssl.org/">
-    <item name="SSLeay Doc: FAQ List"
+	<item name="MS Dev Studio workspace for OpenSSL"
+		url="http://www.iconsinc.com/~agray/ossldev/">
+	<item name="SSLeay Doc: FAQ List"
           info="The SSLeay Frequently Asked Questions"
           url="http://www.psy.uq.oz.au/~ftp/Crypto/">
     <item name="SSLeay Doc: FAQ List (Japanese)"
