@@ -171,7 +171,7 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="ntop"
           info="A top-style network monitor with even SSL support"
           url="http://www-serra.unipi.it/~ntop/">
-    <item name="START_TLS telnet"
+    <item name="start_tls-telnet"
           info="A telnet/telnetd package supporting START_TLS via OpenSSL"
           url="ftp://ftp.runestig.com/pub/starttls/">
 </ul>
