@@ -6,7 +6,7 @@
 <h1>OpenSSL Request Tracker</h1>
 
 The OpenSSL project has set up a request tracker at
-<a href="http://www.aet.TU-Cottbus.DE/rt2/">http:www.aet.TU-Cottbus.DE/rt2/</a>
+<a href="http://www.aet.TU-Cottbus.DE/rt2/">http://www.aet.TU-Cottbus.DE/rt2/</a>
 offering read-only access using the account <tt>guest</tt> with the
 password <tt>guest</tt>.
 
@@ -32,5 +32,6 @@ request tracker, then forwarded to <tt>openssl-dev@openssl.org</tt>.
 The request tracker is currently under installation/test, features may change
 and malfunctions may occur.
 
-Featuring RT2, available from
+<h2>Request Tracker Software</h2>
+The request tracker is using the RT2 software, available from
 <a href="http://www.fsck.com/projects/rt/">http://www.fsck.com/projects/rt/</a>.
