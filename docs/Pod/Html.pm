@@ -405,7 +405,11 @@ END_OF_HEAD
 	    next if @begin_stack && $begin_stack[-1] ne 'html';
 	    my $text = $_;
 	    process_text(\$text, 1);
-	    print HTML "<P>\n$text</P>";
+	    if ($text =~ /^<PRE>/) {
+		print HTML "$text";
+	    } else {
+		print HTML "<P>\n$text</P>\n";
+	    }
 	}
     }
 
