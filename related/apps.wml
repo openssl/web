@@ -72,6 +72,9 @@ the old SSLeay package or the new OpenSSL package.
     <item name="Wu-FTPd/SSL (II)"
           info="Another SSL integration for the Wu-FTP daemon"
           url="ftp://ftp.average.org/pub/wuftp+SSL/">
+    <item name="RaidenFTPD for Windows"
+          info="win32 FTP server"
+          url="http://www.raidenftpd.com/en/ with SSL integration">
     <item name="SSLrsh"
           info="SSL-aware BSD r* commands"
           url="http://www.quick.com.au/ftp/pub/sjg/help/SSLrsh.html">
