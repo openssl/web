@@ -216,5 +216,8 @@ the old SSLeay package or the new OpenSSL package.
     <item name="CSP"
 	  info="Certificate Service Provider, a small CA class and application in perl. Supports multiple CAs."
 	  url="http://devel.it.su.se/projects/CSP/">
+    <item name="XCA"
+	  info="Ca-GUI for handling X509 certificates, using QT and Berkeley DB"
+	  url="http://www.hohnstaedt.de/xca.html">
 </ul>
 
