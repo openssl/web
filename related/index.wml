@@ -27,5 +27,8 @@ OpenSSL) related stuff.
     <item name="SSLeay Doc: Documentation Archive"
           info="A nice archive of HTML documents for the SSLeay library"
           url="http://www.columbia.edu/~ariel/ssleay/">
+    <item name="OpenSSL for VMS"
+          info="A port of OpenSSL to the VMS environment"
+          url="http://www.free.lp.se/openssl/">
 </ul>
 
