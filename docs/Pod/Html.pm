@@ -934,31 +934,36 @@ sub process_item {
 	    print HTML '</STRONG>';
 	}
 
-    } elsif ($text =~ /\A[\d#]+/) {	# numbered list
+# Numbered lists disabled because this code turns every list with numerical
+# tags into an <OL> without looking at the actual tag values.
+# Obviously this is in general not acceptable when a "RETURN VALUES" or
+# "EXIT CODES" section is organized like this (doc/apps/smime.pod in OpenSSL).
 
-	if ($need_preamble) {
-	    push(@listend,  "</OL>");
-	    print HTML "<OL>\n";
-	}
-
-	print HTML '<LI>';
-	if ($text =~ /\A\d+\.?\s*(.+)\Z/s) {
-	    $text = $1;
-	    # remove formatting instructions from the text, save in $rawtext
-	    $rawtext = $text;
-	    1 while $rawtext =~ s/[A-Z]<([^<>]*)>/$1/g;
-	    pre_escape(\$rawtext);
-	    process_text(\$text);
-
-	    print HTML '<STRONG>';
-	    if ($items_named{$rawtext}++) {
-		print HTML $text;
-	    } else {
-		my $name = 'item_' . htmlify(0,$rawtext);
-		print HTML qq(<A NAME="$name">), $text, '</A>';
-	    }
-	    print HTML '</STRONG>';
-	}
+#    } elsif ($text =~ /\A[\d#]+/) {	# numbered list
+#
+#	if ($need_preamble) {
+#	    push(@listend,  "</OL>");
+#	    print HTML "<OL>\n";
+#	}
+#
+#	print HTML '<LI>';
+#	if ($text =~ /\A\d+\.?\s*(.+)\Z/s) {
+#	    $text = $1;
+#	    # remove formatting instructions from the text, save in $rawtext
+#	    $rawtext = $text;
+#	    1 while $rawtext =~ s/[A-Z]<([^<>]*)>/$1/g;
+#	    pre_escape(\$rawtext);
+#	    process_text(\$text);
+#
+#	    print HTML '<STRONG>';
+#	    if ($items_named{$rawtext}++) {
+#		print HTML $text;
+#	    } else {
+#		my $name = 'item_' . htmlify(0,$rawtext);
+#		print HTML qq(<A NAME="$name">), $text, '</A>';
+#	    }
+#	    print HTML '</STRONG>';
+#	}
 
     } else {			# all others
 
