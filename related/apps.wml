@@ -153,5 +153,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="sslproxy"
           info="Another TCP/SSL relay/tunneling program"
           url="ftp://ftp.obdev.at/pub/Products/sslproxy/">
+    <item name="OpenSSH"
+          info="A port of the OpenSSL-based SSH package derived from OpenBSD"
+          url="http://violet.ibs.com.au/openssh/">
 </ul>
 
