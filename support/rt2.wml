@@ -10,6 +10,12 @@ The OpenSSL project has set up a request tracker at
 offering read-only access using the account <tt>guest</tt> with the
 password <tt>guest</tt>.
 
+<h2>List of Bugs/Requests</h2>
+
+Please see the
+<a href="http://www.aet.TU-Cottbus.DE/rt2/NoAuth/Buglist.html">list</a>
+of new or open bugs and requests.
+
 <h2>Sending a Request</h2>
 
 Requests must be sent by email to
