@@ -1,3 +1,5 @@
+21-Sep-2000: Beta 3 of OpenSSL 0.9.6 is now <a href="ROOT/source/">available</a>, please test it now
+21-Sep-2000: Beta 3 of OpenSSL 0.9.6 [engine] is now <a href="ROOT/source/">available</a>, please test it now
 17-Sep-2000: Beta 2 of OpenSSL 0.9.6 is now <a href="ROOT/source/">available</a>, please test it now
 17-Sep-2000: Beta 2 of OpenSSL 0.9.6 [engine] is now <a href="ROOT/source/">available</a>, please test it now
 11-Sep-2000: Beta 1 of OpenSSL 0.9.6 is now <a href="ROOT/source/">available</a>, please test it now
