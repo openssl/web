@@ -18,26 +18,97 @@ while(<STDIN>) {
     my $file = $_;
     s+$PODSHOME/++;
     s+\.pod++;
-    $subs{$file} = $HTMLGOAL . '/' . $_ . '.sub-html';
     $wmls{$file} = $HTMLGOAL . '/' . $_ . '.wml';
-    $goals{$file} = $HTMLGOAL . '/' . $_ . '.html';
     s+/[^/]*$++;
     my $dir = $_;
     $dirs{$dir} = 1;
 }
 
+$PODSDIRS=join(':',keys %dirs);
+$PODSDIRS_SPC=join(' ',keys %dirs);
+$PODSDIRS_COMMA=join(',',keys %dirs);
+
+#Since pod2html builds a cache of lesser value, let's build one of greater
+#value for it.  This includes section numbers, thus avoiding conflicts between
+#pages with the same name in different sections
+#
+foreach $f (keys %wmls) {
+    if ($DEBUG) { print STDERR "Processing file: $f\n"; }
+
+    $fs = $f; $fs =~ s,$PODSHOME/,,;
+    $d = $fs; $d =~ s,/[^/]*$,,;
+    $pag = $fs; $pag =~ s,.*/,,g; $pag =~ s,\.pod$,,;
+
+    $s = "(3)";
+    if ($d eq "apps") {
+	$s="(1)";
+	if ($pag eq "config") {
+	    $s="(5)";
+	}
+    }
+
+    $page{$pag . $s} = $fs;
+    $dependencies{$f} = $pag . $s;
+
+    $/ = "";
+    $name = 0;
+    open(PODFILE,"<$f") || die "Couldn't open $f: $!\n";
+    while(<PODFILE>) {
+	chop;
+	s/\n/ /gm;
+	if ($name) {
+	    s/ - .*//;
+	    s/[ \t,]+/ /g;
+	    @words = split ' ';
+	    foreach $w (@words) {
+		$page{$w . $s} = $fs;
+	    }
+	} else {
+	    $save = $_;
+	    while((s,L<([^|/>]+\|)?([^/>]+)(/[^>]+)?>,,), $_ ne $save) {
+		if ($DEBUG) { print STDERR "Adding to dep for $f: ",$2,"\n"; }
+		$word = $2;
+		$rword = $word;
+		$rword =~ s/\(/\\(/g;
+		$rword =~ s/\)/\\)/g;
+		if ($DEBUG) { print STDERR "Looking for \"$rword\" in \"",$dependencies{$f},"\" -> ",($dependencies{$f} =~ m/$rword/),"\n"; }
+		if (! ($dependencies{$f} =~ m/$rword/)) {
+		    $dependencies{$f} .= ":" . $word;
+		}
+		$save = $_;
+	    }
+	}
+	if (/^=head1 *NAME *$/) {
+	    $name = 1;
+	} elsif (/^=head1 /) {
+	    $name = 0;
+	}
+    }
+    close(PODFILE);
+}
+
+open(PODCACHE,">pod2html-dircache") || die "Couldn't open the dir cache: $!\n";
+print PODCACHE $PODSDIRS,"\n",$PODSHOME,"\n";
+foreach $l (keys %page) {
+    print PODCACHE $l," ",$page{$l},":\n";
+}
+
 #Build a Makefile and send it on stdout.
 #
-print 'PODSHOME=',$PODSHOME,"\n";
-print 'HTMLGOAL=',$HTMLGOAL,"\n";
-print "\n";
-print "PODSDIRS=",join(':',keys %dirs),"\n";
-print "PODSDIRS_SPC=",join(' ',keys %dirs),"\n";
-print "PODSDIRS_COMMA=",join(',',keys %dirs),"\n";
-print "DOCS=\t",join(" \\\n\t",values %wmls),"\n";
-print "\n";
-print "docs : dirs caches \$(DOCS)\n";
-print "\n";
+$DOCS="\t" . join(" \\\n\t",values %wmls);
+
+print <<END_OF_SECTION1;
+PODSHOME=$PODSHOME
+HTMLGOAL=$HTMLGOAL
+
+PODSDIRS=$PODSDIRS
+PODSDIRS_SPC=$PODSDIRS_SPC
+PODSDIRS_COMMA=$PODSDIRS_COMMA
+DOCS=$DOCS
+
+docs : dirs \$(DOCS)
+
+END_OF_SECTION1
 
 #Theoretically, all this work wouldn't be needed, all we would really
 #use is the WML construct <import src="...foo.pod">.  The problem is
@@ -49,48 +120,35 @@ print "\n";
 #result of pod2html somewhere in the middle.  That's why the whole thing
 #looks so complicated.
 #
-print "\$(DOCS) :\n";
-print "	",$AT,"pod=\"`echo \$\@ | sed -e 's,^\$(HTMLGOAL)/\\(.*\\)\\.wml\$\$,\$(PODSHOME)/\\1.pod,'`\"; \\\n";
-print "	pag=\"`basename \$\@ .wml`\"; \\\n";
-print "	d=\"`echo \$\@ | sed -e 's,/[^/]*\$\$,,' -e 's,^\$(HTMLGOAL)/,,'`\"; \\\n";
-print "	if [ \"\$\$d\" = \"apps\" ]; then if [ \"\$\$pag\" = \"config\" ]; then s='(5)'; else s='(1)'; fi; else s='(3)'; fi; \\\n";
-print "	echo '  \$\@'; \\\n";
-print "	sed -e '/^FILE\$\$/,\$\$d' < make-docs-makefile.template | sed -e 's,PAGE,'\$\$pag',' -e 's,SECTION,'\$\$s',' > \$\@; \\\n";
-print "	cat < \$\$pod | \\\n";
-print "	PERL5LIB=docs pod2html --htmlroot=.. --podroot=\$(PODSHOME) --podpath=\$(PODSDIRS) | sed -e '1,/<BODY>/d' -e '/<\\/BODY>/,\$\$d' >> \$\@; \\\n";
-print "	sed -e '1,/^FILE\$\$/d' < make-docs-makefile.template | sed -e 's,PAGE,'\$\$pag',' -e 's,SECTION,'\$\$s',' >> \$\@\n";
-print "\n";
+print <<END_OF_SECTION2;
+\$(DOCS) :
+	${AT}pod="`echo \$\@ | sed -e 's,^\$(HTMLGOAL)/\\(.*\\)\\.wml\$\$,\$(PODSHOME)/\\1.pod,'`"; \\
+	pag=\"`basename \$\@ .wml`\"; \\
+	d="`echo \$\@ | sed -e 's,/[^/]*\$\$,,' -e 's,^\$(HTMLGOAL)/,,'`"; \\
+	if [ "\$\$d" = "apps" ]; then if [ "\$\$pag" = "config" ]; then s='(5)'; else s='(1)'; fi; else s='(3)'; fi; \\
+	echo '  \$\@'; \\
+	sed -e '/^FILE\$\$/,\$\$d' < make-docs-makefile.template | sed -e 's,PAGE,'\$\$pag',' -e 's,SECTION,'\$\$s',' > \$\@; \\
+	cat < \$\$pod | \\
+	PERL5LIB=docs pod2html --htmlroot=.. --podroot=\$(PODSHOME) --podpath=\$(PODSDIRS) | sed -e '1,/<BODY>/d' -e '/<\\/BODY>/,\$\$d' >> \$\@; \\
+	sed -e '1,/^FILE\$\$/d' < make-docs-makefile.template | sed -e 's,PAGE,'\$\$pag',' -e 's,SECTION,'\$\$s',' >> \$\@
+
+END_OF_SECTION2
 
 #We wanna make sure the directories are there...
 #
-print "dirs : \n";
-print "	-",$AT,"for d in \$(PODSDIRS_SPC); do \\\n";
-print "		mkdir docs/\$\$d 2>/dev/null; sed -e 's,url=\",url=\"../,' < \$(HTMLGOAL)/.wmlsnb > \$(HTMLGOAL)/\$\$d/.wmlsnb; \\\n";
-print "	done\n";
-print "\n";
+print <<END_OF_SECTION3;
+dirs : 
+	-${AT}for d in \$(PODSDIRS_SPC); do \\
+		mkdir docs/\$\$d 2>/dev/null; sed -e 's,url=",url="../,' < \$(HTMLGOAL)/.wmlsnb > \$(HTMLGOAL)/\$\$d/.wmlsnb; \\
+	done
 
-#Since pod2html builds a cache of lesser value, let's build one of greater
-#value for it.  This includes section numbers, thus avoiding conflicts between
-#pages with the same name in different sections
-#
-print "caches : \n";
-print "	",$AT,"echo '\$(PODSDIRS)' > pod2html-dircache\n";
-print "	",$AT,"echo '\$(PODSHOME)' >> pod2html-dircache\n";
-print "	",$AT,"for d in \$(PODSDIRS_SPC); do \\\n";
-print "		for f in \$(PODSHOME)/\$\$d/*.pod; do \\\n";
-print "			fs=\"`echo \$\$f | sed -e 's,^\$(PODSHOME)/,,'`\"; \\\n";
-print "			pag=\"`basename \$\$f .pod`\"; \\\n";
-print "			if [ \"\$\$d\" = \"apps\" ]; then if [ \"\$\$pag\" = \"config\" ]; then s='(5)'; else s='(1)'; fi; else s='(3)'; fi; \\\n";
-print "			for i in `sed -e '1,/^=head1 *NAME *\$\$/d' -e '/^=head1 *DESCRIPTION *\$\$/,\$\$d' -e '/^=head1 *SYNOPSIS *\$\$/,\$\$d' -e '/^\$\$/d' < \$\$f | awk 'BEGIN { FOO=1; } /^- / { FOO=0; } { if (FOO == 1) print \$\$0; } / -/ { FOO=0; }' | sed -e 's/ -.*\$\$//' -e 's/,/ /g'`; do \\\n";
-print "				echo \"\$\$i\$\$s \$\${fs}:\" >> pod2html-dircache; \\\n";
-print "			done; \\\n";
-print "			echo \"\$\$pag\$\$s \$\${fs}:\" >> pod2html-dircache; \\\n";
-print "		done; \\\n";
-print "	done\n";
-print "\n";
+END_OF_SECTION3
 
 #Finally, build the dependency table...
 #
-foreach $file (keys %goals) {
-    print $wmls{$file},' : ',$file,"\n";
+foreach $file (keys %wmls) {
+    if ($DEBUG) {
+        print STDERR "Dependencies for $file: ",$dependencies{$file},"\n";
+    }
+    print $wmls{$file},' : ',join(" \\\n\t",map { ($_ ne "" && $page{$_} ne "") ? $PODSHOME . '/' . $page{$_} : () } split(':',$dependencies{$file})),"\n";
 }
