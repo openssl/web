@@ -114,5 +114,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="gpkcs11"
           info="GNU implementation of PKCS#11 standard based on SSLeay/OpenSSL"
           url="ftp://alpha.gnu.org/pub/gnu/gpkcs11/">
+    <item name="slush"
+          info="simple and secure remote shell application using OpenSSL"
+          url="http://violet.ibs.com.au/slush/">
 </ul>
 
