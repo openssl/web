@@ -4,6 +4,7 @@
 
 <snb>
   <snb_button id=general  txt="General"  url="">
+  <snb_button id=contacts txt="Contacts" url="contacts.html">
   <snb_button id=credits  txt="Credits"  url="credits.html">
 </snb>
 

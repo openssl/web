@@ -1,0 +1,31 @@
+
+#use wml::openssl area=about page=contacts 
+
+<title>About, Contacts</title>
+
+<h1>About the OpenSSL Project</h1>
+
+<h2>Physical Addresses</h2>
+
+Apart from mail addresses and names, some organizations require a physical
+address as contact for open source projects.  Physical addresses can be
+useful in other cases as well.  Therefore, some people have stepped forward
+and volunteered as "official" contacts for OpenSSL.  If you want to get in
+touch with any of these people, please consider using email first, since
+that will also reach other team members in case your contact is temporarly
+not available.
+
+<table>
+<tr><td><b id=sf>Address</b></td><td><b id=sf>Area covered</b></td></tr>
+<tr><td><hr noshade size=1></td><td><hr noshade size=1></td></tr>
+<tr><td>
+OpenSSL SE<br>
+c/o Richard Levitte<br>
+Spannvägen 38<br>
+S-168 35 Bromma<br>
+Sweden<br>
+<i>E-mail:</i> <a href="mailto:openssl-contact.SE@openssl.org">openssl-contact.SE@openssl.org</a>
+</td><td valign=top>
+Sweden only
+</td></tr>
+</table>
