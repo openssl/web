@@ -162,5 +162,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="W3M"
           info="A very neat terminal-based webbrowser with SSL support"
           url="http://ei5nazha.yz.yamagata-u.ac.jp/~aito/w3m/eng/">
+    <item name="mini_httpd"
+          info="A very small webserver, but capable of HTTPS through OpenSSL"
+          url="http://www.acme.com/software/mini_httpd/">
 </ul>
 
