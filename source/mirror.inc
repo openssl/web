@@ -12,6 +12,7 @@
 
 <mirror url="ftp://ftp.openssl.org/source/" loc="CH"> 
 <mirror url="ftp://sunsite.cnlab-switch.ch/mirror/openssl/" loc="CH">
+<mirror url="ftp://ftp.funet.fi/pub/crypt/cryptography/libs/openssl/" loc="FI">
 <mirror url="ftp://ftp.pca.dfn.de/pub/tools/net/openssl/" loc="DE">
 <mirror url="ftp://ftp.ecrc.net/pub/security/openssl/" loc="DE">
 <mirror url="ftp://ftp.uni-trier.de/pub/unix/security/openssl/" loc="DE">
