@@ -144,5 +144,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="pipsec"
           info="A tool for creating IPSEC tunnels with the help of OpenSSL"
           url="http://www.enst.fr/~beyssac/pipsec/">
+    <item name="KeyNote"
+          info="A Trust Management System based on OpenSSL"
+          url="http://www.cis.upenn.edu/~keynote/">
 </ul>
 
