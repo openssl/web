@@ -1,5 +1,5 @@
 
-#use wml::openssl area=docs page=PAGE
+#use wml::openssl-macros area=docs page=PAGE
 
 <title>Documents, PAGESECTION</title>
 
