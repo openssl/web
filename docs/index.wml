@@ -3,11 +3,11 @@
 
 <title>Documents, Misc</title>
 
-<h1>Miscellaneous OpenSSL Documents</h1>
+<h1>OpenSSL Documents</h1>
 
 Here you can find the three manual pages documenting the three essential parts
 of the OpenSSL toolkit: The SSL library, the Crypto library and the command
-line tool.
+line tool, as well as a repository of HOWTO and other miscellaneous documents.
 
 <p>
 <ul>
@@ -22,5 +22,8 @@ line tool.
 <p>
 <li><a href="HOWTO/"><font id=sfl>HOWTO</font></a>: [STILL INCOMPLETE]<br>
     HOWTO documents to introduce concepts or explain them in a way that is not possible in the manuals.
+<p>
+<li><a href="misc/"><font id=sfl>misc</font></a>:<br>
+    Miscellaneous documents with information that has no other logical place.  Among others, you will find a list of current PGP/GnuPG fingerprints to help you check OpenSSL distribution signatures.
 </ul>
 
