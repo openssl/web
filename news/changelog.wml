@@ -14,5 +14,5 @@ you're interested in bleeding-edge unreleased changes, look at the <cvs
 href="CHANGES">current CVS state</cvs> of this file.
 
 <p>
-<!--#include virtual="changelog.cgi" -->
+<!--#include virtual="<absolute changelog.cgi>" -->
 
