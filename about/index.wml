@@ -20,8 +20,8 @@ documentation.
 
 <h2>Derivation and License</h2>
 
-OpenSSL is based on the excellent <a href="http://www.ssleay.org/">SSLeay</a>
-library developed from <a href="mailto:eay@cryptsoft.com">Eric A. Young</a>
+OpenSSL is based on the excellent SSLeay
+library developed by <a href="mailto:eay@cryptsoft.com">Eric A. Young</a>
 and <a href="mailto:tjh@cryptsoft.com">Tim J. Hudson</a>. The OpenSSL toolkit
 is licensed under a Apache-style licence which basically means that you are free
 to get and use it for commercial and non-commercial purposes.

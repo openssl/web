@@ -12,9 +12,6 @@ SSL/TLS protocols and related standards like the X.509 certificate system.
     <item name="OpenSSL"
           info="The open-source toolkit for SSL/TLS"
           url="http://www.openssl.org/">
-    <item name="SSLeay"
-          info="The old no longer maintained predecessor toolkit to OpenSSL"
-          url="http://www.ssleay.org/">
     <item name="RSA BSAFE SSL-C"
           info="The commercial successor toolkit to SSLeay from RSA DSI"
           url="http://www.aus.rsa.com/products/sslc/">

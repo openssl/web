@@ -12,9 +12,6 @@ OpenSSL) related stuff.
     <item name="OpenSSL"
           info="The official home of the OpenSSL project"
           url="http://www.openssl.org/">
-    <item name="SSLeay Homepage"
-          info="The official home of SSLeay, the ancestor of OpenSSL"
-          url="http://www.ssleay.org/">
     <item name="SSLeay Doc: FAQ List"
           info="The SSLeay Frequently Asked Questions"
           url="http://www.psy.uq.oz.au/~ftp/Crypto/">
