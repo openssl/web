@@ -198,5 +198,8 @@ the old SSLeay package or the new OpenSSL package.
     <item name="mnoGoSearch"
           info="mnoGoSearch web search engine with SSL support"
           url="http://mnogosearch.org/">
+    <item name="RubyPKI"
+          info="RubyPKI, an API that binds the language Ruby to OpenSSL"
+          url="http://www.freesoftware.fsf.org/rubypki/">
 </ul>
 
