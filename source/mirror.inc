@@ -18,6 +18,7 @@
 <mirror url="ftp://ftp.uni-trier.de/pub/unix/security/openssl/" loc="DE">
 <mirror url="ftp://opensores.thebunker.net/pub/mirrors/openssl/" loc="UK">
 <mirror url="ftp://ftp.net.lut.ac.uk/openssl/" loc="UK">
+<mirror url="ftp://ftp.mirror.ac.uk/sites/ftp.openssl.org/" loc="UK">
 <mirror url="ftp://sunsite.uio.no/pub/security/openssl/" loc="NO">
 <mirror url="ftp://ftp.sunet.se/pub/security/tools/net/openssl/" loc="SE">
 <mirror url="ftp://ftp.chl.chalmers.se/pub/unix/security/openssl/" loc="SE">
