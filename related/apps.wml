@@ -222,5 +222,8 @@ the old SSLeay package or the new OpenSSL package.
     <item name="XCA"
 	  info="Ca-GUI for handling X509 certificates, using QT and Berkeley DB"
 	  url="http://www.hohnstaedt.de/xca.html">
+    <item name="DelphiImport"
+	  info="A Deplhi import unit for the OpenSSL DLL"
+	  url="http://www.csita.unige.it/software/free/delphiopenssl/indexe.html">
 </ul>
 
