@@ -9,17 +9,6 @@ Here is a short summary of the current development and release state
 of the OpenSSL project.
 
 <ul>
-<li>Next proposed bugfix update: OpenSSL <b>0.9.6h</b>.
-    <p>
-    Release plan:
-    <p>
-    <table cellspacing=0 cellpadding=1 border=0>
-    <tr><td><b id=sf>Date/Range</b></td>   <td><b id=sf>Event</b></td></tr>
-    <tr><td><hr noshade size=1></td>       <td><hr noshade size=1></td></tr>
-    <tr><td><b id=sf>2002-12-05:</b></td>  <td>Release of OpenSSL 0.9.6h</td></tr>
-    </table>
-    <p>
-
 <li>Next proposed release: OpenSSL <b>0.9.7</b>, currently in feature freeze.
     <p>
     Release plan:

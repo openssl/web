@@ -1,30 +1,39 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 0.9.6g released</title>
+<title>Announcement: OpenSSL version 0.9.6h released</title>
 
-<h1>Announcement: OpenSSL version 0.9.6g released</h1>
+<h1>Announcement: OpenSSL version 0.9.6h released</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
 
 <p>
 The OpenSSL project team is pleased to announce the release of version
-0.9.6g of our open source toolkit for SSL/TLS.  This new OpenSSL version
-is a bugfix release.
+0.9.6h of our open source toolkit for SSL/TLS.  This new OpenSSL version
+is a bugfix release.  This will be the last release in the 0.9.6 series.
 
 <p>
 The most significant changes are:
 
 <ul>
-  <li>Important building fixes on Unix.
-  <li>Fix crash in CSwift engine. [engine]
+  <li>New configuration targets for Tandem OSS and A/UX.
+  <li>New OIDs for Microsoft attributes.
+  <li>Better handling of SSL session caching.
+  <li>Better comparison of distinguished names.
+  <li>Better handling of shared libraries in a mixed GNU/non-GNU environment.
+  <li>Support assembler code with Borland C.
+  <li>Fixes for length problems.
+  <li>Fixes for uninitialised variables.
+  <li>Fixes for memory leaks, some unusual crashes and some race conditions.
+  <li>Fixes for smaller building problems.
+  <li>Updates of manuals, FAQ and other instructive documents.
 </ul>
 
 <p>
-We consider OpenSSL 0.9.6g to be the best version of OpenSSL available
+We consider OpenSSL 0.9.6h to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 0.9.6g is available for download via HTTP
+soon as possible.  OpenSSL 0.9.6h is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -46,18 +55,18 @@ no external crypto device, it will work just like the "normal" distribution.
 The distribution file names are:
 
 <ul>
-  <li>openssl-0.9.6g.tar.gz [normal]<br>
-      MD5 checksum: 515ed54165a55df83f4eb4e4e9078d3f
-  <li>openssl-engine-0.9.6g.tar.gz [engine]<br>
-      MD5 checksum: 87cb788c99e40b6e67268ea35d1d250c
+  <li>openssl-0.9.6h.tar.gz [normal]<br>
+      MD5 checksum: 621bef36ad61012bb71945a1cb449073
+  <li>openssl-engine-0.9.6h.tar.gz [engine]<br>
+      MD5 checksum: a7e3f5c0a5451ca666e4cbe23a8617a2
 </ul>
 
 <p>
 The checksums were calculated using the following commands:
 <blockquote>
 <pre>
-openssl md5 &lt; openssl-0.9.6g.tar.gz
-openssl md5 &lt; openssl-engine-0.9.6g.tar.gz
+openssl md5 &lt; openssl-0.9.6h.tar.gz
+openssl md5 &lt; openssl-engine-0.9.6h.tar.gz
 </pre>
 </blockquote>
 

@@ -1,22 +1,31 @@
 
-  OpenSSL version 0.9.6g released
+  OpenSSL version 0.9.6h released
   ===============================
 
   OpenSSL - The Open Source toolkit for SSL/TLS
   http://www.openssl.org/
 
   The OpenSSL project team is pleased to announce the release of version
-  0.9.6g of our open source toolkit for SSL/TLS.  This new OpenSSL version
-  is a bugfix release.
+  0.9.6h of our open source toolkit for SSL/TLS.  This new OpenSSL version
+  is a bugfix release.  This will be the last release in the 0.9.6 series.
 
   The most significant changes are:
 
-      o Important building fixes on Unix.
-      o Fix crash in CSwift engine. [engine]
+      o New configuration targets for Tandem OSS and A/UX.
+      o New OIDs for Microsoft attributes.
+      o Better handling of SSL session caching.
+      o Better comparison of distinguished names.
+      o Better handling of shared libraries in a mixed GNU/non-GNU environment.
+      o Support assembler code with Borland C.
+      o Fixes for length problems.
+      o Fixes for uninitialised variables.
+      o Fixes for memory leaks, some unusual crashes and some race conditions.
+      o Fixes for smaller building problems.
+      o Updates of manuals, FAQ and other instructive documents.
 
-  We consider OpenSSL 0.9.6g to be the best version of OpenSSL available
+  We consider OpenSSL 0.9.6h to be the best version of OpenSSL available
   and we strongly recommend that users of older versions upgrade as
-  soon as possible.  OpenSSL 0.9.6g is available for download via HTTP
+  soon as possible.  OpenSSL 0.9.6h is available for download via HTTP
   and FTP from the following master locations (you can find the various
   FTP mirrors under http://www.openssl.org/source/mirror.html):
 
@@ -33,15 +42,15 @@
 
   The distribution file names are:
 
-      o openssl-0.9.6g.tar.gz [normal]
-        MD5 checksum: 515ed54165a55df83f4eb4e4e9078d3f
-      o openssl-engine-0.9.6g.tar.gz [engine]
-        MD5 checksum: 87cb788c99e40b6e67268ea35d1d250c
+      o openssl-0.9.6h.tar.gz [normal]
+        MD5 checksum: 621bef36ad61012bb71945a1cb449073
+      o openssl-engine-0.9.6h.tar.gz [engine]
+        MD5 checksum: a7e3f5c0a5451ca666e4cbe23a8617a2
 
   The checksums were calculated using the following commands:
 
-    openssl md5 < openssl-0.9.6g.tar.gz
-    openssl md5 < openssl-engine-0.9.6g.tar.gz
+    openssl md5 < openssl-0.9.6h.tar.gz
+    openssl md5 < openssl-engine-0.9.6h.tar.gz
 
   Yours,
   The OpenSSL Project Team...  
