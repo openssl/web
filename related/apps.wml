@@ -168,5 +168,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="Pavuk"
           info="Another webgrabber with HTTPS support through OpenSSL"
           url="http://www.idata.sk/~ondrej/pavuk/">
+    <item name="ntop"
+          info="A top-style network monitor with even SSL support"
+          url="http://www-serra.unipi.it/~ntop/">
 </ul>
 
