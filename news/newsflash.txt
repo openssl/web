@@ -1,3 +1,7 @@
+15-Feb-1999: New: <a href="ROOT/support/">archives</a> of our mailing lists
+10-Feb-1999: <a href="ROOT/support/">Web form</a> for subscribing to our mailing lists
+02-Feb-1999: Added list of <a href="ROOT/related/apps.html">OpenSSL Applications</a>
+16-Jan-1999: The first <a href="ROOT/source/">FTP Mirrors</a> are available
 31-Dec-1998: New: Browsing <a href="ROOT/source/cvs/">interface</a> to the CVS repository
 29-Dec-1998: Designed the new <a href="http://www.openssl.org/">www.openssl.org</a> website
 27-Dec-1998: Established the OpenSSL <a href="ROOT/support/">mailing lists</a>
