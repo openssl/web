@@ -81,5 +81,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="Samba"
           info="The SMB server for Unix platforms"
           url="http://www.samba.org/">
+    <item name="Roxen Challenger"
+          info="The Roxen Challenger webserver with SSL3 optional support"
+          url="http://www.roxen.com/">
 </ul>
 
