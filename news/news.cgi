@@ -1,4 +1,4 @@
-#!/sw/bin/perl
+#!/e/openssl/sw/bin/perl
 ##
 ##  news.cgi -- Read NEWS file and pretty-print it as HTML
 ##
