@@ -29,7 +29,7 @@ print "</ul>\n\n";
 $n=0; $pre=0; $snip=0;
 while (<FP>) {
     if (/^----- snip:start -----/) {
-	print "<pre>" unless $snip;
+	print "<listing>" unless $snip;
 	$snip=1;
     }
     if ($snip) {
@@ -37,7 +37,7 @@ while (<FP>) {
 	print;
     }
     if ($snip && /^----- snip:end -----/) {
-	print "</pre>";
+	print "</listing>";
 	$snip=0;
 	goto cont;
     }
