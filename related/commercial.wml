@@ -30,4 +30,7 @@ and a URL.
     <item name="Linux4biz"
           info="Linux4biz  specialises in all aspects of apache and openssl deployment, support and security."
           url="http://www.linux4biz.net/">
+    <item name="Dr S N Henson"
+          info="OpenSSL and general PKI consultancy, development and support."
+          url="http://www.drh-consultancy.co.uk/">
 </ul>
