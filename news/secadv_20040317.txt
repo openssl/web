@@ -50,24 +50,21 @@ OpenSSL 0.9.7d and OpenSSL 0.9.6m are available for download via HTTP and
 FTP from the following master locations (you can find the various FTP
 mirrors under http://www.openssl.org/source/mirror.html):
 
-    o http://www.openssl.org/source/
-    o ftp://ftp.openssl.org/source/
+    ftp://ftp.openssl.org/source/
 
 The distribution file names are:
 
     o openssl-0.9.7d.tar.gz
-      MD5 checksum: ** fill in later **
+      MD5 checksum: 1b49e90fc8a75c3a507c0a624529aca5
     
     o openssl-0.9.6m.tar.gz [normal]
-      MD5 checksum: ** fill in later **
+      MD5 checksum: 1b63bfdca1c37837dddde9f1623498f9
     o openssl-engine-0.9.6m.tar.gz [engine]
-      MD5 checksum: ** fill in later **
+      MD5 checksum: 4c39d2524bd466180f9077f8efddac8c
 
-The checksums were calculated using the following commands:
+The checksums were calculated using the following command:
 
-    openssl md5 < openssl-0.9.7d.tar.gz
-    openssl md5 < openssl-0.9.6m.tar.gz
-    openssl md5 < openssl-engine-0.9.6m.tar.gz
+    openssl md5 openssl-0.9*.tar.gz
 
 Credits
 -------
