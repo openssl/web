@@ -1,31 +1,30 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 0.9.6f released</title>
+<title>Announcement: OpenSSL version 0.9.6g released</title>
 
-<h1>Announcement: OpenSSL version 0.9.6f released</h1>
+<h1>Announcement: OpenSSL version 0.9.6g released</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
 
 <p>
 The OpenSSL project team is pleased to announce the release of version
-0.9.6f of our open source toolkit for SSL/TLS.  This new OpenSSL version
-is a security- and bugfix release and incorporates several changes to
-the toolkit (for a complete list see <a
-href="http://www.openssl.org/source/exp/CHANGES">http://www.openssl.org/source/exp/CHANGES</a>).
+0.9.6g of our open source toolkit for SSL/TLS.  This new OpenSSL version
+is a bugfix release.
 
 <p>
 The most significant changes are:
 
 <ul>
-  <li>Various important bugfixes.
+  <li>Important building fixes on Unix.
+  <li>Fix crash in CSwift engine. [engine]
 </ul>
 
 <p>
-We consider OpenSSL 0.9.6f to be the best version of OpenSSL available
+We consider OpenSSL 0.9.6g to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 0.9.6f is available for download via HTTP
+soon as possible.  OpenSSL 0.9.6g is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -47,18 +46,18 @@ no external crypto device, it will work just like the "normal" distribution.
 The distribution file names are:
 
 <ul>
-  <li>openssl-0.9.6f.tar.gz [normal]<br>
-      MD5 checksum: 160ac38bd2784e633ed291d03f0087d4
-  <li>openssl-engine-0.9.6f.tar.gz [engine]<br>
-      MD5 checksum: 26f4b7189fb3ef9c701e961ffe101a95
+  <li>openssl-0.9.6g.tar.gz [normal]<br>
+      MD5 checksum: 515ed54165a55df83f4eb4e4e9078d3f
+  <li>openssl-engine-0.9.6g.tar.gz [engine]<br>
+      MD5 checksum: 87cb788c99e40b6e67268ea35d1d250c
 </ul>
 
 <p>
 The checksums were calculated using the following commands:
 <blockquote>
 <pre>
-openssl md5 &lt; openssl-0.9.6f.tar.gz
-openssl md5 &lt; openssl-engine-0.9.6f.tar.gz
+openssl md5 &lt; openssl-0.9.6g.tar.gz
+openssl md5 &lt; openssl-engine-0.9.6g.tar.gz
 </pre>
 </blockquote>
 

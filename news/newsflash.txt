@@ -1,3 +1,5 @@
+9-aug-2002: OpenSSL 0.9.6g is now <a href="ROOT/source/">available</a>, including important bugfixes
+9-aug-2002: OpenSSL 0.9.6g [engine] is now <a href="ROOT/source/">available</a>, including important bugfixes
 8-aug-2002: OpenSSL 0.9.6f is now <a href="ROOT/source/">available</a>, including important bugfixes
 8-aug-2002: OpenSSL 0.9.6f [engine] is now <a href="ROOT/source/">available</a>, including important bugfixes
 30-Jul-2002: OpenSSL 0.9.6e is now <a href="ROOT/source/">available</a>, including important bugfixes
