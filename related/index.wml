@@ -13,7 +13,7 @@ OpenSSL) related stuff.
           info="The official home of the OpenSSL project"
           url="http://www.openssl.org/">
 	<item name="MS Dev Studio workspace for OpenSSL"
-		url="http://openssl.governmentsecurity.org">
+		url="http://openssl.governmentsecurity.org/">
 	<item name="SSLeay Doc: FAQ List"
           info="The SSLeay Frequently Asked Questions"
           url="http://www.psy.uq.oz.au/~ftp/Crypto/">
