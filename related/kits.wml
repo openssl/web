@@ -5,8 +5,8 @@
 
 <h1>Toolkits</h1>
 
-These are references to various toolkits and libraries which implement 
-the SSL/TLS protocols.
+These are references to various toolkits and libraries which implement the
+SSL/TLS protocols and related standards like the X.509 certificate system.
 
 <ul>
     <item name="OpenSSL"
@@ -24,5 +24,8 @@ the SSL/TLS protocols.
     <item name="SSLRef"
           info="Netscape's old SSL reference library from Netscape/Consensus (no longer available)"
           url="ftp://ftp.replay.com/pub/crypto/SSL/">
+    <item name="Oscar"
+          info="A public key certification system's toolkit"
+          url="http://oscar.dstc.qut.edu.au/">
 </ul>
 
