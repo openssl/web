@@ -13,6 +13,8 @@
 [[s|<P>\s+</|</|sg]]
 [[s|<DD>\s*<DT>|<DD>&nbsp;<DT>|sg]]
 [[s|<DD>\s*</DL>|<DD>&nbsp;</DL>|sg]]
+[[s|\[|&#91;|sg]]
+[[s|\]|&#93;|sg]]
 FILE
 :}
 
