@@ -21,12 +21,13 @@
 <mirror url="ftp://ftp.sunet.se/pub/security/tools/net/openssl/" loc="SE">
 <mirror url="ftp://ftp.psy.uq.edu.au/pub/Crypto/" loc="AU">
 <mirror url="ftp://gd.tuwien.ac.at/infosys/security/openssl/" loc="AT">
-<mirror url="ftp://ftp.win.ne.jp/pub/network/security/openssl/" loc="JP">
 <mirror url="ftp://glock.missouri.edu/pub/openssl/" loc="US">
 <mirror url="ftp://ftp.av8.com/pub/mirrors/openssl/" loc="US">
 <mirror url="ftp://gw.inetlab.com/mirrors/openssl/" loc="RU">
 <mirror url="ftp://ftp.ebizlab.hit.bme.hu/pub/openssl/" loc="HU">
 <mirror url="ftp://guest.kuria.katowice.pl/pub/openssl/" loc="PL">
+<mirror url="ftp://ftp.win.ne.jp/pub/network/security/openssl/" loc="JP">
+<mirror url="ftp://ftp.ncu.edu.tw/Unix/Crypto/OpenSSL/" loc="TW">
 
 </ul>
 
