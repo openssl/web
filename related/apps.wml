@@ -90,5 +90,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="Roxen Challenger"
           info="The Roxen Challenger webserver with SSL3 optional support"
           url="http://www.roxen.com/">
+    <item name="Kermit"
+          info="The popular Kermit suite of communication programs with exp. SSL/TLS support"
+          url="http://www.kermit-project.org/">
 </ul>
 
