@@ -21,6 +21,9 @@ SSL/TLS protocols and related standards like the X.509 certificate system.
     <item name="SSLPlus"
           info="Another commercial toolkit for SSL/TLS from Certicom/Consensus"
           url="http://www.consensus.com/sslplus/">
+    <item name="Spyrus TLS Gold Toolkit"
+          info="Another commercial toolkit for SSL/TLS from Spyrus"
+          url="http://www.spyrus.com/content/products/ssl/tlsgold/">
     <item name="SSLRef"
           info="Netscape's old SSL reference library from Netscape/Consensus (no longer available)"
           url="ftp://ftp.replay.com/pub/crypto/SSL/">
