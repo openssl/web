@@ -6,11 +6,15 @@
 <h1>Misc</h1>
 
 These are references to sites with more general documents related to SSL/TLS,
-cryptography, security, and so on.
+cryptography, security, and so on.  Also present are articles written about
+OpenSSL.
 
 <ul>
     <item name="Security Space"
           info="A nice \"web security portal\", as it calls itself."
           url="http://www.securityspace.com/">
+    <item name="Linux Journal 2001-06-20"
+          info="An article by Paul Friberg: Using a Cryptographic Hardware Token with Linux: the OpenSSL Project's New Engine"
+          url="http://www2.linuxjournal.com/articles/style/0006.html">
 </ul>
 
