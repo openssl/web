@@ -88,14 +88,14 @@ RCS file: /e/openssl/cvs/openssl/crypto/asn1/asn1_lib.c,v
 retrieving revision 1.19.2.1
 diff -u -r1.19.2.1 asn1_lib.c
 --- crypto/asn1/asn1_lib.c	2001/03/30 13:42:32	1.19.2.1
-+++ crypto/asn1/asn1_lib.c	2002/07/30 09:14:17
++++ crypto/asn1/asn1_lib.c	2002/08/02 00:00:00
 @@ -124,15 +124,13 @@
  		(int)(omax+ *pp));
  
  #endif
 -#if 0
 -	if ((p+ *plength) > (omax+ *pp))
-+	if (*plength > (omax - (*pp - p)))
++	if (*plength > (omax - (p - *pp)))
  		{
  		ASN1err(ASN1_F_ASN1_GET_OBJECT,ASN1_R_TOO_LONG);
  		/* Set this so that even if things are not long enough
