@@ -1,3 +1,4 @@
+13-Feb-2002: OpenSSL 0.9.7 is now in feature freeze.  A release plan will come later
 21-Dec-2001: OpenSSL 0.9.6c [engine] is now <a href="ROOT/source/">available</a>, a major release
 21-Dec-2001: OpenSSL 0.9.6c is now <a href="ROOT/source/">available</a>, a major release
 09-Jul-2001: OpenSSL 0.9.6b [engine] is now <a href="ROOT/source/">available</a>, a major release
