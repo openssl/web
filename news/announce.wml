@@ -1,0 +1,55 @@
+
+#use wml::openssl area=news page=announce 
+
+<title>Announcement: OpenSSL version 0.9.2b released</title>
+
+<h1>Announcement: OpenSSL version 0.9.2b released</h1>
+
+OpenSSL - The Open Source toolkit for SSL/TLS<br>
+<a href="http://www.openssl.org/">http://www.openssl.org/</a>
+
+<p>
+The OpenSSL project team is pleased to announce the release of version 0.9.2b
+of our open source toolkit for SSL/TLS.  This new OpenSSL version incorporates
+over 130 changes and bugfixes to the toolkit (for a complete list see <a
+href="http://www.openssl.org/source/exp/CHANGES">http://www.openssl.org/source/exp/CHANGES</a>).
+
+<p>
+The most significant changes are:
+
+<ul>
+    <li> Fixed a security hole related to session resumption
+    <li> Fixed RSA encryption routines for the p < q case
+    <li> "ALL" in cipher lists now means "everything except NULL ciphers"
+    <li> Support for Triple-DES CBCM cipher
+    <li> Support of Optimal Asymmetric Encryption Padding (OAEP) for RSA
+    <li> First support for new TLSv1 ciphers
+    <li> Added a few new BIOs (syslog BIO, reliable BIO)
+    <li> Extended support for DSA certificate/keys.
+    <li> Extended support for Certificate Signing Requests (CSR)
+    <li> Initial support for X.509v3 extensions
+    <li> Extended support for compression inside the SSL record layer
+    <li> Overhauled Win32 builds
+    <li> Cleanups and fixes to the Big Number (BN) library
+    <li> Support for ASN.1 GeneralizedTime
+    <li> Split ASN.1 SETs from SEQUENCEs
+    <li> ASN1 and PEM support for Netscape Certificate Sequences
+    <li> Overhauled Perl interface
+    <li> Lots of source tree cleanups.
+    <li> Lots of memory leak fixes.
+    <li> Lots of bug fixes.
+</ul>
+
+<p>
+We consider OpenSSL 0.9.2b to be the best version of OpenSSL available and we
+strongly recommend that users of older versions, especially of old SSLeay
+versions, upgrade as soon as possible.  OpenSSL 0.9.2b is available for
+download via HTTP and FTP from the following master locations (the various FTP
+mirrors you can find under <a
+href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
+
+<ul>
+    <li> <a href="http://www.openssl.org/source/">http://www.openssl.org/source/</a>
+    <li> <a href="ftp://ftp.openssl.org/source/">ftp://ftp.openssl.org/source/</a>
+</ul>
+
