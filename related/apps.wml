@@ -117,5 +117,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="slush"
           info="simple and secure remote shell application using OpenSSL"
           url="http://violet.ibs.com.au/slush/">
+    <item name="nsyslogd"
+          info="A syslogd which is able to use SSL/TLS by using OpenSSL"
+          url="http://coombs.anu.edu.au/~avalon/nsyslog.html">
 </ul>
 
