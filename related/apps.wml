@@ -27,6 +27,9 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="cURL"
           info="A sophisticated FTP, HTTP, HTTPS, GOPHER and DICT gathering tool"
           url="http://www.fts.frontec.se/~dast/curl/">
+    <item name="jonama"
+          info="A stand-alone SSL relay program with authentication support"
+          url="http://www.multimania.com/jonama/">
     <item name="stunnel"
           info="An SSL encryption wrapper for standard network daemons"
           url="http://mike.daewoo.com.pl/computer/stunnel/">
