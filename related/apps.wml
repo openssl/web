@@ -123,5 +123,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="CashCow"
           info="Internet payment transactions with the Danish PBS via OpenSSL"
           url="http://www.cashcow.dk/">
+    <item name="pyCA"
+          info="Certificate Authority package implemented with Phyton and OpenSSL"
+          url="http://sites.inka.de/ms/python/pyca/">
 </ul>
 
