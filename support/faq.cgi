@@ -31,7 +31,7 @@ while (<FP>) {
 	chomp;
 	$_ .= <FP>;
     }
-    s/<URL:(.*?)>/<a href=\"$1\">$1<\/a>/;
+    s/<URL: *(.*?)>/<a href=\"$1\">$1<\/a>/;
     if (s/\((.?)\)/XX$1XX/g) {
 	while (/([A-Za-z_]*)XX(.?)XX/) {
 	    foreach $section ("apps", "ssl", "crypto") {
