@@ -63,5 +63,11 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="SSLrsh"
           info="SSL-aware BSD r* commands"
           url="http://www.quick.com.au/ftp/pub/sjg/help/SSLrsh.html">
+    <item name="GLOBUS"
+          info="Computational grid computing with a GSSAPI built on SSLeay"
+          url="http://www.globus.org/">
+    <item name="SSLK5"
+          info="Changes to MIT Kerberos V5 to use SSL for pre-authentication"
+          url="ftp://achilles.ctd.anl.gov/pub/kerberos.v5/">
 </ul>
 
