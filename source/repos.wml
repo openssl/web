@@ -10,9 +10,22 @@
 <h1>CVS Repository</h1>
 
 The OpenSSL package is developed in a CVS-based repository which is directly
-available through the RSYNC service on dev.openssl.org for those people who
-either want to always stay at the bleeding edge or even want to participate in
-the development of OpenSSL.
+available through the RSYNC service on dev.openssl.org and as snapshot
+tarballs through FTP on ftp.openssl.org for those people who either want to
+always stay at the bleeding edge or even want to participate in the
+development of OpenSSL. But use such repository snapshots only when you like
+to see OpenSSL dump core and you can help yourself in case of problems, of
+course.
+
+<h2>Fetching CVS repository snapshot tarballs</h2>
+
+Tarballs containing snapshots of the latest CVS repository states can be found
+under <a
+href="ftp://ftp.openssl.org/snapshot/">ftp://ftp.openssl.org/snapshot/</a>.
+They are created on a daily basis. These snapshots are provided for
+convinience only. When you really want to keep yourself up-to-date please use
+the bandwidth-friendly RSYNC service to directly mirror the CVS repository
+instead.
 
 <h2>Using your own local CVS repository mirror</h2>
 
