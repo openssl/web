@@ -41,5 +41,8 @@ OpenSSL) related stuff.
 	<item name="OpenSSL for VMS"
           info="A port of OpenSSL to the VMS environment"
           url="http://www.free.lp.se/openssl/">
+	<item name="Network Security with OpenSSL"
+	 info="An O'Reilly book on using OpenSSL (published June 2002)"
+	 url="http://www.opensslbook.com/">
 </ul>
 
