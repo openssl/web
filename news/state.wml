@@ -15,10 +15,8 @@ of the OpenSSL project.
     <table cellspacing=0 cellpadding=1 border=0>
     <tr><td><b id=sf>Date/Range</b></td>   <td><b id=sf>Event</b></td></tr>
     <tr><td><hr noshade size=1></td>       <td><hr noshade size=1></td></tr>
-    <tr><td><b id=sf>2000-09-11:</b></td>  <td>0.9.6-beta1</td></tr>
-    <tr><td><b id=sf>2000-09-17:</b></td>  <td>0.9.6-beta2 if there were
-                                               needed fixes, otherwise 0.9.6
-                                               release</td></tr>
+    <tr><td><b id=sf>2000-09-11:</b></td>  <td>0.9.6-beta1 <font color="#cc3333">[DONE]</font></td></tr>
+    <tr><td><b id=sf>2000-09-17:</b></td>  <td>0.9.6-beta2 <font color="#cc3333">[DONE]</font></td></tr>
     <tr><td><b id=sf>2000-09-19-<br>
                      2000-09-22:</b></td>  <td>time-space for one or two more
                                                betas if needed</td></tr>
