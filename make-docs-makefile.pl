@@ -145,8 +145,8 @@ print <<END_OF_SECTION2;
 	${AT}pod="`echo \$\@ | sed -e 's,^\$(HTMLGOAL)/\\(.*\\)\\.wml\$\$,\$(PODSHOME)/\\1.pod,'`"; \\
 	pag=\"`basename \$\@ .wml`\"; \\
 	d="`echo \$\@ | sed -e 's,/[^/]*\$\$,,' -e 's,^\$(HTMLGOAL)/,,'`"; \\
-	s='(3)'; \\
-	if [ "\$\$d" = "apps" ]; then s='(1)'; if [ "\$\$pag" = "config" ]; then s='(5)'; fi; else if [ "\$\$d" = "crypto" -a "\$\$pag" = "des_modes" ]; then s='(7)'; fi; fi; \\
+	s='3'; \\
+	if [ "\$\$d" = "apps" ]; then s='1'; fi; s="(`./extract-section.pl \$\$s <\$\$pod`)"; \\
 	echo '  \$\@'; \\
 	sed -e '/^FILE\$\$/,\$\$d' < make-docs-makefile.template | sed -e 's,PAGE,'\$\$pag',' -e 's,SECTION,'\$\$s',' > \$\@; \\
 	cat < \$\$pod | \\
