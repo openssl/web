@@ -195,5 +195,8 @@ the old SSLeay package or the new OpenSSL package.
     <item name="BIND"
           info="Berkeley Internet Name Domain (BIND) supports DNSSEC via OpenSSL"
           url="http://www.isc.org/products/BIND/">
+    <item name="mnoGoSearch"
+          info="mnoGoSearch web search engine with SSL support"
+          url="http://mnogosearch.org/">
 </ul>
 
