@@ -298,7 +298,7 @@ foreach $l (@L) {
     $l =~ s|(\s+)(\S+[^/])(\s*\n)$|$1."<a href=\"$2\">$2</a>".$3|e;
     $l =~ s|(\s+)(\S+/)(\s*\n)$|$1."<a href=\"$2\"><b>$2</b></a>".$3|e;
     foreach $hi (@HI) {
-        $l =~ s|^(.*$hi.*)$|<font color="#cc3333">$1&nbsp;&nbsp;[LATEST]</font>|;
+        $l =~ s|^(.*$hi.*)$|<font color="#cc3333">$1&nbsp;&nbsp;<b>[LATEST]</b></font>|;
         $l =~ s|>($hi)<|><font color="#cc3333">$1</font><|;
     }
     print $l;
