@@ -22,4 +22,7 @@ OpenSSL.
     <item name="ASN.1 Modules from X-series Recommendations"
           info="The ASN.1 definitions for X.509 and other standards."
           url="http://www.itu.int/ITU-T/asn1/database/itu-t/x/">
+    <item name="Via PadLock support for Linux"
+          info="Support for Via PadLock ACE CPU extensions in openssl 0.9.7 (support is native in CVS for 0.9.8 and later)."
+          url="http://www.logix.cz/michal/devel/padlock/">
 </ul>
