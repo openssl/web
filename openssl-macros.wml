@@ -347,7 +347,15 @@ sub ls {
 @L = &ls("%0");
 foreach $l (@L) {
     next if ($l =~ m|^\s*$|);
-    $l =~ s|(\s+)(\S+[^/])(\s*\n)$|$1."<a href=\"$2\">$2</a>".$3|e;
+    if ($l =~ m|(\s+)(\S+[^/])(\s*\n)$|) {
+	my $h = $`.$1;
+	my $f = $2;
+	my $t = $3;
+	my $r = "<a href=\"$f\">$f</a>";
+	if (-f "$f.md5") { $r .= " (<a href=\"$f.md5\">MD5</a>)"; }
+	if (-f "$f.asc") { $r .= " (<a href=\"$f.asc\">PGP sign</a>)"; }
+	$l = $h.$r.$t;
+    }
     $l =~ s|(\s+)(\S+/)(\s*\n)$|$1."<a href=\"$2\"><b>$2</b></a>".$3|e;
     foreach $hi (@HI) {
         $l =~ s|^(.*$hi.*)$|<font color="#cc3333">$1&nbsp;&nbsp;<b>[LATEST]</b></font>|;
