@@ -108,5 +108,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="SSA"
           info="Secure Sockets Agent (SSA) - a client/server tunneling package"
           url="http://www.cyber.ee/infosecurity/products/ssa/">
+    <item name="gpkcs11"
+          info="GNU implementation of PKCS#11 standard based on SSLeay/OpenSSL"
+          url="ftp://alpha.gnu.org/pub/gnu/gpkcs11/">
 </ul>
 
