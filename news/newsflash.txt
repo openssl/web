@@ -1,3 +1,4 @@
+22-mar-2005: OpenSSL 0.9.7f is now <a href="ROOT/source/">available</a>, including important bugfixes
 25-oct-2004: OpenSSL 0.9.7e is now <a href="ROOT/source/">available</a>, including important bugfixes
 17-mar-2004: <a href="ROOT/news/secadv_20040317.txt">Security Advisory</a>: Denial of Service flaws in 0.9.6l and 0.9.7c
 17-mar-2004: OpenSSL 0.9.7d is now <a href="ROOT/source/">available</a>, including important bugfixes
