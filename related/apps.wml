@@ -129,5 +129,11 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="PINE/SSL"
           info="The PINE mail client with SSL support via OpenSSL"
           url="http://www.kfu.com/~nsayer/encryption/">
+    <item name="MySSL"
+          info="Interface for OpenSSL to Borland Delphi"
+          url="http://mujweb.cz/web/tomasek/myssl/index_en.html">
+    <item name="M2Crypto"
+          info="A SWIG based glue code for interfacing OpenSSL with Python"
+          url="http://www.post1.com/home/ngps/">
 </ul>
 
