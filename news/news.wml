@@ -1,6 +1,6 @@
 #!wml -onews.html@u+x
 
-#use wml::openssl area=news page=changelog 
+#use wml::openssl area=news page=news
 
 <title>News, Summary</title>
 
