@@ -2,7 +2,7 @@
 ##  openssl.wml -- WML Template for the www.openssl.org website
 ##  Written by Ralf S. Engelschall <rse@engelschall.com>
 ##
-##  Usage: #use wml::tpl::openssl area=<area_name> [page=<page_name>]
+##  Usage: #use wml::openssl area=<area_name> [page=<page_name>]
 ##
 
 #use wml::std::tags
