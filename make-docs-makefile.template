@@ -8,7 +8,7 @@
 #use wml::imp::generic
 
 {:
-[[s|(<STRONG>[^<].+?)</A>(</STRONG><DD>)|$1$2|sg]]
+## What's this? [[s|(<STRONG>[^<].+?)</A>(</STRONG><DD>)|$1$2|sg]]
 [[s|<P>\s+<P>|<P>|sg]]
 [[s|<P>\s+</|</|sg]]
 [[s|<DD>\s*<DT>|<DD>&nbsp;<DT>|sg]]
