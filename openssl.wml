@@ -400,10 +400,10 @@ are Copyright &copy; 1999 <a href="http://www.openssl.org/">The OpenSSL Project<
 All rights reserved.<br>
 This website is served by an 
 <a href="http://www.apache.org/"><font color="#000000">Apache</font></a>
-webserver environment.
+webserver environment.<br>
 Hardware and bandwidth provided by 
-<a href="http://opensource.ee.ethz.ch/"><font <ifeq "<get-var color>" "" ""
-"color=<get-var color>">>Department of Electrical Engineering</font></a>
+<a href="http://opensource.ee.ethz.ch/"><font color="#000000">
+Department of Electrical Engineering</font></a>
 of Swiss Federal Institute of Technology, Zurich.
 </font>
 </define-tag>
