@@ -34,6 +34,7 @@
 <mirror url="ftp://ftp.ncu.edu.tw/Unix/Crypto/OpenSSL/" loc="TW">
 <mirror url="ftp://ftp.mit.com.tw/pub/SSL/openssl/" loc="TW">
 <mirror url="ftp://ftp.elab.co.za/support/openssl/source/" loc="ZA">
+<mirror url="ftp://ftp.fisek.com.tr/pub/openssl/" loc="TR">
 
 </ul>
 
