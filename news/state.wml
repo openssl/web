@@ -16,13 +16,13 @@ of the OpenSSL project.
     <table cellspacing=0 cellpadding=1 border=0>
     <tr><td><b id=sf>Date/Range</b></td>   <td><b id=sf>Event</b></td></tr>
     <tr><td><hr noshade size=1></td>       <td><hr noshade size=1></td></tr>
-    <tr><td><b id=sf>2002-11-13<br>-- 2002-11-19:</b></td>
+    <tr><td><b id=sf>2002-11-13<br>-- 2002-11-21:</b></td>
 					   <td>Test of snapshots:
 					   <p>
 					   <tt>openssl-0.9.6-stable-SNAP-2002<i>mmdd</i>.tar.gz</tt><br>
 					   <tt>openssl-e-0.9.6-stable-SNAP-2002<i>mmdd</i>.tar.gz</tt>
-					   <p>
-					   Release of OpenSSL 0.9.6h</td></tr>
+					   </td></tr>
+    <tr><td><b id=sf>2002-11-21:</b></td><td>Release of OpenSSL 0.9.6h</td></tr>
     </table>
     <p>
 
