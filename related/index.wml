@@ -18,6 +18,9 @@ OpenSSL) related stuff.
     <item name="SSLeay Doc: FAQ List"
           info="The SSLeay Frequently Asked Questions"
           url="http://www.psy.uq.oz.au/~ftp/Crypto/">
+    <item name="SSLeay Doc: FAQ List (Japanese)"
+          info="The SSLeay Frequently Asked Questions in Japanese"
+          url="http://www.infoscience.co.jp/technical/crypto/ssleay_jp.html">
     <item name="SSLeay Doc: Programmers Reference"
           info="The reference manual for programming with SSLeay"
           url="http://www.psy.uq.oz.au/~ftp/Crypto/ssl.html">
