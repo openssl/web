@@ -405,7 +405,7 @@ END_OF_HEAD
 	    next if @begin_stack && $begin_stack[-1] ne 'html';
 	    my $text = $_;
 	    process_text(\$text, 1);
-	    print HTML "<P>\n$text";
+	    print HTML "<P>\n$text</P>";
 	}
     }
 
@@ -885,6 +885,8 @@ sub process_item {
 
     my $need_preamble = 0;
     my $this_entry;
+    my $rawtext;
+    my $rawitem;
 
 
     # lots of documents start a list without doing an =over.  this is
@@ -895,10 +897,6 @@ sub process_item {
     process_over() unless $listlevel;
 
     return unless $listlevel;
-
-    # remove formatting instructions from the text
-    1 while $text =~ s/[A-Z]<([^<>]*)>/$1/g;
-    pre_escape(\$text);
 
     $need_preamble = $items_seen[$listlevel]++ == 0;
 
@@ -915,12 +913,19 @@ sub process_item {
 
 	print HTML '<LI>';
 	if ($text =~ /\A\*\s*(.+)\Z/s) {
+	    $text = $1;
+	    # remove formatting instructions from the text, save in $rawtext
+	    $rawtext = $text;
+	    1 while $rawtext =~ s/[A-Z]<([^<>]*)>/$1/g;
+	    pre_escape(\$rawtext);
+	    process_text(\$text);
+
 	    print HTML '<STRONG>';
-	    if ($items_named{$1}++) {
-		print HTML html_escape($1);
+	    if ($items_named{$rawtext}++) {
+		print HTML $text;
 	    } else {
-		my $name = 'item_' . htmlify(1,$1);
-		print HTML qq(<A NAME="$name">), html_escape($1), '</A>';
+		my $name = 'item_' . htmlify(1,$rawtext);
+		print HTML qq(<A NAME="$name">), $text, '</A>';
 	    }
 	    print HTML '</STRONG>';
 	}
@@ -934,12 +939,19 @@ sub process_item {
 
 	print HTML '<LI>';
 	if ($text =~ /\A\d+\.?\s*(.+)\Z/s) {
+	    $text = $1;
+	    # remove formatting instructions from the text, save in $rawtext
+	    $rawtext = $text;
+	    1 while $rawtext =~ s/[A-Z]<([^<>]*)>/$1/g;
+	    pre_escape(\$rawtext);
+	    process_text(\$text);
+
 	    print HTML '<STRONG>';
-	    if ($items_named{$1}++) {
-		print HTML html_escape($1);
+	    if ($items_named{$rawtext}++) {
+		print HTML $text;
 	    } else {
-		my $name = 'item_' . htmlify(0,$1);
-		print HTML qq(<A NAME="$name">), html_escape($1), '</A>';
+		my $name = 'item_' . htmlify(0,$rawtext);
+		print HTML qq(<A NAME="$name">), $text, '</A>';
 	    }
 	    print HTML '</STRONG>';
 	}
@@ -951,14 +963,20 @@ sub process_item {
 	    print HTML "<DL>\n";
 	}
 
+	$rawtext = $text;
+	# remove formatting instructions from the text, save in $rawtext
+	1 while $rawtext =~ s/[A-Z]<([^<>]*)>/$1/g;
+	pre_escape(\$rawtext);
+	process_text(\$text);
+
 	print HTML '<DT>';
-	if ($text =~ /(\S+)/) {
+	if ($rawtext =~ /(\S+)/) {
 	    print HTML '<STRONG>';
 	    if ($items_named{$1}++) {
-		print HTML html_escape($text);
+		print HTML $text;
 	    } else {
-		my $name = 'item_' . htmlify(1,$text);
-		print HTML qq(<A NAME="$name">), html_escape($text), '</A>';
+		my $name = 'item_' . htmlify(1,$rawtext);
+		print HTML qq(<A NAME="$name">), $text, '</A>';
 	    }
 	    print HTML '</STRONG>';
 	}
