@@ -56,7 +56,7 @@ H3    { font-weight: bold; font-size: 12pt; line-height: 12pt; \
 #   end of header and start of physical body
 #   (use additionally use colors here for older browsers)
 </head>
-<body link="#6666cc" alink="#6666cc" vlink="#6666cc" bgcolor="#666699">
+<body link="#6666cc" alink="#6666cc" vlink="#6666cc" bgcolor="#666699" text="#000000">
 
 #   now define the page layout by a nested table 
 #   structure consisting of a 5x5 cell grid.
