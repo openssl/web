@@ -11,10 +11,9 @@ OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <p>
 The OpenSSL project team is pleased to announce the release of
 version 0.9.7e of our open source toolkit for SSL/TLS.  This new
-OpenSSL version is a security and bugfix release and incorporates
-at least 4 changes and bugfixes to the toolkit (for a complete list
-see <a
-href="http://www.openssl.org/source/exp/CHANGES">http://www.openssl.org/source/exp/CHANGES</a>).
+OpenSSL version is a bugfix release and incorporates at least 4 changes
+and bugfixes to the toolkit (for a complete list see
+<a href="http://www.openssl.org/source/exp/CHANGES">http://www.openssl.org/source/exp/CHANGES</a>).
 
 <p>
 The most significant changes are:
