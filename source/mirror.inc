@@ -58,6 +58,9 @@
 <mirror url="ftp://ftp.si.uniovi.es/mirror/OpenSSL/" loc="ES">
 <mirror url="ftp://ftp.hjc.edu.sg/opensource/openssl/" loc="SG">
 <mirror url="ftp://ftp.singnet.com.sg/opensource/openssl/" loc="SG">
+<mirror url="ftp://mirrors.usc.edu/pub/openssl/" loc="US">
+<mirror url="http://mirrors.usc.edu/pub/openssl/" loc="US">
+<mirror url="rsync://mirrors.usc.edu/openssl/" loc="US">
 
 </ul>
 
