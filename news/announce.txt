@@ -1,44 +1,43 @@
 
-  OpenSSL version 0.9.2b released
+  OpenSSL version 0.9.3 released
   ===============================
 
   OpenSSL - The Open Source toolkit for SSL/TLS
   http://www.openssl.org/
 
   The OpenSSL project team is pleased to announce the release of version
-  0.9.2b of our open source toolkit for SSL/TLS.  This new OpenSSL version
-  incorporates over 130 changes and bugfixes to the toolkit (for a complete
+  0.9.3 of our open source toolkit for SSL/TLS.  This new OpenSSL version
+  incorporates over 90 changes and bugfixes to the toolkit (for a complete
   list see http://www.openssl.org/source/exp/CHANGES).
 
   The most significant changes are:
 
-    o Fixed a security hole related to session resumption
-    o Fixed RSA encryption routines for the p < q case
-    o "ALL" in cipher lists now means "everything except NULL ciphers"
-    o Support for Triple-DES CBCM cipher
-    o Support of Optimal Asymmetric Encryption Padding (OAEP) for RSA
-    o First support for new TLSv1 ciphers
-    o Added a few new BIOs (syslog BIO, reliable BIO)
-    o Extended support for DSA certificate/keys.
-    o Extended support for Certificate Signing Requests (CSR)
-    o Initial support for X.509v3 extensions
-    o Extended support for compression inside the SSL record layer
-    o Overhauled Win32 builds
-    o Cleanups and fixes to the Big Number (BN) library
-    o Support for ASN.1 GeneralizedTime
-    o Split ASN.1 SETs from SEQUENCEs
-    o ASN1 and PEM support for Netscape Certificate Sequences
-    o Overhauled Perl interface
-    o Lots of source tree cleanups.
-    o Lots of memory leak fixes.
-    o Lots of bug fixes.
+    o Lots of enhancements and cleanups to the Configuration mechanism
+    o RSA OEAP related fixes
+    o Added `openssl ca -revoke' option for revoking a certificate
+    o Source cleanups: const correctness, type-safe stacks and ASN.1 SETs
+    o Source tree cleanups: removed lots of obsolete files
+    o Thawte SXNet, certificate policies and CRL distribution points
+    o Preliminary (experimental) S/MIME support
+    o Support for ASN.1 UTF8String and VisibleString
+    o Full integration of PKCS#12 code
+    o Sparc assembler bignum implementation, optimized hash functions
+    o Option to disable selected ciphers
 
-  We consider OpenSSL 0.9.2b to be the best version of OpenSSL available and
+  We consider OpenSSL 0.9.3 to be the best version of OpenSSL available and
   we strongly recommend that users of older versions, especially of old SSLeay
-  versions, upgrade as soon as possible.  OpenSSL 0.9.2b is available for
+  versions, upgrade as soon as possible.  OpenSSL 0.9.3 is available for
   download via HTTP and FTP from the following master locations (the various
   FTP mirrors you can find under http://www.openssl.org/source/mirror.html):
 
     o http://www.openssl.org/source/
     o ftp://ftp.openssl.org/source/
+
+  Yours,
+  The OpenSSL Project Team...  
+
+    Mark J. Cox             Bodo Moeller    
+    Ralf S. Engelschall     Ulf Moeller     
+    Dr. Stephen Henson      Holger Reif     
+    Ben Laurie              Paul C. Sutton
 
