@@ -1,6 +1,6 @@
 
-  OpenSSL version 0.9.6 Beta 2
-  ============================
+  OpenSSL version 0.9.6 Beta 3 (Final beta)
+  =========================================
 
   OpenSSL - The Open Source toolkit for SSL/TLS
   http://www.openssl.org/
