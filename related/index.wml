@@ -33,6 +33,9 @@ OpenSSL) related stuff.
     <item name="DFN-PCA OpenSSL Handbuch (german)"
           info="A german handbook for OpenSSL 0.9.2b from the DFN-PCA"
           url="http://www.pca.dfn.de/dfnpca/certify/ssl/handbuch/ossl092/">
+    <item name="SSLeay Certificate Cookbook"
+          info="A cookbook on creating certificates and distributing them"
+          url="http://www.ultranet.com/~fhirsch/Papers/cook/ssl_cook.html">
     <item name="OpenSSL for VMS"
           info="A port of OpenSSL to the VMS environment"
           url="http://www.free.lp.se/openssl/">
