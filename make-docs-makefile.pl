@@ -145,7 +145,7 @@ print <<END_OF_SECTION2;
 	echo '  \$\@'; \\
 	sed -e '/^FILE\$\$/,\$\$d' < make-docs-makefile.template | sed -e 's,PAGE,'\$\$pag',' -e 's,SECTION,'\$\$s',' > \$\@; \\
 	cat < \$\$pod | \\
-	PERL5LIB=docs pod2html --htmlroot=.. --podroot=\$(PODSHOME) --podpath=\$(PODSDIRS) | sed -e '1,/<BODY>/d' -e '/<\\/BODY>/,\$\$d' -e 's/^\\(  *\\)#/\\1\\\\#/' >> \$\@; \\
+	PERL5LIB=docs pod2html --htmlroot=.. --podroot=\$(PODSHOME) --podpath=\$(PODSDIRS) | sed -e '1,/<BODY>/d' -e '/<\\/BODY>/,\$\$d' -e 's/^\\(  *\\)#/\\1\\\\#/' -e 's/\\\\/\\\\\\\\/g' >> \$\@; \\
 	sed -e '1,/^FILE\$\$/d' < make-docs-makefile.template | sed -e 's,PAGE,'\$\$pag',' -e 's,SECTION,'\$\$s',' >> \$\@
 
 END_OF_SECTION2
@@ -166,5 +166,5 @@ foreach $file (keys %wmls) {
     if ($DEBUG) {
         print STDERR "Dependencies for $file: ",$dependencies{$file},"\n";
     }
-    print $wmls{$file},' : ',$HTML_pm," \\\n\t",join(" \\\n\t",map { ($_ ne "" && $page{$_} ne "") ? $PODSHOME . '/' . $page{$_} : () } split(':',$dependencies{$file})),"\n";
+    print $wmls{$file},' : ',$HTML_pm," \\\n\tmake-docs-makefile.pl \\\n\t",join(" \\\n\t",map { ($_ ne "" && $page{$_} ne "") ? $PODSHOME . '/' . $page{$_} : () } split(':',$dependencies{$file})),"\n";
 }
