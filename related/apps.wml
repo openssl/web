@@ -201,5 +201,8 @@ the old SSLeay package or the new OpenSSL package.
     <item name="RubyPKI"
           info="RubyPKI, an API that binds the language Ruby to OpenSSL"
           url="http://www.freesoftware.fsf.org/rubypki/">
+    <item name="TinySSL"
+	      info="TinySSL, a web server using OpenSSL"
+		  url="http://www.ritlabs.com/tinyweb/tinyssl.html">
 </ul>
 
