@@ -1,3 +1,4 @@
+06-Apr-1999: RSAref-related <a href="ROOT/source/openssl-0.9.2b-rsaoaep.patch">patch</a> for OpenSSL 0.9.2b available
 29-Mar-1999: New <a href="ROOT/about/">development team members</a>: Ulf, Bodo and Holger.
 22-Mar-1999: Long-awaited <a href="ROOT/news/announce.html">OpenSSL 0.9.2b</a> now <a href="ROOT/source/">available</a>
 04-Mar-1999: Important <a href="ROOT/source/openssl-0.9.1c-bnrec.patch">patch</a> for OpenSSL 0.9.1c available
