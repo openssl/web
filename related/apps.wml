@@ -137,7 +137,7 @@ the old SSLeay package or the new OpenSSL package.
           url="http://www.cashcow.dk/">
     <item name="pyCA"
           info="Certificate Authority package implemented with Phyton and OpenSSL"
-          url="http://sites.inka.de/ms/python/pyca/">
+          url="http://www.pyca.de/">
     <item name="PINE/SSL"
           info="The PINE mail client with SSL support via OpenSSL"
           url="http://www.kfu.com/~nsayer/encryption/">
@@ -225,5 +225,8 @@ the old SSLeay package or the new OpenSSL package.
     <item name="DelphiImport"
 	  info="A Deplhi import unit for the OpenSSL DLL"
 	  url="http://www.csita.unige.it/software/free/delphiopenssl/indexe.html">
+    <item name="ELyCA"
+          info="Another Certificate Authority package implemented with Phyton and OpenSSL"
+          url="http://culture.eii.us.es/~pablo/elyca/">
 </ul>
 
