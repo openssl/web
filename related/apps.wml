@@ -126,5 +126,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="pyCA"
           info="Certificate Authority package implemented with Phyton and OpenSSL"
           url="http://sites.inka.de/ms/python/pyca/">
+    <item name="PINE/SSL"
+          info="The PINE mail client with SSL support via OpenSSL"
+          url="http://www.kfu.com/~nsayer/encryption/">
 </ul>
 
