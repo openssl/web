@@ -185,6 +185,6 @@ the old SSLeay package or the new OpenSSL package.
           url="http://www.moxienet.com/lynx/">
     <item name="Courier-IMAP"
           info="An IMAP server capable of speaking SSL/TLS via OpenSSL"
-          url="http://courier.sourceforge.net/">
+          url="http://www.inter7.com/courierimap/">
 </ul>
 
