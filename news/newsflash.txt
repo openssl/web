@@ -1,3 +1,4 @@
+29-May-1999: OpenSSL 0.9.3a is now <a href="ROOT/source/">available</a>, a minor bugfix release
 25-May-1999: <a href="ROOT/news/announce.html">OpenSSL 0.9.3</a> is now <a href="ROOT/source/">available</a>
 10-May-1999: Test <a href="ftp://ftp.openssl.org/snapshot/">snapshots</a> now to make OpenSSL 0.9.3 a success!
 06-Apr-1999: RSAref-related <a href="ROOT/source/openssl-0.9.2b-rsaoaep.patch">patch</a> for OpenSSL 0.9.2b available
