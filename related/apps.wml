@@ -138,5 +138,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="Sendmail-TLS"
           info="A wrapper for the Sendmail MTA to support SSL connections"
           url="http://opensource.3gi.com/sendmail-tls/">
+    <item name="SafeGossip"
+          info="Another SSL/TLS wrapper for IMAP, POP and SMTP"
+          url="http://www.skygate.co.uk/safegossip/">
 </ul>
 
