@@ -150,5 +150,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="tund"
           info="FreeBSD's IP over IP tunneling deamon"
           url="http://www.chg.ru/~ks/tund/">
+    <item name="sslproxy"
+          info="Another TCP/SSL relay/tunneling program"
+          url="ftp://ftp.obdev.at/pub/Products/sslproxy/">
 </ul>
 
