@@ -518,7 +518,7 @@ RCS file: /e/openssl/cvs/openssl/ssl/s3_srvr.c,v
 retrieving revision 1.85.2.5
 diff -u -r1.85.2.5 s3_srvr.c
 --- ssl/s3_srvr.c	2002/07/10 06:57:50	1.85.2.5
-+++ ssl/s3_srvr.c	2002/07/30 09:55:04
++++ ssl/s3_srvr.c	2002/07/30 13:36:36
 @@ -123,6 +123,7 @@
  #include <openssl/x509.h>
  #include <openssl/krb5_asn.h>
@@ -554,7 +554,7 @@ diff -u -r1.85.2.5 s3_srvr.c
 +		/* Note that the length is checked again below,
 +		** after decryption
 +		*/
-+		if(enc.pms_length > sizeof pms)
++		if(enc_pms.length > sizeof pms)
 +			{
 +			SSLerr(SSL_F_SSL3_GET_CLIENT_KEY_EXCHANGE,
 +			       SSL_R_DATA_LENGTH_TOO_LONG);
