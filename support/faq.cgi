@@ -15,6 +15,7 @@ open(FP, "<$file");
 $i=0; $n=0;
 print "<ul>\n";
 while (<FP>) {
+    escape($_);
     $i++ if /^$/;
     last if $i > 1;
     if (/^\* (.*)/) {
@@ -32,9 +33,7 @@ while (<FP>) {
 	$snip=1;
     }
     if ($snip) {
-	s/\&/\&amp;/g;
-	s/\</\&lt;/g;
-	s/\>/\&gt;/g;
+	escape($_);
 	print;
     }
     if ($snip && /^----- snip:end -----/) {
@@ -49,9 +48,10 @@ while (<FP>) {
 	chomp;
 	$_ .= <FP>;
     }
-    s/<URL: *(.*?)>/<a href=\"$1\">$1<\/a>/;
+    escape($_);
+    s/&lt;URL: *(.*?)&gt;/<a href=\"$1\">$1<\/a>/;
     if (s/\((.?)\)/XX$1XX/g) {
-	while (/([A-Za-z_]*)XX(.?)XX/) {
+	while (/([A-Za-z_\.]*)XX(.?)XX/) {
 	    foreach $section ("apps", "ssl", "crypto") {
 		if (-f "../docs/$section/$1.html") {
 		    s|([A-Za-z_]*)XX(.?)XX|<a href=\"../docs/$section/$1.html\">$1($2)</a>|;
@@ -83,3 +83,9 @@ close(FP);
 
 exit(0);
 
+sub escape
+{
+    s/\&/\&amp;/g;
+    s/\</\&lt;/g;
+    s/\>/\&gt;/g;
+}
