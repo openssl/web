@@ -1,0 +1,16 @@
+
+#use wml::openssl area=related page=misc
+
+<title>Related, Misc</title>
+
+<h1>Misc</h1>
+
+These are references to sites with more general documents related to SSL/TLS,
+cryptography, security, and so on.
+
+<ul>
+    <item name="Security Space"
+          info="A nice \"web security portal\", as it calls itself."
+          url="http://www.securityspace.com/">
+</ul>
+
