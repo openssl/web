@@ -387,12 +387,44 @@ This product includes cryptographic software written by Eric A. Young
 </font>
 </define-tag>
 
+#  a tag displaying the used tools   
 <define-tag website-tools>
 <font face="Arial,Helvetica" size=-1> Website designed and generated with <a
 href="http://www.engelschall.com/sw/wml/"><font color="#000000">Website META
 Language</font></a> (WML) and served by <a href="http://www.apache.org/"><font
 color="#000000">Apache</font></a> webserver.
 </font>
+</define-tag>
+
+#  construct an absolute URL out of a relative URL
+#  (essential for the mirroring of the website!)
+<define-tag absolute>
+<:{
+    my ($cwd, $baseurl, $basedir, $subdir, $page, $url);
+
+    #   determine current working directory
+    $cwd = '<get-var WML_SRC_DIRNAME>';
+
+    #   determine base URL
+    $baseurl = '<get-var BASE_URL>' || 'file://';
+
+    #   determine base directory
+    $basedir = '<get-var BASE_DIR>' || '<get-var WML_SRC_DIRNAME>';
+    $basedir = &canonpath("$cwd/$basedir") if ($basedir !~ m|^/|);
+
+    #   determine subdir from base dir to current working dir
+    $subdir = &relpath($basedir, $cwd);
+
+    #   determine document
+    $page = '%0';
+
+    #   construct final URL
+    $url = "$baseurl/$subdir/$page";
+    $url = &canonurl($url);
+
+    #   replace this tag with the constructed URL
+    print $url;
+}:>
 </define-tag>
 
 ##

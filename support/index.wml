@@ -8,9 +8,8 @@
 The OpenSSL project uses various mailing lists to coordinate the development
 and to provide support to the user community. They all have an Email address
 of <tt>openssl-</tt><i id=red>name</i><tt>@openssl.org</tt> and are remote
-controlled by the Majordomo robot under 
-<tt id=red>majordomo</tt><tt>@openssl.org</tt>.<br> <div id=sf>NOTICE: DO
-NEVER SEND ANY SUBSCRIBE/UNSUBSCRIBE MESSAGES TO THE LIST ADDRESSES!</div>
+controlled by the Majordomo robot under <tt
+id=red>majordomo</tt><tt>@openssl.org</tt>. 
 
 <h2>Overview</h2>
 
@@ -57,9 +56,64 @@ Here is an overview of the available mailing lists:
 </tr>
 </table>
 
+<h2>Subscription</h2>
+
+To easily subscribe/unsubscribe to/from those lists, use the following form to
+drop an appropriate Email to Majordomo.  After Majordomo received your
+request, it will respond to the entered Email address with an authority
+challenge which has to send back again for security reasons (to avoid that
+others subscribe you without your ok).  So entering the Email address of
+someone else in the form below is useless, of course.
+
+<center>
+<form action="<absolute majordomo.cgi>" method="GET">
+<table cellspacing=0 cellpadding=2 border=0 bgcolor="#cccccc"><tr><td>
+<table cellspacing=0 cellpadding=4 border=0 bgcolor="#f0f0f0">
+<tr>
+<td colspan=3><font id="sfl">Mailing List Subscription</font></td>
+</tr>
+<tr>
+<td>
+<input type=checkbox checked name="action" value="subscribe"> subscribe<br>
+<input type=checkbox name="action" value="unsubscribe"> unsubscribe<br>
+</td>
+<td colspan=2>
+<div id=sf>Enter your Email address here:</div><br>
+<input type=text name="email" size=35 value="your@address.dom">
+</td>
+</tr>
+<tr>
+<td>
+<input type=checkbox checked name="list" value="announce"> openssl-announce<br>
+<input type=checkbox checked name="list" value="users"> openssl-users
+</td>
+<td>
+<input type=checkbox name="list" value="dev"> openssl-dev<br>
+<input type=checkbox name="list" value="cvs"> openssl-cvs
+</td>
+<td align=right valign=bottom> 
+<div id=sf><input type=submit value="Send to Majordomo!"></div>
+</td>
+</tr>
+</table>
+</td></tr></table>
+</form>
+</center>
+
+If you don't trust the above form or want to do it manually, you can contact
+Majordomo directly, of course.  To subscribe to one of the mailing list, just
+send an Email to <tt id=red>majordomo</tt><tt>@openssl.org</tt> with the
+following text in the <i>body</i> (the subject is not important and can be
+empty): ``<tt>subscribe openssl-</tt><i id=red>name</i> &nbsp; <i
+id=red>your@address.dom</i>'' But please remember this cookie: ``Internet is a
+wonderful mechanism for making a fool of yourself in front of a very large
+audience''.  So start thinking already with your subscription and <b>don't</b>
+send it to the list addresses, please. Actually the above form is provided
+mainly to avoid this common and nasty mistake. 
+
 <h2>Archive</h2>
 
-The mailing list are automatically archived at the following locations:
+The mailing lists are automatically archived at the following locations:
 
 <ul>
 <li><a href="http://www.mail-archive.com/openssl-announce@openssl.org/">
@@ -69,41 +123,4 @@ The mailing list are automatically archived at the following locations:
 <li><a href="http://www.mail-archive.com/openssl-users@openssl.org/">
     http://www.mail-archive.com/openssl-users@openssl.org/</a>
 </ul>
-
-<h2>Subscription</h2>
-
-To subscribe to one of these Majordomo-controlled mailing list, send an Email
-to <tt id=red>majordomo</tt><tt>@openssl.org</tt> with
-only
-
-<blockquote>
-<tt>subscribe openssl-</tt><i id=red>name</i> &nbsp; <i id=red>you@domain.dom</i>
-</blockquote>
-
-in the <i>body</i> (the subject is not important and can be empty). After
-sending this, Majordomo will respond with an authority challenge which has to
-send back again for security reasons (to avoid that others subscribe you
-without your ok). Now you are successfully subscribed to this list. 
-
-<p>
-<b id=red>NOTICE:</b><br>
-
-<p>
-Experience shows that people don't want to read. So, three
-common mistakes usually occur for those people:
-
-<ol>
-<li>You copy the above
-    <tt>openssl-</tt><i>name</i> verbatim into your mail instead of replacing
-    it with the actual name of the mailing list.
-<li>You copy the
-    above <i>you@domain.dom</i> verbatim into your mail instead of replacing
-    it with your actual Email address.
-<li>You send the subscription to one of the mailing lists instead
-    to <tt>majordomo@openssl.org</tt>
-</ol>
-
-Please remember this cookie: ``Internet is a wonderful mechanism for making a
-fool of yourself in front of a very large audience''.  So start thinking
-already with your subscription, please.
 
