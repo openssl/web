@@ -4,7 +4,7 @@
 
 #use wml::openssl area=source page=cvsweb
 
-<title>Source, Tarballs</title>
+<title>CVS Web Interface</title>
 
 <h1>CVS Web Interface</h1>
 
