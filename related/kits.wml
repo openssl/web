@@ -1,0 +1,28 @@
+
+#use wml::openssl area=related page=kits
+
+<title>Related, Toolkits</title>
+
+<h1>Toolkits</h1>
+
+These are references to various toolkits and libraries which implement 
+the SSL/TLS protocols.
+
+<ul>
+    <item name="OpenSSL"
+          info="The open-source toolkit for SSL/TLS"
+          url="http://www.openssl.org/">
+    <item name="SSLeay"
+          info="The old no longer maintained predecessor toolkit to OpenSSL"
+          url="http://www.ssleay.org/">
+    <item name="RSA BSAFE SSL-C"
+          info="The commercial successor toolkit to SSLeay from RSA DSI"
+          url="http://www.aus.rsa.com/products/sslc/">
+    <item name="SSLPlus"
+          info="Another commercial toolkit for SSL/TLS from Certicom/Consensus"
+          url="http://www.consensus.com/sslplus/">
+    <item name="SSLRef"
+          info="Netscape's old SSL reference library from Netscape/Consensus (no longer available)"
+          url="ftp://ftp.replay.com/pub/crypto/SSL/">
+</ul>
+
