@@ -77,7 +77,7 @@ foreach $list (split(/,/, $qs{list})) {
 }
 
 #  send out mail
-open(MAIL, "|/sw/bin/sendmail -oi -oee majordomo\@openssl.org");
+open(MAIL, "|/e/openssl/sw/sbin/sendmail -oi -oee majordomo\@openssl.org");
 print MAIL $mail;
 close(MAIL);
 
