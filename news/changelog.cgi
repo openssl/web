@@ -1,4 +1,4 @@
-#!/sw/bin/perl
+#!/e/openssl/sw/bin/perl
 ##
 ##  changelog.cgi -- Read CHANGES file and pretty-print it as HTML
 ##
