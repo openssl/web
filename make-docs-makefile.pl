@@ -45,6 +45,10 @@ foreach $f (keys %wmls) {
 	if ($pag eq "config") {
 	    $s="(5)";
 	}
+    } elsif ($d eq "crypto") {
+	if ($pag eq "des_modes") {
+	    $s="(7)";
+	}
     }
 
     $page{$pag . $s} = $fs;
@@ -59,16 +63,18 @@ foreach $f (keys %wmls) {
 	if (/^=head1 /) {
 	    $name = 0;
 	} elsif ($name) {
-	    s/ - .*//;
-	    s/[ \t,]+/ /g;
-	    @words = split ' ';
-	    foreach $w (@words) {
-		$page{$w . $s} = $fs;
-		if ($w !~ /_/) {
-		    $W = $w;
-		    $W =~ tr/A-Z/a-z/;
-		    if ($w ne $W && $page{$W . $s} eq "") {
-			$page{$W . $s} = $fs;
+	    if (/ - /) {
+		s/ - .*//;
+		s/[ \t,]+/ /g;
+		@words = split ' ';
+		foreach $w (@words) {
+		    $page{$w . $s} = $fs;
+		    if ($w !~ /_/) {
+			$W = $w;
+			$W =~ tr/A-Z/a-z/;
+			if ($w ne $W && $page{$W . $s} eq "") {
+			    $page{$W . $s} = $fs;
+			}
 		    }
 		}
 	    }
@@ -132,7 +138,8 @@ print <<END_OF_SECTION2;
 	${AT}pod="`echo \$\@ | sed -e 's,^\$(HTMLGOAL)/\\(.*\\)\\.wml\$\$,\$(PODSHOME)/\\1.pod,'`"; \\
 	pag=\"`basename \$\@ .wml`\"; \\
 	d="`echo \$\@ | sed -e 's,/[^/]*\$\$,,' -e 's,^\$(HTMLGOAL)/,,'`"; \\
-	if [ "\$\$d" = "apps" ]; then if [ "\$\$pag" = "config" ]; then s='(5)'; else s='(1)'; fi; else s='(3)'; fi; \\
+	s='(3)'; \\
+	if [ "\$\$d" = "apps" ]; then s='(1)'; if [ "\$\$pag" = "config" ]; then s='(5)'; fi; else if [ "\$\$d" = "crypto" -a "\$\$pag" = "des_modes" ]; then s='(7)'; fi; fi; \\
 	echo '  \$\@'; \\
 	sed -e '/^FILE\$\$/,\$\$d' < make-docs-makefile.template | sed -e 's,PAGE,'\$\$pag',' -e 's,SECTION,'\$\$s',' > \$\@; \\
 	cat < \$\$pod | \\
