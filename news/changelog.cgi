@@ -7,7 +7,7 @@ $|++;
 print "Content-type: text/html\r\n";
 print "\r\n";
 
-$file = glob("../source/openssl-[0-9].[0-9].[0-9a-z]*/CHANGES");
+$file = "/e/openssl/exp/openssl/CHANGES";
 open(FP, "<$file");
 $page = '';
 $page .= $_ while (<FP>);
