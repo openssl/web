@@ -210,5 +210,8 @@ the old SSLeay package or the new OpenSSL package.
     <item name="XMLSec"
 	  info="XMLSecurity Library, a library to implement signing and encryption in XML."
 	  url="http://www.aleksey.com/xmlsec/">
+    <item name="OpenTSA"
+	  info="Open TSA, Time Stamping Authority application (RFC 3161)"
+	  url="http://glozik-zoltan.int.eu.org/tsa/">
 </ul>
 
