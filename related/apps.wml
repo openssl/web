@@ -32,6 +32,9 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
           url="http://www.multimania.com/jonama/">
     <item name="stunnel"
           info="An SSL encryption wrapper for standard network daemons"
+          url="http://mike.daewoo.com.pl/computer/stunnel/">
+    <item name="stunnel-p"
+          info="A new branch of the SSL encryption wrapper for standard network daemons"
           url="http://www.stunnel.org/">
     <item name="sslwrap"
           info="Another SSL encryption wrapper for standard network daemons"
