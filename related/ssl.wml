@@ -30,9 +30,9 @@ Security (TLS) protocols.
     <item name="SSLv3 to TLSv1: Modifications"
           info="Modifications to the SSL protocol for TLS"
           url="http://www.consensus.com/ietf-tls/tls-ssl-mods-00.txt">
-    <item name="TLSv1 Internet Draft, Rev.6"
-          info="The sixth revision of the forthcoming TLSv1 Internet Standard"
-          url="ftp://ftp.ietf.org/internet-drafts/draft-ietf-tls-protocol-06.txt">
+    <item name="TLSv1 Proposed Standard, RFC2246"
+          info="The proposed TLS version 1 standard"
+          url="ftp://ftp.isi.edu/in-notes/rfc2246.txt">
     <item name="HTTP over TLS"
           info="The specification on how to run HTTP over SSL/TLS"
           url="ftp://ftp.ietf.org/internet-drafts/draft-ietf-tls-https-01.txt">
