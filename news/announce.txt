@@ -1,23 +1,22 @@
 
-  OpenSSL version 0.9.6e released
+  OpenSSL version 0.9.6f released
   ===============================
 
   OpenSSL - The Open Source toolkit for SSL/TLS
   http://www.openssl.org/
 
   The OpenSSL project team is pleased to announce the release of version
-  0.9.6e of our open source toolkit for SSL/TLS.  This new OpenSSL version
+  0.9.6f of our open source toolkit for SSL/TLS.  This new OpenSSL version
   is a security and bugfix release and incorporates several changes to the
   toolkit (for a complete list see http://www.openssl.org/source/exp/CHANGES).
 
   The most significant changes are:
 
-      o Important security related bugfixes.
-      o Various SSL/TLS library bugfixes.
+      o Various important bugfixes.
 
-  We consider OpenSSL 0.9.6e to be the best version of OpenSSL available
+  We consider OpenSSL 0.9.6f to be the best version of OpenSSL available
   and we strongly recommend that users of older versions upgrade as
-  soon as possible.  OpenSSL 0.9.6e is available for download via HTTP
+  soon as possible.  OpenSSL 0.9.6f is available for download via HTTP
   and FTP from the following master locations (you can find the various
   FTP mirrors under http://www.openssl.org/source/mirror.html):
 
@@ -34,8 +33,15 @@
 
   The distribution file names are:
 
-      o openssl-0.9.6e.tar.gz [normal]
-      o openssl-engine-0.9.6e.tar.gz [engine]
+      o openssl-0.9.6f.tar.gz [normal]
+        MD5 checksum: 160ac38bd2784e633ed291d03f0087d4
+      o openssl-engine-0.9.6f.tar.gz [engine]
+        MD5 checksum: 26f4b7189fb3ef9c701e961ffe101a95
+
+  The checksums were calculated using the following commands:
+
+    openssl md5 < openssl-0.9.6f.tar.gz
+    openssl md5 < openssl-engine-0.9.6f.tar.gz
 
   Yours,
   The OpenSSL Project Team...  
