@@ -389,10 +389,18 @@ This product includes cryptographic software written by Eric A. Young
 
 #  a tag displaying the used tools   
 <define-tag website-tools>
-<font face="Arial,Helvetica" size=-1> Website designed and generated with <a
-href="http://www.engelschall.com/sw/wml/"><font color="#000000">Website META
-Language</font></a> (WML) and served by <a href="http://www.apache.org/"><font
-color="#000000">Apache</font></a> webserver.
+<font face="Arial,Helvetica" size=-1> 
+Website designed by
+<a href="http://www.engelschall.com/">Ralf S. Engelschall</a>
+and generated with
+<a href="http://www.engelschall.com/sw/wml/"><font color="#000000">
+Website META Language</font></a> (WML).<br>
+All markup code and graphics on this website
+are Copyright &copy; 1999 <a href="http://www.openssl.org/">The OpenSSL Project</a>, 
+All rights reserved.<br>
+This website is served by an 
+<a href="http://www.apache.org/"><font color="#000000">Apache</font></a>
+webserver environment.
 </font>
 </define-tag>
 
