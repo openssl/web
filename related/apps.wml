@@ -174,5 +174,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="start_tls-telnet"
           info="A telnet/telnetd package supporting START_TLS via OpenSSL"
           url="ftp://ftp.runestig.com/pub/starttls/">
+    <item name="Fetchmail"
+          info="A remote-mail retrieval and forwarding utility with OpenSSL support"
+          url="http://www.tuxedo.org/~esr/fetchmail/">
 </ul>
 
