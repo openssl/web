@@ -7,8 +7,10 @@
 
 The OpenSSL project uses various mailing lists to coordinate the development
 and to provide support to the user community. They all have an Email address
-of <tt>openssl-</tt><i>name</i><tt>@openssl.org</tt> and are remote controlled
-by <tt>majordomo@openssl.org</tt>.
+of <tt>openssl-</tt><i id=red>name</i><tt>@openssl.org</tt> and are remote
+controlled by the Majordomo robot under 
+<tt id=red>majordomo</tt><tt>@openssl.org</tt>.<br> <div id=sf>NOTICE: DO
+NEVER SEND ANY SUBSCRIBE/UNSUBSCRIBE MESSAGES TO THE LIST ADDRESSES!</div>
 
 <h2>Overview</h2>
 
@@ -55,13 +57,27 @@ Here is an overview of the available mailing lists:
 </tr>
 </table>
 
+<h2>Archive</h2>
+
+The mailing list are automatically archived at the following locations:
+
+<ul>
+<li><a href="http://www.mail-archive.com/openssl-announce@openssl.org/">
+    http://www.mail-archive.com/openssl-announce@openssl.org/</a>
+<li><a href="http://www.mail-archive.com/openssl-dev@openssl.org/">
+    http://www.mail-archive.com/openssl-dev@openssl.org/</a>
+<li><a href="http://www.mail-archive.com/openssl-users@openssl.org/">
+    http://www.mail-archive.com/openssl-users@openssl.org/</a>
+</ul>
+
 <h2>Subscription</h2>
 
 To subscribe to one of these Majordomo-controlled mailing list, send an Email
-to <b><tt>majordomo</tt></b><tt>@openssl.org</tt> with only
+to <tt id=red>majordomo</tt><tt>@openssl.org</tt> with
+only
 
 <blockquote>
-<tt>subscribe openssl-</tt><i>name</i> &nbsp; <i>you@domain.dom</i>
+<tt>subscribe openssl-</tt><i id=red>name</i> &nbsp; <i id=red>you@domain.dom</i>
 </blockquote>
 
 in the <i>body</i> (the subject is not important and can be empty). After
@@ -70,7 +86,7 @@ send back again for security reasons (to avoid that others subscribe you
 without your ok). Now you are successfully subscribed to this list. 
 
 <p>
-<b>NOTICE:</b><br>
+<b id=red>NOTICE:</b><br>
 
 <p>
 Experience shows that people don't want to read. So, three
