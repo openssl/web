@@ -13,6 +13,6 @@
 [[s|<P>\s+</|</|sg]]
 [[s|<DD>\s*<DT>|<DD>&nbsp;<DT>|sg]]
 [[s|<DD>\s*</DL>|<DD>&nbsp;</DL>|sg]]
-<import src="crypto.pod">
+<import src="/e/openssl/exp/openssl/doc/crypto.pod">
 :}
 
