@@ -155,7 +155,7 @@ END_OF_SECTION2
 print <<END_OF_SECTION3;
 dirs : 
 	-${AT}for d in \$(PODSDIRS_SPC); do \\
-		mkdir docs/\$\$d 2>/dev/null; sed -e 's,url=",url="../,' < \$(HTMLGOAL)/.wmlsnb > \$(HTMLGOAL)/\$\$d/.wmlsnb; \\
+		mkdir docs/\$\$d 2>/dev/null; \\
 	done
 
 END_OF_SECTION3
