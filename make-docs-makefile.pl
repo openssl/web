@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl
+#!/e/openssl/sw/bin/perl
 
 $PODSHOME=$ENV{"PODSHOME"}; #"/e/openssl/exp/openssl/doc";
 $HTMLGOAL=$ENV{"HTMLGOAL"}; #"docs";
