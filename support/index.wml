@@ -47,7 +47,8 @@ Here is an overview of the available mailing lists:
 <tr>
    <td><a href="mailto:openssl-dev@openssl.org">openssl-dev</a></td>
    <td>open</td> <td>subscribers</td>
-   <td>OpenSSL Developer Discussions</td>
+   <td>Discussions on development of the OpenSSL library. Not for application
+   development questions!</td>
 </tr>
 <tr>
    <td><a href="mailto:openssl-users@openssl.org">openssl-users</a></td>
