@@ -1,39 +1,73 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 0.9.6h released</title>
+<title>Announcement: OpenSSL version 0.9.7 released</title>
 
-<h1>Announcement: OpenSSL version 0.9.6h released</h1>
+<h1>Announcement: OpenSSL version 0.9.7 released</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
 
 <p>
-The OpenSSL project team is pleased to announce the release of version
-0.9.6h of our open source toolkit for SSL/TLS.  This new OpenSSL version
-is a bugfix release.  This will be the last release in the 0.9.6 series.
+The OpenSSL project team is pleased to announce the release of
+version 0.9.7 of our open source toolkit for SSL/TLS.  This new
+OpenSSL version is a major release and incorporates at least 262
+changes and bugfixes to the toolkit (for a complete list see <a
+href="http://www.openssl.org/source/exp/CHANGES">http://www.openssl.org/source/exp/CHANGES</a>).
 
 <p>
 The most significant changes are:
 
 <ul>
-  <li>New configuration targets for Tandem OSS and A/UX.
-  <li>New OIDs for Microsoft attributes.
-  <li>Better handling of SSL session caching.
-  <li>Better comparison of distinguished names.
-  <li>Better handling of shared libraries in a mixed GNU/non-GNU environment.
-  <li>Support assembler code with Borland C.
-  <li>Fixes for length problems.
-  <li>Fixes for uninitialised variables.
-  <li>Fixes for memory leaks, some unusual crashes and some race conditions.
-  <li>Fixes for smaller building problems.
-  <li>Updates of manuals, FAQ and other instructive documents.
+    <li>New library section OCSP.
+    <li>Complete rewrite of ASN1 code.
+    <li>CRL checking in verify code and openssl utility.
+    <li>Extension copying in 'ca' utility.
+    <li>Flexible display options in 'ca' utility.
+    <li>Provisional support for international characters with UTF8.
+    <li>Support for external crypto devices ('engine') is no longer
+        a separate distribution.
+    <li>New elliptic curve library section.
+    <li>New AES (Rijndael) library section.
+    <li>Support for new platforms: Windows CE, Tandem OSS, A/UX, AIX 64-bit,
+        Linux x86_64, Linux 64-bit on Sparc v9
+    <li>Extended support for some platforms: VxWorks
+    <li>Enhanced support for shared libraries.
+    <li>Now only builds PIC code when shared library support is requested.
+    <li>Support for pkg-config.
+    <li>Lots of new manuals.
+    <li>Makes symbolic links to or copies of manuals to cover all described
+        functions.
+    <li>Change DES API to clean up the namespace (some applications link also
+        against libdes providing similar functions having the same name).
+        Provide macros for backward compatibility (will be removed in the
+        future).
+    <li>Unify handling of cryptographic algorithms (software and engine)
+        to be available via EVP routines for asymmetric and symmetric ciphers.
+    <li>NCONF: new configuration handling routines.
+    <li>Change API to use more 'const' modifiers to improve error checking
+        and help optimizers.
+    <li>Finally remove references to RSAref.
+    <li>Reworked parts of the BIGNUM code.
+    <li>Support for new engines: Broadcom ubsec, Accelerated Encryption
+        Processing, IBM 4758.
+    <li>A few new engines added in the demos area.
+    <li>Extended and corrected OID (object identifier) table.
+    <li>PRNG: query at more locations for a random device, automatic query for
+        EGD style random sources at several locations.
+    <li>SSL/TLS: allow optional cipher choice according to server's preference.
+    <li>SSL/TLS: allow server to explicitly set new session ids.
+    <li>SSL/TLS: support Kerberos cipher suites (RFC2712).
+	Only supports MIT Kerberos for now.
+    <li>SSL/TLS: allow more precise control of renegotiations and sessions.
+    <li>SSL/TLS: add callback to retrieve SSL/TLS messages.
+    <li>SSL/TLS: support AES cipher suites (RFC3268).
 </ul>
 
 <p>
-We consider OpenSSL 0.9.6h to be the best version of OpenSSL available
+We consider OpenSSL 0.9.7 to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 0.9.6h is available for download via HTTP
+soon as possible.  OpenSSL 0.9.7 is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -43,30 +77,24 @@ FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www
 </ul>
 
 <p>
-<a name="1">[1]</a> OpenSSL comes in the form of two distributions this time.
-The reasons for this is that we want to deploy the external crypto device
-support but don't want to have it part of the "normal" distribution just
-yet.  The distribution containing the external crypto device support is
-popularly called "engine", and is considered experimental.  It's been
-fairly well tested on Unix and flavors thereof.  If run on a system with
-no external crypto device, it will work just like the "normal" distribution.
+OpenSSL 0.9.6 (all patch levels) came in the form of two distributions,
+a "normal" one and an "engine" variant that included support for external
+crypto devices.  In 0.9.7, the "engine" framework is part of the "normal"
+distribution, so there are no variants of 0.9.7.
 
 <p>
-The distribution file names are:
+The distribution file name is:
 
 <ul>
-  <li>openssl-0.9.6h.tar.gz [normal]<br>
-      MD5 checksum: 1a0c2bee9f6b0af95ce65106462411f5
-  <li>openssl-engine-0.9.6h.tar.gz [engine]<br>
-      MD5 checksum: a7e3f5c0a5451ca666e4cbe23a8617a2
+  <li>openssl-0.9.7.tar.gz [normal]<br>
+      MD5 checksum: ef376d14205afcfb831cd3720f705d79
 </ul>
 
 <p>
-The checksums were calculated using the following commands:
+The checksum was calculated using the following command:
 <blockquote>
 <pre>
-openssl md5 &lt; openssl-0.9.6h.tar.gz
-openssl md5 &lt; openssl-engine-0.9.6h.tar.gz
+openssl md5 &lt; openssl-0.9.7.tar.gz
 </pre>
 </blockquote>
 
