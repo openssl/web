@@ -11,7 +11,7 @@ Security (TLS) protocols.
 <ul>
     <item name="IETF-TLS Working Group"
           info="Home of IETF Working Group for Transport Layer Security (TLS)"
-          url="http://www.consensus.com/ietf-tls/">
+          url="http://www.ietf.org/html.charters/tls-charter.html">
     <item name="SSL Patent"
           info="This is a copy of the patent No.5657390 for SSL from Netscape"
           url="http://www.cygnus.com/~gnu/ssl.patent.5657390">
