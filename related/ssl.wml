@@ -21,12 +21,12 @@ Security (TLS) protocols.
     <item name="SSLv2 Protocol Specification (obsolete)"
           info="This is Netscape's original SSL document"
           url="http://www.netscape.com/eng/security/SSL_2.html">
-    <item name="SSLv3 Protocol Specification (obsolete)"
-          info="These are Netscape's SSLv3 documents"
-          url="http://www.netscape.com/eng/ssl3/">
     <item name="SSLv3 Internet Draft (obsolete)"
           info="This the Internet draft for SSLv3"
           url="ftp://ftp.ietf.org/internet-drafts/draft-ietf-tls-ssl-version3-00.txt">
+    <item name="SSLv3 Protocol Specification"
+          info="These are Netscape's SSLv3 documents ('final' draft)"
+          url="http://www.netscape.com/eng/ssl3/">
     <item name="SSLv3 to TLSv1: Modifications"
           info="Modifications to the SSL protocol for TLS"
           url="http://www.consensus.com/ietf-tls/tls-ssl-mods-00.txt">
