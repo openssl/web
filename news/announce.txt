@@ -1,12 +1,12 @@
 
-  OpenSSL version 0.9.6a released
+  OpenSSL version 0.9.6b released
   ===============================
 
   OpenSSL - The Open Source toolkit for SSL/TLS
   http://www.openssl.org/
 
   The OpenSSL project team is pleased to announce the release of version
-  0.9.6a of our open source toolkit for SSL/TLS.  This new OpenSSL version
+  0.9.6b of our open source toolkit for SSL/TLS.  This new OpenSSL version
   is mostly a bugfix release and incorporates at least 55 changes to the
   toolkit (for a complete list see http://www.openssl.org/source/exp/CHANGES).
 
@@ -27,9 +27,9 @@
       o Increase default size for BIO buffering filter.
       o Compatibility fixes in some scripts.
 
-  We consider OpenSSL 0.9.6a to be the best version of OpenSSL available and we
+  We consider OpenSSL 0.9.6b to be the best version of OpenSSL available and we
   strongly recommend that users of older versions, especially of old SSLeay
-  versions, upgrade as soon as possible.  OpenSSL 0.9.6a is available for
+  versions, upgrade as soon as possible.  OpenSSL 0.9.6b is available for
   download via HTTP and FTP from the following master locations (you can find
   the various FTP mirrors under http://www.openssl.org/source/mirror.html):
 
@@ -46,8 +46,8 @@
 
   The distribution file names are:
 
-      o openssl-0.9.6a.tar.gz [normal]
-      o openssl-engine-0.9.6a.tar.gz [engine]
+      o openssl-0.9.6b.tar.gz [normal]
+      o openssl-engine-0.9.6b.tar.gz [engine]
 
   Yours,
   The OpenSSL Project Team...  
