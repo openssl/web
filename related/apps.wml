@@ -26,7 +26,7 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
           url="http://www.neuronio.pt/SSLeay.pm.html">
     <item name="cURL"
           info="A sophisticated FTP, HTTP, HTTPS, GOPHER and DICT gathering tool"
-          url="http://www.fts.frontec.se/~dast/curl/">
+          url="http://curl.haxx.nu/">
     <item name="jonama"
           info="A stand-alone SSL relay program with authentication support"
           url="http://www.multimania.com/jonama/">
