@@ -9,22 +9,31 @@ Here is a short summary of the current development and release state
 of the OpenSSL project.
 
 <ul>
-<li>Next proposed release: OpenSSL <b>0.9.7</b><br>
-<!--
-    Release plan:
+<li>Next proposed release: OpenSSL <b>0.9.6a</b><br>
+
+    Release plan 1 (hopefully):
     <p>
     <table cellspacing=0 cellpadding=1 border=0>
     <tr><td><b id=sf>Date/Range</b></td>   <td><b id=sf>Event</b></td></tr>
     <tr><td><hr noshade size=1></td>       <td><hr noshade size=1></td></tr>
-    <tr><td><b id=sf>2000-09-11:</b></td>  <td>0.9.6-beta1 <font color="#cc3333">[DONE]</font></td></tr>
-    <tr><td><b id=sf>2000-09-17:</b></td>  <td>0.9.6-beta2 <font color="#cc3333">[DONE]</font></td></tr>
-    <tr><td><b id=sf>2000-09-19-<br>
-                     2000-09-22:</b></td>  <td>time-space for one or two more
-                                               betas if needed</td></tr>
-    <tr><td><b id=sf>2000-09-24:</b></td>  <td>0.9.6 release</td></tr>
+    <tr><td><b id=sf>2001-03-13:</b></td>  <td>0.9.6a-beta1 <font color="#cc3333">[DONE]</font></td></tr>
+    <tr><td><b id=sf>2001-03-19:</b></td>  <td>0.9.6a-beta2 (final)</td></tr>
+    <tr><td><b id=sf>2001-03-23:</b></td>  <td>0.9.6a release</td></tr>
     </table>
     <p>
--->
+
+    Release plan 2 (worst case):
+    <p>
+    <table cellspacing=0 cellpadding=1 border=0>
+    <tr><td><b id=sf>Date/Range</b></td>   <td><b id=sf>Event</b></td></tr>
+    <tr><td><hr noshade size=1></td>       <td><hr noshade size=1></td></tr>
+    <tr><td><b id=sf>2001-03-13:</b></td>  <td>0.9.6a-beta1 <font color="#cc3333">[DONE]</font></td></tr>
+    <tr><td><b id=sf>2001-03-19:</b></td>  <td>0.9.6a-beta2</td></tr>
+    <tr><td><b id=sf>2001-03-22:</b></td>  <td>0.9.6a-beta3 (final)</td></tr>
+    <tr><td><b id=sf>2001-03-26:</b></td>  <td>0.9.6a release</td></tr>
+    </table>
+    <p>
+
 <li>The current <a href="$(ROOT)/source/cvs/">CVS Source Code State</a>.
 </ul>
 
