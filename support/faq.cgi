@@ -55,7 +55,7 @@ while (<FP>) {
 	while (/([A-Za-z_\.]*)XX(.?)XX/) {
 	    foreach $section ("apps", "ssl", "crypto") {
 		if (-f "../docs/$section/$1.html") {
-		    s|([A-Za-z_]*)XX(.?)XX|<a href=\"../docs/$section/$1.html\">$1($2)</a>|;
+		    s|([A-Za-z_\.]*)XX(.?)XX|<a href=\"../docs/$section/$1.html\">$1($2)</a>|;
 		    goto found;
 		}
 	    }
