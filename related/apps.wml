@@ -5,8 +5,8 @@
 
 <h1>Applications</h1>
 
-These are references to various Open Source applications which are using
-SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
+These are references to various Open Source applications that are using
+the old SSLeay package or the new OpenSSL package.
 
 <ul>
     <item name="Apache-SSL"
