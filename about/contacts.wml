@@ -7,13 +7,13 @@
 
 <h2>Physical Addresses</h2>
 
-Apart from mail addresses and names, some organizations require a physical
+<p>Apart from mail addresses and names, some organizations require a physical
 address as contact for open source projects.  Physical addresses can be
 useful in other cases as well.  Therefore, some people have stepped forward
 and volunteered as "official" contacts for OpenSSL.  If you want to get in
 touch with any of these people, please consider using email first, since
 that will also reach other team members in case your contact is temporarly
-not available.
+not available.</p>
 
 <table>
 <tr><td><b id=sf>Address</b></td><td><b id=sf>Area covered</b></td></tr>
