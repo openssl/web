@@ -3,6 +3,8 @@
 ##
 
 -DROOT~.
+-DBASE_URL=http://www.openssl.org
+-DBASE_DIR~.
 -DIMG~images
 -DIMGDOT_BASE~images/misc-space
 -I.
