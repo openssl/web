@@ -228,5 +228,8 @@ the old SSLeay package or the new OpenSSL package.
     <item name="ELyCA"
           info="Another Certificate Authority package implemented with Phyton and OpenSSL"
           url="http://culture.eii.us.es/~pablo/elyca/">
+    <item name="hOpenSSL"
+          info="Haskell language bindings to OpenSSL"
+          url="http://cryp.to/hopenssl/">
 </ul>
 
