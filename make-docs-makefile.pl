@@ -56,12 +56,21 @@ foreach $f (keys %wmls) {
     while(<PODFILE>) {
 	chop;
 	s/\n/ /gm;
-	if ($name) {
+	if (/^=head1 /) {
+	    $name = 0;
+	} elsif ($name) {
 	    s/ - .*//;
 	    s/[ \t,]+/ /g;
 	    @words = split ' ';
 	    foreach $w (@words) {
 		$page{$w . $s} = $fs;
+		if ($w !~ /_/) {
+		    $W = $w;
+		    $W =~ tr/A-Z/a-z/;
+		    if ($w ne $W && $page{$W . $s} eq "") {
+			$page{$W . $s} = $fs;
+		    }
+		}
 	    }
 	} else {
 	    $save = $_;
@@ -80,8 +89,6 @@ foreach $f (keys %wmls) {
 	}
 	if (/^=head1 *NAME *$/) {
 	    $name = 1;
-	} elsif (/^=head1 /) {
-	    $name = 0;
 	}
     }
     close(PODFILE);
