@@ -27,4 +27,7 @@ and a URL.
     <item name="Levitte Programming"
           info="Support, installation, adaptation, programming."
           url="http://www.lp.se/">
+    <item name="Linux4biz"
+          info="Linux4biz  specialises in all aspects of apache and openssl deployment, support and security."
+          url="http://www.linux4biz.net/">
 </ul>
