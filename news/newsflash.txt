@@ -1,3 +1,4 @@
+11-Nov-1999: New <a href="ROOT/about/">development team member</a>: Richard Levitte
 09-Aug-1999: OpenSSL 0.9.4 is now <a href="ROOT/source/">available</a>, a major release
 15-Jul-1999: New <a href="ROOT/about/">development team member</a>: Andy Polyakov
 29-May-1999: OpenSSL 0.9.3a is now <a href="ROOT/source/">available</a>, a minor bugfix release
