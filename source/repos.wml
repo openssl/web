@@ -55,12 +55,12 @@ diff</tt> over the network).
 <p>
 <li>With the following command you now can check which
     packages are available through the RSYNC service from
-    sw.engelschall.com:
+    dev.openssl.org:
 
     <p>
     <box bgcolor="#f0f0f0">
     <b><verbatim>
-$ rsync rsync://dev.openssl.com/
+$ rsync rsync://dev.openssl.org/
     </verbatim></b>
     </box>
 
