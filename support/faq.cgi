@@ -25,8 +25,26 @@ while (<FP>) {
 print "</ul>\n\n";
 
 # Contents
-$n=0; $pre=0;
+$n=0; $pre=0; $snip=0;
 while (<FP>) {
+    if (/^----- snip:start -----/) {
+	print "<pre>" unless $snip;
+	$snip=1;
+    }
+    if ($snip) {
+	s/\&/\&amp;/g;
+	s/\</\&lt;/g;
+	s/\>/\&gt;/g;
+	print;
+    }
+    if ($snip && /^----- snip:end -----/) {
+	print "</pre>";
+	$snip=0;
+	goto cont;
+    }
+    if ($snip) {
+	goto cont;
+    }
     if (/<URL:/ and not /<URL:.*>/) {
 	chomp;
 	$_ .= <FP>;
@@ -58,6 +76,7 @@ while (<FP>) {
 	$pre=0;
 	print;
     }
+  cont:
 }
 
 close(FP);
