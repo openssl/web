@@ -1,0 +1,70 @@
+
+#use wml::openssl area=related page=apps
+
+<title>Related, Applications</title>
+
+<h1>Applications</h1>
+
+These are references to various Open Source applications which are using
+SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
+
+<ul>
+    <item name="Apache-SSL"
+          info="The SSL integration for Apache by Ben Laurie"
+          url="http://www.apache-ssl.org/">
+    <item name="Apache mod_ssl"
+          info="The SSL integration for Apache by Ralf S. Engelschall"
+          url="http://www.engelschall.com/sw/mod_ssl/">
+    <item name="pkcs12"
+          info="A PKCS#12 format utility by Stephen Henson"
+          url="http://www.drh-consultancy.demon.co.uk/pkcs12faq.html">
+    <item name="ca-fix"
+          info="A X.509 certificate patching utility by Stephen Henson"
+          url="http://www.drh-consultancy.demon.co.uk/ca-fix.html">
+    <item name="Net::SSLeay"
+          info="The Perl module interfacing to SSLeay/OpenSSL functions"
+          url="http://www.neuronio.pt/SSLeay.pm.html">
+    <item name="cURL"
+          info="A sophisticated FTP, HTTP, HTTPS, GOPHER and DICT gathering tool"
+          url="http://www.fts.frontec.se/~dast/curl/">
+    <item name="stunnel"
+          info="An SSL encryption wrapper for standard network daemons"
+          url="http://mike.daewoo.com.pl/computer/stunnel/">
+    <item name="sslwrap"
+          info="Annother SSL encryption wrapper for standard network daemons"
+          url="http://www.rickk.com/sslwrap/">
+    <item name="ssl-gw"
+          info="Annother SSL encryption wrapper for standard network daemons"
+          url="ftp://ftp.uni-mainz.de/pub/internet/security/ssl/ssl-gw/">
+    <item name="sslfd"
+          info="A nice wrapper for the SSLeay libraries using standard file descriptors"
+          url="http://www.quick.com.au/ftp/pub/sjg/help/sslfd.html">
+    <item name="sNFS"
+          info="An SSL-based NFS variant"
+          url="http://www.quick.com.au/ftp/pub/sjg/help/sNFS.html">
+    <item name="WN/SSL"
+          info="The SSL integration for the WN webserver"
+          url="http://www.freestone.net/soft/">
+    <item name="BSAFEeay"
+          info="A BSAFE emulation library based on SSLeay"
+          url="https://www.cypherpunks.to/bsafeeay/">
+    <item name="Cryptozilla"
+          info="An old attempt to put cryptography back into Mozilla"
+          url="http://www.cryptozilla.org/">
+    <item name="SSL-MZTelnet"
+          info="An extended 4.4BSD Telnet package with SSL capabilities"
+          url="ftp://ftp.uni-mainz.de/pub/internet/security/ssl/SSL-MZapps/">
+    <item name="sTelnet"
+          info="Another SSL-aware Telnet package"
+          url="http://www.quick.com.au/ftp/pub/sjg/">
+    <item name="Wu-FTPd/SSL (I)"
+          info="The SSL integration for the Wu-FTP daemon"
+          url="ftp://hale_bopp.ee.upm.es/pub/programas/SSL/">
+    <item name="Wu-FTPd/SSL (II)"
+          info="Another SSL integration for the Wu-FTP daemon"
+          url="ftp://ftp.average.org/pub/wuftp+SSL/">
+    <item name="SSLrsh"
+          info="SSL-aware BSD r* commands"
+          url="http://www.quick.com.au/ftp/pub/sjg/help/SSLrsh.html">
+</ul>
+

@@ -12,23 +12,18 @@ OpenSSL) related stuff.
     <item name="OpenSSL"
           info="The official home of the OpenSSL project"
           url="http://www.openssl.org/">
-    <p>
     <item name="SSLeay Homepage"
           info="The official home of SSLeay, the ancestor of OpenSSL"
           url="http://www.ssleay.org/">
-    <p>
     <item name="SSLeay Doc: FAQ List"
           info="The SSLeay Frequently Asked Questions"
           url="http://www.psy.uq.oz.au/~ftp/Crypto/">
-    <p>
     <item name="SSLeay Doc: Programmers Reference"
           info="The reference manual for programming with SSLeay"
           url="http://www.psy.uq.oz.au/~ftp/Crypto/ssl.html">
-    <p>
     <item name="SSLeay Doc: Misc Files"
           info="Various documentation files for SSLeay"
           url="http://www.psy.uq.edu.au/~ftp/Crypto/ssleay/">
-    <p>
     <item name="SSLeay Doc: Documentation Archive"
           info="A nice archive of HTML documents for the SSLeay library"
           url="http://www.columbia.edu/~ariel/ssleay/">

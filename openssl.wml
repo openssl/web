@@ -6,8 +6,9 @@
 ##
 
 #use wml::std::tags
-#use wml::des::navbar
 #use wml::std::info
+#use wml::des::navbar
+#use wml::des::space
 
 ##
 ##  The Global Page Layout
@@ -242,12 +243,12 @@ $(page:*# )$(page:+#include ")$(SNB_RC:-.wmlsnb)$(page:+")
 <preserve info>
 <set-var aio=*>
 <set-var %attributes>
-<li><a href="<get-var url>"><font size=+1 face="Arial,Helvetica"><b><get-var name></b></font></a>
+<li><imgdot width=1 height=18>\
+    <a href="<get-var url>"><font size=+1 face="Arial,Helvetica"><b><get-var name></b></font></a>
     <ifeq "<get-var aio>" "" <img src="aio.gif" alt="[all-in-one]" align=absmiddle>>
     <br>
-    <ifeq "<get-var info>" "" "" "<get-var info><br>">
-    <a href="<get-var url>"><font size=-1><get-var url></font></a>
-    <p>
+    <a href="<get-var url>"><font size=-1><get-var url></font></a><br>
+    <ifeq "<get-var info>" "" "" "<get-var info>">
 <restore info>
 <restore aio>
 <restore url>

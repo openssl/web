@@ -4,6 +4,6 @@
 
 -DROOT~.
 -DIMG~images
--DIMGDOT_BASE~images/shared
+-DIMGDOT_BASE~images/misc-space
 -I.
 
