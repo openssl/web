@@ -54,7 +54,7 @@ die "You supplied to Email address."
     if ($qs{email} eq '');
 die "Hmmm... <tt>your\@address.dom</tt> is certainly not correct, friend." 
     if ($qs{email} eq 'your@address.dom');
-die "Hmmm... <tt>$qs{email}</tt> doesn't look like a valid RFC822 mail address."
+die "The Email address you entered doesn't look like a valid RFC822 mail address."
     if ($qs{email} !~ m|.+@.+|);
 die "At least one list has to be selected."
     if ($qs{list} eq '');
