@@ -11,7 +11,7 @@ The OpenSSL Project is a collaborative effort to develop a robust,
 commercial-grade, full-featured, and <a href="http://www.opensource.org/">Open
 Source</a> toolkit implementing the <a
 href="http://www.netscape.com/eng/ssl3/">Secure Sockets Layer</a> (SSL v2/v3)
-and <a href="http://www.consensus.com/ietf-tls/ietf-tls-home.html">Transport
+and <a href="http://www.ietf.org/html.charters/tls-charter.html">Transport
 Layer Security</a> (TLS v1) protocols as well as a full-strength general
 purpose cryptography library.
 The project is managed by a worldwide community of volunteers that
