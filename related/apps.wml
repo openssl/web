@@ -141,5 +141,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="SafeGossip"
           info="Another SSL/TLS wrapper for IMAP, POP and SMTP"
           url="http://www.skygate.co.uk/safegossip/">
+    <item name="pipsec"
+          info="A tool for creating IPSEC tunnels with the help of OpenSSL"
+          url="http://www.enst.fr/~beyssac/pipsec/">
 </ul>
 
