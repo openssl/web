@@ -159,5 +159,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="FISH"
           info="An OpenSSL-based SSH client for OpenVMS"
           url="http://www.free.lp.se/fish/">
+    <item name="W3M"
+          info="A very neat terminal-based webbrowser with SSL support"
+          url="http://ei5nazha.yz.yamagata-u.ac.jp/~aito/w3m/eng/">
 </ul>
 
