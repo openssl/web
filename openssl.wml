@@ -41,7 +41,7 @@ BODY      { position: absolute; left: 0px; top: 0px; background: #666699; }
 A:link    { color: #6666cc; }
 A:active  { color: #6666cc; }
 A:visited { color: #6666cc; }
-\#red { color: #cc3333 }
+\#red { color: #cc3333; }
 \#sf  { font-family: arial,helvetica; font-variant: normal; font-style: normal; }
 \#sfl { font-weight: bold; font-family: arial,helvetica; font-size: 16pt; \
         line-height: 16pt; font-variant: normal; font-style: normal; }
