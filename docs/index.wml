@@ -19,5 +19,8 @@ line tool.
 <p>
 <li><a href="crypto/crypto.html"><font id=sfl>crypto(3)</font></a>: [STILL INCOMPLETE]<br>
     Manual page documenting the OpenSSL <b>Crypto</b> library.
+<p>
+<li><a href="HOWTO/"><font id=sfl>HOWTO</font></a>: [STILL INCOMPLETE]<br>
+    HOWTO documents to introduce concepts or explain them in a way that is not possible in the manuals.
 </ul>
 

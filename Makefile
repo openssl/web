@@ -12,7 +12,7 @@ lock-hack: FRC.lock-hack
 	|| echo "There's already a build going on.  Skipping"
 FRC.lock-hack:
 
-all: docs-depend docs
+all: docs-depend docs HOWTOs
 	@echo "[" `date` "] Recursive HTML Generation.... (be patient)"
 	@wmk -a
 	@# Because there's a conflict and wmk skips this one...
@@ -33,3 +33,7 @@ docs-depend : FRC.docs-depend
 	@find $(PODSHOME) -name '*.pod' -print | \
 		PODSHOME=$(PODSHOME) HTMLGOAL=$(HTMLGOAL) ./make-docs-makefile.pl \
 		> Makefile.docs
+
+FRC.HOWTOs :
+HOWTOs : FRC.HOWTOs
+	cp $(PODSHOME)/HOWTO/*.txt $(HTMLGOAL)/HOWTO/

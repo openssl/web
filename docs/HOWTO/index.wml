@@ -1,0 +1,17 @@
+
+#use wml::openssl area=documents page=HOWTO
+
+<title>Documents, HOWTO's</title>
+
+<h1>HOWTO's</h1>
+
+Here you can find a number of howto's.  These howto's are also part of the
+OpenSSL distribution, in <tt>doc/HOWTO/</tt>.
+
+<p>
+<filelist *.txt>
+
+<h2>Legalities</h2>
+
+<disclaimer>
+
