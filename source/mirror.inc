@@ -23,6 +23,7 @@
 <mirror url="ftp://gd.tuwien.ac.at/infosys/security/openssl/" loc="AT">
 <mirror url="ftp://ftp.win.ne.jp/pub/network/security/openssl/" loc="JP">
 <mirror url="ftp://glock.missouri.edu/pub/openssl/" loc="US">
+<mirror url="ftp://gw.inetlab.com/mirrors/openssl/" loc="RU">
 
 </ul>
 
