@@ -138,9 +138,9 @@ the old SSLeay package or the new OpenSSL package.
     <item name="M2Crypto"
           info="A SWIG based glue code for interfacing OpenSSL with Python"
           url="http://www.post1.com/home/ngps/">
-    <item name="Sendmail-TLS"
-          info="A wrapper for the Sendmail MTA to support SSL connections"
-          url="http://opensource.3gi.com/sendmail-tls/">
+    <item name="Sendmail"
+          info="The good old Sendmail MTA, now supports SSL/TLS out-of-the-box"
+          url="http://www.sendmail.org/">
     <item name="SafeGossip"
           info="Another SSL/TLS wrapper for IMAP, POP and SMTP"
           url="http://www.skygate.co.uk/safegossip/">
@@ -183,5 +183,8 @@ the old SSLeay package or the new OpenSSL package.
     <item name="Lynx/SSL"
           info="An SSL patch for the popular terminal-based browser Lynx"
           url="http://www.moxienet.com/lynx/">
+    <item name="Courier-IMAP"
+          info="An IMAP server capable of speaking SSL/TLS via OpenSSL"
+          url="http://courier.sourceforge.net/">
 </ul>
 
