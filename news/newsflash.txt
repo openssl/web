@@ -1,3 +1,4 @@
+19-Nov-2002: Beta 4 of OpenSSL 0.9.7 is now <a href="ROOT/source/">available</a>, please test it now
 9-aug-2002: OpenSSL 0.9.6g is now <a href="ROOT/source/">available</a>, including important bugfixes
 9-aug-2002: OpenSSL 0.9.6g [engine] is now <a href="ROOT/source/">available</a>, including important bugfixes
 8-aug-2002: OpenSSL 0.9.6f is now <a href="ROOT/source/">available</a>, including important bugfixes
