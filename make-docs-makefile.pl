@@ -1,4 +1,4 @@
-#!/e/openssl/sw/bin/perl
+#! /usr/bin/env perl
 
 $PODSHOME=$ENV{"PODSHOME"}; #"/e/openssl/exp/openssl/doc";
 $HTMLGOAL=$ENV{"HTMLGOAL"}; #"docs";
@@ -136,7 +136,7 @@ END_OF_SECTION1
 #looks so complicated.
 #
 print <<END_OF_SECTION2;
-\$(DOCS) :
+\$(DOCS) : make-docs-makefile.template
 	${AT}pod="`echo \$\@ | sed -e 's,^\$(HTMLGOAL)/\\(.*\\)\\.wml\$\$,\$(PODSHOME)/\\1.pod,'`"; \\
 	pag=\"`basename \$\@ .wml`\"; \\
 	d="`echo \$\@ | sed -e 's,/[^/]*\$\$,,' -e 's,^\$(HTMLGOAL)/,,'`"; \\
