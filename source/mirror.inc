@@ -21,6 +21,7 @@
 <mirror url="ftp://sunsite.uio.no/pub/security/openssl/" loc="NO">
 <mirror url="ftp://ftp.sunet.se/pub/security/tools/net/openssl/" loc="SE">
 <mirror url="ftp://ftp.psy.uq.edu.au/pub/Crypto/" loc="AU">
+<mirror url="ftp://mirror.aarnet.edu.au/pub/openssl/" loc="AU">
 <mirror url="ftp://gd.tuwien.ac.at/infosys/security/openssl/" loc="AT">
 <mirror url="ftp://glock.missouri.edu/pub/openssl/" loc="US">
 <mirror url="ftp://ftp.av8.com/pub/mirrors/openssl/" loc="US">
