@@ -1,42 +1,33 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 0.9.7c and 0.9.6k released</title>
+<title>Announcement: OpenSSL version 0.9.7e released</title>
 
-<h1>Announcement: OpenSSL version 0.9.7c and 0.9.6k released</h1>
+<h1>Announcement: OpenSSL version 0.9.7e released</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
 
 <p>
 The OpenSSL project team is pleased to announce the release of
-version 0.9.7c of our open source toolkit for SSL/TLS.  This new
+version 0.9.7e of our open source toolkit for SSL/TLS.  This new
 OpenSSL version is a security and bugfix release and incorporates
-at least 8 changes and bugfixes to the toolkit (for a complete list
+at least 4 changes and bugfixes to the toolkit (for a complete list
 see <a
 href="http://www.openssl.org/source/exp/CHANGES">http://www.openssl.org/source/exp/CHANGES</a>).
-
-<p>
-We also release 0.9.6k, which contains the same security bugfix as
-0.9.7c and a few more small bugfixes compared to 0.9.6j.
 
 <p>
 The most significant changes are:
 
 <ul>
-
-  <li>Security: fix vulnerabilities in ASN.1 parsing
-      CAN-2003-0543, CAN-2003-0544                            [0.9.7c & 0.9.6k]
-  <li>Security: fix additional vulnerability in ASN.1 parsing
-      CAN-2003-0545                                           [0.9.7c]
-  <li>Only accept a client cert if the server requests one    [0.9.7c & 0.9.6k]
-  <li>Various S/MIME bug and compatibility fixes              [0.9.7c]
+  <li>Fix race condition in CRL checking code.
+  <li>Fixes to PKCS#7 (S/MIME) code.
 </ul>
 
 <p>
-We consider OpenSSL 0.9.7c to be the best version of OpenSSL available
+We consider OpenSSL 0.9.7e to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 0.9.7c is available for download via HTTP
+soon as possible.  OpenSSL 0.9.7e is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -46,29 +37,18 @@ FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www
 </ul>
 
 <p>
-For those who want or have to stay with the 0.9.6 series of OpenSSL,
-we strongly recommend that you upgrade to OpenSSL 0.9.6k as soon as
-possible.  It's available in the same location as 0.9.7c.
-
-<p>
 The distribution file name is:
 
 <ul>
-  <li>openssl-0.9.7c.tar.gz [normal]
-      MD5 checksum: c54fb36218adaaaba01ef733cd88c8ec
-  <li>openssl-0.9.6k.tar.gz [normal]
-      MD5 checksum: dee92f648a02e4a7db0507ab3d0769c6
-  <li>openssl-engine-0.9.6k.tar.gz [engine]
-      MD5 checksum: 50082758f8e5b3fcf5c26bd032e1739c
+  <li>openssl-0.9.7e.tar.gz
+      MD5 checksum: a8777164bca38d84e5eb2b1535223474
 </ul>
 
 <p>
 The checksums were calculated using the following commands:
 <blockquote>
 <pre>
-    openssl md5 &lt; openssl-0.9.7c.tar.gz
-    openssl md5 &lt; openssl-0.9.6k.tar.gz
-    openssl md5 &lt; openssl-engine-0.9.6k.tar.gz
+    openssl md5 &lt; openssl-0.9.7e.tar.gz
 </pre>
 </blockquote>
 
