@@ -1,32 +1,28 @@
 
-  OpenSSL version 0.9.3 released
+  OpenSSL version 0.9.4 released
   ===============================
 
   OpenSSL - The Open Source toolkit for SSL/TLS
   http://www.openssl.org/
 
   The OpenSSL project team is pleased to announce the release of version
-  0.9.3 of our open source toolkit for SSL/TLS.  This new OpenSSL version
-  incorporates over 90 changes and bugfixes to the toolkit (for a complete
+  0.9.4 of our open source toolkit for SSL/TLS.  This new OpenSSL version
+  incorporates over 50 changes and bugfixes to the toolkit (for a complete
   list see http://www.openssl.org/source/exp/CHANGES).
 
   The most significant changes are:
 
-    o Lots of enhancements and cleanups to the Configuration mechanism
-    o RSA OEAP related fixes
-    o Added `openssl ca -revoke' option for revoking a certificate
-    o Source cleanups: const correctness, type-safe stacks and ASN.1 SETs
-    o Source tree cleanups: removed lots of obsolete files
-    o Thawte SXNet, certificate policies and CRL distribution points
-    o Preliminary (experimental) S/MIME support
-    o Support for ASN.1 UTF8String and VisibleString
-    o Full integration of PKCS#12 code
-    o Sparc assembler bignum implementation, optimized hash functions
-    o Option to disable selected ciphers
+    o Transparent support for PKCS#8 format private keys: these are used by
+      several software packages and are more secure than the standard form
+    o PKCS#5 v2.0 implementation
+    o Password callbacks have a new ``void *'' argument for application data
+    o Avoid various memory leaks
+    o New pipe-like BIO that allows using the SSL library when actual I/O
+      must be handled by the application (BIO pair)
 
-  We consider OpenSSL 0.9.3 to be the best version of OpenSSL available and
+  We consider OpenSSL 0.9.4 to be the best version of OpenSSL available and
   we strongly recommend that users of older versions, especially of old SSLeay
-  versions, upgrade as soon as possible.  OpenSSL 0.9.3 is available for
+  versions, upgrade as soon as possible.  OpenSSL 0.9.4 is available for
   download via HTTP and FTP from the following master locations (the various
   FTP mirrors you can find under http://www.openssl.org/source/mirror.html):
 
@@ -36,8 +32,7 @@
   Yours,
   The OpenSSL Project Team...  
 
-    Mark J. Cox             Bodo Moeller    
-    Ralf S. Engelschall     Ulf Moeller     
-    Dr. Stephen Henson      Holger Reif     
-    Ben Laurie              Paul C. Sutton
+    Mark J. Cox             Ben Laurie         Andy Polyakov   
+    Ralf S. Engelschall     Bodo Moeller       Holger Reif     
+    Dr. Stephen Henson      Ulf Moeller        Paul C. Sutton  
 

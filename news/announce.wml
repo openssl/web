@@ -1,40 +1,36 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 0.9.3 released</title>
+<title>Announcement: OpenSSL version 0.9.4 released</title>
 
-<h1>Announcement: OpenSSL version 0.9.3 released</h1>
+<h1>Announcement: OpenSSL version 0.9.4 released</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
 
 <p>
-The OpenSSL project team is pleased to announce the release of version 0.9.3
+The OpenSSL project team is pleased to announce the release of version 0.9.4
 of our open source toolkit for SSL/TLS.  This new OpenSSL version incorporates
-over 90 changes and bugfixes to the toolkit (for a complete list see <a
+over 50 changes and bugfixes to the toolkit (for a complete list see <a
 href="http://www.openssl.org/source/exp/CHANGES">http://www.openssl.org/source/exp/CHANGES</a>).
 
 <p>
 The most significant changes are:
 
 <ul>
-    <li> Lots of enhancements and cleanups to the Configuration mechanism
-    <li> RSA OEAP related fixes
-    <li> Added `openssl ca -revoke' option for revoking a certificate
-    <li> Source cleanups: const correctness, type-safe stacks and ASN.1 SETs
-    <li> Source tree cleanups: removed lots of obsolete files
-    <li> Thawte SXNet, certificate policies and CRL distribution points
-    <li> Preliminary (experimental) S/MIME support
-    <li> Support for ASN.1 UTF8String and VisibleString
-    <li> Full integration of PKCS#12 code
-    <li> Sparc assembler bignum implementation, optimized hash functions
-    <li> Option to disable selected ciphers
+    <li>Transparent support for PKCS#8 format private keys: these are used
+        by several software packages and are more secure than the standard form.
+    <li>PKCS#5 v2.0 implementation
+    <li>Password callbacks have a new ``void *'' argument for application data
+    <li>Avoid various memory leaks
+    <li>New pipe-like BIO that allows using the SSL library when actual I/O
+        must be handled by the application (BIO pair)
 </ul>
 
 <p>
-We consider OpenSSL 0.9.3 to be the best version of OpenSSL available and we
+We consider OpenSSL 0.9.4 to be the best version of OpenSSL available and we
 strongly recommend that users of older versions, especially of old SSLeay
-versions, upgrade as soon as possible.  OpenSSL 0.9.3 is available for
+versions, upgrade as soon as possible.  OpenSSL 0.9.4 is available for
 download via HTTP and FTP from the following master locations (the various FTP
 mirrors you can find under <a
 href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
@@ -49,9 +45,9 @@ Yours,<br>
 The OpenSSL Project Team...  
 
 <pre>
-    Mark J. Cox             Bodo Moeller    
-    Ralf S. Engelschall     Ulf Moeller     
-    Dr. Stephen Henson      Holger Reif     
-    Ben Laurie              Paul C. Sutton
+    Mark J. Cox             Ben Laurie         Andy Polyakov   
+    Ralf S. Engelschall     Bodo Moeller       Holger Reif     
+    Dr. Stephen Henson      Ulf Moeller        Paul C. Sutton  
+
 </pre>
 
