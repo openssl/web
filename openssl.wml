@@ -308,6 +308,55 @@ foreach $l (@L) {
 </pre>
 </define-tag>
 
+<define-tag rfilelist>
+<pre>
+<b>   Bytes      Timestamp       Filename</b>
+<b>________ ____________________ ____________________________</b>
+<:
+@HI = ();
+open(FP, "<index.current");
+while (<FP>) {
+   s|\s*\n$||;
+   push(@HI, $_);
+}
+close(FP);
+sub ls {
+    my ($pat) = @_;
+    my (@F, @R, $f, @S, @T);
+    @F = sort { (stat($b))[9] <=> (stat($a))[9]; } (glob($pat));
+    @R = ();
+    foreach $f (@F) {
+        next if ($f =~ m|^index.*|);
+        if ('%1' ne '') {
+            if (! %1 $f) {
+                next;
+            }
+        }
+        @S = stat($f);
+        $f = "$f/" if (-d $f);
+        @T = localtime($S[9]);
+        my @moy = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                   'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec');
+        push(@R, sprintf("%"."8d %"."s %"."2d %"."02d:%"."02d:%"."02d %"."d %"."s\n", 
+             $S[7], $moy[$T[4]], $T[3], $T[2], $T[1], $T[0], 1900+$T[5], $f));
+    }
+    return @R;
+}
+@L = &ls("%0");
+foreach $l (@L) {
+    next if ($l =~ m|^\s*$|);
+    $l =~ s|(\s+)(\S+[^/])(\s*\n)$|$1."<a href=\"$2\">$2</a>".$3|e;
+    $l =~ s|(\s+)(\S+/)(\s*\n)$|$1."<a href=\"$2\"><b>$2</b></a>".$3|e;
+    foreach $hi (@HI) {
+        $l =~ s|^(.*$hi.*)$|<font color="#cc3333">$1&nbsp;&nbsp;<b>[LATEST]</b></font>|;
+        $l =~ s|>($hi)<|><font color="#cc3333">$1</font><|;
+    }
+    print $l;
+}
+:>
+</pre>
+</define-tag>
+
 #   define a <cvs> container which can be used to reference 
 #   files within the CVS repository similar to <a>.
 <define-container cvs>
