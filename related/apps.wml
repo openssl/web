@@ -105,5 +105,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="Postfix/TLS"
           info="A patch for the Postfix MTA to support TLS via OpenSSL"
           url="http://www.aet.tu-cottbus.de/personen/jaenicke/pfixtls/">
+    <item name="SSA"
+          info="Secure Sockets Agent (SSA) - a client/server tunneling package"
+          url="http://www.cyber.ee/infosecurity/products/ssa/">
 </ul>
 
