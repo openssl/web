@@ -25,6 +25,7 @@
 <mirror url="ftp://glock.missouri.edu/pub/openssl/" loc="US">
 <mirror url="ftp://ftp.av8.com/pub/mirrors/openssl/" loc="US">
 <mirror url="ftp://gw.inetlab.com/mirrors/openssl/" loc="RU">
+<mirror url="ftp://ftp.ebizlab.hit.bme.hu/pub/openssl/" loc="HU">
 
 </ul>
 
