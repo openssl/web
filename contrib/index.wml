@@ -5,9 +5,9 @@
 
 <h1>Miscellaneous OpenSSL Contributions</h1>
 
-Welcome to the User Contribution Area of OpenSSL.  This area is directly
-maintained by the OpenSSL users and provided AS IS without any kind of support
-or guaranty.
+Welcome to the User Contribution Area of OpenSSL.  This area contains files
+maintained by the OpenSSL users and placed here by the OpenSSL team.  They
+are provided AS IS without any kind of support or guaranty.
 
 <p>
 <font face="Arial,Helvetica" size=-1>
@@ -26,5 +26,4 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 </font>
 
 <p>
-...not available yet...
-
+<filelist *.gz>
