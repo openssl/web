@@ -19,7 +19,7 @@ The most significant changes are:
 
 <ul>
     <li> Fixed a security hole related to session resumption
-    <li> Fixed RSA encryption routines for the p < q case
+    <li> Fixed RSA encryption routines for the p &lt; q case
     <li> "ALL" in cipher lists now means "everything except NULL ciphers"
     <li> Support for Triple-DES CBCM cipher
     <li> Support of Optimal Asymmetric Encryption Padding (OAEP) for RSA
