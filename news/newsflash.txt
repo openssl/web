@@ -1,3 +1,4 @@
+09-Sep-2000: A release plan for OpenSSL 0.9.6 is now <a href="ROOT/news/state.html">available</a>
 01-Apr-2000: OpenSSL 0.9.5a is now <a href="ROOT/source/">available</a>, a bugfix release
 23-Mar-2000: Beta 2 of OpenSSL 0.9.5a is now <a href="ROOT/source/">available</a>, please test it now
 20-Mar-2000: Beta 1 of OpenSSL 0.9.5a is now <a href="ROOT/source/">available</a>, please test it now
