@@ -36,9 +36,9 @@ Security (TLS) protocols.
     <item name="HTTP over TLS"
           info="The specification on how to run HTTP over SSL/TLS"
           url="ftp://ftp.ietf.org/internet-drafts/draft-ietf-tls-https-02.txt">
-    <item name="Tunneling SSL Through a WWW Proxy"
+    <item name="Tunneling TCP based protocols through Web proxy servers"
           info="The specification for the HTTP CONNECT method"
-          url="http://www.consensus.com/ietf-tls/ssl-tunneling-02.txt">
+          url="http://www.www.alternic.org/drafts/drafts-l-m/draft-luotonen-web-proxy-tunneling-01.txt">
     <item name="Analysis of the SSL 3.0 Protocol"
           info="D. Wagner and B. Schneier's USENIX analysis of SSLv3"
           url="http://www.counterpane.com/ssl.html">
