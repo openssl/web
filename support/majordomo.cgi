@@ -65,7 +65,7 @@ die "Bogus action!"
 
 #   generate mail
 $mail = '';
-$mail .= "From: $qs{email}\n";
+$mail .= "From: nobody@openssl.org\n";
 $mail .= "Reply-To: $qs{email}\n";
 $mail .= "Subject: Subscription to OpenSSL mailing list(s)\n";
 $mail .= "To: majordomo\@openssl.org\n";
