@@ -1,0 +1,20 @@
+#!wml -oPAGE_HEADuPAGE_BODY-PAGE_FOOT2:cvstrac.head.html \
+      -oPAGE_FOOTuPAGE_FOOT2:cvstrac.foot.html \
+      -DROOT=http://www.openssl.org/ \
+      -DSNB_ROOT=http://www.openssl.org/source \
+      -DIMG=http://www.openssl.org/images
+
+#use wml::openssl area=source page=cvstrac
+
+<title>CVS Web Interface</title>
+
+<h1>CVS Web Interface</h1>
+
+[PAGE_FOOT2:
+<font color="#c0c0c0" size=-1 face="Arial,Helvetica">
+<b>____<br>
+Web Interface for the OpenSSL CVS Repository<br>
+Based on the on the <a href="http://www.cvstrac.org/">CVStrac</a>.
+</font>
+:PAGE_FOOT2]
+
