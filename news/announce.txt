@@ -1,34 +1,48 @@
 
-  OpenSSL version 0.9.5a released
+  OpenSSL version 0.9.6 released
   ===============================
 
   OpenSSL - The Open Source toolkit for SSL/TLS
   http://www.openssl.org/
 
   The OpenSSL project team is pleased to announce the release of version
-  0.9.5a of our open source toolkit for SSL/TLS.  This new OpenSSL version
-  is a bugfix release and incorporates 26 changes and bugfixes to the
+  0.9.6 of our open source toolkit for SSL/TLS.  This new OpenSSL version
+  is a major release and incorporates at least 91 changes and bugfixes to the
   toolkit (for a complete list see http://www.openssl.org/source/exp/CHANGES).
 
   The most significant changes are:
 
-      o Bug fixes for Win32, SuSE Linux, NeXTSTEP and FreeBSD 2.2.8 
-      o Shared library support for HPUX and Solaris-gcc
-      o Support of Linux/IA64
-      o Assembler support for Mingw32
-      o New 'rand' application
-      o New way to check for existence of algorithms from scripts
+      o Some documentation for BIO and SSL libraries.
+      o Enhanced chain verification using key identifiers.
+      o New sign and verify options to 'dgst' application.
+      o Support for DER and PEM encoded messages in 'smime' application.
+      o New 'rsautl' application, low level RSA utility.
+      o MD4 now included.
+      o Bugfix for SSL rollback padding check.
+      o Support for external crypto devices [1].
+      o Enhanced EVP interface.
 
-  We consider OpenSSL 0.9.5a to be the best version of OpenSSL available.
-  However, since this is mostly a bugfix release of 0.9.5, we only strongly
-  recommend an upgrade if you have encountered problems with version 0.9.5.
-  Still, if you run something older than 0.9.5, we strongly recommend that
-  you upgrade as soon as possible.  OpenSSL 0.9.5a is available for download
-  via HTTP and FTP from the following master locations (the various FTP
-  mirrors you can find under http://www.openssl.org/source/mirror.html):
+  We consider OpenSSL 0.9.6 to be the best version of OpenSSL available and we
+  strongly recommend that users of older versions, especially of old SSLeay
+  versions, upgrade as soon as possible.  OpenSSL 0.9.6 is available for
+  download via HTTP and FTP from the following master locations (you can find
+  the various FTP mirrors under http://www.openssl.org/source/mirror.html):
 
     o http://www.openssl.org/source/
     o ftp://ftp.openssl.org/source/
+
+  [1] OpenSSL comes in the form of two distributions this time.
+  The reasons for this is that we want to deploy the external crypto device
+  support but don't want to have it part of the "normal" distribution just
+  yet.  The distribution containing the external crypto device support is
+  popularly called "engine", and is considered experimental.  It's been
+  fairly well tested on Unix and flavors thereof.  If run on a system with
+  no external crypto device, it will work just like the "normal" distribution.
+
+  The distribution file names are:
+
+      o openssl-0.9.6.tar.gz [normal]
+      o openssl-engine-0.9.6.tar.gz [engine]
 
   Yours,
   The OpenSSL Project Team...  
