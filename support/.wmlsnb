@@ -4,5 +4,6 @@
 
 <snb>
   <snb_button id=lists  txt="Mailing Lists"  url="">
+  <snb_button id=faq    txt="FAQ"            url="faq.html">
 </snb>
 

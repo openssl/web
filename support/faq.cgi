@@ -32,7 +32,7 @@ while (<FP>) {
 	$_ .= <FP>;
     }
     s/<URL:(.*?)>/<a href=\"$1\">$1<\/a>/;
-    if (s/\(.?\)/XX$1XX/g) {
+    if (s/\((.?)\)/XX$1XX/g) {
 	while (/([A-Za-z_]*)XX(.?)XX/) {
 	    foreach $section ("apps", "ssl", "crypto") {
 		if (-f "../docs/$section/$1.html") {
