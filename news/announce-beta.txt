@@ -6,7 +6,7 @@
   http://www.openssl.org/
 
   OpenSSL is currently in a release cycle.  The first beta is now released.
-  This beta is in fact be two releases, one for the current mainstream
+  This beta is in fact two releases, one for the current mainstream
   OpenSSL, and one with an "engine" branch incorporated.  The "engine"
   branch contains an interface to external crypto libraries, which is
   currently used to support the hardware devices CryptoSwift (by CryptoSwift
