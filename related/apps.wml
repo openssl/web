@@ -33,9 +33,6 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="sslwrap"
           info="Annother SSL encryption wrapper for standard network daemons"
           url="http://www.rickk.com/sslwrap/">
-    <item name="ssl-gw"
-          info="Annother SSL encryption wrapper for standard network daemons"
-          url="ftp://ftp.uni-mainz.de/pub/internet/security/ssl/ssl-gw/">
     <item name="sslfd"
           info="A nice wrapper for the SSLeay libraries using standard file descriptors"
           url="http://www.quick.com.au/ftp/pub/sjg/help/sslfd.html">
