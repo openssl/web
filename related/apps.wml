@@ -186,5 +186,8 @@ the old SSLeay package or the new OpenSSL package.
     <item name="Courier-IMAP"
           info="An IMAP server capable of speaking SSL/TLS via OpenSSL"
           url="http://www.inter7.com/courierimap/">
+    <item name="INN"
+          info="The Usenet system InterNetNews has support for SSL/TLS via OpenSSL"
+          url="http://www.isc.org/products/INN/">
 </ul>
 
