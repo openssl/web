@@ -78,8 +78,5 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="SSLJava"
           info="A Java NET.DLL replacement which deals with SSLeay"
           url="http://noc.kpnw.org/~scott/">
-    <item name="jSSL"
-          info="A Java native package implementing SSL"
-          url="http://vonnieda.org/jSSL/">
 </ul>
 
