@@ -43,7 +43,7 @@
 <mirror url="ftp://ftp.gm.is/pub/openssl/" loc="IS">
 <mirror url="ftp://ftp.directnet.ru/pub/openssl/" loc="RU">
 <mirror url="ftp://ftp.linux.hr/pub/openssl/" loc="HR">
-<mirror url="ftp://ftp.1stnet.co.uk/pub/mirros/openssl/" loc="UK">
+<mirror url="ftp://ftp.1stnet.co.uk/pub/mirrors/openssl/" loc="UK">
 <mirror url="ftp://mirror.aarnet.edu.au/pub/openssl/" loc="AU">
 <mirror url="ftp://storm.alert.sk/mirrors/openssl/" loc="SK">
 <mirror url="ftp://ftp.openssl.uli.it/" loc="IT">
