@@ -1,0 +1,23 @@
+
+#use wml::openssl area=docs page=index
+
+<title>Documents, Misc</title>
+
+<h1>Miscellaneous OpenSSL Documents</h1>
+
+Here you can find the three manual pages documenting the three essential parts
+of the OpenSSL toolkit: The SSL library, the Crypto library and the command
+line tool.
+
+<p>
+<ul>
+<li><a href="openssl.html"><font id=sfl>openssl(1)</font></a>: [STILL INCOMPLETE]<br>
+    Manual page documenting the <b>openssl</b> command line tool.
+<p>
+<li><a href="ssl.html"><font id=sfl>ssl(3)</font></a>: [STILL INCOMPLETE]<br>
+    Manual page documenting the OpenSSL <b>SSL/TLS</b> library.
+<p>
+<li><a href="crypto.html"><font id=sfl>crypto(3)</font></a>: [STILL INCOMPLETE]<br>
+    Manual page documenting the OpenSSL <b>Crypto</b> library.
+</ul>
+

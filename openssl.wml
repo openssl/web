@@ -1,0 +1,403 @@
+##
+##  openssl.wml -- WML Template for the www.openssl.org website
+##  Written by Ralf S. Engelschall <rse@engelschall.com>
+##
+##  Usage: #use wml::tpl::openssl area=<area_name> [page=<page_name>]
+##
+
+#use wml::std::tags
+#use wml::des::navbar
+#use wml::std::info
+
+##
+##  The Global Page Layout
+##
+
+#   start of page header
+[PAGE_HEAD:\
+<html>
+<head>
+
+#   insert information about the webpage
+<info style=comment domainname="openssl.org"
+      copyright="1998,1999 The OpenSSL Project, http://www.openssl.org/">
+<info style=meta domainname="openssl.org"
+      copyright="1998,1999 The OpenSSL Project, http://www.openssl.org/">
+
+#   insert overideable title container
+<title*>OpenSSL: <<PAGE_TITLE>></title*>
+#   predefine it to show errors
+..PAGE_TITLE!>>Error: Undefined Title !!<<..
+#   define override tag
+<define-container title>
+..PAGE_TITLE>>%body<<..
+</define-container>
+
+#   define a style-sheet for adjusting some HTML layouting things
+#   to conform to some typographically stronger conventions.
+<style type="text/css"><!--
+BODY      { position: absolute; left: 0px; top: 0px; background: #666699; }
+A:link    { color: #6666cc; }
+A:active  { color: #6666cc; }
+A:visited { color: #6666cc; }
+\#sf  { font-family: arial,helvetica; font-variant: normal; font-style: normal; }
+\#sfl { font-weight: bold; font-family: arial,helvetica; font-size: 16pt; \
+        line-height: 16pt; font-variant: normal; font-style: normal; }
+H1    { font-weight: bold; font-size: 18pt; line-height: 18pt; \
+        font-family: arial,helvetica; font-variant: normal; font-style: normal; }
+H2    { font-weight: bold; font-size: 14pt; line-height: 14pt; \
+        font-family: arial,helvetica; font-variant: normal; font-style: normal; }
+H3    { font-weight: bold; font-size: 12pt; line-height: 12pt; \
+        font-family: arial,helvetica; font-variant: normal; font-style: normal; }
+--></style>
+
+#   end of header and start of physical body
+#   (use additionally use colors here for older browsers)
+</head>
+<body link="#6666cc" alink="#6666cc" vlink="#6666cc" bgcolor="#666699">
+
+#   now define the page layout by a nested table 
+#   structure consisting of a 5x5 cell grid.
+<table width=100% cellspacing=0 cellpadding=0 border=0>
+  #   visually: the top line of the page
+  <tr>\
+    <td align=left width=100 bgcolor="#666699"><img src="$(IMG)/page-head-tl.jpg" alt="OpenSSL"></td>\
+    <td align=left colspan=2 width=600 bgcolor="#666699"><img src="$(IMG)/page-head-tm.jpg" alt=""></td>\
+    <td align=right width=20 bgcolor="#666699">&nbsp;&nbsp;&nbsp;</td>\
+    <td align=right width=50 bgcolor="#666699">&nbsp;</td>\
+  </tr>
+  #   visually: the top of the white body with the subnavbar
+  <tr>\
+    <td align=left width=100><img src="$(IMG)/page-head-bl.jpg"></td>\
+    <td align=left width=20><img src="$(IMG)/page-head-bm.jpg"></td>\
+    <td align=left width=100% bgcolor="#ffffff">\
+        <<PAGE_SUBNAVBAR>>\
+    </td>\
+    <td align=right width=20><img src="$(IMG)/page-corner-tr.gif"></td>\
+    <td align=right width=50 bgcolor="#666699">&nbsp;</td>\
+  </tr>
+  #   visually: the left main navigation bar and the white body
+  <tr>\
+    <td align=left valign=top width=100 bgcolor="#666699"><<PAGE_NAVBAR>></td>\
+    <td align=left valign=top width=20  bgcolor="#ffffff">&nbsp;</td>\
+    <td align=left valign=top bgcolor="#ffffff">\
+        <br>
+        :PAGE_HEAD][PAGE_BODY:
+        <<PAGE_BODY>>
+        :PAGE_BODY][PAGE_FOOT:\
+    </td>\
+    <td align=right width=20 bgcolor="#ffffff">&nbsp;&nbsp;&nbsp;</td>\
+    <td align=right width=50 bgcolor="#666699">&nbsp;</td>\
+  </tr>
+  #   visually: the bottom of the white body
+  <tr>\
+    <td align=left valign=top width=100 bgcolor="#666699">&nbsp;</td>\
+    <td align=left width=20><img src="$(IMG)/page-corner-bl.gif"></td>\
+    <td align=left valign=top bgcolor="#ffffff">&nbsp;</td>\
+    <td align=right width=20><img src="$(IMG)/page-corner-br.gif"></td>\
+    <td align=right width=50 bgcolor="#666699">&nbsp;</td>\
+  </tr>
+  #   visually: the bottom of the page (only for esthetical
+  #   reasons, i.e. the page doesn't end with the white body)
+  <tr>\
+    <td colspan=5 bgcolor="#666699">&nbsp;</td>\
+  </tr>
+</table>
+
+#   the physical end of the body
+</body>
+</html>
+:PAGE_FOOT]
+
+##
+##  The main Navigation Bar [left, vertically]
+##
+
+#   define the navigation bar through a grammar
+<navbar:define name=navbar imgstar="n:s:s"
+               imgbase="$(IMG)" urlbase="$(ROOT)">
+  #   bar header
+  <navbar:header>
+  </navbar:header>
+  #   button prolog
+  <navbar:prolog>
+    <tr><td>
+  </navbar:prolog>
+  #   the buttons itself
+  <navbar:button id=title    url=""       txt="Title"        img=page-navbar-ti-*.jpg>
+  <navbar:button id=about    url=about/   txt="About"        img=page-navbar-ab-*.jpg>
+  <navbar:button id=news     url=news/    txt="News"         img=page-navbar-ne-*.jpg>
+  <navbar:button id=docs     url=docs/    txt="Documents"    img=page-navbar-do-*.jpg>
+  <navbar:button id=source   url=source/  txt="Source"       img=page-navbar-so-*.jpg>
+  <navbar:button id=contrib  url=contrib/ txt="Contribution" img=page-navbar-co-*.jpg>
+  <navbar:button id=support  url=support/ txt="Support"      img=page-navbar-su-*.jpg>
+  <navbar:button id=related  url=related/ txt="Related"      img=page-navbar-re-*.jpg>
+  #   button epilog
+  <navbar:epilog>
+    </td></tr>
+  </navbar:epilog>
+  #   bar footer
+  <navbar:footer>
+  </navbar:footer>
+</navbar:define>
+
+#   and then immediately render it into its layout location
+#   (Hint: The top and buttom images have to be part of the table
+#   structure because only this way we can put them 0pt to the
+#   buttons without a gap)
+..PAGE_NAVBAR>>\
+  <table cellspacing=0 cellpadding=0 border=0>\
+    <tr><td><img src="$(IMG)/page-navbar-top.jpg"></td></tr>
+    #   render it!
+    <navbar:render name=navbar select=$(area) $(page:+subselected)>
+    <tr><td><img src="$(IMG)/page-navbar-bot.jpg"><br><p></td></tr>
+  </table>
+<<..
+
+##
+##  The Sub Navigation Bar (SNB) [top, horizontally]
+##
+
+#   define the <snb>...</snb> container tag
+<define-container snb>
+  #   1. define the navigation bar through a grammar
+  <navbar:define name=snb urlbase="$(SNB_ROOT)" 
+                 txtcol_normal="#666666" txtcol_select="#000000">
+    #   bar header
+    <navbar:header>\
+      <table cellspacing=0 cellpadding=0 border=0>
+        <tr>
+    </navbar:header>
+    #   button prolog (normal)
+    <navbar:prolog>\
+          <td><font face="Arial,Helvetica">&nbsp;
+    </navbar:prolog>
+    #   button prolog (selected)
+    <navbar:prolog type=S>\
+          <td bgcolor="#f0f0f0">&nbsp;<font face="Arial,Helvetica"><b>
+    </navbar:prolog>
+    #   ...here the <snb_button> tags will occur...
+    %body
+    #   button epilog (normal)
+    <navbar:epilog>\
+          </font>&nbsp;</td><td>|</td>
+    </navbar:epilog>
+    #   button epilog (selected)
+    <navbar:epilog type=S>\
+          </b></font>&nbsp;</td><td>|</td>
+    </navbar:epilog>
+    #   last button epilog (normal)
+    <navbar:epilog pos=last>\
+          </font>&nbsp;</td><td></td>
+    </navbar:epilog>
+    #   last button epilog (selected)
+    <navbar:epilog type=S pos=last>\
+          </b></font>&nbsp;</td><td></td>
+    </navbar:epilog>
+    #   bar footer
+    <navbar:footer>\
+        </tr>
+      </table>
+    </navbar:footer>
+  </navbar:define>
+  #   2. render the navigation bar and divert
+  #      divert it into it's final location
+  ..PAGE_SUBNAVBAR>>\
+  <navbar:render name=snb select="$(page)">\
+  <<..
+</define-container>
+
+#   define the <snb_button> tag for the <snb> container
+#   (this is for consistency with the tag names)
+<define-tag snb_button>
+  <navbar:button %attributes>
+</define-tag>
+
+#   predefine the contents of the SNB location
+#   by diverting a whitespace character to it.
+#   This prevents the table to be folded.
+..PAGE_SUBNAVBAR!>>
+&nbsp;
+<<..
+
+#   and now the final WML trick: When the page=<page_name>
+#   attribute is specified for this template, we read in the SNB
+#   spec-file which now can use the <snb>..</snb> and
+#   <snb_button> tags to actually define and render a SNB. This
+#   is accomplished by doing some sort of a conditional #include. ;-)
+$(page:*# )$(page:+#include ")$(SNB_RC:-.wmlsnb)$(page:+")
+
+##
+##  Useful tags (for convenience purposes only)
+##
+
+#   define a <item> tag for <ul>/<ol> item similar to <li> but
+#   which is nice for URL lists like the Related area where
+#   we want a special layout.
+<define-tag item>
+<preserve name>
+<preserve url>
+<preserve aio>
+<preserve info>
+<set-var aio=*>
+<set-var %attributes>
+<li><a href="<get-var url>"><font size=+1 face="Arial,Helvetica"><b><get-var name></b></font></a>
+    <ifeq "<get-var aio>" "" <img src="aio.gif" alt="[all-in-one]" align=absmiddle>>
+    <br>
+    <ifeq "<get-var info>" "" "" "<get-var info><br>">
+    <a href="<get-var url>"><font size=-1><get-var url></font></a>
+    <p>
+<restore info>
+<restore aio>
+<restore url>
+<restore name>
+</define-tag>
+
+#   define a <filelist> tag which can be used to create a file listing which
+#   is optically more compact than the stuff Apache's mod_autoindex creates.
+#   Especially the current version is marked red, too.
+<define-tag filelist>
+<pre>
+<b>   Bytes      Timestamp       Filename</b>
+<b>________ ____________________ ____________________________</b>
+<:
+@HI = ();
+open(FP, "<index.current");
+while (<FP>) {
+   s|\s*\n$||;
+   push(@HI, $_);
+}
+close(FP);
+sub ls {
+    my ($pat) = @_;
+    my (@F, @R, $f, @S, @T);
+    @F = sort { (stat($a))[9] <=> (stat($b))[9]; } (glob($pat));
+    @R = ();
+    foreach $f (@F) {
+        next if ($f =~ m|^index.*|);
+        if ('%1' ne '') {
+            if (! %1 $f) {
+                next;
+            }
+        }
+        @S = stat($f);
+        $f = "$f/" if (-d $f);
+        @T = localtime($S[9]);
+        my @moy = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                   'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec');
+        push(@R, sprintf("%"."8d %"."s %"."2d %"."02d:%"."02d:%"."02d %"."d %"."s\n", 
+             $S[7], $moy[$T[4]], $T[3], $T[2], $T[1], $T[0], 1900+$T[5], $f));
+    }
+    return @R;
+}
+@L = &ls("%0");
+foreach $l (@L) {
+    next if ($l =~ m|^\s*$|);
+    $l =~ s|(\s+)(\S+[^/])(\s*\n)$|$1."<a href=\"$2\">$2</a>".$3|e;
+    $l =~ s|(\s+)(\S+/)(\s*\n)$|$1."<a href=\"$2\"><b>$2</b></a>".$3|e;
+    foreach $hi (@HI) {
+        $l =~ s|^(.*$hi.*)$|<font color="#cc3333">$1&nbsp;&nbsp;[LATEST]</font>|;
+        $l =~ s|>($hi)<|><font color="#cc3333">$1</font><|;
+    }
+    print $l;
+}
+:>
+</pre>
+</define-tag>
+
+#   define a <cvs> container which can be used to reference 
+#   files within the CVS repository similar to <a>.
+<define-container cvs>
+<preserve href>\
+<set-var %attributes>\
+  <a href="$(ROOT)/source/exp/<get-var href>"><get-var href></a>\
+<restore href>\
+</define-container>
+
+#
+<define-tag newsflash>
+<preserve from>
+<preserve max>
+<preserve more>
+<set-var %attributes>
+<table width=500 cellspacing=0 cellpadding=1 border=0>
+<tr><td><font face="Arial,Helvetica"><b>Date</b></font></td> <td>&nbsp;&nbsp;&nbsp;<font face="Arial,Helvetica"><b>Newsflash</b></font></td></tr>
+<tr><td><hr noshade size=1></td> <td><hr noshade size=1></td></tr>
+<:
+    open(FP, "< <get-var from>") || die;
+    my $max = ("<get-var max>" eq '' ? 9999 : "<get-var max>");
+    @COL = (
+        '#ffffff',
+        '#f0f0f0',
+    );
+    $ncol = 1;
+    $n = 0;
+    while (<FP>) {
+        $ncol = ($ncol + 1) % 2;
+        $col  = $COL[$ncol];
+        s|="ROOT|="$(ROOT)|g;
+        s|="CVS|="$(ROOT)/source/exp/|g;
+        if (m|^(.+?):(.+)|) {
+            print "<tr bgcolor=\"$col\">\n";
+            print "  <td align=right><font face=\"Arial,Helvetica\"><b>$1:</b></font></td> <td>&nbsp;&nbsp;$2</td>\n";
+            print "</tr>\n";
+        }
+        $n++;
+        last if ($n >= $max);
+    }
+    close(FP);
+:>
+<ifeq "<get-var more>" "" "" <prog
+<tr>
+  <td>&nbsp;</td> <td align=right><td><a href="<get-var more>">more...</a></td>
+</tr>
+>>
+</table>
+<restore more>
+<restore max>
+<restore from>
+</define-tag>
+
+#   define a <disclaimer> tag which displays the usual disclaimer stuff
+<define-tag disclaimer>
+<font face="Arial,Helvetica" size=-1>
+This software package uses strong cryptography, so even it is created,
+maintained and distributed from liberal countries in Europe (where it is legal
+to do this), it falls under certain export/import and/or use restrictions in
+some other parts of the world.
+<p>
+PLEASE REMEMBER THAT EXPORT/IMPORT AND/OR USE OF STRONG CRYPTOGRAPHY
+SOFTWARE, PROVIDING CRYPTOGRAPHY HOOKS OR EVEN JUST COMMUNICATING TECHNICAL
+DETAILS ABOUT CRYPTOGRAPHY SOFTWARE IS ILLEGAL IN SOME PARTS OF THE WORLD.
+SO, WHEN YOU IMPORT THIS PACKAGE TO YOUR COUNTRY, RE-DISTRIBUTE IT FROM
+THERE OR EVEN JUST EMAIL TECHNICAL SUGGESTIONS OR EVEN SOURCE PATCHES TO THE
+AUTHOR OR OTHER PEOPLE YOU ARE STRONGLY ADVICED TO PAY CLOSE ATTENTION TO
+ANY EXPORT/IMPORT AND/OR USE LAWS WHICH APPLY TO YOU.  THE AUTHORS OF OPENSSL
+IS NOT LIABLE FOR ANY VIOLATIONS YOU MAKE HERE. SO BE CAREFULLY YOURSELF, IT
+IS YOUR RESPONSIBILITY.
+</font>
+<p>
+<font face="Arial,Helvetica" size=-1>
+CREDIT INFORMATION:
+This product includes includes cryptographic software written by Eric A. Young
+(eay@cryptsoft.com).  This product includes software written by Tim J.  Hudson
+(tjh@cryptsoft.com).
+</font>
+</define-tag>
+
+<define-tag website-tools>
+<font face="Arial,Helvetica" size=-1> Website designed and generated with <a
+href="http://www.engelschall.com/sw/wml/"><font color="#000000">Website META
+Language</font></a> (WML) and served by <a href="http://www.apache.org/"><font
+color="#000000">Apache</font></a> webserver.
+</font>
+</define-tag>
+
+##
+##  Finally, the layout is now rendered, so divert all
+##  following stuff (the code in the local file after the #use 
+##  for this template!) into the white body area.
+##
+
+..PAGE_BODY>>
+

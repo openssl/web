@@ -1,0 +1,8 @@
+
+  This is the source tree for the www.openssl.org website.  It's entirely
+  generated with Photoshop (for images) and Website META Language (WML) (for
+  markup).  Never edit any .html files manually. Instead edit the
+  corresponding .wml file. To translate the .wml files to the .html files just
+  run `wmk'. For more information about WML have a look at
+  http://www.engelschall.com/sw/wml/.
+

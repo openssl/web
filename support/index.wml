@@ -1,0 +1,93 @@
+
+#use wml::openssl area=support page=lists
+
+<title>Support, Mailing Lists</title>
+
+<h1>OpenSSL Mailing Lists</h1>
+
+The OpenSSL project uses various mailing lists to coordinate the development
+and to provide support to the user community. They all have an Email address
+of <tt>openssl-</tt><i>name</i><tt>@openssl.org</tt> and are remote controlled
+by <tt>majordomo@openssl.org</tt>.
+
+<h2>Overview</h2>
+
+Here is an overview of the available mailing lists:
+
+<p>
+<table cellspacing=0 cellpadding=2 border=0>
+<tr>
+   <td><b id=sf>List Address</b></td>
+   <td><b id=sf>Subscription</b></td> 
+   <td><b id=sf>Posting</b></td> 
+   <td><b id=sf>Usage</b></td> 
+</tr>
+<tr>
+   <td><hr noshade size=1></td>
+   <td><hr noshade size=1></td>
+   <td><hr noshade size=1></td>
+   <td><hr noshade size=1></td>
+</tr>
+<tr>
+   <td><a href="mailto:openssl-announce@openssl.org">openssl-announce</a></td>
+   <td>open</td> <td>core team</td> 
+   <td>Official Project Announcements</td>
+</tr>
+# <tr>
+#    <td><a href="mailto:openssl-core@openssl.org">openssl-core</a></td>
+#    <td>closed</td> <td>subscribers</td> 
+#    <td>Internal Core Team Discussions</td>
+# </tr>
+<tr>
+   <td><a href="mailto:openssl-cvs@openssl.org">openssl-cvs</a></td>
+   <td>open</td> <td>subscribers</td>
+   <td>CVS Repository Messages</td>
+</tr>
+<tr>
+   <td><a href="mailto:openssl-dev@openssl.org">openssl-dev</a></td>
+   <td>open</td> <td>subscribers</td>
+   <td>Developer Discussions</td>
+</tr>
+<tr>
+   <td><a href="mailto:openssl-users@openssl.org">openssl-users</a></td>
+   <td>open</td> <td>anybody</td>
+   <td>User Discussions</td>
+</tr>
+</table>
+
+<h2>Subscription</h2>
+
+To subscribe to one of these Majordomo-controlled mailing list, send an Email
+to <b><tt>majordomo</tt></b><tt>@openssl.org</tt> with only
+
+<blockquote>
+<tt>subscribe openssl-</tt><i>name</i> &nbsp; <i>you@domain.dom</i>
+</blockquote>
+
+in the <i>body</i> (the subject is not important and can be empty). After
+sending this, Majordomo will respond with an authority challenge which has to
+send back again for security reasons (to avoid that others subscribe you
+without your ok). Now you are successfully subscribed to this list. 
+
+<p>
+<b>NOTICE:</b><br>
+
+<p>
+Experience shows that people don't want to read. So, three
+common mistakes usually occur for those people:
+
+<ol>
+<li>You copy the above
+    <tt>openssl-</tt><i>name</i> verbatim into your mail instead of replacing
+    it with the actual name of the mailing list.
+<li>You copy the
+    above <i>you@domain.dom</i> verbatim into your mail instead of replacing
+    it with your actual Email address.
+<li>You send the subscription to one of the mailing lists instead
+    to <tt>majordomo@openssl.org</tt>
+</ol>
+
+Please remember this cookie: ``Internet is a wonderful mechanism for making a
+fool of yourself in front of a very large audience''.  So start thinking
+already with your subscription, please.
+

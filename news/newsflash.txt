@@ -1,0 +1,6 @@
+31-Dec-1998: New: Browsing <a href="ROOT/source/cvs/">interface</a> to the CVS repository
+29-Dec-1998: Designed the new <a href="http://www.openssl.org/">www.openssl.org</a> website
+27-Dec-1998: Established the OpenSSL <a href="ROOT/support/">mailing lists</a>
+26-Dec-1998: Established the <a href="ROOT/source/repos.html">CVS Repository</a> environment
+23-Dec-1998: Released OpenSSL <a href="ROOT/source/openssl-0.9.1c.tar.gz">0.9.1c</a>
+23-Dec-1998: Official start of the OpenSSL project

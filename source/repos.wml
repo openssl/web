@@ -1,0 +1,154 @@
+
+#use wml::openssl area=source page=repos
+
+#use wml::std::box
+#use wml::fmt::verbatim
+#use wml::std::href
+
+<title>Source, Repository</title>
+
+<h1>CVS Repository</h1>
+
+The OpenSSL package is developed in a CVS-based repository which is directly
+available through the RSYNC service on dev.openssl.org for those people who
+either want to always stay at the bleeding edge or even want to participate in
+the development of OpenSSL.
+
+<h2>Using your own local CVS repository mirror</h2>
+
+Because direct CVS access to the repository is only available for OpenSSL core
+team members you have to establish a local copy of the repository through the
+RSYNC service before you can checkout the source tree. This is not a drawback,
+it's an advantage: Using RSYNC is faster than plain CVS or even CVSup access
+(because RSYNC safes bandwidth by using compression, the client is easily to
+install and the used algorithm is very fast) and only with a local repository
+copy you can actually work reliable and without delays (think about a <tt>cvs
+diff</tt> over the network).
+
+<ol>
+<li>Make sure you have the excellent RSYNC client program (`<tt>rsync</tt>')
+    installed on your system. If not, please grab the RSYNC distribution first
+    and install it.  You can found RSYNC on <href
+    url="http://samba.anu.edu.au/rsync/"> and <href url="
+    ftp://samba.anu.edu.au/pub/rsync/">. We recommend
+    you to install version 2.2.1 or higher.
+<p>
+<li>Make sure you have the CVS program (`<tt>cvs</tt>')
+    installed on your system. If not, please grab the CVS distribution first
+    and install it.  You can found CVS on <href
+    url="http://www.cyclic.com/cvs/info.html"> and <href
+    url="ftp://download.cyclic.com/pub/">. We recommend you to install version
+    1.10.4 or higher.
+<p>
+<li>With the following command you now can check which
+    packages are available through the RSYNC service from
+    sw.engelschall.com:
+
+    <p>
+    <box bgcolor="#f0f0f0">
+    <b><verbatim>
+$ rsync rsync://dev.openssl.com/
+    </verbatim></b>
+    </box>
+
+    <p>
+    Here the <b>openssl-cvs</b> package is what you usually want to mirror. It
+    contains the complete CVS repository and is currently about 10 MB in size.
+<p>
+<li>Now you have to decide to which local directory you want to mirror the
+    OpenSSL CVS repository, say <tt>/home/openssl/cvs/</tt>. Then
+    all you have to do is setup a Cron job which regularly runs the
+    following command:
+
+    <p>
+    <box bgcolor="#f0f0f0">
+    <b><verbatim>
+<protect>
+$ rsync -rztpv --delete \
+        rsync://dev.openssl.org/openssl-cvs/ \
+        /home/openssl/cvs/
+</protect>
+    </verbatim></b>
+    </box>
+
+<p>
+<li>Finally you now can checkout your working copy of the
+    CVS development tree into a directory, say <tt>/home/openssl/work/</tt>:
+
+    <p>
+    <box bgcolor="#f0f0f0">
+    <b><verbatim>
+<protect>
+$ cvs -d /home/openssl/cvs co -d /home/openssl/work openssl
+</protect>
+    </verbatim></b>
+    </box>
+
+    <p>
+    Now you have a directory <tt>/home/openssl/work/openssl/</tt>
+    which contains the OpenSSL source tree.
+
+<p>
+<li>While development goes on you usually want to synchronize with the
+    latest file revisions from the OpenSSL project. The RSYNC Cron job keeps
+    your local repository copy up-to-date, but for checked out working tree
+    you have to run the following command:
+
+    <p>
+    <box bgcolor="#f0f0f0">
+    <b><verbatim>
+<protect>
+$ cd /home/openssl/work
+$ cvs update -P -d .
+</protect>
+    </verbatim></b>
+    </box>
+
+    <p>
+    This does actually more: When you have done local modifications to the
+    OpenSSL sources they get merged with the updated revisions from the local
+    repository. With this you can keep your local modifications for OpenSSL in
+    a very handy way. 
+    
+    <p>
+    BUT REMEMBER: Because the RSYNC Cron job very time makes your local
+    repository copy an exact mirror of the original repository on
+    dev.openssl.org, <b>never</b> check-in your modifications to the local
+    repository. They get lost on the next RSYNC update! But keeping
+    modifications in the checked out files is safe. You just have to solve
+    some merging conflicts from time to time via <tt>cvs update</tt>. 
+
+</ol>
+
+<h2>Inserting the OpenSSL tree into an existing CVS repository</h2>
+
+When you already have an existing local CVS repository established (for
+instance by mirroring another CVS repository), say with a $CVSROOT
+of <tt>/home/whatever/cvs/</tt>, you can also just insert the OpenSSL
+development tree as a subdirectory into this existing repository.  Just use
+this command instead of the one above:
+
+    <p>
+    <box bgcolor="#f0f0f0">
+    <b><verbatim>
+<protect>
+$ rsync -rztpv --delete \
+        rsync://dev.openssl.org/openssl-cvs/openssl/ \
+        /home/whatever/cvs/openssl/
+</protect>
+    </verbatim></b>
+    </box>
+
+<p>
+Now you can checkout the OpenSSL development tree form the existing CVS
+repository via:
+
+    <p>
+    <box bgcolor="#f0f0f0">
+    <b><verbatim>
+<protect>
+$ cvs -d /home/whatever/repos co openssl
+</protect>
+    </verbatim></b>
+    </box>
+

@@ -1,0 +1,36 @@
+
+#use wml::openssl area=title 
+
+<title>The Open Source toolkit for SSL/TLS</title>
+
+<img src="$(IMG)/misc-cookie.gif" align=right>
+
+<h1>Welcome to the OpenSSL Project</h1>
+
+The OpenSSL Project is a collaborative effort to develop a robust,
+commercial-grade, full-featured, and <a
+href="http://www.opensource.org/">Open Source</a> toolkit implementing the
+<a href="http://www.netscape.com/newsref/std/SSL.html">Secure Sockets
+Layer</a> (SSL v2/v3) and <a
+href="http://www.consensus.com/ietf-tls/">Transport Layer Security</a> (TLS
+v1) protocols with full-strength cryptography world-wide. The project is
+managed by a worldwide community of volunteers that use the Internet to
+communicate, plan, and develop the OpenSSL tookit and its related
+documentation.
+
+<p>
+OpenSSL is based on the excellent <a href="http://www.ssleay.org/">SSLeay</a>
+library developed by Eric A. Young and Tim J. Hudson. The OpenSSL toolkit is
+licensed under an Apache-style licence, which basically means that you are
+free to get and use it for commercial and non-commercial purposes subject to
+some simple license conditions.
+
+<p>
+<newsflash from="$(ROOT)/news/newsflash.txt" max=5 more="$(ROOT)/news/">
+
+<p>
+<disclaimer>
+
+<p>
+<website-tools>
+

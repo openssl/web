@@ -1,0 +1,8 @@
+##
+##  .wmlsnb -- Sub Navigation Bar Specification for WML
+##
+
+<snb>
+  <snb_button id=misc    txt="Misc"     url="">
+</snb>
+

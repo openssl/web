@@ -1,0 +1,11 @@
+##
+##  .wmlsnb -- Sub Navigation Bar Specification for WML
+##
+
+<snb>
+  <snb_button id=newsflash txt="Newsflash" url="">
+  <snb_button id=state     txt="State"     url="state.html">
+  <snb_button id=changelog txt="ChangeLog" url="changelog.html">
+  <snb_button id=internet  txt="Internet"  url="internet.html">
+</snb>
+

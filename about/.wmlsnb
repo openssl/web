@@ -1,0 +1,9 @@
+##
+##  .wmlsnb -- Sub Navigation Bar Specification for WML
+##
+
+<snb>
+  <snb_button id=general  txt="General"  url="">
+  <snb_button id=credits  txt="Credits"  url="credits.html">
+</snb>
+

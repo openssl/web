@@ -1,0 +1,46 @@
+
+#use wml::openssl area=news page=internet 
+
+<title>News, Internet</title>
+
+<h1>OpenSSL News on the Internet</h1>
+
+<p>
+<zwue>News on the Internet</zwue>
+
+Here you can find some links to Internet services which show you the
+OpenSSL-related activity and latest news on the net.
+
+<ul>
+<li><a href="http://www.dejanews.com/">
+    <font id=sfl>DejaNews Discussion Network</font>
+	</a><br>
+    <a href="http://www.dejanews.com/dnquery.xp?QRY=OpenSSL&defaultOp=AND&DBS=1&maxhits=100&showsort=date&format=terse">
+	Archive of all OpenSSL related discussions</a> on Usenet forums.  Use this
+	to look at all postings in Usenet newsgroups where people talk about
+	OpenSSL.
+<p>
+<li><a href="http://www.altavista.com/">
+    <font id=sfl>AltaVista Usenet Search Engine</font>
+	</a><br>
+    <a href="http://www.altavista.com/cgi-bin/query?pg=q&what=news&q=OpenSSL">
+	Archive of all OpenSSL related discussions</a> on Usenet forums.  Use this
+	to look at all postings in Usenet newsgroups where people talk about
+	OpenSSL.
+<p>
+<li><a href="http://www.altavista.com/">
+    <font id=sfl>AltaVista Web Search Engine</font>
+	</a><br>
+    <a href="http://www.altavista.com/cgi-bin/query?pg=q&kl=XX&q=link%3Awww.openssl.org%2F">
+	List of all currently known hyperlinks</a> to the OpenSSL website.  Use
+	this to look at all pages on the WWW which have a hyperlink to the OpenSSL
+	home location.
+<p>
+<li><a href="http://ftpsearch.ntnu.no/">
+    <font id=sfl>FAST FTP Search Engine</font>
+	</a><br>
+    <a href="http://ftpsearch.ntnu.no/cgi-bin/search?query=openssl&doit=Search&type=Case+insensitive+substring+search&doexact=on&hits=50&matches=&hitsprmatch=&limdom=&limpath=&hidepackages=on&hidedistfiles=on&hidefreebsd=on&hideopenbsd=on&hidenetbsd=on&f1=Mode&f2=Time&f3=Host&f4=Path&f5=-&f6=-&header=none&sort=date&trlen=30">
+	List of FTP location</a> where OpenSSL distribution tarballs can be found.
+	Use this to find the various mirrors of the OpenSSL FTP area.
+</ul>
+

@@ -1,0 +1,9 @@
+##
+##  .wmlrc -- Global WML RC file for www.openssl.org
+##
+
+-DROOT~.
+-DIMG~images
+-DIMGDOT_BASE~images/shared
+-I.
+

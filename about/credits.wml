@@ -1,0 +1,21 @@
+
+#use wml::openssl area=about page=credits
+
+<title>About, Credits</title>
+
+<h1>Credits</h1>
+
+This page gives credit to the various individuals and
+companies who contributed to the OpenSSL project.
+
+<ul>
+<li><font id=sfl>Eric A. Young and Tim J. Hudson</font><br>
+	Great thanks to Eric A. Young and Tim J. Hudson for their excellent SSLeay
+	package on which OpenSSL is based.
+<p>
+<li><font id=sfl>C2Net</font><br>
+	Thanks to C2Net for contributing back to the Open Source community the
+	SSLeay version 0.9.1b, which was the last internal SSLeay version Eric and
+	Tim created while working for C2Net.
+</ul>
+

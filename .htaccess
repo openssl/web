@@ -1,0 +1,6 @@
+##
+##  .htaccess -- Apache per-dir config
+##
+
+Options +ExecCGI
+

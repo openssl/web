@@ -1,0 +1,64 @@
+
+#use wml::openssl area=related page=ssl
+
+<title>Related, SSL/TLS</title>
+
+<h1>SSL/TLS</h1>
+
+These are references to the Secure Sockets Layer (SSL) and Transfer Layer
+Security (TLS) protocols.
+
+<ul>
+    <item name="IETF-TLS Working Group"
+          info="Home of IETF Working Group for Transport Layer Security (TLS)"
+          url="http://www.consensus.com/ietf-tls/">
+    <p>
+    <item name="SSLv1 Protocol Specification (obsolete)"
+          info="This is the original draft"
+          url="http://www.consensus.com/ietf-tls/tls-ssh-00.txt">
+    <p>
+    <item name="SSLv2 Protocol Specification (obsolete)"
+          info="This is Netscape's original SSL document"
+          url="http://www.netscape.com/eng/security/SSL_2.html">
+    <p>
+    <item name="SSLv3 Protocol Specification (obsolete)"
+          info="These are Netscape's SSLv3 documents"
+          url="http://www.netscape.com/eng/ssl3/">
+    <p>
+    <item name="SSLv3 Internet Draft (obsolete)"
+          info="This the Internet draft for SSLv3"
+          url="ftp://ftp.ietf.org/internet-drafts/draft-ietf-tls-ssl-version3-00.txt">
+    <p>
+    <item name="SSLv3 to TLSv1: Modifications"
+          info="Modifications to the SSL protocol for TLS"
+          url="http://www.consensus.com/ietf-tls/tls-ssl-mods-00.txt">
+    <p>
+    <item name="TLSv1 Internet Draft, Rev.6"
+          info="The sixth revision of the forthcoming TLSv1 Internet Standard"
+          url="ftp://ftp.ietf.org/internet-drafts/draft-ietf-tls-protocol-06.txt">
+    <p>
+    <item name="HTTP over TLS"
+          info="The specification on how to run HTTP over SSL/TLS"
+          url="ftp://ftp.ietf.org/internet-drafts/draft-ietf-tls-https-01.txt">
+    <p>
+    <item name="Tunneling SSL Through a WWW Proxy"
+          info="The specification for the HTTP CONNECT method"
+          url="http://www.consensus.com/ietf-tls/ssl-tunneling-02.txt">
+    <p>
+    <item name="Analysis of the SSL 3.0 Protocol"
+          info="D. Wagner and B. Schneier's USENIX analysis of SSLv3"
+          url="http://www.counterpane.com/ssl.html">
+    <p>
+    <item name="HyperText Transfer Protocol (HTTP), Version 1.1 (Internet Draft)"
+          info="The application layer protocol Apache+mod_ssl uses over SSL/TLS"
+          url="http://www.w3.org/Protocols/HTTP/1.1/draft-ietf-http-v11-spec-rev-06.txt">
+    <p>
+    <item name="HyperText Transfer Protocol (HTTP), Version 1.0 (RFC 1945)"
+          info="The application layer protocol Apache+mod_ssl uses over SSL/TLS"
+          url="http://ds.internic.net/rfc/rfc1945.txt">
+    <p>
+    <item name="Internet X.509 Public Key Infrastructure (PKIX)"
+          info="The IETF Working Group for PKIX"
+          url="http://www.imc.org/ietf-pkix/">
+</ul>
+

@@ -1,0 +1,11 @@
+##
+##  .wmlsnb -- Sub Navigation Bar Specification for WML
+##
+
+<snb>
+  <snb_button id=index   txt="Index"      url="">
+  <snb_button id=ssl     txt="ssl(3)"     url="ssl.html">
+  <snb_button id=crypto  txt="crypto(3)"  url="crypto.html">
+  <snb_button id=openssl txt="openssl(3)" url="openssl.html">
+</snb>
+

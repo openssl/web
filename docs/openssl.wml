@@ -1,0 +1,18 @@
+
+#use wml::openssl area=docs page=openssl 
+
+<title>Documents, openssl(1)</title>
+
+<h1>openssl(1)</h1>
+
+#use wml::imp::generic
+
+{:
+[[s|(<STRONG>[^<].+?)</A>(</STRONG><DD>)|$1$2|sg]]
+[[s|<P>\s+<P>|<P>|sg]]
+[[s|<P>\s+</|</|sg]]
+[[s|<DD>\s*<DT>|<DD>&nbsp;<DT>|sg]]
+[[s|<DD>\s*</DL>|<DD>&nbsp;</DL>|sg]]
+<import src="openssl.pod">
+:}
+

@@ -1,0 +1,10 @@
+##
+##  .wmlsnb -- Sub Navigation Bar Specification for WML
+##
+
+<snb>
+  <snb_button id=tarballs txt="Tarballs"     url="">
+  <snb_button id=repos    txt="Repository"   url="repos.html">
+  <snb_button id=cvsweb   txt="CVSweb"       url="cvs/">
+</snb>
+

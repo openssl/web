@@ -1,0 +1,10 @@
+##
+##  .wmlrc -- Local RC file for WML
+##
+
+#   define where the URL root of the Sub Navigation Bar (SNB) 
+#   is located [SNB_ROOT] and where it's buttons are defined [SNB_RC]
+-DSNB_ROOT~.
+-DSNB_RC=.wmlsnb
+-I.
+
