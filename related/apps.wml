@@ -23,7 +23,10 @@ the old SSLeay package or the new OpenSSL package.
           url="http://www.drh-consultancy.demon.co.uk/ca-fix.html">
     <item name="Net::SSLeay"
           info="The Perl module interfacing to SSLeay/OpenSSL functions"
-          url="http://www.neuronio.pt/SSLeay.pm.html">
+          url="http://www.bacus.pt/Net_SSLeay/index.html">
+    <item name="SMIMEUtil"
+          info="A Perl module for easily creating and verifying S/MIME signatures and encryption"
+          url="http://www.bacus.pt/Net_SSLeay/smime.html">
     <item name="cURL"
           info="A sophisticated FTP, HTTP, HTTPS, GOPHER and DICT gathering tool"
           url="http://curl.haxx.nu/">
