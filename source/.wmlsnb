@@ -5,6 +5,7 @@
 <snb>
   <snb_button id=tarballs txt="Tarballs"     url="">
   <snb_button id=repos    txt="Repository"   url="repos.html">
+  <snb_button id=mirror   txt="Mirror"       url="mirror.html">
   <snb_button id=cvsweb   txt="CVSweb"       url="cvs/">
 </snb>
 
