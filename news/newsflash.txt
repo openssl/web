@@ -1,3 +1,4 @@
+28-Feb-1999: Added: <a href="source/mirror.html">How To</a> establish an FTP mirror
 20-Feb-1999: Daily <a href="ftp://ftp.openssl.org/snapshot/">snapshot tarballs</a> now available
 15-Feb-1999: New: <a href="ROOT/support/">archives</a> of our mailing lists
 10-Feb-1999: <a href="ROOT/support/">Web form</a> for subscribing to our mailing lists
