@@ -51,6 +51,9 @@ Security (TLS) protocols.
     <item name="Internet X.509 Public Key Infrastructure (PKIX)"
           info="The IETF Working Group for PKIX"
           url="http://www.imc.org/ietf-pkix/">
+    <item name="OID Registry"
+          info="A collection of Object Identifiers (OIDs)"
+          url="http://www.alvestrand.no/objectid/">
     <item name="SSL/TLS Presentation"
           info="A nice SSL/TLS presentation from Eric Young for RSA DSI"
           url="http://www.aus.rsa.com/rsa99/ssl-tls.pdf">
