@@ -1,0 +1,10 @@
+#!wml -ofaq.html@u+x
+
+#use wml::openssl area=support page=faq 
+
+<title>Support, Frequently Asked Questions</title>
+
+<h1>Frequently Asked Questions</h1>
+
+<!--#include virtual="faq.cgi" -->
+
