@@ -18,7 +18,7 @@ all: docs-depend docs HOWTOs
 	@# Because there's a conflict and wmk skips this one...
 	@wmk docs/apps/openssl.wml
 	@# Because we're dependent of other files
-	@wmk -f source/index.wml contrib/index.wml
+	@wmk -f source/index.wml contrib/index.wml docs/HOWTO/index.wml
 	@echo "[" `date` "] Done"
 
 PODSHOME=/e/openssl/exp/openssl/doc
