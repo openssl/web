@@ -1,3 +1,4 @@
+24-Feb-2000: New <a href="ROOT/about/">development team member</a>: Geoff Thorpe
 24-Feb-2000: Beta 1 of OpenSSL 0.9.5 is now <a href="ROOT/source/">available</a>, please test it now.
 11-Nov-1999: New <a href="ROOT/about/">development team member</a>: Richard Levitte
 09-Aug-1999: OpenSSL 0.9.4 is now <a href="ROOT/source/">available</a>, a major release
