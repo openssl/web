@@ -1,3 +1,5 @@
+09-Jul-2001: OpenSSL 0.9.6b [engine] is now <a href="ROOT/source/">available</a>, a major release
+09-Jul-2001: OpenSSL 0.9.6b is now <a href="ROOT/source/">available</a>, a major release
 05-Apr-2001: OpenSSL 0.9.6a [engine] is now <a href="ROOT/source/">available</a>, a major release
 05-Apr-2001: OpenSSL 0.9.6a is now <a href="ROOT/source/">available</a>, a major release
 30-Mar-2001: Beta 3 of OpenSSL 0.9.6a is now <a href="ROOT/source/">available</a>, please test it now
