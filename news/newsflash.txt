@@ -1,3 +1,6 @@
+04-nov-2003: OpenSSL 0.9.6l is now <a href="ROOT/source/">available</a>, including security fix
+04-nov-2003: OpenSSL 0.9.6l [engine] is now <a href="ROOT/source/">available</a>, including security fix
+04-nov-2003: <a href="ROOT/news/secadv_20031104.txt">Security Advisory</a>: Denial of Service in ASN.1 parsing in 0.9.6k.
 30-sep-2003: OpenSSL 0.9.7c is now <a href="ROOT/source/">available</a>, including important bugfixes
 30-sep-2003: OpenSSL 0.9.6k is now <a href="ROOT/source/">available</a>, including important bugfixes
 30-sep-2003: OpenSSL 0.9.6k [engine] is now <a href="ROOT/source/">available</a>, including important bugfixes
