@@ -311,7 +311,8 @@ sub pod2html {
 		if ($poddata[$i] =~ /^=head1\s*NAME\b/m) {
 		    for my $para ( @poddata[$i, $i+1] ) { 
 			last TITLE_SEARCH
-			    if ($title) = $para =~ /(\S+\s+-+.*\S)/s;
+			    if (($title) = $para =~ /(\S+\s+-+.*\S)/s)
+				|| (($title) = $para =~ /(.*)/s);
 		    }
 		} 
 
