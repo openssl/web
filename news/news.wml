@@ -1,4 +1,4 @@
-#!wml -ochangelog.html@u+x
+#!wml -onews.html@u+x
 
 #use wml::openssl area=news page=changelog 
 
