@@ -14,7 +14,7 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
           url="http://www.apache-ssl.org/">
     <item name="Apache mod_ssl"
           info="The SSL integration for Apache by Ralf S. Engelschall"
-          url="http://www.engelschall.com/sw/mod_ssl/">
+          url="http://www.modssl.org/">
     <item name="pkcs12"
           info="A PKCS#12 format utility by Stephen Henson"
           url="http://www.drh-consultancy.demon.co.uk/pkcs12faq.html">
