@@ -22,8 +22,8 @@
 
   The file names of the two betas are:
 
-    o openssl-0.9.6-beta2.tar.gz
-    o openssl-engine-0.9.6-beta2.tar.gz
+    o openssl-0.9.6-beta3.tar.gz
+    o openssl-engine-0.9.6-beta3.tar.gz
 
   Please download and test them as soon as possible.  This new OpenSSL
   version incorporates 84 changes and bugfixes to the toolkit (for a
