@@ -1,4 +1,4 @@
-#!/sw/bin/perl
+#!/e/openssl/sw/bin/perl
 ##
 ##  majordomo.cgi -- Send a mail to Majordomo
 ##
