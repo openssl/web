@@ -5,13 +5,13 @@
 
 <h1>Tarballs</h1>
 
-Here you can find all distribution tarballs of the various OpenSSL release
-versions. Alternatively you can also download them via FTP from the OpenSSL
-FTP area under <a
+Here you can find all distribution tarballs (and sometimes corresponding patches) 
+of the various OpenSSL release versions. Alternatively you can also download them 
+via FTP from the OpenSSL FTP area under <a
 href="ftp://ftp.openssl.org/source/">ftp://ftp.openssl.org/source/</a>.
 
 <p>
-<filelist openssl-[0-9].[0-9].[0-9a-z]*.tar.gz>
+<filelist openssl-[0-9].[0-9].[0-9a-z]*>
 
 <h2>Mirror Locations</h2>
 
