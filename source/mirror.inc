@@ -49,6 +49,7 @@
 <mirror url="ftp://ftp.openssl.uli.it/" loc="IT">
 <mirror url="ftp://ftp.grmbl.com/pub/openssl/" loc="BE">
 <mirror url="ftp://ftp.gin.cz/pub/MIRRORS/ftp.openssl.org/" loc="CZ">
+<mirror url="ftp://ftp.calyx.nl/pub/openssl/" loc="NL">
 
 </ul>
 
