@@ -93,5 +93,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="Kermit"
           info="The popular Kermit suite of communication programs with exp. SSL/TLS support"
           url="http://www.kermit-project.org/">
+    <item name="bjorb"
+          info="Another TCP/SSL relay/tunneling program"
+          url="http://www.hitachi-ms.co.jp/bjorb/en/">
 </ul>
 
