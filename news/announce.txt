@@ -1,37 +1,33 @@
 
-  OpenSSL version 0.9.6b released
+  OpenSSL version 0.9.6c released
   ===============================
 
   OpenSSL - The Open Source toolkit for SSL/TLS
   http://www.openssl.org/
 
   The OpenSSL project team is pleased to announce the release of version
-  0.9.6b of our open source toolkit for SSL/TLS.  This new OpenSSL version
-  is mostly a bugfix release and incorporates at least 55 changes to the
+  0.9.6c of our open source toolkit for SSL/TLS.  This new OpenSSL version
+  is mostly a bugfix release and incorporates at least 40 changes to the
   toolkit (for a complete list see http://www.openssl.org/source/exp/CHANGES).
 
   The most significant changes are:
 
-      o Security fix: PRNG improvements.
-      o Security fix: RSA OAEP check.
-      o Security fix: Reinsert and fix countermeasure to Bleichbacher's
-        attack.
-      o MIPS bug fix in BIGNUM.
-      o Bug fix in "openssl enc".
-      o Bug fix in X.509 printing routine.
-      o Bug fix in DSA verification routine and DSA S/MIME verification.
-      o Bug fix to make PRNG thread-safe.
-      o Bug fix in RAND_file_name().
-      o Bug fix in compatibility mode trust settings.
-      o Bug fix in blowfish EVP.
-      o Increase default size for BIO buffering filter.
-      o Compatibility fixes in some scripts.
+      o Various SSL/TLS library bugfixes.
+      o BIGNUM library fixes.
+      o RSA OAEP and random number generation fixes.
+      o Object identifiers corrected and added.
+      o Add assembler BN routines for IA64.
+      o Add support for OS/390 Unix, UnixWare with gcc, OpenUNIX 8,
+        MIPS Linux; shared library support for Irix, HP-UX.
+      o Add crypto accelerator support for AEP, Baltimore SureWare,
+        Broadcom and Cryptographic Appliance's keyserver
+        [in 0.9.6c-engine release].
 
-  We consider OpenSSL 0.9.6b to be the best version of OpenSSL available and we
-  strongly recommend that users of older versions, especially of old SSLeay
-  versions, upgrade as soon as possible.  OpenSSL 0.9.6b is available for
-  download via HTTP and FTP from the following master locations (you can find
-  the various FTP mirrors under http://www.openssl.org/source/mirror.html):
+  We consider OpenSSL 0.9.6c to be the best version of OpenSSL available
+  and we strongly recommend that users of older versions upgrade as
+  soon as possible.  OpenSSL 0.9.6c is available for download via HTTP
+  and FTP from the following master locations (you can find the various
+  FTP mirrors under http://www.openssl.org/source/mirror.html):
 
     o http://www.openssl.org/source/
     o ftp://ftp.openssl.org/source/
@@ -46,8 +42,8 @@
 
   The distribution file names are:
 
-      o openssl-0.9.6b.tar.gz [normal]
-      o openssl-engine-0.9.6b.tar.gz [engine]
+      o openssl-0.9.6c.tar.gz [normal]
+      o openssl-engine-0.9.6c.tar.gz [engine]
 
   Yours,
   The OpenSSL Project Team...  
