@@ -1,3 +1,4 @@
 *.html
 Makefile.docs
 pod2html-*cache
+index.cache

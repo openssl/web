@@ -1,3 +1,4 @@
 *.html
 *.tar.gz
 *.patch
+index.cache
