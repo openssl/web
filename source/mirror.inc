@@ -38,6 +38,14 @@
 <mirror url="ftp://ftp.mit.com.tw/pub/SSL/openssl/" loc="TW">
 <mirror url="ftp://ftp.elab.co.za/support/openssl/source/" loc="ZA">
 <mirror url="ftp://ftp.fisek.com.tr/pub/openssl/" loc="TR">
+<mirror url="ftp://ftp.fi.muni.cz/pub/openssl/" loc="CZ">
+<mirror url="ftp://ftp.sunsite.utk.edu/pub/openssl/" loc="US">
+<mirror url="ftp://ftp.gm.is/pub/openssl/" loc="IS">
+<mirror url="ftp://ftp.directnet.ru/pub/openssl/" loc="RU">
+<mirror url="ftp://ftp.linux.hr/pub/openssl/" loc="HR">
+<mirror url="ftp://ftp.1stnet.co.uk/pub/mirros/openssl/" loc="UK">
+<mirror url="ftp://mirror.aarnet.edu.au/pub/openssl/" loc="AU">
+<mirror url="ftp://storm.alert.sk/mirrors/openssl/" loc="SK">
 
 </ul>
 
