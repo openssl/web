@@ -19,11 +19,11 @@ use the Internet to communicate, plan, and develop the OpenSSL toolkit and its
 related documentation.
 
 <p>
-OpenSSL is based on the excellent <a href="http://www.ssleay.org/">SSLeay</a>
-library developed by Eric A. Young and Tim J. Hudson. The OpenSSL toolkit is
-licensed under an Apache-style licence, which basically means that you are
-free to get and use it for commercial and non-commercial purposes subject to
-some simple license conditions.
+OpenSSL is based on the excellent SSLeay library developed by Eric A. Young
+and Tim J. Hudson. The OpenSSL toolkit is licensed under an Apache-style
+licence, which basically means that you are free to get and use it for
+commercial and non-commercial purposes subject to some simple license
+conditions.
 
 <p>
 <newsflash from="$(ROOT)/news/newsflash.txt" max=5 more="$(ROOT)/news/">
