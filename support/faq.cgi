@@ -12,24 +12,33 @@ $file = "/e/openssl/exp/openssl/FAQ";
 open(FP, "<$file");
 
 # TOC
-$i=0; $n=0;
+$i=0; $l=""; $n=0;
 print "<ul>\n";
+print "<ol>\n";
 while (<FP>) {
     escape($_);
-    $i++ if /^$/;
-    last if $i > 1;
-    if (/^\* (.*)/) {
+    last if /^=+$/;
+    next if /^\w*$/;
+    if (/^\[([^\[]+)\] (.*)/) {
+	$l=$1;
+	$n=0;
+	print "</ol>\n";
+	print "<li><a href=\"#$l\">$1</a> $2\n";
+	print "<ol>\n";
+    } elsif (/^\* (.*)/) {
 	$n++;
-	print "<li><a href=\"#$n\">$1</a>\n";
+	print "<li><a href=\"#$l$n\">$1</a>\n";
     }
 }
+print "</ol>\n";
 print "</ul>\n\n";
 
 # Contents
-$n=0; $pre=0; $snip=0;
+$l=""; $n=0; $pre=0; $snip=0;
 while (<FP>) {
+    next if /^=+$/;
     if (/^----- snip:start -----/) {
-	print "<listing>" unless $snip;
+	print "<listing><pre>" unless $snip;
 	$snip=1;
     }
     if ($snip) {
@@ -37,7 +46,7 @@ while (<FP>) {
 	print;
     }
     if ($snip && /^----- snip:end -----/) {
-	print "</listing>";
+	print "</pre></listing>";
 	$snip=0;
 	goto cont;
     }
@@ -63,9 +72,14 @@ while (<FP>) {
 	  found:
 	}
     }
-    if (/^\* (.*)/) {
+    if (/^\[([^\[]+)\] =+/) {
+	$l=$1;
+	$n=0;
+	print "<hr>\n";
+	print "<h2>[<a name=\"$l\">$1</a>]</h2>\n";
+    } elsif (/^\* (.*)/) {
 	$n++;
-	print "\n<h2><a name=\"$n\"></a>$1</h2>\n";
+	print "\n<h2><i><a name=\"$l$n\">$n. $1</a></i></h2>\n";
     } elsif (/^$/) {
 	print "<p>";
     } elsif (/^ /) {
