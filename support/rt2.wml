@@ -1,0 +1,36 @@
+
+#use wml::openssl area=support page=rt2
+
+<title>Support, Request Tracker</title>
+
+<h1>OpenSSL Request Tracker</h1>
+
+The OpenSSL project has set up a request tracker at
+<a href="http://www.aet.TU-Cottbus.DE/rt2/">http:www.aet.TU-Cottbus.DE/rt2/</a>
+offering read-only access using the account <tt>guest</tt> with the
+password <tt>guest</tt>.
+
+<h2>Sending a Request</h2>
+
+Requests must be sent by email to
+<a href="mailto:rt@openssl.org">rt@openssl.org</a>, clearly indicating
+the type of request (bug report, patch, contribution, enhancement request,
+...) the operating system and version of OpenSSL affected.
+
+<h2>Gateways</h2>
+
+Incoming requests are added to the request tracker. The request tracker
+automatically forwards incoming requests to the
+<tt>openssl-dev@openssl.org</tt>
+mailing list for information of the community and public discussion.
+Replys sent to <tt>rt@openssl.org</tt> keeping the ticket in the
+subject line unchanged will be recorded and added to the ticket by the
+request tracker, then forwarded to <tt>openssl-dev@openssl.org</tt>.
+
+<h2>Disclaimer/Setup</h2>
+
+The request tracker is currently under installation/test, features may change
+and malfunctions may occur.
+
+Featuring RT2, available from
+<a href="http://www.fsck.com/projects/rt/">http://www.fsck.com/projects/rt/</a>.
