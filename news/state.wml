@@ -17,8 +17,8 @@ of the OpenSSL project.
     <tr><td><b id=sf>Date/Range</b></td>   <td><b id=sf>Event</b></td></tr>
     <tr><td><hr noshade size=1></td>       <td><hr noshade size=1></td></tr>
     <tr><td><b id=sf>2001-03-13:</b></td>  <td>0.9.6a-beta1 <font color="#cc3333">[DONE]</font></td></tr>
-    <tr><td><b id=sf>2001-03-19:</b></td>  <td>0.9.6a-beta2 (final)</td></tr>
-    <tr><td><b id=sf>2001-03-23:</b></td>  <td>0.9.6a release</td></tr>
+    <tr><td><b id=sf>2001-03-21:</b></td>  <td>0.9.6a-beta2 (final)</td></tr>
+    <tr><td><b id=sf>2001-03-26:</b></td>  <td>0.9.6a release</td></tr>
     </table>
     <p>
 
@@ -28,9 +28,9 @@ of the OpenSSL project.
     <tr><td><b id=sf>Date/Range</b></td>   <td><b id=sf>Event</b></td></tr>
     <tr><td><hr noshade size=1></td>       <td><hr noshade size=1></td></tr>
     <tr><td><b id=sf>2001-03-13:</b></td>  <td>0.9.6a-beta1 <font color="#cc3333">[DONE]</font></td></tr>
-    <tr><td><b id=sf>2001-03-19:</b></td>  <td>0.9.6a-beta2</td></tr>
-    <tr><td><b id=sf>2001-03-22:</b></td>  <td>0.9.6a-beta3 (final)</td></tr>
-    <tr><td><b id=sf>2001-03-26:</b></td>  <td>0.9.6a release</td></tr>
+    <tr><td><b id=sf>2001-03-21:</b></td>  <td>0.9.6a-beta2</td></tr>
+    <tr><td><b id=sf>2001-03-26:</b></td>  <td>0.9.6a-beta3 (final)</td></tr>
+    <tr><td><b id=sf>2001-03-28:</b></td>  <td>0.9.6a release</td></tr>
     </table>
     <p>
 
