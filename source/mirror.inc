@@ -29,6 +29,7 @@
 <mirror url="ftp://ftp.av8.com/pub/mirrors/openssl/" loc="US">
 <mirror url="ftp://ftp.styx.net/mirrors/crypto/openssl/" loc="US">
 <mirror url="ftp://gw.inetlab.com/mirrors/openssl/" loc="RU">
+<mirror url="ftp://ftp.mos.net/pub/security/openssl/" loc="RU">
 <mirror url="ftp://ftp.ebizlab.hit.bme.hu/pub/openssl/" loc="HU">
 <mirror url="ftp://ftp.kfki.hu/pub/packages/security/openssl/" loc="HU">
 <mirror url="ftp://guest.kuria.katowice.pl/pub/openssl/" loc="PL">
