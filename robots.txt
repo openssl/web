@@ -1,0 +1,8 @@
+##
+##  robots.txt -- Robot Exclusion Standard config file
+##
+
+User-agent: *
+Disallow: /source/cvs/
+Disallow: /source/exp/
+
