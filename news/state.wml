@@ -9,7 +9,36 @@ Here is a short summary of the current development and release state
 of the OpenSSL project.
 
 <ul>
+<li>Next proposed bugfix update: OpenSSL <b>0.9.6h</b>.
+    <p>
+    Release plan:
+    <p>
+    <table cellspacing=0 cellpadding=1 border=0>
+    <tr><td><b id=sf>Date/Range</b></td>   <td><b id=sf>Event</b></td></tr>
+    <tr><td><hr noshade size=1></td>       <td><hr noshade size=1></td></tr>
+    <tr><td><b id=sf>2002-11-13<br>-- 2002-11-19:</b></td>
+					   <td>Test of snapshots:
+					   <p>
+					   <tt>openssl-0.9.6-stable-SNAP-2002<i>mmdd</i>.tar.gz</tt><br>
+					   <tt>openssl-e-0.9.6-stable-SNAP-2002<i>mmdd</i>.tar.gz</tt>
+					   <p>
+					   Release of OpenSSL 0.9.6h</td></tr>
+    </table>
+    <p>
+
 <li>Next proposed release: OpenSSL <b>0.9.7</b>, currently in feature freeze.
+    <p>
+    Release plan:
+    <p>
+    <table cellspacing=0 cellpadding=1 border=0>
+    <tr><td><b id=sf>Date/Range</b></td>   <td><b id=sf>Event</b></td></tr>
+    <tr><td><hr noshade size=1></td>       <td><hr noshade size=1></td></tr>
+    <tr><td><b id=sf>2002-11-19:</b></td>  <td>0.9.7-beta4</td></tr>
+    <tr><td><b id=sf>2002-12-03:</b></td>  <td>0.9.7-beta5 (final)</td></tr>
+    <tr><td><b id=sf>2002-12-10:</b></td>  <td>0.9.7 release</td></tr>
+    </table>
+    <p>
+
 <li>The current <a href="$(ROOT)/source/cvs/">CVS Source Code State</a>.
 </ul>
 
