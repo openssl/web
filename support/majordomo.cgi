@@ -73,7 +73,7 @@ $mail .= "\n";
 foreach $list (split(/,/, $qs{list})) { 
     die "Bogus listname!"
         if ($list ne 'announce' and $list ne 'users' and $list ne 'dev' and $list ne 'cvs');
-    $mail .= "$qs{action} $qs{email} openssl-$list\n";
+    $mail .= "$qs{action} openssl-$list $qs{email}\n";
 }
 
 #  send out mail
