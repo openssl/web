@@ -46,6 +46,16 @@
   openssl-dev@openssl.org.  Anything else should go to
   openssl-users@openssl.org.
 
+  The best way, at least on Unix, to create a report is to do the
+  following after configuration:
+
+      make report
+
+  That will do a few basic checks of the compiler and bc, then build
+  and run the tests.  The result will appear on screen and in the file
+  "testlog".  Please read the report before sending it to us.  There
+  may be problems that we can't solve for you, like missing programs.
+
   Yours,
   The OpenSSL Project Team...  
 
