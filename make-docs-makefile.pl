@@ -36,7 +36,7 @@ print "PODSDIRS_SPC=",join(' ',keys %dirs),"\n";
 print "PODSDIRS_COMMA=",join(',',keys %dirs),"\n";
 print "DOCS=\t",join(" \\\n\t",values %wmls),"\n";
 print "\n";
-print "docs : dirs cashes \$(DOCS)\n";
+print "docs : dirs caches \$(DOCS)\n";
 print "\n";
 
 #Theoretically, all this work wouldn't be needed, all we would really
@@ -73,7 +73,7 @@ print "\n";
 #value for it.  This includes section numbers, thus avoiding conflicts between
 #pages with the same name in different sections
 #
-print "cashes : \n";
+print "caches : \n";
 print "	",$AT,"echo '\$(PODSDIRS)' > pod2html-dircache\n";
 print "	",$AT,"echo '\$(PODSHOME)' >> pod2html-dircache\n";
 print "	",$AT,"for d in \$(PODSDIRS_SPC); do \\\n";
