@@ -3,22 +3,23 @@
 ##
 
 all: docs-depend docs
-	@echo "Recursive HTML Generation.... (be patient)"
+	@echo "[" `date` "] Recursive HTML Generation.... (be patient)"
 	@wmk -a
 	@# Because there's a conflict and wmk skips this one...
 	@wmk docs/apps/openssl.wml
+	@echo "[" `date` "] Done"
 
 PODSHOME=/e/openssl/exp/openssl/doc
 HTMLGOAL=docs
 
 FRC.docs :
 docs : FRC.docs
-	@echo "Documentation WML Generation... (be patient)"
+	@echo "[" `date` "] Documentation WML Generation... (be patient)"
 	@$(MAKE) -f Makefile.docs PODSHOME=$(PODSHOME) HTMLGOAL=$(HTMLGOAL)
 
 FRC.docs-depend :
 docs-depend : FRC.docs-depend
-	@echo "Documentation dependency Generation..."
+	@echo "[" `date` "] Documentation dependency Generation..."
 	@find $(PODSHOME) -name '*.pod' -print | \
 		PODSHOME=$(PODSHOME) HTMLGOAL=$(HTMLGOAL) ./make-docs-makefile.pl \
 		> Makefile.docs
