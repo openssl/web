@@ -6,5 +6,5 @@
 
 <h1>Frequently Asked Questions</h1>
 
-#include virtual="faq.cgi" 
+<!--#include virtual="faq.cgi" -->
 
