@@ -1,33 +1,33 @@
 
-  OpenSSL version 0.9.7a and 0.9.6i released
+  OpenSSL version 0.9.7b and 0.9.6j released
   ==========================================
 
   OpenSSL - The Open Source toolkit for SSL/TLS
   http://www.openssl.org/
 
   The OpenSSL project team is pleased to announce the release of
-  version 0.9.7a of our open source toolkit for SSL/TLS.  This new
+  version 0.9.7b of our open source toolkit for SSL/TLS.  This new
   OpenSSL version is a security and bugfix release and incorporates
-  at least 11 changes and bugfixes to the toolkit (for a complete list
+  at least 7 changes and bugfixes to the toolkit (for a complete list
   see http://www.openssl.org/source/exp/CHANGES.
 
-  We also release 0.9.6i, which contains the same security bugfix as
-  0.9.7a and a few more small bugfixes compared to 0.9.6h.
+  We also release 0.9.6j, which contains the same security bugfix as
+  0.9.7b and a few more small bugfixes compared to 0.9.6i.
 
   The most significant changes are:
 
-    o Security: Important security related bugfixes. [0.9.7a and 0.9.6i]
-    o Enhanced compatibility with MIT Kerberos. [0.9.7a]
-    o Can be built without the ENGINE framework. [0.9.7a]
-    o IA32 assembler enhancements. [0.9.7a]
-    o Support for new platforms: FreeBSD/IA64 and FreeBSD/Sparc64. [0.9.7a]
-    o Configuration: the no-err option now works properly. [0.9.7a]
-    o SSL/TLS: now handles manual certificate chain building. [0.9.7a]
-    o SSL/TLS: certain session ID malfunctions corrected. [0.9.7a]
+    o Security: counter the Klima-Pokorny-Rosa extension of
+      Bleichbacher's attack                                   [0.9.7b & 0.9.6j]
+    o Security: make RSA blinding default.                    [0.9.7b & 0.9.6j]
+    o Configuration: Irix fixes, AIX fixes, better mingw support.      [0.9.7b]
+    o Support for new platforms: linux-ia64-ecc.                       [0.9.7b]
+    o Build: shared library support fixes.                    [0.9.7b & 0.9.6j]
+    o ASN.1: treat domainComponent correctly.                          [0.9.7b]
+    o Documentation: fixes and additions.                              [0.9.7b]
 
-  We consider OpenSSL 0.9.7a to be the best version of OpenSSL available
+  We consider OpenSSL 0.9.7b to be the best version of OpenSSL available
   and we strongly recommend that users of older versions upgrade as
-  soon as possible.  OpenSSL 0.9.7a is available for download via HTTP
+  soon as possible.  OpenSSL 0.9.7b is available for download via HTTP
   and FTP from the following master locations (you can find the various
   FTP mirrors under http://www.openssl.org/source/mirror.html):
 
@@ -35,23 +35,23 @@
     o ftp://ftp.openssl.org/source/
 
   For those who want or have to stay with the 0.9.6 series of OpenSSL,
-  we strongly recommend that you upgrade to OpenSSL 0.9.6i as soon as
-  possible.  It's available in the same location as 0.9.7a.
+  we strongly recommend that you upgrade to OpenSSL 0.9.6j as soon as
+  possible.  It's available in the same location as 0.9.7b.
 
   The distribution file name is:
 
-    o openssl-0.9.7a.tar.gz [normal]
-      MD5 checksum: a0d3203ecf10989fdc61c784ae82e531
-    o openssl-0.9.6i.tar.gz [normal]
-      MD5 checksum: 9c4db437c17e0b6412c5e4645b6fcf5c
-    o openssl-engine-0.9.6i.tar.gz [engine]
-      MD5 checksum: c9adc0596c630b31b999eba32fc0a6b3
+    o openssl-0.9.7b.tar.gz [normal]
+      MD5 checksum: fae4bec090fa78e20f09d76d55b6ccff
+    o openssl-0.9.6j.tar.gz [normal]
+      MD5 checksum: 52ea996e52bcea5120f193f51469bbb1
+    o openssl-engine-0.9.6j.tar.gz [engine]
+      MD5 checksum: beae194a369a74de18b4c3472a1d1abe
 
   The checksums were calculated using the following command:
 
-    openssl md5 < openssl-0.9.7a.tar.gz
-    openssl md5 < openssl-0.9.6i.tar.gz
-    openssl md5 < openssl-engine-0.9.6i.tar.gz
+    openssl md5 < openssl-0.9.7b.tar.gz
+    openssl md5 < openssl-0.9.6j.tar.gz
+    openssl md5 < openssl-engine-0.9.6j.tar.gz
 
   Yours,
   The OpenSSL Project Team...  
