@@ -11,13 +11,13 @@ line tool.
 
 <p>
 <ul>
-<li><a href="openssl.html"><font id=sfl>openssl(1)</font></a>: [STILL INCOMPLETE]<br>
+<li><a href="apps/openssl.html"><font id=sfl>openssl(1)</font></a>: [STILL INCOMPLETE]<br>
     Manual page documenting the <b>openssl</b> command line tool.
 <p>
-<li><a href="ssl.html"><font id=sfl>ssl(3)</font></a>: [STILL INCOMPLETE]<br>
+<li><a href="ssl/ssl.html"><font id=sfl>ssl(3)</font></a>: [STILL INCOMPLETE]<br>
     Manual page documenting the OpenSSL <b>SSL/TLS</b> library.
 <p>
-<li><a href="crypto.html"><font id=sfl>crypto(3)</font></a>: [STILL INCOMPLETE]<br>
+<li><a href="crypto/crypto.html"><font id=sfl>crypto(3)</font></a>: [STILL INCOMPLETE]<br>
     Manual page documenting the OpenSSL <b>Crypto</b> library.
 </ul>
 
