@@ -46,6 +46,7 @@
 <mirror url="ftp://ftp.1stnet.co.uk/pub/mirros/openssl/" loc="UK">
 <mirror url="ftp://mirror.aarnet.edu.au/pub/openssl/" loc="AU">
 <mirror url="ftp://storm.alert.sk/mirrors/openssl/" loc="SK">
+<mirror url="ftp://ftp.openssl.uli.it/" loc="IT">
 
 </ul>
 
