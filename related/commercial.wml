@@ -33,4 +33,7 @@ and a URL.
     <item name="Dr S N Henson"
           info="OpenSSL and general PKI consultancy, development and support."
           url="http://www.drh-consultancy.co.uk/">
+    <item name="Secure Endpoints Inc."
+	  info="Expert consulting and software development services, OpenSSL and more"
+	  url="http://www.secure-endpoints.com/">
 </ul>
