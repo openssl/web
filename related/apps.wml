@@ -172,7 +172,7 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
           info="A top-style network monitor with even SSL support"
           url="http://www-serra.unipi.it/~ntop/">
     <item name="inetutils SSL/TLS"
-          info="A GNU inetutils enhancement for adding START_TLS via OpenSSL"
+          info="A telnet/telnetd package supporting START_TLS via OpenSSL"
           url="ftp://ftp.runestig.com/pub/starttls/">
 </ul>
 
