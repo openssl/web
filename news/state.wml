@@ -16,13 +16,7 @@ of the OpenSSL project.
     <table cellspacing=0 cellpadding=1 border=0>
     <tr><td><b id=sf>Date/Range</b></td>   <td><b id=sf>Event</b></td></tr>
     <tr><td><hr noshade size=1></td>       <td><hr noshade size=1></td></tr>
-    <tr><td><b id=sf>2002-11-13<br>-- 2002-11-21:</b></td>
-					   <td>Test of snapshots:
-					   <p>
-					   <tt>openssl-0.9.6-stable-SNAP-2002<i>mmdd</i>.tar.gz</tt><br>
-					   <tt>openssl-e-0.9.6-stable-SNAP-2002<i>mmdd</i>.tar.gz</tt>
-					   </td></tr>
-    <tr><td><b id=sf>2002-11-21:</b></td><td>Release of OpenSSL 0.9.6h</td></tr>
+    <tr><td><b id=sf>2002-12-05:</b></td>  <td>Release of OpenSSL 0.9.6h</td></tr>
     </table>
     <p>
 
@@ -34,8 +28,9 @@ of the OpenSSL project.
     <tr><td><b id=sf>Date/Range</b></td>   <td><b id=sf>Event</b></td></tr>
     <tr><td><hr noshade size=1></td>       <td><hr noshade size=1></td></tr>
     <tr><td><b id=sf>2002-11-19:</b></td>  <td>0.9.7-beta4</td></tr>
-    <tr><td><b id=sf>2002-12-03:</b></td>  <td>0.9.7-beta5 (final)</td></tr>
-    <tr><td><b id=sf>2002-12-10:</b></td>  <td>0.9.7 release</td></tr>
+    <tr><td><b id=sf>2002-12-05:</b></td>  <td>0.9.7-beta5</td></tr>
+    <tr><td><b id=sf>2002-12-12:</b></td>  <td>0.9.7-beta6 (final)</td></tr>
+    <tr><td><b id=sf>2002-12-17:</b></td>  <td>0.9.7 release</td></tr>
     </table>
     <p>
 
