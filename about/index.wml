@@ -58,6 +58,7 @@ The current OpenSSL development team consists of (in alphabetical order):
 <tr><td>Mark J. Cox</td>         <td ><a href="mailto:mark@openssl.org">mark@openssl.org</a></td> <td><a href="mailto:mark@awe.com">mark@awe.com</a></td> <td>UK</td> </tr>
 <tr><td>Ralf S. Engelschall</td> <td ><a href="mailto:rse@openssl.org">rse@openssl.org</a></td> <td><a href="mailto:rse@engelschall.com">rse@engelschall.com</a></td> <td>DE</td></tr>
 <tr><td>Dr. Stephen Henson</td>  <td ><a href="mailto:steve@openssl.org">steve@openssl.org</a></td> <td><a href="mailto:shenson@drh-consultancy.demon.co.uk">shenson@drh-consultancy.demon.co.uk</a></td> <td>UK</td> </tr>
+<tr><td>Lutz Jaenicke</td>       <td ><a href="mailto:jaenicke@openssl.org">jaenicke@openssl.org</a></td> <td><a href="mailto:Lutz.Jaenicke@aet.tu-cottbus.de">Lutz.Jaenicke@aet.tu-cottbus.de</a></td> <td>DE</td> </tr>
 <tr><td>Ben Laurie</td>          <td ><a href="mailto:ben@openssl.org">ben@openssl.org</a></td> <td><a href="mailto:ben@algroup.co.uk">ben@algroup.co.uk</a></td> <td>UK</td> </tr>
 <tr><td>Richard Levitte</td>     <td ><a href="mailto:levitte@openssl.org">levitte@openssl.org</a></td> <td><a href="mailto:levitte@stacken.kth.se">levitte@stacken.kth.se</a></td> <td>SE</td> </tr>
 <tr><td>Bodo M&ouml;ller</td>        <td ><a href="mailto:bodo@openssl.org">bodo@openssl.org</a></td> <td><a href="mailto:bmoeller@acm.org">bmoeller@acm.org</a></td> <td>DE</td> </tr>
