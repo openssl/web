@@ -195,7 +195,7 @@ with OpenSSL 0.9.6e and later.
 Acknowledgement
 ---------------
 
-We than Brice Canvel, Alain Hiltgen, Serge Vaudenay, and Martin
+We thank Brice Canvel, Alain Hiltgen, Serge Vaudenay, and Martin
 Vuagnoux for informing us about this vulnerability.
 
 
