@@ -11,7 +11,7 @@ OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <p>
 The OpenSSL project team is pleased to announce the release of version
 0.9.6a of our open source toolkit for SSL/TLS.  This new OpenSSL version
-is a major release and incorporates at least 55 changes and bugfixes to the
+is mostly a bugfix release and incorporates at least 55 changes to the
 toolkit (for a complete list see <a
 href="http://www.openssl.org/source/exp/CHANGES">http://www.openssl.org/source/exp/CHANGES</a>).
 
@@ -81,5 +81,5 @@ The OpenSSL Project Team...
     Mark J. Cox             Richard Levitte    Andy Polyakov
     Ralf S. Engelschall     Bodo Möller        Holger Reif
     Dr. Stephen Henson      Ulf Möller         Geoff Thorpe
-    Ben Laurie
+    Ben Laurie              Lutz Jänicke
 </pre>
