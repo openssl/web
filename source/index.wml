@@ -13,7 +13,7 @@ Tarballs containing a snapshot of the latest development version can be found
 under <a href="ftp://ftp.openssl.org/snapshot/">ftp://ftp.openssl.org/snapshot/</a>.
 
 <p>
-<filelist openssl*-[0-9].[0-9].[0-9a-z]*>
+<rfilelist openssl*-[0-9].[0-9].[0-9a-z]*>
 
 <h2>Mirror Locations</h2>
 
