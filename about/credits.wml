@@ -9,13 +9,34 @@ This page gives credit to the various individuals and
 companies who contributed to the OpenSSL project.
 
 <ul>
-<li><font id=sfl>Eric A. Young and Tim J. Hudson</font><br>
+<li><font id=sfl>Eric A. Young &amp; Tim J. Hudson</font><br>
 	Great thanks to Eric A. Young and Tim J. Hudson for their excellent SSLeay
 	package on which OpenSSL is based.
+
 <p>
 <li><font id=sfl>C2Net</font><br>
 	Thanks to C2Net for contributing back to the Open Source community the
 	SSLeay version 0.9.1b, which was the last internal SSLeay version Eric and
 	Tim created while working for C2Net.
+
+<p>
+<li><a href="http://www.ethz.ch/"><img src="credits-ethz.png" alt="" align=right border=0></a>
+    <font id=sfl>ISG.EE ETH Zurich</font>
+    <br>
+    Thanks to the <a href="http://www.isg.ee.ethz.ch/">IT-Support-Group</a> (ISG.EE)
+    of the <a href="http://www.ee.ethz.ch/">Department of Information
+    Technology and Electrical Engineering</a> (EE) at the <a
+    href="http://www.ethz.ch/">Swiss Federal Institute of Technology
+    Zurich</a> (ETHZ) for providing the hardware and network resources
+    from 1998 to 2002.
+
+<p>
+<li><a href="http://www.cw.com/"><img src="credits-cw.png" alt="" align=right border=0></a>
+    <font id=sfl>Cable &amp; Wireless Germany</font>
+    <br>
+    Thanks to the <a href="http://dev.de.cw.net/">Development Team</a>
+    of Internet Services (IS) at <a href="http://www.cw.com/">Cable
+    &amp; Wireless</a> Germany, Munich, for providing the hardware and
+    network resources since 2002.
 </ul>
 
