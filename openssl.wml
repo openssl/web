@@ -401,6 +401,10 @@ All rights reserved.<br>
 This website is served by an 
 <a href="http://www.apache.org/"><font color="#000000">Apache</font></a>
 webserver environment.
+Hardware and bandwidth provided by 
+<a href="http://opensource.ee.ethz.ch/"><font <ifeq "<get-var color>" "" ""
+"color=<get-var color>">>Department of Electrical Engineering</font></a>
+of Swiss Federal Institute of Technology, Zurich.
 </font>
 </define-tag>
 
