@@ -42,6 +42,9 @@ the old SSLeay package or the new OpenSSL package.
     <item name="sslwrap"
           info="Another SSL encryption wrapper for standard network daemons"
           url="http://www.rickk.com/sslwrap/">
+    <item name="tlswrap"
+          info="A TLS/SSL FTP wrapper/proxy"
+          url="http://tlswrap.sunsite.dk/">
     <item name="sslfd"
           info="A nice wrapper for the SSLeay libraries using standard file descriptors"
           url="http://www.quick.com.au/ftp/pub/sjg/help/sslfd.html">
