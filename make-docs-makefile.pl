@@ -11,6 +11,8 @@ $AT=$DEBUG ? "" : "\@";
 %goals=();
 %dirs=();
 
+$HTML_pm = $HTMLGOAL . "/Pod/Html.pm";
+
 #Get and massage info on what files will be processed
 #
 while(<STDIN>) {
@@ -164,5 +166,5 @@ foreach $file (keys %wmls) {
     if ($DEBUG) {
         print STDERR "Dependencies for $file: ",$dependencies{$file},"\n";
     }
-    print $wmls{$file},' : ',join(" \\\n\t",map { ($_ ne "" && $page{$_} ne "") ? $PODSHOME . '/' . $page{$_} : () } split(':',$dependencies{$file})),"\n";
+    print $wmls{$file},' : ',$HTML_pm," \\\n\t",join(" \\\n\t",map { ($_ ne "" && $page{$_} ne "") ? $PODSHOME . '/' . $page{$_} : () } split(':',$dependencies{$file})),"\n";
 }
