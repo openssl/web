@@ -69,5 +69,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="SSLK5"
           info="Changes to MIT Kerberos V5 to use SSL for pre-authentication"
           url="ftp://achilles.ctd.anl.gov/pub/kerberos.v5/">
+    <item name="MICO"
+          info="CORBA 2.2 package supporting IIOP using SSL transport"
+          url="http://www.mico.org/">
 </ul>
 
