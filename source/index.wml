@@ -13,6 +13,15 @@ href="ftp://ftp.openssl.org/source/">ftp://ftp.openssl.org/source/</a>.
 <p>
 <filelist openssl-[0-9].[0-9].[0-9a-z]*.tar.gz>
 
-<p>
+<h2>Mirror Locations</h2>
+
+You can alternatively download the latest distribution files from the
+following FTP areas (details on how to setup your own mirror can be found
+<a href="mirror.html">here</a>):
+
+#include 'mirror.inc'
+
+<h2>Legalities</h2>
+
 <disclaimer>
 
