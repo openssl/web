@@ -8,8 +8,7 @@ RewriteEngine on
 RewriteCond  %{SERVER_NAME}   !=www.openssl.org
 RewriteRule  ^((cvs|exp).*)$  http://www.openssl.org/source/$1 [R,L]
 
-#   rewrite nice URLs to ugly internal CGI stuff
-RewriteRule  ^cvs$            cvsweb.cgi        [NS]
-RewriteRule  ^cvs/(.*)$       cvsweb.cgi/$1     [NS]
-RewriteRule  ^exp/(.*)$       cvsweb.cgi/exp/$1 [NS]
+#   backward compatibility
+RewriteRule  ^cvs/(.*)$        http://cvs.openssl.org/     [R,L]
+RewriteRule  ^exp/(.*)$        http://cvs.openssl.org/     [R,L]
 
