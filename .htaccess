@@ -2,10 +2,10 @@
 ##  .htaccess -- Apache per-dir config
 ##
 
-Options +ExecCGI +FollowSymLinks
+#Options +ExecCGI +FollowSymLinks
 
 #   redirect CGIs to original site when running on mirrors
-RewriteEngine on
-RewriteCond  %{SERVER_NAME}  !=www.openssl.org
-RewriteRule  ^(.+\.cgi)$     http://www.openssl.org/$1 [R,L]
+#RewriteEngine on
+#RewriteCond  %{SERVER_NAME}  !=www.openssl.org
+#RewriteRule  ^(.+\.cgi)$     http://www.openssl.org/$1 [R,L]
 
