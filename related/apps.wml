@@ -96,5 +96,8 @@ SSL/TLS with the help of the old SSLeay package or the new OpenSSL package.
     <item name="bjorb"
           info="Another TCP/SSL relay/tunneling program"
           url="http://www.hitachi-ms.co.jp/bjorb/en/">
+    <item name="edssl"
+          info="An SSL tunneling daemon"
+          url="ftp://ftp.replay.com/pub/crypto/crypto/SSLapps/">
 </ul>
 
