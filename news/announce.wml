@@ -1,36 +1,37 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 0.9.7f released</title>
+<title>Announcement: OpenSSL version 0.9.7g released</title>
 
-<h1>Announcement: OpenSSL version 0.9.7f released</h1>
+<h1>Announcement: OpenSSL version 0.9.7g released</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
 
 <p>
 The OpenSSL project team is pleased to announce the release of
-version 0.9.7f of our open source toolkit for SSL/TLS.  This new
-OpenSSL version is a bugfix release and incorporates at least 4 changes
-and bugfixes to the toolkit (for a complete list see
-<a href="http://www.openssl.org/source/exp/CHANGES">http://www.openssl.org/source/exp/CHANGES</a>).
+version 0.9.7g of our open source toolkit for SSL/TLS.  This new
+OpenSSL version is mainly a bugfix release and incorporates changes
+and bugfixes to the toolkit, but is also contains the new processing
+of proxy certificates (RFC 3820).  For a complete list of changes,
+please see <a href="http://www.openssl.org/source/exp/CHANGES">http://www.openssl.org/source/exp/CHANGES</a>.
 
 <p>
 The most significant changes are:
 
 <ul>
-
-   <li>Several compilation issues fixed.
-   <li>Many memory allocation failure checks added.
-   <li>Improved comparison of X509 Name type.
-   <li>Mandatory basic checks on certificates.
-   <li>Performance improvements.
+  <li> More compilation issues fixed.
+  <li> Adaptation to more modern Kerberos API.
+  <li> Enhanced or corrected configuration for Solaris64, Mingw and Cygwin.
+  <li> Enhanced x86_64 assembler BIGNUM module.
+  <li> More constification.
+  <li> Added processing of proxy certificates (RFC 3820).
 </ul>
 
 <p>
-We consider OpenSSL 0.9.7f to be the best version of OpenSSL available
+We consider OpenSSL 0.9.7g to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 0.9.7f is available for download via HTTP
+soon as possible.  OpenSSL 0.9.7g is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -43,15 +44,17 @@ FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www
 The distribution file name is:
 
 <ul>
-  <li>openssl-0.9.7f.tar.gz
-      MD5 checksum: b2d37d7eb8a5a5040d834105d5ae1a50
+  <li>openssl-0.9.7g.tar.gz<br>
+      MD5 checksum: 991615f73338a571b6a1be7d74906934<br>
+      SHA1 checksum: 008511ec9f0bcda4a431c3f0a0827e535b8c5c93
 </ul>
 
 <p>
 The checksums were calculated using the following commands:
 <blockquote>
 <pre>
-    openssl md5 &lt; openssl-0.9.7f.tar.gz
+    openssl md5 &lt; openssl-0.9.7g.tar.gz
+    openssl sha1 &lt; openssl-0.9.7g.tar.gz
 </pre>
 </blockquote>
 
@@ -62,7 +65,6 @@ The OpenSSL Project Team...
 <pre>
     Mark J. Cox             Ben Laurie          Andy Polyakov
     Ralf S. Engelschall     Richard Levitte     Geoff Thorpe
-    Dr. Stephen Henson      Bodo Möller
-    Lutz Jänicke            Ulf Möller
-    Nils Larsch
+    Dr. Stephen Henson      Bodo Möller		Ulf Möller
+    Lutz Jänicke            Nils Larsch
 </pre>

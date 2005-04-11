@@ -1,27 +1,29 @@
 
-  OpenSSL version 0.9.7f released
+  OpenSSL version 0.9.7g released
   ==========================================
 
   OpenSSL - The Open Source toolkit for SSL/TLS
   http://www.openssl.org/
 
   The OpenSSL project team is pleased to announce the release of
-  version 0.9.7f of our open source toolkit for SSL/TLS.  This new
-  OpenSSL version is a bugfix release and incorporates changes and
-  bugfixes to the toolkit (for a complete list see 
-  http://www.openssl.org/source/exp/CHANGES ).
+  version 0.9.7g of our open source toolkit for SSL/TLS.  This new
+  OpenSSL version is mainly a bugfix release and incorporates changes
+  and bugfixes to the toolkit, but is also contains the new processing
+  of proxy certificates (RFC 3820).  For a complete list of changes,
+  please see http://www.openssl.org/source/exp/CHANGES .
 
   The most significant changes are:
 
-    o Several compilation issues fixed.
-    o Many memory allocation failure checks added.
-    o Improved comparison of X509 Name type.
-    o Mandatory basic checks on certificates.
-    o Performance improvements.
+    o More compilation issues fixed.
+    o Adaptation to more modern Kerberos API.
+    o Enhanced or corrected configuration for Solaris64, Mingw and Cygwin.
+    o Enhanced x86_64 assembler BIGNUM module.
+    o More constification.
+    o Added processing of proxy certificates (RFC 3820).
 
-  We consider OpenSSL 0.9.7f to be the best version of OpenSSL available
+  We consider OpenSSL 0.9.7g to be the best version of OpenSSL available
   and we strongly recommend that users of older versions upgrade as
-  soon as possible.  OpenSSL 0.9.7f is available for download via HTTP
+  soon as possible.  OpenSSL 0.9.7g is available for download via HTTP
   and FTP from the following master locations (you can find the various
   FTP mirrors under http://www.openssl.org/source/mirror.html):
 
@@ -30,12 +32,14 @@
 
   The distribution file name is:
 
-    o openssl-0.9.7f.tar.gz
-      MD5 checksum: b2d37d7eb8a5a5040d834105d5ae1a50
+    o openssl-0.9.7g.tar.gz
+      MD5 checksum: 991615f73338a571b6a1be7d74906934
+      SHA1 checksum: 008511ec9f0bcda4a431c3f0a0827e535b8c5c93
 
   The checksums were calculated using the following command:
 
-    openssl md5 < openssl-0.9.7f.tar.gz
+    openssl md5 < openssl-0.9.7g.tar.gz
+    openssl sha1 < openssl-0.9.7g.tar.gz
 
 
   Yours,
@@ -43,6 +47,5 @@
 
     Mark J. Cox             Ben Laurie          Andy Polyakov
     Ralf S. Engelschall     Richard Levitte     Geoff Thorpe
-    Dr. Stephen Henson      Bodo Möller
-    Lutz Jänicke            Ulf Möller
-    Nils Larsch
+    Dr. Stephen Henson      Bodo Möller		Ulf Möller
+    Lutz Jänicke            Nils Larsch
