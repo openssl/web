@@ -18,15 +18,15 @@ of the OpenSSL project.
     <table cellspacing=0 cellpadding=1 border=0>
     <tr><td><b id=sf>Date/Range</b></td>   <td><b id=sf>Event</b></td></tr>
     <tr><td><hr noshade size=1></td>       <td><hr noshade size=1></td></tr>
-    <tr><td><b id=sf>09-may-2005:</b></td> <td><i>Feature Freeze!</i></td></tr>
-    <tr><td><b id=sf>09-may-2005:</b></td> <td>0.9.8-beta1</td></tr>
-    <tr><td><b id=sf>12-may-2005:</b></td> <td>0.9.8-beta2</td></tr>
-    <tr><td><b id=sf>16-may-2005:</b></td> <td>0.9.8-beta3</td></tr>
-    <tr><td><b id=sf>21-may-2005:</b></td> <td>0.9.8-beta4</td></tr>
-    <tr><td><b id=sf>27-may-2005:</b></td> <td>0.9.8-beta5</td></tr>
-    <tr><td><b id=sf>04-jun-2005:</b></td> <td>0.9.8-beta6 (<i>tentative final</i></td></tr>
-    <tr><td><b id=sf>08-jun-2005:</b></td> <td>0.9.8-beta7 (<i>final!</i>) or 0.9.8</td></tr>
-    <tr><td><b id=sf>11-jun-2005:</b></td> <td>0.9.8 (<i>if beta7 was the final beta</i>)</td></tr>
+    <tr><td><b id=sf>16-may-2005:</b></td> <td><i>Feature Freeze!</i></td></tr>
+    <tr><td><b id=sf>16-may-2005:</b></td> <td>0.9.8-beta1</td></tr>
+    <tr><td><b id=sf>19-may-2005:</b></td> <td>0.9.8-beta2</td></tr>
+    <tr><td><b id=sf>23-may-2005:</b></td> <td>0.9.8-beta3</td></tr>
+    <tr><td><b id=sf>28-may-2005:</b></td> <td>0.9.8-beta4</td></tr>
+    <tr><td><b id=sf>03-jun-2005:</b></td> <td>0.9.8-beta5</td></tr>
+    <tr><td><b id=sf>11-jun-2005:</b></td> <td>0.9.8-beta6 (<i>tentative final</i></td></tr>
+    <tr><td><b id=sf>15-jun-2005:</b></td> <td>0.9.8-beta7 (<i>final!</i>) or 0.9.8</td></tr>
+    <tr><td><b id=sf>18-jun-2005:</b></td> <td>0.9.8 (<i>if beta7 was the final beta</i>)</td></tr>
     </table>
     <p>
 <li>The current <a href="$(ROOT)/source/cvs/">CVS Source Code State</a>.
