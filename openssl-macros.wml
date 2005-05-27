@@ -456,14 +456,14 @@ and generated with
 <a href="http://thewml.org/"><font color="#000000">
 Website META Language</font></a> (WML).<br>
 All markup code and graphics on this website
-are Copyright &copy; 1999-2002 <a href="http://www.openssl.org/">The OpenSSL Project</a>, 
+are Copyright &copy; 1999-2005 <a href="http://www.openssl.org/">The OpenSSL Project</a>, 
 All rights reserved.<br>
 This website is served by an 
 <a href="http://www.apache.org/"><font color="#000000">Apache</font></a>
 webserver environment.<br>
 Hardware and bandwidth provided by 
-<a href="http://www.cw.com/"><font color="#000000">
-Cable &amp; Wireless Germany</font></a>.
+<a href="http://www.space.net/"><font color="#000000">
+SpaceNet AG</font></a>.
 </font>
 </define-tag>
 
