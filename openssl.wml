@@ -60,7 +60,7 @@ H3    { font-weight: bold; font-size: 12pt; line-height: 12pt; \
 <body link="#6666cc" alink="#6666cc" vlink="#6666cc" bgcolor="#666699" text="#000000"
       marginheight=0 leftmargin=0 rightmargin=0 topmargin=0>
 
-#   now define the page layout by a nested table 
+#   now define the page layout by a nested table
 #   structure consisting of a 5x5 cell grid.
 <table width=100% cellspacing=0 cellpadding=0 border=0>
   #   visually: the top line of the page
