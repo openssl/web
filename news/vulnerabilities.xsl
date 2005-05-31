@@ -15,7 +15,7 @@
 ##
 
 </xsl:text>
-  <xsl:text>#use wml::openssl area=news pages=vulnerabilities
+  <xsl:text>#use wml::openssl area=news page=vulnerabilities
 
 </xsl:text>
 <title>OpenSSL vulnerabilities</title>

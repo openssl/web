@@ -3,7 +3,7 @@
 ## xsltproc vulnerabilities.xsl vulnerabilities.xml 
 ##
 
-#use wml::openssl area=news pages=vulnerabilities
+#use wml::openssl area=news page=vulnerabilities
 
 
 <title>OpenSSL vulnerabilities</title>
