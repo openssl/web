@@ -1,0 +1,338 @@
+<!-- All security issues affecting OpenSSL since the 
+     release of 0.9.6 on 20000924, 0.9.7 on 20021231 -->
+
+<security updated="20050520">
+
+  <issue public="20020730">
+    <cve name="2002-0655"/>
+    <affects base="0.9.6" version="0.9.6"/>
+    <affects base="0.9.6" version="0.9.6a"/>
+    <affects base="0.9.6" version="0.9.6b"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <affects base="0.9.6" version="0.9.6d"/>
+    <fixed base="0.9.6" version="0.9.6e" date="20020730"/>
+    <advisory url="http://www.openssl.org/news/secadv_20020730.txt"/>
+    <reported source="OpenSSL Group (A.L. Digital)"/>
+    <description>
+Inproper handling of ASCII representations of integers on
+64 bit platforms allowed remote attackers to cause a denial of
+service or possibly execute arbitrary code.
+    </description>
+  </issue>
+
+  <issue public="20020730">
+    <cve name="2002-0656"/>
+    <affects base="0.9.6" version="0.9.6"/>
+    <affects base="0.9.6" version="0.9.6a"/>
+    <affects base="0.9.6" version="0.9.6b"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <affects base="0.9.6" version="0.9.6d"/>
+    <fixed base="0.9.6" version="0.9.6e" date="20020730"/>
+    <advisory url="http://www.openssl.org/news/secadv_20020730.txt"/>
+    <reported source="OpenSSL Group (A.L. Digital)"/>
+    <description>
+A buffer overflow allowed remote attackers to execute
+arbitrary code by sending a large client master key in SSL2 or a
+large session ID in SSL3.
+    </description>
+  </issue>
+
+  <issue public="20020730">
+    <cve name="2002-0657"/>
+    <advisory url="http://www.openssl.org/news/secadv_20020730.txt"/>
+    <reported source="OpenSSL Group (A.L. Digital)"/>
+    <description>
+A buffer overflow when Kerberos is enabled allowed attackers
+to execute arbitrary code by sending a long master key.  Note that this
+flaw did not affect any released version of 0.9.6 or 0.9.7
+    </description>
+  </issue>
+
+  <issue public="20020730">
+    <cve name="2002-0659"/>
+    <affects base="0.9.6" version="0.9.6a"/>
+    <affects base="0.9.6" version="0.9.6b"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <affects base="0.9.6" version="0.9.6d"/>
+    <fixed base="0.9.6" version="0.9.6e" date="20020730"/>
+    <description>
+A flaw in the ASN1 library allowed remote attackers to cause a denial of 
+service by sending invalid encodings.
+    </description>
+  </issue>
+
+  <issue>
+    <cve name="2002-1568"/>
+    <affects base="0.9.6" version="0.9.6e"/>
+    <fixed base="0.9.6" version="0.9.6f" date="20020808"/>
+    <description>
+The use of assertions when detecting buffer overflow attacks
+allowed remote attackers to cause a denial of service (crash) by
+sending certain messages to cause
+OpenSSL to abort from a failed assertion, as demonstrated using SSLv2
+CLIENT_MASTER_KEY messages, which were not properly handled in
+s2_srvr.c.
+    </description>
+  </issue>
+
+  <issue public="20030219">
+    <cve name="2003-0078"/>
+    <affects base="0.9.7" version="0.9.7"/>
+    <affects base="0.9.6" version="0.9.6"/>
+    <affects base="0.9.6" version="0.9.6a"/>
+    <affects base="0.9.6" version="0.9.6b"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <affects base="0.9.6" version="0.9.6d"/>
+    <affects base="0.9.6" version="0.9.6e"/>
+    <affects base="0.9.6" version="0.9.6f"/>
+    <affects base="0.9.6" version="0.9.6g"/>
+    <affects base="0.9.6" version="0.9.6h"/>
+    <fixed base="0.9.7" version="0.9.7a" date="20030219"/>
+    <fixed base="0.9.6" version="0.9.6i" date="20030219"/>
+    <advisory url="http://www.openssl.org/news/secadv_20030219.txt"/>
+    <description>
+sl3_get_record in s3_pkt.c did not perform a MAC computation if an
+incorrect block cipher padding was used, causing an information leak
+(timing discrepancy) that may make it easier to launch cryptographic
+attacks that rely on distinguishing between padding and MAC
+verification errors, possibly leading to extraction of the original
+plaintext, aka the "Vaudenay timing attack."
+    </description>
+  </issue>
+
+  <issue public="20030319">
+    <cve name="2003-0131"/>
+    <affects base="0.9.6" version="0.9.6"/>
+    <affects base="0.9.6" version="0.9.6a"/>
+    <affects base="0.9.6" version="0.9.6b"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <affects base="0.9.6" version="0.9.6d"/>
+    <affects base="0.9.6" version="0.9.6e"/>
+    <affects base="0.9.6" version="0.9.6f"/>
+    <affects base="0.9.6" version="0.9.6g"/>
+    <affects base="0.9.6" version="0.9.6h"/>
+    <affects base="0.9.6" version="0.9.6i"/>
+    <affects base="0.9.7" version="0.9.7"/>
+    <affects base="0.9.7" version="0.9.7a"/>
+    <fixed base="0.9.6" version="0.9.6j" date="20030410"/>
+    <fixed base="0.9.7" version="0.9.7b" date="20030410"/>
+    <advisory url="http://www.openssl.org/news/secadv_20030319.txt"/>
+    <description>
+The SSL and TLS components allowed remote attackers to perform an
+unauthorized RSA private key operation via a modified Bleichenbacher
+attack that uses a large number of SSL or TLS connections using PKCS #1 
+v1.5 padding that caused OpenSSL to leak information regarding the
+relationship between ciphertext and the associated plaintext, aka the
+"Klima-Pokorny-Rosa attack"
+    </description>
+  </issue>
+
+  <issue public="20030314">
+    <cve name="2003-0147"/>
+    <affects base="0.9.6" version="0.9.6"/>
+    <affects base="0.9.6" version="0.9.6a"/>
+    <affects base="0.9.6" version="0.9.6b"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <affects base="0.9.6" version="0.9.6d"/>
+    <affects base="0.9.6" version="0.9.6e"/>
+    <affects base="0.9.6" version="0.9.6f"/>
+    <affects base="0.9.6" version="0.9.6g"/>
+    <affects base="0.9.6" version="0.9.6h"/>
+    <affects base="0.9.6" version="0.9.6i"/>
+    <affects base="0.9.7" version="0.9.7"/>
+    <affects base="0.9.7" version="0.9.7a"/>
+    <advisory url="http://www.openssl.org/news/secadv_20030317.txt"/>
+    <fixed base="0.9.7" version="0.9.7b" date="20030410"/>
+    <fixed base="0.9.6" version="0.9.6j" date="20030410"/>
+    <description>
+RSA blinding was not enabled by default, which could allow local and
+remote attackers to obtain a server's private key by determining
+factors using timing differences on (1) the number of extra reductions
+during Montgomery reduction, and (2) the use of different integer
+multiplication algorithms ("Karatsuba" and normal).
+    </description>
+  </issue>
+
+  <issue public="20030930">
+    <cve name="2003-0543"/>
+    <affects base="0.9.6" version="0.9.6"/>
+    <affects base="0.9.6" version="0.9.6a"/>
+    <affects base="0.9.6" version="0.9.6b"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <affects base="0.9.6" version="0.9.6d"/>
+    <affects base="0.9.6" version="0.9.6e"/>
+    <affects base="0.9.6" version="0.9.6f"/>
+    <affects base="0.9.6" version="0.9.6g"/>
+    <affects base="0.9.6" version="0.9.6h"/>
+    <affects base="0.9.6" version="0.9.6i"/>
+    <affects base="0.9.6" version="0.9.6j"/>
+    <affects base="0.9.7" version="0.9.7"/>
+    <affects base="0.9.7" version="0.9.7a"/>
+    <affects base="0.9.7" version="0.9.7b"/>
+    <fixed base="0.9.7" version="0.9.7c" date="20030930"/>
+    <fixed base="0.9.6" version="0.9.6k" date="20030930"/>
+    <advisory url="http://www.openssl.org/news/secadv_20030930.txt"/>
+    <reported source="NISCC"/>
+    <description>
+An integer overflow could allow remote attackers to cause a denial of
+service (crash) via an SSL client certificate with certain ASN.1 tag
+values.
+    </description>
+  </issue>
+
+  <issue public="20030930">
+    <cve name="2003-0544"/>
+    <affects base="0.9.7" version="0.9.7"/>
+    <affects base="0.9.7" version="0.9.7a"/>
+    <affects base="0.9.7" version="0.9.7b"/>
+    <affects base="0.9.6" version="0.9.6"/>
+    <affects base="0.9.6" version="0.9.6a"/>
+    <affects base="0.9.6" version="0.9.6b"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <affects base="0.9.6" version="0.9.6d"/>
+    <affects base="0.9.6" version="0.9.6e"/>
+    <affects base="0.9.6" version="0.9.6f"/>
+    <affects base="0.9.6" version="0.9.6g"/>
+    <affects base="0.9.6" version="0.9.6h"/>
+    <affects base="0.9.6" version="0.9.6i"/>
+    <affects base="0.9.6" version="0.9.6j"/>
+    <fixed base="0.9.6" version="0.9.6k" date="20030930"/>
+    <fixed base="0.9.7" version="0.9.7c" date="20030930"/>
+    <advisory url="http://www.openssl.org/news/secadv_20030930.txt"/>
+    <reported source="NISCC"/>
+    <description>
+Incorrect tracking of the number of characters in certain
+ASN.1 inputs could allow remote attackers to cause a denial of
+service (crash) by sending an SSL client certificate that causes OpenSSL to
+read past the end of a buffer when the long form is used.
+    </description>
+  </issue>
+
+  <issue public="20030930">
+    <cve name="2003-0545"/>
+    <affects base="0.9.7" version="0.9.7"/>
+    <affects base="0.9.7" version="0.9.7a"/>
+    <affects base="0.9.7" version="0.9.7b"/>
+    <fixed base="0.9.7" version="0.9.7c" date="20030930"/>
+    <advisory url="http://www.openssl.org/news/secadv_20030930.txt"/>
+    <reported source="NISCC"/>
+    <description>
+Certain ASN.1 encodings that were rejected as invalid by the parser could
+trigger a bug in the deallocation of the corresponding data structure,
+corrupting the stack, leading to a crash.
+    </description>
+  </issue>
+
+  <issue public="20031104">
+    <cve name="2003-0851"/>
+    <affects base="0.9.6" version="0.9.6k"/>
+    <fixed base="0.9.6" version="0.9.6l" date="20031104"/>
+    <advisory url="http://www.openssl.org/news/secadv_20031104.txt"/>
+    <reported source="Novell"/>
+    <description> 
+A flaw in OpenSSL 0.9.6k (only) would cause certain ASN.1 sequences to
+trigger a large recursion.  On platforms such as Windows this large
+recursion cannot be handled correctly and so the bug causes OpenSSL to
+crash.  A remote attacker could exploit this flaw if they can send
+arbitrary ASN.1 sequences which would cause OpenSSL to crash.  This
+could be performed for example by sending a client certificate to a
+SSL/TLS enabled server which is configured to accept them.
+    </description>
+  </issue>
+
+  <issue public="20040317">
+    <cve name="2004-0079"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <affects base="0.9.6" version="0.9.6d"/>
+    <affects base="0.9.6" version="0.9.6e"/>
+    <affects base="0.9.6" version="0.9.6f"/>
+    <affects base="0.9.6" version="0.9.6g"/>
+    <affects base="0.9.6" version="0.9.6h"/>
+    <affects base="0.9.6" version="0.9.6i"/>
+    <affects base="0.9.6" version="0.9.6j"/>
+    <affects base="0.9.6" version="0.9.6k"/>
+    <affects base="0.9.6" version="0.9.6l"/>
+    <affects base="0.9.7" version="0.9.7"/>
+    <affects base="0.9.7" version="0.9.7a"/>
+    <affects base="0.9.7" version="0.9.7b"/>
+    <affects base="0.9.7" version="0.9.7c"/>
+    <fixed base="0.9.7" version="0.9.7d" date="20040317"/>
+    <fixed base="0.9.6" version="0.9.6m" date="20040317"/>
+    <advisory url="http://www.openssl.org/news/secadv_20030317.txt"/>
+    <reported source="OpenSSL group"/>
+    <description> 
+The Codenomicon TLS Test Tool uncovered a null-pointer assignment in the
+do_change_cipher_spec() function.  A remote attacker could perform a
+carefully crafted SSL/TLS handshake against a server that used the
+OpenSSL library in such a way as to cause a crash.
+    </description>
+  </issue>
+
+  <issue public="20040317">
+    <cve name="2004-0081"/>
+    <affects base="0.9.6" version="0.9.6"/>
+    <affects base="0.9.6" version="0.9.6a"/>
+    <affects base="0.9.6" version="0.9.6b"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <advisory url="http://www.openssl.org/news/secadv_20030317.txt"/>
+    <reported source="OpenSSL group"/>
+    <description>
+The Codenomicon TLS Test Tool found that some unknown message types
+were handled incorrectly, allowing a remote attacker to cause a denial
+of service (infinite loop).
+    </description>
+  </issue>
+
+  <issue public="20040317">
+    <cve name="2004-0112"/>
+    <affects base="0.9.7" version="0.9.7a"/>
+    <affects base="0.9.7" version="0.9.7b"/>
+    <affects base="0.9.7" version="0.9.7c"/>
+    <fixed base="0.9.7" version="0.9.7d" date="20040317"/>
+    <reported source="OpenSSL group (Stephen Henson)"/>
+    <advisory url="http://www.openssl.org/news/secadv_20030317.txt"/>
+    <description>
+A flaw in SSL/TLS handshaking code when using Kerberos ciphersuites.
+A remote attacker could perform a carefully crafted SSL/TLS handshake
+against a server configured to use Kerberos ciphersuites in such a way
+as to cause OpenSSL to crash.  Most applications have no ability to
+use Kerberos ciphersuites and will therefore be unaffected.
+    </description>
+  </issue>
+
+  <issue public="20040930">
+    <cve name="2004-0975"/>
+    <affects base="0.9.7" version="0.9.7"/>
+    <affects base="0.9.7" version="0.9.7a"/>
+    <affects base="0.9.7" version="0.9.7b"/>
+    <affects base="0.9.7" version="0.9.7c"/>
+    <affects base="0.9.7" version="0.9.7d"/>
+    <affects base="0.9.7" version="0.9.7e"/>
+    <affects base="0.9.6" version="0.9.6"/>
+    <affects base="0.9.6" version="0.9.6a"/>
+    <affects base="0.9.6" version="0.9.6b"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <affects base="0.9.6" version="0.9.6d"/>
+    <affects base="0.9.6" version="0.9.6e"/>
+    <affects base="0.9.6" version="0.9.6f"/>
+    <affects base="0.9.6" version="0.9.6g"/>
+    <affects base="0.9.6" version="0.9.6h"/>
+    <affects base="0.9.6" version="0.9.6i"/>
+    <affects base="0.9.6" version="0.9.6j"/>
+    <affects base="0.9.6" version="0.9.6k"/>
+    <affects base="0.9.6" version="0.9.6l"/>
+    <affects base="0.9.6" version="0.9.6m"/>
+    <fixed base="0.9.7" version="0.9.7f" date="20050322"/>
+    <fixed base="0.9.6" version="0.9.6-cvs" date="20041114"/>
+    <!-- der_chop was removed 20041114 -->
+
+    <description>
+The der_chop script created temporary files insecurely which could
+allow local users to overwrite files via a symlink attack on temporary
+files.  Note that it is quite unlikely that a user would be using the
+redundant der_chop script, and this script was removed from the OpenSSL
+distribution.
+    </description>
+  </issue>
+</security>
+
