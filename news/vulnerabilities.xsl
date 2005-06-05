@@ -23,7 +23,7 @@
 <h1>OpenSSL vulnerabilities</h1>
 
 <p>This page lists all security vulnerabilities fixed in released
-versions of OpenSSL since 0.9.6 was released on 24th September 2000.
+versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p>
 
 <xsl:for-each select="issue/@public[generate-id()=generate-id(key('unique-date',substring(.,1,4)))]">
