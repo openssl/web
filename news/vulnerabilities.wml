@@ -9,7 +9,7 @@
 <title>OpenSSL vulnerabilities</title>
 <h1>OpenSSL vulnerabilities</h1>
 <p>This page lists all security vulnerabilities fixed in released
-versions of OpenSSL since 0.9.6 was released on 24th September 2000.
+versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p>
 <h2>2004</h2>
 <dl>
@@ -38,7 +38,7 @@ against a server configured to use Kerberos ciphersuites in such a way
 as to cause OpenSSL to crash.  Most applications have no ability to
 use Kerberos ciphersuites and will therefore be unaffected.
     </description>
-    <a href="http://www.openssl.org/news/secadv_20030317.txt">(original advisory)</a>
+    <a href="http://www.openssl.org/news/secadv_20040317.txt">(original advisory)</a>
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
@@ -63,7 +63,7 @@ do_change_cipher_spec() function.  A remote attacker could perform a
 carefully crafted SSL/TLS handshake against a server that used the
 OpenSSL library in such a way as to cause a crash.
     </description>
-    <a href="http://www.openssl.org/news/secadv_20030317.txt">(original advisory)</a>
+    <a href="http://www.openssl.org/news/secadv_20040317.txt">(original advisory)</a>
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
