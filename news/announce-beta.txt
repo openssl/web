@@ -58,7 +58,7 @@
   Yours,
   The OpenSSL Project Team...  
 
-    Mark J. Cox             Ben Laurie          Andy Polyakov
-    Ralf S. Engelschall     Richard Levitte     Geoff Thorpe
-    Dr. Stephen Henson      Bodo Möller		Ulf Möller
-    Lutz Jänicke            Nils Larsch
+    Mark J. Cox             Nils Larsch         Ulf Möller
+    Ralf S. Engelschall     Ben Laurie          Andy Polyakov
+    Dr. Stephen Henson      Richard Levitte     Geoff Thorpe
+    Lutz Jänicke            Bodo Möller
