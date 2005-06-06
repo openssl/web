@@ -1,5 +1,5 @@
 
-  OpenSSL version 0.9.8 Beta 3
+  OpenSSL version 0.9.8 Beta 4
   ============================
 
   OpenSSL - The Open Source toolkit for SSL/TLS
