@@ -21,11 +21,11 @@ of the OpenSSL project.
     <tr><td><b id=sf>18-may-2005:</b></td> <td><i>Feature Freeze!</i></td></tr>
     <tr><td><b id=sf>19-may-2005:</b></td> <td>0.9.8-beta1</td></tr>
     <tr><td><b id=sf>24-may-2005:</b></td> <td>0.9.8-beta2</td></tr>
-    <tr><td><b id=sf>29-may-2005:</b></td> <td>0.9.8-beta3</td></tr>
-    <tr><td><b id=sf>05-jun-2005:</b></td> <td>0.9.8-beta4</td></tr>
-    <tr><td><b id=sf>12-jun-2005:</b></td> <td>0.9.8-beta5 (<i>tentative final</i></td></tr>
-    <tr><td><b id=sf>16-jun-2005:</b></td> <td>0.9.8-beta6 (<i>final!</i>) or 0.9.8</td></tr>
-    <tr><td><b id=sf>19-jun-2005:</b></td> <td>0.9.8 (<i>if beta6 was the final beta</i>)</td></tr>
+    <tr><td><b id=sf>31-may-2005:</b></td> <td>0.9.8-beta3</td></tr>
+    <tr><td><b id=sf>06-jun-2005:</b></td> <td>0.9.8-beta4</td></tr>
+    <tr><td><b id=sf>13-jun-2005:</b></td> <td>0.9.8-beta5</td></tr>
+    <tr><td><b id=sf>20-jun-2005:</b></td> <td>0.9.8-beta6 (<i>final!</i>)</td></tr>
+    <tr><td><b id=sf>23-jun-2005:</b></td> <td>0.9.8 (<i>if beta6 was the final beta</i>)</td></tr>
     </table>
     <p>
 <li>The current <a href="$(ROOT)/source/cvs/">CVS Source Code State</a>.
