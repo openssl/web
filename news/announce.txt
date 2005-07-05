@@ -1,29 +1,93 @@
 
-  OpenSSL version 0.9.7g released
+  OpenSSL version 0.9.8 released
   ==========================================
 
   OpenSSL - The Open Source toolkit for SSL/TLS
   http://www.openssl.org/
 
   The OpenSSL project team is pleased to announce the release of
-  version 0.9.7g of our open source toolkit for SSL/TLS.  This new
-  OpenSSL version is mainly a bugfix release and incorporates changes
-  and bugfixes to the toolkit, but is also contains the new processing
-  of proxy certificates (RFC 3820).  For a complete list of changes,
-  please see http://www.openssl.org/source/exp/CHANGES .
+  version 0.9.8 of our open source toolkit for SSL/TLS.  This new
+  OpenSSL version is a major release and incorporates many new
+  features as well as major fixes compared to 0.9.7x.  For a complete
+  list of changes, please see http://www.openssl.org/source/exp/CHANGES .
 
   The most significant changes are:
 
-    o More compilation issues fixed.
-    o Adaptation to more modern Kerberos API.
-    o Enhanced or corrected configuration for Solaris64, Mingw and Cygwin.
-    o Enhanced x86_64 assembler BIGNUM module.
-    o More constification.
-    o Added processing of proxy certificates (RFC 3820).
+    o Major work on the BIGNUM library for higher efficiency and to
+      make operations more streamlined and less contradictory.  This
+      is the result of a major audit of the BIGNUM library.
+    o Addition of BIGNUM functions for fields GF(2^m) and NIST
+      curves, to support the Elliptic Crypto functions.
+    o Major work on Elliptic Crypto; ECDH and ECDSA added, including
+      the use through EVP, X509 and ENGINE.
+    o New ASN.1 mini-compiler that's usable through the OpenSSL
+      configuration file.
+    o Added support for ASN.1 indefinite length constructed encoding.
+    o New PKCS#12 'medium level' API to manipulate PKCS#12 files.
+    o Complete rework of shared library construction and linking
+      programs with shared or static libraries, through a separate
+      Makefile.shared.
+    o Rework of the passing of parameters from one Makefile to another.
+    o Changed ENGINE framework to load dynamic engine modules
+      automatically from specifically given directories.
+    o New structure and ASN.1 functions for CertificatePair.
+    o Changed the ZLIB compression method to be stateful.
+    o Changed the key-generation and primality testing "progress"
+      mechanism to take a structure that contains the ticker
+      function and an argument.
+    o New engine module: GMP (performs private key exponentiation).
+    o New engine module: VIA PadLOck ACE extension in VIA C3
+      Nehemiah processors.
+    o Added support for IPv6 addresses in certificate extensions.
+      See RFC 1884, section 2.2.
+    o Added support for certificate policy mappings, policy
+      constraints and name constraints.
+    o Added support for multi-valued AVAs in the OpenSSL
+      configuration file.
+    o Added support for multiple certificates with the same subject
+      in the 'openssl ca' index file.
+    o Make it possible to create self-signed certificates using
+      'openssl ca -selfsign'.
+    o Make it possible to generate a serial number file with
+      'openssl ca -create_serial'.
+    o New binary search functions with extended functionality.
+    o New BUF functions.
+    o New STORE structure and library to provide an interface to all
+      sorts of data repositories.  Supports storage of public and
+      private keys, certificates, CRLs, numbers and arbitrary blobs.
+      This library is unfortunately unfinished and unused withing
+      OpenSSL.
+    o New control functions for the error stack.
+    o Changed the PKCS#7 library to support one-pass S/MIME
+      processing.
+    o Added the possibility to compile without old deprecated
+      functionality with the OPENSSL_NO_DEPRECATED macro or the
+      'no-deprecated' argument to the config and Configure scripts.
+    o Constification of all ASN.1 conversion functions, and other
+      affected functions.
+    o Improved platform support for PowerPC.
+    o New FIPS 180-2 algorithms (SHA-224, -256, -384 and -512).
+    o New X509_VERIFY_PARAM structure to support parametrisation
+      of X.509 path validation.
+    o Major overhaul of RC4 performance on Intel P4, IA-64 and
+      AMD64.
+    o Changed the Configure script to have some algorithms disabled
+      by default.  Those can be explicitely enabled with the new
+      argument form 'enable-xxx'.
+    o Change the default digest in 'openssl' commands from MD5 to
+      SHA-1.
+    o Added support for DTLS.
+    o New BIGNUM blinding.
+    o Added support for the RSA-PSS encryption scheme
+    o Added support for the RSA X.931 padding.
+    o Added support for BSD sockets on NetWare.
+    o Added support for files larger than 2GB.
+    o Added initial support for Win64.
+    o Added alternate pkg-config files.
 
-  We consider OpenSSL 0.9.7g to be the best version of OpenSSL available
+  We consider OpenSSL 0.9.8 to be the best version of OpenSSL available
   and we strongly recommend that users of older versions upgrade as
-  soon as possible.  OpenSSL 0.9.7g is available for download via HTTP
+  soon as possible.  OpenSSL 0.9.8 is available for download via HTTP
   and FTP from the following master locations (you can find the various
   FTP mirrors under http://www.openssl.org/source/mirror.html):
 
@@ -32,20 +96,20 @@
 
   The distribution file name is:
 
-    o openssl-0.9.7g.tar.gz
-      MD5 checksum: 991615f73338a571b6a1be7d74906934
-      SHA1 checksum: 008511ec9f0bcda4a431c3f0a0827e535b8c5c93
+    o openssl-0.9.8.tar.gz
+      MD5 checksum: 9da21071596a124acde6080552deac16
+      SHA1 checksum: 7350b0f0d1a6d257cb24b9d4dc5e30b80e49d6ac
 
   The checksums were calculated using the following command:
 
-    openssl md5 < openssl-0.9.7g.tar.gz
-    openssl sha1 < openssl-0.9.7g.tar.gz
+    openssl md5 < openssl-0.9.8.tar.gz
+    openssl sha1 < openssl-0.9.8.tar.gz
 
 
   Yours,
   The OpenSSL Project Team...  
 
-    Mark J. Cox             Ben Laurie          Andy Polyakov
-    Ralf S. Engelschall     Richard Levitte     Geoff Thorpe
-    Dr. Stephen Henson      Bodo Möller		Ulf Möller
-    Lutz Jänicke            Nils Larsch
+    Mark J. Cox             Nils Larsch         Ulf Möller
+    Ralf S. Engelschall     Ben Laurie          Andy Polyakov
+    Dr. Stephen Henson      Richard Levitte     Geoff Thorpe
+    Lutz Jänicke            Bodo Möller

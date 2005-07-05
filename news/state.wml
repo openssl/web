@@ -9,25 +9,10 @@ Here is a short summary of the current development and release state
 of the OpenSSL project.
 
 <ul>
-<li>Next proposed minor release: OpenSSL <b>0.9.7h</b>, currently in development.<br>
+<li>Next proposed minor release: OpenSSL <b>0.9.7h</b> and <b>0.9.8a</b>, currently in development.<br>
     The release date is yet to be set.
-<li>Next proposed MAJOR release: OpenSSL <b>0.9.8</b>, currently in development.
-    <p>
-    Release plan:
-    <p>
-    <table cellspacing=0 cellpadding=1 border=0>
-    <tr><td><b id=sf>Date/Range</b></td>   <td><b id=sf>Event</b></td></tr>
-    <tr><td><hr noshade size=1></td>       <td><hr noshade size=1></td></tr>
-    <tr><td><b id=sf>18-may-2005:</b></td> <td><i>Feature Freeze!</i></td></tr>
-    <tr><td><b id=sf>19-may-2005:</b></td> <td>0.9.8-beta1</td></tr>
-    <tr><td><b id=sf>24-may-2005:</b></td> <td>0.9.8-beta2</td></tr>
-    <tr><td><b id=sf>31-may-2005:</b></td> <td>0.9.8-beta3</td></tr>
-    <tr><td><b id=sf>06-jun-2005:</b></td> <td>0.9.8-beta4</td></tr>
-    <tr><td><b id=sf>13-jun-2005:</b></td> <td>0.9.8-beta5</td></tr>
-    <tr><td><b id=sf>20-jun-2005:</b></td> <td>0.9.8-beta6 (<i>final!</i>)</td></tr>
-    <tr><td><b id=sf>23-jun-2005:</b></td> <td>0.9.8 (<i>if beta6 was the final beta</i>)</td></tr>
-    </table>
-    <p>
+<li>Next proposed MAJOR release: OpenSSL <b>0.9.9</b>, currently in development.<br>
+    The release date is yet to be set.
 <li>The current <a href="$(ROOT)/source/cvs/">CVS Source Code State</a>.
 </ul>
 
