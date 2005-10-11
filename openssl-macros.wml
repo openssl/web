@@ -353,6 +353,7 @@ foreach $l (@L) {
 	my $t = $3;
 	my $r = "<a href=\"$f\">$f</a>";
 	if (-f "$f.md5") { $r .= " (<a href=\"$f.md5\">MD5</a>)"; }
+	if (-f "$f.sha1") { $r .= " (<a href=\"$f.sha1\">SHA1</a>)"; }
 	if (-f "$f.asc") { $r .= " (<a href=\"$f.asc\">PGP sign</a>)"; }
 	$l = $h.$r.$t;
     }
