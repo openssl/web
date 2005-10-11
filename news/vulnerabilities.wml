@@ -19,7 +19,7 @@ downgrade to SSL 2.0 even if both parties support better protocols.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      0.9.7h (Affected 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
+      0.9.7h (Affected 0.9.7g, 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
   <dd>Fixed in OpenSSL  
       0.9.8a (Affected 0.9.8) </dd>
   <p/>
