@@ -2,5 +2,6 @@
 *.tar.gz
 *.tar.gz.asc
 *.tar.gz.md5
+*.tar.gz.sha1
 *.patch
 index.cache
