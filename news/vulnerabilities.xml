@@ -334,5 +334,43 @@ redundant der_chop script, and this script was removed from the OpenSSL
 distribution.
     </description>
   </issue>
+
+  <issue public="20051011">
+    <cve name="2005-2969"/>
+    <affects base="0.9.7" version="0.9.7"/>
+    <affects base="0.9.7" version="0.9.7a"/>
+    <affects base="0.9.7" version="0.9.7b"/>
+    <affects base="0.9.7" version="0.9.7c"/>
+    <affects base="0.9.7" version="0.9.7d"/>
+    <affects base="0.9.7" version="0.9.7e"/>
+    <affects base="0.9.7" version="0.9.7f"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.6" version="0.9.6"/>
+    <affects base="0.9.6" version="0.9.6a"/>
+    <affects base="0.9.6" version="0.9.6b"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <affects base="0.9.6" version="0.9.6d"/>
+    <affects base="0.9.6" version="0.9.6e"/>
+    <affects base="0.9.6" version="0.9.6f"/>
+    <affects base="0.9.6" version="0.9.6g"/>
+    <affects base="0.9.6" version="0.9.6h"/>
+    <affects base="0.9.6" version="0.9.6i"/>
+    <affects base="0.9.6" version="0.9.6j"/>
+    <affects base="0.9.6" version="0.9.6k"/>
+    <affects base="0.9.6" version="0.9.6l"/>
+    <affects base="0.9.6" version="0.9.6m"/>
+    <fixed base="0.9.7" version="0.9.7h" date="20051011"/>
+    <fixed base="0.9.8" version="0.9.8a" date="20051011"/>
+
+    <advisory url="http://www.openssl.org/news/secadv_20051011.txt"/>
+    <reported source="researcher"/>
+
+    <description>
+A deprecated option, SSL_OP_MISE_SSLV2_RSA_PADDING, could allow an
+attacker acting as a "man in the middle" to force a connection to
+downgrade to SSL 2.0 even if both parties support better protocols.
+    </description>
+  </issue>
+
 </security>
 

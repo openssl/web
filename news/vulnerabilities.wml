@@ -5,14 +5,25 @@
 
 #use wml::openssl area=news page=vulnerabilities
 
-
-<title>OpenSSL vulnerabilities</title>
-<h1>OpenSSL vulnerabilities</h1>
-<p>This page lists all security vulnerabilities fixed in released
+<title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
-</p>
-<h2>2004</h2>
-<dl>
+</p><h2>2005</h2><dl>
+  <dt><b><a name="2005-2969"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2005-2969">CAN-2005-2969</a></a></b>: 11th October 2005<p/></dt>
+  <dd>
+    <description>
+A deprecated option, SSL_OP_MISE_SSLV2_RSA_PADDING, could allow an
+attacker acting as a "man in the middle" to force a connection to
+downgrade to SSL 2.0 even if both parties support better protocols.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20051011.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.7h (Affected 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8a (Affected 0.9.8) </dd>
+  <p/>
+</dl><h2>2004</h2><dl>
   <dt><b><a name="2004-0975"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2004-0975">CAN-2004-0975</a></a></b>: 30th September 2004<p/></dt>
   <dd>
     <description>
@@ -71,9 +82,7 @@ OpenSSL library in such a way as to cause a crash.
   <dd>Fixed in OpenSSL  
       0.9.6m (Affected 0.9.6l, 0.9.6k, 0.9.6j, 0.9.6i, 0.9.6h, 0.9.6g, 0.9.6f, 0.9.6e, 0.9.6d, 0.9.6c) </dd>
   <p/>
-</dl>
-<h2>2003</h2>
-<dl>
+</dl><h2>2003</h2><dl>
   <dt><b><a name="2003-0851"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2003-0851">CAN-2003-0851</a></a></b>: 4th November 2003<p/></dt>
   <dd>
     <description> 
@@ -142,7 +151,7 @@ RSA blinding was not enabled by default, which could allow local and
 remote attackers to obtain a server's private key by determining
 factors using timing differences on (1) the number of extra reductions
 during Montgomery reduction, and (2) the use of different integer
-multiplication algorithms (&quot;Karatsuba&quot; and normal).
+multiplication algorithms ("Karatsuba" and normal).
     </description>
     <a href="http://www.openssl.org/news/secadv_20030317.txt">(original advisory)</a>
   </dd>
@@ -160,7 +169,7 @@ unauthorized RSA private key operation via a modified Bleichenbacher
 attack that uses a large number of SSL or TLS connections using PKCS #1 
 v1.5 padding that caused OpenSSL to leak information regarding the
 relationship between ciphertext and the associated plaintext, aka the
-&quot;Klima-Pokorny-Rosa attack&quot;
+"Klima-Pokorny-Rosa attack"
     </description>
     <a href="http://www.openssl.org/news/secadv_20030319.txt">(original advisory)</a>
   </dd>
@@ -178,7 +187,7 @@ incorrect block cipher padding was used, causing an information leak
 (timing discrepancy) that may make it easier to launch cryptographic
 attacks that rely on distinguishing between padding and MAC
 verification errors, possibly leading to extraction of the original
-plaintext, aka the &quot;Vaudenay timing attack.&quot;
+plaintext, aka the "Vaudenay timing attack."
     </description>
     <a href="http://www.openssl.org/news/secadv_20030219.txt">(original advisory)</a>
   </dd>
@@ -188,9 +197,7 @@ plaintext, aka the &quot;Vaudenay timing attack.&quot;
   <dd>Fixed in OpenSSL  
       0.9.6i (Affected 0.9.6h, 0.9.6g, 0.9.6f, 0.9.6e, 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
   <p/>
-</dl>
-<h2>2002</h2>
-<dl>
+</dl><h2>2002</h2><dl>
   <dt><b><a name="2002-0659"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2002-0659">CAN-2002-0659</a></a></b>: 30th July 2002<p/></dt>
   <dd>
     <description>
