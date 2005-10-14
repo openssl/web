@@ -1,48 +1,29 @@
 
-   OpenSSL version 0.9.8a and 0.9.7h released
-   ==========================================
+   OpenSSL version 0.9.7i released
+   ===============================
 
    OpenSSL - The Open Source toolkit for SSL/TLS
    http://www.openssl.org/
 
-   The OpenSSL project team is pleased to announce the release of
-   version 0.9.8a of our open source toolkit for SSL/TLS. This new
-   OpenSSL version is a security and bugfix release and incorporates
-   changes and bugfixes to the toolkit.  For a complete list of
-   changes, please see http://www.openssl.org/source/exp/CHANGES.
+   OpenSSL 0.9.7h caused crashes when the shared libcrypto was
+   upgraded.  This release fixes that problem.  For those who want
+   or have to stay with the 0.9.7 series of OpenSSL instead of using
+   the 0.9.8 series, we strongly recommend that you upgrade to OpenSSL
+   0.9.7h soon as possible.  For a complete list of changes, please
+   see http://www.openssl.org/source/exp/CHANGES.
 
-   We also release 0.9.7h, which contains the same security bugfix as
-   0.9.8a and a few small bugfixes compared to 0.9.7g.
-
-   These updates contain a fix for CAN-2005-2969, a potential SSL 2.0
-   rollback reported by Yutaka Oiwa. For more details of the security
-   issue being fixed in this release please see
-   http://www.openssl.org/news/secadv_20051011.txt
-
-   We consider OpenSSL 0.9.8a to be the best version of OpenSSL
-   available and we strongly recommend that users of older versions
-   upgrade as soon as possible. OpenSSL 0.9.8a is available for
-   download via HTTP and FTP from the following master locations (you
-   can find the various FTP mirrors under
-   http://www.openssl.org/source/mirror.html):
+   OpenSSL 0.9.7i is available for download via HTTP and FTP from the
+   following master locations (you can find the various FTP mirrors
+   under http://www.openssl.org/source/mirror.html):
 
      * http://www.openssl.org/source/
      * ftp://ftp.openssl.org/source/
 
-   For those who want or have to stay with the 0.9.7 series of
-   OpenSSL, we strongly recommend that you upgrade to OpenSSL 0.9.7h
-   as soon as possible.  It's available in the same location as
-   0.9.8a.
-
    The distribution file names are:
 
-     * openssl-0.9.8a.tar.gz
-       MD5 checksum: 1d16c727c10185e4d694f87f5e424ee1
-       SHA1 checksum: 2aaba0f728179370fb3e86b43209205bc6c06a3a
-
-     * openssl-0.9.7h.tar.gz
-       MD5 checksum: 8dc90a113eb8925795071fbe52b2932c
-       SHA1 checksum: 9fe535fce89af967b29c4727dedd25f2b4cc2f0d
+     * openssl-0.9.7i.tar.gz
+       MD5 checksum: f69d82b206ff8bff9d0e721f97380b9e
+       SHA1 checksum: 4c23925744d43272fa19615454da44e01465eb06
 
    The checksums were calculated using the following commands:
 
