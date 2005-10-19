@@ -8,7 +8,7 @@
 <title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p><h2>2005</h2><dl>
-  <dt><b><a name="2005-2969"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2005-2969">CAN-2005-2969</a></a></b>: 11th October 2005<p/></dt>
+  <dt><b><a name="2005-2969"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2969">CVE-2005-2969</a></a></b>: 11th October 2005<p/></dt>
   <dd>
     <description>
 A deprecated option, SSL_OP_MISE_SSLV2_RSA_PADDING, could allow an
@@ -24,7 +24,7 @@ downgrade to SSL 2.0 even if both parties support better protocols.
       0.9.8a (Affected 0.9.8) </dd>
   <p/>
 </dl><h2>2004</h2><dl>
-  <dt><b><a name="2004-0975"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2004-0975">CAN-2004-0975</a></a></b>: 30th September 2004<p/></dt>
+  <dt><b><a name="2004-0975"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0975">CVE-2004-0975</a></a></b>: 30th September 2004<p/></dt>
   <dd>
     <description>
 The der_chop script created temporary files insecurely which could
@@ -40,7 +40,7 @@ distribution.
   <dd>Fixed in OpenSSL  
       0.9.6-cvs (Affected 0.9.6m, 0.9.6l, 0.9.6k, 0.9.6j, 0.9.6i, 0.9.6h, 0.9.6g, 0.9.6f, 0.9.6e, 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
   <p/>
-  <dt><b><a name="2004-0112"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2004-0112">CAN-2004-0112</a></a></b>: 17th March 2004<p/></dt>
+  <dt><b><a name="2004-0112"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0112">CVE-2004-0112</a></a></b>: 17th March 2004<p/></dt>
   <dd>
     <description>
 A flaw in SSL/TLS handshaking code when using Kerberos ciphersuites.
@@ -55,7 +55,7 @@ use Kerberos ciphersuites and will therefore be unaffected.
   <dd>Fixed in OpenSSL  
       0.9.7d (Affected 0.9.7c, 0.9.7b, 0.9.7a) </dd>
   <p/>
-  <dt><b><a name="2004-0081"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2004-0081">CAN-2004-0081</a></a></b>: 17th March 2004<p/></dt>
+  <dt><b><a name="2004-0081"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0081">CVE-2004-0081</a></a></b>: 17th March 2004<p/></dt>
   <dd>
     <description>
 The Codenomicon TLS Test Tool found that some unknown message types
@@ -66,7 +66,7 @@ of service (infinite loop).
   </dd>
   <p/>
   <p/>
-  <dt><b><a name="2004-0079"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2004-0079">CAN-2004-0079</a></a></b>: 17th March 2004<p/></dt>
+  <dt><b><a name="2004-0079"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0079">CVE-2004-0079</a></a></b>: 17th March 2004<p/></dt>
   <dd>
     <description> 
 The Codenomicon TLS Test Tool uncovered a null-pointer assignment in the
@@ -83,7 +83,7 @@ OpenSSL library in such a way as to cause a crash.
       0.9.6m (Affected 0.9.6l, 0.9.6k, 0.9.6j, 0.9.6i, 0.9.6h, 0.9.6g, 0.9.6f, 0.9.6e, 0.9.6d, 0.9.6c) </dd>
   <p/>
 </dl><h2>2003</h2><dl>
-  <dt><b><a name="2003-0851"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2003-0851">CAN-2003-0851</a></a></b>: 4th November 2003<p/></dt>
+  <dt><b><a name="2003-0851"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0851">CVE-2003-0851</a></a></b>: 4th November 2003<p/></dt>
   <dd>
     <description> 
 A flaw in OpenSSL 0.9.6k (only) would cause certain ASN.1 sequences to
@@ -100,7 +100,7 @@ SSL/TLS enabled server which is configured to accept them.
   <dd>Fixed in OpenSSL  
       0.9.6l (Affected 0.9.6k) </dd>
   <p/>
-  <dt><b><a name="2003-0545"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2003-0545">CAN-2003-0545</a></a></b>: 30th September 2003<p/></dt>
+  <dt><b><a name="2003-0545"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0545">CVE-2003-0545</a></a></b>: 30th September 2003<p/></dt>
   <dd>
     <description>
 Certain ASN.1 encodings that were rejected as invalid by the parser could
@@ -113,7 +113,7 @@ corrupting the stack, leading to a crash.
   <dd>Fixed in OpenSSL  
       0.9.7c (Affected 0.9.7b, 0.9.7a, 0.9.7) </dd>
   <p/>
-  <dt><b><a name="2003-0544"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2003-0544">CAN-2003-0544</a></a></b>: 30th September 2003<p/></dt>
+  <dt><b><a name="2003-0544"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0544">CVE-2003-0544</a></a></b>: 30th September 2003<p/></dt>
   <dd>
     <description>
 Incorrect tracking of the number of characters in certain
@@ -129,7 +129,7 @@ read past the end of a buffer when the long form is used.
   <dd>Fixed in OpenSSL  
       0.9.7c (Affected 0.9.7b, 0.9.7a, 0.9.7) </dd>
   <p/>
-  <dt><b><a name="2003-0543"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2003-0543">CAN-2003-0543</a></a></b>: 30th September 2003<p/></dt>
+  <dt><b><a name="2003-0543"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0543">CVE-2003-0543</a></a></b>: 30th September 2003<p/></dt>
   <dd>
     <description>
 An integer overflow could allow remote attackers to cause a denial of
@@ -144,7 +144,7 @@ values.
   <dd>Fixed in OpenSSL  
       0.9.6k (Affected 0.9.6j, 0.9.6i, 0.9.6h, 0.9.6g, 0.9.6f, 0.9.6e, 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
   <p/>
-  <dt><b><a name="2003-0147"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2003-0147">CAN-2003-0147</a></a></b>: 14th March 2003<p/></dt>
+  <dt><b><a name="2003-0147"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0147">CVE-2003-0147</a></a></b>: 14th March 2003<p/></dt>
   <dd>
     <description>
 RSA blinding was not enabled by default, which could allow local and
@@ -161,7 +161,7 @@ multiplication algorithms ("Karatsuba" and normal).
   <dd>Fixed in OpenSSL  
       0.9.6j (Affected 0.9.6i, 0.9.6h, 0.9.6g, 0.9.6f, 0.9.6e, 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
   <p/>
-  <dt><b><a name="2003-0131"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2003-0131">CAN-2003-0131</a></a></b>: 19th March 2003<p/></dt>
+  <dt><b><a name="2003-0131"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0131">CVE-2003-0131</a></a></b>: 19th March 2003<p/></dt>
   <dd>
     <description>
 The SSL and TLS components allowed remote attackers to perform an
@@ -179,7 +179,7 @@ relationship between ciphertext and the associated plaintext, aka the
   <dd>Fixed in OpenSSL  
       0.9.7b (Affected 0.9.7a, 0.9.7) </dd>
   <p/>
-  <dt><b><a name="2003-0078"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2003-0078">CAN-2003-0078</a></a></b>: 19th February 2003<p/></dt>
+  <dt><b><a name="2003-0078"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0078">CVE-2003-0078</a></a></b>: 19th February 2003<p/></dt>
   <dd>
     <description>
 sl3_get_record in s3_pkt.c did not perform a MAC computation if an
@@ -198,7 +198,7 @@ plaintext, aka the "Vaudenay timing attack."
       0.9.6i (Affected 0.9.6h, 0.9.6g, 0.9.6f, 0.9.6e, 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
   <p/>
 </dl><h2>2002</h2><dl>
-  <dt><b><a name="2002-0659"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2002-0659">CAN-2002-0659</a></a></b>: 30th July 2002<p/></dt>
+  <dt><b><a name="2002-0659"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0659">CVE-2002-0659</a></a></b>: 30th July 2002<p/></dt>
   <dd>
     <description>
 A flaw in the ASN1 library allowed remote attackers to cause a denial of 
@@ -209,7 +209,7 @@ service by sending invalid encodings.
   <dd>Fixed in OpenSSL  
       0.9.6e (Affected 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a) </dd>
   <p/>
-  <dt><b><a name="2002-0657"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2002-0657">CAN-2002-0657</a></a></b>: 30th July 2002<p/></dt>
+  <dt><b><a name="2002-0657"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0657">CVE-2002-0657</a></a></b>: 30th July 2002<p/></dt>
   <dd>
     <description>
 A buffer overflow when Kerberos is enabled allowed attackers
@@ -220,7 +220,7 @@ flaw did not affect any released version of 0.9.6 or 0.9.7
   </dd>
   <p/>
   <p/>
-  <dt><b><a name="2002-0656"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2002-0656">CAN-2002-0656</a></a></b>: 30th July 2002<p/></dt>
+  <dt><b><a name="2002-0656"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0656">CVE-2002-0656</a></a></b>: 30th July 2002<p/></dt>
   <dd>
     <description>
 A buffer overflow allowed remote attackers to execute
@@ -233,7 +233,7 @@ large session ID in SSL3.
   <dd>Fixed in OpenSSL  
       0.9.6e (Affected 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
   <p/>
-  <dt><b><a name="2002-0655"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2002-0655">CAN-2002-0655</a></a></b>: 30th July 2002<p/></dt>
+  <dt><b><a name="2002-0655"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0655">CVE-2002-0655</a></a></b>: 30th July 2002<p/></dt>
   <dd>
     <description>
 Inproper handling of ASCII representations of integers on
