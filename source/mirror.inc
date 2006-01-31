@@ -63,6 +63,8 @@
 <mirror url="http://www.binarycode.org/openssl/" loc="US">
 <mirror url="rsync://mirrors.usc.edu/openssl/" loc="US">
 <mirror url="http://openssl.securitywonks.net/" loc="US">
+<mirror url="http://openssl.linux-mirror.org/" loc="DE">
+<mirror url="http://openssl.oss-mirror.org/" loc="IE">
 
 </ul>
 
