@@ -65,6 +65,11 @@
 <mirror url="http://openssl.securitywonks.net/" loc="US">
 <mirror url="http://openssl.linux-mirror.org/" loc="DE">
 <mirror url="http://openssl.oss-mirror.org/" loc="IE">
+<mirror url="http://openssl.onionland.org/" loc="DE">
+<mirror url="rsync://onionland.org/openssl/" loc="DE">
+<mirror url="http://www.securehost.com/mirror/openssl/" loc="BS">
+
+
 
 </ul>
 
