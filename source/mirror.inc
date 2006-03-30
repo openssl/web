@@ -68,7 +68,7 @@
 <mirror url="http://openssl.onionland.org/" loc="DE">
 <mirror url="rsync://onionland.org/openssl/" loc="DE">
 <mirror url="http://www.securehost.com/mirror/openssl/" loc="BS">
-
+<mirror url="http://www.ftp.openssl.mirroarrr.de" loc="DE">
 
 
 </ul>
