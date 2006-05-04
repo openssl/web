@@ -1,5 +1,5 @@
-04-May-2006: OpenSSL 0.9.8b is now <a href="ROOT/source/">available</a>, contains compatibility fix
-04-May-2006: OpenSSL 0.9.7j is now <a href="ROOT/source/">available</a>, contains compatibility fix
+04-May-2006: OpenSSL 0.9.8b is now <a href="ROOT/source/">available</a>, including important bugfixes
+04-May-2006: OpenSSL 0.9.7j is now <a href="ROOT/source/">available</a>, including important bugfixes
 15-oct-2005: OpenSSL 0.9.7i is now <a href="ROOT/source/">available</a>, contains compatibility fix
 11-oct-2005: <a href="ROOT/news/secadv_20051011.txt">Security Advisory</a>: Potential SSL 2.0 rollback
 11-oct-2005: OpenSSL 0.9.8a is now <a href="ROOT/source/">available</a>, including security fix
