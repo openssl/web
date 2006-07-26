@@ -5,7 +5,7 @@
 
 <h1>FIPS140 Files</h1>
 
-Here you can find a number of FIPS140 related files including the draft user
+Here you can find a number of FIPS140 related files including the user
 guide and test vectors.
 <p>
 <filelist "*.pdf *.gz">
