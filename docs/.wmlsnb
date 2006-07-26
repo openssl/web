@@ -8,6 +8,7 @@
   <snb_button id=ssl     txt="ssl(3)"     url="ssl/ssl.html">
   <snb_button id=crypto  txt="crypto(3)"  url="crypto/crypto.html">
   <snb_button id=HOWTO   txt="HOWTO"      url="HOWTO/">
+  <snb_button id=FIPS140   txt="FIPS140"      url="fips/">
   <snb_button id=misc    txt="misc"       url="misc/">
 </snb>
 
