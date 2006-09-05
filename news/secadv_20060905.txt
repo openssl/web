@@ -46,12 +46,12 @@ following measures is sufficient.
     The distribution file names are:
 
         o openssl-0.9.8c.tar.gz
-          MD5 checksum: x
-          SHA1 checksum: x
+          MD5 checksum: 78454bec556bcb4c45129428a766c886
+          SHA1 checksum: d0798e5c7c4509d96224136198fa44f7f90e001d
 
         o openssl-0.9.7k.tar.gz
-          MD5 checksum: x
-          SHA1 checksum: x
+          MD5 checksum: be6bba1d67b26eabb48cf1774925416f
+          SHA1 checksum: 90056b8f5e518edc9f74f66784fbdcfd9b784dd2
     
     The checksums were calculated using the following commands:
 
