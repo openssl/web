@@ -58,17 +58,16 @@ following measures is sufficient.
         openssl md5 openssl-0.9*.tar.gz
         openssl sha1 openssl-0.9*.tar.gz
 
-    If this version upgrade is not an option at the present time,
+2.  If this version upgrade is not an option at the present time,
     alternatively the following patch may be applied to the OpenSSL
     source code to resolve the problem.  The patch is compatible with
     the 0.9.6, 0.9.7, and 0.9.8 branches of OpenSSL.
 
         o http://www.openssl.org/news/patch-CVE-2006-4339.txt
 
-    Whether you choose to upgrade to a new version or to apply the
-    patch, make sure to recompile any applications statically linked
-    to OpenSSL libraries if these applications use the OpenSSL
-    SSL/TLS server implementation.    
+Whether you choose to upgrade to a new version or to apply the patch,
+make sure to recompile any applications statically linked to OpenSSL
+libraries.
 
  
 Acknowledgements
