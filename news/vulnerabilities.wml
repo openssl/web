@@ -7,7 +7,24 @@
 
 <title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
-</p><h2>2005</h2><dl>
+</p><h2>2006</h2><dl>
+  <dt><b><a name="2006-4339"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4339">CVE-2006-4339</a></a></b>: 5th September 2006<p/></dt>
+  <dd>
+    <description>
+Daniel Bleichenbacher discovered an attack on PKCS #1 v1.5
+signatures where under certain circumstances it may be possible
+for an attacker to forge a PKCS #1 v1.5 signature that would be incorrectly
+verified by OpenSSL.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20060905.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.7k (Affected 0.9.7j, 0.9.7i, 0.9.7h, 0.9.7g, 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8c (Affected 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+</dl><h2>2005</h2><dl>
   <dt><b><a name="2005-2969"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2969">CVE-2005-2969</a></a></b>: 11th October 2005<p/></dt>
   <dd>
     <description>

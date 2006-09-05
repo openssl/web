@@ -1,7 +1,7 @@
 <!-- All security issues affecting OpenSSL since the 
      release of 0.9.6 on 20000924, 0.9.7 on 20021231 -->
 
-<security updated="20050520">
+<security updated="20060905">
 
   <issue public="20020730">
     <cve name="2002-0655"/>
@@ -370,6 +370,50 @@ distribution.
 A deprecated option, SSL_OP_MISE_SSLV2_RSA_PADDING, could allow an
 attacker acting as a "man in the middle" to force a connection to
 downgrade to SSL 2.0 even if both parties support better protocols.
+    </description>
+  </issue>
+
+  <issue public="20060905">
+    <cve name="2006-4339"/>
+    <affects base="0.9.7" version="0.9.7"/>
+    <affects base="0.9.7" version="0.9.7a"/>
+    <affects base="0.9.7" version="0.9.7b"/>
+    <affects base="0.9.7" version="0.9.7c"/>
+    <affects base="0.9.7" version="0.9.7d"/>
+    <affects base="0.9.7" version="0.9.7e"/>
+    <affects base="0.9.7" version="0.9.7f"/>
+    <affects base="0.9.7" version="0.9.7g"/>
+    <affects base="0.9.7" version="0.9.7h"/>
+    <affects base="0.9.7" version="0.9.7i"/>
+    <affects base="0.9.7" version="0.9.7j"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.6" version="0.9.6"/>
+    <affects base="0.9.6" version="0.9.6a"/>
+    <affects base="0.9.6" version="0.9.6b"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <affects base="0.9.6" version="0.9.6d"/>
+    <affects base="0.9.6" version="0.9.6e"/>
+    <affects base="0.9.6" version="0.9.6f"/>
+    <affects base="0.9.6" version="0.9.6g"/>
+    <affects base="0.9.6" version="0.9.6h"/>
+    <affects base="0.9.6" version="0.9.6i"/>
+    <affects base="0.9.6" version="0.9.6j"/>
+    <affects base="0.9.6" version="0.9.6k"/>
+    <affects base="0.9.6" version="0.9.6l"/>
+    <affects base="0.9.6" version="0.9.6m"/>
+    <fixed base="0.9.7" version="0.9.7k" date="20060905"/>
+    <fixed base="0.9.8" version="0.9.8c" date="20060905"/>
+
+    <advisory url="http://www.openssl.org/news/secadv_20060905.txt"/>
+    <reported source="openssl"/>
+
+    <description>
+Daniel Bleichenbacher discovered an attack on PKCS #1 v1.5
+signatures where under certain circumstances it may be possible
+for an attacker to forge a PKCS #1 v1.5 signature that would be incorrectly
+verified by OpenSSL.
     </description>
   </issue>
 
