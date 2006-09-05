@@ -61,7 +61,7 @@ following measures is sufficient.
 2.  If this version upgrade is not an option at the present time,
     alternatively the following patch may be applied to the OpenSSL
     source code to resolve the problem.  The patch is compatible with
-    the 0.9.6, 0.9.7, and 0.9.8 branches of OpenSSL.
+    the 0.9.7, 0.9.8, and 0.9.9 branches of OpenSSL.
 
         o http://www.openssl.org/news/patch-CVE-2006-4339.txt
 
