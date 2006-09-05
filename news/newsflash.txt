@@ -1,4 +1,4 @@
-05-Sep-2006: <a href="ROOT/news/secadv_20060905.txt">Security Advisory</a>: RSA Certificate forging
+05-Sep-2006: <a href="ROOT/news/secadv_20060905.txt">Security Advisory</a>: RSA Signature Forgery
 05-Sep-2006: OpenSSL 0.9.8c is now <a href="ROOT/source/">available</a>, including security fix
 05-Sep-2006: OpenSSL 0.9.7k is now <a href="ROOT/source/">available</a>, including security fix
 04-May-2006: OpenSSL 0.9.8b is now <a href="ROOT/source/">available</a>, including important bugfixes
