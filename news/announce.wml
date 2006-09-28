@@ -1,31 +1,32 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 0.9.8c and 0.9.7k released</title>
+<title>Announcement: OpenSSL version 0.9.8d and 0.9.7l released</title>
 
-<h1>Announcement: OpenSSL version 0.9.8c and 0.9.7k released</h1>
+<h1>Announcement: OpenSSL version 0.9.8d and 0.9.7l released</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
 
 <p>
 The OpenSSL project team is pleased to announce the release of
-version 0.9.8c of our open source toolkit for SSL/TLS.  This new
+version 0.9.8d of our open source toolkit for SSL/TLS.  This new
 OpenSSL version is a security and bugfix release and incorporates
 changes and bugfixes to the toolkit.  For a complete
 list of changes, please see
 <a href="http://www.openssl.org/source/exp/CHANGES">http://www.openssl.org/source/exp/CHANGES</a>.
 <p>
-This release fixes an important security vulnerability which could
-allow RSA Signature Forgery, CVE-2006-4339.  A <a href="secadv_20060905.txt">full advisory</a> is available.
+This release fixes four security vulnerabilities, CVE-2006-2937,
+CVE-2006-2940, CVE-2006-3738, CVE-2006-4343.
+A <a href="secadv_20060928.txt">full advisory</a> is available.
 <p>
-We also release 0.9.7k, which contains the a security update and bugfixes
-compared to 0.9.7j. 
+We also release 0.9.7l, which contains the a security update and bugfixes
+compared to 0.9.7k. 
 <p>
 
-We consider OpenSSL 0.9.8c to be the best version of OpenSSL available
+We consider OpenSSL 0.9.8d to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 0.9.8c is available for download via HTTP
+soon as possible.  OpenSSL 0.9.8d is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -36,19 +37,19 @@ FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www
 
 <p>
 For those who want or have to stay with the 0.9.7 series of OpenSSL,
-we strongly recommend that you upgrade to OpenSSL 0.9.7k as soon as
-possible.  It's available in the same location as 0.9.8c.
+we strongly recommend that you upgrade to OpenSSL 0.9.7l as soon as
+possible.  It's available in the same location as 0.9.8d.
 <p>
 The distribution file name is:
 
 <ul>
-  <li>openssl-0.9.8c.tar.gz<br>
-      MD5 checksum: 78454bec556bcb4c45129428a766c886<br>
-      SHA1 checksum: d0798e5c7c4509d96224136198fa44f7f90e001d<br>
+  <li>openssl-0.9.8d.tar.gz<br>
+      MD5 checksum: 8ed1853538e1d05a1f5ada61ebf8bffa<br>
+      SHA1 checksum: 4136fba00303a3d319d2052bfa8e1f09a2e12fc2<br>
 
-  <li>openssl-0.9.7k.tar.gz<br>
-      MD5 checksum: be6bba1d67b26eabb48cf1774925416f<br>
-      SHA1 checksum: 90056b8f5e518edc9f74f66784fbdcfd9b784dd2<br>
+  <li>openssl-0.9.7l.tar.gz<br>
+      MD5 checksum: b21d6e10817ddeccf5fbe1379987333e<br>
+      SHA1 checksum: f0e4136639b10cbd1227c4f7350ff7ad406e575d<br>
 </ul>
 
 <p>

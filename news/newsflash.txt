@@ -1,3 +1,6 @@
+28-Sep-2006: <a href="ROOT/news/secadv_20060928.txt">Security Advisory</a>: Various security issues
+28-Sep-2006: OpenSSL 0.9.8d is now <a href="ROOT/source/">available</a>, including security fixes
+28-Sep-2006: OpenSSL 0.9.7l is now <a href="ROOT/source/">available</a>, including security fixes
 05-Sep-2006: <a href="ROOT/news/secadv_20060905.txt">Security Advisory</a>: RSA Signature Forgery
 05-Sep-2006: OpenSSL 0.9.8c is now <a href="ROOT/source/">available</a>, including security fix
 05-Sep-2006: OpenSSL 0.9.7k is now <a href="ROOT/source/">available</a>, including security fix
