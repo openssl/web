@@ -1,7 +1,7 @@
 <!-- All security issues affecting OpenSSL since the 
      release of 0.9.6 on 20000924, 0.9.7 on 20021231 -->
 
-<security updated="20060905">
+<security updated="20060928">
 
   <issue public="20020730">
     <cve name="2002-0655"/>
@@ -416,6 +416,173 @@ for an attacker to forge a PKCS #1 v1.5 signature that would be incorrectly
 verified by OpenSSL.
     </description>
   </issue>
+
+  <issue public="20060928">
+    <cve name="2006-2937"/>
+    <affects base="0.9.7" version="0.9.7"/>
+    <affects base="0.9.7" version="0.9.7a"/>
+    <affects base="0.9.7" version="0.9.7b"/>
+    <affects base="0.9.7" version="0.9.7c"/>
+    <affects base="0.9.7" version="0.9.7d"/>
+    <affects base="0.9.7" version="0.9.7e"/>
+    <affects base="0.9.7" version="0.9.7f"/>
+    <affects base="0.9.7" version="0.9.7g"/>
+    <affects base="0.9.7" version="0.9.7h"/>
+    <affects base="0.9.7" version="0.9.7i"/>
+    <affects base="0.9.7" version="0.9.7j"/>
+    <affects base="0.9.7" version="0.9.7k"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <fixed base="0.9.7" version="0.9.7l" date="20060928"/>
+    <fixed base="0.9.8" version="0.9.8d" date="20060928"/>
+
+    <advisory url="http://www.openssl.org/news/secadv_20060928.txt"/>
+    <reported source="openssl"/>
+
+    <description>
+During the parsing of certain invalid ASN.1 structures an error
+condition is mishandled.  This can result in an infinite loop which
+consumes system memory
+    </description>
+  </issue>
+
+  <issue public="20060928">
+    <cve name="2006-2940"/>
+    <affects base="0.9.7" version="0.9.7"/>
+    <affects base="0.9.7" version="0.9.7a"/>
+    <affects base="0.9.7" version="0.9.7b"/>
+    <affects base="0.9.7" version="0.9.7c"/>
+    <affects base="0.9.7" version="0.9.7d"/>
+    <affects base="0.9.7" version="0.9.7e"/>
+    <affects base="0.9.7" version="0.9.7f"/>
+    <affects base="0.9.7" version="0.9.7g"/>
+    <affects base="0.9.7" version="0.9.7h"/>
+    <affects base="0.9.7" version="0.9.7i"/>
+    <affects base="0.9.7" version="0.9.7j"/>
+    <affects base="0.9.7" version="0.9.7k"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.6" version="0.9.6"/>
+    <affects base="0.9.6" version="0.9.6a"/>
+    <affects base="0.9.6" version="0.9.6b"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <affects base="0.9.6" version="0.9.6d"/>
+    <affects base="0.9.6" version="0.9.6e"/>
+    <affects base="0.9.6" version="0.9.6f"/>
+    <affects base="0.9.6" version="0.9.6g"/>
+    <affects base="0.9.6" version="0.9.6h"/>
+    <affects base="0.9.6" version="0.9.6i"/>
+    <affects base="0.9.6" version="0.9.6j"/>
+    <affects base="0.9.6" version="0.9.6k"/>
+    <affects base="0.9.6" version="0.9.6l"/>
+    <affects base="0.9.6" version="0.9.6m"/>
+    <fixed base="0.9.7" version="0.9.7l" date="20060928"/>
+    <fixed base="0.9.8" version="0.9.8d" date="20060928"/>
+
+    <advisory url="http://www.openssl.org/news/secadv_20060928.txt"/>
+    <reported source="openssl"/>
+
+    <description>
+Certain types of public key can take disproportionate amounts of
+time to process. This could be used by an attacker in a denial of
+service attack.
+    </description>
+  </issue>
+
+  <issue public="20060928">
+    <cve name="2006-3738"/>
+    <affects base="0.9.7" version="0.9.7"/>
+    <affects base="0.9.7" version="0.9.7a"/>
+    <affects base="0.9.7" version="0.9.7b"/>
+    <affects base="0.9.7" version="0.9.7c"/>
+    <affects base="0.9.7" version="0.9.7d"/>
+    <affects base="0.9.7" version="0.9.7e"/>
+    <affects base="0.9.7" version="0.9.7f"/>
+    <affects base="0.9.7" version="0.9.7g"/>
+    <affects base="0.9.7" version="0.9.7h"/>
+    <affects base="0.9.7" version="0.9.7i"/>
+    <affects base="0.9.7" version="0.9.7j"/>
+    <affects base="0.9.7" version="0.9.7k"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.6" version="0.9.6"/>
+    <affects base="0.9.6" version="0.9.6a"/>
+    <affects base="0.9.6" version="0.9.6b"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <affects base="0.9.6" version="0.9.6d"/>
+    <affects base="0.9.6" version="0.9.6e"/>
+    <affects base="0.9.6" version="0.9.6f"/>
+    <affects base="0.9.6" version="0.9.6g"/>
+    <affects base="0.9.6" version="0.9.6h"/>
+    <affects base="0.9.6" version="0.9.6i"/>
+    <affects base="0.9.6" version="0.9.6j"/>
+    <affects base="0.9.6" version="0.9.6k"/>
+    <affects base="0.9.6" version="0.9.6l"/>
+    <affects base="0.9.6" version="0.9.6m"/>
+    <fixed base="0.9.7" version="0.9.7l" date="20060928"/>
+    <fixed base="0.9.8" version="0.9.8d" date="20060928"/>
+
+    <advisory url="http://www.openssl.org/news/secadv_20060928.txt"/>
+    <reported source="openssl"/>
+
+    <description>
+A buffer overflow was discovered in the SSL_get_shared_ciphers()
+utility function.  An attacker could send a list of ciphers to an
+application that uses this function and overrun a buffer.
+    </description>
+  </issue>
+
+  <issue public="20060928">
+    <cve name="2006-4343"/>
+    <affects base="0.9.7" version="0.9.7"/>
+    <affects base="0.9.7" version="0.9.7a"/>
+    <affects base="0.9.7" version="0.9.7b"/>
+    <affects base="0.9.7" version="0.9.7c"/>
+    <affects base="0.9.7" version="0.9.7d"/>
+    <affects base="0.9.7" version="0.9.7e"/>
+    <affects base="0.9.7" version="0.9.7f"/>
+    <affects base="0.9.7" version="0.9.7g"/>
+    <affects base="0.9.7" version="0.9.7h"/>
+    <affects base="0.9.7" version="0.9.7i"/>
+    <affects base="0.9.7" version="0.9.7j"/>
+    <affects base="0.9.7" version="0.9.7k"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.6" version="0.9.6"/>
+    <affects base="0.9.6" version="0.9.6a"/>
+    <affects base="0.9.6" version="0.9.6b"/>
+    <affects base="0.9.6" version="0.9.6c"/>
+    <affects base="0.9.6" version="0.9.6d"/>
+    <affects base="0.9.6" version="0.9.6e"/>
+    <affects base="0.9.6" version="0.9.6f"/>
+    <affects base="0.9.6" version="0.9.6g"/>
+    <affects base="0.9.6" version="0.9.6h"/>
+    <affects base="0.9.6" version="0.9.6i"/>
+    <affects base="0.9.6" version="0.9.6j"/>
+    <affects base="0.9.6" version="0.9.6k"/>
+    <affects base="0.9.6" version="0.9.6l"/>
+    <affects base="0.9.6" version="0.9.6m"/>
+    <fixed base="0.9.7" version="0.9.7l" date="20060928"/>
+    <fixed base="0.9.8" version="0.9.8d" date="20060928"/>
+
+    <advisory url="http://www.openssl.org/news/secadv_20060928.txt"/>
+    <reported source="openssl"/>
+
+    <description>
+A flaw in the SSLv2 client code was discovered. When a client
+application used OpenSSL to create an SSLv2 connection to a malicious
+server, that server could cause the client to crash.
+    </description>
+  </issue>
+
 
 </security>
 

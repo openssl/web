@@ -8,6 +8,21 @@
 <title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p><h2>2006</h2><dl>
+  <dt><b><a name="2006-4343"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4343">CVE-2006-4343</a></a></b>: 28th September 2006<p/></dt>
+  <dd>
+    <description>
+A flaw in the SSLv2 client code was discovered. When a client
+application used OpenSSL to create an SSLv2 connection to a malicious
+server, that server could cause the client to crash.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20060928.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.7l (Affected 0.9.7k, 0.9.7j, 0.9.7i, 0.9.7h, 0.9.7g, 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8d (Affected 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
   <dt><b><a name="2006-4339"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4339">CVE-2006-4339</a></a></b>: 5th September 2006<p/></dt>
   <dd>
     <description>
@@ -23,6 +38,51 @@ verified by OpenSSL.
       0.9.7k (Affected 0.9.7j, 0.9.7i, 0.9.7h, 0.9.7g, 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
   <dd>Fixed in OpenSSL  
       0.9.8c (Affected 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2006-3738"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3738">CVE-2006-3738</a></a></b>: 28th September 2006<p/></dt>
+  <dd>
+    <description>
+A buffer overflow was discovered in the SSL_get_shared_ciphers()
+utility function.  An attacker could send a list of ciphers to an
+application that uses this function and overrun a buffer.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20060928.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.7l (Affected 0.9.7k, 0.9.7j, 0.9.7i, 0.9.7h, 0.9.7g, 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8d (Affected 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2006-2940"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2940">CVE-2006-2940</a></a></b>: 28th September 2006<p/></dt>
+  <dd>
+    <description>
+Certain types of public key can take disproportionate amounts of
+time to process. This could be used by an attacker in a denial of
+service attack.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20060928.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.7l (Affected 0.9.7k, 0.9.7j, 0.9.7i, 0.9.7h, 0.9.7g, 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8d (Affected 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2006-2937"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2937">CVE-2006-2937</a></a></b>: 28th September 2006<p/></dt>
+  <dd>
+    <description>
+During the parsing of certain invalid ASN.1 structures an error
+condition is mishandled.  This can result in an infinite loop which
+consumes system memory
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20060928.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.7l (Affected 0.9.7k, 0.9.7j, 0.9.7i, 0.9.7h, 0.9.7g, 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8d (Affected 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
 </dl><h2>2005</h2><dl>
   <dt><b><a name="2005-2969"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2969">CVE-2005-2969</a></a></b>: 11th October 2005<p/></dt>
