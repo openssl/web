@@ -27,5 +27,8 @@ SSL/TLS protocols and related standards like the X.509 certificate system.
     <item name="Oscar"
           info="A public key certification system's toolkit"
           url="http://oscar.dstc.qut.edu.au/">
+    <item name="LSM-PKCS11"
+          info="A security module accessible as a PKCS#11 library"
+          url="http://www.clizio.com/lsmpkcs11.html">
 </ul>
 
