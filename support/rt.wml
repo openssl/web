@@ -1,19 +1,19 @@
 
-#use wml::openssl area=support page=rt2
+#use wml::openssl area=support page=rt
 
 <title>Support, Request Tracker</title>
 
 <h1>OpenSSL Request Tracker</h1>
 
 The OpenSSL project has set up a request tracker at
-<a href="http://www.aet.TU-Cottbus.DE/rt2/">http://www.aet.TU-Cottbus.DE/rt2/</a>
+<a href="http://rt.openssl.org/">http://rt.openssl.org/</a>
 offering read-only access using the account <tt>guest</tt> with the
 password <tt>guest</tt>.
 
 <h2>List of Bugs/Requests</h2>
 
 Please see the
-<a href="http://www.aet.TU-Cottbus.DE/rt2/NoAuth/Buglist.html">list</a>
+<a href="http://rt.openssl.org/NoAuth/Buglist.html">list</a>
 of new or open bugs and requests.
 
 <h2>Sending a Request</h2>
@@ -39,5 +39,5 @@ The request tracker is currently under installation/test, features may change
 and malfunctions may occur.
 
 <h2>Request Tracker Software</h2>
-The request tracker is using the RT2 software, available from
+The request tracker is using the RT software, available from
 <a href="http://www.fsck.com/projects/rt/">http://www.fsck.com/projects/rt/</a>.
