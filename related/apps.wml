@@ -142,7 +142,7 @@ the old SSLeay package or the new OpenSSL package.
           info="The PINE mail client with SSL support via OpenSSL"
           url="http://www.kfu.com/~nsayer/encryption/">
     <item name="MySSL"
-          info="Interface for OpenSSL to Borland Delphi"
+          info="Interface for OpenSSL to Borland Delphi (GONE MISSING?)"
           url="http://mujweb.cz/web/tomasek/myssl/index_en.html">
     <item name="M2Crypto"
           info="A SWIG based glue code for interfacing OpenSSL with Python"
@@ -224,7 +224,7 @@ the old SSLeay package or the new OpenSSL package.
 	  url="http://www.hohnstaedt.de/xca.html">
     <item name="DelphiImport"
 	  info="A Deplhi import unit for the OpenSSL DLL"
-	  url="http://www.csita.unige.it/software/free/delphiopenssl/indexe.html">
+	  url="http://www.disi.unige.it/person/FerranteM/delphiopenssl/">
     <item name="ELyCA"
           info="Another Certificate Authority package implemented with Phyton and OpenSSL"
           url="http://culture.eii.us.es/~pablo/elyca/">
