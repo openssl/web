@@ -383,7 +383,7 @@ foreach $l (@L) {
 <preserve max>
 <preserve more>
 <set-var %attributes>
-<table width=500 cellspacing=0 cellpadding=1 border=0>
+<table width=550 cellspacing=0 cellpadding=1 border=0>
 <tr><td><font face="Arial,Helvetica"><b>Date</b></font></td> <td>&nbsp;&nbsp;&nbsp;<font face="Arial,Helvetica"><b>Newsflash</b></font></td></tr>
 <tr><td><hr noshade size=1></td> <td><hr noshade size=1></td></tr>
 <:
