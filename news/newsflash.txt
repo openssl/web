@@ -1,3 +1,4 @@
+11-Oct-2007: OpenSSL 0.9.8f is now <a href="ROOT/source/">available</a>, including important bugfixes
 23-Feb-2007: OpenSSL 0.9.8e is now <a href="ROOT/source/">available</a>, including important bugfixes
 23-Feb-2007: OpenSSL 0.9.7m is now <a href="ROOT/source/">available</a>, including important bugfixes
 28-Sep-2006: <a href="ROOT/news/secadv_20060928.txt">Security Advisory</a>: Various security issues

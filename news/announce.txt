@@ -1,25 +1,19 @@
 
-   OpenSSL version 0.9.8e and 0.9.7m released
-   ==========================================
+   OpenSSL version 0.9.8f released
+   ===============================
 
    OpenSSL - The Open Source toolkit for SSL/TLS
    http://www.openssl.org/
 
    The OpenSSL project team is pleased to announce the release of
-   version 0.9.8e of our open source toolkit for SSL/TLS. This new
-   OpenSSL version is a feature and bugfix release and incorporates
-   enhancements and bugfixes to the toolkit.  For a complete list of
-   changes, please see http://www.openssl.org/source/exp/CHANGES.
+   version 0.9.8f of our open source toolkit for SSL/TLS. This new
+   OpenSSL version is a feature and bugfix release and also includes
+   new features.  For a complete list of changes, please see
+   http://www.openssl.org/source/exp/CHANGES.
 
-   The 0.9.8e release includes RFC3779 support and several cipher
-   selection bugfixes.
-
-   We also release 0.9.7m, which is the first full release of OpenSSL
-   which can be linked against the validated FIPS 1.1.1 module.
-
-   We consider OpenSSL 0.9.8e to be the best version of OpenSSL
+   We consider OpenSSL 0.9.8f to be the best version of OpenSSL
    available and we strongly recommend that users of older versions
-   upgrade as soon as possible. OpenSSL 0.9.8e is available for
+   upgrade as soon as possible. OpenSSL 0.9.8f is available for
    download via HTTP and FTP from the following master locations (you
    can find the various FTP mirrors under
    http://www.openssl.org/source/mirror.html):
@@ -27,20 +21,11 @@
      * http://www.openssl.org/source/
      * ftp://ftp.openssl.org/source/
 
-   For those who want or have to stay with the 0.9.7 series of
-   OpenSSL, we strongly recommend that you upgrade to OpenSSL 0.9.7m
-   as soon as possible.  It's available in the same location as
-   0.9.8e.
-
    The distribution file names are:
 
-    o openssl-0.9.8e.tar.gz
-      MD5 checksum: 3a7ff24f6ea5cd711984722ad654b927
-      SHA1 checksum: b429872d2a287714ab37e42296e6a5fbe23d32ff
-
-    o openssl-0.9.7m.tar.gz
-      MD5 checksum: 74a4d1b87e1e6e1ec95dbe58cb4c5b9a
-      SHA1 checksum: 546f6bcebdf72a633bad087469d3741a42f7b383
+    o openssl-0.9.8f.tar.gz
+      MD5 checksum: 898e6f926610ce655183f62c48bac93c
+      SHA1 checksum: 69633af18b24c124d9d6e5b1b225846279ec9c41
 
    The checksums were calculated using the following commands:
 
