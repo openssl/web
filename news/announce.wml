@@ -1,24 +1,24 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 0.9.8f</title>
+<title>Announcement: OpenSSL version 0.9.8g</title>
 
-<h1>Announcement: OpenSSL version 0.9.8f</h1>
+<h1>Announcement: OpenSSL version 0.9.8g</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
 
 <p>
 The OpenSSL project team is pleased to announce the release of
-version 0.9.8f of our open source toolkit for SSL/TLS.  This new
-OpenSSL version is a security and bugfix release and also includes new features.  For a complete
+version 0.9.8g of our open source toolkit for SSL/TLS.  This new
+OpenSSL version is a bugfix release.  For a complete
 list of changes, please see
 <a href="http://www.openssl.org/source/exp/CHANGES">http://www.openssl.org/source/exp/CHANGES</a>.
 <p>
 
-We consider OpenSSL 0.9.8f to be the best version of OpenSSL available
+We consider OpenSSL 0.9.8g to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 0.9.8f is available for download via HTTP
+soon as possible.  OpenSSL 0.9.8g is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -31,9 +31,9 @@ FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www
 The distribution file name is:
 
 <ul>
-  <li>openssl-0.9.8f.tar.gz<br>
-      MD5 checksum: 114bf908eb1b293d11d3e6b18a09269f
-      SHA1 checksum: 0a0a3fd9be3d46053df2e91b6eb8a3b4348c793c
+  <li>openssl-0.9.8g.tar.gz<br>
+      MD5 checksum: acf70a16359bf3658bdfb74bda1c4419
+      SHA1 checksum: 4e9c5ced466715d18fd924de79bde5c15da80fa1
 </ul>
 
 <p>
