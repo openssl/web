@@ -1,3 +1,4 @@
+29-Nov-2007: <a href="ROOT/news/secadv_20071129.txt">Security Advisory</a>: FIPS 1.1.1 module PRNG security issue
 19-Oct-2007: OpenSSL 0.9.8g is now <a href="ROOT/source/">available</a>, including bug fixes
 12-Oct-2007: <a href="ROOT/news/secadv_20071012.txt">Security Advisory</a>: Various security issues
 11-Oct-2007: OpenSSL 0.9.8f is now <a href="ROOT/source/">available</a>, including security and bug fixes
