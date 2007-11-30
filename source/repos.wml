@@ -27,16 +27,29 @@ convenience only. When you really want to keep yourself up-to-date please use
 the bandwidth-friendly RSYNC service to directly mirror the CVS repository
 instead.
 
+<h2>Anonymous CVS access over ssh</h2>
+
+Read only access to the respository is possible using anonymous CVS over ssh.
+For example the following command will check out the HEAD:
+
+    <p>
+    <box bgcolor="#f0f0f0">
+    <b><verbatim>
+$ cvs -d anonymous@cvs.openssl.org:/openssl-cvs co openssl
+    </verbatim></b>
+    </box>
+
+
+
 <h2>Using your own local CVS repository mirror</h2>
 
-Because direct CVS access to the repository is only available for OpenSSL core
-team members you have to establish a local copy of the repository through the
-RSYNC service before you can checkout the source tree. This is not a drawback,
-it's an advantage: Using RSYNC is faster than plain CVS or even CVSup access
-(because RSYNC safes bandwidth by using compression, the client is easily to
-install and the used algorithm is very fast) and only with a local repository
-copy you can actually work reliable and without delays (think about a <tt>cvs
-diff</tt> over the network).
+You can also establish a local copy of the repository through the RSYNC service
+and then checkout the source tree from that. This has some advantages: using
+RSYNC is faster than plain CVS or even CVSup access (because RSYNC saves
+bandwidth by using compression, the client is easily to install and the used
+algorithm is very fast) and only with a local repository copy you can actually
+work reliable and without delays (think about a <tt>cvs diff</tt> over the
+network).
 
 <ol>
 <li>Make sure you have the excellent RSYNC client program (`<tt>rsync</tt>')
