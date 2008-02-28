@@ -48,8 +48,10 @@ This vulnerability is tracked as CVE-2007-5135.
 Versions Affected
 -----------------
 
-All releases of 0.9.8 prior to 0.9.8f. All releases of 0.9.7 prior to
-0.9.7m.
+All releases of 0.9.8 prior to 0.9.8f. All releases of 0.9.7 up to and
+including 0.9.7m.  (Note this advisory used to state "prior to 0.9.7m"
+but this is incorrect as the fix was not committed until after 0.9.7m
+was released)
 
 (Note that versions prior to 0.9.8d and 0.9.7l actually had a worse
 problem in the same function).
