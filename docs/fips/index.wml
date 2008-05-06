@@ -8,5 +8,5 @@
 Here you can find a number of FIPS140 related files including the user
 guide and test vectors.
 <p>
-<filelist "*.pdf *.gz">
+<filelist "*.pdf *.gz *.zip">
 
