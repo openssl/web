@@ -3,5 +3,6 @@
 *.tar.gz.asc
 *.tar.gz.md5
 *.tar.gz.sha1
+*.tar.gz.sig
 *.patch
 index.cache
