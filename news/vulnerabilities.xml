@@ -1,7 +1,7 @@
 <!-- All security issues affecting OpenSSL since the 
      release of 0.9.6 on 20000924, 0.9.7 on 20021231 -->
 
-<security updated="20060928">
+<security updated="20080528">
 
   <issue public="20020730">
     <cve name="2002-0655"/>
@@ -580,6 +580,36 @@ application that uses this function and overrun a buffer.
 A flaw in the SSLv2 client code was discovered. When a client
 application used OpenSSL to create an SSLv2 connection to a malicious
 server, that server could cause the client to crash.
+    </description>
+  </issue>
+
+  <issue public="20080528">
+    <cve name="2008-0891"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <advisory url="http://www.openssl.org/news/secadv_20080528.txt"/>
+    <reported source="codenomicon"/>
+    <description>
+Testing using the Codenomicon TLS test suite discovered a flaw in the
+handling of server name extension data in OpenSSL 0.9.8f and OpenSSL
+0.9.8g.  If OpenSSL has been compiled using the non-default TLS server
+name extensions, a remote attacker could send a carefully crafted
+packet to a server application using OpenSSL and cause it to crash.
+    </description>
+  </issue>
+
+  <issue public="20080528">
+    <cve name="2008-1672"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <advisory url="http://www.openssl.org/news/secadv_20080528.txt"/>
+    <reported source="codenomicon"/>
+    <description>
+Testing using the Codenomicon TLS test suite discovered a flaw if the
+'Server Key exchange message' is omitted from a TLS handshake in
+OpenSSL 0.9.8f and OpenSSL 0.9.8g.  If a client connects to a
+malicious server with particular cipher suites, the server could cause
+the client to crash. 
     </description>
   </issue>
 
