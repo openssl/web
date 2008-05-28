@@ -20,6 +20,8 @@ the client to crash.
     <a href="http://www.openssl.org/news/secadv_20080528.txt">(original advisory)</a>
   </dd>
   <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.8h (Affected 0.9.8g, 0.9.8f) </dd>
   <p/>
   <dt><b><a name="2008-0891"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-0891">CVE-2008-0891</a></a></b>: 28th May 2008<p/></dt>
   <dd>
@@ -33,6 +35,8 @@ packet to a server application using OpenSSL and cause it to crash.
     <a href="http://www.openssl.org/news/secadv_20080528.txt">(original advisory)</a>
   </dd>
   <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.8h (Affected 0.9.8g, 0.9.8f) </dd>
   <p/>
 </dl><h2>2006</h2><dl>
   <dt><b><a name="2006-4343"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4343">CVE-2006-4343</a></a></b>: 28th September 2006<p/></dt>
