@@ -36,4 +36,7 @@ and a URL.
     <item name="Secure Endpoints Inc."
 	  info="Expert consulting and software development services, OpenSSL and more"
 	  url="http://www.secure-endpoints.com/">
+    <item name="dmp|cda"
+	  info="Websolutions including OpenSSL and more"
+	  url="http://www.dmpcda.de/">
 </ul>
