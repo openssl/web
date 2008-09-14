@@ -16,3 +16,7 @@ ForceType application/binary
 <Files *.sha1>
 ForceType application/binary
 </Files>
+
+<Files *.asc>
+ForceType application/binary
+</Files>
