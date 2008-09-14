@@ -18,5 +18,5 @@ ForceType application/binary
 </Files>
 
 <Files *.asc>
-ForceType text/plain
+ForceType application/binary
 </Files>
