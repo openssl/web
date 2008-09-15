@@ -1,3 +1,4 @@
+15-Sep-2008: OpenSSL 0.9.8i is now <a href="ROOT/source/">available</a>, including important bug fixes
 28-May-2008: <a href="ROOT/news/secadv_20080528.txt">Security Advisory</a>: Two moderate severity security issues
 28-May-2008: OpenSSL 0.9.8h is now <a href="ROOT/source/">available</a>, including security and bug fixes
 29-Nov-2007: <a href="ROOT/news/secadv_20071129.txt">Security Advisory</a>: FIPS 1.1.1 module PRNG security issue
