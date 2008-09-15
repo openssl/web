@@ -24,9 +24,9 @@
    The distribution file names are:
 
     o openssl-0.9.8i.tar.gz
-      Size: 3459311
-      MD5 checksum: f6fbf6b3c43d62796a5b3c4f409753ba
-      SHA1 checksum: 6107c841bf7e86f399dca3ead1835e43bc51fdb5
+      Size: 3459643
+      MD5 checksum: 561e00f18821c74b2b86c8c7786f9d8b
+      SHA1 checksum: b2e029cfb68bf32eae997d60317a40945db5a65f
 
    The checksums were calculated using the following commands:
 
