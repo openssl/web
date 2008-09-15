@@ -1,31 +1,24 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 0.9.8h</title>
+<title>Announcement: OpenSSL version 0.9.8i</title>
 
-<h1>Announcement: OpenSSL version 0.9.8h</h1>
+<h1>Announcement: OpenSSL version 0.9.8i</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
 
 <p>
 The OpenSSL project team is pleased to announce the release of
-version 0.9.8h of our open source toolkit for SSL/TLS.  This new
-OpenSSL version is a security and bugfix release.  For a complete
-list of changes, please see
+version 0.9.8i of our open source toolkit for SSL/TLS.  This new
+OpenSSL version is a bugfix release.  For a complete list of changes,
+please see
 <a href="http://www.openssl.org/source/exp/CHANGES">http://www.openssl.org/source/exp/CHANGES</a>.
 <p>
 
-This release fixes two moderate security vulnerabilities which
-could result in a remote denial of service, CVE-2008-0891 and
-CVE-2008-1672.  Please see
-<a href="http://www.openssl.org/news/secadv_20080528.txt">http://www.openssl.org/news/secadv_20080528.txt</a>
-<p>
-
-
-We consider OpenSSL 0.9.8h to be the best version of OpenSSL available
+We consider OpenSSL 0.9.8i to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 0.9.8h is available for download via HTTP
+soon as possible.  OpenSSL 0.9.8i is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -38,10 +31,10 @@ FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www
 The distribution file name is:
 
 <ul>
-  <li>openssl-0.9.8h.tar.gz<br>
-      Size: 3439981<br>
-      MD5 checksum: 7d3d41dafc76cf2fcb5559963b5783b3<br>
-      SHA1 checksum: ced4f2da24a202e01ea22bef30ebc8aee274de86<br>
+  <li>openssl-0.9.8i.tar.gz<br>
+      Size: 3459311<br>
+      MD5 checksum: f6fbf6b3c43d62796a5b3c4f409753ba<br>
+      SHA1 checksum: 6107c841bf7e86f399dca3ead1835e43bc51fdb5<br>
 </ul>
 
 <p>
