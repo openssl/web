@@ -1,19 +1,19 @@
 
-   OpenSSL version 0.9.8i released
+   OpenSSL version 0.9.8j released
    ===============================
 
    OpenSSL - The Open Source toolkit for SSL/TLS
    http://www.openssl.org/
 
    The OpenSSL project team is pleased to announce the release of
-   version 0.9.8i of our open source toolkit for SSL/TLS. This new
-   OpenSSL version is a bugfix release.  For a complete list of changes,
-   please see
+   version 0.9.8j of our open source toolkit for SSL/TLS. This new
+   OpenSSL version is a critical security, feature and bugfix release.
+   For a complete list of changes, please see
    http://www.openssl.org/source/exp/CHANGES.
 
-   We consider OpenSSL 0.9.8i to be the best version of OpenSSL
+   We consider OpenSSL 0.9.8j to be the best version of OpenSSL
    available and we strongly recommend that users of older versions
-   upgrade as soon as possible. OpenSSL 0.9.8i is available for
+   upgrade as soon as possible. OpenSSL 0.9.8j is available for
    download via HTTP and FTP from the following master locations (you
    can find the various FTP mirrors under
    http://www.openssl.org/source/mirror.html):
@@ -23,10 +23,10 @@
 
    The distribution file names are:
 
-    o openssl-0.9.8i.tar.gz
-      Size: 3459643
-      MD5 checksum: 561e00f18821c74b2b86c8c7786f9d8b
-      SHA1 checksum: b2e029cfb68bf32eae997d60317a40945db5a65f
+    o openssl-0.9.8j.tar.gz
+      Size: 3738359
+      MD5 checksum: a5cb5f6c3d11affb387ecf7a997cac0c
+      SHA1 checksum: f70f7127a26e951e8a0d854c0c9e6b4c24df78e4
 
    The checksums were calculated using the following commands:
 
