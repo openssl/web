@@ -1,7 +1,7 @@
 OpenSSL Security Advisory [07-Jan-2009]
 
 Incorrect checks for malformed signatures
--------------------------------------------
+===========================================
 
 Several functions inside OpenSSL incorrectly checked the result after
 calling the EVP_VerifyFinal function, allowing a malformed signature
@@ -20,7 +20,7 @@ The OpenSSL security team would like to thank the Google Security Team
 for reporting this issue.
 
 Who is affected?
------------------
+=================
 
 Everyone using OpenSSL releases prior to 0.9.8j as an SSL/TLS client
 when connecting to a server whose certificate contains a DSA or ECDSA key.
@@ -32,7 +32,7 @@ Verification of client certificates by OpenSSL servers for any key type
 is NOT affected.
 
 Recommendations for users of OpenSSL
-------------------------------------
+=====================================
 
 Users of OpenSSL 0.9.8 should update to the OpenSSL 0.9.8j release
 which contains a patch to correct this issue.
@@ -42,7 +42,7 @@ distributions who wish to backport this patch to versions they build
 from source.
 
 Recommendations for projects using OpenSSL
-------------------------------------------
+===========================================
 
 Projects and products using OpenSSL should audit any use of the
 routine EVP_VerifyFinal() to ensure that the return code is being
@@ -50,7 +50,7 @@ correctly handled.  As documented, this function returns 1 for a
 successful verification, 0 for failure, and -1 for an error.
 
 General recommendations
------------------------
+========================
 
 Any server that has clients using OpenSSL verifying DSA or ECDSA
 certificates, regardless of the software used by the server, should
@@ -60,7 +60,7 @@ check for revocation) impersonation will still be possible until the
 certificate expires.
 
 References
-==========
+===========
 
 URL for this Security Advisory:
 http://www.openssl.org/news/secadv_20090107.txt
