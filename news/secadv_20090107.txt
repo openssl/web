@@ -59,7 +59,11 @@ certificates. Note that unless certificates are revoked (and clients
 check for revocation) impersonation will still be possible until the
 certificate expires.
 
+References
+==========
 
+URL for this Security Advisory:
+http://www.openssl.org/news/secadv_20090107.txt
 
 
 diff -ur openssl-0.9.8i-ORIG/apps/speed.c openssl-0.9.8i/apps/speed.c
