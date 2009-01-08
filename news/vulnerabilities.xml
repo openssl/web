@@ -615,6 +615,34 @@ the client to crash.
     </description>
   </issue>
 
+  <issue public="20090107">
+    <cve name="2008-5077"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <fixed base="0.9.8" version="0.9.8j" date="20090107"/>
+    <advisory url="http://www.openssl.org/news/secadv_20090107.txt"/>
+    <reported source="google"/>
+    <description>
+
+The Google Security Team discovered several functions inside OpenSSL
+incorrectly checked the result after calling the EVP_VerifyFinal
+function, allowing a malformed signature to be treated as a good
+signature rather than as an error.  This issue affected the signature
+checks on DSA and ECDSA keys used with SSL/TLS.  One way to exploit
+this flaw would be for a remote attacker who is in control of a
+malicious server or who can use a 'man in the middle' attack to
+present a malformed SSL/TLS signature from a certificate chain to a
+vulnerable client, bypassing validation.
+    </description>
+  </issue>
+
 
 </security>
 

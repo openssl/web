@@ -7,7 +7,28 @@
 
 <title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
-</p><h2>2008</h2><dl>
+</p><h2>2009</h2><dl>
+  <dt><b><a name="2008-5077"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-5077">CVE-2008-5077</a></a></b>: 7th January 2009<p/></dt>
+  <dd>
+    <description>
+
+The Google Security Team discovered several functions inside OpenSSL
+incorrectly checked the result after calling the EVP_VerifyFinal
+function, allowing a malformed signature to be treated as a good
+signature rather than as an error.  This issue affected the signature
+checks on DSA and ECDSA keys used with SSL/TLS.  One way to exploit
+this flaw would be for a remote attacker who is in control of a
+malicious server or who can use a 'man in the middle' attack to
+present a malformed SSL/TLS signature from a certificate chain to a
+vulnerable client, bypassing validation.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20090107.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.8j (Affected 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+</dl><h2>2008</h2><dl>
   <dt><b><a name="2008-1672"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1672">CVE-2008-1672</a></a></b>: 28th May 2008<p/></dt>
   <dd>
     <description>
