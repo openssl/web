@@ -13,3 +13,12 @@ RewriteRule  ^cvs/(.*)$        http://cvs.openssl.org/     [R,L]
 RewriteRule  ^exp/CHANGES$     http://cvs.openssl.org/getfile?f=openssl/CHANGES [R,L]
 RewriteRule  ^exp/(.*)$        http://cvs.openssl.org/     [R,L]
 
+<Files *.gz.asc>
+    RemoveEncoding .gz
+</Files>
+<Files *.gz.md5>
+    RemoveEncoding .gz
+</Files>
+<Files *.gz.sha1>
+    RemoveEncoding .gz
+</Files>
