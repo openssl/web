@@ -1,22 +1,19 @@
 
-   OpenSSL version 0.9.8j released
+   OpenSSL version 0.9.8k released
    ===============================
 
    OpenSSL - The Open Source toolkit for SSL/TLS
    http://www.openssl.org/
 
    The OpenSSL project team is pleased to announce the release of
-   version 0.9.8j of our open source toolkit for SSL/TLS. This new
-   OpenSSL version is a critical security, feature and bugfix release.
+   version 0.9.8k of our open source toolkit for SSL/TLS. This new
+   OpenSSL version is a moderate security and bugfix release.
    For a complete list of changes, please see
    http://www.openssl.org/source/exp/CHANGES.
 
-   This is the first full release of OpenSSL that can link against the
-   validated FIPS module version 1.2
-
-   We consider OpenSSL 0.9.8j to be the best version of OpenSSL
+   We consider OpenSSL 0.9.8k to be the best version of OpenSSL
    available and we strongly recommend that users of older versions
-   upgrade as soon as possible. OpenSSL 0.9.8j is available for
+   upgrade as soon as possible. OpenSSL 0.9.8k is available for
    download via HTTP and FTP from the following master locations (you
    can find the various FTP mirrors under
    http://www.openssl.org/source/mirror.html):
@@ -26,10 +23,10 @@
 
    The distribution file names are:
 
-    o openssl-0.9.8j.tar.gz
-      Size: 3738359
-      MD5 checksum: a5cb5f6c3d11affb387ecf7a997cac0c
-      SHA1 checksum: f70f7127a26e951e8a0d854c0c9e6b4c24df78e4
+    o openssl-0.9.8k.tar.gz
+      Size: 3743977
+      MD5 checksum: 2a37cd68109e322586e4c539edbd9048
+      SHA1 checksum: 4f67cddbd90e4c16f10f42249a6d1dc6258aabcc
 
    The checksums were calculated using the following commands:
 

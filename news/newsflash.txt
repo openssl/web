@@ -1,3 +1,5 @@
+25-March-2009: OpenSSL 0.9.8k is now <a href="ROOT/source/">available</a>, including important bug fixes
+25-March-2009: <a href="ROOT/news/secadv_20090325.txt">Security Advisory</a>: Three moderate severity security issues
 07-Jan-2009: OpenSSL 0.9.8j is now <a href="ROOT/source/">available</a>, including important bug fixes
 07-Jan-2009: <a href="ROOT/news/secadv_20090107.txt">Security Advisory</a>: incorrect checks for malformed signatures
 18-Nov-2008: OpenSSL FIPS 140-2 module 1.2 is now <a href="ROOT/source/">available</a>
