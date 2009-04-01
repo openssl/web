@@ -11,7 +11,7 @@ of the OpenSSL project.
 <ul>
 <li>Next proposed minor release: OpenSSL <b>0.9.8l</b>, currently in development.<br>
     The release date is yet to be set.
-<li>Next proposed MAJOR release: OpenSSL <b>0.9.9</b>, currently in development.<br>
+<li>Next proposed MAJOR release: OpenSSL <b>1.0.0</b>, currently in feature freeze.<br>
     The release date is yet to be set.
 <li>The current <a href="$(ROOT)/source/cvs/">CVS Source Code State</a>.
 </ul>
