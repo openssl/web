@@ -460,7 +460,8 @@ All markup code and graphics on this website
 are Copyright &copy; 1999-2005 <a href="http://www.openssl.org/">The OpenSSL Project</a>, 
 All rights reserved.<br>
 This website is served by an 
-<a href="http://www.apache.org/"><font color="#000000">Apache</font></a>
+<a href="http://www.apache.org/"><font color="#000000">Apache</font></a>/
+<a href="http://www.modssl.org/"><font color="#000000">mod_ssl</font></a>
 webserver environment.<br>
 Hardware and bandwidth provided by 
 <a href="http://www.space.net/"><font color="#000000">

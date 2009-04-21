@@ -12,6 +12,9 @@ OpenSSL) related stuff.
     <item name="OpenSSL"
           info="The official home of the OpenSSL project"
           url="http://www.openssl.org/">
+    <item name="mod_ssl"
+          info="The official home of the Apache/mod_ssl project"
+          url="http://www.modssl.org/">
 	<item name="MS Dev Studio workspace for OpenSSL"
 		url="http://openssl.governmentsecurity.org/">
 	<item name="SSLeay Doc: FAQ List"
@@ -42,7 +45,7 @@ OpenSSL) related stuff.
           info="A port of OpenSSL to the VMS environment"
           url="http://www.free.lp.se/openssl/">
 	<item name="Network Security with OpenSSL"
-	 info="An O'Reilly book on using OpenSSL (published June 2002)"
-	 url="http://www.opensslbook.com/">
+	      info="An O'Reilly book on using OpenSSL (published June 2002)"
+	      url="http://www.opensslbook.com/">
 </ul>
 
