@@ -59,16 +59,12 @@
 <mirror url="ftp://ftp.hjc.edu.sg/opensource/openssl/" loc="SG">
 <mirror url="ftp://ftp.singnet.com.sg/opensource/openssl/" loc="SG">
 <mirror url="ftp://mirrors.usc.edu/pub/openssl/" loc="US">
-<mirror url="http://mirrors.usc.edu/pub/openssl/" loc="US">
-<mirror url="http://www.binarycode.org/openssl/" loc="US">
 <mirror url="rsync://mirrors.usc.edu/openssl/" loc="US">
-<mirror url="http://openssl.securitywonks.net/" loc="US">
 <mirror url="http://openssl.linux-mirror.org/" loc="DE">
 <mirror url="http://openssl.oss-mirror.org/" loc="IE">
 <mirror url="http://openssl.onionland.org/" loc="DE">
 <mirror url="rsync://onionland.org/openssl/" loc="DE">
 <mirror url="http://www.securehost.com/mirror/openssl/" loc="BS">
-<mirror url="http://www.ftp.openssl.mirroarrr.de" loc="DE">
 <mirror url="http://www.very-clever.com/download/openssl/" loc="DE">
 
 </ul>
