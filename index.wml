@@ -1,5 +1,5 @@
 
-#use wml::openssl area=title page=home
+#use wml::openssl area=title 
 
 <title>The Open Source toolkit for SSL/TLS</title>
 
