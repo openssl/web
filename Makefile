@@ -14,7 +14,7 @@ FRC.lock-hack:
 
 all: docs-depend docs HOWTOs miscs
 	@echo "[" `date` "] Recursive HTML Generation.... (be patient)"
-	@wmk -a
+	@wmk -I $(PODSHOME)/.. -a
 	@# Because there's a conflict and wmk skips this one...
 	@wmk docs/apps/openssl.wml
 	@# Because we're dependent of other files

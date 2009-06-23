@@ -9,5 +9,5 @@ This is a copy of the current LICENSE file inside the CVS repository.
 <p>
 
 <pre>
-#include '/e/openssl/exp/openssl/LICENSE'
+#include "LICENSE"
 </pre>
