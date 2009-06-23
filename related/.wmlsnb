@@ -3,11 +3,11 @@
 ##
 
 <snb>
-  <snb_button id=openssl  txt="OpenSSL/SSLeay" url="">
+  <snb_button id=openssl  txt="OpenSSL/SSLeay" url="index.html">
   <snb_button id=ssl      txt="SSL/TLS"        url="ssl.html">
   <snb_button id=kits     txt="Toolkits"       url="kits.html">
   <snb_button id=apps     txt="Applications"   url="apps.html">
-  <snb_button id=commercial txt="Commercial"   url="commercial.html">
+  <snb_button id=commercial     txt="Commercial"   url="commercial.html">
   <snb_button id=binaries txt="Binaries"       url="binaries.html">
   <snb_button id=misc     txt="Misc"           url="misc.html">
 </snb>

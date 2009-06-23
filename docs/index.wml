@@ -23,6 +23,9 @@ line tool, as well as a repository of HOWTO and other miscellaneous documents.
 <li><a href="HOWTO/"><font id=sfl>HOWTO</font></a>: [STILL INCOMPLETE]<br>
     HOWTO documents to introduce concepts or explain them in a way that is not possible in the manuals.
 <p>
+<li><a href="fips/"><font id=sfl>FIPS140</font></a>:<br>
+    Data and documentation related to the FIPS140 validation support in OpenSSL
+<p>
 <li><a href="misc/"><font id=sfl>misc</font></a>:<br>
     Miscellaneous documents with information that has no other logical place.  Among others, you will find a list of current PGP/GnuPG fingerprints to help you check OpenSSL distribution signatures.
 </ul>
