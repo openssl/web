@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/v/openssl/sw/bin/perl
 ##
 ##  faq.cgi -- Read FAQ file and pretty-print it as HTML
 ##
