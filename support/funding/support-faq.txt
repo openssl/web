@@ -219,8 +219,8 @@ or other software.
 
 * Why the separate domain name?
 
-We're not conducting business using the *opensslfoundation.com* domain name instead of
-*openssl.org* domain name because we
+We're conducting business using the *opensslfoundation.com* domain name instead
+of the *openssl.org* domain name because we
 want to distinguish the new for-pay support and service activities from the
 traditional OpenSSL project which will continue as before.  We would like
 to have used the *openssl.com* domain name but it is taken by someone not
