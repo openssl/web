@@ -1,0 +1,20 @@
+
+#use wml::openssl area=funding page=index
+
+<title>New Development Wish List</title>
+
+<h1>Wish List</h1>
+<p>
+Most of the OpenSSL team have full time day jobs and so are precluded from tackling some ambitious improvements
+that would otherwise attract their attention.  If and when we have the manpower available
+some of the new initiatives to improve OpenSSL that will be addressed are:
+<p>
+<ul>
+<li>Support for TLS v1.1 and 1.2.
+<p>
+<li>New algorithm schemes PSS and OAEP.
+<p>
+<li>Streaming ASN1 decode including CMS support.
+<p>
+<li>A new FIPS Object Module API that will be OpenSSL version independent and built from a separate source tarball.
+</ul>

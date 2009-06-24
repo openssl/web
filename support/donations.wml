@@ -1,0 +1,70 @@
+
+#use wml::openssl area=support page=donations
+
+<title>Donations</title>
+
+<h1>Donations and Sponsorship</h1>
+
+<p>You donation to the OpenSSL team will support the ongoing development activities of the team members.
+</p>
+
+<p>Please note that the <a href="support-contact.html">OpenSSL Software Foundation</a> (OSF) is incorporated in the United States as a regular for-profit corporation.
+It does not qualify as a non-profit, charitable organisation under Section 501(c)(3)
+of the U.S. Internal Revenue Code.  We looked into it and concluded that 501(c)(3) status would require more of an
+investment in time and money than we can justify at present.  This means that, for individuals within the U.S., donations
+to the OSF are not tax-deductible.  Corporate donations can of course be written off as a business expense.
+</p>
+
+<p>In addition to direct financial contributions in the form of donations or sponsorship you may also
+support the OpenSSL project financially with the purchase of a <a href="funding/contract.html"> support contract</a>.
+</p>
+
+<table>
+<tr><td><b id=sf>Sponsorship Level</b></td><td><b id=sf>Acknowledgement</b></td></tr>
+<tr><td><hr noshade size=1></td><td><hr noshade size=1></td></tr>
+<tr>
+
+<td>
+Platinum<br>
+$50,000/yr<br>
+<br>
+<br>
+
+Gold<br>
+$20,000/yr<br>
+<br>
+<br>
+
+Silver<br>
+$10,000/yr<br>
+<br>
+
+Contributing Sponsor<br>
+$5,000/yr<br>
+<br>
+</td>
+
+<td valign=top>
+Prominent logo placement on openssl.org<br>
+OpenSSL sponsor logo for your use<br>
+Acknowledgement on openssl.org<br>
+<br>
+
+Logo placement on openssl.org<br>
+OpenSSL sponsor logo for your use<br>
+Acknowledgement on openssl.org<br>
+<br>
+
+Acknowledgement on openssl.org<br>
+<br>
+<br>
+
+Acknowledgement in source distributions<br>
+<br>
+<br>
+</td>
+
+</tr>
+</table>
+<p>
+For further information please contact the <a href="funding/support-contact.html">OpenSSL Software Foundation</a>.

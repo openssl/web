@@ -1,0 +1,146 @@
+
+#use wml::openssl area=support page=lists
+
+<title>Support, Mailing Lists</title>
+
+<h1>OpenSSL Mailing Lists</h1>
+
+The OpenSSL project uses various mailing lists to coordinate the development
+and to provide support to the user community. They all have an Email address
+of <tt>openssl-</tt><i id=red>name</i><tt>@openssl.org</tt> and are remote
+controlled by the Majordomo robot under <tt
+id=red>majordomo</tt><tt>@openssl.org</tt>. 
+
+<h2>Overview</h2>
+
+Here is an overview of the available mailing lists:
+
+<p>
+<table cellspacing=0 cellpadding=2 border=0>
+<tr>
+   <td><b id=sf>List Address</b></td>
+   <td><b id=sf>Subscription</b></td> 
+   <td><b id=sf>Posting</b></td> 
+   <td><b id=sf>Usage</b></td> 
+</tr>
+<tr>
+   <td><hr noshade size=1></td>
+   <td><hr noshade size=1></td>
+   <td><hr noshade size=1></td>
+   <td><hr noshade size=1></td>
+</tr>
+<tr>
+   <td><a href="mailto:openssl-announce@openssl.org">openssl-announce</a></td>
+   <td>open</td> <td>core team</td> 
+   <td>Official Project Announcements</td>
+</tr>
+# <tr>
+#    <td><a href="mailto:openssl-core@openssl.org">openssl-core</a></td>
+#    <td>closed</td> <td>subscribers</td> 
+#    <td>Internal Core Team Discussions</td>
+# </tr>
+<tr>
+   <td><a href="mailto:openssl-cvs@openssl.org">openssl-cvs</a></td>
+   <td>open</td> <td>subscribers</td>
+   <td>CVS Repository Messages</td>
+</tr>
+<tr>
+   <td><a href="mailto:openssl-dev@openssl.org">openssl-dev</a></td>
+   <td>open</td> <td>subscribers</td>
+   <td>Discussions on development of the OpenSSL library. Not for application
+   development questions!</td>
+</tr>
+<tr>
+   <td><a href="mailto:openssl-users@openssl.org">openssl-users</a></td>
+   <td>open</td> <td>subscribers</td>
+   <td>Application Development, OpenSSL Usage, Installation Problems,
+   etc.</td>
+</tr>
+</table>
+
+<h2>Subscription</h2>
+
+To easily subscribe/unsubscribe to/from those lists, use the following form to
+drop an appropriate Email to Majordomo.  After Majordomo received your
+request, it will respond to the entered Email address with an authority
+challenge which has to send back again for security reasons (to avoid that
+others subscribe you without your ok).  So entering the Email address of
+someone else in the form below is useless, of course.
+
+<center>
+<form action="<absolute majordomo.cgi>" method="GET">
+<table cellspacing=0 cellpadding=2 border=0 bgcolor="#cccccc"><tr><td>
+<table cellspacing=0 cellpadding=4 border=0 bgcolor="#f0f0f0">
+<tr>
+<td colspan=3><font id="sfl">Mailing List Subscription</font></td>
+</tr>
+<tr>
+<td>
+<input type=checkbox checked name="action" value="subscribe"> subscribe<br>
+<input type=checkbox name="action" value="unsubscribe"> unsubscribe<br>
+</td>
+<td colspan=2>
+<div id=sf>Enter your Email address here:</div><br>
+<input type=text name="email" size=35 value="your@address.dom">
+</td>
+</tr>
+<tr>
+<td>
+<input type=checkbox checked name="list" value="announce"> openssl-announce<br>
+<input type=checkbox checked name="list" value="users"> openssl-users
+</td>
+<td>
+<input type=checkbox name="list" value="dev"> openssl-dev<br>
+<input type=checkbox name="list" value="cvs"> openssl-cvs
+</td>
+<td align=right valign=bottom> 
+<div id=sf><input type=submit value="Send to Majordomo!"></div>
+</td>
+</tr>
+</table>
+</td></tr></table>
+</form>
+</center>
+
+If you don't trust the above form or want to do it manually, you can contact
+Majordomo directly, of course.  To subscribe to one of the mailing list, just
+send an Email to <tt id=red>majordomo</tt><tt>@openssl.org</tt> with the
+following text in the <i>body</i> (the subject is not important and can be
+empty): ``<tt>subscribe openssl-</tt><i id=red>name</i> &nbsp; <i
+id=red>your@address.dom</i>'' But please remember this cookie: ``Internet is a
+wonderful mechanism for making a fool of yourself in front of a very large
+audience''.  So start thinking already with your subscription and <b>don't</b>
+send it to the list addresses, please. Actually the above form is provided
+mainly to avoid this common and nasty mistake. 
+
+<h2>Archive</h2>
+
+The mailing lists are automatically archived at the following locations:
+
+<ul>
+<li><b>openssl-announce</b>:<br>
+    - <a href="http://marc.info/?l=openssl-announce">
+      http://marc.info/?l=openssl-announce</a><br>
+    - <a href="http://www.mail-archive.com/openssl-announce@openssl.org/">
+      http://www.mail-archive.com/openssl-announce@openssl.org/</a><br>
+<li><b>openssl-users</b>:<br>
+    - <a href="http://marc.info/?l=openssl-users">
+      http://marc.info/?l=openssl-users</a><br>
+    - <a href="http://www.mail-archive.com/openssl-users@openssl.org/">
+      http://www.mail-archive.com/openssl-users@openssl.org/</a>
+    - <a href="http://groups.google.com/groups?group=mailing.openssl.users">
+      http://groups.google.com/groups?group=mailing.openssl.users</a><br>
+<li><b>openssl-dev</b>:<br>
+    - <a href="http://marc.info/?l=openssl-dev">
+      http://marc.info/?l=openssl-dev</a><br>
+    - <a href="http://www.mail-archive.com/openssl-dev@openssl.org/">
+      http://www.mail-archive.com/openssl-dev@openssl.org/</a>
+    - <a href="http://groups.google.com/groups?group=mailing.openssl.dev">
+      http://groups.google.com/groups?group=mailing.openssl.dev</a><br>
+<li><b>openssl-cvs</b>:<br>
+    - <a href="http://marc.info/?l=openssl-cvs">
+      http://marc.info/?l=openssl-cvs</a><br>
+    - <a href="http://groups.google.com/groups?group=mailing.openssl.cvs">
+      http://groups.google.com/groups?group=mailing.openssl.cvs</a><br>
+</ul>
+

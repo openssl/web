@@ -1,0 +1,24 @@
+
+#use wml::openssl area=funding page=index
+
+<title>Vendor Support Contract</title>
+
+<h1>Vendor Level Support</h1>
+<p>
+US$20,000 annually
+<p>
+(<a href="support-definitions.html">definitions</a> of terms)
+<p>
+<ul>
+<li>Institutional Response with escalation to Designated Responder as appropriate.
+<li>12x5 availability
+<li>Two Support Administrators
+<li>Limit of four Service Requests per month
+<li>Custom patch preparation
+<li>OpenSSL FIPS Object Module support included
+<li>FIPS validation support excluded
+</ul>
+<p>
+This plan is designed for the medium enterprise using OpenSSL for a single product or product line.
+The prospective Vendor Level Support customer has a proficient technical staff but no specific expertise in cryptography or OpenSSL.
+Technical support is provided for use of the unmodified OpenSSL FIPS Object Module, but not for validations of derivative software.

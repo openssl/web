@@ -1,0 +1,30 @@
+
+#use wml::openssl area=funding page=index
+
+<title>Premium Support Contract</title>
+
+<h1>Premium Level Support</h1>
+<p>
+US$50,000 annually
+<p>
+(<a href="support-definitions.html">definitions</a> of terms)
+<p>
+<ul>
+<li>All technical support requests handled directly by a Designated Responder
+<li>24x7x365 availability
+<li>Four Support Administrators
+<li>Unlimited Service Requests
+<li>Custom patch preparation and creation
+<li>OpenSSL FIPS Object Module support included
+<li>FIPS validation support
+</ul>
+<p>
+The premium support plan is designed for the large enterprise using OpenSSL as an essential component of
+multiple products or product lines or in support of in-house or commercially provided services.
+Many prospective Premium Level customers have already hired individual OpenSSL team members for specific tasks.
+The typical large enterprise customer has a capable in-house technical staff but still finds it cost-effective
+to engage the world class talent of OpenSSL authors and maintainers.  Customisation of OpenSSL by prospective
+Schedule A customers is common, as are &#8220;private label&#8221; FIPS 140-2 validations.
+<p>
+Note we don't expect to sell very many of the premium support plans, but those few customers will receive careful
+attention for both immediate problems and long range strategic interests.

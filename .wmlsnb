@@ -1,0 +1,11 @@
+##
+##  .wmlsnb -- Sub Navigation Bar Specification for WML
+##
+
+<snb>
+##  <snb_button id=general  txt="Support OpenSSL"  url="">
+  <snb_button id=contacts txt="Sponsor OpenSSL" url="support/donations.html">
+  <snb_button id=credits  txt="Purchase a Support Contract"  url="support/funding/contract.html">
+  <snb_button id=credits  txt="Contract a Team Member"  url="support/consulting.html">
+</snb>
+

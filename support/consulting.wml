@@ -1,0 +1,23 @@
+
+#use wml::openssl area=related page=commercial
+
+<title>Consulting</title>
+
+<h1>Consulting</h1>
+
+The following OpenSSL team members are available for general consulting work related to OpenSSL and cryptography.  The income they earn though their paid consulting work supports their unpaid work on OpenSSL.
+
+<p>
+
+<ul>
+    <item name="Richard Levitte<br>Levitte Programming"
+          info="Support, installation, adaptation, programming."
+          url="http://www.lp.se/">
+
+    <item name="Dr S N Henson<br>DRH Consultancy"
+          info="OpenSSL and general PKI consultancy, development and support."
+          url="http://www.drh-consultancy.co.uk/">
+</ul>
+<p>
+For further information please contact either the <a href="funding/support-contact.html">OpenSSL Software Foundation</a> or use the E-mail addresses above.
+

@@ -1,0 +1,37 @@
+
+#use wml::openssl area=funding page=index
+
+<title>Support Contracts</title>
+
+<h1>Support Contracts</h1>
+
+Technical support for OpenSSL has long been available through the online collaborative <a href="../community.html">community</a>
+of OpenSSL team members, other software developers familiar with OpenSSL and cryptography, and knowledgeable users.
+However, some commercial and government organisations have expressed a desire for a more formal technical support service.
+<p>
+In order to satisfy this demand the OpenSSL team has partnered with a new for-profit corporation formed for
+the purpose of offering formal paid software support contracts.  This new business entity, the OpenSSL Software Foundation (OSF),
+is incorporated in the United States and acts as the legal agent for the OpenSSL team members providing the technical
+support services.
+<p>
+For more details on this formal support contract offering please see the <a href="support-faq.html">support contract FAQ</a>.
+<p>
+At present four different type of support contract are offered.  If you have specific requirements not addressed
+by any of these plans please contact the <a href="support-contact.html">OSF</a> to discuss
+custom arrangements.
+<ul style=list-style-type:circle>
+<li><a href="support-premium.html"><font id=sfl>Premium</font></a> Enterprise Level Support<br>
+    Designed for the large enterprise utilising OpenSSL extensively in product lines or critical infrastructure.
+<p>
+<li><a href="support-vendor.html"><font id=sfl>Vendor</font></a> Support<br>
+    Designed for organisations requiring support of product lines using OpenSSL or for customised in-house versions of OpenSSL.
+<p>
+<li><a href="support-basic.html"><font id=sfl>Basic</font></a> Support<br>
+    Basic technical support for application development shops or end users.
+<p>
+<li><a href="support-incident.html"><font id=sfl>Incident Based</font></a> Support<br>
+    Per-incident support.
+<p>
+</ul>
+For further information please contact the <a href="support-contact.html">OSF</a>.
+
