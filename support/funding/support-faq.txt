@@ -1,0 +1,229 @@
+OpenSSL Support Contracts  -  Frequently Asked Questions
+--------------------------------------
+
+[General] General questions
+
+* How does this commercialisation impact the OpenSSL mission?
+* What is the target market?
+* Why pay for support when I can get it for free?
+* Can we just send a donation instead?
+* Why hasn't this been done before?
+
+[Plans] The support plans
+
+* What is covered by the support plans?
+* What if we need new features not covered by the support plan?
+* What about support for FIPS140 and the OpenSSL FIPS Object Module?
+* Why is there no per-incident support option?
+* Will subscribers have an inside track on vulnerability announcements?
+
+[Services] Consulting Services
+
+* What about other types of consulting services?
+* What is a "private label" validation?
+
+[Legal and Financial] Legal questions
+
+* Who or what exactly am I contracting with?
+* Where does the money for support contract subscriptions go?
+* Are the support plans listed on a GSA schedule?
+
+[Miscellaneous]
+
+* What if we need help with proprietary or sensitive information?
+* Why the separate domain name?
+
+===============================================================================
+
+[General] ========================================================================
+
+* How does this commercialisation impact the OpenSSL mission?
+
+It doesn't.  OpenSSL is not being commercialised and there will *not* be
+separate "paid" and "free" versions of the software.
+
+The OpenSSL mission of providing a high quality open source
+cryptographic library for use by anyone under a very business friendly license
+will not change.  The same OpenSSL team members will continue to improve and
+maintain the OpenSSL product for general use as always.
+
+The only commercial aspect that has been introduced is that corporate,
+institutional, and government users now have the option of purchasing
+commercial software support for the same open source product that is freely
+available to everyone.  These paid support subscriptions help support the OpenSSL
+team members actively working on the OpenSSL product and so indirectly benefit
+the entire user community.
+
+* What is the target market?
+
+We are primarily targeting the commercial vendors with a significant stake in
+the OpenSSL product who wish to have an assured level of support and to
+sponsor the continued development and maintenance of OpenSSL.  We anticipate
+that our typical customer will fit most of the follow criteria: 
+
+a) Is a medium to large software product or services vendor,
+b) Uses OpenSSL as an important component of those products or services,
+c) Has an interest in the future stability and development of OpenSSL,
+d) Has significant on-house technical expertise but recognises that
+specialised external support wold be cost-effective
+
+* Why pay for support when I can get it for free?
+
+Why indeed?  If you're satisfied with the extensive support available from the
+@@@collaborative community(../community.html)@@@ and the expertise, proficiency, and resource availability of your
+current technical staff then this service is not designed for you.
+
+This support contract option is designed for companies that do not have, or
+cannot spare, the in-house technical resources for utilising or customising
+OpenSSL, who want the assurance that appropriate technical assistance will
+be available when needed, and who may not want their technical queries and
+discussions seen by the entire world.
+
+* Can we just send a donation instead?
+
+Absolutely, @@@donations(../donations.html)@@@ are welcome and will help make
+OpenSSL a better product.  Please note that the OSF is not a qualified
+non-profit entity under the U.S. tax code and hence donations from individuals are not
+tax-deductible.  We looked into 501(c)(3) tax exemption; it costs more and
+takes a long time.  Since our primary purpose is to provide services to the
+commercial and government markets and not to solicit charitable
+contributions we have elected to defer pursuit of tax exempt status for now.
+
+* Why hasn't this been done before?
+
+Sloth and inertia, basically.  Although the demand for such a service has been
+apparent for some time it took a while to work out how to structure a solution
+that addressed the legal, financial, and operational issues.
+
+[Plans] =======================================================================
+
+* What is covered by the support plans?
+
+All of the support plans are designed to provide technical assistance with use
+of relatively recently released versions of the OpenSSL product for platforms
+supported by those versions.  Assistance with using the existing API,
+compile/link errors, runtime problem diagnosis, and portability issues for
+currently supported platforms would all be covered under the
+terms of the support contract.  Porting to completely new platforms,
+development of new functionality, or use of OpenSSL in a context clearly not
+anticipated at the time of release is not covered by the standard plans.
+
+Merging of bug or vulnerability fixes from a newer release or the development
+trunk to an older supported release will *generally* be covered (the exception
+being modifications involving significant interface incompatibilities).
+
+* What if we need new features not covered by the support plan?
+
+The incorporation of completely new functionality (new cryptographic
+algorithms, implementation of new RFCs, etc.) is not covered.  However, the
+OSF can quote a separate development task on a time-and-materials or hourly
+rate basis. 
+
+* What about support for FIPS140 and the OpenSSL FIPS Object Module?
+
+The OpenSSL FIPS Object Module validations are based on source code derived
+from the baseline OpenSSL product but are not synonymous with that product.
+FIPS 140-2 presents some unique challenges transcending the more purely
+technical issues of OpenSSL proper.  FPS 140-2 is also of interest to a
+relatively small subset of the user community.
+
+The standard support plans will cover operational problems with OpenSSL in "FIPS
+compatible" mode but do not cover building of the validated FIPS Object Module
+itself.  Support for the FIPS Object Module, including assistance with
+building a validated module for a specific platform (if possible) is available
+with the Premium plan or as a separate support plan that can be negotiated to
+suit your specific requirements.
+
+* Why is there no per-incident support option?
+
+We are a very low overhead organisation with no front office to handle a
+significant volume of new customer contacts.  All OSF personnel are
+primarily or exclusively dedicated to providing technical services; we could
+only support per-incident customers at the expense of the annual support plan
+subscribers.  At this point we don't have a feel for the potential demand for
+per-incident support and so can't justify the additional staffing such support
+may require.  We may reconsider this position at some point
+
+* Will subscribers have an inside track on vulnerability announcements?
+
+The OpenSSL team will not be deliberately withholding any information from the
+general open source community for the benefit of paid support plan
+subscribers.  We are not changing our mission!
+
+For some types of vulnerabilities the OpenSSL team will work on a fix before
+making any public announcement.  Support plan subscribers will not have any
+special access to the unannounced details of such vulnerabilities.  However,
+we will alert subscribers to the fact that a patch will be required as soon as
+we can do so, and will prepare appropriate patches in advance to the extent
+our knowledge of your specific situation permits.
+
+[Services] =======================================================================
+
+* What about other types of consulting services?
+
+OpenSSL team members have been providing consulting and custom software
+development services on an ad-hoc basis for many years.  In fact, it was the
+increasing demand for such services that led to the creation of the OpenSSL
+Software Foundation.  Consulting service contracts can be provided on a hourly rate
+for one or more OpenSSL team members, or we can prepare a fixed-price proposal
+for clearly defined deliverables.
+
+* What is a "private label" validation?
+
+Even though the OpenSSL FIPS Object Module FIPS 140-2 validations were designed for direct
+use by commercial software vendors, for various reasons some vendors prefer to obtain
+separate validations for their OpenSSL derived software.  That sounds wasteful, and it
+is, but in fact the majority of all level 1 FIPS 140-2 validated software products are
+based on OpenSSL.  Due to our extensive experience in such validations we can cost-effectively
+provide the documentation and CMVP test lab interaction for private label validations.
+
+[Legal and Financial] =======================================================================
+
+* Who or what exactly am I contracting with?
+
+There is no formal legal entity corresponding with the OpenSSL team itself,
+which is an informal collaborative association of individuals around the
+world.  We created a legal entity to represent the OpenSSL team members
+actively participating in the support contract initiative.  That entity, the
+OpenSSL Software Foundation (OSF) will execute the formal support contract
+agreements and handle the associated business functions.  The actual technical
+support will be provided by OpenSSL team members.
+
+* Where does the money for support contract subscriptions go?
+
+It all goes to the people directly providing the technical support services
+and to current active OpenSSL team members.  There is no investor or parent
+company syphoning off revenue for other purposes; the OpenSSL Software
+Foundation was created specifically to support the activities of the OpenSSL
+team.
+
+Even though not all OpenSSL team members will be directly participating in or directly
+benefiting from the support subscription business all have consented to the arrangement
+and all will have full access to the financial records (tax
+filings and bank statements) of the OSF.
+
+* Are the support plans listed on a GSA schedule?
+
+Sorry, no.  Frankly the paperwork requirements are too intimidating at this
+point, and the significant costs of meeting them would have to be passed on
+to all of our customers.  Perhaps someday.
+
+[Miscellaneous] =======================================================================
+
+* What if we need help with proprietary or sensitive information?
+
+We recognise that some vendors do not wish to reveal details of their software
+products or business plans.  We will respect non-disclosure restrictions
+provided such restrictions do not constrain our ability to write and maintain OpenSSL
+or other software.
+
+* Why the separate domain name?
+
+We're not conducting business using the *opensslfoundation.com* domain name instead of
+*openssl.org* domain name because we
+want to distinguish the new for-pay support and service activities from the
+traditional OpenSSL project which will continue as before.  We would like
+to have used the *openssl.com* domain name but it is taken by someone not
+associated with the OpenSSL team.
+
+===============================================================================
