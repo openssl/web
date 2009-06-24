@@ -9,6 +9,10 @@ Here you can find the three manual pages documenting the three essential parts
 of the OpenSSL toolkit: The SSL library, the Crypto library and the command
 line tool, as well as a repository of HOWTO and other miscellaneous documents.
 
+Note: the documents are from the current development version of OpenSSL and
+may mention features which are not present or behave differently in previous
+versions of OpenSSL. 
+
 <p>
 <ul>
 <li><a href="apps/openssl.html"><font id=sfl>openssl(1)</font></a>: [STILL INCOMPLETE]<br>
