@@ -4,8 +4,8 @@
 ##
 
 $|++;
-##print "Content-type: text/html\r\n";
-##print "\r\n";
+print "Content-type: text/html\r\n";
+print "\r\n";
 print <<"EOF";
 <title>Support Contract FAQ</title>
 <h1>Support Contract FAQ</h1>
