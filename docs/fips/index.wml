@@ -9,4 +9,12 @@ Here you can find a number of FIPS140 related files including the user
 guide and test vectors.
 <p>
 <filelist "*.pdf *.gz *.zip">
-
+<p>
+Note FIPS module and FIPS validation support is included in some of the
+OpenSSL <a href="../../support/funding/contract.html">support plans</a>.  Assistance
+with private label validation is also available on a
+ <a href="../../support/consulting.html">consultancy</a> basis.
+<p>
+The OpenSSL project has collaborated with the <a href="http://oss-institute.org/">
+Open Source Software Institute</a> on the groundbreaking OpenSSL FIPS Object Module
+and other validations.
