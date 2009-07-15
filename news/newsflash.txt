@@ -1,3 +1,4 @@
+15-Jul-2009: Beta 3 of OpenSSL 1.0.0 is now <a href="ROOT/source/">available</a>, please test it now
 24-Jun-2009: Commercial support for OpenSSL is now <a href="ROOT/support/funding/contract.html">available</a>
 21-Apr-2009: Beta 2 of OpenSSL 1.0.0 is now <a href="ROOT/source/">available</a>, please test it now
 01-Apr-2009: Beta 1 of OpenSSL 1.0.0 is now <a href="ROOT/source/">available</a>, please test it now
