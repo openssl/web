@@ -33,4 +33,7 @@ and a URL.
     <item name="dmp|cda"
 	  info="Websolutions including OpenSSL and more"
 	  url="http://www.dmpcda.de/">
+    <item name="Torsten Pohl"
+	  info="Implementation of web based applications including OpenSSL technology"
+	  url="http://www.torsten-pohl.de/">
 </ul>
