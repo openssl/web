@@ -66,6 +66,7 @@
 <mirror url="rsync://onionland.org/openssl/" loc="DE">
 <mirror url="http://www.securehost.com/mirror/openssl/" loc="BS">
 <mirror url="http://www.very-clever.com/download/openssl/" loc="DE">
+<mirror url="http://openssl.parentinginformed.com/" loc="CA">
 
 </ul>
 
