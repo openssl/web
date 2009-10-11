@@ -8,6 +8,8 @@
 Here you can find a number of FIPS140 related files including the user
 guide and test vectors.
 <p>
+The latest <a href="UserGuide.pdf">User Guide</a> is the best place to start.  For an initial very brief introduction and to see currents plans and status read our <a href="fipsnotes.html">Important Notes About OpenSSL and FIPS 140-2</a>.
+<p>
 <filelist "*.pdf *.gz *.zip">
 <p>
 Note FIPS module and FIPS validation support is included in some of the
