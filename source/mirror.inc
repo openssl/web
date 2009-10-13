@@ -67,6 +67,7 @@
 <mirror url="http://www.securehost.com/mirror/openssl/" loc="BS">
 <mirror url="http://www.very-clever.com/download/openssl/" loc="DE">
 <mirror url="http://openssl.parentinginformed.com/" loc="CA">
+<mirror url="http://openssl.promotionalpro.com/" loc="BY">
 
 </ul>
 
