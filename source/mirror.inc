@@ -72,6 +72,7 @@
 <mirror url="http://openssl.initrd.net/" loc="DE">
 <mirror url="ftp://ftp.tpnet.pl/pub/security/openssl/" loc="PL">
 <mirror url="rsync://ftp.tpnet.pl/pub/security/openssl/" loc="PL">
+<mirror url="http://openssl.skazkaforyou.com/" loc="CA">
 
 </ul>
 
