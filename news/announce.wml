@@ -9,10 +9,11 @@ OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
 
 <p>
-The OpenSSL project team is pleased to announce the release of
-version 0.9.8l of our open source toolkit for SSL/TLS.  This new
-OpenSSL version is a moderate security and bugfix release.
-For a complete list of changes, please see
+The OpenSSL project team is pleased to announce the release of version
+0.9.8l of our open source toolkit for SSL/TLS.  This new OpenSSL
+version is a security release which disables renegotiation as a
+workaround for CVE-2009-3555.  For a complete list of changes, please
+see
 <a href="http://www.openssl.org/source/exp/CHANGES">http://www.openssl.org/source/exp/CHANGES</a>.
 <p>
 We consider OpenSSL 0.9.8l to be the best version of OpenSSL available
