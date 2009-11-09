@@ -14,7 +14,7 @@ The OpenSSL project team is pleased to announce the release of version
 version is a security release which disables renegotiation as a
 workaround for CVE-2009-3555.  For a complete list of changes, please
 see
-<a href="http://www.openssl.org/source/exp/CHANGES">http://www.openssl.org/source/exp/CHANGES</a>.
+<a href="http://cvs.openssl.org/fileview?f=openssl/CHANGES&v=OpenSSL_0_9_8l">http://cvs.openssl.org/fileview?f=openssl/CHANGES&v=OpenSSL_0_9_8l</a>.
 <p>
 We consider OpenSSL 0.9.8l to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
