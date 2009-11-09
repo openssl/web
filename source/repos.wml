@@ -38,8 +38,9 @@ For example the following command will check out the HEAD:
 $ cvs -d anonymous@cvs.openssl.org:/openssl-cvs co openssl
     </verbatim></b>
     </box>
+    <p>
 
-and this command  will check out the 1.0.0 stable branch:
+This command  will check out the 1.0.0 stable branch:
 
     <p>
     <box bgcolor="#f0f0f0">
@@ -47,6 +48,7 @@ and this command  will check out the 1.0.0 stable branch:
 $ cvs -d anonymous@cvs.openssl.org:/openssl-cvs co -rOpenSSL_1_0_0-stable openssl
     </verbatim></b>
     </box>
+    <p>
 
 See the discussion of branch naming below for more information.
 
