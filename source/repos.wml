@@ -39,7 +39,16 @@ $ cvs -d anonymous@cvs.openssl.org:/openssl-cvs co openssl
     </verbatim></b>
     </box>
 
+and this command  will check out the 1.0.0 stable branch:
 
+    <p>
+    <box bgcolor="#f0f0f0">
+    <b><verbatim>
+$ cvs -d anonymous@cvs.openssl.org:/openssl-cvs co -rOpenSSL_1_0_0-stable openssl
+    </verbatim></b>
+    </box>
+
+See the discussion of branch naming below for more information.
 
 <h2>Using your own local CVS repository mirror</h2>
 
@@ -178,3 +187,14 @@ $ cvs -d /home/whatever/repos co openssl
     </verbatim></b>
     </box>
 
+<h2>CVS Branch names and tagging</h2>
+
+The <b>HEAD</b> (also known as the development branch) contains the latest
+bleeding edge code. There are also several <i>stable</i> branches where stable
+releases come from. These take the form <b>OpenSSL_x_y_z-stable</b> so for
+example the 1.0.0 stable branch is <b>OpenSSL_1_0_0-stable</b>. When an
+actual release is made it is tagged in the form <b>OpenSSL_x_y_zp</b> or
+a beta <b>OpenSSL_x_y_xp-betan</b> though you should normally just download
+the release tarball. Tags and branches are occasionally used for other
+purposes such as testing experimental or unstable code before it is merged
+into another branch.
