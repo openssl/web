@@ -19,8 +19,9 @@
   The file names of the beta are:
 
     o openssl-1.0.0-beta4.tar.gz
-      MD5 checksum: TBA
-      SHA1 checksum: TBA
+      Size: 4000628
+      MD5 checksum: f22750164e1db42145803fed8104df57
+      SHA1 checksum: f590232651b9033365e0aa9a2279cdef6519884c
 
   The checksums were calculated using the following command:
 
