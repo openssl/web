@@ -33,8 +33,8 @@
   toolkit (for a complete list see http://www.openssl.org/source/exp/CHANGES).
 
   Also check the latest snapshots at ftp://ftp.openssl.org/snapshot/ 
-  or CVS (see http://www.openssl.org/source/repos.html) reporting previously
-  fixed bugs.
+  or CVS (see http://www.openssl.org/source/repos.html) to avoid
+  reporting previously fixed bugs.
 
   Since the third beta, the following has happened:
 
