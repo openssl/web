@@ -89,5 +89,5 @@ TLS extension:
 https://svn.resiprocate.org/rep/ietf-drafts/ekr/draft-rescorla-tls-renegotiate.txt
 
 URL for this Security Advisory:
-http://www.openssl.org/news/secadv_20091110.txt
+http://www.openssl.org/news/secadv_20091111.txt
 
