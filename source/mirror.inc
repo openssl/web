@@ -4,7 +4,7 @@
 <preserve url>
 <preserve loc>
 <set-var %attributes>
-<li><a href="<get-var url>"><get-var url></a>
+<li><a href="<get-var url>" rel="nofollow"><get-var url></a>
     &nbsp;&nbsp;[<get-var loc>]
 <restore loc>
 <restore url>
