@@ -1,8 +1,8 @@
 *.html
-*.tar.gz
-*.tar.gz.asc
-*.tar.gz.md5
-*.tar.gz.sha1
+*.gz
+*.gz.asc
+*.gz.md5
+*.gz.sha1
 *.tar.gz.sig
 *.patch
 index.cache
