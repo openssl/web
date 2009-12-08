@@ -36,6 +36,7 @@
 <mirror url="rsync://ftp.tpnet.pl/pub/security/openssl/" loc="PL">
 <mirror url="http://openssl.skazkaforyou.com/" loc="CA">
 <mirror url="http://openssl.raffsoftware.com/" loc="CA">
+<mirror url="http://artfiles.org/openssl.org/" loc="DE"> 
 
 </ul>
 
