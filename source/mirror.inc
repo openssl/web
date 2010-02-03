@@ -30,7 +30,6 @@
 <mirror url="http://www.securehost.com/mirror/openssl/" loc="BS">
 <mirror url="http://www.very-clever.com/download/openssl/" loc="DE">
 <mirror url="http://openssl.parentinginformed.com/" loc="CA">
-<mirror url="http://openssl.promotionalpro.com/" loc="BY">
 <mirror url="http://openssl.initrd.net/" loc="DE">
 <mirror url="ftp://ftp.tpnet.pl/pub/security/openssl/" loc="PL">
 <mirror url="rsync://ftp.tpnet.pl/pub/security/openssl/" loc="PL">
