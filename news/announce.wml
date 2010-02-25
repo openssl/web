@@ -1,24 +1,25 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 0.9.8l</title>
+<title>Announcement: OpenSSL version 0.9.8m</title>
 
-<h1>Announcement: OpenSSL version 0.9.8l</h1>
+<h1>Announcement: OpenSSL version 0.9.8m</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
 
+
 <p>
 The OpenSSL project team is pleased to announce the release of version
-0.9.8l of our open source toolkit for SSL/TLS.  This new OpenSSL
-version is a security release which disables renegotiation as a
-workaround for CVE-2009-3555.  For a complete list of changes, please
-see
-<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_0_9_8l">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_0_9_8l</a>.
+0.9.8m of our open source toolkit for SSL/TLS. This new OpenSSL version
+is a security and bugfix release which implements RFC5746 to address
+renegotiation vulnerabilities mentioned in CVE-2009-3555. For a complete
+list of changes, please see
+<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_0_9_8m">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_0_9_8m</a>.
 <p>
-We consider OpenSSL 0.9.8l to be the best version of OpenSSL available
+We consider OpenSSL 0.9.8m to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 0.9.8l is available for download via HTTP
+soon as possible.  OpenSSL 0.9.8m is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -31,10 +32,10 @@ FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www
 The distribution file name is:
 
 <ul>
-  <li>openssl-0.9.8l.tar.gz<br>
-      Size: 4179422<br>
-      MD5 checksum: 05a0ece1372392a2cf310ebb96333025
-      SHA1 checksum: d3fb6ec89532ab40646b65af179bb1770f7ca28f<br>
+  <li>openssl-0.9.8m.tar.gz<br>
+      Size: 3767604 <br>
+      MD5 checksum: 898bf125370926d5f692a2201124f8ec<br>
+      SHA1 checksum: 2511c709a47f34d5fa6cd1a1c9cb1699bdffa912<br>
 </ul>
 
 <p>
