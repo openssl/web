@@ -8,6 +8,16 @@
 <title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p><h2>2009</h2><dl>
+  <dt><b><a name="2009-3555"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3555">CVE-2009-3555</a></a></b>: 5th November 2009<p/></dt>
+  <dd>
+    <description>
+Implement RFC5746 to address vulnerabilities in SSL/TLS renegotiation.
+    </description>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
   <dt><b><a name="2009-1386"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1386">CVE-2009-1386</a></a></b>: 2nd June 2009<p/></dt>
   <dd>
     <description>

@@ -723,5 +723,25 @@ ChangeCipherSpec as first record.
     </description>
   </issue>
 
+  <issue public="20091105">
+    <cve name="2009-3555"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <fixed base="0.9.8" version="0.9.8m" date="20100120"/>
+    <description>
+Implement RFC5746 to address vulnerabilities in SSL/TLS renegotiation.
+    </description>
+  </issue>
+
 </security>
 
