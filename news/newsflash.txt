@@ -1,3 +1,4 @@
+24-Mar-2010: <a href="ROOT/news/secadv_20100324.txt">Security Advisory</a>: "Record of death" security fix
 24-Mar-2010: OpenSSL 0.9.8n is now <a href="ROOT/source/">available</a>, including important bug and security fixes
 25-Feb-2010: OpenSSL 0.9.8m is now <a href="ROOT/source/">available</a>, including important bug and security fixes
 20-Jan-2010: Beta 5 of OpenSSL 1.0.0 is now <a href="ROOT/source/">available</a>, please test it now
