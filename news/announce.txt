@@ -1,20 +1,19 @@
 
-   OpenSSL version 0.9.8m released
+   OpenSSL version 0.9.8n released
    ===============================
 
    OpenSSL - The Open Source toolkit for SSL/TLS
    http://www.openssl.org/
 
    The OpenSSL project team is pleased to announce the release of
-   version 0.9.8m of our open source toolkit for SSL/TLS. This new
-   OpenSSL version is a security and bugfix release which implements
-   RFC5746 to address renegotiation vulnerabilities mentioned in
-   CVE-2009-3555.  For a complete list of changes,
-   please see http://www.openssl.org/source/exp/CHANGES.
+   version 0.9.8n of our open source toolkit for SSL/TLS. This new
+   OpenSSL version is a security and bugfix release which addresses
+   CVE-2010-0740. For a complete list of changes, please see
+   http://www.openssl.org/source/exp/CHANGES.
 
-   We consider OpenSSL 0.9.8m to be the best version of OpenSSL
+   We consider OpenSSL 0.9.8n to be the best version of OpenSSL
    available and we strongly recommend that users of older versions
-   upgrade as soon as possible. OpenSSL 0.9.8m is available for
+   upgrade as soon as possible. OpenSSL 0.9.8n is available for
    download via HTTP and FTP from the following master locations (you
    can find the various FTP mirrors under
    http://www.openssl.org/source/mirror.html):
@@ -24,10 +23,10 @@
 
    The distribution file names are:
 
-    o openssl-0.9.8m.tar.gz
-      Size: 3767604
-      MD5 checksum: 898bf125370926d5f692a2201124f8ec
-      SHA1 checksum: 2511c709a47f34d5fa6cd1a1c9cb1699bdffa912
+    o openssl-0.9.8n.tar.gz
+      Size: 3770041
+      MD5 checksum: 076d8efc3ed93646bd01f04e23c07066
+      SHA1 checksum: 595f5ebf592568515964f0adc62239e7012ef08b
 
    The checksums were calculated using the following commands:
 
