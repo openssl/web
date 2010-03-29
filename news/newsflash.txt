@@ -1,13 +1,8 @@
+29-Mar-2010: OpenSSL 1.0.0 is now <a href="ROOT/source/">available</a>, a major release
 24-Mar-2010: <a href="ROOT/news/secadv_20100324.txt">Security Advisory</a>: "Record of death" security fix
 24-Mar-2010: OpenSSL 0.9.8n is now <a href="ROOT/source/">available</a>, including important bug and security fixes
 25-Feb-2010: OpenSSL 0.9.8m is now <a href="ROOT/source/">available</a>, including important bug and security fixes
-20-Jan-2010: Beta 5 of OpenSSL 1.0.0 is now <a href="ROOT/source/">available</a>, please test it now
-10-Nov-2009: Beta 4 of OpenSSL 1.0.0 is now <a href="ROOT/source/">available</a>, please test it now
-05-Nov-2009: OpenSSL 0.9.8l is now <a href="ROOT/source/">available</a>, including important big fixes
-15-Jul-2009: Beta 3 of OpenSSL 1.0.0 is now <a href="ROOT/source/">available</a>, please test it now
 24-Jun-2009: Commercial support for OpenSSL is now <a href="ROOT/support/funding/contract.html">available</a>
-21-Apr-2009: Beta 2 of OpenSSL 1.0.0 is now <a href="ROOT/source/">available</a>, please test it now
-01-Apr-2009: Beta 1 of OpenSSL 1.0.0 is now <a href="ROOT/source/">available</a>, please test it now
 25-Mar-2009: OpenSSL 0.9.8k is now <a href="ROOT/source/">available</a>, including important bug fixes
 25-Mar-2009: <a href="ROOT/news/secadv_20090325.txt">Security Advisory</a>: Three moderate severity security issues
 07-Jan-2009: OpenSSL 0.9.8j is now <a href="ROOT/source/">available</a>, including important bug fixes

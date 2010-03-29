@@ -1,24 +1,50 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 0.9.8n</title>
+<title>Announcement: OpenSSL version 1.0.0</title>
 
-<h1>Announcement: OpenSSL version 0.9.8n</h1>
+<h1>Announcement: OpenSSL version 1.0.0</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
 
 
 <p>
-The OpenSSL project team is pleased to announce the release of version
-0.9.8n of our open source toolkit for SSL/TLS. This new OpenSSL version
-is a security and bugfix release which addresses CVE-2010-0740.
+The OpenSSL project team is pleased to announce the release of
+version 1.0.0 of our open source toolkit for SSL/TLS.  This new
+OpenSSL version is a major release and incorporates many new
+features as well as major fixes compared to 0.9.8n.
 For a complete list of changes, please see
-<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_0_9_8n">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_0_9_8n</a>.
+<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0</a>.
 <p>
-We consider OpenSSL 0.9.8n to be the best version of OpenSSL available
+The most significant changes are:
+<ul>
+  <li> RFC3280 path validation: sufficient to process PKITS tests.
+  <li> Integrated support for PVK files and keyblobs.
+  <li> Change default private key format to PKCS#8.
+  <li> CMS support: able to process all examples in RFC4134
+  <li> Streaming ASN1 encode support for PKCS#7 and CMS.
+  <li> Multiple signer and signer add support for PKCS#7 and CMS.
+  <li> ASN1 printing support.
+  <li> Whirlpool hash algorithm added.
+  <li> RFC3161 time stamp support.
+  <li> New generalised public key API supporting ENGINE based algorithms.
+  <li> New generalised public key API utilities.
+  <li> New ENGINE supporting GOST algorithms.
+  <li> SSL/TLS GOST ciphersuite support.
+  <li> PKCS#7 and CMS GOST support.
+  <li> RFC4279 PSK ciphersuite support.
+  <li> Supported points format extension for ECC ciphersuites.
+  <li> ecdsa-with-SHA224/256/384/512 signature types.
+  <li> dsa-with-SHA224 and dsa-with-SHA256 signature types.
+  <li> Opaque PRF Input TLS extension support.
+  <li> Updated time routines to avoid OS limitations.
+</ul>
+
+<p>
+We consider OpenSSL 1.0.0 to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 0.9.8n is available for download via HTTP
+soon as possible.  OpenSSL 1.0.0 is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -31,7 +57,7 @@ FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www
 The distribution file name is:
 
 <ul>
-  <li>openssl-0.9.8n.tar.gz<br>
+  <li>openssl-1.0.0.tar.gz<br>
       Size: 3770041<br>
       MD5 checksum: 076d8efc3ed93646bd01f04e23c07066<br>
       SHA1 checksum: 595f5ebf592568515964f0adc62239e7012ef08b<br>
@@ -41,8 +67,8 @@ The distribution file name is:
 The checksums were calculated using the following commands:
 <blockquote>
 <pre>
-    openssl md5 openssl-0.9.*.tar.gz
-    openssl sha1 openssl-0.9.*.tar.gz
+    openssl md5 openssl-1.0.0.tar.gz
+    openssl sha1 openssl-1.0.0.tar.gz
 </pre>
 </blockquote>
 
