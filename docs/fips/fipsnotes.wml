@@ -58,7 +58,7 @@ possible.  Contact the <a href="../../support/funding/support-contact.html">OSF<
 
 The most recent open source based validation is v1.2, FIPS 140-2 certificate
  <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1051">#1051</a>.  You will need the
- <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140sp/140sp1058.pdf">Security Policy</a> and
+ <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140sp/140sp1051.pdf">Security Policy</a> and
  <a href="../../source/openssl-fips-1.2.tar.gz">source</a> at a minimum.
 And did we mention the <a href="UserGuide.pdf">User Guide</a>?
 <p>
