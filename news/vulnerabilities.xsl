@@ -43,7 +43,7 @@ versions of OpenSSL since 0.9.6a was released on 5th April 2001.
   <b><a name="{cve/@name}">
   <xsl:apply-templates select="cve"/>
 </a></b>
-<xsl:text>: </xsl:text><xsl:call-template name="dateformat">
+<xsl:call-template name="dateformat">
   <xsl:with-param name="date" select="@public"/>
 </xsl:call-template>
 <p/>
@@ -84,7 +84,7 @@ versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 The Common Vulnerabilities and Exposures project
 has assigned the name 
 </xsl:if>
-<a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-{@name}">CVE-<xsl:value-of select="@name"/></a>
+<a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-{@name}">CVE-<xsl:value-of select="@name"/>: </a>
 <xsl:if test="@description = 'full'">
  to this issue.
 </xsl:if>
