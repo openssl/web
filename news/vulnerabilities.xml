@@ -1,7 +1,11 @@
-<!-- All security issues affecting OpenSSL since the 
-     release of 0.9.6 on 20000924, 0.9.7 on 20021231 -->
+<!-- All security issues affecting OpenSSL since the release of:
+     0.9.6 on 20000924
+     0.9.7 on 20021231
+     0.9.8 on 20050705
+     1.0.0 on 20100329
+-->
 
-<security updated="20080528">
+<security updated="20100528">
 
   <issue public="20020730">
     <cve name="2002-0655"/>
@@ -717,9 +721,11 @@ read, for example RSA public keys.
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
     <fixed base="0.9.8" version="0.9.8i" date="20080915"/>
+    <reported source="Alex Lam"/>
     <description>
 Fix a NULL pointer dereference if a DTLS server recieved
 ChangeCipherSpec as first record.
+A remote attacker could use this flaw to cause a DTLS server to crash
     </description>
   </issue>
 
@@ -740,6 +746,147 @@ ChangeCipherSpec as first record.
     <fixed base="0.9.8" version="0.9.8m" date="20100120"/>
     <description>
 Implement RFC5746 to address vulnerabilities in SSL/TLS renegotiation.
+    </description>
+  </issue>
+
+  <issue public="20090205">
+    <cve name="2009-1387"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <fixed base="0.9.8" version="0.9.8m" date="20100120"/>
+    <reported source="Robin Seggelmann"/>
+    <description>
+Fix denial of service flaw due in the DTLS implementation.  A
+remote attacker could use this flaw to cause a DTLS server to crash.
+    </description>
+  </issue>
+
+  <issue public="20090512">
+    <cve name="2009-1377"/>
+    <cve name="2009-1378"/>
+    <cve name="2009-1379"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <fixed base="0.9.8" version="0.9.8m" date="20100120"/>
+    <reported source="Daniel Mentz, Robin Seggelmann"/>
+    <description>
+Fix denial of service flaws in the DTLS implementation.  A
+remote attacker could use these flaws to cause a DTLS server to use
+excessive amounts of memory, or crash.
+    </description>
+  </issue>
+
+  <issue public="20100113">
+    <cve name="2009-4355"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <fixed base="0.9.8" version="0.9.8m" date="20100120"/>
+    <reported source="Michael K Johnson and Andy Grimm (rPath)"/>
+    <description>
+A memory leak in the zlib_stateful_finish function in crypto/comp/c_zlib.c
+allows remote attackers to cause a denial of service
+via vectors that trigger incorrect calls to the CRYPTO_cleanup_all_ex_data
+function.
+    </description>
+  </issue>
+
+  <issue public="20100223">
+    <cve name="2009-3245"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <fixed base="0.9.8" version="0.9.8m" date="20100120"/>
+    <reported source="Martin Olsson, Neel Mehta"/>
+    <description>
+It was discovered that OpenSSL did not always check the return value of the
+bn_wexpand() function. An attacker able to trigger a memory allocation failure
+in that function could cause an application using the OpenSSL library to crash
+or, possibly, execute arbitrary code
+    </description>
+  </issue>
+
+  <issue public="20100119">
+    <cve name="2010-0433"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <fixed base="0.9.8" version="0.9.8n" date="20100324"/>
+    <reported source="Todd Rinaldo, Tomas Hoger (Red Hat)"/>
+    <description>
+A missing return value check flaw was discovered in OpenSSL, that could
+possibly cause OpenSSL to call a Kerberos library function with invalid
+arguments, resulting in a NULL pointer dereference crash in the MIT
+Kerberos library. In certain configurations, a remote attacker could use
+this flaw to crash a TLS/SSL server using OpenSSL by requesting Kerberos
+cipher suites during the TLS handshake
+    </description>
+  </issue>
+
+  <issue public="20100324">
+    <cve name="2010-0740"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <fixed base="0.9.8" version="0.9.8n" date="20100324"/>
+    <advisory url="http://www.openssl.org/news/secadv_20100324.txt"/>
+    <reported source="Bodo Moeller and Adam Langley (Google)"/>
+    <description>
+In TLS connections, certain incorrectly formatted records can cause an
+OpenSSL client or server to crash due to a read attempt at NULL.  
     </description>
   </issue>
 
