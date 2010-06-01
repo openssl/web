@@ -8,6 +8,35 @@
 <title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p><h2>2010</h2><dl>
+  <dt><b><a name="2010-1633"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1633">CVE-2010-1633: </a></a></b>1st June 2010<p/></dt>
+  <dd>
+    <description>
+An invalid Return value check in pkey_rsa_verifyrecover was
+discovered.  When verification recovery fails for RSA keys an
+uninitialised buffer with an undefined length is returned instead of
+an error code.  This could lead to an information leak.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20100601.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0a (Affected 1.0.0) </dd>
+  <p/>
+  <dt><b><a name="2010-0742"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0742">CVE-2010-0742: </a></a></b>1st June 2010<p/></dt>
+  <dd>
+    <description>
+A flaw in the handling of CMS structures containing OriginatorInfo was found which 
+could lead to a write to invalid memory address or double free.  CMS support is
+disabled by default in OpenSSL 0.9.8 versions.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20100601.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.8o (Affected 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0a (Affected 1.0.0) </dd>
+  <p/>
   <dt><b><a name="2010-0740"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0740">CVE-2010-0740: </a></a></b>24th March 2010<p/></dt>
   <dd>
     <description>
