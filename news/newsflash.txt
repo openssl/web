@@ -1,4 +1,5 @@
 01-Jun-2010: OpenSSL 1.0.0a is now <a href="ROOT/source/">available</a>, including important bug and security fixes
+01-Jun-2010: <a href="ROOT/news/secadv_20100601.txt">Security Advisory</a>: two security fixes
 29-Mar-2010: OpenSSL 1.0.0 is now <a href="ROOT/source/">available</a>, a major release
 24-Mar-2010: <a href="ROOT/news/secadv_20100324.txt">Security Advisory</a>: "Record of death" security fix
 24-Mar-2010: OpenSSL 0.9.8n is now <a href="ROOT/source/">available</a>, including important bug and security fixes
