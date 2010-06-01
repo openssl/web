@@ -1,59 +1,37 @@
 
-   OpenSSL version 1.0.0 released
-   ==============================
+   OpenSSL version 1.0.0a released
+   ===============================
 
    OpenSSL - The Open Source toolkit for SSL/TLS
    http://www.openssl.org/
 
    The OpenSSL project team is pleased to announce the release of
-   version 1.0.0 of our open source toolkit for SSL/TLS.  This new
-   OpenSSL version is a major release and incorporates many new
-   features as well as major fixes compared to 0.9.8n.  For a complete
-   list of changes, please see http://www.openssl.org/source/exp/CHANGES .
+   version 1.0.0a of our open source toolkit for SSL/TLS. This new
+   OpenSSL version is a security and bugfix release which addresses
+   CVE-2010-1633 and CVE-2010-0742. For a complete list of changes,
+   please see http://www.openssl.org/source/exp/CHANGES.
 
-   The most significant changes are:
-
-      o RFC3280 path validation: sufficient to process PKITS tests.
-      o Integrated support for PVK files and keyblobs.
-      o Change default private key format to PKCS#8.
-      o CMS support: able to process all examples in RFC4134
-      o Streaming ASN1 encode support for PKCS#7 and CMS.
-      o Multiple signer and signer add support for PKCS#7 and CMS.
-      o ASN1 printing support.
-      o Whirlpool hash algorithm added.
-      o RFC3161 time stamp support.
-      o New generalised public key API supporting ENGINE based algorithms.
-      o New generalised public key API utilities.
-      o New ENGINE supporting GOST algorithms.
-      o SSL/TLS GOST ciphersuite support.
-      o PKCS#7 and CMS GOST support.
-      o RFC4279 PSK ciphersuite support.
-      o Supported points format extension for ECC ciphersuites.
-      o ecdsa-with-SHA224/256/384/512 signature types.
-      o dsa-with-SHA224 and dsa-with-SHA256 signature types.
-      o Opaque PRF Input TLS extension support.
-      o Updated time routines to avoid OS limitations.
-
-   We consider OpenSSL 1.0.0 to be the best version of OpenSSL available
-   and we strongly recommend that users of older versions upgrade as
-   soon as possible.  OpenSSL 1.0.0 is available for download via HTTP
-   and FTP from the following master locations (you can find the various
-   FTP mirrors under http://www.openssl.org/source/mirror.html):
+   We consider OpenSSL 1.0.0a to be the best version of OpenSSL
+   available and we strongly recommend that users of older versions
+   upgrade as soon as possible. OpenSSL 1.0.0a is available for
+   download via HTTP and FTP from the following master locations (you
+   can find the various FTP mirrors under
+   http://www.openssl.org/source/mirror.html):
 
      * http://www.openssl.org/source/
      * ftp://ftp.openssl.org/source/
 
    The distribution file name is:
 
-    o openssl-1.0.0.tar.gz
-      Size: 4010166
-      MD5 checksum: 89eaa86e25b2845f920ec00ae4c864ed
-      SHA1 checksum: 3f800ea9fa3da1c0f576d689be7dca3d55a4cb62
+    o openssl-1.0.0a.tar.gz
+      Size: 4015794
+      MD5 checksum: e3873edfffc783624cfbdb65e2249cbd
+      SHA1 checksum: b837a9f75a51f456bd533690cf04d3d5714812dc
 
    The checksums were calculated using the following commands:
 
-    openssl md5 openssl-1.0.0.tar.gz
-    openssl sha1 openssl-1.0.0.tar.gz
+    openssl md5 openssl-1.0.*.tar.gz
+    openssl sha1 openssl-1.0.*.tar.gz
 
    Yours,
 
