@@ -62,7 +62,7 @@ The most recent open source based validation is v1.2, FIPS 140-2 certificate
  <a href="../../source/openssl-fips-1.2.tar.gz">source</a> at a minimum.
 And did we mention the <a href="UserGuide.pdf">User Guide</a>?
 <p>
-<font color="#cc3333">Inportant Note:</font> Due to upcoming changes in the FIPS 140-2 validation requirements the current v1.2 Module will
+<font color="#cc3333">Important Note:</font> Due to upcoming changes in the FIPS 140-2 validation requirements the current v1.2 Module will
 no longer be a suitable model for private label validations in its current form past the year 2010.  See the NIST <a href="http://csrc.nist.gov/groups/STM/cmvp/notices.html">Notices</a>,
 <a href="http://csrc.nist.gov/groups/ST/key_mgmt/documents/Transitioning_CryptoAlgos_070209.pdf">discussion paper</a> and
 <a href="http://csrc.nist.gov/publications/drafts/800-131/draft-800-131_transition-paper.pdf">Draft 800-131</a>.
@@ -73,7 +73,7 @@ We hope to address these new changes in the next open source based validation (s
 No open source based validations are currently in progress.  This situation is due not to a lack of interest on our part;
 we labored for years to obtain the first ever groundbreaking open source based validation and we'd dearly love
 to keep it current and available forever.  The obstacle is lack of funding.
-The CMVP test lab and filing fees are more than pocket change (~USD$25,000 and up) and beyond the limited
+The CMVP test lab and filing fees are more than pocket change (~US$30,000 and up) and beyond the limited
 financial resources of the OSF.  Past validations have been funded by
 commercial sector and government sponsors, some identified in published acknowledgments and some not (by request).
 <p>
@@ -82,7 +82,17 @@ work directly results in FIPS related code improvements.  The income from such w
 the rent and thus indirectly supports all of OpenSSL.  However, unless you are one of the companies directly obtaining a custom
 private label validation those improvements don't give you validated cryptography that can be sold in the markets requiring such validation.
 <p>
-If and when sufficient sponsor funding materializes we will move quickly and enthusiastically to obtain a new and updated validation
-to satisfy the validation requirements then in effect.  Any such plans will be posted here.  If you have an interest in sponsoring
+If and when sufficient sponsor funding materializes we will move quickly and enthusiastically to
+obtain a new and updated validation to satisfy the validation requirements then in effect.  
+Any such plans will be posted here.
+<p>
+More discussion of technical options for a new validation
+can be found on our separate <a href="fipsvalidation.html">FIPS 140-2 Validation</a> page.
+<p>
+<font color="#cc3333">Status Update:</font> We have several potential co-sponsors who have indicated a
+willingness to partially fund a new validation.  These co-sponsorships collectively do not yet total
+enough to cover a full validation effort, but we may be only a co-sponsor or two shy of meeting that
+goal.
+<p>If you have an interest in sponsoring
 that effort, in whole or in part, please contact the <a href="http://openssl.org/support/funding/support-contact.html">OSF</a>.
 
