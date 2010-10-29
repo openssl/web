@@ -20,3 +20,7 @@ ForceType application/binary
 <Files *.asc>
 ForceType application/binary
 </Files>
+
+<Files favicon.ico>
+ForceType image/vnd.microsoft.icon
+</Files>
