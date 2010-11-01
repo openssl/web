@@ -5,6 +5,8 @@
 <snb>
   <snb_button id=support      txt="Support"		url="index.html">
   <snb_button id=community    txt="Community Participation"         url="community.html">
+  <snb_button id=faq          txt="FAQ"                 url="faq.html">
+  <snb_button id=rt           txt="Request Tracker"     url="rt.html">
   <snb_button id=donations    txt="Donations"		url="donations.html">
   <snb_button id=funding      txt="Funding"		url="funding/contract.html">
   <snb_button id=consulting   txt="Consulting"		url="consulting.html">
