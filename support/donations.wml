@@ -16,7 +16,9 @@ to the OSF are not tax-deductible.  Corporate donations can of course be written
 </p>
 
 <p>In addition to direct financial contributions in the form of donations or sponsorship you may also
-support the OpenSSL project financially with the purchase of a <a href="funding/contract.html"> support contract</a>.
+support the OpenSSL project financially with the purchase of a <a href="funding/contract.html"> support contract</a>,
+or by <a href="consulting.html">hiring us</a> for consulting services or custom software development.  We consider all
+sources of funding to be sponsors, because we use all such funding, whether donations or pay for services rendered, for the same purpose -- to improve and maintain the OpenSSL product.
 </p>
 
 <table>
@@ -29,18 +31,22 @@ Platinum<br>
 $50,000/yr<br>
 <br>
 <br>
+<br>
 
 Gold<br>
 $20,000/yr<br>
+<br>
 <br>
 <br>
 
 Silver<br>
 $10,000/yr<br>
 <br>
+<br>
 
 Contributing Sponsor<br>
 $5,000/yr<br>
+<br>
 <br>
 </td>
 
@@ -48,18 +54,22 @@ $5,000/yr<br>
 Prominent logo placement on openssl.org<br>
 OpenSSL sponsor logo for your use<br>
 Acknowledgement on openssl.org<br>
+Acknowledgement in source distributions<br>
 <br>
 
 Logo placement on openssl.org<br>
 OpenSSL sponsor logo for your use<br>
 Acknowledgement on openssl.org<br>
+Acknowledgement in source distributions<br>
 <br>
 
 Acknowledgement on openssl.org<br>
+Acknowledgement in source distributions<br>
 <br>
 <br>
 
 Acknowledgement in source distributions<br>
+<br>
 <br>
 <br>
 </td>
