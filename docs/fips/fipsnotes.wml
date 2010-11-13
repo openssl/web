@@ -15,7 +15,7 @@ quick "executive summary".  Here is a grossly oversimplified account:
 <p>
 <ul>
 
-<li>OpenSSL istself is not validated, and never will be.  Instead a special carefully defined software component called the
+<li>OpenSSL itself is not validated, and never will be.  Instead a special carefully defined software component called the
 OpenSSL FIPS Object Module has been created.  This Module was designed for compatibility with OpenSSL so that products using
 the OpenSSL API can be converted to use validated cryptography with minimal effort.
 <p>
@@ -25,7 +25,7 @@ in source code form, meaning that if you can use it exactly as is and can build 
 instructions) for your platform, then you can use it as validated cryptography on a "vendor affirmed" basis.
 <p>
 
-<li>If even the tinest source code or build process changes are required for your intended application, you cannot use
+<li>If even the tiniest source code or build process changes are required for your intended application, you cannot use
 the open source based validated module directly.  You must obtain your own validation.  This is a common situation, see "Private
 Label" validation, below.
 <p>
@@ -37,7 +37,9 @@ information is scant).
 </ul>
 Note FIPS 140-2 validation is a complicated topic that the above summary does not adequately address.  You have been warned!
 
+<a name="privatelabel">
 <h2>The "Private Label" Validation</h2>
+</a>
 
 We refer to validations based directly on the OpenSSL FIPS Object Module as "private label" validations.  These are also
 sometimes referred to as "cookie cutter" validations.  The usual reason for such separate validations is the need for small
@@ -48,11 +50,14 @@ The OSF would really prefer to work on open source based validations of benefit 
 financial support for that objective is intermittent at best.  On the other hand many vendors are interested in private label
 validations and the OSF will assist in such efforts on a paid basis.  We've done enough of these to be very cost competitive
 and for uncomplicated validations will work on a fixed price basis.  A routine private label validation on a single commodity
-platform can cost as little as US$30,000.  Private label validations satsifying the U.S. Army "level 2" requirements are also
+platform can cost as little as
+<a href="privatelabel.html">US$30,000</a>.
+  Private label validations satisfying the U.S. Army "level 2" requirements are also
 possible.  Contact the <a href="../../support/funding/support-contact.html">OSF</a> for more information.
-
 <p>
-
+<font color="#cc3333">Update:</font> In collaboration with an accredited CMVP testing laboratory we are now offering a
+cost effective turnkey <a href="privatelabel.html">validation package</a> for routine private label validations.
+<p>
 
 <h2>Current Validations</h2>
 
@@ -65,7 +70,7 @@ And did we mention the <a href="UserGuide.pdf">User Guide</a>?
 <font color="#cc3333">Important Note:</font> Due to upcoming changes in the FIPS 140-2 validation requirements the current v1.2 Module will
 no longer be a suitable model for private label validations in its current form past the year 2010.  See the NIST <a href="http://csrc.nist.gov/groups/STM/cmvp/notices.html">Notices</a>,
 <a href="http://csrc.nist.gov/groups/ST/key_mgmt/documents/Transitioning_CryptoAlgos_070209.pdf">discussion paper</a> and
-<a href="http://csrc.nist.gov/publications/drafts/800-131/draft-800-131_transition-paper.pdf">Draft 800-131</a>.
+<a href="http://csrc.nist.gov/publications/drafts/800-131/draft-sp800-131_spd-june2010.pdf">SP 800-131</a>
 <p>
 We hope to address these new changes in the next open source based validation (see below).
 
@@ -82,7 +87,7 @@ work directly results in FIPS related code improvements.  The income from such w
 the rent and thus indirectly supports all of OpenSSL.  However, unless you are one of the companies directly obtaining a custom
 private label validation those improvements don't give you validated cryptography that can be sold in the markets requiring such validation.
 <p>
-If and when sufficient sponsor funding materializes we will move quickly and enthusiastically to
+If and when sufficient sponsor funding materialises we will move quickly and enthusiastically to
 obtain a new and updated validation to satisfy the validation requirements then in effect.  
 Any such plans will be posted here.
 <p>
