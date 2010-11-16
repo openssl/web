@@ -1,0 +1,46 @@
+
+   OpenSSL version 0.9.8p released
+   ===============================
+
+   OpenSSL - The Open Source toolkit for SSL/TLS
+   http://www.openssl.org/
+
+   The OpenSSL project team is pleased to announce the release of
+   version 0.9.8p of our open source toolkit for SSL/TLS. This new
+   OpenSSL version is a security and bugfix release which addresses
+   CVE-2010-3864. For a complete list of changes,
+   please see http://www.openssl.org/source/exp/CHANGES.
+
+   We consider OpenSSL 0.9.8p to be the best version of OpenSSL
+   available and we strongly recommend that users of older versions
+   upgrade as soon as possible. OpenSSL 0.9.8p is available for
+   download via HTTP and FTP from the following master locations (you
+   can find the various FTP mirrors under
+   http://www.openssl.org/source/mirror.html):
+
+     * http://www.openssl.org/source/
+     * ftp://ftp.openssl.org/source/
+
+   The distribution file name is:
+
+    o openssl-0.9.8p.tar.gz
+      Size: 3772501
+      MD5 checksum: 7f24047f70364c9eabc94899e356ce39
+      SHA1 checksum: 4ba43f4110432d7518c4f5d7be79077705ae7f16
+
+   The checksums were calculated using the following commands:
+
+    openssl md5 openssl-0.9.*.tar.gz
+    openssl sha1 openssl-0.9.*.tar.gz
+
+   Yours,
+
+   The OpenSSL Project Team...
+
+    Mark J. Cox             Nils Larsch         Ulf Möller
+    Ralf S. Engelschall     Ben Laurie          Andy Polyakov
+    Dr. Stephen Henson      Richard Levitte     Geoff Thorpe
+    Lutz Jänicke            Bodo Möller
+
+
+
