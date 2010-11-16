@@ -1,3 +1,5 @@
+16-Nov-2010: OpenSSL 1.0.0b is now <a href="ROOT/source/">available</a>, including important bug and security fixes
+16-Nov-2010: <a href="ROOT/news/secadv_20101116.txt">Security Advisory</a>: buffer overrun fix
 01-Jun-2010: OpenSSL 0.9.8o is now <a href="ROOT/source/">available</a>, including important bug and security fixes
 01-Jun-2010: OpenSSL 1.0.0a is now <a href="ROOT/source/">available</a>, including important bug and security fixes
 01-Jun-2010: <a href="ROOT/news/secadv_20100601.txt">Security Advisory</a>: two security fixes
