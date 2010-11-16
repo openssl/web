@@ -72,7 +72,10 @@ The most recent open source based validation is v1.2, FIPS 140-2 certificate
  <a href="../../source/openssl-fips-1.2.tar.gz">source</a> at a minimum.
 And did we mention the <a href="UserGuide.pdf">User Guide</a>?
 <p>
-<font color="#cc3333">Important Note:</font> Due to upcoming changes in the FIPS 140-2 validation requirements the current v1.2 Module will
+<a name="transition">
+<font color="#cc3333">Important Note:</font>
+</a>
+Due to upcoming changes in the FIPS 140-2 validation requirements the current v1.2 Module will
 no longer be a suitable model for private label validations in its current form past the year 2010.  See the NIST <a href="http://csrc.nist.gov/groups/STM/cmvp/notices.html">Notices</a>,
 <a href="http://csrc.nist.gov/groups/ST/key_mgmt/documents/Transitioning_CryptoAlgos_070209.pdf">discussion paper</a> and
 <a href="http://csrc.nist.gov/publications/drafts/800-131/draft-sp800-131_spd-june2010.pdf">SP 800-131</a>.

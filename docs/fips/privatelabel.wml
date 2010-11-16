@@ -83,6 +83,12 @@ with modifications, works on your platform(s).
       specific target platform.  We have made numerous performance enhancements
       since the original #1051 validation.  Some of these can be easily incorporated
       into routine private label validations and some cannot.
+  <p>
+  <li>You start the validation in 2010.  The reason for this qualification is that the rules change starting
+      in 2011, see <a href="fipsnotes.html#transition">upcoming changes in the FIPS 140-2 validation requirements</a>.
+      We are confident that OpenSSL FIPS Object Module based validations of some type will still be possible
+      post-2010, but there are enough uncertainties with the new guidelines to caution us against offering
+      the same pricing at this time.
 </ul>
 <p>
 Note that we can still help you if not all of these circumstances apply, but we'll
