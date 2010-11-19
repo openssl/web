@@ -11,7 +11,8 @@
 </define-tag>
 
 <mirror url="ftp://ftp.openssl.org/source/" loc="DE"> 
-<mirror url="ftp://sunsite.cnlab-switch.ch/mirror/openssl/" loc="CH">
+<mirror url="ftp://mirror.switch.ch/mirror/openssl/" loc="CH">
+<mirror url="http://mirror.switch.ch/ftp/mirror/openssl/" loc="CH">
 <mirror url="ftp://ftp.funet.fi/pub/crypt/cryptography/libs/openssl/" loc="FI">
 <mirror url="ftp://ftp.pca.dfn.de/pub/tools/net/openssl/" loc="DE">
 <mirror url="ftp://sunsite.uio.no/pub/security/openssl/" loc="NO">
