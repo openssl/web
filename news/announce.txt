@@ -7,9 +7,16 @@
 
    The OpenSSL project team is pleased to announce the release of
    version 1.0.0b of our open source toolkit for SSL/TLS. This new
-   OpenSSL version is a security and bugfix release which addresses
-   CVE-2010-3864. For a complete list of changes,
-   please see http://www.openssl.org/source/exp/CHANGES.
+   OpenSSL version is a security and bugfix release. For a complete
+   list of changes, please see
+
+       http://www.openssl.org/source/exp/CHANGES.
+
+   The most significant changes are:
+
+      o Fix for security issue CVE-2010-3864.
+      o Fix for CVE-2010-2939
+      o Fix WIN32 build system for GOST ENGINE.
 
    We consider OpenSSL 1.0.0b to be the best version of OpenSSL
    available and we strongly recommend that users of older versions
@@ -30,8 +37,8 @@
 
    The checksums were calculated using the following commands:
 
-    openssl md5 openssl-1.0.*.tar.gz
-    openssl sha1 openssl-1.0.*.tar.gz
+    openssl md5 openssl-1.0.0b.tar.gz
+    openssl sha1 openssl-1.0.0b.tar.gz
 
    Yours,
 

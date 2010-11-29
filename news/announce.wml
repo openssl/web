@@ -12,9 +12,16 @@ OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <p>
 The OpenSSL project team is pleased to announce the release of version
 1.0.0b of our open source toolkit for SSL/TLS. This new OpenSSL version
-is a security and bugfix release which addresses CVE-2010-3864.
-For a complete list of changes, please see
+is a security and bugfix release.  For a complete list of changes, please see
 <a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0b">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0b</a>.
+<p>
+The most significant changes are:
+<ul>
+  <li> Fix for security issue CVE-2010-3864.
+  <li> Fix for CVE-2010-2939
+  <li> Fix WIN32 build system for GOST ENGINE.
+</ul>
+
 <p>
 We consider OpenSSL 1.0.0b to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
@@ -41,8 +48,8 @@ The distribution file name is:
 The checksums were calculated using the following commands:
 <blockquote>
 <pre>
-    openssl md5 openssl-1.0.*.tar.gz
-    openssl sha1 openssl-1.0.*.tar.gz
+    openssl md5 openssl-1.0.0b.tar.gz
+    openssl sha1 openssl-1.0.0b.tar.gz
 </pre>
 </blockquote>
 
