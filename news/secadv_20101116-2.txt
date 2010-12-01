@@ -97,10 +97,10 @@ Patch for OpenSSL 1.0.0 releases
 Index: ssl/t1_lib.c
 ===================================================================
 RCS file: /v/openssl/cvs/openssl/ssl/t1_lib.c,v
-retrieving revision 1.64.2.14
-diff -u -r1.64.2.14 t1_lib.c
---- ssl/t1_lib.c	15 Jun 2010 17:25:15 -0000	1.64.2.14
-+++ ssl/t1_lib.c	15 Nov 2010 15:26:19 -0000
+retrieving revision 1.64.2.13
+diff -u -r1.64.2.13 t1_lib.c
+--- ssl/t1_lib.c	17 Feb 2010 18:38:10 -0000	1.64.2.13
++++ ssl/t1_lib.c	1 Dec 2010 16:19:29 -0000
 @@ -714,14 +714,23 @@
  				switch (servname_type)
  					{
@@ -151,8 +151,8 @@ diff -u -r1.64.2.14 t1_lib.c
 -				return 0;
 +				if(s->session->tlsext_ecpointformatlist)
 +					{
-+					*al = TLS1_AD_DECODE_ERROR;
-+					return 0;
++					OPENSSL_free(s->session->tlsext_ecpointformatlist);
++					s->session->tlsext_ecpointformatlist = NULL;
 +					}
 +				s->session->tlsext_ecpointformatlist_length = 0;
 +				if ((s->session->tlsext_ecpointformatlist = OPENSSL_malloc(ecpointformatlist_length)) == NULL)
@@ -198,7 +198,6 @@ diff -u -r1.64.2.14 t1_lib.c
  #if 0
  			fprintf(stderr,"ssl_parse_clienthello_tlsext s->session->tlsext_ellipticcurvelist (length=%i) ", s->session->tlsext_ellipticcurvelist_length);
  			sdata = s->session->tlsext_ellipticcurvelist;
-
 
 References
 ===========
