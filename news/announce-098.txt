@@ -7,9 +7,14 @@
 
    The OpenSSL project team is pleased to announce the release of
    version 0.9.8p of our open source toolkit for SSL/TLS. This new
-   OpenSSL version is a security and bugfix release which addresses
-   CVE-2010-3864. For a complete list of changes,
-   please see http://www.openssl.org/source/exp/CHANGES.
+   OpenSSL version is a security and bugfix release. For a complete
+   list of changes, please see
+
+       http://www.openssl.org/source/exp/CHANGES.
+
+   The most significant changes are:
+
+      o Fix for security issue CVE-2010-3864.
 
    We consider OpenSSL 0.9.8p to be the best version of OpenSSL
    available and we strongly recommend that users of older versions
