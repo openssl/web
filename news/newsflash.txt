@@ -1,3 +1,6 @@
+02-Dec-2010: <a href="ROOT/news/secadv_20101202.txt">Security Advisory</a>: ciphersuite downgrade fix
+02-Dec-2010: OpenSSL 1.0.0c is now <a href="ROOT/source/">available</a>, including important bug and security fixes
+02-Dec-2010: OpenSSL 0.9.8q is now <a href="ROOT/source/">available</a>, including important bug and security fixes
 16-Nov-2010: OpenSSL 1.0.0b is now <a href="ROOT/source/">available</a>, including important bug and security fixes
 16-Nov-2010: OpenSSL 0.9.8p is now <a href="ROOT/source/">available</a>, including important bug and security fixes
 16-Nov-2010: <a href="ROOT/news/secadv_20101116.txt">Security Advisory</a>: buffer overrun fix
