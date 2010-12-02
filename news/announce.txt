@@ -1,12 +1,12 @@
 
-   OpenSSL version 1.0.0b released
+   OpenSSL version 1.0.0c released
    ===============================
 
    OpenSSL - The Open Source toolkit for SSL/TLS
    http://www.openssl.org/
 
    The OpenSSL project team is pleased to announce the release of
-   version 1.0.0b of our open source toolkit for SSL/TLS. This new
+   version 1.0.0c of our open source toolkit for SSL/TLS. This new
    OpenSSL version is a security and bugfix release. For a complete
    list of changes, please see
 
@@ -14,13 +14,15 @@
 
    The most significant changes are:
 
-      o Fix for security issue CVE-2010-3864.
-      o Fix for CVE-2010-2939
-      o Fix WIN32 build system for GOST ENGINE.
+      o Fix for security issue CVE-2010-4180
+      o Fix for CVE-2010-4252
+      o Fix mishandling of absent EC point format extension.
+      o Fix various platform compilation issues.
+      o Corrected fix for security issue CVE-2010-3864.
 
-   We consider OpenSSL 1.0.0b to be the best version of OpenSSL
+   We consider OpenSSL 1.0.0c to be the best version of OpenSSL
    available and we strongly recommend that users of older versions
-   upgrade as soon as possible. OpenSSL 1.0.0b is available for
+   upgrade as soon as possible. OpenSSL 1.0.0c is available for
    download via HTTP and FTP from the following master locations (you
    can find the various FTP mirrors under
    http://www.openssl.org/source/mirror.html):
@@ -30,15 +32,15 @@
 
    The distribution file name is:
 
-    o openssl-1.0.0b.tar.gz
-      Size: 4019360
-      MD5 checksum: 104deb3b7e6820cae6de3f49ba0ff2b0
-      SHA1 checksum: cccb125b29f2fa209edb114258d22aeca4e871a2
+    o openssl-1.0.0c.tar.gz
+      Size: 4023056
+      MD5 checksum: ff8fb85610aef328315a9decbb2712e4
+      SHA1 checksum: 5a2d74fa7fe90c80915332404b9700044ef676a1
 
    The checksums were calculated using the following commands:
 
-    openssl md5 openssl-1.0.0b.tar.gz
-    openssl sha1 openssl-1.0.0b.tar.gz
+    openssl md5 openssl-1.0.0c.tar.gz
+    openssl sha1 openssl-1.0.0c.tar.gz
 
    Yours,
 
