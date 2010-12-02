@@ -1,12 +1,12 @@
 
-   OpenSSL version 0.9.8p released
+   OpenSSL version 0.9.8q released
    ===============================
 
    OpenSSL - The Open Source toolkit for SSL/TLS
    http://www.openssl.org/
 
    The OpenSSL project team is pleased to announce the release of
-   version 0.9.8p of our open source toolkit for SSL/TLS. This new
+   version 0.9.8q of our open source toolkit for SSL/TLS. This new
    OpenSSL version is a security and bugfix release. For a complete
    list of changes, please see
 
@@ -14,11 +14,12 @@
 
    The most significant changes are:
 
-      o Fix for security issue CVE-2010-3864.
+      o Fix for security issue CVE-2010-4180
+      o Fix for CVE-2010-4252
 
-   We consider OpenSSL 0.9.8p to be the best version of OpenSSL
+   We consider OpenSSL 0.9.8q to be the best version of OpenSSL
    available and we strongly recommend that users of older versions
-   upgrade as soon as possible. OpenSSL 0.9.8p is available for
+   upgrade as soon as possible. OpenSSL 0.9.8q is available for
    download via HTTP and FTP from the following master locations (you
    can find the various FTP mirrors under
    http://www.openssl.org/source/mirror.html):
@@ -28,10 +29,10 @@
 
    The distribution file name is:
 
-    o openssl-0.9.8p.tar.gz
-      Size: 3772501
-      MD5 checksum: 7f24047f70364c9eabc94899e356ce39
-      SHA1 checksum: 4ba43f4110432d7518c4f5d7be79077705ae7f16
+    o openssl-0.9.8q.tar.gz
+      Size: 3773961
+      MD5 checksum: 80e67291bec9230f03eefb5cfe858998
+      SHA1 checksum: 12b6859698ca299fa0cba594686c25d5c01e410d
 
    The checksums were calculated using the following commands:
 
