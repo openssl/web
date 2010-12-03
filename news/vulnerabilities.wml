@@ -8,6 +8,59 @@
 <title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p><h2>2010</h2><dl>
+  <dt><b><a name="2010-4252"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4252">CVE-2010-4252: </a></a></b>2nd December 2010<p/></dt>
+  <dd>
+    <description>
+An error in OpenSSL's experimental J-PAKE implementation which could
+lead to successful validation by someone with no knowledge of the
+shared secret.  The OpenSSL Team still consider the implementation of
+J-PAKE to be experimental and is not compiled by default.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20101202.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0c (Affected 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <p/>
+  <dt><b><a name="2010-4180"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4180">CVE-2010-4180: </a></a></b>2nd December 2010<p/></dt>
+  <dd>
+    <description>
+A flaw in the OpenSSL SSL/TLS server code where an old bug workaround
+allows malicious clients to modify the stored session cache
+ciphersuite. In some cases the ciphersuite can be downgraded to a
+weaker one on subsequent connections.  This issue only affects OpenSSL
+based SSL/TLS server if it uses OpenSSL's internal caching mechanisms
+and the SSL_OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG flag (many
+applications enable this by using the SSL_OP_ALL option).
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20101202.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0c (Affected 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8q (Affected 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2010-3864"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3864">CVE-2010-3864: </a></a></b>16th November 2010<p/></dt>
+  <dd>
+    <description>
+
+A flaw in the OpenSSL TLS server extension code parsing which on
+affected servers can be exploited in a buffer overrun attack.  Any
+OpenSSL based TLS server is vulnerable if it is multi-threaded and
+uses OpenSSL's internal caching mechanism. Servers that are
+multi-process and/or disable internal session caching are NOT
+affected.
+
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20101116.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0b (Affected 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8p (Affected 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
   <dt><b><a name="2010-1633"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1633">CVE-2010-1633: </a></a></b>1st June 2010<p/></dt>
   <dd>
     <description>

@@ -5,7 +5,7 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20100601">
+<security updated="20101203">
 
   <issue public="20020730">
     <cve name="2002-0655"/>
@@ -922,6 +922,93 @@ An invalid Return value check in pkey_rsa_verifyrecover was
 discovered.  When verification recovery fails for RSA keys an
 uninitialised buffer with an undefined length is returned instead of
 an error code.  This could lead to an information leak.
+    </description>
+  </issue>
+
+  <issue public="20101116">
+    <cve name="2010-3864"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <fixed base="1.0.0" version="1.0.0b" date="20101116"/>
+    <fixed base="0.9.8" version="0.9.8p" date="20101116"/>
+    <advisory url="http://www.openssl.org/news/secadv_20101116.txt"/>
+    <reported source="Rob Hulswit"/>
+    <description>
+
+A flaw in the OpenSSL TLS server extension code parsing which on
+affected servers can be exploited in a buffer overrun attack.  Any
+OpenSSL based TLS server is vulnerable if it is multi-threaded and
+uses OpenSSL's internal caching mechanism. Servers that are
+multi-process and/or disable internal session caching are NOT
+affected.
+
+    </description>
+  </issue>
+
+  <issue public="20101202">
+    <cve name="2010-4252"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <fixed base="1.0.0" version="1.0.0c" date="20101202"/>
+    <advisory url="http://www.openssl.org/news/secadv_20101202.txt"/>
+    <reported source="Sebastian Martini"/>
+    <description>
+An error in OpenSSL's experimental J-PAKE implementation which could
+lead to successful validation by someone with no knowledge of the
+shared secret.  The OpenSSL Team still consider the implementation of
+J-PAKE to be experimental and is not compiled by default.
+    </description>
+  </issue>
+
+  <issue public="20101202">
+    <cve name="2010-4180"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <fixed base="1.0.0" version="1.0.0c" date="20101202"/>
+    <fixed base="0.9.8" version="0.9.8q" date="20101202"/>
+    <advisory url="http://www.openssl.org/news/secadv_20101202.txt"/>
+    <reported source="Martin Rex"/>
+    <description>
+A flaw in the OpenSSL SSL/TLS server code where an old bug workaround
+allows malicious clients to modify the stored session cache
+ciphersuite. In some cases the ciphersuite can be downgraded to a
+weaker one on subsequent connections.  This issue only affects OpenSSL
+based SSL/TLS server if it uses OpenSSL's internal caching mechanisms
+and the SSL_OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG flag (many
+applications enable this by using the SSL_OP_ALL option).
     </description>
   </issue>
 
