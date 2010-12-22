@@ -112,3 +112,26 @@ goal.
 <p>If you have an interest in sponsoring
 that effort, in whole or in part, please contact the <a href="http://openssl.org/support/funding/support-contact.html">OSF</a>.
 
+<h2>Technical Notes</h2>
+<h3>Performance at Startup</h3>
+We have had many complaints about poor performance of the Power-On Self Test (POST) on low
+powered computers, as with some embedded devices. In the worst cases the POST can take several minutes.
+Such devices were not included as test platforms at the time the code was originally written.
+<p>
+The current FIPS validated code performs a very comprehensive set of mandatory
+algorithm self tests when it enter FIPS mode covering many algorithm
+combinations. There is a DSA parameter generation self test which is
+especially CPU intensive.
+<p>
+As a result of the POST performance issue we revisited the KAT (Known Answer Test)
+requirements in the POST process that were burning up most of those
+cycle.  In consultation with a CMVP test lab we determined that it should
+be possible to substantially reduce that performance penalty in a new
+validation.  Unfortunately such a change can only be undertaken in the context
+of a new validation, and not as a change letter modification.
+<p>
+Another factor affecting performance is the use (or not) of platform specific
+optimizations.  The x86/x64 Windows and Linux code makes use of assembly language
+optimizations for FIPS cryptographic algorithms. The C only version
+is much slower and so the POST is slower too.
+
