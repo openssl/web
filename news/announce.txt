@@ -1,12 +1,12 @@
 
-   OpenSSL version 1.0.0c released
+   OpenSSL version 1.0.0d released
    ===============================
 
    OpenSSL - The Open Source toolkit for SSL/TLS
    http://www.openssl.org/
 
    The OpenSSL project team is pleased to announce the release of
-   version 1.0.0c of our open source toolkit for SSL/TLS. This new
+   version 1.0.0d of our open source toolkit for SSL/TLS. This new
    OpenSSL version is a security and bugfix release. For a complete
    list of changes, please see
 
@@ -14,15 +14,11 @@
 
    The most significant changes are:
 
-      o Fix for security issue CVE-2010-4180
-      o Fix for CVE-2010-4252
-      o Fix mishandling of absent EC point format extension.
-      o Fix various platform compilation issues.
-      o Corrected fix for security issue CVE-2010-3864.
+      o Fix for security issue CVE-2011-0014
 
-   We consider OpenSSL 1.0.0c to be the best version of OpenSSL
+   We consider OpenSSL 1.0.0d to be the best version of OpenSSL
    available and we strongly recommend that users of older versions
-   upgrade as soon as possible. OpenSSL 1.0.0c is available for
+   upgrade as soon as possible. OpenSSL 1.0.0d is available for
    download via HTTP and FTP from the following master locations (you
    can find the various FTP mirrors under
    http://www.openssl.org/source/mirror.html):
@@ -32,15 +28,15 @@
 
    The distribution file name is:
 
-    o openssl-1.0.0c.tar.gz
-      Size: 4023056
-      MD5 checksum: ff8fb85610aef328315a9decbb2712e4
-      SHA1 checksum: 5a2d74fa7fe90c80915332404b9700044ef676a1
+    o openssl-1.0.0d.tar.gz
+      Size: 4025484
+      MD5 checksum: 40b6ea380cc8a5bf9734c2f8bf7e701e
+      SHA1 checksum: 32ca934f380a547061ddab7221b1a34e4e07e8d5
 
    The checksums were calculated using the following commands:
 
-    openssl md5 openssl-1.0.0c.tar.gz
-    openssl sha1 openssl-1.0.0c.tar.gz
+    openssl md5 openssl-1.0.0d.tar.gz
+    openssl sha1 openssl-1.0.0d.tar.gz
 
    Yours,
 
