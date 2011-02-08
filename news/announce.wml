@@ -1,9 +1,9 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 1.0.0c</title>
+<title>Announcement: OpenSSL version 1.0.0d</title>
 
-<h1>Announcement: OpenSSL version 1.0.0c</h1>
+<h1>Announcement: OpenSSL version 1.0.0d</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
@@ -11,23 +11,18 @@ OpenSSL - The Open Source toolkit for SSL/TLS<br>
 
 <p>
 The OpenSSL project team is pleased to announce the release of version
-1.0.0c of our open source toolkit for SSL/TLS. This new OpenSSL version
+1.0.0d of our open source toolkit for SSL/TLS. This new OpenSSL version
 is a security and bugfix release.  For a complete list of changes, please see
-<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0c">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0c</a>.
+<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0d">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0d</a>.
 <p>
 The most significant changes are:
 <ul>
-  <li> Fix for security issue CVE-2010-4180
-  <li> Fix for CVE-2010-4252
-  <li> Fix mishandling of absent EC point format extension.
-  <li> Fix various platform compilation issues.
-  <li> Corrected fix for security issue CVE-2010-3864.
-</ul>
+  <li> Fix for security issue <a href="http://www.openssl.org/news/secadv_20110208.txt">CVE-2011-0014</a></ul>
 
 <p>
-We consider OpenSSL 1.0.0c to be the best version of OpenSSL available
+We consider OpenSSL 1.0.0d to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 1.0.0c is available for download via HTTP
+soon as possible.  OpenSSL 1.0.0d is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -40,18 +35,18 @@ FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www
 The distribution file name is:
 
 <ul>
-  <li>openssl-1.0.0c.tar.gz<br>
-      Size: 4023056<br>
-      MD5 checksum: ff8fb85610aef328315a9decbb2712e4<br>
-      SHA1 checksum: 5a2d74fa7fe90c80915332404b9700044ef676a1<br>
+  <li>openssl-1.0.0d.tar.gz<br>
+      Size: 4025484<br>
+      MD5 checksum: 40b6ea380cc8a5bf9734c2f8bf7e701e<br>
+      SHA1 checksum: 32ca934f380a547061ddab7221b1a34e4e07e8d5<br>
 </ul>
 
 <p>
 The checksums were calculated using the following commands:
 <blockquote>
 <pre>
-    openssl md5 openssl-1.0.0c.tar.gz
-    openssl sha1 openssl-1.0.0c.tar.gz
+    openssl md5 openssl-1.0.0d.tar.gz
+    openssl sha1 openssl-1.0.0d.tar.gz
 </pre>
 </blockquote>
 
