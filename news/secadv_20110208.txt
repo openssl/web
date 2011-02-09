@@ -34,7 +34,7 @@ Which applications are affected
 
 Applications are only affected if they act as a server and call
 SSL_CTX_set_tlsext_status_cb on the server's SSL_CTX. This includes
-Apache httpd >= 2.3.3.
+Apache httpd >= 2.3.3, if configured with "SSLUseStapling On".
 
 Patch
 -----
