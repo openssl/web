@@ -76,5 +76,14 @@ Acknowledgement in source distributions<br>
 
 </tr>
 </table>
-<p>
+
+We also accept donations in any amount via credit card or PayPal:
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="TNWU6T6CPR9AG">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal payment">
+
+<br>
+<br>
+<br>
 For further information please contact the <a href="funding/support-contact.html">OpenSSL Software Foundation</a>.
