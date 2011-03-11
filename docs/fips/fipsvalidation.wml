@@ -67,12 +67,25 @@ The OpenSSL Software Foundation receives support from multiple sources for each
 validation effort; however only those sponsors who have elected to be recognised
 for their contribution to OpenSSL are listed below.
 <ul>
-<li><A href="http://www.securenetterm.com/">Intersoft International, Inc.</a>,
+
+<li><hr><a href="http://www.securenetterm.com/">Intersoft International, Inc.</a>,
 platform sponsor (VC++ Win32/x86)
+<p>
+<p>
 
-<li><A href="http://www.opengear.com/">Opengear, Inc.</a>, platform sponsor
+<li><hr><a href="http://www.opengear.com/">Opengear, Inc.</a>, platform sponsor
 (uCLinux ARM)
+<a href="http://www.opengear.com/">
+<img src="$(IMG)/opengear-logo-med.jpg" align=center border=0>
+</a>
 
+<li><hr><a href="http://www.quintessencelabs.com/">QuintessenceLabs Pty Ltd</a>, platform sponsor
+(Fedora 14 x86-64 asm optimization)
+<a href="http://www.quintessencelabs.com/">
+<img src="$(IMG)/quintessence-logo-med.jpg" align=center border=0>
+</a>
+
+<hr>
 </ul>
 <p>
 If you have an interest in sponsoring any changes or additions to this validation
