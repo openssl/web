@@ -69,12 +69,12 @@ for their contribution to OpenSSL are listed below.
 <ul>
 
 <li><hr><a href="http://www.securenetterm.com/">Intersoft International, Inc.</a>,
-platform sponsor (VC++ Win32/x86)
+platform sponsor (VC++ Win32/x86 asm optimisation)
 <p>
 <p>
 
 <li><hr><a href="http://www.opengear.com/">Opengear, Inc.</a>, platform sponsor
-(uCLinux ARM)
+(uCLinux ARMv4 asm optimisation)
 <a href="http://www.opengear.com/">
 <img src="$(IMG)/opengear-logo-med.jpg" align=center border=0>
 </a>
