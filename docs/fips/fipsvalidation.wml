@@ -85,6 +85,12 @@ platform sponsor (VC++ Win32/x86)
 <img src="$(IMG)/quintessence-logo-med.jpg" align=center border=0>
 </a>
 
+<li><hr><a href="http://www.pkware.com/">PKWARE, Inc.</a>, platform sponsor
+(Fedora 14 x86-64 asm optimization)
+<a href="http://www.pkware.com/">
+<img src="$(IMG)/pkware-logo-med.jpg" align=center border=0>
+</a>
+
 <hr>
 </ul>
 <p>
