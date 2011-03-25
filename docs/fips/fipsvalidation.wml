@@ -54,8 +54,7 @@ to that provided by the current "FIPS capable" OpenSSL.
 </ul>
 
 What this validation currently does <em>not</em> include is many common test platforms
-present in earlier validations.  Only a Linux derivative on ARM
-is currently planned.  It will be possible for new co-sponsors to include additional test platforms
+present in earlier validations.  It will be possible for new co-sponsors to include additional test platforms
 for only the incremental costs, provided that such arrangements are made prior to the point where
 the timeline for the ongoing validation effort is adversely impacted.  The window of opportunity for
 the addition of new platforms (or other non-disruptive enhancements) is anticipated to extend only
@@ -67,6 +66,10 @@ The OpenSSL Software Foundation receives support from multiple sources for each
 validation effort; however only those sponsors who have elected to be recognised
 for their contribution to OpenSSL are listed below.
 <ul>
+
+<li><hr>Original sponsors: overall validation effort with one platform (Android on ARMv7)
+<p>
+<p>
 
 <li><hr><a href="http://www.securenetterm.com/">Intersoft International, Inc.</a>,
 platform sponsor (VC++ Win32/x86 asm optimisation)
@@ -80,13 +83,13 @@ platform sponsor (VC++ Win32/x86 asm optimisation)
 </a>
 
 <li><hr><a href="http://www.quintessencelabs.com/">QuintessenceLabs Pty Ltd</a>, platform sponsor
-(Fedora 14 x86-64 asm optimization)
+(Fedora 14 x86-64 asm optimisation)
 <a href="http://www.quintessencelabs.com/">
 <img src="$(IMG)/quintessence-logo-med.jpg" align=center border=0>
 </a>
 
 <li><hr><a href="http://www.pkware.com/">PKWARE, Inc.</a>, platform sponsor
-(HPUX 11i on Itantium 32, 64 bit with asm optimization)
+(HPUX 11i on Itanium 32, 64 bit with asm optimisation)
 <a href="http://www.pkware.com/">
 <img src="$(IMG)/pkware-logo-med.jpg" align=center border=0>
 </a>
