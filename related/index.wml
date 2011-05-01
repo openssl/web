@@ -23,12 +23,6 @@ OpenSSL) related stuff.
     <item name="SSLeay Doc: FAQ List (Japanese)"
           info="The SSLeay Frequently Asked Questions in Japanese"
           url="http://www.infoscience.co.jp/technical/crypto/ssleay_jp.html">
-    <item name="SSLeay Doc: Programmers Reference"
-          info="The reference manual for programming with SSLeay"
-          url="http://www.psy.uq.oz.au/~ftp/Crypto/ssl.html">
-    <item name="SSLeay Doc: Misc Files"
-          info="Various documentation files for SSLeay"
-          url="http://www.psy.uq.edu.au/~ftp/Crypto/ssleay/">
     <item name="SSLeay Doc: Documentation Archive"
           info="A nice archive of HTML documents for the SSLeay library"
           url="http://www.columbia.edu/~ariel/ssleay/">
