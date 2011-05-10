@@ -1,0 +1,248 @@
+#!/bin/sh
+#
+# calculate in-core fingerprint via looking at the object file rather than
+# running a program on the target
+#
+
+DEBUG=
+
+OBJCOPY=${CROSS_COMPILE}objcopy
+OBJDUMP=${CROSS_COMPILE}objdump
+
+#OBJCOPY=objcopy
+#OBJDUMP=objdump
+
+HMAC_KEY="etaonrishdlcupfm"
+FINGERTYPE="openssl sha1 -hmac ${HMAC_KEY}"
+
+# FINGERTYPE can be made via openssl or fips_standalone_sha1 (output word 2)
+
+# allow for a simple -d option
+if [ "$1" = "-d" ]; then
+  DEBUG=1
+  shift
+fi
+
+if [ "$1" != "-exe" -a "$1" != "-dso" ]; then
+  echo "usage: incore [-exe|-dso] executable" >&2
+  exit 1
+fi
+
+APP="$2"
+
+if [ -z "$APP" ]; then
+  echo "usage: incore [-exe|-dso] executable" >&2
+  exit 1
+fi
+
+if [ ! -f "$APP" ]; then 
+  echo "incore: $APP not found" >&2
+  exit 1
+fi
+
+#TARGET=elf64-x86-64
+TARGET=`$OBJDUMP -f $APP | grep 'file format' | awk '{print $4}'`
+
+if [ ! -z "$DEBUG" ]; then
+  echo "TARGET: $TARGET" >&2
+fi
+
+# INCORE_ADJUST is the fixup allowance for FIPS_ref_point() handling in 
+# fips/fips_canister.c which is used rather than the actual
+# function address
+
+if [ -z "$INCORE_ADJUST" ]; then
+
+  INCORE_ADJUST=4
+  case $TARGET in
+    elf64-x86-64) INCORE_ADJUST=4;;
+    #elf32-littlearm|elf32-little|elf32-bigarm) INCORE_ADJUST="-36";;
+    elf32-littlearm|elf32-little|elf32-bigarm) INCORE_ADJUST="0";;
+  esac
+
+fi
+
+#$OBJCOPY  -j .rodata -v -O binary $APP $APP-rodata  | grep -v '^copy from'
+#$OBJCOPY  -j .text -v -O binary $APP $APP-text | grep -v '^copy from'
+#$OBJCOPY  -j .rodata -v -F $TARGET $APP $APP-rodata  | grep -v '^copy from'
+#$OBJCOPY  -j .text -v -F $TARGET $APP $APP-text | grep -v '^copy from'
+
+#
+# locate all the required symbols
+#
+eval `$OBJDUMP -t $APP | egrep 'FIPS_text_start|FIPS_text_end|FIPS_rodata_end|FIPS_rodata_start|FIPS_signature|FINGERPRINT_ascii_value' | awk '{printf("%s=%s\n",$6,toupper($1))}' | sed -e 's/\./_/g'`
+
+#
+# locate the offsets and length of the interesting sections
+#
+eval `$OBJDUMP -h $APP | egrep '.text|.rodata|.bss' | awk '{printf("%s=%s\n%s_OFF=%s\n",$2,toupper($4),$2,toupper($6))}' | sed -e 's/^\./DOT/' -e 's/\./_/g'`
+
+#
+# should now have the following variables set which can be used to 
+# extract the right parts from the -rodata and -text files
+#
+# e.g.
+# FIPS_rodata_end=0000000000436160
+# FIPS_rodata_start=0000000000430B00
+# FIPS_signature=000000000063EBE0
+# FIPS_text_end=00000000004304E0
+# FIPS_text_start=0000000000401780
+# DOTrodata=0000000000430AE0
+# DOTrodata_OFF=00030AE0
+# DOTtext=0000000000401690
+# DOTtext_OFF=00001690
+
+#
+# show the values - debug
+#
+if [ ! -z "$DEBUG" ]; then
+  (
+  echo "FIPS_rodata_end=$FIPS_rodata_end"
+  echo "FIPS_rodata_start=$FIPS_rodata_start"
+  echo "FIPS_signature=$FIPS_signature"
+  echo "FIPS_text_end=$FIPS_text_end"
+  echo "FIPS_text_start=$FIPS_text_start"
+  echo "FINGERPRINT_ascii_value=$FINGERPRINT_ascii_value"
+  echo "DOTrodata=$DOTrodata"
+  echo "DOTrodata_OFF=$DOTrodata_OFF"
+  echo "DOTtext=$DOTtext"
+  echo "DOTtext_OFF=$DOTtext_OFF"
+  ) >&2 
+fi
+
+if [ -z "$FIPS_rodata_start" ]; then
+  echo "$APP: Not a FIPS executable" >&2 
+  exit 1
+fi
+if [ -z "$FIPS_rodata_end" ]; then
+  echo "$APP: Not a FIPS executable" >&2 
+  exit 1
+fi
+if [ -z "$FIPS_text_start" ]; then
+  echo "$APP: Not a FIPS executable" >&2 
+  exit 1
+fi
+if [ -z "$FIPS_text_end" ]; then
+  echo "$APP: Not a FIPS executable" >&2 
+  exit 1
+fi
+
+# 
+# use 'bc' to calculate offsets and lengths for RODATA
+# 
+RSTART=`cat <<EOF | bc
+obase=10
+ibase=16 
+$FIPS_rodata_start-$DOTrodata
+EOF`
+RLEN=`cat <<EOF | bc
+obase=10
+ibase=16 
+$FIPS_rodata_end-$FIPS_rodata_start
+EOF`
+ROFF=`cat <<EOF | bc
+obase=10
+ibase=16 
+$DOTrodata_OFF
+EOF`
+ROFF=`expr $ROFF + $RSTART`
+
+# 
+# use 'bc' to calculate offsets and lengths for TEXT
+# 
+TSTART=`cat <<EOF | bc
+obase=10
+ibase=16 
+$FIPS_text_start-$DOTtext
+EOF`
+TLEN=`cat <<EOF | bc
+obase=10
+ibase=16 
+$FIPS_text_end-$FIPS_text_start
+EOF`
+TOFF=`cat <<EOF | bc
+obase=10
+ibase=16 
+$DOTtext_OFF
+EOF`
+TOFF=`expr $TOFF + $TSTART + $INCORE_ADJUST`
+
+# 
+# use 'bc' to calculate where to locate FINGERPRINT_ascii_value
+# 
+FSTART=`cat <<EOF | bc
+obase=10
+ibase=16 
+$FINGERPRINT_ascii_value-$DOTrodata
+EOF`
+# 20 bytes as ASCII HEX
+FLEN=40
+FOFF=`cat <<EOF | bc
+obase=10
+ibase=16 
+$DOTrodata_OFF
+EOF`
+FOFF=`expr $FOFF + $FSTART`
+
+#
+# NOTE: this code does not check for FIPS_signature being inside the 
+#       rodata segment and exclude it from the calculation which is what
+#       the actual runtime code does as we do not update it; the 
+#       FIPS_signature should be in BSS - but in either case our calculation 
+#       is correct as the signature comes from FINGERPRINT_ascii_value
+#       when FIPS_signature is actually blank (zero)
+#
+
+#
+# dump useful values
+# 
+if [ ! -z "$DEBUG" ]; then
+  (
+  echo "TSTART $TSTART"
+  echo "TLEN $TLEN"
+  echo "TOFF $TOFF"
+  echo "INCORE_ADJUST $INCORE_ADJUST"
+
+  echo "RSTART $RSTART"
+  echo "RLEN $RLEN"
+  echo "ROFF $ROFF"
+
+  echo "FSTART $FSTART"
+  echo "FLEN $FLEN"
+  echo "FOFF $FOFF"
+  ) >&2
+fi
+
+# some debug code when looking at the values
+if [ ! -z "$INCORE_DEBUG" ]; then
+  dd if=$APP of=mac1 bs=1 skip=$TOFF count=$TLEN
+  dd if=$APP of=mac2 bs=1 skip=$ROFF count=$RLEN
+  cat mac1 mac2 > mac
+  $FINGERTYPE mac
+fi
+
+#
+# show the actual value of FINGERPRINT_ascii_value as placed in 
+# the program by fipsld
+#
+if [ ! -z "$DEBUG" ]; then
+  (
+  echo "embedded: "
+  dd if=$APP bs=1 skip=$FOFF count=$FLEN  2>/dev/null
+  echo 
+  ) >&2
+fi
+
+#
+# now calculate what that value should be from the appropriate sections
+# of the object file
+#
+if [ ! -z "$DEBUG" ]; then
+  echo "calculated: " >&2
+fi
+( dd if=$APP bs=1 skip=$TOFF count=$TLEN && \
+  dd if=$APP bs=1 skip=$ROFF count=$RLEN ) 2>/dev/null | $FINGERTYPE
+
+exit $?
+
+
