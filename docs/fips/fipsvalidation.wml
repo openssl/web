@@ -102,6 +102,12 @@ platform sponsor (VC++ Win32/x86 asm optimisation)
 <img src="$(IMG)/cerberus-logo-med.jpg" align=center border=0>
 </a>
 
+<li><hr><a href="http://www.cyber.st.dhs.gov/host.html">DHS Science and Technology 
+Directorate-sponsored Homeland Open Security Technology (HOST) program</a>, algorithm sponsor (CMAC, AES-CCM)
+<a href="http://www.cyber.st.dhs.gov/host.html">
+<img src="$(IMG)/DHS-logo-med.jpg" align=center border=0>
+</a>
+
 <hr>
 </ul>
 <p>
