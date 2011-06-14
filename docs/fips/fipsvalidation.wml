@@ -68,6 +68,7 @@ for their contribution to OpenSSL are listed below.
 <ul>
 
 <li><hr>Original sponsors: overall validation effort with one platform (Android on ARMv7)
+
 <p>
 <p>
 
@@ -111,6 +112,11 @@ Directorate-sponsored Homeland Open Security Technology (HOST) program</a>, algo
 <li><hr><a href="http://www.innominate.com/">Innominate Security Technologies AG</a>, platform sponsor (Linux on Freescale MPC8313)
 <a href="http://www.innominate.com/">
 <img src="$(IMG)/innominate-logo-med.jpg" align=center border=0>
+</a>
+
+<li><hr><a href="http://www.psw.net/">PSW Group</a>, general sponsor
+<a href="http://www.psw.net/">
+<img src="$(IMG)/psw-logo-med.jpg" align=center border=0>
 </a>
 
 <hr>
