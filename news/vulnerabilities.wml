@@ -7,7 +7,40 @@
 
 <title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
-</p><h2>2010</h2><dl>
+</p><h2>2011</h2><dl>
+  <dt><b><a name="2011-3210"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3210">CVE-2011-3210: </a></a></b>6th September 2011<p/></dt>
+  <dd>
+    <description>
+OpenSSL server code for ephemeral ECDH ciphersuites is not
+thread-safe, and furthermore can crash if a client violates the
+protocol by sending handshake messages in incorrect order.  Only
+server-side applications that specifically support ephemeral ECDH
+ciphersuites are affected, and only if ephemeral ECDH ciphersuites are
+enabled in the configuration.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20110906.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0e (Affected 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <p/>
+  <dt><b><a name="2011-3207"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3207">CVE-2011-3207: </a></a></b>6th September 2011<p/></dt>
+  <dd>
+    <description>
+Under certain circumstances OpenSSL's internal certificate
+verification routines can incorrectly accept a CRL whose nextUpdate
+field is in the past.  Applications are only affected by the CRL
+checking vulnerability if they enable OpenSSL's internal CRL checking
+which is off by default. Applications which use their own custom CRL
+checking (such as Apache) are not affected.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20110906.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0e (Affected 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <p/>
+</dl><h2>2010</h2><dl>
   <dt><b><a name="2010-4252"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4252">CVE-2010-4252: </a></a></b>2nd December 2010<p/></dt>
   <dd>
     <description>

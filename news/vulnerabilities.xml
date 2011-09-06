@@ -5,7 +5,7 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20101203">
+<security updated="20110906">
 
   <issue public="20020730">
     <cve name="2002-0655"/>
@@ -1009,6 +1009,64 @@ weaker one on subsequent connections.  This issue only affects OpenSSL
 based SSL/TLS server if it uses OpenSSL's internal caching mechanisms
 and the SSL_OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG flag (many
 applications enable this by using the SSL_OP_ALL option).
+    </description>
+  </issue>
+
+  <issue public="20110906">
+    <cve name="2011-3207"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <fixed base="1.0.0" version="1.0.0e" date="20110906"/>
+    <advisory url="http://www.openssl.org/news/secadv_20110906.txt"/>
+    <reported source="Kaspar Brand"/>
+    <description>
+Under certain circumstances OpenSSL's internal certificate
+verification routines can incorrectly accept a CRL whose nextUpdate
+field is in the past.  Applications are only affected by the CRL
+checking vulnerability if they enable OpenSSL's internal CRL checking
+which is off by default. Applications which use their own custom CRL
+checking (such as Apache) are not affected.
+    </description>
+  </issue>
+
+ <issue public="20110906">
+    <cve name="2011-3210"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <fixed base="1.0.0" version="1.0.0e" date="20110906"/>
+    <advisory url="http://www.openssl.org/news/secadv_20110906.txt"/>
+    <reported source="Adam Langley"/>
+    <description>
+OpenSSL server code for ephemeral ECDH ciphersuites is not
+thread-safe, and furthermore can crash if a client violates the
+protocol by sending handshake messages in incorrect order.  Only
+server-side applications that specifically support ephemeral ECDH
+ciphersuites are affected, and only if ephemeral ECDH ciphersuites are
+enabled in the configuration.
     </description>
   </issue>
 
