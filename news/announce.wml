@@ -1,35 +1,35 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL versions 1.0.0d and 0.9.8r released</title>
+<title>Announcement: OpenSSL version 1.0.0e</title>
 
-<h1>Announcement: OpenSSL versions 1.0.0d and 0.9.8r released</h1>
+<h1>Announcement: OpenSSL version 1.0.0e</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
 
 
 <p>
-The OpenSSL project team is pleased to announce the release of versions
-1.0.0d and 0.9.8r of our open source toolkit for SSL/TLS. These are
-security and bugfix releases; the most significant change:
+The OpenSSL project team is pleased to announce the release of version
+1.0.0e of our open source toolkit for SSL/TLS. This new OpenSSL version
+is a security and bugfix release.  For a complete list of changes, please see
+<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0e">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0e</a>.
+<p>
+The most significant changes are:
 <ul>
-  <li> Fix for security issue <a href="http://www.openssl.org/news/secadv_20110208.txt">CVE-2011-0014</a></ul>
+  <li> Fix for CRL vulnerability issue CVE-2011-3207
+  <li> Fix for ECDH crashes CVE-2011-3210
+  <li> Protection against EC timing attacks.
+  <li> Support ECDH ciphersuites for certificates using SHA2 algorithms.
+  <li> Various DTLS fixes.
 </ul>
 
-For a longer list of changes, please see
-<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0d">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0d</a>
-or
-<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_0_9_8r">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_0_9_8r</a>.
-
 <p>
-We consider OpenSSL 1.0.0d to be the best version of OpenSSL available
+We consider OpenSSL 1.0.0e to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible. Users of the 0.9.8 branch who are not ready to upgrade
-to the 1.0.0 branch should upgrade to OpenSSL 0.9.8r.
-OpenSSL 1.0.0d and 0.9.8r are available for download via HTTP
-and FTP from the following master locations (you can find various
-mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
+soon as possible.  OpenSSL 1.0.0e is available for download via HTTP
+and FTP from the following master locations (you can find the various
+FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
 <ul>
     <li><a href="http://www.openssl.org/source/">http://www.openssl.org/source/</a>
@@ -37,28 +37,21 @@ mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.ope
 </ul>
 
 <p>
-The distribution file names are:
+The distribution file name is:
 
 <ul>
-  <li>openssl-1.0.0d.tar.gz<br>
-      Size: 4025484<br>
-      MD5 checksum: 40b6ea380cc8a5bf9734c2f8bf7e701e<br>
-      SHA1 checksum: 32ca934f380a547061ddab7221b1a34e4e07e8d5<br>
-  <li>openssl-0.9.8r.tar.gz<br>
-      Size: 3773698<br>
-      MD5 checksum: 0352932ea863bc02b056cda7c9ac5b79<br>
-      SHA1 checksum: a02411e5f4d463cac4a2a4a357a4a0b93bf65e72<br>
+  <li>openssl-1.0.0e.tar.gz<br>
+      Size: 4040229<br>
+      MD5 checksum: 7040b89c4c58c7a1016c0dfa6e821c86<br>
+      SHA1 checksum: 235eb68e5a31b0f7a23bc05f52d7a39c596e2e69<br>
 </ul>
 
 <p>
 The checksums were calculated using the following commands:
 <blockquote>
 <pre>
-    openssl md5 openssl-1.0.0d.tar.gz
-    openssl sha1 openssl-1.0.0d.tar.gz
-
-    openssl md5 openssl-0.9.8r.tar.gz
-    openssl sha1 openssl-0.9.8r.tar.gz
+    openssl md5 openssl-1.0.0e.tar.gz
+    openssl sha1 openssl-1.0.0e.tar.gz
 </pre>
 </blockquote>
 
