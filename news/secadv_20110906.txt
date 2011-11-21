@@ -26,7 +26,7 @@ OpenSSL server code for ephemeral ECDH ciphersuites is not thread-safe, and
 furthermore can crash if a client violates the protocol by sending handshake
 messages in incorrect order. (CVE-2011-3210)
 
-This issue applies to OpenSSL 0.9.8 through 0.9.8s (experimental "ECCdraft"
+This issue applies to OpenSSL 0.9.8 through 0.9.8r (experimental "ECCdraft"
 ciphersuites) and to OpenSSL 1.0.0 through 1.0.0d.
 
 Affected users of OpenSSL should update to the OpenSSL 1.0.0e release, which
