@@ -1,3 +1,4 @@
+03-Jan-2012: Beta 1 of OpenSSL 1.0.1 is now <a href="ROOT/source/">available</a>, please test it now
 06-Sep-2011: OpenSSL 1.0.0e is now <a href="ROOT/source/">available</a>, including important bug and security fixes
 06-Sep-2011: <a href="ROOT/news/secadv_20110906.txt">Security Advisory</a>: two security fixes
 08-Feb-2011: <a href="ROOT/news/secadv_20110208.txt">Security Advisory</a>: OCSP stapling vulnerability

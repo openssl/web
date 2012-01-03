@@ -1,12 +1,11 @@
 
-  OpenSSL version 1.0.0 Beta 5
+  OpenSSL version 1.0.1 Beta 1
   ============================
 
   OpenSSL - The Open Source toolkit for SSL/TLS
   http://www.openssl.org/
 
-  OpenSSL is currently in a release cycle. The fifth beta is now released.
-  This is expected be the final beta depending on the number of bugs reported.
+  OpenSSL is currently in a release cycle. The first beta is now released.
 
   The beta release is available for download via HTTP and FTP from the
   following master locations (the various FTP mirrors you can find under
@@ -17,31 +16,23 @@
 
   The file names of the beta are:
 
-    o openssl-1.0.0-beta5.tar.gz
-      Size: 4006467
-      MD5 checksum: f869b6b044296f31cee710f178605ef2
-      SHA1 checksum: a16377c02625f803a5dcfaa9c11aeadcfd3703b6
+    o openssl-1.0.1-beta1.tar.gz
+      Size: 4445727
+      MD5 checksum: 2501e8caf6724c5ad747ac0d6df00c3d
+      SHA1 checksum: a97fd63356a787e9ddc9f157ce4b964459a41f40
 
   The checksums were calculated using the following command:
 
-    openssl md5 < openssl-1.0.0-beta5.tar.gz
-    openssl sha1 < openssl-1.0.0-beta5.tar.gz
+    openssl md5 < openssl-1.0.1-beta1.tar.gz
+    openssl sha1 < openssl-1.0.1-beta1.tar.gz
 
   Please download and test them as soon as possible. This new OpenSSL
-  version incorporates 122 documented changes and bugfixes to the
+  version incorporates 52 documented changes and bugfixes to the
   toolkit (for a complete list see http://www.openssl.org/source/exp/CHANGES).
 
   Also check the latest snapshots at ftp://ftp.openssl.org/snapshot/ 
   or CVS (see http://www.openssl.org/source/repos.html) to avoid
   reporting previously fixed bugs.
-
-  Since the fourth beta, the following has happened:
-
-    - Provisional TLS session renegotiation fix
-    - Option to output hash using older algorithm in x509 utility
-    - Compression session handling bug fix
-    - Build system fixes.
-    - Other bug fixes.
 
   Reports and patches should be sent to openssl-bugs@openssl.org.
   Discussions around the development of OpenSSL should be sent to
