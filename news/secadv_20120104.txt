@@ -1,4 +1,4 @@
-OpenSSL Security Advisory [04 Jan 2011]
+OpenSSL Security Advisory [04 Jan 2012]
 =======================================
 
 Six security flaws have been fixed in OpenSSL 1.0.0f and 0.9.8s.
