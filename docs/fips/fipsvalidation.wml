@@ -69,6 +69,12 @@ As of mid-September 2011 coding is complete for both the new FIPS module and the
 (openssl-fips-2.0-test-2011<em>MMDD</em>.tar.gz) and the "FIPS capable" support is in the
 1.0.1-stable branch (openssl-1.0.1-stable-SNAP-2011<em>MMDD</em>.tar.gz).
 <p>
+On October 26 2011 a source code distribution was delivered to the testing lab.  Note we anticipate some
+additional non-cryptographic code changes to accommodate specific test lab requests to modify
+and enhance the  supporting test suite software.
+<p>
+On December 23 2011 the formal validation submission was sent to the CMVP.
+<p>
 For the duration of the validation process changes to the FIPS module source code will be difficult at best,
 but we are still interested in reports of problems.  The original
 <a href="http://www.mail-archive.com/openssl-dev@openssl.org/msg29421.html"><em>Call for Testing</em></a>
