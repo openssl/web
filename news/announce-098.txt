@@ -20,8 +20,8 @@
       o Only allow one SGC handshake restart for SSL/TLS CVE-2011-4619
       o Check for malformed RFC3779 data CVE-2011-4577
 
-   We consider OpenSSL 0.9.8s to be the best version of OpenSSL
-   available and we strongly recommend that users of older versions
+   We consider OpenSSL 0.9.8s to be the best version of OpenSSL 0.9.8
+   available and we strongly recommend that users of older 0.9.8 versions
    upgrade as soon as possible. OpenSSL 0.9.8s is available for
    download via HTTP and FTP from the following master locations (you
    can find the various FTP mirrors under
@@ -39,8 +39,8 @@
 
    The checksums were calculated using the following commands:
 
-    openssl md5 openssl-0.9.*.tar.gz
-    openssl sha1 openssl-0.9.*.tar.gz
+    openssl md5 openssl-0.9.8s.tar.gz
+    openssl sha1 openssl-0.9.8s.tar.gz
 
    Yours,
 
