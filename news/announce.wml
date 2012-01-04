@@ -1,9 +1,9 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 1.0.0e</title>
+<title>Announcement: OpenSSL version 1.0.0f</title>
 
-<h1>Announcement: OpenSSL version 1.0.0e</h1>
+<h1>Announcement: OpenSSL version 1.0.0f</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
@@ -11,23 +11,23 @@ OpenSSL - The Open Source toolkit for SSL/TLS<br>
 
 <p>
 The OpenSSL project team is pleased to announce the release of version
-1.0.0e of our open source toolkit for SSL/TLS. This new OpenSSL version
+1.0.0f of our open source toolkit for SSL/TLS. This new OpenSSL version
 is a security and bugfix release.  For a complete list of changes, please see
-<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0e">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0e</a>.
+<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0f">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0f</a>.
 <p>
 The most significant changes are:
 <ul>
-  <li> Fix for CRL vulnerability issue CVE-2011-3207
-  <li> Fix for ECDH crashes CVE-2011-3210
-  <li> Protection against EC timing attacks.
-  <li> Support ECDH ciphersuites for certificates using SHA2 algorithms.
-  <li> Various DTLS fixes.
+  <li> Fix for DTLS plaintext recovery attack CVE-2011-4108
+  <li> Clear block padding bytes of SSL 3.0 records CVE-2011-4576
+  <li> Only allow one SGC handshake restart for SSL/TLS CVE-2011-4619
+  <li> Check parameters are not NULL in GOST ENGINE CVE-2012-0027
+  <li> Check for malformed RFC3779 data CVE-2011-4577
 </ul>
 
 <p>
-We consider OpenSSL 1.0.0e to be the best version of OpenSSL available
+We consider OpenSSL 1.0.0f to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 1.0.0e is available for download via HTTP
+soon as possible.  OpenSSL 1.0.0f is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -40,18 +40,18 @@ FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www
 The distribution file name is:
 
 <ul>
-  <li>openssl-1.0.0e.tar.gz<br>
-      Size: 4040229<br>
-      MD5 checksum: 7040b89c4c58c7a1016c0dfa6e821c86<br>
-      SHA1 checksum: 235eb68e5a31b0f7a23bc05f52d7a39c596e2e69<br>
+  <li>openssl-1.0.0f.tar.gz<br>
+      Size: 4043367<br>
+      MD5 checksum: e358705fb4a8827b5e9224a73f442025<br>
+      SHA1 checksum: f087190fc7702f328324aaa89c297cab6e236564<br>
 </ul>
 
 <p>
 The checksums were calculated using the following commands:
 <blockquote>
 <pre>
-    openssl md5 openssl-1.0.0e.tar.gz
-    openssl sha1 openssl-1.0.0e.tar.gz
+    openssl md5 openssl-1.0.0f.tar.gz
+    openssl sha1 openssl-1.0.0f.tar.gz
 </pre>
 </blockquote>
 
