@@ -7,7 +7,97 @@
 
 <title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
-</p><h2>2011</h2><dl>
+</p><h2>2012</h2><dl>
+  <dt><b><a name="2012-0027"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0027">CVE-2012-0027: </a></a></b>4th January 2012<p/></dt>
+  <dd>
+    <description>
+A malicious TLS client can send an invalid set of GOST parameters
+which will cause the server to crash due to lack of error checking.
+This could be used in a denial-of-service attack.
+Only users of the OpenSSL GOST ENGINE are affected by this bug.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20120104.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0f (Affected 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <p/>
+  <dt><b><a name="2011-4619"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4619">CVE-2011-4619: </a></a></b>4th January 2012<p/></dt>
+  <dd>
+    <description>
+Support for handshake restarts for server gated cryptograpy (SGC) can
+be used in a denial-of-service attack.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20120104.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0f (Affected 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2011-4577"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4577">CVE-2011-4577: </a></a></b>4th January 2012<p/></dt>
+  <dd>
+    <description>
+RFC 3779 data can be included in certificates, and if it is malformed,
+may trigger an assertion failure. This could be used in a
+denial-of-service attack.  Builds of OpenSSL are only vulnerable if configured with 
+"enable-rfc3779", which is not a default.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20120104.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0f (Affected 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2011-4576"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4576">CVE-2011-4576: </a></a></b>4th January 2012<p/></dt>
+  <dd>
+    <description>
+OpenSSL failed to clear the bytes used as
+block cipher padding in SSL 3.0 records which could leak
+the contents of memory in some circumstances.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20120104.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0f (Affected 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2011-4109"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4109">CVE-2011-4109: </a></a></b>4th January 2012<p/></dt>
+  <dd>
+    <description>
+If X509_V_FLAG_POLICY_CHECK is set in OpenSSL 0.9.8, then a policy
+check failure can lead to a double-free. The bug does not occur 
+unless this flag is set. Users of OpenSSL 1.0.0 are not affected
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20120104.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2011-4108"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4108">CVE-2011-4108: </a></a></b>4th January 2012<p/></dt>
+  <dd>
+    <description>
+OpenSSL was susceptable an extension of the 
+Vaudenay padding oracle attack on CBC mode encryption which enables an 
+efficient plaintext recovery attack against the OpenSSL implementation
+of DTLS by exploiting timing differences arising during
+decryption processing.
+    </description>
+    <a href="http://www.openssl.org/news/secadv_20120104.txt">(original advisory)</a>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0f (Affected 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+</dl><h2>2011</h2><dl>
   <dt><b><a name="2011-3210"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3210">CVE-2011-3210: </a></a></b>6th September 2011<p/></dt>
   <dd>
     <description>

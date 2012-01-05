@@ -5,7 +5,7 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20110906">
+<security updated="20120105">
 
   <issue public="20020730">
     <cve name="2002-0655"/>
@@ -1067,6 +1067,205 @@ protocol by sending handshake messages in incorrect order.  Only
 server-side applications that specifically support ephemeral ECDH
 ciphersuites are affected, and only if ephemeral ECDH ciphersuites are
 enabled in the configuration.
+    </description>
+  </issue>
+
+ <issue public="20120104">
+    <cve name="2011-4108"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <fixed base="1.0.0" version="1.0.0f" date="20120104"/>
+    <fixed base="0.9.8" version="0.9.8s" date="20120104"/>
+    <advisory url="http://www.openssl.org/news/secadv_20120104.txt"/>
+    <reported source="Nadhem Alfardan and Kenny Paterson"/>
+    <description>
+OpenSSL was susceptable an extension of the 
+Vaudenay padding oracle attack on CBC mode encryption which enables an 
+efficient plaintext recovery attack against the OpenSSL implementation
+of DTLS by exploiting timing differences arising during
+decryption processing.
+    </description>
+  </issue>
+
+ <issue public="20120104">
+    <cve name="2011-4109"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <fixed base="0.9.8" version="0.9.8s" date="20120104"/>
+    <advisory url="http://www.openssl.org/news/secadv_20120104.txt"/>
+    <reported source="Ben Laurie"/>
+    <description>
+If X509_V_FLAG_POLICY_CHECK is set in OpenSSL 0.9.8, then a policy
+check failure can lead to a double-free. The bug does not occur 
+unless this flag is set. Users of OpenSSL 1.0.0 are not affected
+    </description>
+  </issue>
+
+ <issue public="20120104">
+    <cve name="2011-4576"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <fixed base="1.0.0" version="1.0.0f" date="20120104"/>
+    <fixed base="0.9.8" version="0.9.8s" date="20120104"/>
+    <advisory url="http://www.openssl.org/news/secadv_20120104.txt"/>
+    <reported source="Adam Langley"/>
+    <description>
+OpenSSL failed to clear the bytes used as
+block cipher padding in SSL 3.0 records which could leak
+the contents of memory in some circumstances.
+    </description>
+  </issue>
+
+ <issue public="20120104">
+    <cve name="2011-4577"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <fixed base="1.0.0" version="1.0.0f" date="20120104"/>
+    <fixed base="0.9.8" version="0.9.8s" date="20120104"/>
+    <advisory url="http://www.openssl.org/news/secadv_20120104.txt"/>
+    <reported source="Andrew Chi"/>
+    <description>
+RFC 3779 data can be included in certificates, and if it is malformed,
+may trigger an assertion failure. This could be used in a
+denial-of-service attack.  Builds of OpenSSL are only vulnerable if configured with 
+"enable-rfc3779", which is not a default.
+    </description>
+  </issue>
+
+ <issue public="20120104">
+    <cve name="2011-4619"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <fixed base="1.0.0" version="1.0.0f" date="20120104"/>
+    <fixed base="0.9.8" version="0.9.8s" date="20120104"/>
+    <advisory url="http://www.openssl.org/news/secadv_20120104.txt"/>
+    <reported source="Adam Langley"/>
+    <description>
+Support for handshake restarts for server gated cryptograpy (SGC) can
+be used in a denial-of-service attack.
+    </description>
+  </issue>
+
+ <issue public="20120104">
+    <cve name="2012-0027"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <fixed base="1.0.0" version="1.0.0f" date="20120104"/>
+    <advisory url="http://www.openssl.org/news/secadv_20120104.txt"/>
+    <reported source="Andrey Kulikov"/>
+    <description>
+A malicious TLS client can send an invalid set of GOST parameters
+which will cause the server to crash due to lack of error checking.
+This could be used in a denial-of-service attack.
+Only users of the OpenSSL GOST ENGINE are affected by this bug.
     </description>
   </issue>
 
