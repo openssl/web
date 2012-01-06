@@ -50,8 +50,11 @@ versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </dt><dd>
   <xsl:copy-of select="description"/>
   <xsl:if test="advisory/@url">
-    <a href="{advisory/@url}">(original advisory)</a>
+    <a href="{advisory/@url}">(original advisory)</a><xsl:text>. </xsl:text>
         </xsl:if>
+  <xsl:if test="reported/@source">
+    Reported by <xsl:value-of select="reported/@source"/>.
+  </xsl:if>
   </dd>
   <p/>
     <xsl:for-each select="fixed">
