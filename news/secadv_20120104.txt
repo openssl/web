@@ -82,8 +82,8 @@ SGC Restart DoS Attack (CVE-2011-4619)
 Support for handshake restarts for server gated cryptograpy (SGC) can
 be used in a denial-of-service attack.
 
-Thanks to Adam Langley <agl@chromium.org> for identifying and fixing
-this issue.
+Thanks to George Kadianakis <desnacked@gmail.com> for identifying
+this issue and to Adam Langley <agl@chromium.org> for fixing it.
 
 Affected users should upgrade to OpenSSL 1.0.0f or 0.9.8s.
 
