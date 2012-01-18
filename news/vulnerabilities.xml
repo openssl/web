@@ -5,7 +5,7 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20120105">
+<security updated="20120118">
 
   <issue public="20020730">
     <cve name="2002-0655"/>
@@ -1268,6 +1268,22 @@ This could be used in a denial-of-service attack.
 Only users of the OpenSSL GOST ENGINE are affected by this bug.
     </description>
   </issue>
+
+ <issue public="20120104">
+    <cve name="2012-0050"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <fixed base="1.0.0" version="1.0.0g" date="20120118"/>
+    <fixed base="0.9.8" version="0.9.8t" date="20120118"/>
+    <advisory url="http://www.openssl.org/news/secadv_20120118.txt"/>
+    <reported source="Antonio Martin"/>
+    <description>
+A flaw in the fix to CVE-2011-4108 can be exploited in a denial of
+service attack. Only DTLS applications are affected.
+    </description>
+  </issue>
+
+
 
 </security>
 

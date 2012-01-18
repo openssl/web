@@ -8,6 +8,19 @@
 <title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p><h2>2012</h2><dl>
+  <dt><b><a name="2012-0050"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0050">CVE-2012-0050: </a></a></b>4th January 2012<p/></dt>
+  <dd><description>
+A flaw in the fix to CVE-2011-4108 can be exploited in a denial of
+service attack. Only DTLS applications are affected.
+    </description><a href="http://www.openssl.org/news/secadv_20120118.txt">(original advisory)</a>. 
+    Reported by Antonio Martin.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0g (Affected 1.0.0f) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8t (Affected 0.9.8s) </dd>
+  <p/>
   <dt><b><a name="2012-0027"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0027">CVE-2012-0027: </a></a></b>4th January 2012<p/></dt>
   <dd><description>
 A malicious TLS client can send an invalid set of GOST parameters
