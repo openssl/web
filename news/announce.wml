@@ -1,9 +1,9 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 1.0.0f</title>
+<title>Announcement: OpenSSL version 1.0.0g</title>
 
-<h1>Announcement: OpenSSL version 1.0.0f</h1>
+<h1>Announcement: OpenSSL version 1.0.0g</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
@@ -11,23 +11,19 @@ OpenSSL - The Open Source toolkit for SSL/TLS<br>
 
 <p>
 The OpenSSL project team is pleased to announce the release of version
-1.0.0f of our open source toolkit for SSL/TLS. This new OpenSSL version
+1.0.0g of our open source toolkit for SSL/TLS. This new OpenSSL version
 is a security and bugfix release.  For a complete list of changes, please see
-<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0f">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0f</a>.
+<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0g">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0g</a>.
 <p>
 The most significant changes are:
 <ul>
-  <li> Fix for DTLS plaintext recovery attack CVE-2011-4108
-  <li> Clear block padding bytes of SSL 3.0 records CVE-2011-4576
-  <li> Only allow one SGC handshake restart for SSL/TLS CVE-2011-4619
-  <li> Check parameters are not NULL in GOST ENGINE CVE-2012-0027
-  <li> Check for malformed RFC3779 data CVE-2011-4577
+  <li> Fix for DTLS DoS issue CVE-2012-0050
 </ul>
 
 <p>
-We consider OpenSSL 1.0.0f to be the best version of OpenSSL available
+We consider OpenSSL 1.0.0g to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 1.0.0f is available for download via HTTP
+soon as possible.  OpenSSL 1.0.0g is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -40,18 +36,18 @@ FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www
 The distribution file name is:
 
 <ul>
-  <li>openssl-1.0.0f.tar.gz<br>
-      Size: 4043367<br>
-      MD5 checksum: e358705fb4a8827b5e9224a73f442025<br>
-      SHA1 checksum: f087190fc7702f328324aaa89c297cab6e236564<br>
+  <li>openssl-1.0.0g.tar.gz<br>
+      Size: 4046513<br>
+      MD5 checksum: 07ecbe4324f140d157478637d6beccf1<br>
+      SHA1 checksum: 2b517baada2338663c27314cb922f9755e73e07f<br>
 </ul>
 
 <p>
 The checksums were calculated using the following commands:
 <blockquote>
 <pre>
-    openssl md5 openssl-1.0.0f.tar.gz
-    openssl sha1 openssl-1.0.0f.tar.gz
+    openssl md5 openssl-1.0.0g.tar.gz
+    openssl sha1 openssl-1.0.0g.tar.gz
 </pre>
 </blockquote>
 
