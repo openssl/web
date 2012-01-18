@@ -1,12 +1,12 @@
 
-   OpenSSL version 0.9.8s released
+   OpenSSL version 0.9.8t released
    ===============================
 
    OpenSSL - The Open Source toolkit for SSL/TLS
    http://www.openssl.org/
 
    The OpenSSL project team is pleased to announce the release of
-   version 0.9.8s of our open source toolkit for SSL/TLS. This new
+   version 0.9.8t of our open source toolkit for SSL/TLS. This new
    OpenSSL version is a security and bugfix release. For a complete
    list of changes, please see
 
@@ -14,15 +14,11 @@
 
    The most significant changes are:
 
-      o Fix for DTLS plaintext recovery attack CVE-2011-4108
-      o Fix policy check double free error CVE-2011-4109
-      o Clear block padding bytes of SSL 3.0 records CVE-2011-4576
-      o Only allow one SGC handshake restart for SSL/TLS CVE-2011-4619
-      o Check for malformed RFC3779 data CVE-2011-4577
+      o Fix for DTLS DoS issue CVE-2012-0050
 
-   We consider OpenSSL 0.9.8s to be the best version of OpenSSL 0.9.8
-   available and we strongly recommend that users of older 0.9.8 versions
-   upgrade as soon as possible. OpenSSL 0.9.8s is available for
+   We consider OpenSSL 0.9.8t to be the best version of OpenSSL 0.9.8t
+   available and we strongly recommend that users of older 0.9.8t versions
+   upgrade as soon as possible. OpenSSL 0.9.8t is available for
    download via HTTP and FTP from the following master locations (you
    can find the various FTP mirrors under
    http://www.openssl.org/source/mirror.html):
@@ -32,15 +28,15 @@
 
    The distribution file name is:
 
-    o openssl-0.9.8s.tar.gz
-      Size: 3779406
-      MD5 checksum: fbf71e8e050bc1ec290b7468bab1a76e
-      SHA1 checksum: a7410b0991f37e125bf835dfd1315822fca64d56
+    o openssl-0.9.8t.tar.gz
+      Size: 3778943
+      MD5 checksum: f5dabb7ffb068eecf245f1b2151df100
+      SHA1 checksum: 42e2ba06cc859d61f645915c9a30326eda371a5e
 
    The checksums were calculated using the following commands:
 
-    openssl md5 openssl-0.9.8s.tar.gz
-    openssl sha1 openssl-0.9.8s.tar.gz
+    openssl md5 openssl-0.9.8t.tar.gz
+    openssl sha1 openssl-0.9.8t.tar.gz
 
    Yours,
 
