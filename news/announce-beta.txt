@@ -1,5 +1,5 @@
 
-  OpenSSL version 1.0.1 Beta 1
+  OpenSSL version 1.0.1 Beta 2
   ============================
 
   OpenSSL - The Open Source toolkit for SSL/TLS
@@ -16,15 +16,15 @@
 
   The file names of the beta are:
 
-    o openssl-1.0.1-beta1.tar.gz
-      Size: 4445727
-      MD5 checksum: 2501e8caf6724c5ad747ac0d6df00c3d
-      SHA1 checksum: a97fd63356a787e9ddc9f157ce4b964459a41f40
+    o openssl-1.0.1-beta2.tar.gz
+      Size: 4447371
+      MD5 checksum: ef66ad92539014e1a8fe33bdd8159bad
+      SHA1 checksum: b92b1d3c019d094bc5b3079dfd60acc2bf925b53
 
   The checksums were calculated using the following command:
 
-    openssl md5 < openssl-1.0.1-beta1.tar.gz
-    openssl sha1 < openssl-1.0.1-beta1.tar.gz
+    openssl md5 < openssl-1.0.1-beta2.tar.gz
+    openssl sha1 < openssl-1.0.1-beta2.tar.gz
 
   Please download and test them as soon as possible. This new OpenSSL
   version incorporates 52 documented changes and bugfixes to the
@@ -33,6 +33,12 @@
   Also check the latest snapshots at ftp://ftp.openssl.org/snapshot/ 
   or CVS (see http://www.openssl.org/source/repos.html) to avoid
   reporting previously fixed bugs.
+
+  Since the first beta the following has happened:
+
+    - Avoid handshake failures by fixing heartbeat support.
+    - Security fixes from stable releases.
+    - Other fixes.
 
   Reports and patches should be sent to openssl-bugs@openssl.org.
   Discussions around the development of OpenSSL should be sent to
@@ -50,9 +56,4 @@
   may be problems that we can't solve for you, like missing programs.
 
   Yours,
-  The OpenSSL Project Team...  
-
-    Mark J. Cox             Ben Laurie          Andy Polyakov
-    Ralf S. Engelschall     Richard Levitte     Geoff Thorpe
-    Dr. Stephen Henson      Bodo Möller		Ulf Möller
-    Lutz Jänicke            Nils Larsch
+  The OpenSSL Project Team.
