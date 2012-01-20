@@ -1,4 +1,4 @@
-OpenSSL Security Advisory [18 Jan 2011]
+OpenSSL Security Advisory [18 Jan 2012]
 =======================================
 
 DTLS DoS attack (CVE-2012-0050)
