@@ -5,7 +5,7 @@
   OpenSSL - The Open Source toolkit for SSL/TLS
   http://www.openssl.org/
 
-  OpenSSL is currently in a release cycle. The first beta is now released.
+  OpenSSL is currently in a release cycle. The second beta is now released.
 
   The beta release is available for download via HTTP and FTP from the
   following master locations (the various FTP mirrors you can find under
