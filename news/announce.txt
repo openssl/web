@@ -14,7 +14,7 @@
 
    The most significant changes are:
 
-      o Fix for CMS/PKCS#7 MMA CVE-20120884
+      o Fix for CMS/PKCS#7 MMA CVE-2012-0884
       o Corrected fix for CVE-2011-4619
       o Various DTLS fixes.
 

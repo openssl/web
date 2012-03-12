@@ -17,7 +17,7 @@ is a security and bugfix release.  For a complete list of changes, please see
 <p>
 The most significant changes are:
 <ul>
-  <li> Fix for CMS/PKCS#7 MMA CVE-20120884
+  <li> Fix for CMS/PKCS#7 MMA CVE-2012-0884
   <li> Corrected fix for CVE-2011-4619
   <li> Various DTLS fixes.
 </ul>
