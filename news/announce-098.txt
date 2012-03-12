@@ -1,12 +1,12 @@
 
-   OpenSSL version 0.9.8t released
+   OpenSSL version 0.9.8u released
    ===============================
 
    OpenSSL - The Open Source toolkit for SSL/TLS
    http://www.openssl.org/
 
    The OpenSSL project team is pleased to announce the release of
-   version 0.9.8t of our open source toolkit for SSL/TLS. This new
+   version 0.9.8u of our open source toolkit for SSL/TLS. This new
    OpenSSL version is a security and bugfix release. For a complete
    list of changes, please see
 
@@ -14,11 +14,13 @@
 
    The most significant changes are:
 
-      o Fix for DTLS DoS issue CVE-2012-0050
+      o Fix for CMS/PKCS#7 MMA CVE-2012-0884
+      o Corrected fix for CVE-2011-4619
+      o Various DTLS fixes.
 
-   We consider OpenSSL 0.9.8t to be the best version of OpenSSL 0.9.8t
-   available and we strongly recommend that users of older 0.9.8t versions
-   upgrade as soon as possible. OpenSSL 0.9.8t is available for
+   We consider OpenSSL 0.9.8u to be the best version of OpenSSL 0.9.8u
+   available and we strongly recommend that users of older 0.9.8u versions
+   upgrade as soon as possible. OpenSSL 0.9.8u is available for
    download via HTTP and FTP from the following master locations (you
    can find the various FTP mirrors under
    http://www.openssl.org/source/mirror.html):
@@ -28,15 +30,15 @@
 
    The distribution file name is:
 
-    o openssl-0.9.8t.tar.gz
-      Size: 3778943
-      MD5 checksum: f5dabb7ffb068eecf245f1b2151df100
-      SHA1 checksum: 42e2ba06cc859d61f645915c9a30326eda371a5e
+    o openssl-0.9.8u.tar.gz
+      Size: 3781771
+      MD5 checksum: 4967957d6430dcc0c0ec558ce4824337
+      SHA1 checksum: cba9a7004522096371f136f5688ea83b164c5699
 
    The checksums were calculated using the following commands:
 
-    openssl md5 openssl-0.9.8t.tar.gz
-    openssl sha1 openssl-0.9.8t.tar.gz
+    openssl md5 openssl-0.9.8u.tar.gz
+    openssl sha1 openssl-0.9.8u.tar.gz
 
    Yours,
 
