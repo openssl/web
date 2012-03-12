@@ -17,7 +17,7 @@ is a security and bugfix release.  For a complete list of changes, please see
 <p>
 The most significant changes are:
 <ul>
-  <li> Fix for CMS/PKCS#7 MMA CVE-2012-0884
+  <li> Fix for CMS/PKCS#7 MMA CVE-20120884
   <li> Corrected fix for CVE-2011-4619
   <li> Various DTLS fixes.
 </ul>
@@ -39,9 +39,9 @@ The distribution file name is:
 
 <ul>
   <li>openssl-1.0.0h.tar.gz<br>
-      Size: 4047834<br>
-      MD5 checksum: 0f2b2fd47fefd5aecd48c1ba68d19031<br>
-      SHA1 checksum: a1db51dc2caa37251a8401bf7b503c9758f37151<br>
+      Size: 4048067<br>
+      MD5 checksum: a5bc483c570f2ac3758ce5c19b667fab<br>
+      SHA1 checksum: 6d4587a96817147021e93ca266441daf4bcbf485<br>
 </ul>
 
 <p>
