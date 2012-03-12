@@ -1,9 +1,9 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 1.0.0g</title>
+<title>Announcement: OpenSSL version 1.0.0h</title>
 
-<h1>Announcement: OpenSSL version 1.0.0g</h1>
+<h1>Announcement: OpenSSL version 1.0.0h</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
@@ -11,19 +11,21 @@ OpenSSL - The Open Source toolkit for SSL/TLS<br>
 
 <p>
 The OpenSSL project team is pleased to announce the release of version
-1.0.0g of our open source toolkit for SSL/TLS. This new OpenSSL version
+1.0.0h of our open source toolkit for SSL/TLS. This new OpenSSL version
 is a security and bugfix release.  For a complete list of changes, please see
-<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0g">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0g</a>.
+<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0h">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0h</a>.
 <p>
 The most significant changes are:
 <ul>
-  <li> Fix for DTLS DoS issue CVE-2012-0050
+  <li> Fix for CMS/PKCS#7 MMA CVE-20120884
+  <li> Corrected fix for CVE-2011-4619
+  <li> Various DTLS fixes.
 </ul>
 
 <p>
-We consider OpenSSL 1.0.0g to be the best version of OpenSSL available
+We consider OpenSSL 1.0.0h to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 1.0.0g is available for download via HTTP
+soon as possible.  OpenSSL 1.0.0h is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -36,18 +38,18 @@ FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www
 The distribution file name is:
 
 <ul>
-  <li>openssl-1.0.0g.tar.gz<br>
-      Size: 4046513<br>
-      MD5 checksum: 07ecbe4324f140d157478637d6beccf1<br>
-      SHA1 checksum: 2b517baada2338663c27314cb922f9755e73e07f<br>
+  <li>openssl-1.0.0h.tar.gz<br>
+      Size: 4047834<br>
+      MD5 checksum: 0f2b2fd47fefd5aecd48c1ba68d19031<br>
+      SHA1 checksum: a1db51dc2caa37251a8401bf7b503c9758f37151<br>
 </ul>
 
 <p>
 The checksums were calculated using the following commands:
 <blockquote>
 <pre>
-    openssl md5 openssl-1.0.0g.tar.gz
-    openssl sha1 openssl-1.0.0g.tar.gz
+    openssl md5 openssl-1.0.0h.tar.gz
+    openssl sha1 openssl-1.0.0h.tar.gz
 </pre>
 </blockquote>
 
