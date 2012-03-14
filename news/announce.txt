@@ -49,12 +49,4 @@
 
    Yours,
 
-   The OpenSSL Project Team...
-
-    Mark J. Cox             Nils Larsch         Ulf Möller
-    Ralf S. Engelschall     Ben Laurie          Andy Polyakov
-    Dr. Stephen Henson      Richard Levitte     Geoff Thorpe
-    Lutz Jänicke            Bodo Möller
-
-
-
+   The OpenSSL Project Team.
