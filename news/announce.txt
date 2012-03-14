@@ -38,9 +38,9 @@
    The distribution file name is:
 
     o openssl-1.0.1.tar.gz
-      Size: 4453292
-      MD5 checksum: 50b66292cdcfcca7e5bc18233a5cc73f
-      SHA1 checksum: 6a537c805e45fd2f7a356aea4940014125471c9a
+      Size: 4453920
+      MD5 checksum: 134f168bc2a8333f19f81d684841710b
+      SHA1 checksum: a6476d33fd38c2e7dfb438d1e3be178cc242c907
 
    The checksums were calculated using the following commands:
 
