@@ -1,3 +1,4 @@
+14-Mar-2012: OpenSSL 1.0.1 is now <a href="ROOT/source/">available</a>, including new features
 12-Mar-2012: <a href="ROOT/news/secadv_20120312.txt">Security Advisory</a>: PKCS7/CMS MMA issue
 12-Mar-2012: OpenSSL 0.9.8u is now <a href="ROOT/source/">available</a>, including important bug and security fixes
 12-Mar-2012: OpenSSL 1.0.0h is now <a href="ROOT/source/">available</a>, including important bug and security fixes

@@ -1,26 +1,33 @@
 
-   OpenSSL version 1.0.0h released
+   OpenSSL version 1.0.1 released
    ===============================
 
    OpenSSL - The Open Source toolkit for SSL/TLS
    http://www.openssl.org/
 
    The OpenSSL project team is pleased to announce the release of
-   version 1.0.0h of our open source toolkit for SSL/TLS. This new
-   OpenSSL version is a security and bugfix release. For a complete
+   version 1.0.1 of our open source toolkit for SSL/TLS. This new
+   OpenSSL version is a new feature release. For a complete
    list of changes, please see
 
        http://www.openssl.org/source/exp/CHANGES.
 
    The most significant changes are:
 
-      o Fix for CMS/PKCS#7 MMA CVE-20120884
-      o Corrected fix for CVE-2011-4619
-      o Various DTLS fixes.
+      o TLS/DTLS heartbeat support.
+      o SCTP support.
+      o RFC 5705 TLS key material exporter.
+      o RFC 5764 DTLS-SRTP negotiation.
+      o Next Protocol Negotiation.
+      o PSS signatures in certificates, requests and CRLs.
+      o Support for password based recipient info for CMS.
+      o Support TLS v1.2 and TLS v1.1.
+      o Preliminary FIPS capability for unvalidated 2.0 FIPS module.
+      o SRP support.
 
-   We consider OpenSSL 1.0.0h to be the best version of OpenSSL
+   We consider OpenSSL 1.0.1 to be the best version of OpenSSL
    available and we strongly recommend that users of older versions
-   upgrade as soon as possible. OpenSSL 1.0.0h is available for
+   upgrade as soon as possible. OpenSSL 1.0.1 is available for
    download via HTTP and FTP from the following master locations (you
    can find the various FTP mirrors under
    http://www.openssl.org/source/mirror.html):
@@ -30,15 +37,15 @@
 
    The distribution file name is:
 
-    o openssl-1.0.0h.tar.gz
-      Size: 4048067
-      MD5 checksum: a5bc483c570f2ac3758ce5c19b667fab
-      SHA1 checksum: 6d4587a96817147021e93ca266441daf4bcbf485
+    o openssl-1.0.1.tar.gz
+      Size: 4453292
+      MD5 checksum: 50b66292cdcfcca7e5bc18233a5cc73f
+      SHA1 checksum: 6a537c805e45fd2f7a356aea4940014125471c9a
 
    The checksums were calculated using the following commands:
 
-    openssl md5 openssl-1.0.0h.tar.gz
-    openssl sha1 openssl-1.0.0h.tar.gz
+    openssl md5 openssl-1.0.1.tar.gz
+    openssl sha1 openssl-1.0.1.tar.gz
 
    Yours,
 
