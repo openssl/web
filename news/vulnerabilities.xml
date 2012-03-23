@@ -5,7 +5,7 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20120118">
+<security updated="20120323">
 
   <issue public="20020730">
     <cve name="2002-0655"/>
@@ -1283,7 +1283,49 @@ service attack. Only DTLS applications are affected.
     </description>
   </issue>
 
+ <issue public="20120312">
+    <cve name="2012-0884"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <fixed base="1.0.0" version="1.0.0h" date="20120312"/>
+    <fixed base="0.9.8" version="0.9.8u" date="20120312"/>
+    <advisory url="http://www.openssl.org/news/secadv_20120312.txt"/>
+    <reported source="Ivan Nestlerode"/>
+    <description>
+A weakness in the OpenSSL CMS and PKCS #7 code can be exploited
+using Bleichenbacher's attack on PKCS #1 v1.5 RSA padding
+also known as the million message attack (MMA).
+Only users of CMS, PKCS #7, or S/MIME decryption operations are affected, 
+SSL/TLS applications are not affected by this issue.
 
+    </description>
+  </issue>
 
 </security>
 

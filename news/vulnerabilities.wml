@@ -8,6 +8,23 @@
 <title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p><h2>2012</h2><dl>
+  <dt><b><a name="2012-0884"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0884">CVE-2012-0884: </a></a></b>12th March 2012<p/></dt>
+  <dd><description>
+A weakness in the OpenSSL CMS and PKCS #7 code can be exploited
+using Bleichenbacher's attack on PKCS #1 v1.5 RSA padding
+also known as the million message attack (MMA).
+Only users of CMS, PKCS #7, or S/MIME decryption operations are affected, 
+SSL/TLS applications are not affected by this issue.
+
+    </description><a href="http://www.openssl.org/news/secadv_20120312.txt">(original advisory)</a>. 
+    Reported by Ivan Nestlerode.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0h (Affected 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8u (Affected 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
   <dt><b><a name="2012-0050"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0050">CVE-2012-0050: </a></a></b>4th January 2012<p/></dt>
   <dd><description>
 A flaw in the fix to CVE-2011-4108 can be exploited in a denial of
