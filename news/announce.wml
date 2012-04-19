@@ -1,9 +1,9 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 1.0.1</title>
+<title>Announcement: OpenSSL version 1.0.0i</title>
 
-<h1>Announcement: OpenSSL version 1.0.1</h1>
+<h1>Announcement: OpenSSL version 1.0.0i</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
@@ -11,28 +11,19 @@ OpenSSL - The Open Source toolkit for SSL/TLS<br>
 
 <p>
 The OpenSSL project team is pleased to announce the release of version
-1.0.1 of our open source toolkit for SSL/TLS. This new OpenSSL version
+1.0.0i of our open source toolkit for SSL/TLS. This new OpenSSL version
 is a new feature release.  For a complete list of changes, please see
-<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_1">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_1</a>.
+<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0i">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_0i</a>.
 <p>
 The most significant changes are:
 <ul>
-  <li> TLS/DTLS heartbeat support.
-  <li> SCTP support.
-  <li> RFC 5705 TLS key material exporter.
-  <li> RFC 5764 DTLS-SRTP negotiation.
-  <li> Next Protocol Negotiation.
-  <li> PSS signatures in certificates, requests and CRLs.
-  <li> Support for password based recipient info for CMS.
-  <li> Support TLS v1.2 and TLS v1.1.
-  <li> Preliminary FIPS capability for unvalidated 2.0 FIPS module.
-  <li> SRP support.
+  <li> Fix for ASN1 overflow bug CVE-2012-2110
 </ul>
 
 <p>
-We consider OpenSSL 1.0.1 to be the best version of OpenSSL available
+We consider OpenSSL 1.0.0i to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 1.0.1 is available for download via HTTP
+soon as possible.  OpenSSL 1.0.0i is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -45,18 +36,18 @@ FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www
 The distribution file name is:
 
 <ul>
-  <li>openssl-1.0.1.tar.gz<br>
-      Size: 4453920<br>
-      MD5 checksum: 134f168bc2a8333f19f81d684841710b<br>
-      SHA1 checksum: a6476d33fd38c2e7dfb438d1e3be178cc242c907<br>
+  <li>openssl-1.0.0i.tar.gz<br>
+      Size: 4047721<br>
+      MD5 checksum: b4df9c11af454fd68178c85a1d5f328f<br>
+      SHA1 checksum: b7aa11cbd7d264c2b1f44e3d55b334fb33f7b674<br>
 </ul>
 
 <p>
 The checksums were calculated using the following commands:
 <blockquote>
 <pre>
-    openssl md5 openssl-1.0.1.tar.gz
-    openssl sha1 openssl-1.0.1.tar.gz
+    openssl md5 openssl-1.0.0i.tar.gz
+    openssl sha1 openssl-1.0.0i.tar.gz
 </pre>
 </blockquote>
 
