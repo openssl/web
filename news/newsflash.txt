@@ -1,3 +1,7 @@
+19-Apr-2012: OpenSSL 1.0.1a is now <a href="ROOT/source/">available</a>, including important bug and security fixes
+19-Apr-2012: OpenSSL 1.0.0i is now <a href="ROOT/source/">available</a>, including important bug and security fixes
+19-Apr-2012: OpenSSL 0.9.8v is now <a href="ROOT/source/">available</a>, including important bug and security fixes
+19-Apr-2012: <a href="ROOT/news/secadv_20120419.txt">Security Advisory</a>: ASN1 overflow vulnerability
 14-Mar-2012: OpenSSL 1.0.1 is now <a href="ROOT/source/">available</a>, including new features
 12-Mar-2012: <a href="ROOT/news/secadv_20120312.txt">Security Advisory</a>: PKCS7/CMS MMA issue
 12-Mar-2012: OpenSSL 0.9.8u is now <a href="ROOT/source/">available</a>, including important bug and security fixes
