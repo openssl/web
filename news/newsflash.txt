@@ -1,3 +1,4 @@
+23-Apr-2012: OpenSSL 0.9.8w is now <a href="ROOT/source/">available</a>, including security fixes
 19-Apr-2012: OpenSSL 1.0.1a is now <a href="ROOT/source/">available</a>, including important bug and security fixes
 19-Apr-2012: OpenSSL 1.0.0i is now <a href="ROOT/source/">available</a>, including important bug and security fixes
 19-Apr-2012: OpenSSL 0.9.8v is now <a href="ROOT/source/">available</a>, including important bug and security fixes
