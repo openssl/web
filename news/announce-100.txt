@@ -16,8 +16,8 @@
 
       o Fix for ASN1 overflow bug CVE-2012-2110
 
-   We consider OpenSSL 1.0.0i to be the best version of OpenSSL
-   available and we strongly recommend that users of older versions
+   We consider OpenSSL 1.0.0i to be the best version of OpenSSL 1.0.0
+   available and we strongly recommend that users of older 1.0.0 versions
    upgrade as soon as possible. OpenSSL 1.0.0i is available for
    download via HTTP and FTP from the following master locations (you
    can find the various FTP mirrors under

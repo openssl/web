@@ -16,8 +16,8 @@
 
       o Fix for CVE-2012-2131 (corrected fix for 0.9.8 and CVE-2012-2110)
 
-   We consider OpenSSL 0.9.8w to be the best version of OpenSSL 0.9.8w
-   available and we strongly recommend that users of older 0.9.8w versions
+   We consider OpenSSL 0.9.8w to be the best version of OpenSSL 0.9.8
+   available and we strongly recommend that users of older 0.9.8 versions
    upgrade as soon as possible. OpenSSL 0.9.8w is available for
    download via HTTP and FTP from the following master locations (you
    can find the various FTP mirrors under
@@ -40,12 +40,4 @@
 
    Yours,
 
-   The OpenSSL Project Team...
-
-    Mark J. Cox             Nils Larsch         Ulf Möller
-    Ralf S. Engelschall     Ben Laurie          Andy Polyakov
-    Dr. Stephen Henson      Richard Levitte     Geoff Thorpe
-    Lutz Jänicke            Bodo Möller
-
-
-
+   The OpenSSL Project Team.
