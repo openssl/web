@@ -1,3 +1,4 @@
+25-Apr-2012: <a href="ROOT/news/notice_20120425.txt">OpenSSL 1.0.1a compilation problems with non x86 platforms</a>
 24-Apr-2012: OpenSSL 0.9.8w is now <a href="ROOT/source/">available</a>, including security fixes
 24-Apr-2012: <a href="ROOT/news/secadv_20120424.txt">Security Advisory</a>: ASN1 incomplete fix for OpenSSL 0.9.8
 19-Apr-2012: OpenSSL 1.0.1a is now <a href="ROOT/source/">available</a>, including important bug and security fixes
