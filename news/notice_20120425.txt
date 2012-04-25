@@ -9,6 +9,6 @@ become apparent.
 A release of OpenSSL 1.0.1b will be made in the near future to address this
 and any other reported problems.
 
-Anyone not wishing to wait should either use the most recent 1.0.1-stable
-snapshot from ftp://ftp.openssl.org/snapshot/
+Anyone not wishing to wait should use the most recent 1.0.1-stable snapshot
+from ftp://ftp.openssl.org/snapshot/
 
