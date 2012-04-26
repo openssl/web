@@ -1,12 +1,12 @@
 
-   OpenSSL version 1.0.1a released
+   OpenSSL version 1.0.1b released
    ===============================
 
    OpenSSL - The Open Source toolkit for SSL/TLS
    http://www.openssl.org/
 
    The OpenSSL project team is pleased to announce the release of
-   version 1.0.1a of our open source toolkit for SSL/TLS. This new
+   version 1.0.1b of our open source toolkit for SSL/TLS. This new
    OpenSSL version is a new feature release. For a complete
    list of changes, please see
 
@@ -14,13 +14,13 @@
 
    The most significant changes are:
 
-      o Fix for ASN1 overflow bug CVE-2012-2110
-      o Workarounds for some servers that hang on long client hellos.
-      o Fix SEGV in AES code.
+      o Fix compilation error on non-x86 platforms.
+      o Make FIPS capable OpenSSL ciphers work in non-FIPS mode.
+      o Fix SSL_OP_NO_TLSv1_1 clash with SSL_OP_ALL in OpenSSL 1.0.0
 
-   We consider OpenSSL 1.0.1a to be the best version of OpenSSL
+   We consider OpenSSL 1.0.1b to be the best version of OpenSSL
    available and we strongly recommend that users of older versions
-   upgrade as soon as possible. OpenSSL 1.0.1a is available for
+   upgrade as soon as possible. OpenSSL 1.0.1b is available for
    download via HTTP and FTP from the following master locations (you
    can find the various FTP mirrors under
    http://www.openssl.org/source/mirror.html):
@@ -30,15 +30,15 @@
 
    The distribution file name is:
 
-    o openssl-1.0.1a.tar.gz
-      Size: 4456456
-      MD5 checksum: a0104320c0997cd33e18b8ea798609d1
-      SHA1 checksum: b7c4608c36fa84bfcce39baba5afacd65184be5b
+    o openssl-1.0.1b.tar.gz
+      Size: 4456651
+      MD5 checksum: a1da58ce63baef3812004714fa302c47
+      SHA1 checksum: b6222cbbf835c27d9ad6db22262da6e4a2aca8b8
 
    The checksums were calculated using the following commands:
 
-    openssl md5 openssl-1.0.1a.tar.gz
-    openssl sha1 openssl-1.0.1a.tar.gz
+    openssl md5 openssl-1.0.1b.tar.gz
+    openssl sha1 openssl-1.0.1b.tar.gz
 
    Yours,
 
