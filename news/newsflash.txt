@@ -1,3 +1,4 @@
+10-May-2012: <a href="ROOT/news/secadv_20120510.txt">Security Advisory</a>: TLS/DTLS DoS issue
 10-May-2012: OpenSSL 1.0.1c is now <a href="ROOT/source/">available</a>, including bug and security fixes
 10-May-2012: OpenSSL 1.0.0j is now <a href="ROOT/source/">available</a>, including security fixes
 10-May-2012: OpenSSL 0.9.8x is now <a href="ROOT/source/">available</a>, including security fixes
