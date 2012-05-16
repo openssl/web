@@ -20,8 +20,8 @@ validations also results in useful additions to the OpenSSL baseline.
 
 <h2>What You Get</h2>
 
-For the total fixed price of US$30,000 we will obtain a Level 1 FIPS 140-2 validation in your name using the
-OpenSSL FIPS Object Module v1.2 (certificate <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1051">#1051</a>)
+For the total fixed price of US$35,000 we will obtain a Level 1 FIPS 140-2 validation in your name using the
+OpenSSL FIPS Object Module v2.0 (certificate pending)
  with minor modifications for two common platforms.  A common platform is a computing device (hardware and operating system)
 that is available and familiar to us and the test lab(s).  Examples of common platforms are:
 <ul>
@@ -34,14 +34,7 @@ that is available and familiar to us and the test lab(s).  Examples of common pl
   <li> Solaris on x64 hardware 
 </ul>
 <p>
-Additional common platforms can be added to your validation for US$1500 each.
-<p>
-This validation will also include Level 2 in the area of "Roles, Services, and Authentication" and 
-Level 3 in the area of "Design Assurance" to satisfy the section 5a requirements of the
-<a href="https://chess.army.mil/ascp/commerce/scp/downloads/standardspolicy_files/letter_to_industry.pdf">
-May 21, 2009 Army "Letter to Industry"</a>.
-This additional requirement is a frequently requested option for private label validation.
-
+Additional common platforms can be added to your validation for US$3000 (Linux/Unix/Android) or US$3500 (Windows) each.
 <p>
 We will handle all interaction with the accredited testing lab and the
 <a href="http://csrc.nist.gov/groups/STM/cmvp/index.html">CMVP</a>.  You sign one contract with the
@@ -59,9 +52,8 @@ this list is sufficient to satisfy FIPS 140-2 requirements for some procurements
 This turnkey validation package is applicable in the following circumstances:
 <ul>
   <li>You have already confirmed that the module generated from the
-<a href="../../source/openssl-fips-1.2.tar.gz">OpenSSL FIPS Object Module v1.2</a> 
-source distribution, or from a later OpenSSL 0.9.8<em>x</em> distribution, possibly
-with modifications, works on your platform(s).
+OpenSSL FIPS Object Module v2.0
+source distribution, possibly with modifications, works on your platform(s).
   <p>
   <li>Your modifications to the OpenSSL source code, if any, are not "cryptographically
       significant".  Roughly speaking, that means the modifications do not affect the

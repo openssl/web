@@ -80,9 +80,7 @@ but we are still interested in reports of problems.  The original
 <a href="http://www.mail-archive.com/openssl-dev@openssl.org/msg29421.html"><em>Call for Testing</em></a>
 instructions are still valid.
 <p>
-The current best estimate for final formal award of a FIPS 140-2 validation certificate is
-February 2012.  This estimate includes the time during which the validation submission waits
-for CMVP review, a process for which we have little visibility and less control.
+As of mid-May we are still waiting on action by the CMVP.
 
 <h2>Sponsors</h2>
 The OpenSSL Software Foundation receives support from multiple sources for each
