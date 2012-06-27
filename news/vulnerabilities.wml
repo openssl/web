@@ -8,6 +8,24 @@
 <title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p><h2>2012</h2><dl>
+  <dt><b><a name="2012-2333"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2333">CVE-2012-2333: </a></a></b>10th May 2012<p/></dt>
+  <dd><description>
+An integer underflow flaw, leading to a buffer over-read, was found in the
+way OpenSSL handled DTLS (Datagram Transport Layer Security) application
+data record lengths when using a block cipher in CBC (cipher-block
+chaining) mode. A malicious DTLS client or server could use this flaw to
+crash its DTLS connection peer.
+    </description><a href="http://www.openssl.org/news/secadv_20120510.txt">(original advisory)</a>. 
+    Reported by Codenomicon.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1c (Affected 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0j (Affected 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8x (Affected 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
   <dt><b><a name="2012-0884"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0884">CVE-2012-0884: </a></a></b>12th March 2012<p/></dt>
   <dd><description>
 A weakness in the OpenSSL CMS and PKCS #7 code can be exploited

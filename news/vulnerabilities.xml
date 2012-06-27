@@ -5,7 +5,7 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20120323">
+<security updated="20120627">
 
   <issue public="20020730">
     <cve name="2002-0655"/>
@@ -1324,6 +1324,57 @@ also known as the million message attack (MMA).
 Only users of CMS, PKCS #7, or S/MIME decryption operations are affected, 
 SSL/TLS applications are not affected by this issue.
 
+    </description>
+  </issue>
+
+ <issue public="20120510">
+    <cve name="2012-2333"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="0.9.8" version="0.9.8u"/>
+    <affects base="0.9.8" version="0.9.8v"/>
+    <affects base="0.9.8" version="0.9.8w"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <fixed base="1.0.1" version="1.0.1c" date="20120510"/>
+    <fixed base="1.0.0" version="1.0.0j" date="20120510"/>
+    <fixed base="0.9.8" version="0.9.8x" date="20120510"/>
+    <advisory url="http://www.openssl.org/news/secadv_20120510.txt"/>
+    <reported source="Codenomicon"/>
+    <description>
+An integer underflow flaw, leading to a buffer over-read, was found in the
+way OpenSSL handled DTLS (Datagram Transport Layer Security) application
+data record lengths when using a block cipher in CBC (cipher-block
+chaining) mode. A malicious DTLS client or server could use this flaw to
+crash its DTLS connection peer.
     </description>
   </issue>
 
