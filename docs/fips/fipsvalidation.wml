@@ -63,24 +63,11 @@ we cannot and will not jeopardize the overall schedule for other objectives not 
 original agreements.
 
 <h2>Current Status</h2>
-As of mid-September 2011 coding is complete for both the new FIPS module and the accompanying
-"FIPS capable" support in OpenSSL.  The FIPS module code is available in separate
-<a href="ftp://ftp.openssl.org/snapshot/">snapshot</a> distributions
-(openssl-fips-2.0-test-2011<em>MMDD</em>.tar.gz) and the "FIPS capable" support is in the
-1.0.1-stable branch (openssl-1.0.1-stable-SNAP-2011<em>MMDD</em>.tar.gz).
-<p>
-On October 26 2011 a source code distribution was delivered to the testing lab.  Note we anticipate some
-additional non-cryptographic code changes to accommodate specific test lab requests to modify
-and enhance the  supporting test suite software.
-<p>
-On December 23 2011 the formal validation submission was sent to the CMVP.
-<p>
-For the duration of the validation process changes to the FIPS module source code will be difficult at best,
-but we are still interested in reports of problems.  The original
-<a href="http://www.mail-archive.com/openssl-dev@openssl.org/msg29421.html"><em>Call for Testing</em></a>
-instructions are still valid.
-<p>
-As of mid-May we are still waiting on action by the CMVP.
+The validation was awarded on June 27, 2012, certificate number
+<a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1747">#1747</a>. 
+The <a href="http://www.openssl.org/source/openssl-fips-2.0.tar.gz">source code</a> and
+<a href="http://www.openssl.org/docs/fips/UserGuide-2.0.pdf">User Guide document</a> can be downloaded from the
+<a href="http://openssl.org/">OpenSSL web site</a>.
 
 <h2>Sponsors</h2>
 The OpenSSL Software Foundation receives support from multiple sources for each
