@@ -6,9 +6,12 @@
 <h1>OpenSSL and FIPS 140-2 Validation Status</h1>
 
 The most recent open source based validation of a cryptographic module (Module) compatible with the
-OpenSSL libraries is v1.2, FIPS 140-2 certificate
- <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1051">#1051</a>.
-This Module is documented in the <a href="UserGuide.pdf">User Guide</a>.
+OpenSSL libraries is v2.0.1, FIPS 140-2 certificate
+ <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1747">#1747</a>.
+This Module is documented in the <a href="UserGuide-2.0.pdf">2.0 User Guide</a>.
+It substantially updates and improves the earlier v1.2 module, FIPS 140-2 certificate
+ <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1051">#1051</a>, which
+is documented in the <a href="UserGuide-1.2.pdf">1.2 User Guide</a>.
 <p>
 <font color="#cc3333">Important Note:</font> Due to upcoming changes in the FIPS 140-2 validation
 requirements the current v1.2 Module will no longer be a suitable model for private label validations
@@ -17,9 +20,9 @@ in its current form past the year 2010.  See the NIST
 <a href="http://csrc.nist.gov/groups/ST/key_mgmt/documents/Transitioning_CryptoAlgos_070209.pdf">discussion paper</a> and
 <a href="http://csrc.nist.gov/publications/drafts/800-131/draft-800-131_transition-paper.pdf">Draft 800-131</a>.
 <p>
-<h2>New Validation in Progress</h2>
-As of January 4, 2011 we have sponsorship for a new open source FIPS 140-2 Level 1 validation.
-This validation will cover most of the objectives we have been wanting to achieve in a new validation,
+<h2>The 2.0 Validation</h2>
+On January 4, 2011 we began work on the new open source FIPS 140-2 Level 1 validation.
+This validation covers most of the objectives we have been wanting to achieve in a new validation,
 including:
 <ul>
 
@@ -45,7 +48,7 @@ this new module will at least in principle be useful in some stand-alone context
 level cryptographic primitives.
 
 </ul>
-In addition this validation will also include:
+In addition this validation also includes:
 <ul>
 
 <li>Suite B cryptography, and a "Suite B" mode of operation enforcement similar
@@ -53,21 +56,21 @@ to that provided by the current "FIPS capable" OpenSSL.
 
 </ul>
 
-What this validation currently does <em>not</em> include is many common test platforms
-present in earlier validations.  It will be possible for new co-sponsors to include additional test platforms
-for only the incremental costs, provided that such arrangements are made prior to the point where
-the timeline for the ongoing validation effort is adversely impacted.  The window of opportunity for
-the addition of new platforms (or other non-disruptive enhancements) is anticipated to extend only
-through the first quarter of this year.  Since our initial sponsors have time-sensitive schedule requirements
-we cannot and will not jeopardize the overall schedule for other objectives not included in those
-original agreements.
+Thanks to multiple platform sponsorships the 2.0 validation includes the largest number
+of formally tested platforms for any validated module.
 
 <h2>Current Status</h2>
 The validation was awarded on June 27, 2012, certificate number
 <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1747">#1747</a>. 
-The <a href="http://www.openssl.org/source/openssl-fips-2.0.tar.gz">source code</a> and
+The <a href="http://www.openssl.org/source/openssl-fips-2.0.1.tar.gz">source code</a> and
 <a href="http://www.openssl.org/docs/fips/UserGuide-2.0.pdf">User Guide document</a> can be downloaded from the
 <a href="http://openssl.org/">OpenSSL web site</a>.
+
+On July 9, 2012 the first "change letter" update was approved, adding six additional platforms and a new
+revision number of 2.0.1. The revised source code can be used
+for all tested platforms, though the older 2.0 
+<a href="http://www.openssl.org/source/openssl-fips-2.0.tar.gz">source distribution</a> remains valid for the platforms tested
+at that time.
 
 <h2>Sponsors</h2>
 The OpenSSL Software Foundation receives support from multiple sources for each
@@ -75,7 +78,9 @@ validation effort; however only those sponsors who have elected to be recognised
 for their contribution to OpenSSL are listed below.
 <ul>
 
-<li><hr>Original sponsors: overall validation effort with one platform (Android on ARMv7)
+<li><hr> <a href="http://www.darpa.mil/Our_Work/I2O/Programs/Transformative_Apps.aspx">
+Defense Advanced Research Projects Agency (DARPA) Transformative Apps Program</a>,
+original primary sponsor of the overall validation with several Android on ARMv7 platforms.
 
 <p>
 <p>
