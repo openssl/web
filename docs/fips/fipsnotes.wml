@@ -65,10 +65,11 @@ cost effective turnkey <a href="privatelabel.html">validation package</a> for ro
 
 <h2>Current Validations</h2>
 
-The most recent open source based validation is v1.2, FIPS 140-2 certificate
- <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1051">#1051</a>.  You will need the
- <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140sp/140sp1051.pdf">Security Policy</a> and
- <a href="../../source/openssl-fips-1.2.tar.gz">source</a> at a minimum.
+The most recent open source based validation is v2.0, FIPS 140-2 certificate
+ <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1747">#1747</a>.  You will need the
+ <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140sp/140sp1747.pdf">Security Policy</a> and
+ <a href="../../source/openssl-fips-2.0.tar.gz">source</a> at a minimum. Note that for this validation a
+new <a href="http://openssl.com/fips/verify.html">"secure installation"</a> requirement has been imposed.
 And did we mention the <a href="UserGuide.pdf">User Guide</a>?
 <p>
 <a name="transition">
