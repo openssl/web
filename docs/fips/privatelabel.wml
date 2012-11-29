@@ -20,9 +20,9 @@ validations also results in useful additions to the OpenSSL baseline.
 
 <h2>What You Get</h2>
 
-For the total fixed price of US$35,000 we will obtain a Level 1 FIPS 140-2 validation in your name using the
-OpenSSL FIPS Object Module v2.0 (certificate pending)
- with minor modifications for two common platforms.  A common platform is a computing device (hardware and operating system)
+For the total fixed price of as little as US$35,000 we will obtain a Level 1 FIPS 140-2 validation
+in your name using the OpenSSL FIPS Object Module v2.0 for two common platforms using unmodified
+source code.  A common platform is a computing device (hardware and operating system)
 that is available and familiar to us and the test lab(s).  Examples of common platforms are:
 <ul>
   <li> Microsoft Windows (32 bit) on x86 hardware
@@ -34,7 +34,8 @@ that is available and familiar to us and the test lab(s).  Examples of common pl
   <li> Solaris on x64 hardware 
 </ul>
 <p>
-Additional common platforms can be added to your validation for US$3000 (Linux/Unix/Android) or US$3500 (Windows) each.
+Additional common platforms can be added to your validation for US$4000 (Linux/Unix/Android)
+or US$4500 (desktop/server Windows) each.
 <p>
 We will handle all interaction with the accredited testing lab and the
 <a href="http://csrc.nist.gov/groups/STM/cmvp/index.html">CMVP</a>.  You sign one contract with the
@@ -68,23 +69,17 @@ source distribution, possibly with modifications, works on your platform(s).
   <p>
   <li>The actual platform, hardware and software, is either already available to the OSF and the lab or is supplied by you.
       We will need at least two complete sets of platform hardware and software for customer provided equipment.  This
-      equipment can be returned once the validation is awarded, though so far customers have preferred
+      equipment can be returned once the validation is awarded, though some customers have preferred
       to leave that equipment with us for regression testing of future revisions.
   <p>
   <li>You have determined that the performance of the module is satisfactory on your
-      specific target platform.  We have made numerous performance enhancements
-      since the original #1051 validation.  Some of these can be easily incorporated
-      into routine private label validations and some cannot.
-  <p>
-  <li>You start the validation in 2010.  The reason for this qualification is that the rules change starting
-      in 2011, see <a href="fipsnotes.html#transition">upcoming changes in the FIPS 140-2 validation requirements</a>.
-      We are confident that OpenSSL FIPS Object Module based validations of some type will still be possible
-      post-2010, but there are enough uncertainties with the new guidelines to caution us against offering
-      the same pricing at this time.
+      specific target platform.  We continually make performance enhancements to OpenSSL,
+      only some of which can readily be incorporated into routine private label validations.
 </ul>
 <p>
 Note that we can still help you if not all of these circumstances apply, but we'll
 have to look at your specific situation more closely.
+Note minor software modifications can often be accommodated in a change letter modification.
 <p>
 <hr>
 
