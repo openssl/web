@@ -6,4 +6,4 @@
 
 <h1>Frequently Asked Questions</h1>
 
-<!--#include virtual="faq.cgi" -->
+<!--#include virtual="/cgi-bin/faq.cgi" -->
