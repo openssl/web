@@ -1,0 +1,7 @@
+*.html
+*.gz
+*.gz.asc
+*.gz.md5
+*.gz.sha1
+*.tar.gz.sig
+*.patch
