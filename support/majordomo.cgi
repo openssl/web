@@ -1,4 +1,4 @@
-#!/e/openssl/sw/bin/perl
+#!/usr/bin/perl
 ##
 ##  majordomo.cgi -- Send a mail to Majordomo
 ##
@@ -14,11 +14,11 @@ sub send_page {
     $O .= "Content-type: text/html\n" .
           "Connection: close\n" .
           "\n";
-    open(FP, "<majordomo.head.html");
+    open(FP, "</v/openssl/web/support/majordomo.head.html");
     $O .= $_ while (<FP>); 
     close(FP);
     $O .= $text;
-    open(FP, "<majordomo.foot.html");
+    open(FP, "</v/openssl/web/support/majordomo.foot.html");
     $O .= $_ while (<FP>); 
     close(FP);
     print $O;
@@ -77,7 +77,7 @@ foreach $list (split(/,/, $qs{list})) {
 }
 
 #  send out mail
-open(MAIL, "|/e/openssl/sw/sbin/sendmail -oi -oee majordomo\@openssl.org");
+open(MAIL, "| sendmail -oi -oee majordomo\@openssl.org");
 print MAIL $mail;
 close(MAIL);
 

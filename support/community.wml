@@ -68,7 +68,7 @@ others subscribe you without your ok).  So entering the Email address of
 someone else in the form below is useless, of course.
 
 <center>
-<form action="<absolute majordomo.cgi>" method="GET">
+<form action="/cgi-bin/majordomo.cgi" method="GET">
 <table cellspacing=0 cellpadding=2 border=0 bgcolor="#cccccc"><tr><td>
 <table cellspacing=0 cellpadding=4 border=0 bgcolor="#f0f0f0">
 <tr>
