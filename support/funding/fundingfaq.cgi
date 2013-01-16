@@ -1,4 +1,4 @@
-#!/v/openssl/sw/bin/perl
+#!/usr/bin/perl
 ##
 ##  faq.cgi -- Read FAQ file and pretty-print it as HTML
 ##
@@ -11,7 +11,7 @@ print <<"EOF";
 <h1>Support Contract FAQ</h1>
 EOF
 
-$file = "support-faq.txt";
+$file = "/v/openssl/web/support/funding/support-faq.txt";
 #$file = "/home/um/openssl/FAQ";
 open(FP, "<$file");
 
