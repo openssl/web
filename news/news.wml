@@ -12,5 +12,5 @@ reflects the current state of the <tt>NEWS</tt> file inside the CVS repository.
 
 Details can be found in the <a href="changelog.html">ChangeLog</a>.
 <p>
-<!--#include virtual="news.cgi" -->
+<!--#include virtual="/cgi-bin/news.cgi" -->
 

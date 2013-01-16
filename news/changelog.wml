@@ -12,5 +12,5 @@ and detailed information about every single change. The presented contents
 reflects the current state of the <tt>CHANGES</tt> file inside the CVS repository. 
 
 <p>
-<!--#include virtual="changelog.cgi" -->
+<!--#include virtual="/cgi-bin/changelog.cgi" -->
 
