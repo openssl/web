@@ -1,9 +1,9 @@
 
 #use wml::openssl area=news page=announce 
 
-<title>Announcement: OpenSSL version 1.0.1c</title>
+<title>Announcement: OpenSSL version 1.0.1d</title>
 
-<h1>Announcement: OpenSSL version 1.0.1c</h1>
+<h1>Announcement: OpenSSL version 1.0.1d</h1>
 
 OpenSSL - The Open Source toolkit for SSL/TLS<br>
 <a href="http://www.openssl.org/">http://www.openssl.org/</a>
@@ -11,20 +11,24 @@ OpenSSL - The Open Source toolkit for SSL/TLS<br>
 
 <p>
 The OpenSSL project team is pleased to announce the release of version
-1.0.1c of our open source toolkit for SSL/TLS. This new OpenSSL version
-is a new feature release.  For a complete list of changes, please see
-<a href="http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_1c">http://cvs.openssl.org/getfile?f=openssl/CHANGES&v=OpenSSL_1_0_1c</a>.
-<p>
+1.0.1d of our open source toolkit for SSL/TLS. This new OpenSSL version
+is a new feature release.
+
 The most significant changes are:
 <ul>
-  <li> Fix TLS/DTLS record length checking bug CVE-2012-2333
-  <li> Don't attempt to use non-FIPS composite ciphers in FIPS mode.
+
+  <li> Fix renegotiation in TLS 1.1, 1.2 by using the correct TLS version.
+  <li> Include the fips configuration module.
+  <li> Fix OCSP bad key DoS attack CVE-2013-0166
+  <li> Fix for SSL/TLS/DTLS CBC plaintext recovery attack CVE-2013-0169
+  <li> Fix for TLS AESNI record handling flaw CVE-2012-2686
+
 </ul>
 
 <p>
-We consider OpenSSL 1.0.1c to be the best version of OpenSSL available
+We consider OpenSSL 1.0.1d to be the best version of OpenSSL available
 and we strongly recommend that users of older versions upgrade as
-soon as possible.  OpenSSL 1.0.1c is available for download via HTTP
+soon as possible.  OpenSSL 1.0.1d is available for download via HTTP
 and FTP from the following master locations (you can find the various
 FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www.openssl.org/source/mirror.html</a>):
 
@@ -37,21 +41,21 @@ FTP mirrors under <a href="http://www.openssl.org/source/mirror.html">http://www
 The distribution file name is:
 
 <ul>
-  <li>openssl-1.0.1c.tar.gz<br>
-      Size: 4457113<br>
-      MD5 checksum: ae412727c8c15b67880aef7bd2999b2e<br>
-      SHA1 checksum: 91b684de947cb021ac61b8c51027cc4b63d894ce<br>
+  <li>openssl-1.0.1d.tar.gz<br>
+      Size: 4459791<br>
+      MD5 checksum: b92fc634f0f1f31a67ed4175adc5ba33<br>
+      SHA1 checksum: 5e586810ea516a5eec1c7d7c730a17fb528de32d<br>
 </ul>
 
 <p>
 The checksums were calculated using the following commands:
 <blockquote>
 <pre>
-    openssl md5 openssl-1.0.1c.tar.gz
-    openssl sha1 openssl-1.0.1c.tar.gz
+    openssl md5 openssl-1.0.1d.tar.gz
+    openssl sha1 openssl-1.0.1d.tar.gz
 </pre>
 </blockquote>
 
 <p>
 Yours,<br>
-The OpenSSL Project Team.  
+The OpenSSL Project Team.
