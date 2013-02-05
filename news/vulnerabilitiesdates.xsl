@@ -19,7 +19,7 @@
       <xsl:otherwise>th</xsl:otherwise>
     </xsl:choose>
     
-    <xsl:text>&#160;</xsl:text>
+    <xsl:text> </xsl:text>
   </xsl:if>
 
   <xsl:call-template name="whatmonth">
@@ -27,7 +27,7 @@
   </xsl:call-template>
   
   <xsl:if test="$year&gt;0">
-    <xsl:text>&#160;</xsl:text>
+    <xsl:text> </xsl:text>
     <xsl:value-of select="$year"/>
     </xsl:if>
     
