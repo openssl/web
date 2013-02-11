@@ -27,7 +27,7 @@ convenience only. When you really want to keep yourself up-to-date please use
 the bandwidth-friendly git service to directly clone the git repository
 instead.
 
-<h2>Anonymous git access over ssh</h2>
+<h2>Anonymous git access</h2>
 
 Read only access to the respository is possible using the git protocol.
 Use the following command to clone the git repository including all
@@ -45,7 +45,16 @@ Access to the specific branches is possible via standard git methods
 using the git branch and git checkout commands.
 See the discussion of branch naming below for more information.
 
-<h2>git branch names and tagging</h2>
+<h3>git mirror sites</h2>
+
+A mirror at github is updated every 15 minutes. Github provides access
+via additional protocols.
+
+<p>
+<href url="https://github.com/openssl/openssl">
+</p>
+
+<h3>git branch names and tagging</h2>
 
 The <b>master</b> (also known as the development branch) contains the latest
 bleeding edge code. There are also several <i>stable</i> branches where stable
