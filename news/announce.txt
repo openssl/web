@@ -1,12 +1,12 @@
 
-   OpenSSL version 1.0.1c released
+   OpenSSL version 1.0.1e released
    ===============================
 
    OpenSSL - The Open Source toolkit for SSL/TLS
    http://www.openssl.org/
 
    The OpenSSL project team is pleased to announce the release of
-   version 1.0.1c of our open source toolkit for SSL/TLS. This new
+   version 1.0.1e of our open source toolkit for SSL/TLS. This new
    OpenSSL version is a new feature release. For a complete
    list of changes, please see
 
@@ -14,12 +14,11 @@
 
    The most significant changes are:
 
-      o Fix TLS/DTLS record length checking bug CVE-2012-2333
-      o Don't attempt to use non-FIPS composite ciphers in FIPS mode.
+      o Corrected fix for CVE-2013-0169
 
-   We consider OpenSSL 1.0.1c to be the best version of OpenSSL
+   We consider OpenSSL 1.0.1e to be the best version of OpenSSL
    available and we strongly recommend that users of older versions
-   upgrade as soon as possible. OpenSSL 1.0.1c is available for
+   upgrade as soon as possible. OpenSSL 1.0.1e is available for
    download via HTTP and FTP from the following master locations (you
    can find the various FTP mirrors under
    http://www.openssl.org/source/mirror.html):
@@ -29,15 +28,15 @@
 
    The distribution file name is:
 
-    o openssl-1.0.1c.tar.gz
-      Size: 4457113
-      MD5 checksum: ae412727c8c15b67880aef7bd2999b2e
-      SHA1 checksum: 91b684de947cb021ac61b8c51027cc4b63d894ce
+    o openssl-1.0.1e.tar.gz
+      Size: 4459777
+      MD5 checksum: 66bf6f10f060d561929de96f9dfe5b8c
+      SHA1 checksum: 3f1b1223c9e8189bfe4e186d86449775bd903460
 
    The checksums were calculated using the following commands:
 
-    openssl md5 openssl-1.0.1c.tar.gz
-    openssl sha1 openssl-1.0.1c.tar.gz
+    openssl md5 openssl-1.0.1e.tar.gz
+    openssl sha1 openssl-1.0.1e.tar.gz
 
    Yours,
 
