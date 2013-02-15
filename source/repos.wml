@@ -7,17 +7,17 @@
 
 <title>Source, Repository</title>
 
-<h1>git repository</h1>
+<h1>Git repository</h1>
 
-The OpenSSL package is developed in a git-based repository.
-It is available via git mechanisms at git.openssl.org and as snapshot
+The OpenSSL package is developed in a Git-based repository.
+It is available via Git mechanisms at git.openssl.org and as snapshot
 tarballs through FTP on ftp.openssl.org for those people who either want to
 always stay at the bleeding edge or even want to participate in the
 development of OpenSSL. But use such repository snapshots only when you like
 to see OpenSSL dump core and you can help yourself in case of problems, of
 course.
 
-<h2>Fetching git repository snapshot tarballs</h2>
+<h2>Fetching Git repository snapshot tarballs</h2>
 
 Tarballs containing snapshots of the latest git repository states can be found
 under <a
@@ -27,7 +27,7 @@ convenience only. When you really want to keep yourself up-to-date please use
 the bandwidth-friendly git service to directly clone the git repository
 instead.
 
-<h2>Anonymous git access</h2>
+<h2>Anonymous Git access</h2>
 
 Read only access to the respository is possible using the git protocol.
 Use the following command to clone the git repository including all
@@ -54,7 +54,7 @@ via additional protocols.
 <href url="https://github.com/openssl/openssl">
 </p>
 
-<h3>git branch names and tagging</h2>
+<h3>Git branch names and tagging</h2>
 
 The <b>master</b> (also known as the development branch) contains the latest
 bleeding edge code. There are also several <i>stable</i> branches where stable
@@ -65,3 +65,12 @@ a beta <b>OpenSSL_x_y_xp-betan</b> though you should normally just download
 the release tarball. Tags and branches are occasionally used for other
 purposes such as testing experimental or unstable code before it is merged
 into another branch.
+
+<h1>CVS (Legacy) repository</h1>
+
+All of the development history has been converted to Git. For reference
+the CVS source code repository is frozen and the final version is available
+via
+<p>
+<href url="http://cvs.openssl.org/">
+</p>

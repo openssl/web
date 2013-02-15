@@ -7,6 +7,7 @@
   <snb_button id=license  txt="License"      url="license.html">
   <snb_button id=repos    txt="Repository"   url="repos.html">
   <snb_button id=mirror   txt="Mirror"       url="mirror.html">
-  <snb_button id=cvstrac  txt="git"          url="http://git.openssl.org/">
+  <snb_button id=gitweb   txt="GitWeb"       url="http://git.openssl.org/">
+  <snb_button id=cvstrac  txt="CVS (Legacy)" url="http://cvs.openssl.org/">
 </snb>
 
