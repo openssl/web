@@ -59,13 +59,22 @@ platform can cost as little as
 <a href="privatelabel.html">US$35,000</a>.
 Contact the <a href="../../support/funding/support-contact.html">OSF</a> for more information.
 <p>
-<font color="#cc3333">Update:</font> In collaboration with an accredited CMVP testing laboratory we are now offering a
+<font color="#cc3333">Update:</font> In collaboration with an accredited CMVP testing laboratory we were through
+December 2012 offering a
 cost effective turnkey <a href="privatelabel.html">validation package</a> for routine private label validations.
-<p>
+However, due to some changes in
+<a href="http://www.opensslfoundation.com/fips/ig95.html">CMVP requirements</a> 
+introduced in 2013 the current OpenSSL FIPS Object Module
+code base can no longer be readily be validated. We are still adding new
+platforms to the 
+ <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1747">#1747</a>
+validation.
 
 <h2>Current Validations</h2>
 
-The most recent open source based validation is v2.0, FIPS 140-2 certificate
+The most recent open source based validation is the
+<a href="fipsvalidation.html">OpenSSL FIPS Object Module v2.0</a>,
+FIPS 140-2 certificate
  <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1747">#1747</a>.  You will need the
  <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140sp/140sp1747.pdf">Security Policy</a> and
  <a href="../../source/openssl-fips-2.0.tar.gz">source</a> at a minimum. Note that for this validation a
@@ -75,17 +84,16 @@ And did we mention the <a href="UserGuide.pdf">User Guide</a>?
 <a name="transition">
 <font color="#cc3333">Important Note:</font>
 </a>
-Due to upcoming changes in the FIPS 140-2 validation requirements the current v1.2 Module will
+Due to changes in the FIPS 140-2 validation requirements the current v1.2 Module is 
 no longer be a suitable model for private label validations in its current form past the year 2010.  See the NIST <a href="http://csrc.nist.gov/groups/STM/cmvp/notices.html">Notices</a>,
 <a href="http://csrc.nist.gov/groups/ST/key_mgmt/documents/Transitioning_CryptoAlgos_070209.pdf">discussion paper</a> and
 <a href="http://csrc.nist.gov/publications/drafts/800-131/draft-sp800-131_spd-june2010.pdf">SP 800-131</a>.
 <p>
-We hope to address these new changes in the next open source based validation (see below).
 
 <h2>Upcoming Validations</h2>
 <p>
-We now have sufficient sponsorship for a new validation and that effort is currently underway.
-More details can be found on our separate <a href="fipsvalidation.html">FIPS 140-2 Validation</a> page.
+No new validations are currently planned. The <a href="http://www.opensslfoundation.com/fips/ig95.html">I.G. 9.5</a>
+issue will probably mean a long delay before any new validations are done, if ever.
 
 <h2>Technical Notes</h2>
 <h3>Performance at Startup</h3>

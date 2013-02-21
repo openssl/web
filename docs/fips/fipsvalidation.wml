@@ -13,9 +13,12 @@ It substantially updates and improves the earlier v1.2 module, FIPS 140-2 certif
  <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1051">#1051</a>, which
 is documented in the <a href="UserGuide-1.2.pdf">1.2 User Guide</a>.
 <p>
-<font color="#cc3333">Important Note:</font> Due to upcoming changes in the FIPS 140-2 validation
-requirements the current v1.2 Module will no longer be a suitable model for private label validations
-in its current form past the year 2010.  See the NIST
+<font color="#cc3333">Important Note:</font>
+Due to new requirements introduced in 2013 the current v2.0 Module is no longer suitable as a
+reference for private label validations; see the <a href="http://www.opensslfoundation.com/fips/ig95.html">I.G. 9.5 FAQ</a>.
+Due to earlier changes in the FIPS 140-2 validation
+requirements the v1.2 Module is no longer be a suitable model for private label validations
+in its current form past the year 2010; see the NIST
 	<a href="http://csrc.nist.gov/groups/STM/cmvp/notices.html">Notices</a>,
 <a href="http://csrc.nist.gov/groups/ST/key_mgmt/documents/Transitioning_CryptoAlgos_070209.pdf">discussion paper</a> and
 <a href="http://csrc.nist.gov/publications/drafts/800-131/draft-800-131_transition-paper.pdf">Draft 800-131</a>.
