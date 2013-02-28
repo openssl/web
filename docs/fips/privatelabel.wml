@@ -7,6 +7,12 @@
 
 If you haven't already, please read our <a href="fipsnotes.html">FIPS 140-2 Notes</a> page.
 
+<p>
+<font color="#cc3333">IMPORTANT NOTE:&nbsp;</font>Due to
+<a href="http://opensslfoundation.com/fips/ig95.html">new formal requirements</a> that are
+incompatible with the current code base, and until further notice, OSF is no longer
+performing private label validations.
+
 <h2>What It Is</h2>
 
 We have found that one of the most popular commercial services offered by the

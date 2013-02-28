@@ -80,7 +80,9 @@ revision number of 2.0.2.  The revised source code can be used
 for all tested platforms, though the older 2.0 and 2.0.1 revisions
 remain valid for the platforms tested at the time those revisions were approved.
 
+<a name="sponsors">
 <h2>Sponsors</h2>
+</a>
 The OpenSSL Software Foundation receives support from multiple sources for each
 validation effort; however only those sponsors who have elected to be recognised
 for their contribution to OpenSSL are listed below.
