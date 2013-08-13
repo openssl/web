@@ -8,10 +8,11 @@
 If you haven't already, please read our <a href="fipsnotes.html">FIPS 140-2 Notes</a> page.
 
 <p>
-<font color="#cc3333">IMPORTANT NOTE:&nbsp;</font>Due to
-<a href="http://opensslfoundation.com/fips/ig95.html">new formal requirements</a> that are
-incompatible with the current code base, and until further notice, OSF is no longer
-performing private label validations.
+<font color="#cc3333">IMPORTANT NOTE:&nbsp;</font>The recent addition of
+<a href="http://opensslfoundation.com/fips/ig95.html">new formal requirements</a> has potentially
+complicated new private label validations, but as of August 2013 it appears such validations
+are again feasible. We'll be more certain of this once we've actually obtained a validation under
+the new rules.
 
 <h2>What It Is</h2>
 
@@ -26,7 +27,7 @@ validations also results in useful additions to the OpenSSL baseline.
 
 <h2>What You Get</h2>
 
-For the total fixed price of as little as US$35,000 we will obtain a Level 1 FIPS 140-2 validation
+For the total fixed price of as little as US$[TBD] we will obtain a Level 1 FIPS 140-2 validation
 in your name using the OpenSSL FIPS Object Module v2.0 for two common platforms using unmodified
 source code.  A common platform is a computing device (hardware and operating system)
 that is available and familiar to us and the test lab(s).  Examples of common platforms are:

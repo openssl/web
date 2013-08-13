@@ -93,7 +93,10 @@ no longer be a suitable model for private label validations in its current form 
 <h2>Upcoming Validations</h2>
 <p>
 No new validations are currently planned. The <a href="http://www.opensslfoundation.com/fips/ig95.html">I.G. 9.5</a>
-issue will probably mean a long delay before any new validations are done, if ever.
+issue has effectively precluded consideration of new validations for much of 2013, but with the July 25 2013 update of the
+<a href="http://csrc.nist.gov/groups/STM/cmvp/documents/fips140-2/FIPS1402IG.pdf">Implementation Guidance</a>
+(I.G.) document such validations appear to be feasible again. We will be happy to discuss our current understanding of
+the risks with interested sponsors.
 
 <h2>Technical Notes</h2>
 <h3>Performance at Startup</h3>
