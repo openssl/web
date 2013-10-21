@@ -6,7 +6,7 @@
 <h1>OpenSSL/SSLeay</h1>
 
 Here you can find hyperlinks to OpenSSL and SSLeay (the ancestor package of
-OpenSSL) related stuff.
+OpenSSL) related stuff. Listing here does not imply support or endorsement by the OpenSSL team.
 
 <ul>
     <item name="OpenSSL"
@@ -32,14 +32,17 @@ OpenSSL) related stuff.
     <item name="SSL Certificates HOWTO"
           info="A first hand approach on how to manage a certificate authority (CA)"
           url="http://www.gtlib.cc.gatech.edu/pub/linux/docs/HOWTO/other-formats/html_single/SSL-Certificates-HOWTO.html">
-	<item name="Open Source PKI book"
-		  info="Information on how to operate a CA with OpenSSL"
-		  url="http://ospkibook.sourceforge.net/">
-	<item name="OpenSSL for VMS"
+    <item name="Open Source PKI book"
+	  info="Information on how to operate a CA with OpenSSL"
+	  url="http://ospkibook.sourceforge.net/">
+    <item name="OpenSSL for VMS"
           info="A port of OpenSSL to the VMS environment"
           url="http://www.free.lp.se/openssl/">
-	<item name="Network Security with OpenSSL"
-	      info="An O'Reilly book on using OpenSSL (published June 2002)"
-	      url="http://www.opensslbook.com/">
+    <item name="Network Security with OpenSSL"
+          info="An O'Reilly book on using OpenSSL (published June 2002)"
+          url="http://www.opensslbook.com/">
+    <item name="OpenSSL Cookbook"
+         info="A free ebook that covers configuration and command-line usage (first published in 2013; continuously updated)"
+         url="https://www.feistyduck.com/books/openssl-cookbook/">
 </ul>
 
