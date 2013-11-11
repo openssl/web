@@ -3,6 +3,8 @@
 ##  majordomo.cgi -- Send a mail to Majordomo
 ##
 
+use HTML::Entities;
+
 #   switch to unbuffered I/O
 $|++;
 
@@ -87,10 +89,10 @@ close(MAIL);
     "and forwarded to Majordomo via Email in the following format:" .
     "<p>" .
     "<table cellpadding=5 bgcolor=\"#f0f0f0\"><tr><td>" .
-    "<pre>$mail</pre>\n" .
+    "<pre>".HTML::Entities::encode($mail)."</pre>\n" .
     "</td></tr></table>" .
     "<p>" .
-    "Expect a reply in your $qs{email} Email folder the next minutes.\n"
+    "Expect a reply in your ".HTML::Entities::encode($qs{email})." Email folder the next minutes.\n"
 );
 
 #   die gracefully
