@@ -10,6 +10,13 @@ The OpenSSL project has set up a request tracker at
 offering read-only access using the account <tt>guest</tt> with the
 password <tt>guest</tt>.
 
+The username and password can also be specified in the URL for example:
+<a href="http://rt.openssl.org/?user=guest&pass=guest&">http://rt.openssl.org/?user=guest&amp;pass=guest</a>.
+
+A link to a specific bug can be created using for example:
+<a href="http://rt.openssl.org/Ticket/Display.html?user=guest&pass=guest&id=1">
+http://rt.openssl.org/Ticket/Display.html?user=guest&amp;pass=guest&amp;id=1</a>
+
 <h2>List of Bugs/Requests</h2>
 
 Please see the
@@ -18,10 +25,18 @@ of new or open bugs and requests.
 
 <h2>Sending a Request</h2>
 
-Requests must be sent by email to
+New requests must be sent by email to
 <a href="mailto:rt@openssl.org">rt@openssl.org</a>, clearly indicating
 the type of request (bug report, patch, contribution, enhancement request,
 ...) the operating system and version of OpenSSL affected.
+
+The easiest way to respond to an existing request is to reply to the relevant
+message in <tt>openssl-dev@openssl.org</tt> and making sure you include
+<tt>rt@openssl.org</tt> in the list of recipients.
+
+If you do not have a copy of the existing request then you can create a new
+email including the ID in the subject line. For example to reply to ID #9999
+you'd send a message to <tt>rt@openssl.org</tt> including <tt>[openssl.org #9999]</tt> in the subject.
 
 <h2>Gateways</h2>
 
