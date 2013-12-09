@@ -379,23 +379,26 @@ my $minversion = "<get-var minversion>";
 my $maxversion = "<get-var maxversion>";
 my $dirname = "<get-var dirname>";
 my $file;
+my $custompage = 0;
 
 if ($maxversion eq "") {
 	$minversion="<get-var WML_SRC_FILENAME>";
-	$minversion =~ s/^\D*(\d+\.\d+\.\d+)\D.*$/$1/;
+	$minversion =~ s/^.*-(\d+\.\d+\.\d+)-.*$/$1/;
 	$maxversion = $minversion;
+	$custompage = 1;
 }
 
 
 my $dir = defined $ENV{PODSHOME} ? "$ENV{PODSHOME}/../.." : "/e/openssl/exp";
 if ($dirname ne "") {
 	$file = "${dir}/$dirname/NEWS";
+	$custompage = 1;
 } else {
 	$file = "${dir}/openssl:${minversion}-stable/NEWS";
 }
 # For testing
 $file = $ENV{NEWSTEST} if defined $ENV{NEWSTEST};
-if ($minversion eq $maxversion) {
+if ($custompage == 0)
 	print <<"END"
 <title>OpenSSL $minversion Release Notes.</title>
 <h1>OpenSSL $minversion Branch Release notes</h1>
