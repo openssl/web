@@ -1,0 +1,15 @@
+
+#use wml::openssl area=news page=openssl-notes
+
+<title>OpenSSL Release Notes</title>
+
+<h1>OpenSSL Release notes</h1>
+
+The major changes for all branches of the OpenSSL toolkit are summarised below. The contents reflect the state of the <tt>NEWS</tt> file inside the git
+repository.
+
+More details can be found in the <a href="changelog.html">ChangeLog</a>.
+<p>
+
+<notes minversion="" maxversion="X" dirname="openssl">
+

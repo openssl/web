@@ -1,0 +1,17 @@
+
+#use wml::openssl area=news page=openssl-old-notes
+
+<title>OpenSSL Release Notes</title>
+
+<h1>OpenSSL Old Branch Release notes</h1>
+
+The major changes in the 0.9.7 and earlier branches of the OpenSSL
+toolkit are summarised below. The contents reflect the state of the
+<tt>NEWS</tt> file inside the git repository. <b>Note:</b> these branches
+are considered obsolete and are no longer maintained.
+
+More details can be found in the <a href="changelog.html">ChangeLog</a>.
+<p>
+
+<notes minversion="" maxversion="0.9.7" dirname="openssl:0.9.8-stable">
+
