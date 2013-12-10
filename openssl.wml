@@ -398,7 +398,7 @@ if ($dirname ne "") {
 }
 # For testing
 $file = $ENV{NEWSTEST} if defined $ENV{NEWSTEST};
-if ($custompage == 0)
+if ($custompage == 0) {
 	print <<"END"
 <title>OpenSSL $minversion Release Notes.</title>
 <h1>OpenSSL $minversion Branch Release notes</h1>
