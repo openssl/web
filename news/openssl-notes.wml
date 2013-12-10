@@ -3,7 +3,7 @@
 
 <title>OpenSSL Release Notes</title>
 
-<h1>OpenSSL Release notes</h1>
+<h1>OpenSSL Release Notes</h1>
 
 The major changes for all branches of the OpenSSL toolkit are summarised below. The contents reflect the state of the <tt>NEWS</tt> file inside the git
 repository.
