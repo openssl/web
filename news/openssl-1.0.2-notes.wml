@@ -12,5 +12,5 @@ as problems are reported and fixed.
 More details can be found in the <a href="changelog.html">ChangeLog</a>.
 <p>
 
-<notes minversion="1.0.2" maxversion="1.0.2" dirname="openssl">
+<notes minversion="1.0.2" maxversion="1.0.2">
 
