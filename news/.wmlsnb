@@ -9,6 +9,5 @@
   <snb_button id=news      txt="News"      url="news.html">
   <snb_button id=changelog txt="ChangeLog" url="changelog.html">
   <snb_button id=vulnerabilities txt="Vulnerabilities" url="vulnerabilities.html">
-  <snb_button id=internet  txt="Internet"  url="internet.html">
 </snb>
 
