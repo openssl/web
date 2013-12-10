@@ -385,6 +385,7 @@ if ($maxversion eq "") {
 	$minversion="<get-var WML_SRC_FILENAME>";
 	$minversion =~ s/^.*-(\d+\.\d+\.\d+)-.*$/$1/;
 	$maxversion = $minversion;
+} else {
 	$custompage = 1;
 }
 
