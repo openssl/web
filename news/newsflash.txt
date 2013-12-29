@@ -1,3 +1,4 @@
+29-Dec-2013: Web site defacement. Investigation in progress, more details to follow.
 11-Feb-2013: OpenSSL 1.0.1e is now <a href="ROOT/source/">available</a>, including bug fixes
 05-Feb-2013: <a href="ROOT/news/secadv_20130205.txt">Security Advisory</a>: three security fixes
 05-Feb-2013: OpenSSL 1.0.1d is now <a href="ROOT/source/">available</a>, including bug and security fixes
