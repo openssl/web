@@ -1,4 +1,4 @@
-29-Dec-2013: UPDATE: site defacement. Source repositories verified and unaffected. More details on entry method in a future statement. 
+30-Dec-2013: UPDATE: site defacement <a href="ROOT/news/secadv_hack.txt">provisional details.</a>
 11-Feb-2013: OpenSSL 1.0.1e is now <a href="ROOT/source/">available</a>, including bug fixes
 05-Feb-2013: <a href="ROOT/news/secadv_20130205.txt">Security Advisory</a>: three security fixes
 05-Feb-2013: OpenSSL 1.0.1d is now <a href="ROOT/source/">available</a>, including bug and security fixes
