@@ -1,13 +1,18 @@
 Website defacement: provisional details.
 ==========================================
 
+Last updated: 1st January 2014
+
+On Sun 29th December 2013 at around 1am GMT the home page of www.openssl.org
+was defaced.  We restored the home page just after 3am GMT and started 
+forensics, investigation, and recovery.
+
 Initial investigations show that the attack was made via hypervisor through
 the hosting provider and not via any vulnerability in the OS configuration.
 Steps have been taken to protect against this means of attack in future.
 
 The source repositories have been checked and they were not affected.
-Other than the modification to the index.html page (which was restored a
-few minutes after we became aware of the attack) no changes to the website had
-been made.
+Other than the modification to the index.html page no changes to the
+website had been made.
 
 More details to follow.
