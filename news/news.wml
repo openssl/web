@@ -2,15 +2,22 @@
 
 #use wml::openssl area=news page=news
 
-<title>News, Summary</title>
+<title>News, Release Notes</title>
 
 <h1>NEWS</h1>
 
-This file summarizes all the changes to the OpenSSL toolkit, i.e.
-changes between each patchlevel. The presented contents
-reflects the current state of the <tt>NEWS</tt> file inside the CVS repository. 
+This file contains links to release and pre-release notes for all branches of
+the OpenSSL toolkit. The presented contents reflect the current state of the
+<tt>NEWS</tt> file inside the git repository for the appropriate branch. 
 
-Details can be found in the <a href="changelog.html">ChangeLog</a>.
-<p>
-<!--#include virtual="/cgi-bin/news.cgi" -->
+<ul>
+<li><a href="openssl-notes.html">Release notes for all OpenSSL branches.</a>.
+<li><a href="openssl-1.0.2-notes.html">Pre-release notes for 1.0.2 branch of OpenSSL.</a>.
+<li><a href="openssl-1.0.1-notes.html">Release notes for 1.0.1 branch of OpenSSL.</a>.
+<li><a href="openssl-1.0.0-notes.html">Release notes for 1.0.0 branch of OpenSSL.</a>.
+<li><a href="openssl-0.9.8-notes.html">Release notes for 0.9.8 branch of OpenSSL.</a>.
+<li><a href="openssl-old-notes.html">Release notes for obsolete branches of OpenSSL.</a>
+</ul>
+
+More details can be found in the <a href="changelog.html">ChangeLog</a>.
 
