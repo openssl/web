@@ -51,7 +51,10 @@ versions of OpenSSL since 0.9.6a was released on 5th April 2001.
   <xsl:copy-of select="description"/>
   <xsl:if test="advisory/@url">
     <a href="{advisory/@url}">(original advisory)</a><xsl:text>. </xsl:text>
-        </xsl:if>
+  </xsl:if>
+  <xsl:if test="git/@hash">
+    <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h={git/@hash}">(git commit)</a><xsl:text>. </xsl:text>
+  </xsl:if>
   <xsl:if test="reported/@source">
     Reported by <xsl:value-of select="reported/@source"/>.
   </xsl:if>
