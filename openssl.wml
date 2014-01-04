@@ -21,9 +21,9 @@
 
 #   insert information about the webpage
 <info style=comment domainname="openssl.org"
-      copyright="1998-2013 The OpenSSL Project, http://www.openssl.org/">
+      copyright="1998-2014 The OpenSSL Project, http://www.openssl.org/">
 <info style=meta domainname="openssl.org"
-      copyright="1998-2013 The OpenSSL Project, http://www.openssl.org/">
+      copyright="1998-2014 The OpenSSL Project, http://www.openssl.org/">
 
 #   insert overideable title container
 <title*>OpenSSL: {#PAGE_TITLE#}</title*>
@@ -543,7 +543,7 @@ and generated with
 <a href="http://thewml.org/"><font color="#000000">
 Website META Language</font></a> (WML).<br>
 All markup code and graphics on this website
-are Copyright &copy; 1999-2013 <a href="http://www.openssl.org/">The OpenSSL Project</a>, 
+are Copyright &copy; 1999-2014 <a href="http://www.openssl.org/">The OpenSSL Project</a>, 
 All rights reserved.<br>
 This website is served by an 
 <a href="http://www.apache.org/"><font color="#000000">Apache</font></a>/
