@@ -6,7 +6,7 @@
 
 <h1>NEWS</h1>
 
-This file contains links to release and pre-release notes for all branches of
+This page contains links to release and pre-release notes for all branches of
 the OpenSSL toolkit. The presented contents reflect the current state of the
 <tt>NEWS</tt> file inside the git repository for the appropriate branch. 
 
