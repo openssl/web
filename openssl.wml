@@ -319,7 +319,21 @@ foreach $l (@L) {
 open(FP, "<index.current");
 while (<FP>) {
    s|\s*\n$||;
-   push(@HI, $_);
+   s/#.*$//;
+   next if (/^\s*$/);
+   # If line is of form "last <regex>" look for last
+   # matching filename in the list.
+   # This means "last openssl-1*.tar.gz" will automatically
+   # mark the last version of OpenSSL as the latest without
+   # the need to manually update index.current on each release.
+   if (/^\s*last\s*(\S+)\s*$/) {
+	# Get list of all file, skip betas
+	my @list = sort grep(!/beta/, glob($1));
+	my $lastfile = pop @list;
+	push(@HI, $lastfile) if (-f $lastfile);
+   } elsif (-f $_) {
+   	push(@HI, $_);
+   }
 }
 close(FP);
 sub ls {

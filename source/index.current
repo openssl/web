@@ -1,1 +1,2 @@
-openssl-1.0.1e.tar.gz
+# Set latest tarball automatically
+last openssl-1*.tar.gz
