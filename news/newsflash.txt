@@ -1,3 +1,5 @@
+06-Jan-2014: OpenSSL 1.0.0l is now <a href="ROOT/source/">available</a>, including bug and security fixes
+06-Jan-2014: OpenSSL 1.0.1f is now <a href="ROOT/source/">available</a>, including bug and security fixes
 03-Jan-2014: UPDATE: site defacement <a href="ROOT/news/secadv_hack.txt">final details.</a>
 11-Feb-2013: OpenSSL 1.0.1e is now <a href="ROOT/source/">available</a>, including bug fixes
 05-Feb-2013: <a href="ROOT/news/secadv_20130205.txt">Security Advisory</a>: three security fixes
