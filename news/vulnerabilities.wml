@@ -7,7 +7,18 @@
 
 <title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
-</p><h2>2013</h2><dl>
+</p><h2>2014</h2><dl>
+  <dt><b><a name="2013-4353"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4353">CVE-2013-4353: </a></a></b>6th January 2014<p/></dt>
+  <dd><description>
+A carefully crafted invalid TLS handshake could crash OpenSSL with a NULL pointer exception.
+    </description><a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=197e0ea817ad64820789d86711d55ff50d71f631">(git commit)</a>. 
+    Reported by Anton Johansson.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1f (Affected 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <p/>
+</dl><h2>2013</h2><dl>
   <dt><b><a name="2013-6450"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6450">CVE-2013-6450: </a></a></b>13th December 2013<p/></dt>
   <dd><description>
 A flaw in DTLS handling can cause an application using OpenSSL and DTLS to crash.

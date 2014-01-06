@@ -1542,7 +1542,21 @@ A flaw in OpenSSL can cause an application using OpenSSL to crash when using TLS
     </description>
   </issue>
 
-
+ <issue public="20140106">
+    <cve name="2013-4353"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <fixed base="1.0.1" version="1.0.1f" date="20140106"/>
+    <git hash="197e0ea817ad64820789d86711d55ff50d71f631"/>
+    <reported source="Anton Johansson"/>
+    <description>
+A carefully crafted invalid TLS handshake could crash OpenSSL with a NULL pointer exception.
+    </description>
+  </issue>
 
 </security>
 
