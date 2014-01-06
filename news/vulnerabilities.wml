@@ -17,9 +17,9 @@ This is not a vulnerability for OpenSSL prior to 1.0.0.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      1.0.1f-dev (Affected 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+      1.0.1f (Affected 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
   <dd>Fixed in OpenSSL  
-      1.0.0l-dev (Affected 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+      1.0.0l (Affected 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <p/>
   <dt><b><a name="2013-6449"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6449">CVE-2013-6449: </a></a></b>14th December 2013<p/></dt>
   <dd><description>
@@ -29,7 +29,7 @@ A flaw in OpenSSL can cause an application using OpenSSL to crash when using TLS
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      1.0.1f-dev (Affected 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+      1.0.1f (Affected 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
   <p/>
   <dt><b><a name="2013-0169"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0169">CVE-2013-0169: </a></a></b>4th February 2013<p/></dt>
   <dd><description>

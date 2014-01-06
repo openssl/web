@@ -5,7 +5,7 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20140103">
+<security updated="20140106">
 
   <issue public="20020730">
     <cve name="2002-0655"/>
@@ -1516,8 +1516,8 @@ a denial of service attack.
     <affects base="1.0.1" version="1.0.1c"/>
     <affects base="1.0.1" version="1.0.1d"/>
     <affects base="1.0.1" version="1.0.1e"/>
-    <fixed base="1.0.1" version="1.0.1f-dev" date="20131220"/>
-    <fixed base="1.0.0" version="1.0.0l-dev" date="20131220"/>
+    <fixed base="1.0.1" version="1.0.1f" date="20140106"/>
+    <fixed base="1.0.0" version="1.0.0l" date="20140106"/>
     <git hash="3462896"/>
     <reported source="Dmitry Sobinov"/>
     <description>
@@ -1534,7 +1534,7 @@ This is not a vulnerability for OpenSSL prior to 1.0.0.
     <affects base="1.0.1" version="1.0.1c"/>
     <affects base="1.0.1" version="1.0.1d"/>
     <affects base="1.0.1" version="1.0.1e"/>
-    <fixed base="1.0.1" version="1.0.1f-dev" date="20131219"/>
+    <fixed base="1.0.1" version="1.0.1f" date="20140106"/>
     <git hash="ca98926"/>
     <reported source="Ron Barber"/>
     <description>
