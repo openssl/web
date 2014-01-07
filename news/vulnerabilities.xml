@@ -1516,9 +1516,10 @@ a denial of service attack.
     <affects base="1.0.1" version="1.0.1c"/>
     <affects base="1.0.1" version="1.0.1d"/>
     <affects base="1.0.1" version="1.0.1e"/>
-    <fixed base="1.0.1" version="1.0.1f" date="20140106"/>
+    <fixed base="1.0.1" version="1.0.1f" date="20140106">
+          <git hash="3462896"/>
+    </fixed>
     <fixed base="1.0.0" version="1.0.0l" date="20140106"/>
-    <git hash="3462896"/>
     <reported source="Dmitry Sobinov"/>
     <description>
 A flaw in DTLS handling can cause an application using OpenSSL and DTLS to crash.
@@ -1534,8 +1535,9 @@ This is not a vulnerability for OpenSSL prior to 1.0.0.
     <affects base="1.0.1" version="1.0.1c"/>
     <affects base="1.0.1" version="1.0.1d"/>
     <affects base="1.0.1" version="1.0.1e"/>
-    <fixed base="1.0.1" version="1.0.1f" date="20140106"/>
-    <git hash="ca98926"/>
+    <fixed base="1.0.1" version="1.0.1f" date="20140106">
+            <git hash="ca98926"/>
+    </fixed>
     <reported source="Ron Barber"/>
     <description>
 A flaw in OpenSSL can cause an application using OpenSSL to crash when using TLS version 1.2.  
@@ -1551,8 +1553,9 @@ This issue only affected OpenSSL 1.0.1 versions.
     <affects base="1.0.1" version="1.0.1c"/>
     <affects base="1.0.1" version="1.0.1d"/>
     <affects base="1.0.1" version="1.0.1e"/>
-    <fixed base="1.0.1" version="1.0.1f" date="20140106"/>
-    <git hash="197e0ea817ad64820789d86711d55ff50d71f631"/>
+    <fixed base="1.0.1" version="1.0.1f" date="20140106">
+          <git hash="197e0ea817ad64820789d86711d55ff50d71f631"/>
+    </fixed>
     <reported source="Anton Johansson"/>
     <description>
 A carefully crafted invalid TLS handshake could crash OpenSSL with a NULL pointer exception.  A malicious

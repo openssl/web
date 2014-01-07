@@ -52,9 +52,6 @@ versions of OpenSSL since 0.9.6a was released on 5th April 2001.
   <xsl:if test="advisory/@url">
     <a href="{advisory/@url}">(original advisory)</a><xsl:text>. </xsl:text>
   </xsl:if>
-  <xsl:if test="git/@hash">
-    <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h={git/@hash}">(git commit)</a><xsl:text>. </xsl:text>
-  </xsl:if>
   <xsl:if test="reported/@source">
     Reported by <xsl:value-of select="reported/@source"/>.
   </xsl:if>
@@ -63,6 +60,9 @@ versions of OpenSSL since 0.9.6a was released on 5th April 2001.
     <xsl:for-each select="fixed">
       <dd>Fixed in OpenSSL  
       <xsl:value-of select="@version"/>
+      <xsl:if test="git/@hash">
+         <xsl:text> </xsl:text><a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h={git/@hash}">(git commit)</a><xsl:text> </xsl:text>
+      </xsl:if>
       <xsl:variable name="mybase" select="@base"/>
       <xsl:for-each select="../affects[@base=$mybase]|../maybeaffects[@base=$mybase]">
         <xsl:sort select="@version" order="descending"/>

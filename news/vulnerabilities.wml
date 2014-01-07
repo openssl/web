@@ -12,24 +12,24 @@ versions of OpenSSL since 0.9.6a was released on 5th April 2001.
   <dd><description>
 A carefully crafted invalid TLS handshake could crash OpenSSL with a NULL pointer exception.  A malicious
 server could use this flaw to crash a connecting client.  This issue only affected OpenSSL 1.0.1 versions.
-    </description><a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=197e0ea817ad64820789d86711d55ff50d71f631">(git commit)</a>. 
+    </description>
     Reported by Anton Johansson.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      1.0.1f (Affected 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+      1.0.1f <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=197e0ea817ad64820789d86711d55ff50d71f631">(git commit)</a>  (Affected 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
   <p/>
 </dl><h2>2013</h2><dl>
   <dt><b><a name="2013-6450"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6450">CVE-2013-6450: </a></a></b>13th December 2013<p/></dt>
   <dd><description>
 A flaw in DTLS handling can cause an application using OpenSSL and DTLS to crash.
 This is not a vulnerability for OpenSSL prior to 1.0.0.
-    </description><a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=3462896">(git commit)</a>. 
+    </description>
     Reported by Dmitry Sobinov.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      1.0.1f (Affected 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+      1.0.1f <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=3462896">(git commit)</a>  (Affected 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
   <dd>Fixed in OpenSSL  
       1.0.0l (Affected 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <p/>
@@ -37,12 +37,12 @@ This is not a vulnerability for OpenSSL prior to 1.0.0.
   <dd><description>
 A flaw in OpenSSL can cause an application using OpenSSL to crash when using TLS version 1.2.  
 This issue only affected OpenSSL 1.0.1 versions.
-    </description><a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=ca98926">(git commit)</a>. 
+    </description>
     Reported by Ron Barber.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      1.0.1f (Affected 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+      1.0.1f <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=ca98926">(git commit)</a>  (Affected 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
   <p/>
   <dt><b><a name="2013-0169"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0169">CVE-2013-0169: </a></a></b>4th February 2013<p/></dt>
   <dd><description>
