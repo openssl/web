@@ -414,6 +414,9 @@ if ($dirname ne "") {
 # For testing
 $file = $ENV{NEWSTEST} if defined $ENV{NEWSTEST};
 if ($custompage == 0) {
+	my $brname = $minversion;
+	$brname =~ tr/./_/;
+	$brname = "OpenSSL_${brname}-stable";
 	print <<"END"
 <title>OpenSSL $minversion Release Notes.</title>
 <h1>OpenSSL $minversion Branch Release notes</h1>
@@ -422,7 +425,9 @@ The major changes and known issues for the $minversion branch of the OpenSSL
 toolkit are summarised below. The contents reflect the current state of the
 <tt>NEWS</tt> file inside the git repository.
 
-More details can be found in the <a href="changelog.html">ChangeLog</a>.
+Additional details of changes to all versions of OpenSSL can be found in the <a href="changelog.html">ChangeLog</a>.
+<p>
+A complete list of changes to OpenSSL $minversion can be found in the <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=shortlog;h=refs/heads/$brname">gitrepository commit log</a>.
 <p>
 
 END

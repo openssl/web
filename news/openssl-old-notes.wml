@@ -10,7 +10,7 @@ toolkit are summarised below. The contents reflect the state of the
 <tt>NEWS</tt> file inside the git repository. <b>Note:</b> these branches
 are considered obsolete and are no longer maintained.
 
-More details can be found in the <a href="changelog.html">ChangeLog</a>.
+Additional details of changes to all versions of OpenSSL can be found in the <a href="changelog.html">ChangeLog</a>.
 <p>
 
 <notes minversion="" maxversion="0.9.7" dirname="openssl:0.9.8-stable">
