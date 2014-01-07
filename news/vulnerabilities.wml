@@ -10,7 +10,8 @@ versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p><h2>2014</h2><dl>
   <dt><b><a name="2013-4353"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4353">CVE-2013-4353: </a></a></b>6th January 2014<p/></dt>
   <dd><description>
-A carefully crafted invalid TLS handshake could crash OpenSSL with a NULL pointer exception.
+A carefully crafted invalid TLS handshake could crash OpenSSL with a NULL pointer exception.  A malicious
+server could use this flaw to crash a connecting client.  This issue only affected OpenSSL 1.0.1 versions.
     </description><a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=197e0ea817ad64820789d86711d55ff50d71f631">(git commit)</a>. 
     Reported by Anton Johansson.
   </dd>
@@ -34,7 +35,8 @@ This is not a vulnerability for OpenSSL prior to 1.0.0.
   <p/>
   <dt><b><a name="2013-6449"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6449">CVE-2013-6449: </a></a></b>14th December 2013<p/></dt>
   <dd><description>
-A flaw in OpenSSL can cause an application using OpenSSL to crash when using TLS version 1.2.
+A flaw in OpenSSL can cause an application using OpenSSL to crash when using TLS version 1.2.  
+This issue only affected OpenSSL 1.0.1 versions.
     </description><a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=ca98926">(git commit)</a>. 
     Reported by Ron Barber.
   </dd>

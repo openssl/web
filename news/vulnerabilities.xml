@@ -1538,7 +1538,8 @@ This is not a vulnerability for OpenSSL prior to 1.0.0.
     <git hash="ca98926"/>
     <reported source="Ron Barber"/>
     <description>
-A flaw in OpenSSL can cause an application using OpenSSL to crash when using TLS version 1.2.
+A flaw in OpenSSL can cause an application using OpenSSL to crash when using TLS version 1.2.  
+This issue only affected OpenSSL 1.0.1 versions.
     </description>
   </issue>
 
@@ -1554,7 +1555,8 @@ A flaw in OpenSSL can cause an application using OpenSSL to crash when using TLS
     <git hash="197e0ea817ad64820789d86711d55ff50d71f631"/>
     <reported source="Anton Johansson"/>
     <description>
-A carefully crafted invalid TLS handshake could crash OpenSSL with a NULL pointer exception.
+A carefully crafted invalid TLS handshake could crash OpenSSL with a NULL pointer exception.  A malicious
+server could use this flaw to crash a connecting client.  This issue only affected OpenSSL 1.0.1 versions.
     </description>
   </issue>
 
