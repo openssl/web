@@ -12,6 +12,7 @@ as problems are reported and fixed.
 Additional details of changes to all versions of OpenSSL can be found in the <a href="changelog.html">ChangeLog</a>.
 <p>
 A complete list of changes to OpenSSL 1.0.2 can be found in the <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=shortlog;h=refs/heads/OpenSSL_1_0_2-stable">git repository commit log</a>.
+<p>
 
 <notes minversion="1.0.2" maxversion="1.0.2">
 
