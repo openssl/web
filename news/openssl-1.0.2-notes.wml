@@ -5,7 +5,7 @@
 
 <h1>OpenSSL 1.0.2 Notes</h1>
 
-Version 1.0.2 of the OpenSSL toolkit is approaching release. Major changes
+Version 1.0.2 of the OpenSSL toolkit is now in beta. Major changes
 and known issues are summarised below. This page will be updated regularly
 as problems are reported and fixed.
 <p>
