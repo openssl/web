@@ -8,10 +8,10 @@
 <title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p><h2>2014</h2><dl>
-  <dt><b><a name="2014-0160"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160">CVE-2014-0160: </a></a></b>9th April 2014<p/></dt>
+  <dt><b><a name="2014-0160"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160">CVE-2014-0160: </a></a></b>7th April 2014<p/></dt>
   <dd><description>
 A missing bounds check in the handling of the TLS heartbeat extension can be
-used to reveal up to 64k of memory to a connected client or server.  This
+used to reveal up to 64kB of memory to a connected client or server.  This
 issue did not affect versions of OpenSSL prior to 1.0.1.
     </description>
     Reported by Neel Mehta.

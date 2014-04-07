@@ -5,7 +5,7 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20140409">
+<security updated="20140407">
 
   <issue public="20020730">
     <cve name="2002-0655"/>
@@ -1597,7 +1597,7 @@ ECDSA Nonces Using the FLUSH+RELOAD Cache Side-channel Attack"
     </description>
   </issue>
 
-  <issue public="20140409">
+  <issue public="20140407">
     <cve name="2014-0160"/>
     <affects base="1.0.1" version="1.0.1"/>
     <affects base="1.0.1" version="1.0.1a"/>
@@ -1611,7 +1611,7 @@ ECDSA Nonces Using the FLUSH+RELOAD Cache Side-channel Attack"
     <reported source="Neel Mehta"/>
     <description>
 A missing bounds check in the handling of the TLS heartbeat extension can be
-used to reveal up to 64k of memory to a connected client or server.  This
+used to reveal up to 64kB of memory to a connected client or server.  This
 issue did not affect versions of OpenSSL prior to 1.0.1.
     </description>
   </issue>
