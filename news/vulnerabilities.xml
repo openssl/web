@@ -1563,5 +1563,40 @@ server could use this flaw to crash a connecting client.  This issue only affect
     </description>
   </issue>
 
+  <issue public="20140214">
+    <cve name="2014-0076"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <fixed base="1.0.1" version="1.0.1g-dev" date="20140312">
+          <git hash="4b7a4ba29cafa432fc4266fe6e59e60bc1c96332"/>
+    </fixed>
+    <fixed base="1.0.0" version="1.0.0m-dev" date="20140312">
+          <git hash="2198be3483259de374f91e57d247d0fc667aef29"/>
+    </fixed>
+    <reported source="Yuval Yarom and Naomi Benger"/>
+    <description>
+Fix for the attack described in the paper "Recovering OpenSSL
+ECDSA Nonces Using the FLUSH+RELOAD Cache Side-channel Attack"
+    </description>
+  </issue>
+
 </security>
+
 
