@@ -8,6 +8,18 @@
 <title>OpenSSL vulnerabilities</title><h1>OpenSSL vulnerabilities</h1><p>This page lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p><h2>2014</h2><dl>
+  <dt><b><a name="2014-0160"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160">CVE-2014-0160: </a></a></b>9th April 2014<p/></dt>
+  <dd><description>
+A missing bounds check in the handling of the TLS heartbeat extension can be
+used to reveal up to 64k of memory to a connected client or server.  This
+issue did not affect versions of OpenSSL prior to 1.0.1.
+    </description>
+    Reported by Neel Mehta.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1g (Affected 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <p/>
   <dt><b><a name="2014-0076"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0076">CVE-2014-0076: </a></a></b>14th February 2014<p/></dt>
   <dd><description>
 Fix for the attack described in the paper "Recovering OpenSSL
@@ -17,7 +29,7 @@ ECDSA Nonces Using the FLUSH+RELOAD Cache Side-channel Attack"
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      1.0.1g-dev <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=4b7a4ba29cafa432fc4266fe6e59e60bc1c96332">(git commit)</a>  (Affected 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+      1.0.1g <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=4b7a4ba29cafa432fc4266fe6e59e60bc1c96332">(git commit)</a>  (Affected 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
   <dd>Fixed in OpenSSL  
       1.0.0m-dev <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2198be3483259de374f91e57d247d0fc667aef29">(git commit)</a>  (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <p/>

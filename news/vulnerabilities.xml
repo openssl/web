@@ -5,7 +5,7 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20140106">
+<security updated="20140409">
 
   <issue public="20020730">
     <cve name="2002-0655"/>
@@ -1584,7 +1584,7 @@ server could use this flaw to crash a connecting client.  This issue only affect
     <affects base="1.0.1" version="1.0.1d"/>
     <affects base="1.0.1" version="1.0.1e"/>
     <affects base="1.0.1" version="1.0.1f"/>
-    <fixed base="1.0.1" version="1.0.1g-dev" date="20140312">
+    <fixed base="1.0.1" version="1.0.1g" date="20140409">
           <git hash="4b7a4ba29cafa432fc4266fe6e59e60bc1c96332"/>
     </fixed>
     <fixed base="1.0.0" version="1.0.0m-dev" date="20140312">
@@ -1594,6 +1594,25 @@ server could use this flaw to crash a connecting client.  This issue only affect
     <description>
 Fix for the attack described in the paper "Recovering OpenSSL
 ECDSA Nonces Using the FLUSH+RELOAD Cache Side-channel Attack"
+    </description>
+  </issue>
+
+  <issue public="20140409">
+    <cve name="2014-0160"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <fixed base="1.0.1" version="1.0.1g" date="20140409">
+    </fixed>
+    <reported source="Neel Mehta"/>
+    <description>
+A missing bounds check in the handling of the TLS heartbeat extension can be
+used to reveal up to 64k of memory to a connected client or server.  This
+issue did not affect versions of OpenSSL prior to 1.0.1.
     </description>
   </issue>
 
