@@ -22,3 +22,8 @@ packages.</p>
           url="http://www.slproweb.com/products/Win32OpenSSL.html">
 </ul>
 
+<ul>
+    <item name="OpenSSL for Solaris"
+          info="Versions for Solaris 2.5 - 11 SPARC and X86"
+          url=" http://www.unixpackages.com/">
+</ul>
