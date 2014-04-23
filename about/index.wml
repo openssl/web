@@ -40,40 +40,57 @@ openssl-dev@openssl.org, where all development efforts are coordinated.
 <p>
 The current OpenSSL core team consists of (in alphabetical order):
 <p>
-<table cellspacing="0" cellpadding="0">
-<tr><td><b id=sf>Individual</b></td>   <td><b id=sf>OpenSSL Email</b></td> <td><b id=sf>Personal Email</b></td> <td><b id=sf>Location</b></td> </tr>
-<tr><td><hr noshade size=1></td><td><hr noshade size=1></td><td><hr noshade size=1></td><td><hr noshade size=1></td></tr>
-<tr><td>Mark J. Cox</td>         <td ><a href="mailto:mark@openssl.org">mark@openssl.org</a></td> <td><a href="mailto:mark@awe.com">mark@awe.com</a></td> <td>UK</td> </tr>
-<tr><td>Ralf S. Engelschall</td> <td ><a href="mailto:rse@openssl.org">rse@openssl.org</a></td> <td><a href="mailto:rse@engelschall.com">rse@engelschall.com</a></td> <td>DE</td></tr>
-<tr><td>Dr. Stephen Henson</td>  <td ><a href="mailto:steve@openssl.org">steve@openssl.org</a></td> <td><a href="mailto:shenson@drh-consultancy.co.uk">shenson@drh-consultancy.co.uk</a></td> <td>UK</td> </tr>
-<tr><td>Ben Laurie</td>          <td ><a href="mailto:ben@openssl.org">ben@openssl.org</a></td> <td><a href="mailto:ben@algroup.co.uk">ben@algroup.co.uk</a></td> <td>UK</td> </tr>
-</table>
+<blockquote><table>
+<tr><td><b id="sf">Individual</b></td>   <td><b id="sf">Email</b></td> <td><b id="sf">Location</b></td> </tr>
+<tr><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td></tr>
+<tr><td>Mark J. Cox</td>         <td><a href="mailto:mark@openssl.org">mark@openssl.org</a></td> <td>UK</td> </tr>
+<tr><td>Dr. Stephen Henson</td>  <td><a href="mailto:steve@openssl.org">steve@openssl.org</a></td> <td>UK</td> </tr>
+<tr><td>Ben Laurie</td>          <td><a href="mailto:ben@openssl.org">ben@openssl.org</a></td> <td>UK</td> </tr>
+</table></blockquote>
 
 <p>
 The current OpenSSL development team consists of (in alphabetical order):
 <p>
-<table cellspacing="0" cellpadding="0">
-<tr><td><b id=sf>Individual</b></td>   <td><b id=sf>OpenSSL Email</b></td> <td><b id=sf>Personal Email</b></td> <td><b id=sf>Location&nbsp;</b></td> <td><b id=sf>Key ID</b></td> </tr>
-<tr><td><hr noshade size=1></td><td><hr noshade size=1></td><td><hr noshade size=1></td><td><hr noshade size=1></td> <td><hr noshade size=1></td> </tr>
-<tr><td>Mark J. Cox</td>         <td ><a href="mailto:mark@openssl.org">mark@openssl.org</a></td> <td><a href="mailto:mark@awe.com">mark@awe.com</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x49A563D9">49A563D9</a></td></tr>
-<tr><td>Ralf S. Engelschall</td> <td ><a href="mailto:rse@openssl.org">rse@openssl.org</a></td> <td><a href="mailto:rse@engelschall.com">rse@engelschall.com</a></td> <td>DE</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x26BB437D">26BB437D</a></td> </tr>
-<tr><td>Dr. Stephen Henson</td>  <td ><a href="mailto:steve@openssl.org">steve@openssl.org</a></td> <td><a href="mailto:shenson@drh-consultancy.co.uk">shenson@drh-consultancy.co.uk</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xFA40E9E2">FA40E9E2</a>, <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xF295C759">F295C759 (old key)</a></td></tr>
-<tr><td>Lutz J&auml;nicke</td>       <td ><a href="mailto:jaenicke@openssl.org">jaenicke@openssl.org</a></td> <td><a href="mailto:lutz@lutz-jaenicke.de">lutz@lutz-jaenicke.de</a></td> <td>DE</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x9C58A66D">9C58A66D</a></td> </tr>
-<tr><td>Nils Larsch</td>         <td ><a href="mailto:nils@openssl.org">nils@openssl.org</a></td> <td><a href="mailto:nils@larsch.net">nils@larsch.net</a></td> <td>DE</td> <td></td> </tr>
-<tr><td>Ben Laurie</td>          <td ><a href="mailto:ben@openssl.org">ben@openssl.org</a></td> <td><a href="mailto:ben@algroup.co.uk">ben@algroup.co.uk</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x2118CF83">2118CF83</a></td> </tr>
-<tr><td>Richard Levitte</td>     <td ><a href="mailto:levitte@openssl.org">levitte@openssl.org</a></td> <td><a href="mailto:richard@levitte.org">richard@levitte.org</a></td> <td>SE</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xF709453B">F709453B</a></td> </tr>
-<tr><td>Bodo M&ouml;ller</td>        <td ><a href="mailto:bodo@openssl.org">bodo@openssl.org</a></td> <td><a href="mailto:bmoeller@acm.org">bmoeller@acm.org</a></td> <td>DE</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x5A6A9B85">5A6A9B85</a></td> </tr>
-<tr><td>Ulf M&ouml;ller</td>         <td ><a href="mailto:ulf@openssl.org">ulf@openssl.org</a></td> <td><a href="mailto:mail@ulfm.de">mail@ulfm.de</a></td> <td>DE</td> <td></td> </tr>
-<tr><td>Andy Polyakov</td>       <td ><a href="mailto:appro@openssl.org">appro@openssl.org</a></td> <td><a href="mailto:appro@fy.chalmers.se">appro@fy.chalmers.se</a></td> <td>SE</td> <td></td> </tr>
-<tr><td>Geoff Thorpe</td>        <td ><a href="mailto:geoff@openssl.org">geoff@openssl.org</a></td> <td><a href="mailto:geoff@geoffthorpe.net">geoff@geoffthorpe.net</a></td> <td>QC</td> <td></td> </tr>
-</table>
+<blockquote><table summary="">
+<tr><td><b id="sf">Individual</b></td>   <td><b id="sf">Email</b></td> <td><b id="sf">Location&nbsp;</b></td> <td><b id="sf">Key ID</b></td> </tr>
+<tr><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td> </tr>
+<tr><td>Mark J. Cox</td>         <td><a href="mailto:mark@openssl.org">mark@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x49A563D9">49A563D9</a></td></tr>
+<tr><td>Dr. Stephen Henson</td>  <td><a href="mailto:steve@openssl.org">steve@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xFA40E9E2">FA40E9E2</a>, <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xF295C759">F295C759 (old key)</a></td></tr>
+<tr><td>Lutz J&auml;nicke</td>       <td><a href="mailto:jaenicke@openssl.org">jaenicke@openssl.org</a></td> <td>DE</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x9C58A66D">9C58A66D</a></td> </tr>
+<tr><td>Ben Laurie</td>          <td><a href="mailto:ben@openssl.org">ben@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x2118CF83">2118CF83</a></td> </tr>
+<tr><td>Steve Marquess</td>          <td><a href="mailto:marquess@opensslfoundation.com">marquess@opensslfoundation.com</a></td> <td>US</td> <td></td> </tr>
+<tr><td>Bodo M&ouml;ller</td>        <td><a href="mailto:bodo@openssl.org">bodo@openssl.org</a></td> <td>DE</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x5A6A9B85">5A6A9B85</a></td> </tr>
+<tr><td>Andy Polyakov</td>       <td><a href="mailto:appro@openssl.org">appro@openssl.org</a></td> <td>SE</td> <td></td> </tr>
+</table></blockquote>
+
+<p>
+Currently inactive OpenSSL members (in alphabetical order):
+<p>
+<blockquote><table summary="">
+<tr><td><b id="sf">Individual</b></td>   <td><b id="sf">Email</b></td> <td><b id="sf">Location&nbsp;</b></td> </tr>
+<tr><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td> </tr>
+<tr><td>Ralf S. Engelschall</td> <td><a href="mailto:rse@openssl.org">rse@openssl.org</a></td> <td>DE</td> </tr>
+<tr><td>Nils Larsch</td>         <td><a href="mailto:nils@openssl.org">nils@openssl.org</a></td> <td>DE</td>  </tr>
+<tr><td>Richard Levitte</td>     <td><a href="mailto:levitte@openssl.org">levitte@openssl.org</a></td> <td>SE</td> </tr>
+<tr><td>Geoff Thorpe</td>        <td><a href="mailto:geoff@openssl.org">geoff@openssl.org</a></td> <td>QC</td> </tr>
+</table></blockquote>
+
 
 <p>
 OpenSSL Emeritae - old members now off doing other things (in alphabetical order):
 <p>
-<table cellspacing="0" cellpadding="0">
+<blockquote><table cellspacing="0" cellpadding="0">
 <tr><td><b id=sf>Individual</b></td>   <td><b id=sf>OpenSSL Email</b></td> <td><b id=sf>Personal Email</b></td> <td><b id=sf>Location</b></td> </tr>
 <tr><td><hr noshade size=1></td><td><hr noshade size=1></td><td><hr noshade size=1></td><td><hr noshade size=1></td></tr>
 <tr><td>Holger Reif</td>         <td ><a href="mailto:holger@openssl.org">holger@openssl.org</a></td> <td><a href="mailto:holger@reif.net">holger@reif.net</a></td> <td>DE</td> </tr>
 <tr><td>Paul C. Sutton</td>      <td ><a href="mailto:paul@openssl.org">paul@openssl.org</a></td> <td><a href="mailto:paul@awe.com">paul@awe.com</a></td> <td>UK</td> </tr>
+</table></blockquote>
+
+<p>
+In Memoriam - members sadly no longer with us:
+<p>
+<blockquote><table summary="">
+<tr><td><b id="sf">Individual</b></td>  <td><b id="sf">Location</b></td> </tr>
+<tr><td><hr noshade size="1"></td><td><hr noshade size="1"></td></tr>
+<tr><td>Ulf M&ouml;ller</td>  <td>DE</td> </tr>
 </table>
