@@ -42,7 +42,7 @@ The current OpenSSL core team consists of (in alphabetical order):
 <p>
 <blockquote><table>
 <tr><td><b id="sf">Individual</b></td>   <td><b id="sf">Email</b></td> <td><b id="sf">Location</b></td> </tr>
-<tr><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td></tr>
+<tr><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td></tr>
 <tr><td>Mark J. Cox</td>         <td><a href="mailto:mark@openssl.org">mark@openssl.org</a></td> <td>UK</td> </tr>
 <tr><td>Dr. Stephen Henson</td>  <td><a href="mailto:steve@openssl.org">steve@openssl.org</a></td> <td>UK</td> </tr>
 <tr><td>Ben Laurie</td>          <td><a href="mailto:ben@openssl.org">ben@openssl.org</a></td> <td>UK</td> </tr>
@@ -79,7 +79,7 @@ Currently inactive OpenSSL members (in alphabetical order):
 <p>
 OpenSSL Emeritae - old members now off doing other things (in alphabetical order):
 <p>
-<blockquote><table cellspacing="0" cellpadding="0">
+<blockquote><table>
 <tr><td><b id=sf>Individual</b></td>   <td><b id=sf>OpenSSL Email</b></td> <td><b id=sf>Personal Email</b></td> <td><b id=sf>Location</b></td> </tr>
 <tr><td><hr noshade size=1></td><td><hr noshade size=1></td><td><hr noshade size=1></td><td><hr noshade size=1></td></tr>
 <tr><td>Holger Reif</td>         <td ><a href="mailto:holger@openssl.org">holger@openssl.org</a></td> <td><a href="mailto:holger@reif.net">holger@reif.net</a></td> <td>DE</td> </tr>
