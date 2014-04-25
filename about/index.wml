@@ -54,6 +54,7 @@ The current OpenSSL development team consists of (in alphabetical order):
 <blockquote><table summary="">
 <tr><td><b id="sf">Individual</b></td>   <td><b id="sf">Email</b></td> <td><b id="sf">Location&nbsp;</b></td> <td><b id="sf">Key ID</b></td> </tr>
 <tr><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td> </tr>
+<tr><td>Matt Caswell</td>         <td><a href="mailto:frodo@baggins.org">frodo@baggins.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x0E604491">0E604491</a></td></tr>
 <tr><td>Mark J. Cox</td>         <td><a href="mailto:mark@openssl.org">mark@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x49A563D9">49A563D9</a></td></tr>
 <tr><td>Dr. Stephen Henson</td>  <td><a href="mailto:steve@openssl.org">steve@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xFA40E9E2">FA40E9E2</a>, <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xF295C759">F295C759 (old key)</a></td></tr>
 <tr><td>Lutz J&auml;nicke</td>       <td><a href="mailto:jaenicke@openssl.org">jaenicke@openssl.org</a></td> <td>DE</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x9C58A66D">9C58A66D</a></td> </tr>
