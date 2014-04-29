@@ -41,11 +41,14 @@ openssl-dev@openssl.org, where all development efforts are coordinated.
 The current OpenSSL core team consists of (in alphabetical order):
 <p>
 <blockquote><table>
-<tr><td><b id="sf">Individual</b></td>   <td><b id="sf">Email</b></td> <td><b id="sf">Location</b></td> </tr>
-<tr><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td></tr>
-<tr><td>Mark J. Cox</td>         <td><a href="mailto:mark@openssl.org">mark@openssl.org</a></td> <td>UK</td> </tr>
-<tr><td>Dr. Stephen Henson</td>  <td><a href="mailto:steve@openssl.org">steve@openssl.org</a></td> <td>UK</td> </tr>
-<tr><td>Ben Laurie</td>          <td><a href="mailto:ben@openssl.org">ben@openssl.org</a></td> <td>UK</td> </tr>
+<tr><td><b id="sf">Individual</b></td>   <td><b id="sf">Email</b></td> <td><b id="sf">Location</b></td>  <td><b id="sf">Key ID</b></td></tr>
+<tr><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td> <hr noshade size="1"></td> </tr>
+<tr><td>Mark J. Cox</td>         <td><a href="mailto:mark@openssl.org">mark@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x49A563D9">49A563\
+D9</a></td></tr>
+<tr><td>Dr. Stephen Henson</td>  <td><a href="mailto:steve@openssl.org">steve@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xFA40E9E2">FA40\
+E9E2</a>, <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xF295C759">F295C759 (old key)</a></td></tr>
+<tr><td>Ben Laurie</td>          <td><a href="mailto:ben@openssl.org">ben@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x2118CF83">2118CF83\
+</a></td> </tr>
 </table></blockquote>
 
 <p>
