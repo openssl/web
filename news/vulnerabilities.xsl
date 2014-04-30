@@ -22,9 +22,29 @@
 
 <h1>OpenSSL vulnerabilities</h1>
 
-<p>This page lists all security vulnerabilities fixed in released
+<h2>Reporting a security vulnerability</h2>
+
+<p>If you think you have found a security vulnerability then please send it to the
+OpenSSL security team using the private security list
+<a href="mailto:openssl-security@openssl.org">openssl-security@openssl.org</a>.  Encrypting your report is not necessary, but
+if you wish to do so please use the keys of the <a href="/about/">core team members</a>.
+Any email sent to the security team that does not relate
+to a security vulnerability will be ignored.</p>
+
+<p>Note that bugs only present in the openssl utility are not in general considered to be security issues.</p>
+
+<h2>Notification of security vulnerabilities</h2>
+
+<p>To get notified when an OpenSSL update addresses a security vulnerability please subscribe to the
+<a href="https://www.openssl.org/support/community.html">openssl-announce mailing list</a></p>
+
+<h2>Security vulnerabilities and advisories</h2>
+
+<p>This section lists all security vulnerabilities fixed in released
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p>
+<p>Note: OpenSSL 0.9.6 versions and 0.9.7 versions are no longer supported and will not 
+receive security updates</p>
 
 <xsl:for-each select="issue/@public[generate-id()=generate-id(key('unique-date',substring(.,1,4)))]">
   		  <xsl:sort select="." order="descending"/>
