@@ -587,6 +587,61 @@ server, that server could cause the client to crash.
     </description>
   </issue>
 
+  <issue public="20071012">
+    <cve name="2007-4995"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
+    <fixed base="0.9.8" version="0.9.8f" date="20071012"/>
+    <advisory url="http://www.openssl.org/news/secadv_20071012.txt"/>
+    <reported source="Andy Polyakov"/>
+
+    <description>
+A flaw in DTLS support. An attacker 
+could create a malicious client or server that could trigger a heap 
+overflow. This is possibly exploitable to run arbitrary code, but it has 
+not been verified.
+    </description>
+  </issue>
+
+  <issue public="20071012">
+    <cve name="2007-5135"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
+    <fixed base="0.9.8" version="0.9.8f" date="20071012"/>
+    <advisory url="http://www.openssl.org/news/secadv_20071012.txt"/>
+    <reported source="Moritz Jodeit"/>
+
+    <description>
+A flaw was found in the SSL_get_shared_ciphers() utility function. An 
+attacker could send a list of ciphers to an application that used this 
+function and overrun a buffer with a single byte. Few 
+applications make use of this vulnerable function and generally it is used 
+only when applications are compiled for debugging.
+    </description>
+  </issue>
+
+  <issue public="20071129">
+    <cve name="2007-5502"/>
+    <advisory url="http://www.openssl.org/news/secadv_20071129.txt"/>
+    <reported source="Geoff Lowe"/>
+
+    <description>
+The PRNG implementation for the OpenSSL FIPS Object Module 1.1.1 does
+not perform auto-seeding during the FIPS self-test, which generates
+random data that is more predictable than expected and makes it easier
+for attackers to bypass protection mechanisms that rely on the
+randomness.
+    </description>
+  </issue>
+
   <issue public="20080528">
     <cve name="2008-0891"/>
     <affects base="0.9.8" version="0.9.8f"/>
@@ -744,6 +799,7 @@ A remote attacker could use this flaw to cause a DTLS server to crash
     <affects base="0.9.8" version="0.9.8k"/>
     <affects base="0.9.8" version="0.9.8l"/>
     <fixed base="0.9.8" version="0.9.8m" date="20100120"/>
+    <advisory url="http://www.openssl.org/news/secadv_20091111.txt"/>
     <description>
 Implement RFC5746 to address vulnerabilities in SSL/TLS renegotiation.
     </description>
@@ -1327,6 +1383,96 @@ SSL/TLS applications are not affected by this issue.
     </description>
   </issue>
 
+ <issue public="20110208">
+    <cve name="2011-0014"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <fixed base="1.0.0" version="1.0.0d" date="20110208"/>
+    <fixed base="0.9.8" version="0.9.8r" date="20110208"/>
+    <advisory url="http://www.openssl.org/news/secadv_20110208.txt"/>
+    <reported source="Neel Mehta"/>
+    <description>
+A buffer over-read flaw was discovered in the way OpenSSL parsed the
+Certificate Status Request TLS extensions in ClientHello TLS handshake
+messages. A remote attacker could possibly use this flaw to crash an SSL
+server using the affected OpenSSL functionality.
+    </description>
+  </issue>
+
+ <issue public="20120424">
+    <cve name="2012-2131"/>
+    <affects base="0.9.8" version="0.9.8v"/>
+    <fixed base="0.9.8" version="0.9.8w" date="20120424"/>
+    <advisory url="http://www.openssl.org/news/secadv_20120424.txt"/>
+    <reported source="Red Hat"/>
+    <description>
+It was discovered that the fix for CVE-2012-2110 released on 19 Apr
+2012 was not sufficient to correct the issue for OpenSSL 0.9.8.  This
+issue only affects OpenSSL 0.9.8v.  OpenSSL 1.0.1a and 1.0.0i already
+contain a patch sufficient to correct CVE-2012-2110.
+    </description>
+  </issue>
+
+
+ <issue public="20120419">
+    <cve name="2012-2110"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="0.9.8" version="0.9.8u"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <fixed base="1.0.1" version="1.0.1a" date="20120419"/>
+    <fixed base="1.0.0" version="1.0.0i" date="20120419"/>
+    <fixed base="0.9.8" version="0.9.8v" date="20120419"/>
+    <advisory url="http://www.openssl.org/news/secadv_20120419.txt"/>
+    <reported source="Tavis Ormandy"/>
+    <description>
+Multiple numeric conversion errors, leading to a buffer overflow, were
+found in the way OpenSSL parsed ASN.1 (Abstract Syntax Notation One) data
+from BIO (OpenSSL's I/O abstraction) inputs. Specially-crafted DER
+(Distinguished Encoding Rules) encoded data read from a file or other BIO
+input could cause an application using the OpenSSL library to crash or,
+potentially, execute arbitrary code.
+    </description>
+  </issue>
+
  <issue public="20120510">
     <cve name="2012-2333"/>
     <affects base="0.9.8" version="0.9.8"/>
@@ -1608,6 +1754,7 @@ ECDSA Nonces Using the FLUSH+RELOAD Cache Side-channel Attack"
     <affects base="1.0.1" version="1.0.1f"/>
     <fixed base="1.0.1" version="1.0.1g" date="20140409">
     </fixed>
+    <advisory url="http://www.openssl.org/news/secadv_20140407.txt"/>
     <reported source="Neel Mehta"/>
     <description>
 A missing bounds check in the handling of the TLS heartbeat extension can be

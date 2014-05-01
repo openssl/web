@@ -20,7 +20,7 @@ receive security updates</p><h2>2014</h2><dl>
 A missing bounds check in the handling of the TLS heartbeat extension can be
 used to reveal up to 64kB of memory to a connected client or server (a.k.a. Heartbleed).  This
 issue did not affect versions of OpenSSL prior to 1.0.1.
-    </description>
+    </description><a href="http://www.openssl.org/news/secadv_20140407.txt">(original advisory)</a>. 
     Reported by Neel Mehta.
   </dd>
   <p/>
@@ -137,6 +137,38 @@ peer.
       1.0.0j (Affected 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
       0.9.8x (Affected 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2012-2131"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2131">CVE-2012-2131: </a></a></b>24th April 2012<p/></dt>
+  <dd><description>
+It was discovered that the fix for CVE-2012-2110 released on 19 Apr
+2012 was not sufficient to correct the issue for OpenSSL 0.9.8.  This
+issue only affects OpenSSL 0.9.8v.  OpenSSL 1.0.1a and 1.0.0i already
+contain a patch sufficient to correct CVE-2012-2110.
+    </description><a href="http://www.openssl.org/news/secadv_20120424.txt">(original advisory)</a>. 
+    Reported by Red Hat.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.8w (Affected 0.9.8v) </dd>
+  <p/>
+  <dt><b><a name="2012-2110"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2110">CVE-2012-2110: </a></a></b>19th April 2012<p/></dt>
+  <dd><description>
+Multiple numeric conversion errors, leading to a buffer overflow, were
+found in the way OpenSSL parsed ASN.1 (Abstract Syntax Notation One) data
+from BIO (OpenSSL's I/O abstraction) inputs. Specially-crafted DER
+(Distinguished Encoding Rules) encoded data read from a file or other BIO
+input could cause an application using the OpenSSL library to crash or,
+potentially, execute arbitrary code.
+    </description><a href="http://www.openssl.org/news/secadv_20120419.txt">(original advisory)</a>. 
+    Reported by Tavis Ormandy.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1a (Affected 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0i (Affected 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8v (Affected 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2012-0884"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0884">CVE-2012-0884: </a></a></b>12th March 2012<p/></dt>
   <dd><description>
@@ -282,6 +314,21 @@ checking (such as Apache) are not affected.
   <dd>Fixed in OpenSSL  
       1.0.0e (Affected 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <p/>
+  <dt><b><a name="2011-0014"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0014">CVE-2011-0014: </a></a></b>8th February 2011<p/></dt>
+  <dd><description>
+A buffer over-read flaw was discovered in the way OpenSSL parsed the
+Certificate Status Request TLS extensions in ClientHello TLS handshake
+messages. A remote attacker could possibly use this flaw to crash an SSL
+server using the affected OpenSSL functionality.
+    </description><a href="http://www.openssl.org/news/secadv_20110208.txt">(original advisory)</a>. 
+    Reported by Meel Mehta.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0d (Affected 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8r (Affected 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h) </dd>
+  <p/>
 </dl><h2>2010</h2><dl>
   <dt><b><a name="2010-4252"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4252">CVE-2010-4252: </a></a></b>2nd December 2010<p/></dt>
   <dd><description>
@@ -414,11 +461,9 @@ or, possibly, execute arbitrary code
   <p/>
 </dl><h2>2009</h2><dl>
   <dt><b><a name="2009-3555"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3555">CVE-2009-3555: </a></a></b>5th November 2009<p/></dt>
-  <dd>
-    <description>
+  <dd><description>
 Implement RFC5746 to address vulnerabilities in SSL/TLS renegotiation.
-    </description>
-  </dd>
+    </description><a href="http://www.openssl.org/news/secadv_20091111.txt">(original advisory)</a>. </dd>
   <p/>
   <dd>Fixed in OpenSSL  
       0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
@@ -544,6 +589,46 @@ packet to a server application using OpenSSL and cause it to crash.
   <p/>
   <dd>Fixed in OpenSSL  
       0.9.8h (Affected 0.9.8g, 0.9.8f) </dd>
+  <p/>
+</dl><h2>2007</h2><dl>
+  <dt><b><a name="2007-5502"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5502">CVE-2007-5502: </a></a></b>29th November 2007<p/></dt>
+  <dd><description>
+The PRNG implementation for the OpenSSL FIPS Object Module 1.1.1 does
+not perform auto-seeding during the FIPS self-test, which generates
+random data that is more predictable than expected and makes it easier
+for attackers to bypass protection mechanisms that rely on the
+randomness.
+    </description><a href="http://www.openssl.org/news/secadv_20071129.txt">(original advisory)</a>. 
+    Reported by Geoff Lowe.
+  </dd>
+  <p/>
+  <p/>
+  <dt><b><a name="2007-5135"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5135">CVE-2007-5135: </a></a></b>12th October 2007<p/></dt>
+  <dd><description>
+A flaw was found in the SSL_get_shared_ciphers() utility function. An 
+attacker could send a list of ciphers to an application that used this 
+function and overrun a buffer with a single byte. Few 
+applications make use of this vulnerable function and generally it is used 
+only when applications are compiled for debugging.
+    </description><a href="http://www.openssl.org/news/secadv_20071012.txt">(original advisory)</a>. 
+    Reported by Moritz Jodeit.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.8f (Affected 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2007-4995"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-4995">CVE-2007-4995: </a></a></b>12th October 2007<p/></dt>
+  <dd><description>
+A flaw in DTLS support. An attacker 
+could create a malicious client or server that could trigger a heap 
+overflow. This is possibly exploitable to run arbitrary code, but it has 
+not been verified.
+    </description><a href="http://www.openssl.org/news/secadv_20071012.txt">(original advisory)</a>. 
+    Reported by Andy Polyakov.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.8f (Affected 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
 </dl><h2>2006</h2><dl>
   <dt><b><a name="2006-4343"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4343">CVE-2006-4343: </a></a></b>28th September 2006<p/></dt>
