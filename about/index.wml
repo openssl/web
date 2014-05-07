@@ -71,12 +71,12 @@ The current OpenSSL development team consists of (in alphabetical order):
 Currently inactive OpenSSL members (in alphabetical order):
 <p>
 <blockquote><table summary="">
-<tr><td><b id="sf">Individual</b></td>   <td><b id="sf">Email</b></td> <td><b id="sf">Location&nbsp;</b></td> </tr>
-<tr><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td> </tr>
-<tr><td>Ralf S. Engelschall</td> <td><a href="mailto:rse@openssl.org">rse@openssl.org</a></td> <td>DE</td> </tr>
-<tr><td>Nils Larsch</td>         <td><a href="mailto:nils@openssl.org">nils@openssl.org</a></td> <td>DE</td>  </tr>
-<tr><td>Richard Levitte</td>     <td><a href="mailto:levitte@openssl.org">levitte@openssl.org</a></td> <td>SE</td> </tr>
-<tr><td>Geoff Thorpe</td>        <td><a href="mailto:geoff@openssl.org">geoff@openssl.org</a></td> <td>QC</td> </tr>
+<tr><td><b id="sf">Individual</b></td>   <td><b id="sf">Email</b></td> <td><b id="sf">Location&nbsp;</b></td> <td><b id="sf">Key ID</b></td> </tr>
+<tr><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td><hr noshade size="1"></td> </tr>
+<tr><td>Ralf S. Engelschall</td> <td><a href="mailto:rse@openssl.org">rse@openssl.org</a></td> <td>DE</td> <td></td> </tr>
+<tr><td>Nils Larsch</td>         <td><a href="mailto:nils@openssl.org">nils@openssl.org</a></td> <td>DE</td> <td></td> </tr>
+<tr><td>Richard Levitte</td>     <td><a href="mailto:levitte@openssl.org">levitte@openssl.org</a></td> <td>SE</td> <td></td> </tr>
+<tr><td>Geoff Thorpe</td>        <td><a href="mailto:geoff@openssl.org">geoff@openssl.org</a></td> <td>QC</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0xE18C1C32">0xE18C1C32</td> </tr>
 </table></blockquote>
 
 
