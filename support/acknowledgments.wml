@@ -52,13 +52,20 @@ Major support:
     <tr>
     
     <td>
+        <a href="https://www.globalsign.com/">
+        <img src="$(IMG)/globalsign-logo-med.jpg" align=center border=0>
+        </a>
+        <br>
+        <br>
+        <br>
+        <br>
         <a href="http://www.qualys.com/">
         <img src="$(IMG)/qualsys-logo-med.jpg" align=center border=0>
         </a>
         <br>
         <br>
     </td>
-
+    
     </tr>
 </table>
 
@@ -94,8 +101,6 @@ Significant support:
         <a href="http://www.psw.net/">
         <img src="$(IMG)/psw-logo.gif" alt="SSL-Zertifikate" align=center border=0>
         </a>
-        <br>
-        <br>
         <br>
         <br>
         <a href="http://acano.com/">
