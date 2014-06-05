@@ -19,16 +19,15 @@ we consider all these clients and customers as sponsors of the OpenSSL project.
 
 <br>
 We would like to identify and thank the following such sponsors for their past or current significant
-support of the OpenSSL project:
+support of the OpenSSL project. Except as noted sponsors are listed within categories in order of overall contribution value:
 <br>
 
 <hr noshade size=1>
-Platinum sponsors:
+Exceptional support:
 <br>
 <br>
 <br>
 <table>
-    #<tr><td><hr noshade size=1></td><td><hr noshade size=1></td></tr>
     <tr>
     
     <td>
@@ -37,17 +36,25 @@ Platinum sponsors:
         </a>
         <br>
         <br>
-        <br>
-        <br>
-        <a href="http://www.huawei.com/">
-        <img src="$(IMG)/huawei-logo-med.jpg" align=center border=0>
-        </a>
-        <br>
-        <br>
-        <br>
-        <br>
+    </td>
+
+    </tr>
+</table>
+<hr noshade size=1>
+Platinum sponsors (listed chronologically, left to right).  The sustainable funding provided by these sponsorships allows long term planning:
+<br>
+<br>
+<br>
+<table>
+    #<tr><td><hr noshade size=1></td><td><hr noshade size=1></td></tr>
+    <tr>
+    
+    <td>
         <a href="http://company.nokia.com/en">
         <img src="$(IMG)/nokia-logo-med.jpg" align=center border=0>
+        </a>
+        <a href="http://www.huawei.com/">
+        <img src="$(IMG)/huawei-logo-med.jpg" align=center border=0>
         </a>
         <br>
         <br>
