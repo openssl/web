@@ -1,3 +1,7 @@
+05-Jun-2014: <a href="ROOT/news/secadv_20140605.txt">Security Advisory</a>: seven security fixes
+05-Jun-2014: OpenSSL 1.0.1h is now <a href="ROOT/source/">available</a>, including bug and security fixes
+05-Jun-2014: OpenSSL 1.0.0m is now <a href="ROOT/source/">available</a>, including bug and security fixes
+05-Jun-2014: OpenSSL 0.9.8za is now <a href="ROOT/source/">available</a>, including bug and security fixes
 23-Apr-2014: <a href="ROOT/about/">Team status changes</a> including new team member: Steve Marquess
 07-Apr-2014: <a href="ROOT/news/secadv_20140407.txt">Security Advisory</a>: Heartbeat overflow issue.
 07-Apr-2014: OpenSSL 1.0.1g is now <a href="ROOT/source/">available</a>, including bug and security fixes
