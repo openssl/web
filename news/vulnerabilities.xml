@@ -5,7 +5,7 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20140407">
+<security updated="20140605">
 
   <issue public="20020730">
     <cve name="2002-0655"/>
@@ -1733,7 +1733,7 @@ server could use this flaw to crash a connecting client.  This issue only affect
     <fixed base="1.0.1" version="1.0.1g" date="20140409">
           <git hash="4b7a4ba29cafa432fc4266fe6e59e60bc1c96332"/>
     </fixed>
-    <fixed base="1.0.0" version="1.0.0m-dev" date="20140312">
+    <fixed base="1.0.0" version="1.0.0m" date="20140312">
           <git hash="2198be3483259de374f91e57d247d0fc667aef29"/>
     </fixed>
     <reported source="Yuval Yarom and Naomi Benger"/>
@@ -1762,6 +1762,300 @@ used to reveal up to 64kB of memory to a connected client or server (a.k.a. Hear
 issue did not affect versions of OpenSSL prior to 1.0.1.
     </description>
   </issue>
+
+<issue public="20140605">
+  <cve name="2014-0224"/>
+  <affects base="0.9.8" version="0.9.8"/>
+  <affects base="0.9.8" version="0.9.8a"/>
+  <affects base="0.9.8" version="0.9.8b"/>
+  <affects base="0.9.8" version="0.9.8c"/>
+  <affects base="0.9.8" version="0.9.8d"/>
+  <affects base="0.9.8" version="0.9.8f"/>
+  <affects base="0.9.8" version="0.9.8g"/>
+  <affects base="0.9.8" version="0.9.8h"/>
+  <affects base="0.9.8" version="0.9.8i"/>
+  <affects base="0.9.8" version="0.9.8j"/>
+  <affects base="0.9.8" version="0.9.8k"/>
+  <affects base="0.9.8" version="0.9.8l"/>
+  <affects base="0.9.8" version="0.9.8m"/>
+  <affects base="0.9.8" version="0.9.8n"/>
+  <affects base="0.9.8" version="0.9.8o"/>
+  <affects base="0.9.8" version="0.9.8p"/>
+  <affects base="0.9.8" version="0.9.8q"/>
+  <affects base="0.9.8" version="0.9.8r"/>
+  <affects base="0.9.8" version="0.9.8s"/>
+  <affects base="0.9.8" version="0.9.8t"/>
+  <affects base="0.9.8" version="0.9.8u"/>
+  <affects base="0.9.8" version="0.9.8v"/>
+  <affects base="0.9.8" version="0.9.8w"/>
+  <affects base="0.9.8" version="0.9.8x"/>
+  <affects base="0.9.8" version="0.9.8y"/>
+  <affects base="1.0.0" version="1.0.0"/>
+  <affects base="1.0.0" version="1.0.0a"/>
+  <affects base="1.0.0" version="1.0.0b"/>
+  <affects base="1.0.0" version="1.0.0c"/>
+  <affects base="1.0.0" version="1.0.0d"/>
+  <affects base="1.0.0" version="1.0.0e"/>
+  <affects base="1.0.0" version="1.0.0f"/>
+  <affects base="1.0.0" version="1.0.0g"/>
+  <affects base="1.0.0" version="1.0.0i"/>
+  <affects base="1.0.0" version="1.0.0j"/>
+  <affects base="1.0.0" version="1.0.0k"/>
+  <affects base="1.0.0" version="1.0.0l"/>
+  <affects base="1.0.1" version="1.0.1"/>
+  <affects base="1.0.1" version="1.0.1a"/>
+  <affects base="1.0.1" version="1.0.1b"/>
+  <affects base="1.0.1" version="1.0.1c"/>
+  <affects base="1.0.1" version="1.0.1d"/>
+  <affects base="1.0.1" version="1.0.1e"/>
+  <affects base="1.0.1" version="1.0.1f"/>
+  <affects base="1.0.1" version="1.0.1g"/>
+  <fixed base="1.0.1" version="1.0.1h" date="20140605">
+  </fixed>
+  <fixed base="1.0.0" version="1.0.0m" date="20140605">
+  </fixed>
+  <fixed base="0.9.8" version="0.9.8za" date="20140605">
+  </fixed>
+  <description>
+    An attacker can force the use of weak
+    keying material in OpenSSL SSL/TLS clients and servers. This can be exploited
+    by a Man-in-the-middle (MITM) attack where the attacker can decrypt and 
+    modify traffic from the attacked client and server.
+  </description>
+  <advisory url="http://www.openssl.org/news/secadv_20140605.txt"/>
+  <reported source="KIKUCHI Masashi (Lepidum Co. Ltd.)"/>
+</issue>
+
+<issue public="20140605">
+  <cve name="2014-0221"/>
+  <affects base="0.9.8" version="0.9.8"/>
+  <affects base="0.9.8" version="0.9.8a"/>
+  <affects base="0.9.8" version="0.9.8b"/>
+  <affects base="0.9.8" version="0.9.8c"/>
+  <affects base="0.9.8" version="0.9.8d"/>
+  <affects base="0.9.8" version="0.9.8f"/>
+  <affects base="0.9.8" version="0.9.8g"/>
+  <affects base="0.9.8" version="0.9.8h"/>
+  <affects base="0.9.8" version="0.9.8i"/>
+  <affects base="0.9.8" version="0.9.8j"/>
+  <affects base="0.9.8" version="0.9.8k"/>
+  <affects base="0.9.8" version="0.9.8l"/>
+  <affects base="0.9.8" version="0.9.8m"/>
+  <affects base="0.9.8" version="0.9.8n"/>
+  <affects base="0.9.8" version="0.9.8o"/>
+  <affects base="0.9.8" version="0.9.8p"/>
+  <affects base="0.9.8" version="0.9.8q"/>
+  <affects base="0.9.8" version="0.9.8r"/>
+  <affects base="0.9.8" version="0.9.8s"/>
+  <affects base="0.9.8" version="0.9.8t"/>
+  <affects base="0.9.8" version="0.9.8u"/>
+  <affects base="0.9.8" version="0.9.8v"/>
+  <affects base="0.9.8" version="0.9.8w"/>
+  <affects base="0.9.8" version="0.9.8x"/>
+  <affects base="0.9.8" version="0.9.8y"/>
+  <affects base="1.0.0" version="1.0.0"/>
+  <affects base="1.0.0" version="1.0.0a"/>
+  <affects base="1.0.0" version="1.0.0b"/>
+  <affects base="1.0.0" version="1.0.0c"/>
+  <affects base="1.0.0" version="1.0.0d"/>
+  <affects base="1.0.0" version="1.0.0e"/>
+  <affects base="1.0.0" version="1.0.0f"/>
+  <affects base="1.0.0" version="1.0.0g"/>
+  <affects base="1.0.0" version="1.0.0i"/>
+  <affects base="1.0.0" version="1.0.0j"/>
+  <affects base="1.0.0" version="1.0.0k"/>
+  <affects base="1.0.0" version="1.0.0l"/>
+  <affects base="1.0.1" version="1.0.1"/>
+  <affects base="1.0.1" version="1.0.1a"/>
+  <affects base="1.0.1" version="1.0.1b"/>
+  <affects base="1.0.1" version="1.0.1c"/>
+  <affects base="1.0.1" version="1.0.1d"/>
+  <affects base="1.0.1" version="1.0.1e"/>
+  <affects base="1.0.1" version="1.0.1f"/>
+  <affects base="1.0.1" version="1.0.1g"/>
+  <fixed base="1.0.1" version="1.0.1h" date="20140605">
+  </fixed>
+  <fixed base="1.0.0" version="1.0.0m" date="20140605">
+  </fixed>
+  <fixed base="0.9.8" version="0.9.8za" date="20140605">
+  </fixed>
+  <description>By sending an invalid DTLS handshake to an OpenSSL DTLS client the code can be made to recurse eventually crashing in a DoS attack. Only applications using OpenSSL as a DTLS client are affected.</description>
+  <advisory url="http://www.openssl.org/news/secadv_20140605.txt"/>
+  <reported source="Imre Rad (Search-Lab Ltd.)"/>
+</issue>
+
+<issue>
+  <cve name="2014-0195"/>
+  <affects base="0.9.8" version="0.9.8o"/>
+  <affects base="0.9.8" version="0.9.8p"/>
+  <affects base="0.9.8" version="0.9.8q"/>
+  <affects base="0.9.8" version="0.9.8r"/>
+  <affects base="0.9.8" version="0.9.8s"/>
+  <affects base="0.9.8" version="0.9.8t"/>
+  <affects base="0.9.8" version="0.9.8u"/>
+  <affects base="0.9.8" version="0.9.8v"/>
+  <affects base="0.9.8" version="0.9.8w"/>
+  <affects base="0.9.8" version="0.9.8x"/>
+  <affects base="0.9.8" version="0.9.8y"/>
+  <affects base="1.0.0" version="1.0.0"/>
+  <affects base="1.0.0" version="1.0.0a"/>
+  <affects base="1.0.0" version="1.0.0b"/>
+  <affects base="1.0.0" version="1.0.0c"/>
+  <affects base="1.0.0" version="1.0.0d"/>
+  <affects base="1.0.0" version="1.0.0e"/>
+  <affects base="1.0.0" version="1.0.0f"/>
+  <affects base="1.0.0" version="1.0.0g"/>
+  <affects base="1.0.0" version="1.0.0i"/>
+  <affects base="1.0.0" version="1.0.0j"/>
+  <affects base="1.0.0" version="1.0.0k"/>
+  <affects base="1.0.0" version="1.0.0l"/>
+  <affects base="1.0.1" version="1.0.1"/>
+  <affects base="1.0.1" version="1.0.1a"/>
+  <affects base="1.0.1" version="1.0.1b"/>
+  <affects base="1.0.1" version="1.0.1c"/>
+  <affects base="1.0.1" version="1.0.1d"/>
+  <affects base="1.0.1" version="1.0.1e"/>
+  <affects base="1.0.1" version="1.0.1f"/>
+  <affects base="1.0.1" version="1.0.1g"/>
+  <fixed base="1.0.1" version="1.0.1h" date="20140605">
+  </fixed>
+  <fixed base="1.0.0" version="1.0.0m" date="20140605">
+  </fixed>
+  <fixed base="0.9.8" version="0.9.8za" date="20140605">
+  </fixed>
+  <description>A buffer overrun attack can be triggered by sending invalid DTLS fragments
+  to an OpenSSL DTLS client or server. This is potentially exploitable to
+  run arbitrary code on a vulnerable client or server.  Only applications using OpenSSL as a DTLS client or server affected.
+  </description>
+  <advisory url="http://www.openssl.org/news/secadv_20140605.txt"/>
+  <reported source="Jüri Aedla"/>
+</issue>
+
+<issue public="20140421">
+  <cve name="2014-0198"/>
+  <affects base="1.0.0" version="1.0.0"/>
+  <affects base="1.0.0" version="1.0.0a"/>
+  <affects base="1.0.0" version="1.0.0b"/>
+  <affects base="1.0.0" version="1.0.0c"/>
+  <affects base="1.0.0" version="1.0.0d"/>
+  <affects base="1.0.0" version="1.0.0e"/>
+  <affects base="1.0.0" version="1.0.0f"/>
+  <affects base="1.0.0" version="1.0.0g"/>
+  <affects base="1.0.0" version="1.0.0i"/>
+  <affects base="1.0.0" version="1.0.0j"/>
+  <affects base="1.0.0" version="1.0.0k"/>
+  <affects base="1.0.0" version="1.0.0l"/>
+  <affects base="1.0.1" version="1.0.1"/>
+  <affects base="1.0.1" version="1.0.1a"/>
+  <affects base="1.0.1" version="1.0.1b"/>
+  <affects base="1.0.1" version="1.0.1c"/>
+  <affects base="1.0.1" version="1.0.1d"/>
+  <affects base="1.0.1" version="1.0.1e"/>
+  <affects base="1.0.1" version="1.0.1f"/>
+  <affects base="1.0.1" version="1.0.1g"/>
+  <fixed base="1.0.1" version="1.0.1h" date="20140605">
+  </fixed>
+  <fixed base="1.0.0" version="1.0.0m" date="20140605">
+  </fixed>
+  <description>A flaw in the do_ssl3_write function can allow remote attackers to
+cause a denial of service via a NULL pointer dereference.  This flaw
+only affects OpenSSL 1.0.0 and 1.0.1 where SSL_MODE_RELEASE_BUFFERS is
+enabled, which is not the default and not common.</description>
+  <advisory url="http://www.openssl.org/news/secadv_20140605.txt"/>
+</issue>
+
+<issue public="20140408">
+  <cve name="2010-5298"/>
+  <affects base="1.0.0" version="1.0.0"/>
+  <affects base="1.0.0" version="1.0.0a"/>
+  <affects base="1.0.0" version="1.0.0b"/>
+  <affects base="1.0.0" version="1.0.0c"/>
+  <affects base="1.0.0" version="1.0.0d"/>
+  <affects base="1.0.0" version="1.0.0e"/>
+  <affects base="1.0.0" version="1.0.0f"/>
+  <affects base="1.0.0" version="1.0.0g"/>
+  <affects base="1.0.0" version="1.0.0i"/>
+  <affects base="1.0.0" version="1.0.0j"/>
+  <affects base="1.0.0" version="1.0.0k"/>
+  <affects base="1.0.0" version="1.0.0l"/>
+  <affects base="1.0.1" version="1.0.1"/>
+  <affects base="1.0.1" version="1.0.1a"/>
+  <affects base="1.0.1" version="1.0.1b"/>
+  <affects base="1.0.1" version="1.0.1c"/>
+  <affects base="1.0.1" version="1.0.1d"/>
+  <affects base="1.0.1" version="1.0.1e"/>
+  <affects base="1.0.1" version="1.0.1f"/>
+  <affects base="1.0.1" version="1.0.1g"/>
+  <fixed base="1.0.1" version="1.0.1h" date="20140605">
+  </fixed>
+  <fixed base="1.0.0" version="1.0.0m" date="20140605">
+  </fixed>
+  <description>A race condition in the ssl3_read_bytes function can allow remote
+attackers to inject data across sessions or cause a denial of service.
+This flaw only affects multithreaded applications using OpenSSL 1.0.0
+and 1.0.1, where SSL_MODE_RELEASE_BUFFERS is enabled, which is not the
+default and not common.</description>
+  <advisory url="http://www.openssl.org/news/secadv_20140605.txt"/>
+</issue>
+
+<issue public="20140530">
+  <cve name="2014-3470"/>
+  <affects base="0.9.8" version="0.9.8"/>
+  <affects base="0.9.8" version="0.9.8a"/>
+  <affects base="0.9.8" version="0.9.8b"/>
+  <affects base="0.9.8" version="0.9.8c"/>
+  <affects base="0.9.8" version="0.9.8d"/>
+  <affects base="0.9.8" version="0.9.8f"/>
+  <affects base="0.9.8" version="0.9.8g"/>
+  <affects base="0.9.8" version="0.9.8h"/>
+  <affects base="0.9.8" version="0.9.8i"/>
+  <affects base="0.9.8" version="0.9.8j"/>
+  <affects base="0.9.8" version="0.9.8k"/>
+  <affects base="0.9.8" version="0.9.8l"/>
+  <affects base="0.9.8" version="0.9.8m"/>
+  <affects base="0.9.8" version="0.9.8n"/>
+  <affects base="0.9.8" version="0.9.8o"/>
+  <affects base="0.9.8" version="0.9.8p"/>
+  <affects base="0.9.8" version="0.9.8q"/>
+  <affects base="0.9.8" version="0.9.8r"/>
+  <affects base="0.9.8" version="0.9.8s"/>
+  <affects base="0.9.8" version="0.9.8t"/>
+  <affects base="0.9.8" version="0.9.8u"/>
+  <affects base="0.9.8" version="0.9.8v"/>
+  <affects base="0.9.8" version="0.9.8w"/>
+  <affects base="0.9.8" version="0.9.8x"/>
+  <affects base="0.9.8" version="0.9.8y"/>
+  <affects base="1.0.0" version="1.0.0"/>
+  <affects base="1.0.0" version="1.0.0a"/>
+  <affects base="1.0.0" version="1.0.0b"/>
+  <affects base="1.0.0" version="1.0.0c"/>
+  <affects base="1.0.0" version="1.0.0d"/>
+  <affects base="1.0.0" version="1.0.0e"/>
+  <affects base="1.0.0" version="1.0.0f"/>
+  <affects base="1.0.0" version="1.0.0g"/>
+  <affects base="1.0.0" version="1.0.0i"/>
+  <affects base="1.0.0" version="1.0.0j"/>
+  <affects base="1.0.0" version="1.0.0k"/>
+  <affects base="1.0.0" version="1.0.0l"/>
+  <affects base="1.0.1" version="1.0.1"/>
+  <affects base="1.0.1" version="1.0.1a"/>
+  <affects base="1.0.1" version="1.0.1b"/>
+  <affects base="1.0.1" version="1.0.1c"/>
+  <affects base="1.0.1" version="1.0.1d"/>
+  <affects base="1.0.1" version="1.0.1e"/>
+  <affects base="1.0.1" version="1.0.1f"/>
+  <affects base="1.0.1" version="1.0.1g"/>
+  <fixed base="1.0.1" version="1.0.1h" date="20140605">
+  </fixed>
+  <fixed base="1.0.0" version="1.0.0m" date="20140605">
+  </fixed>
+  <fixed base="0.9.8" version="0.9.8za" date="20140605">
+  </fixed>
+  <description>OpenSSL TLS clients enabling anonymous ECDH ciphersuites are subject to a
+  denial of service attack.</description>
+  <reported source="Felix Gröbert and Ivan Fratrić (Google)"/>
+  <advisory url="http://www.openssl.org/news/secadv_20140605.txt"/>
+</issue>
 
 </security>
 

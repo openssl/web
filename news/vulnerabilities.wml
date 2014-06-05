@@ -15,6 +15,59 @@ to a security vulnerability will be ignored.</p><p>Note that bugs only present i
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p><p>Note: OpenSSL 0.9.6 versions and 0.9.7 versions are no longer supported and will not 
 receive security updates</p><h2>2014</h2><dl>
+  <dt><b><a name="2014-3470"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3470">CVE-2014-3470: </a></a></b>30th May 2014<p/></dt>
+  <dd><description>OpenSSL TLS clients enabling anonymous ECDH ciphersuites are subject to a
+  denial of service attack.</description><a href="http://www.openssl.org/news/secadv_20140605.txt">(original advisory)</a>. 
+    Reported by Felix Gröbert and Ivan Fratri&#263; (Google).
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1h (Affected 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0m (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2014-0224"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224">CVE-2014-0224: </a></a></b>5th June 2014<p/></dt>
+  <dd><description>
+    An attacker can force the use of weak
+    keying material in OpenSSL SSL/TLS clients and servers. This can be exploited
+    by a Man-in-the-middle (MITM) attack where the attacker can decrypt and 
+    modify traffic from the attacked client and server.
+  </description><a href="http://www.openssl.org/news/secadv_20140605.txt">(original advisory)</a>. 
+    Reported by KIKUCHI Masashi (Lepidum Co. Ltd.).
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1h (Affected 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0m (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2014-0221"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0221">CVE-2014-0221: </a></a></b>5th June 2014<p/></dt>
+  <dd><description>By sending an invalid DTLS handshake to an OpenSSL DTLS client the code can be made to recurse eventually crashing in a DoS attack. Only applications using OpenSSL as a DTLS client are affected.</description><a href="http://www.openssl.org/news/secadv_20140605.txt">(original advisory)</a>. 
+    Reported by Imre Rad (Search-Lab Ltd.).
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1h (Affected 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0m (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2014-0198"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0198">CVE-2014-0198: </a></a></b>21st April 2014<p/></dt>
+  <dd><description>A flaw in the do_ssl3_write function can allow remote attackers to
+cause a denial of service via a NULL pointer dereference.  This flaw
+only affects OpenSSL 1.0.0 and 1.0.1 where SSL_MODE_RELEASE_BUFFERS is
+enabled, which is not the default and not common.</description><a href="http://www.openssl.org/news/secadv_20140605.txt">(original advisory)</a>. </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1h (Affected 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0m (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <p/>
   <dt><b><a name="2014-0160"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160">CVE-2014-0160: </a></a></b>7th April 2014<p/></dt>
   <dd><description>
 A missing bounds check in the handling of the TLS heartbeat extension can be
@@ -38,7 +91,7 @@ ECDSA Nonces Using the FLUSH+RELOAD Cache Side-channel Attack"
   <dd>Fixed in OpenSSL  
       1.0.1g <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=4b7a4ba29cafa432fc4266fe6e59e60bc1c96332">(git commit)</a>  (Affected 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
   <dd>Fixed in OpenSSL  
-      1.0.0m-dev <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2198be3483259de374f91e57d247d0fc667aef29">(git commit)</a>  (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+      1.0.0m <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2198be3483259de374f91e57d247d0fc667aef29">(git commit)</a>  (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <p/>
   <dt><b><a name="2013-4353"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4353">CVE-2013-4353: </a></a></b>6th January 2014<p/></dt>
   <dd><description>
@@ -50,6 +103,18 @@ server could use this flaw to crash a connecting client.  This issue only affect
   <p/>
   <dd>Fixed in OpenSSL  
       1.0.1f <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=197e0ea817ad64820789d86711d55ff50d71f631">(git commit)</a>  (Affected 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <p/>
+  <dt><b><a name="2010-5298"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-5298">CVE-2010-5298: </a></a></b>8th April 2014<p/></dt>
+  <dd><description>A race condition in the ssl3_read_bytes function can allow remote
+attackers to inject data across sessions or cause a denial of service.
+This flaw only affects multithreaded applications using OpenSSL 1.0.0
+and 1.0.1, where SSL_MODE_RELEASE_BUFFERS is enabled, which is not the
+default and not common.</description><a href="http://www.openssl.org/news/secadv_20140605.txt">(original advisory)</a>. </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1h (Affected 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0m (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <p/>
 </dl><h2>2013</h2><dl>
   <dt><b><a name="2013-6450"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6450">CVE-2013-6450: </a></a></b>13th December 2013<p/></dt>
@@ -321,7 +386,7 @@ Certificate Status Request TLS extensions in ClientHello TLS handshake
 messages. A remote attacker could possibly use this flaw to crash an SSL
 server using the affected OpenSSL functionality.
     </description><a href="http://www.openssl.org/news/secadv_20110208.txt">(original advisory)</a>. 
-    Reported by Meel Mehta.
+    Reported by Neel Mehta.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
