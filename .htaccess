@@ -1,6 +1,8 @@
 ##
 ##  .htaccess -- Apache per-dir config
 ##
+#### NOTE: .htaccess files are disabled by main apache config
+
 
 Options +ExecCGI +FollowSymLinks
 
