@@ -104,6 +104,8 @@ ECDSA Nonces Using the FLUSH+RELOAD Cache Side-channel Attack"
       1.0.1g <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=4b7a4ba29cafa432fc4266fe6e59e60bc1c96332">(git commit)</a>  (Affected 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
   <dd>Fixed in OpenSSL  
       1.0.0m <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2198be3483259de374f91e57d247d0fc667aef29">(git commit)</a>  (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2013-4353"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4353">CVE-2013-4353: </a></a></b>6th January 2014<p/></dt>
   <dd><description>

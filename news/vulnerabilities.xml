@@ -1711,6 +1711,31 @@ server could use this flaw to crash a connecting client.  This issue only affect
 
   <issue public="20140214">
     <cve name="2014-0076"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="0.9.8" version="0.9.8u"/>
+    <affects base="0.9.8" version="0.9.8v"/>
+    <affects base="0.9.8" version="0.9.8w"/>
+    <affects base="0.9.8" version="0.9.8x"/>
+    <affects base="0.9.8" version="0.9.8y"/>
     <affects base="1.0.0" version="1.0.0"/>
     <affects base="1.0.0" version="1.0.0a"/>
     <affects base="1.0.0" version="1.0.0b"/>
@@ -1735,6 +1760,8 @@ server could use this flaw to crash a connecting client.  This issue only affect
     </fixed>
     <fixed base="1.0.0" version="1.0.0m" date="20140312">
           <git hash="2198be3483259de374f91e57d247d0fc667aef29"/>
+    </fixed>
+    <fixed base="0.9.8" version="0.9.8za" date="20140605">
     </fixed>
     <reported source="Yuval Yarom and Naomi Benger"/>
     <description>
