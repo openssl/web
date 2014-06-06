@@ -5,7 +5,7 @@
 <snb>
   <snb_button id=newsflash txt="Newsflash" url="index.html">
   <snb_button id=state     txt="State"     url="state.html">
-  <snb_button id=news      txt="News"      url="news.html">
+  <snb_button id=news      txt="Release Notes"      url="news.html">
   <snb_button id=changelog txt="ChangeLog" url="changelog.html">
   <snb_button id=vulnerabilities txt="Vulnerabilities" url="vulnerabilities.html">
 </snb>
