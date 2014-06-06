@@ -30,7 +30,7 @@ receive security updates</p><h2>2014</h2><dl>
   <dd>Fixed in OpenSSL  
       1.0.0m (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
-      0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2014-0221"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0221">CVE-2014-0221: </a></a></b>5th June 2014<p/></dt>
   <dd><description>By sending an invalid DTLS handshake to an OpenSSL DTLS client the code can be made to recurse eventually crashing in a DoS attack. Only applications using OpenSSL as a DTLS client are affected.</description><a href="http://www.openssl.org/news/secadv_20140605.txt">(original advisory)</a>. 
@@ -42,7 +42,7 @@ receive security updates</p><h2>2014</h2><dl>
   <dd>Fixed in OpenSSL  
       1.0.0m (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
-      0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2014-3470"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3470">CVE-2014-3470: </a></a></b>30th May 2014<p/></dt>
   <dd><description>OpenSSL TLS clients enabling anonymous ECDH ciphersuites are subject to a
@@ -55,7 +55,7 @@ receive security updates</p><h2>2014</h2><dl>
   <dd>Fixed in OpenSSL  
       1.0.0m (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
-      0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2014-0198"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0198">CVE-2014-0198: </a></a></b>21st April 2014<p/></dt>
   <dd><description>A flaw in the do_ssl3_write function can allow remote attackers to
@@ -105,7 +105,7 @@ ECDSA Nonces Using the FLUSH+RELOAD Cache Side-channel Attack"
   <dd>Fixed in OpenSSL  
       1.0.0m <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2198be3483259de374f91e57d247d0fc667aef29">(git commit)</a>  (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
-      0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2013-4353"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4353">CVE-2013-4353: </a></a></b>6th January 2014<p/></dt>
   <dd><description>
@@ -167,7 +167,7 @@ a denial of service attack.
   <dd>Fixed in OpenSSL  
       1.0.0k (Affected 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
-      0.9.8y (Affected 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8y (Affected 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2013-0169"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0169">CVE-2013-0169: </a></a></b>4th February 2013<p/></dt>
   <dd><description>
@@ -183,7 +183,7 @@ arising during MAC processing.
   <dd>Fixed in OpenSSL  
       1.0.0k (Affected 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
-      0.9.8y (Affected 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8y (Affected 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
 </dl><h2>2012</h2><dl>
   <dt><b><a name="2012-2333"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2333">CVE-2012-2333: </a></a></b>10th May 2012<p/></dt>
@@ -203,7 +203,7 @@ peer.
   <dd>Fixed in OpenSSL  
       1.0.0j (Affected 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
-      0.9.8x (Affected 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8x (Affected 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2012-2131"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2131">CVE-2012-2131: </a></a></b>24th April 2012<p/></dt>
   <dd><description>
@@ -235,7 +235,7 @@ potentially, execute arbitrary code.
   <dd>Fixed in OpenSSL  
       1.0.0i (Affected 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
-      0.9.8v (Affected 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8v (Affected 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2012-0884"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0884">CVE-2012-0884: </a></a></b>12th March 2012<p/></dt>
   <dd><description>
@@ -252,7 +252,7 @@ SSL/TLS applications are not affected by this issue.
   <dd>Fixed in OpenSSL  
       1.0.0h (Affected 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
-      0.9.8u (Affected 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8u (Affected 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2011-4108"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4108">CVE-2011-4108: </a></a></b>4th January 2012<p/></dt>
   <dd><description>
@@ -268,7 +268,7 @@ decryption processing.
   <dd>Fixed in OpenSSL  
       1.0.0f (Affected 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
-      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2011-4109"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4109">CVE-2011-4109: </a></a></b>4th January 2012<p/></dt>
   <dd><description>
@@ -280,7 +280,7 @@ unless this flag is set. Users of OpenSSL 1.0.0 are not affected
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2011-4576"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4576">CVE-2011-4576: </a></a></b>4th January 2012<p/></dt>
   <dd><description>
@@ -294,7 +294,7 @@ the contents of memory in some circumstances.
   <dd>Fixed in OpenSSL  
       1.0.0f (Affected 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
-      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2011-4577"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4577">CVE-2011-4577: </a></a></b>4th January 2012<p/></dt>
   <dd><description>
@@ -309,7 +309,7 @@ denial-of-service attack.  Builds of OpenSSL are only vulnerable if configured w
   <dd>Fixed in OpenSSL  
       1.0.0f (Affected 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
-      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2011-4619"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4619">CVE-2011-4619: </a></a></b>4th January 2012<p/></dt>
   <dd><description>
@@ -322,7 +322,7 @@ be used in a denial-of-service attack.
   <dd>Fixed in OpenSSL  
       1.0.0f (Affected 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
-      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2012-0027"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0027">CVE-2012-0027: </a></a></b>4th January 2012<p/></dt>
   <dd><description>
@@ -426,7 +426,7 @@ applications enable this by using the SSL_OP_ALL option).
   <dd>Fixed in OpenSSL  
       1.0.0c (Affected 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
-      0.9.8q (Affected 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8q (Affected 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2010-3864"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3864">CVE-2010-3864: </a></a></b>16th November 2010<p/></dt>
   <dd><description>
@@ -445,7 +445,7 @@ affected.
   <dd>Fixed in OpenSSL  
       1.0.0b (Affected 1.0.0a, 1.0.0) </dd>
   <dd>Fixed in OpenSSL  
-      0.9.8p (Affected 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8p (Affected 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2010-0742"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0742">CVE-2010-0742: </a></a></b>1st June 2010<p/></dt>
   <dd><description>
@@ -496,7 +496,7 @@ or, possibly, execute arbitrary code
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2010-0433"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0433">CVE-2010-0433: </a></a></b>19th January 2010<p/></dt>
   <dd><description>
@@ -511,7 +511,7 @@ cipher suites during the TLS handshake
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      0.9.8n (Affected 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8n (Affected 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2009-4355"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4355">CVE-2009-4355: </a></a></b>13th January 2010<p/></dt>
   <dd><description>
@@ -524,7 +524,7 @@ function.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
 </dl><h2>2009</h2><dl>
   <dt><b><a name="2009-3555"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3555">CVE-2009-3555: </a></a></b>5th November 2009<p/></dt>
@@ -533,7 +533,7 @@ Implement RFC5746 to address vulnerabilities in SSL/TLS renegotiation.
     </description><a href="http://www.openssl.org/news/secadv_20091111.txt">(original advisory)</a>. </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2009-1386"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1386">CVE-2009-1386: </a></a></b>2nd June 2009<p/></dt>
   <dd><description>
@@ -545,7 +545,7 @@ A remote attacker could use this flaw to cause a DTLS server to crash
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      0.9.8i (Affected 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8i (Affected 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2009-1377"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1377">CVE-2009-1377: </a><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1378">CVE-2009-1378: </a><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1379">CVE-2009-1379: </a></a></b>12th May 2009<p/></dt>
   <dd><description>
@@ -557,7 +557,7 @@ excessive amounts of memory, or crash.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2009-0590"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0590">CVE-2009-0590: </a></a></b>25th March 2009<p/></dt>
   <dd><description>
@@ -569,7 +569,7 @@ this bug, including SSL servers, clients and S/MIME software.
     </description><a href="http://www.openssl.org/news/secadv_20090325.txt">(original advisory)</a>. </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      0.9.8k (Affected 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8k (Affected 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2009-0591"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0591">CVE-2009-0591: </a></a></b>25th March 2009<p/></dt>
   <dd><description>
@@ -596,7 +596,7 @@ read, for example RSA public keys.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      0.9.8k (Affected 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8k (Affected 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2009-1387"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1387">CVE-2009-1387: </a></a></b>5th February 2009<p/></dt>
   <dd><description>
@@ -607,7 +607,7 @@ remote attacker could use this flaw to cause a DTLS server to crash.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2008-5077"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-5077">CVE-2008-5077: </a></a></b>7th January 2009<p/></dt>
   <dd><description>
@@ -626,7 +626,7 @@ vulnerable client, bypassing validation.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      0.9.8j (Affected 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.8j (Affected 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
 </dl><h2>2008</h2><dl>
   <dt><b><a name="2008-0891"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-0891">CVE-2008-0891: </a></a></b>28th May 2008<p/></dt>

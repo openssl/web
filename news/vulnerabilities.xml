@@ -681,6 +681,7 @@ the client to crash.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -709,6 +710,7 @@ vulnerable client, bypassing validation.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -748,6 +750,7 @@ checked.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -772,6 +775,7 @@ read, for example RSA public keys.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -791,6 +795,7 @@ A remote attacker could use this flaw to cause a DTLS server to crash
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -812,6 +817,7 @@ Implement RFC5746 to address vulnerabilities in SSL/TLS renegotiation.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -836,6 +842,7 @@ remote attacker could use this flaw to cause a DTLS server to crash.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -859,6 +866,7 @@ excessive amounts of memory, or crash.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -883,6 +891,7 @@ function.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -907,6 +916,7 @@ or, possibly, execute arbitrary code
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -988,6 +998,7 @@ an error code.  This could lead to an information leak.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -1039,6 +1050,7 @@ J-PAKE to be experimental and is not compiled by default.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -1095,6 +1107,7 @@ checking (such as Apache) are not affected.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -1133,6 +1146,7 @@ enabled in the configuration.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -1172,6 +1186,7 @@ decryption processing.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -1202,6 +1217,7 @@ unless this flag is set. Users of OpenSSL 1.0.0 are not affected
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -1239,6 +1255,7 @@ the contents of memory in some circumstances.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -1277,6 +1294,7 @@ denial-of-service attack.  Builds of OpenSSL are only vulnerable if configured w
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -1346,6 +1364,7 @@ service attack. Only DTLS applications are affected.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -1433,6 +1452,7 @@ contain a patch sufficient to correct CVE-2012-2110.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -1480,6 +1500,7 @@ potentially, execute arbitrary code.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -1532,6 +1553,7 @@ peer.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -1599,6 +1621,7 @@ AES-NI supporting platforms can be exploited in a DoS attack.
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -1716,6 +1739,7 @@ server could use this flaw to crash a connecting client.  This issue only affect
     <affects base="0.9.8" version="0.9.8b"/>
     <affects base="0.9.8" version="0.9.8c"/>
     <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
@@ -1797,6 +1821,7 @@ issue did not affect versions of OpenSSL prior to 1.0.1.
   <affects base="0.9.8" version="0.9.8b"/>
   <affects base="0.9.8" version="0.9.8c"/>
   <affects base="0.9.8" version="0.9.8d"/>
+  <affects base="0.9.8" version="0.9.8e"/>
   <affects base="0.9.8" version="0.9.8f"/>
   <affects base="0.9.8" version="0.9.8g"/>
   <affects base="0.9.8" version="0.9.8h"/>
@@ -1860,6 +1885,7 @@ issue did not affect versions of OpenSSL prior to 1.0.1.
   <affects base="0.9.8" version="0.9.8b"/>
   <affects base="0.9.8" version="0.9.8c"/>
   <affects base="0.9.8" version="0.9.8d"/>
+  <affects base="0.9.8" version="0.9.8e"/>
   <affects base="0.9.8" version="0.9.8f"/>
   <affects base="0.9.8" version="0.9.8g"/>
   <affects base="0.9.8" version="0.9.8h"/>
@@ -2032,6 +2058,7 @@ default and not common.</description>
   <affects base="0.9.8" version="0.9.8b"/>
   <affects base="0.9.8" version="0.9.8c"/>
   <affects base="0.9.8" version="0.9.8d"/>
+  <affects base="0.9.8" version="0.9.8e"/>
   <affects base="0.9.8" version="0.9.8f"/>
   <affects base="0.9.8" version="0.9.8g"/>
   <affects base="0.9.8" version="0.9.8h"/>
