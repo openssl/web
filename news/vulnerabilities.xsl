@@ -52,7 +52,7 @@ receive security updates</p>
 <h2><xsl:value-of select="$year"/></h2>
              <dl>
                 <xsl:apply-templates select="../../issue[substring(@public,1,4)=$year]">
-                  <xsl:sort select="cve/@name" order="descending"/>
+                  <xsl:sort select="./@public" order="descending"/>
 	        </xsl:apply-templates>
              </dl>
         </xsl:for-each>
