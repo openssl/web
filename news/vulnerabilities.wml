@@ -15,19 +15,6 @@ to a security vulnerability will be ignored.</p><p>Note that bugs only present i
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p><p>Note: OpenSSL 0.9.6 versions and 0.9.7 versions are no longer supported and will not 
 receive security updates</p><h2>2014</h2><dl>
-  <dt><b><a name="2014-3470"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3470">CVE-2014-3470: </a></a></b>30th May 2014<p/></dt>
-  <dd><description>OpenSSL TLS clients enabling anonymous ECDH ciphersuites are subject to a
-  denial of service attack.</description><a href="http://www.openssl.org/news/secadv_20140605.txt">(original advisory)</a>. 
-    Reported by Felix Gröbert and Ivan Fratri&#263; (Google).
-  </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      1.0.1h (Affected 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
-  <dd>Fixed in OpenSSL  
-      1.0.0m (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
-  <dd>Fixed in OpenSSL  
-      0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
-  <p/>
   <dt><b><a name="2014-0224"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224">CVE-2014-0224: </a></a></b>5th June 2014<p/></dt>
   <dd><description>
     An attacker can force the use of weak
@@ -57,11 +44,36 @@ receive security updates</p><h2>2014</h2><dl>
   <dd>Fixed in OpenSSL  
       0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
+  <dt><b><a name="2014-3470"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3470">CVE-2014-3470: </a></a></b>30th May 2014<p/></dt>
+  <dd><description>OpenSSL TLS clients enabling anonymous ECDH ciphersuites are subject to a
+  denial of service attack.</description><a href="http://www.openssl.org/news/secadv_20140605.txt">(original advisory)</a>. 
+    Reported by Felix Gröbert and Ivan Fratri&#263; (Google).
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1h (Affected 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0m (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
   <dt><b><a name="2014-0198"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0198">CVE-2014-0198: </a></a></b>21st April 2014<p/></dt>
   <dd><description>A flaw in the do_ssl3_write function can allow remote attackers to
 cause a denial of service via a NULL pointer dereference.  This flaw
 only affects OpenSSL 1.0.0 and 1.0.1 where SSL_MODE_RELEASE_BUFFERS is
 enabled, which is not the default and not common.</description><a href="http://www.openssl.org/news/secadv_20140605.txt">(original advisory)</a>. </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1h (Affected 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0m (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <p/>
+  <dt><b><a name="2010-5298"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-5298">CVE-2010-5298: </a></a></b>8th April 2014<p/></dt>
+  <dd><description>A race condition in the ssl3_read_bytes function can allow remote
+attackers to inject data across sessions or cause a denial of service.
+This flaw only affects multithreaded applications using OpenSSL 1.0.0
+and 1.0.1, where SSL_MODE_RELEASE_BUFFERS is enabled, which is not the
+default and not common.</description><a href="http://www.openssl.org/news/secadv_20140605.txt">(original advisory)</a>. </dd>
   <p/>
   <dd>Fixed in OpenSSL  
       1.0.1h (Affected 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
@@ -104,19 +116,18 @@ server could use this flaw to crash a connecting client.  This issue only affect
   <dd>Fixed in OpenSSL  
       1.0.1f <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=197e0ea817ad64820789d86711d55ff50d71f631">(git commit)</a>  (Affected 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
   <p/>
-  <dt><b><a name="2010-5298"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-5298">CVE-2010-5298: </a></a></b>8th April 2014<p/></dt>
-  <dd><description>A race condition in the ssl3_read_bytes function can allow remote
-attackers to inject data across sessions or cause a denial of service.
-This flaw only affects multithreaded applications using OpenSSL 1.0.0
-and 1.0.1, where SSL_MODE_RELEASE_BUFFERS is enabled, which is not the
-default and not common.</description><a href="http://www.openssl.org/news/secadv_20140605.txt">(original advisory)</a>. </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      1.0.1h (Affected 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
-  <dd>Fixed in OpenSSL  
-      1.0.0m (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
-  <p/>
 </dl><h2>2013</h2><dl>
+  <dt><b><a name="2013-6449"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6449">CVE-2013-6449: </a></a></b>14th December 2013<p/></dt>
+  <dd><description>
+A flaw in OpenSSL can cause an application using OpenSSL to crash when using TLS version 1.2.  
+This issue only affected OpenSSL 1.0.1 versions.
+    </description>
+    Reported by Ron Barber.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1f <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=ca98926">(git commit)</a>  (Affected 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <p/>
   <dt><b><a name="2013-6450"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6450">CVE-2013-6450: </a></a></b>13th December 2013<p/></dt>
   <dd><description>
 A flaw in DTLS handling can cause an application using OpenSSL and DTLS to crash.
@@ -130,32 +141,16 @@ This is not a vulnerability for OpenSSL prior to 1.0.0.
   <dd>Fixed in OpenSSL  
       1.0.0l (Affected 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
   <p/>
-  <dt><b><a name="2013-6449"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6449">CVE-2013-6449: </a></a></b>14th December 2013<p/></dt>
+  <dt><b><a name="2012-2686"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2686">CVE-2012-2686: </a></a></b>5th February 2013<p/></dt>
   <dd><description>
-A flaw in OpenSSL can cause an application using OpenSSL to crash when using TLS version 1.2.  
-This issue only affected OpenSSL 1.0.1 versions.
-    </description>
-    Reported by Ron Barber.
-  </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      1.0.1f <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=ca98926">(git commit)</a>  (Affected 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
-  <p/>
-  <dt><b><a name="2013-0169"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0169">CVE-2013-0169: </a></a></b>4th February 2013<p/></dt>
-  <dd><description>
-A weakness in the handling of CBC ciphersuites in SSL, TLS and DTLS which could
-lead to plaintext recovery by exploiting timing differences
-arising during MAC processing. 
+A flaw in the OpenSSL handling of CBC ciphersuites in TLS 1.1 and TLS 1.2 on
+AES-NI supporting platforms can be exploited in a DoS attack.
     </description><a href="http://www.openssl.org/news/secadv_20130205.txt">(original advisory)</a>. 
-    Reported by Nadhem J. AlFardan and Kenneth G. Paterson of the Information Security Group Royal Holloway, University of London.
+    Reported by Adam Langley and Wolfgang Ettlinger.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
       1.0.1d (Affected 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
-  <dd>Fixed in OpenSSL  
-      1.0.0k (Affected 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
-  <dd>Fixed in OpenSSL  
-      0.9.8y (Affected 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2013-0166"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0166">CVE-2013-0166: </a></a></b>5th February 2013<p/></dt>
   <dd><description>
@@ -172,16 +167,21 @@ a denial of service attack.
   <dd>Fixed in OpenSSL  
       0.9.8y (Affected 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
-  <dt><b><a name="2012-2686"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2686">CVE-2012-2686: </a></a></b>5th February 2013<p/></dt>
+  <dt><b><a name="2013-0169"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0169">CVE-2013-0169: </a></a></b>4th February 2013<p/></dt>
   <dd><description>
-A flaw in the OpenSSL handling of CBC ciphersuites in TLS 1.1 and TLS 1.2 on
-AES-NI supporting platforms can be exploited in a DoS attack.
+A weakness in the handling of CBC ciphersuites in SSL, TLS and DTLS which could
+lead to plaintext recovery by exploiting timing differences
+arising during MAC processing. 
     </description><a href="http://www.openssl.org/news/secadv_20130205.txt">(original advisory)</a>. 
-    Reported by Adam Langley and Wolfgang Ettlinger.
+    Reported by Nadhem J. AlFardan and Kenneth G. Paterson of the Information Security Group Royal Holloway, University of London.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
       1.0.1d (Affected 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0k (Affected 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8y (Affected 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
 </dl><h2>2012</h2><dl>
   <dt><b><a name="2012-2333"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2333">CVE-2012-2333: </a></a></b>10th May 2012<p/></dt>
@@ -252,38 +252,41 @@ SSL/TLS applications are not affected by this issue.
   <dd>Fixed in OpenSSL  
       0.9.8u (Affected 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
-  <dt><b><a name="2012-0050"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0050">CVE-2012-0050: </a></a></b>4th January 2012<p/></dt>
+  <dt><b><a name="2011-4108"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4108">CVE-2011-4108: </a></a></b>4th January 2012<p/></dt>
   <dd><description>
-A flaw in the fix to CVE-2011-4108 can be exploited in a denial of
-service attack. Only DTLS applications are affected.
-    </description><a href="http://www.openssl.org/news/secadv_20120118.txt">(original advisory)</a>. 
-    Reported by Antonio Martin.
-  </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      1.0.0g (Affected 1.0.0f) </dd>
-  <dd>Fixed in OpenSSL  
-      0.9.8t (Affected 0.9.8s) </dd>
-  <p/>
-  <dt><b><a name="2012-0027"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0027">CVE-2012-0027: </a></a></b>4th January 2012<p/></dt>
-  <dd><description>
-A malicious TLS client can send an invalid set of GOST parameters
-which will cause the server to crash due to lack of error checking.
-This could be used in a denial-of-service attack.
-Only users of the OpenSSL GOST ENGINE are affected by this bug.
+OpenSSL was susceptable an extension of the 
+Vaudenay padding oracle attack on CBC mode encryption which enables an 
+efficient plaintext recovery attack against the OpenSSL implementation
+of DTLS by exploiting timing differences arising during
+decryption processing.
     </description><a href="http://www.openssl.org/news/secadv_20120104.txt">(original advisory)</a>. 
-    Reported by Andrey Kulikov.
+    Reported by Nadhem Alfardan and Kenny Paterson.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
       1.0.0f (Affected 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
-  <dt><b><a name="2011-4619"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4619">CVE-2011-4619: </a></a></b>4th January 2012<p/></dt>
+  <dt><b><a name="2011-4109"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4109">CVE-2011-4109: </a></a></b>4th January 2012<p/></dt>
   <dd><description>
-Support for handshake restarts for server gated cryptograpy (SGC) can
-be used in a denial-of-service attack.
+If X509_V_FLAG_POLICY_CHECK is set in OpenSSL 0.9.8, then a policy
+check failure can lead to a double-free. The bug does not occur 
+unless this flag is set. Users of OpenSSL 1.0.0 are not affected
     </description><a href="http://www.openssl.org/news/secadv_20120104.txt">(original advisory)</a>. 
-    Reported by George Kadianakis.
+    Reported by Ben Laurie.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2011-4576"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4576">CVE-2011-4576: </a></a></b>4th January 2012<p/></dt>
+  <dd><description>
+OpenSSL failed to clear the bytes used as
+block cipher padding in SSL 3.0 records which could leak
+the contents of memory in some circumstances.
+    </description><a href="http://www.openssl.org/news/secadv_20120104.txt">(original advisory)</a>. 
+    Reported by Adam Langley.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
@@ -306,13 +309,12 @@ denial-of-service attack.  Builds of OpenSSL are only vulnerable if configured w
   <dd>Fixed in OpenSSL  
       0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
-  <dt><b><a name="2011-4576"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4576">CVE-2011-4576: </a></a></b>4th January 2012<p/></dt>
+  <dt><b><a name="2011-4619"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4619">CVE-2011-4619: </a></a></b>4th January 2012<p/></dt>
   <dd><description>
-OpenSSL failed to clear the bytes used as
-block cipher padding in SSL 3.0 records which could leak
-the contents of memory in some circumstances.
+Support for handshake restarts for server gated cryptograpy (SGC) can
+be used in a denial-of-service attack.
     </description><a href="http://www.openssl.org/news/secadv_20120104.txt">(original advisory)</a>. 
-    Reported by Adam Langley.
+    Reported by George Kadianakis.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
@@ -320,50 +322,33 @@ the contents of memory in some circumstances.
   <dd>Fixed in OpenSSL  
       0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
-  <dt><b><a name="2011-4109"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4109">CVE-2011-4109: </a></a></b>4th January 2012<p/></dt>
+  <dt><b><a name="2012-0027"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0027">CVE-2012-0027: </a></a></b>4th January 2012<p/></dt>
   <dd><description>
-If X509_V_FLAG_POLICY_CHECK is set in OpenSSL 0.9.8, then a policy
-check failure can lead to a double-free. The bug does not occur 
-unless this flag is set. Users of OpenSSL 1.0.0 are not affected
+A malicious TLS client can send an invalid set of GOST parameters
+which will cause the server to crash due to lack of error checking.
+This could be used in a denial-of-service attack.
+Only users of the OpenSSL GOST ENGINE are affected by this bug.
     </description><a href="http://www.openssl.org/news/secadv_20120104.txt">(original advisory)</a>. 
-    Reported by Ben Laurie.
-  </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
-  <p/>
-  <dt><b><a name="2011-4108"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4108">CVE-2011-4108: </a></a></b>4th January 2012<p/></dt>
-  <dd><description>
-OpenSSL was susceptable an extension of the 
-Vaudenay padding oracle attack on CBC mode encryption which enables an 
-efficient plaintext recovery attack against the OpenSSL implementation
-of DTLS by exploiting timing differences arising during
-decryption processing.
-    </description><a href="http://www.openssl.org/news/secadv_20120104.txt">(original advisory)</a>. 
-    Reported by Nadhem Alfardan and Kenny Paterson.
+    Reported by Andrey Kulikov.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
       1.0.0f (Affected 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <p/>
+  <dt><b><a name="2012-0050"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0050">CVE-2012-0050: </a></a></b>4th January 2012<p/></dt>
+  <dd><description>
+A flaw in the fix to CVE-2011-4108 can be exploited in a denial of
+service attack. Only DTLS applications are affected.
+    </description><a href="http://www.openssl.org/news/secadv_20120118.txt">(original advisory)</a>. 
+    Reported by Antonio Martin.
+  </dd>
+  <p/>
   <dd>Fixed in OpenSSL  
-      0.9.8s (Affected 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      1.0.0g (Affected 1.0.0f) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8t (Affected 0.9.8s) </dd>
   <p/>
 </dl><h2>2011</h2><dl>
-  <dt><b><a name="2011-3210"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3210">CVE-2011-3210: </a></a></b>6th September 2011<p/></dt>
-  <dd><description>
-OpenSSL server code for ephemeral ECDH ciphersuites is not
-thread-safe, and furthermore can crash if a client violates the
-protocol by sending handshake messages in incorrect order.  Only
-server-side applications that specifically support ephemeral ECDH
-ciphersuites are affected, and only if ephemeral ECDH ciphersuites are
-enabled in the configuration.
-    </description><a href="http://www.openssl.org/news/secadv_20110906.txt">(original advisory)</a>. 
-    Reported by Adam Langley.
-  </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      1.0.0e (Affected 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
-  <p/>
   <dt><b><a name="2011-3207"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3207">CVE-2011-3207: </a></a></b>6th September 2011<p/></dt>
   <dd><description>
 Under certain circumstances OpenSSL's internal certificate
@@ -374,6 +359,21 @@ which is off by default. Applications which use their own custom CRL
 checking (such as Apache) are not affected.
     </description><a href="http://www.openssl.org/news/secadv_20110906.txt">(original advisory)</a>. 
     Reported by Kaspar Brand.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0e (Affected 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <p/>
+  <dt><b><a name="2011-3210"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3210">CVE-2011-3210: </a></a></b>6th September 2011<p/></dt>
+  <dd><description>
+OpenSSL server code for ephemeral ECDH ciphersuites is not
+thread-safe, and furthermore can crash if a client violates the
+protocol by sending handshake messages in incorrect order.  Only
+server-side applications that specifically support ephemeral ECDH
+ciphersuites are affected, and only if ephemeral ECDH ciphersuites are
+enabled in the configuration.
+    </description><a href="http://www.openssl.org/news/secadv_20110906.txt">(original advisory)</a>. 
+    Reported by Adam Langley.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
@@ -445,19 +445,6 @@ affected.
   <dd>Fixed in OpenSSL  
       0.9.8p (Affected 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
-  <dt><b><a name="2010-1633"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1633">CVE-2010-1633: </a></a></b>1st June 2010<p/></dt>
-  <dd><description>
-An invalid Return value check in pkey_rsa_verifyrecover was
-discovered.  When verification recovery fails for RSA keys an
-uninitialised buffer with an undefined length is returned instead of
-an error code.  This could lead to an information leak.
-    </description><a href="http://www.openssl.org/news/secadv_20100601.txt">(original advisory)</a>. 
-    Reported by Peter-Michael Hager.
-  </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      1.0.0a (Affected 1.0.0) </dd>
-  <p/>
   <dt><b><a name="2010-0742"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0742">CVE-2010-0742: </a></a></b>1st June 2010<p/></dt>
   <dd><description>
 A flaw in the handling of CMS structures containing OriginatorInfo was found which 
@@ -472,6 +459,19 @@ disabled by default in OpenSSL 0.9.8 versions.
   <dd>Fixed in OpenSSL  
       1.0.0a (Affected 1.0.0) </dd>
   <p/>
+  <dt><b><a name="2010-1633"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1633">CVE-2010-1633: </a></a></b>1st June 2010<p/></dt>
+  <dd><description>
+An invalid Return value check in pkey_rsa_verifyrecover was
+discovered.  When verification recovery fails for RSA keys an
+uninitialised buffer with an undefined length is returned instead of
+an error code.  This could lead to an information leak.
+    </description><a href="http://www.openssl.org/news/secadv_20100601.txt">(original advisory)</a>. 
+    Reported by Peter-Michael Hager.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.0a (Affected 1.0.0) </dd>
+  <p/>
   <dt><b><a name="2010-0740"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0740">CVE-2010-0740: </a></a></b>24th March 2010<p/></dt>
   <dd><description>
 In TLS connections, certain incorrectly formatted records can cause an
@@ -482,6 +482,19 @@ OpenSSL client or server to crash due to a read attempt at NULL.
   <p/>
   <dd>Fixed in OpenSSL  
       0.9.8n (Affected 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f) </dd>
+  <p/>
+  <dt><b><a name="2009-3245"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3245">CVE-2009-3245: </a></a></b>23rd February 2010<p/></dt>
+  <dd><description>
+It was discovered that OpenSSL did not always check the return value of the
+bn_wexpand() function. An attacker able to trigger a memory allocation failure
+in that function could cause an application using the OpenSSL library to crash
+or, possibly, execute arbitrary code
+    </description>
+    Reported by Martin Olsson, Neel Mehta.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2010-0433"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0433">CVE-2010-0433: </a></a></b>19th January 2010<p/></dt>
   <dd><description>
@@ -511,35 +524,11 @@ function.
   <dd>Fixed in OpenSSL  
       0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
-  <dt><b><a name="2009-3245"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3245">CVE-2009-3245: </a></a></b>23rd February 2010<p/></dt>
-  <dd><description>
-It was discovered that OpenSSL did not always check the return value of the
-bn_wexpand() function. An attacker able to trigger a memory allocation failure
-in that function could cause an application using the OpenSSL library to crash
-or, possibly, execute arbitrary code
-    </description>
-    Reported by Martin Olsson, Neel Mehta.
-  </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
-  <p/>
 </dl><h2>2009</h2><dl>
   <dt><b><a name="2009-3555"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3555">CVE-2009-3555: </a></a></b>5th November 2009<p/></dt>
   <dd><description>
 Implement RFC5746 to address vulnerabilities in SSL/TLS renegotiation.
     </description><a href="http://www.openssl.org/news/secadv_20091111.txt">(original advisory)</a>. </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
-  <p/>
-  <dt><b><a name="2009-1387"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1387">CVE-2009-1387: </a></a></b>5th February 2009<p/></dt>
-  <dd><description>
-Fix denial of service flaw due in the DTLS implementation.  A
-remote attacker could use this flaw to cause a DTLS server to crash.
-    </description>
-    Reported by Robin Seggelmann.
-  </dd>
   <p/>
   <dd>Fixed in OpenSSL  
       0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
@@ -568,16 +557,14 @@ excessive amounts of memory, or crash.
   <dd>Fixed in OpenSSL  
       0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
-  <dt><b><a name="2009-0789"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0789">CVE-2009-0789: </a></a></b>25th March 2009<p/></dt>
+  <dt><b><a name="2009-0590"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0590">CVE-2009-0590: </a></a></b>25th March 2009<p/></dt>
   <dd><description>
-When a malformed ASN1 structure is received it's contents are freed up and
-zeroed and an error condition returned. On a small number of platforms where
-sizeof(long) &lt; sizeof(void *) (for example WIN64) this can cause an invalid
-memory access later resulting in a crash when some invalid structures are
-read, for example RSA public keys.
-    </description><a href="http://www.openssl.org/news/secadv_20090325.txt">(original advisory)</a>. 
-    Reported by Paolo Ganci.
-  </dd>
+The function ASN1_STRING_print_ex() when used to print a BMPString or
+UniversalString will crash with an invalid memory access if the
+encoded length of the string is illegal.  Any OpenSSL application
+which prints out the contents of a certificate could be affected by
+this bug, including SSL servers, clients and S/MIME software.
+    </description><a href="http://www.openssl.org/news/secadv_20090325.txt">(original advisory)</a>. </dd>
   <p/>
   <dd>Fixed in OpenSSL  
       0.9.8k (Affected 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
@@ -595,17 +582,30 @@ checked.
   <dd>Fixed in OpenSSL  
       0.9.8k (Affected 0.9.8j, 0.9.8i, 0.9.8h) </dd>
   <p/>
-  <dt><b><a name="2009-0590"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0590">CVE-2009-0590: </a></a></b>25th March 2009<p/></dt>
+  <dt><b><a name="2009-0789"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0789">CVE-2009-0789: </a></a></b>25th March 2009<p/></dt>
   <dd><description>
-The function ASN1_STRING_print_ex() when used to print a BMPString or
-UniversalString will crash with an invalid memory access if the
-encoded length of the string is illegal.  Any OpenSSL application
-which prints out the contents of a certificate could be affected by
-this bug, including SSL servers, clients and S/MIME software.
-    </description><a href="http://www.openssl.org/news/secadv_20090325.txt">(original advisory)</a>. </dd>
+When a malformed ASN1 structure is received it's contents are freed up and
+zeroed and an error condition returned. On a small number of platforms where
+sizeof(long) &lt; sizeof(void *) (for example WIN64) this can cause an invalid
+memory access later resulting in a crash when some invalid structures are
+read, for example RSA public keys.
+    </description><a href="http://www.openssl.org/news/secadv_20090325.txt">(original advisory)</a>. 
+    Reported by Paolo Ganci.
+  </dd>
   <p/>
   <dd>Fixed in OpenSSL  
       0.9.8k (Affected 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2009-1387"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1387">CVE-2009-1387: </a></a></b>5th February 2009<p/></dt>
+  <dd><description>
+Fix denial of service flaw due in the DTLS implementation.  A
+remote attacker could use this flaw to cause a DTLS server to crash.
+    </description>
+    Reported by Robin Seggelmann.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.8m (Affected 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
   <dt><b><a name="2008-5077"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-5077">CVE-2008-5077: </a></a></b>7th January 2009<p/></dt>
   <dd><description>
@@ -627,20 +627,6 @@ vulnerable client, bypassing validation.
       0.9.8j (Affected 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
 </dl><h2>2008</h2><dl>
-  <dt><b><a name="2008-1672"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1672">CVE-2008-1672: </a></a></b>28th May 2008<p/></dt>
-  <dd><description>
-Testing using the Codenomicon TLS test suite discovered a flaw if the
-'Server Key exchange message' is omitted from a TLS handshake in
-OpenSSL 0.9.8f and OpenSSL 0.9.8g.  If a client connects to a
-malicious server with particular cipher suites, the server could cause
-the client to crash. 
-    </description><a href="http://www.openssl.org/news/secadv_20080528.txt">(original advisory)</a>. 
-    Reported by codenomicon.
-  </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      0.9.8h (Affected 0.9.8g, 0.9.8f) </dd>
-  <p/>
   <dt><b><a name="2008-0891"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-0891">CVE-2008-0891: </a></a></b>28th May 2008<p/></dt>
   <dd><description>
 Testing using the Codenomicon TLS test suite discovered a flaw in the
@@ -648,6 +634,20 @@ handling of server name extension data in OpenSSL 0.9.8f and OpenSSL
 0.9.8g.  If OpenSSL has been compiled using the non-default TLS server
 name extensions, a remote attacker could send a carefully crafted
 packet to a server application using OpenSSL and cause it to crash.
+    </description><a href="http://www.openssl.org/news/secadv_20080528.txt">(original advisory)</a>. 
+    Reported by codenomicon.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.8h (Affected 0.9.8g, 0.9.8f) </dd>
+  <p/>
+  <dt><b><a name="2008-1672"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1672">CVE-2008-1672: </a></a></b>28th May 2008<p/></dt>
+  <dd><description>
+Testing using the Codenomicon TLS test suite discovered a flaw if the
+'Server Key exchange message' is omitted from a TLS handshake in
+OpenSSL 0.9.8f and OpenSSL 0.9.8g.  If a client connects to a
+malicious server with particular cipher suites, the server could cause
+the client to crash. 
     </description><a href="http://www.openssl.org/news/secadv_20080528.txt">(original advisory)</a>. 
     Reported by codenomicon.
   </dd>
@@ -668,6 +668,19 @@ randomness.
   </dd>
   <p/>
   <p/>
+  <dt><b><a name="2007-4995"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-4995">CVE-2007-4995: </a></a></b>12th October 2007<p/></dt>
+  <dd><description>
+A flaw in DTLS support. An attacker 
+could create a malicious client or server that could trigger a heap 
+overflow. This is possibly exploitable to run arbitrary code, but it has 
+not been verified.
+    </description><a href="http://www.openssl.org/news/secadv_20071012.txt">(original advisory)</a>. 
+    Reported by Andy Polyakov.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.8f (Affected 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
   <dt><b><a name="2007-5135"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5135">CVE-2007-5135: </a></a></b>12th October 2007<p/></dt>
   <dd><description>
 A flaw was found in the SSL_get_shared_ciphers() utility function. An 
@@ -682,20 +695,49 @@ only when applications are compiled for debugging.
   <dd>Fixed in OpenSSL  
       0.9.8f (Affected 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
-  <dt><b><a name="2007-4995"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-4995">CVE-2007-4995: </a></a></b>12th October 2007<p/></dt>
+</dl><h2>2006</h2><dl>
+  <dt><b><a name="2006-2937"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2937">CVE-2006-2937: </a></a></b>28th September 2006<p/></dt>
   <dd><description>
-A flaw in DTLS support. An attacker 
-could create a malicious client or server that could trigger a heap 
-overflow. This is possibly exploitable to run arbitrary code, but it has 
-not been verified.
-    </description><a href="http://www.openssl.org/news/secadv_20071012.txt">(original advisory)</a>. 
-    Reported by Andy Polyakov.
+During the parsing of certain invalid ASN.1 structures an error
+condition is mishandled.  This can result in an infinite loop which
+consumes system memory
+    </description><a href="http://www.openssl.org/news/secadv_20060928.txt">(original advisory)</a>. 
+    Reported by openssl.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
-      0.9.8f (Affected 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+      0.9.7l (Affected 0.9.7k, 0.9.7j, 0.9.7i, 0.9.7h, 0.9.7g, 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8d (Affected 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
-</dl><h2>2006</h2><dl>
+  <dt><b><a name="2006-2940"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2940">CVE-2006-2940: </a></a></b>28th September 2006<p/></dt>
+  <dd><description>
+Certain types of public key can take disproportionate amounts of
+time to process. This could be used by an attacker in a denial of
+service attack.
+    </description><a href="http://www.openssl.org/news/secadv_20060928.txt">(original advisory)</a>. 
+    Reported by openssl.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.7l (Affected 0.9.7k, 0.9.7j, 0.9.7i, 0.9.7h, 0.9.7g, 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8d (Affected 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2006-3738"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3738">CVE-2006-3738: </a></a></b>28th September 2006<p/></dt>
+  <dd><description>
+A buffer overflow was discovered in the SSL_get_shared_ciphers()
+utility function.  An attacker could send a list of ciphers to an
+application that uses this function and overrun a buffer.
+    </description><a href="http://www.openssl.org/news/secadv_20060928.txt">(original advisory)</a>. 
+    Reported by openssl.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.7l (Affected 0.9.7k, 0.9.7j, 0.9.7i, 0.9.7h, 0.9.7g, 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8d (Affected 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
   <dt><b><a name="2006-4343"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4343">CVE-2006-4343: </a></a></b>28th September 2006<p/></dt>
   <dd><description>
 A flaw in the SSLv2 client code was discovered. When a client
@@ -724,48 +766,6 @@ verified by OpenSSL.
       0.9.7k (Affected 0.9.7j, 0.9.7i, 0.9.7h, 0.9.7g, 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
   <dd>Fixed in OpenSSL  
       0.9.8c (Affected 0.9.8b, 0.9.8a, 0.9.8) </dd>
-  <p/>
-  <dt><b><a name="2006-3738"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3738">CVE-2006-3738: </a></a></b>28th September 2006<p/></dt>
-  <dd><description>
-A buffer overflow was discovered in the SSL_get_shared_ciphers()
-utility function.  An attacker could send a list of ciphers to an
-application that uses this function and overrun a buffer.
-    </description><a href="http://www.openssl.org/news/secadv_20060928.txt">(original advisory)</a>. 
-    Reported by openssl.
-  </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      0.9.7l (Affected 0.9.7k, 0.9.7j, 0.9.7i, 0.9.7h, 0.9.7g, 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
-  <dd>Fixed in OpenSSL  
-      0.9.8d (Affected 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
-  <p/>
-  <dt><b><a name="2006-2940"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2940">CVE-2006-2940: </a></a></b>28th September 2006<p/></dt>
-  <dd><description>
-Certain types of public key can take disproportionate amounts of
-time to process. This could be used by an attacker in a denial of
-service attack.
-    </description><a href="http://www.openssl.org/news/secadv_20060928.txt">(original advisory)</a>. 
-    Reported by openssl.
-  </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      0.9.7l (Affected 0.9.7k, 0.9.7j, 0.9.7i, 0.9.7h, 0.9.7g, 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
-  <dd>Fixed in OpenSSL  
-      0.9.8d (Affected 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
-  <p/>
-  <dt><b><a name="2006-2937"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2937">CVE-2006-2937: </a></a></b>28th September 2006<p/></dt>
-  <dd><description>
-During the parsing of certain invalid ASN.1 structures an error
-condition is mishandled.  This can result in an infinite loop which
-consumes system memory
-    </description><a href="http://www.openssl.org/news/secadv_20060928.txt">(original advisory)</a>. 
-    Reported by openssl.
-  </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      0.9.7l (Affected 0.9.7k, 0.9.7j, 0.9.7i, 0.9.7h, 0.9.7g, 0.9.7f, 0.9.7e, 0.9.7d, 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
-  <dd>Fixed in OpenSSL  
-      0.9.8d (Affected 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
 </dl><h2>2005</h2><dl>
   <dt><b><a name="2005-2969"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2969">CVE-2005-2969: </a></a></b>11th October 2005<p/></dt>
@@ -799,30 +799,6 @@ distribution.
   <dd>Fixed in OpenSSL  
       0.9.6-cvs (Affected 0.9.6m, 0.9.6l, 0.9.6k, 0.9.6j, 0.9.6i, 0.9.6h, 0.9.6g, 0.9.6f, 0.9.6e, 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
   <p/>
-  <dt><b><a name="2004-0112"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0112">CVE-2004-0112: </a></a></b>17th March 2004<p/></dt>
-  <dd><description>
-A flaw in SSL/TLS handshaking code when using Kerberos ciphersuites.
-A remote attacker could perform a carefully crafted SSL/TLS handshake
-against a server configured to use Kerberos ciphersuites in such a way
-as to cause OpenSSL to crash.  Most applications have no ability to
-use Kerberos ciphersuites and will therefore be unaffected.
-    </description><a href="http://www.openssl.org/news/secadv_20040317.txt">(original advisory)</a>. 
-    Reported by OpenSSL group (Stephen Henson).
-  </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      0.9.7d (Affected 0.9.7c, 0.9.7b, 0.9.7a) </dd>
-  <p/>
-  <dt><b><a name="2004-0081"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0081">CVE-2004-0081: </a></a></b>17th March 2004<p/></dt>
-  <dd><description>
-The Codenomicon TLS Test Tool found that some unknown message types
-were handled incorrectly, allowing a remote attacker to cause a denial
-of service (infinite loop).
-    </description><a href="http://www.openssl.org/news/secadv_20030317.txt">(original advisory)</a>. 
-    Reported by OpenSSL group.
-  </dd>
-  <p/>
-  <p/>
   <dt><b><a name="2004-0079"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0079">CVE-2004-0079: </a></a></b>17th March 2004<p/></dt>
   <dd><description> 
 The Codenomicon TLS Test Tool uncovered a null-pointer assignment in the
@@ -837,6 +813,30 @@ OpenSSL library in such a way as to cause a crash.
       0.9.7d (Affected 0.9.7c, 0.9.7b, 0.9.7a, 0.9.7) </dd>
   <dd>Fixed in OpenSSL  
       0.9.6m (Affected 0.9.6l, 0.9.6k, 0.9.6j, 0.9.6i, 0.9.6h, 0.9.6g, 0.9.6f, 0.9.6e, 0.9.6d, 0.9.6c) </dd>
+  <p/>
+  <dt><b><a name="2004-0081"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0081">CVE-2004-0081: </a></a></b>17th March 2004<p/></dt>
+  <dd><description>
+The Codenomicon TLS Test Tool found that some unknown message types
+were handled incorrectly, allowing a remote attacker to cause a denial
+of service (infinite loop).
+    </description><a href="http://www.openssl.org/news/secadv_20030317.txt">(original advisory)</a>. 
+    Reported by OpenSSL group.
+  </dd>
+  <p/>
+  <p/>
+  <dt><b><a name="2004-0112"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0112">CVE-2004-0112: </a></a></b>17th March 2004<p/></dt>
+  <dd><description>
+A flaw in SSL/TLS handshaking code when using Kerberos ciphersuites.
+A remote attacker could perform a carefully crafted SSL/TLS handshake
+against a server configured to use Kerberos ciphersuites in such a way
+as to cause OpenSSL to crash.  Most applications have no ability to
+use Kerberos ciphersuites and will therefore be unaffected.
+    </description><a href="http://www.openssl.org/news/secadv_20040317.txt">(original advisory)</a>. 
+    Reported by OpenSSL group (Stephen Henson).
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.7d (Affected 0.9.7c, 0.9.7b, 0.9.7a) </dd>
   <p/>
 </dl><h2>2003</h2><dl>
   <dt><b><a name="2003-0851"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0851">CVE-2003-0851: </a></a></b>4th November 2003<p/></dt>
@@ -855,17 +855,19 @@ SSL/TLS enabled server which is configured to accept them.
   <dd>Fixed in OpenSSL  
       0.9.6l (Affected 0.9.6k) </dd>
   <p/>
-  <dt><b><a name="2003-0545"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0545">CVE-2003-0545: </a></a></b>30th September 2003<p/></dt>
+  <dt><b><a name="2003-0543"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0543">CVE-2003-0543: </a></a></b>30th September 2003<p/></dt>
   <dd><description>
-Certain ASN.1 encodings that were rejected as invalid by the parser could
-trigger a bug in the deallocation of the corresponding data structure,
-corrupting the stack, leading to a crash.
+An integer overflow could allow remote attackers to cause a denial of
+service (crash) via an SSL client certificate with certain ASN.1 tag
+values.
     </description><a href="http://www.openssl.org/news/secadv_20030930.txt">(original advisory)</a>. 
     Reported by NISCC.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
       0.9.7c (Affected 0.9.7b, 0.9.7a, 0.9.7) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.6k (Affected 0.9.6j, 0.9.6i, 0.9.6h, 0.9.6g, 0.9.6f, 0.9.6e, 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
   <p/>
   <dt><b><a name="2003-0544"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0544">CVE-2003-0544: </a></a></b>30th September 2003<p/></dt>
   <dd><description>
@@ -882,33 +884,17 @@ read past the end of a buffer when the long form is used.
   <dd>Fixed in OpenSSL  
       0.9.7c (Affected 0.9.7b, 0.9.7a, 0.9.7) </dd>
   <p/>
-  <dt><b><a name="2003-0543"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0543">CVE-2003-0543: </a></a></b>30th September 2003<p/></dt>
+  <dt><b><a name="2003-0545"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0545">CVE-2003-0545: </a></a></b>30th September 2003<p/></dt>
   <dd><description>
-An integer overflow could allow remote attackers to cause a denial of
-service (crash) via an SSL client certificate with certain ASN.1 tag
-values.
+Certain ASN.1 encodings that were rejected as invalid by the parser could
+trigger a bug in the deallocation of the corresponding data structure,
+corrupting the stack, leading to a crash.
     </description><a href="http://www.openssl.org/news/secadv_20030930.txt">(original advisory)</a>. 
     Reported by NISCC.
   </dd>
   <p/>
   <dd>Fixed in OpenSSL  
       0.9.7c (Affected 0.9.7b, 0.9.7a, 0.9.7) </dd>
-  <dd>Fixed in OpenSSL  
-      0.9.6k (Affected 0.9.6j, 0.9.6i, 0.9.6h, 0.9.6g, 0.9.6f, 0.9.6e, 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
-  <p/>
-  <dt><b><a name="2003-0147"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0147">CVE-2003-0147: </a></a></b>14th March 2003<p/></dt>
-  <dd><description>
-RSA blinding was not enabled by default, which could allow local and
-remote attackers to obtain a server's private key by determining
-factors using timing differences on (1) the number of extra reductions
-during Montgomery reduction, and (2) the use of different integer
-multiplication algorithms ("Karatsuba" and normal).
-    </description><a href="http://www.openssl.org/news/secadv_20030317.txt">(original advisory)</a>. </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      0.9.7b (Affected 0.9.7a, 0.9.7) </dd>
-  <dd>Fixed in OpenSSL  
-      0.9.6j (Affected 0.9.6i, 0.9.6h, 0.9.6g, 0.9.6f, 0.9.6e, 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
   <p/>
   <dt><b><a name="2003-0131"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0131">CVE-2003-0131: </a></a></b>19th March 2003<p/></dt>
   <dd><description>
@@ -924,6 +910,20 @@ relationship between ciphertext and the associated plaintext, aka the
       0.9.6j (Affected 0.9.6i, 0.9.6h, 0.9.6g, 0.9.6f, 0.9.6e, 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
   <dd>Fixed in OpenSSL  
       0.9.7b (Affected 0.9.7a, 0.9.7) </dd>
+  <p/>
+  <dt><b><a name="2003-0147"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0147">CVE-2003-0147: </a></a></b>14th March 2003<p/></dt>
+  <dd><description>
+RSA blinding was not enabled by default, which could allow local and
+remote attackers to obtain a server's private key by determining
+factors using timing differences on (1) the number of extra reductions
+during Montgomery reduction, and (2) the use of different integer
+multiplication algorithms ("Karatsuba" and normal).
+    </description><a href="http://www.openssl.org/news/secadv_20030317.txt">(original advisory)</a>. </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.7b (Affected 0.9.7a, 0.9.7) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.6j (Affected 0.9.6i, 0.9.6h, 0.9.6g, 0.9.6f, 0.9.6e, 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
   <p/>
   <dt><b><a name="2003-0078"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0078">CVE-2003-0078: </a></a></b>19th February 2003<p/></dt>
   <dd><description>
@@ -941,26 +941,17 @@ plaintext, aka the "Vaudenay timing attack."
       0.9.6i (Affected 0.9.6h, 0.9.6g, 0.9.6f, 0.9.6e, 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
   <p/>
 </dl><h2>2002</h2><dl>
-  <dt><b><a name="2002-0659"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0659">CVE-2002-0659: </a></a></b>30th July 2002<p/></dt>
-  <dd>
-    <description>
-A flaw in the ASN1 library allowed remote attackers to cause a denial of 
-service by sending invalid encodings.
-    </description>
-  </dd>
-  <p/>
-  <dd>Fixed in OpenSSL  
-      0.9.6e (Affected 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a) </dd>
-  <p/>
-  <dt><b><a name="2002-0657"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0657">CVE-2002-0657: </a></a></b>30th July 2002<p/></dt>
+  <dt><b><a name="2002-0655"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0655">CVE-2002-0655: </a></a></b>30th July 2002<p/></dt>
   <dd><description>
-A buffer overflow when Kerberos is enabled allowed attackers
-to execute arbitrary code by sending a long master key.  Note that this
-flaw did not affect any released version of 0.9.6 or 0.9.7
+Inproper handling of ASCII representations of integers on
+64 bit platforms allowed remote attackers to cause a denial of
+service or possibly execute arbitrary code.
     </description><a href="http://www.openssl.org/news/secadv_20020730.txt">(original advisory)</a>. 
     Reported by OpenSSL Group (A.L. Digital).
   </dd>
   <p/>
+  <dd>Fixed in OpenSSL  
+      0.9.6e (Affected 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
   <p/>
   <dt><b><a name="2002-0656"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0656">CVE-2002-0656: </a></a></b>30th July 2002<p/></dt>
   <dd><description>
@@ -974,16 +965,25 @@ large session ID in SSL3.
   <dd>Fixed in OpenSSL  
       0.9.6e (Affected 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
   <p/>
-  <dt><b><a name="2002-0655"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0655">CVE-2002-0655: </a></a></b>30th July 2002<p/></dt>
+  <dt><b><a name="2002-0657"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0657">CVE-2002-0657: </a></a></b>30th July 2002<p/></dt>
   <dd><description>
-Inproper handling of ASCII representations of integers on
-64 bit platforms allowed remote attackers to cause a denial of
-service or possibly execute arbitrary code.
+A buffer overflow when Kerberos is enabled allowed attackers
+to execute arbitrary code by sending a long master key.  Note that this
+flaw did not affect any released version of 0.9.6 or 0.9.7
     </description><a href="http://www.openssl.org/news/secadv_20020730.txt">(original advisory)</a>. 
     Reported by OpenSSL Group (A.L. Digital).
   </dd>
   <p/>
+  <p/>
+  <dt><b><a name="2002-0659"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0659">CVE-2002-0659: </a></a></b>30th July 2002<p/></dt>
+  <dd>
+    <description>
+A flaw in the ASN1 library allowed remote attackers to cause a denial of 
+service by sending invalid encodings.
+    </description>
+  </dd>
+  <p/>
   <dd>Fixed in OpenSSL  
-      0.9.6e (Affected 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a, 0.9.6) </dd>
+      0.9.6e (Affected 0.9.6d, 0.9.6c, 0.9.6b, 0.9.6a) </dd>
   <p/>
 </dl>
