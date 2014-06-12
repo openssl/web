@@ -48,6 +48,7 @@ D9</a></td></tr>
 <tr><td>Dr. Stephen Henson</td>  <td><a href="mailto:steve@openssl.org">steve@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xFA40E9E2">FA40\
 E9E2</a>, <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xF295C759">F295C759 (old key)</a></td></tr>
 <tr><td>Ben Laurie</td>          <td><a href="mailto:ben@openssl.org">ben@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x2118CF83">2118CF83\
+<tr><td>Andy Polyakov</td>       <td><a href="mailto:appro@openssl.org">appro@openssl.org</a></td> <td>SE</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x1FE8E023">1FE8E023</a></td> </tr>
 </a></td> </tr>
 </table></blockquote>
 
@@ -59,7 +60,9 @@ The current OpenSSL development team consists of (in alphabetical order):
 <tr><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td><td><hr noshade size="1"></td> </tr>
 <tr><td>Matt Caswell</td>         <td><a href="mailto:matt@openssl.org">matt@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x0E604491">0E604491</a></td></tr>
 <tr><td>Mark J. Cox</td>         <td><a href="mailto:mark@openssl.org">mark@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x49A563D9">49A563D9</a></td></tr>
+<tr><td>Viktor Dukhovni</td>  <td><a href="mailto:viktor@openssl.org">viktor@openssl.org</a></td> <td>US</td> <td></a></a></td></tr>
 <tr><td>Dr. Stephen Henson</td>  <td><a href="mailto:steve@openssl.org">steve@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xFA40E9E2">FA40E9E2</a>, <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xF295C759">F295C759 (old key)</a></td></tr>
+<tr><td>Tim Hudson</td>  <td><a href="mailto:tjh@openssl.org">tjh@openssl.org</a></td> <td>AU</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x9195C48241FBF7DD">41FBF7DD</a></td></tr>
 <tr><td>Lutz J&auml;nicke</td>       <td><a href="mailto:jaenicke@openssl.org">jaenicke@openssl.org</a></td> <td>DE</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x9C58A66D">9C58A66D</a></td> </tr>
 <tr><td>Ben Laurie</td>          <td><a href="mailto:ben@openssl.org">ben@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x2118CF83">2118CF83</a></td> </tr>
 <tr><td>Steve Marquess</td>          <td><a href="mailto:marquess@openssl.org">marquess@openssl.org</a></td> <td>US</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0xCE69424E">CE69424E</td> </tr>
