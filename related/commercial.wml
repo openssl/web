@@ -24,12 +24,6 @@ The message needs to include the company name, and information string
 and a URL.
 
 <ul>
-    <item name="Linux4biz"
-          info="Linux4biz  specialises in all aspects of apache and openssl deployment, support and security."
-          url="http://www.linux4biz.net/">
-    <item name="Secure Endpoints Inc."
-	  info="Expert consulting and software development services, OpenSSL and more"
-	  url="http://www.secure-endpoints.com/">
     <item name="dmp|cda"
 	  info="Websolutions including OpenSSL and more"
 	  url="http://www.dmpcda.de/">

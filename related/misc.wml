@@ -10,19 +10,10 @@ cryptography, security, and so on.  Also present are articles written about
 OpenSSL.
 
 <ul>
-    <item name="Security Space"
-          info="A nice \"web security portal\", as it calls itself."
-          url="http://www.securityspace.com/">
-    <item name="Linux Journal 2001-06-20"
-          info="An article by Paul Friberg: Using a Cryptographic Hardware Token with Linux: the OpenSSL Project's New Engine"
-          url="http://www2.linuxjournal.com/articles/style/0006.html">
     <item name="X.680 and X.690"
           info="The official ASN.1, BER and DER specifications."
           url="http://www.itu.int/ITU-T/studygroups/com10/languages/">
     <item name="ASN.1 Modules from X-series Recommendations"
           info="The ASN.1 definitions for X.509 and other standards."
           url="http://www.itu.int/ITU-T/asn1/database/itu-t/x/">
-    <item name="Via PadLock support for Linux"
-          info="Support for Via PadLock ACE CPU extensions in openssl 0.9.7 (support is native in CVS for 0.9.8 and later)."
-          url="http://www.logix.cz/michal/devel/padlock/">
 </ul>

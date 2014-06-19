@@ -1,29 +1,17 @@
 
 #use wml::openssl area=related page=openssl
 
-<title>Related, OpenSSL/SSLeay</title>
+<title>Related, OpenSSL</title>
 
-<h1>OpenSSL/SSLeay</h1>
+<h1>OpenSSL</h1>
 
-Here you can find hyperlinks to OpenSSL and SSLeay (the ancestor package of
-OpenSSL) related stuff. Listing here does not imply support or endorsement by the OpenSSL team.
+Here you can find hyperlinks to OpenSSL related information. 
+Listing here does not imply support or endorsement by the OpenSSL team.
 
 <ul>
     <item name="OpenSSL"
           info="The official home of the OpenSSL project"
           url="http://www.openssl.org/">
-    <item name="mod_ssl"
-          info="The official home of the Apache/mod_ssl project"
-          url="http://www.modssl.org/">
-    <item name="SSLeay Doc: FAQ List (Japanese)"
-          info="The SSLeay Frequently Asked Questions in Japanese"
-          url="http://www.infoscience.co.jp/technical/crypto/ssleay_jp.html">
-    <item name="Open Source PKI book"
-	  info="Information on how to operate a CA with OpenSSL"
-	  url="http://ospkibook.sourceforge.net/">
-    <item name="Network Security with OpenSSL"
-          info="An O'Reilly book on using OpenSSL (published June 2002)"
-          url="http://www.opensslbook.com/">
     <item name="OpenSSL Cookbook"
          info="A free ebook that covers configuration and command-line usage (first published in 2013; continuously updated)"
          url="https://www.feistyduck.com/books/openssl-cookbook/">
