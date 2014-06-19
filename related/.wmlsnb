@@ -3,7 +3,7 @@
 ##
 
 <snb>
-  <snb_button id=openssl  txt="OpenSSL/SSLeay" url="index.html">
+  <snb_button id=openssl  txt="OpenSSL" url="index.html">
   <snb_button id=ssl      txt="SSL/TLS"        url="ssl.html">
   <snb_button id=kits     txt="Toolkits"       url="kits.html">
   <snb_button id=apps     txt="Applications"   url="apps.html">
