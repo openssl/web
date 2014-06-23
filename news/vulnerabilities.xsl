@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
-  <xsl:output indent="yes" encoding="ISO-8859-1" method="xml" omit-xml-declaration="yes"/>
+  <xsl:output indent="yes" encoding="UTF-8" method="xml" omit-xml-declaration="yes"/>
 
 <xsl:include href="./vulnerabilitiesdates.xsl"/>
 
