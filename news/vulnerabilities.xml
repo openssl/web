@@ -1937,7 +1937,7 @@ issue did not affect versions of OpenSSL prior to 1.0.1.
   <reported source="Imre Rad (Search-Lab Ltd.)"/>
 </issue>
 
-<issue>
+<issue public="20140605">
   <cve name="2014-0195"/>
   <affects base="0.9.8" version="0.9.8o"/>
   <affects base="0.9.8" version="0.9.8p"/>

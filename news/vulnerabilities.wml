@@ -44,6 +44,21 @@ receive security updates</p><h2>2014</h2><dl>
   <dd>Fixed in OpenSSL  
       0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
+  <dt><b><a name="2014-0195"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0195">CVE-2014-0195: </a></a></b>5th June 2014<p/></dt>
+  <dd><description>A buffer overrun attack can be triggered by sending invalid DTLS fragments
+  to an OpenSSL DTLS client or server. This is potentially exploitable to
+  run arbitrary code on a vulnerable client or server.  Only applications using OpenSSL as a DTLS client or server affected.
+  </description><a href="http://www.openssl.org/news/secadv_20140605.txt">(original advisory)</a>. 
+    Reported by Jüri Aedla.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1h (Affected 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0m (Affected 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8za (Affected 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o) </dd>
+  <p/>
   <dt><b><a name="2014-3470"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3470">CVE-2014-3470: </a></a></b>30th May 2014<p/></dt>
   <dd><description>OpenSSL TLS clients enabling anonymous ECDH ciphersuites are subject to a
   denial of service attack.</description><a href="http://www.openssl.org/news/secadv_20140605.txt">(original advisory)</a>. 
