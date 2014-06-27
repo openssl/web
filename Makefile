@@ -21,6 +21,7 @@ all: docs-depend docs HOWTOs miscs
 	@wmk -f source/index.wml contrib/index.wml docs/HOWTO/index.wml
 	@wmk -f source/mirror.wml
 	@wmk -f news/openssl-*notes.wml
+	@wmk -f news/index.wml
 	@echo "[" `date` "] Done"
 
 PODSHOME=/e/openssl/exp/openssl/doc
