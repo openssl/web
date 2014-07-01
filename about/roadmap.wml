@@ -2,7 +2,8 @@
 
 <title>About, Roadmap</title>
 <h1><center>OpenSSL Project Roadmap</center></h1>
-<h2><center>Last modified 30th June 2014</center></h2>
+<h2><center>First issued 30th June 2014</center></h2>
+<h2><center>Last modified 1st July 2014</center></h2>
 <p>
 <br>
 </p>
@@ -21,11 +22,11 @@ These are:</p>
 <ol>
 	<li><p>
 	<b>RT Backlog<br></b><br>Over a period of some considerable time
-	open tickets have been building up in RT to the point that now there
-	are a very significant number of them. A large proportion of these
-	issues have been open for years. Some of these have in fact been
-	dealt with and should be closed, but this has not been recorded in
-	the system. Most however have not been looked at.<br><br>
+	open tickets have been building up in RT (our bug tracking system) to
+	the point that now there are a very significant number of them. A large
+	proportion of these issues have been open for years. Some of these have
+	in fact been dealt with and should be closed, but this has not been
+	recorded in the system. Most however have not been looked at.<br><br>
 	</p>
 	<li><p>
 	<b>Incomplete/incorrect documentation<br><br></b>Documentation of
