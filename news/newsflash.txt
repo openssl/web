@@ -1,3 +1,4 @@
+30-Jun-2014: <a href="ROOT/about/roadmap.html">Project roadmap</a> released
 24-Jun-2014: <a href="ROOT/about/">Team status changes</a> including six new development team members
 05-Jun-2014: <a href="ROOT/news/secadv_20140605.txt">Security Advisory</a>: seven security fixes
 05-Jun-2014: OpenSSL 1.0.1h is now <a href="ROOT/source/">available</a>, including bug and security fixes
