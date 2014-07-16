@@ -3,7 +3,7 @@
 <title>About, Roadmap</title>
 <h1><center>OpenSSL Project Roadmap</center></h1>
 <h2><center>First issued 30th June 2014</center></h2>
-<h2><center>Last modified 1st July 2014</center></h2>
+<h2><center>Last modified 16th July 2014</center></h2>
 <p>
 <br>
 </p>
@@ -58,8 +58,10 @@ These are:</p>
 	unlike any other open source software.<br><br>
 	</p>
 	<li><p>
+	<del>
 	<b>Lack of code review<br><br></b>We don't have a code review system
 	and we don't mandate code reviews.<br><br>
+	</del>
 	</p>
 	<li><p>
 	<b>No clear release plan<br><br></b>Historically OpenSSL has made new
@@ -166,11 +168,9 @@ new features.</b></p>
 <h2>Code review</h2>
 <ol>
 	<li><p>
-	Agree and implement a process such that all new commits should first
-	be reviewed by a team member conversant with the relevant code and
-	updated until the reviewer’s issues are addressed. This is
-	contingent on recruiting sufficient team members that reviewers are
-	more-or-less always available. (Timescale: Within three months)</p>
+	All changes are first reviewed by another team member prior to
+	being committed to the public openssl repository.
+	</p>
 	<li><p>
 	Agree on a code review system. (Timescale: Within six months)</p>
 </ol>
@@ -307,5 +307,17 @@ detailed above, however we are evaluating the following new features.</p>
 	<li><p>
 	Built-in MT support for two major threading "flavours", POSIX
 	threads and Win32.</p>
+</ul>
+
+<h1>Roadmap Update History</h1>
+<p>
+The following changes have been made since the roadmap was first 
+issued 30-June-2014.
+</p>
+<ul>
+	<li><p>
+	16-July-2014. Updated code review section.</p>
+	<li><p>
+	1-July-2014. Noted RT is our bug tracking system.</p>
 </ul>
 
