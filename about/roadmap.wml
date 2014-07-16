@@ -167,9 +167,18 @@ new features.</b></p>
 </ol>
 <h2>Code review</h2>
 <ol>
-	<li><p>
-	All changes are first reviewed by another team member prior to
-	being committed to the public openssl repository.
+        <li><p>
+	<del>
+        Agree and implement a process such that all new commits should first
+        be reviewed by a team member conversant with the relevant code and
+        updated until the reviewer<E2><80><99>s issues are addressed. This is
+        contingent on recruiting sufficient team members that reviewers are
+        more-or-less always available. (Timescale: Within three months)</p>
+	</del>
+	<p>
+	Objective met (16th July 2014): All changes are first reviewed by 
+	another team member prior to being committed to the public openssl 
+	repository.
 	</p>
 	<li><p>
 	Agree on a code review system. (Timescale: Within six months)</p>
