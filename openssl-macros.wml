@@ -442,9 +442,8 @@ IS YOUR RESPONSIBILITY.
 <p>
 <font face="Arial,Helvetica" size=-1>
 CREDIT INFORMATION:
-This product includes cryptographic software written by Eric A. Young
-(eay@cryptsoft.com).  This product includes software written by Tim J.  Hudson
-(tjh@cryptsoft.com).
+This product includes cryptographic software written by Eric Young.
+This product includes software written by Tim Hudson (tjh@cryptsoft.com).
 </font>
 </define-tag>
 

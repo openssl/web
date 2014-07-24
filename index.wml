@@ -17,8 +17,8 @@ use the Internet to communicate, plan, and develop the OpenSSL toolkit and its
 related documentation.
 
 <p>
-OpenSSL is based on the excellent SSLeay library developed by Eric A. Young
-and Tim J. Hudson. The OpenSSL toolkit <a href="$(ROOT)/source/license.html">is
+OpenSSL is based on the excellent SSLeay library developed by Eric Young
+and Tim Hudson. The OpenSSL toolkit <a href="$(ROOT)/source/license.html">is
 licensed</a>
 under an Apache-style
 licence, which basically means that you are free to get and use it for
