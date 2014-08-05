@@ -42,7 +42,7 @@ Here is an overview of the available mailing lists:
 <tr>
    <td><a href="mailto:openssl-cvs@openssl.org">openssl-cvs</a></td>
    <td>open</td> <td>subscribers</td>
-   <td>CVS Repository Messages</td>
+   <td>Git (formerly CVS) Repository Messages</td>
 </tr>
 <tr>
    <td><a href="mailto:openssl-dev@openssl.org">openssl-dev</a></td>
@@ -57,6 +57,14 @@ Here is an overview of the available mailing lists:
    etc.</td>
 </tr>
 </table>
+
+<p>
+In addition, there is a list "dedicated to the discussion of the effort to
+improve unit/automated testing for OpenSSL." It is a Google group,
+available at
+<a href="https://groups.google.com/forum/#!forum/openssl-testing">
+https://groups.google.com/forum/#!forum/openssl-testing
+<a>
 
 <h2>Subscription</h2>
 
