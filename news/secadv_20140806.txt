@@ -1,0 +1,164 @@
+OpenSSL Security Advisory [6 Aug 2014]
+========================================
+
+Information leak in pretty printing functions (CVE-2014-3508)
+=============================================================
+
+A flaw in OBJ_obj2txt may cause pretty printing functions such as
+X509_name_oneline, X509_name_print_ex et al. to leak some information from the
+stack. Applications may be affected if they echo pretty printing output to the
+attacker. OpenSSL SSL/TLS clients and servers themselves are not affected.
+
+OpenSSL 0.9.8 users should upgrade to 0.9.8zb
+OpenSSL 1.0.0 users should upgrade to 1.0.0n.
+OpenSSL 1.0.1 users should upgrade to 1.0.1i.
+
+Thanks to Ivan Fratric (Google) for discovering this issue. This issue
+was reported to OpenSSL on 19th June 2014.
+
+The fix was developed by Emilia Käsper and Stephen Henson of the OpenSSL
+development team.
+
+
+Crash with SRP ciphersuite in Server Hello message (CVE-2014-5139)
+==================================================================
+
+The issue affects OpenSSL clients and allows a malicious server to crash
+the client with a null pointer dereference (read) by specifying an SRP
+ciphersuite even though it was not properly negotiated with the client. This can
+be exploited through a Denial of Service attack.
+
+OpenSSL 1.0.1 SSL/TLS client users should upgrade to 1.0.1i.
+
+Thanks to Joonas Kuorilehto and Riku Hietamäki (Codenomicon) for discovering and
+researching this issue. This issue was reported to OpenSSL on 2nd July 2014.
+
+The fix was developed by Stephen Henson of the OpenSSL core team.
+
+
+Race condition in ssl_parse_serverhello_tlsext (CVE-2014-3509)
+==============================================================
+
+If a multithreaded client connects to a malicious server using a resumed session
+and the server sends an ec point format extension it could write up to 255 bytes
+to freed memory.
+
+OpenSSL 1.0.0 SSL/TLS client users should upgrade to 1.0.0n.
+OpenSSL 1.0.1 SSL/TLS client users should upgrade to 1.0.1i.
+
+Thanks to Gabor Tyukasz (LogMeIn Inc) for discovering and researching this
+issue. This issue was reported to OpenSSL on 8th July 2014.
+
+The fix was developed by Gabor Tyukasz.
+
+
+Double Free when processing DTLS packets (CVE-2014-3505)
+========================================================
+
+An attacker can force an error condition which causes openssl to crash whilst
+processing DTLS packets due to memory being freed twice. This can be exploited
+through a Denial of Service attack.
+
+OpenSSL 0.9.8 DTLS users should upgrade to 0.9.8zb
+OpenSSL 1.0.0 DTLS users should upgrade to 1.0.0n.
+OpenSSL 1.0.1 DTLS users should upgrade to 1.0.1i.
+
+Thanks to Adam Langley and Wan-Teh Chang (Google) for discovering and
+researching this issue. This issue was reported to OpenSSL on 6th June
+2014.
+
+The fix was developed by Adam Langley.
+
+
+DTLS memory exhaustion (CVE-2014-3506)
+======================================
+
+An attacker can force openssl to consume large amounts of memory whilst
+processing DTLS handshake messages. This can be exploited through a Denial of
+Service attack.
+
+OpenSSL 0.9.8 DTLS users should upgrade to 0.9.8zb
+OpenSSL 1.0.0 DTLS users should upgrade to 1.0.0n.
+OpenSSL 1.0.1 DTLS users should upgrade to 1.0.1i.
+
+Thanks to Adam Langley (Google) for discovering and researching this
+issue. This issue was reported to OpenSSL on 6th June 2014.
+
+The fix was developed by Adam Langley.
+
+
+DTLS memory leak from zero-length fragments (CVE-2014-3507)
+===========================================================
+
+By sending carefully crafted DTLS packets an attacker could cause openssl to
+leak memory. This can be exploited through a Denial of Service attack.
+
+OpenSSL 0.9.8 DTLS users should upgrade to 0.9.8zb
+OpenSSL 1.0.0 DTLS users should upgrade to 1.0.0n.
+OpenSSL 1.0.1 DTLS users should upgrade to 1.0.1i.
+
+Thanks to Adam Langley (Google) for discovering and researching this
+issue. This issue was reported to OpenSSL on 6th June 2014.
+
+The fix was developed by Adam Langley.
+
+OpenSSL DTLS anonymous EC(DH) denial of service (CVE-2014-3510)
+===============================================================
+
+OpenSSL DTLS clients enabling anonymous (EC)DH ciphersuites are subject to a
+denial of service attack. A malicious server can crash the client with a null
+pointer dereference (read) by specifying an anonymous (EC)DH ciphersuite and
+sending carefully crafted handshake messages.
+
+OpenSSL 0.9.8 DTLS client users should upgrade to 0.9.8zb
+OpenSSL 1.0.0 DTLS client users should upgrade to 1.0.0n.
+OpenSSL 1.0.1 DTLS client users should upgrade to 1.0.1i.
+
+Thanks to Felix Gröbert (Google) for discovering and researching this issue.
+This issue was reported to OpenSSL on 18th July 2014.
+
+The fix was developed by Emilia Käsper of the OpenSSL development team.
+
+
+OpenSSL TLS protocol downgrade attack (CVE-2014-3511)
+=====================================================
+
+A flaw in the OpenSSL SSL/TLS server code causes the server to negotiate
+TLS 1.0 instead of higher protocol versions when the ClientHello message is
+badly fragmented. This allows a man-in-the-middle attacker to force a
+downgrade to TLS 1.0 even if both the server and the client support a higher
+protocol version, by modifying the client's TLS records.
+
+OpenSSL 1.0.1 SSL/TLS server users should upgrade to 1.0.1i.
+
+Thanks to David Benjamin and Adam Langley (Google) for discovering and
+researching this issue. This issue was reported to OpenSSL on 21st July 2014.
+
+The fix was developed by David Benjamin.
+
+
+SRP buffer overrun (CVE-2014-3512)
+==================================
+
+A malicious client or server can send invalid SRP parameters and overrun
+an internal buffer. Only applications which are explicitly set up for SRP
+use are affected.
+
+OpenSSL 1.0.1 SSL/TLS users should upgrade to 1.0.1i.
+
+Thanks to Sean Devlin and Watson Ladd (Cryptography Services, NCC
+Group) for discovering this issue. This issue was reported to OpenSSL
+on 31st July 2014.
+
+The fix was developed by Stephen Henson of the OpenSSL core team.
+
+
+References
+==========
+
+URL for this Security Advisory:
+http://www.openssl.org/news/secadv_20140806.txt
+
+Note: the online version of the advisory may be updated with additional
+details over time.
+

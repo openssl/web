@@ -5,7 +5,448 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20140605">
+<security updated="20140806">
+  <issue public="20140806">
+    <cve name="2014-3508"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="0.9.8" version="0.9.8u"/>
+    <affects base="0.9.8" version="0.9.8v"/>
+    <affects base="0.9.8" version="0.9.8w"/>
+    <affects base="0.9.8" version="0.9.8x"/>
+    <affects base="0.9.8" version="0.9.8y"/>
+    <affects base="0.9.8" version="0.9.8za"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <fixed base="1.0.1" version="1.0.1i" date="20140806">
+    </fixed>
+    <fixed base="1.0.0" version="1.0.0n" date="20140806">
+    </fixed>
+    <fixed base="0.9.8" version="0.9.8zb" date="20140806">
+    </fixed>
+    <description>
+A flaw in OBJ_obj2txt may cause pretty printing functions such as
+X509_name_oneline, X509_name_print_ex, to leak some information from the
+stack. Applications may be affected if they echo pretty printing output to the
+attacker.  OpenSSL SSL/TLS clients and servers themselves are not affected.
+    </description>
+    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+    <reported source="Ivan Fratric (Google)"/>
+  </issue>
+
+  <issue public="20140806">
+    <cve name="2014-5139"/>
+    <description>
+A crash was found affecting SRP ciphersuites used in a Server Hello message.
+The issue affects OpenSSL clients and allows a malicious server to crash
+the client with a null pointer dereference (read) by specifying an SRP
+ciphersuite even though it was not properly negotiated with the client. This 
+could lead to a Denial of Service.
+    </description>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <fixed base="1.0.1" version="1.0.1i" date="20140806">
+    </fixed>
+    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+    <reported source="Joonas Kuorilehto and Riku Hietamäki (Codenomicon)"/>
+  </issue>
+
+  <issue public="20140806">
+    <cve name="2014-3509"/>
+    <description>A race condition was found in ssl_parse_serverhello_tlsext.
+If a multithreaded client connects to a malicious server using a resumed session
+and the server sends an ec point format extension, it could write up to 255 bytes
+to freed memory.</description>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <fixed base="1.0.1" version="1.0.1i" date="20140806">
+    </fixed>
+    <fixed base="1.0.0" version="1.0.0n" date="20140806">
+    </fixed>
+    <reported source="Gabor Tyukasz (LogMeIn Inc)"/>
+    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+  </issue>
+
+  <issue public="20140806">
+    <cve name="2014-3505"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="0.9.8" version="0.9.8u"/>
+    <affects base="0.9.8" version="0.9.8v"/>
+    <affects base="0.9.8" version="0.9.8w"/>
+    <affects base="0.9.8" version="0.9.8x"/>
+    <affects base="0.9.8" version="0.9.8y"/>
+    <affects base="0.9.8" version="0.9.8za"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <fixed base="1.0.1" version="1.0.1i" date="20140806">
+    </fixed>
+    <fixed base="1.0.0" version="1.0.0n" date="20140806">
+    </fixed>
+    <fixed base="0.9.8" version="0.9.8zb" date="20140806">
+    </fixed>
+    <description>
+A Double Free was found when processing DTLS packets.
+An attacker can force an error condition which causes openssl to crash whilst
+processing DTLS packets due to memory being freed twice. This could lead to a
+Denial of Service attack.
+    </description>
+    <reported source="Adam Langley and Wan-Teh Chang (Google)"/>
+    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+  </issue>
+
+  <issue public="20140806">
+    <cve name="2014-3506"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="0.9.8" version="0.9.8u"/>
+    <affects base="0.9.8" version="0.9.8v"/>
+    <affects base="0.9.8" version="0.9.8w"/>
+    <affects base="0.9.8" version="0.9.8x"/>
+    <affects base="0.9.8" version="0.9.8y"/>
+    <affects base="0.9.8" version="0.9.8za"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <fixed base="1.0.1" version="1.0.1i" date="20140806">
+    </fixed>
+    <fixed base="1.0.0" version="1.0.0n" date="20140806">
+    </fixed>
+    <fixed base="0.9.8" version="0.9.8zb" date="20140806">
+    </fixed>
+    <description>
+A DTLS flaw leading to memory exhaustion was found.
+An attacker can force openssl to consume large amounts of memory whilst
+processing DTLS handshake messages. This could lead to a Denial of 
+Service attack.
+    </description>
+    <reported source="Adam Langley (Google)"/>
+    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+  </issue>
+
+  <issue public="20140806">
+    <cve name="2014-3507"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="0.9.8" version="0.9.8u"/>
+    <affects base="0.9.8" version="0.9.8v"/>
+    <affects base="0.9.8" version="0.9.8w"/>
+    <affects base="0.9.8" version="0.9.8x"/>
+    <affects base="0.9.8" version="0.9.8y"/>
+    <affects base="0.9.8" version="0.9.8za"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <fixed base="1.0.1" version="1.0.1i" date="20140806">
+    </fixed>
+    <fixed base="1.0.0" version="1.0.0n" date="20140806">
+    </fixed>
+    <fixed base="0.9.8" version="0.9.8zb" date="20140806">
+    </fixed>
+    <description>
+A DTLS memory leak from zero-length fragments was found.
+By sending carefully crafted DTLS packets an attacker could cause OpenSSL to
+leak memory. This could lead to a Denial of Service attack.
+    </description>
+    <reported source="Adam Langley (Google)"/>
+    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+  </issue>
+
+  <issue public="20140806">
+    <cve name="2014-3510"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="0.9.8" version="0.9.8u"/>
+    <affects base="0.9.8" version="0.9.8v"/>
+    <affects base="0.9.8" version="0.9.8w"/>
+    <affects base="0.9.8" version="0.9.8x"/>
+    <affects base="0.9.8" version="0.9.8y"/>
+    <affects base="0.9.8" version="0.9.8za"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <fixed base="1.0.1" version="1.0.1i" date="20140806">
+    </fixed>
+    <fixed base="1.0.0" version="1.0.0n" date="20140806">
+    </fixed>
+    <fixed base="0.9.8" version="0.9.8zb" date="20140806">
+    </fixed>
+    <description>
+A flaw in handling DTLS anonymous EC(DH) ciphersuites was found.
+OpenSSL DTLS clients enabling anonymous (EC)DH ciphersuites are subject to a
+denial of service attack. A malicious server can crash the client with a null
+pointer dereference (read) by specifying an anonymous (EC)DH ciphersuite and
+sending carefully crafted handshake messages.
+    </description>
+    <reported source="Felix Gröbert (Google)"/>
+    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+  </issue>
+
+  <issue public="20140806">
+    <cve name="2014-3511"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <fixed base="1.0.1" version="1.0.1i" date="20140806">
+    </fixed>
+    <description>
+A flaw in the OpenSSL SSL/TLS server code causes the server to negotiate
+TLS 1.0 instead of higher protocol versions when the ClientHello message is
+badly fragmented. This allows a man-in-the-middle attacker to force a
+downgrade to TLS 1.0 even if both the server and the client support a higher
+protocol version, by modifying the client's TLS records.
+    </description>
+    <reported source="David Benjamin and Adam Langley (Google)"/>
+    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+  </issue>
+
+  <issue public="20140806">
+    <cve name="2014-3512"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <fixed base="1.0.1" version="1.0.1i" date="20140806">
+    </fixed>
+    <description>
+A SRP buffer overrun was found.
+A malicious client or server can send invalid SRP parameters and overrun
+an internal buffer. Only applications which are explicitly set up for SRP
+use are affected.
+    </description>
+    <reported source="Sean Devlin and Watson Ladd (Cryptography Services, NCC Group)"/>
+    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+  </issue>
 
   <issue public="20020730">
     <cve name="2002-0655"/>
