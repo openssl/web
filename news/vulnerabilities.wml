@@ -15,6 +15,145 @@ to a security vulnerability will be ignored.</p><p>Note that bugs only present i
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p><p>Note: OpenSSL 0.9.6 versions and 0.9.7 versions are no longer supported and will not 
 receive security updates</p><h2>2014</h2><dl>
+  <dt><b><a name="2014-3508"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3508">CVE-2014-3508: </a></a></b>6th August 2014<p/></dt>
+  <dd><description>
+A flaw in OBJ_obj2txt may cause pretty printing functions such as
+X509_name_oneline, X509_name_print_ex, to leak some information from the
+stack. Applications may be affected if they echo pretty printing output to the
+attacker.  OpenSSL SSL/TLS clients and servers themselves are not affected.
+    </description><a href="http://www.openssl.org/news/secadv_20140806.txt">(original advisory)</a>. 
+    Reported by Ivan Fratric (Google).
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1i (Affected 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0n (Affected 1.0.0m, 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8zb (Affected 0.9.8za, 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2014-5139"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-5139">CVE-2014-5139: </a></a></b>6th August 2014<p/></dt>
+  <dd><description>
+A crash was found affecting SRP ciphersuites used in a Server Hello message.
+The issue affects OpenSSL clients and allows a malicious server to crash
+the client with a null pointer dereference (read) by specifying an SRP
+ciphersuite even though it was not properly negotiated with the client. This 
+could lead to a Denial of Service.
+    </description><a href="http://www.openssl.org/news/secadv_20140806.txt">(original advisory)</a>. 
+    Reported by Joonas Kuorilehto and Riku Hietamäki (Codenomicon).
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1i (Affected 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <p/>
+  <dt><b><a name="2014-3509"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3509">CVE-2014-3509: </a></a></b>6th August 2014<p/></dt>
+  <dd><description>A race condition was found in ssl_parse_serverhello_tlsext.
+If a multithreaded client connects to a malicious server using a resumed session
+and the server sends an ec point format extension, it could write up to 255 bytes
+to freed memory.</description><a href="http://www.openssl.org/news/secadv_20140806.txt">(original advisory)</a>. 
+    Reported by Gabor Tyukasz (LogMeIn Inc).
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1i (Affected 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0n (Affected 1.0.0m, 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <p/>
+  <dt><b><a name="2014-3505"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3505">CVE-2014-3505: </a></a></b>6th August 2014<p/></dt>
+  <dd><description>
+A Double Free was found when processing DTLS packets.
+An attacker can force an error condition which causes openssl to crash whilst
+processing DTLS packets due to memory being freed twice. This could lead to a
+Denial of Service attack.
+    </description><a href="http://www.openssl.org/news/secadv_20140806.txt">(original advisory)</a>. 
+    Reported by Adam Langley and Wan-Teh Chang (Google).
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1i (Affected 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0n (Affected 1.0.0m, 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8zb (Affected 0.9.8za, 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2014-3506"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3506">CVE-2014-3506: </a></a></b>6th August 2014<p/></dt>
+  <dd><description>
+A DTLS flaw leading to memory exhaustion was found.
+An attacker can force openssl to consume large amounts of memory whilst
+processing DTLS handshake messages. This could lead to a Denial of 
+Service attack.
+    </description><a href="http://www.openssl.org/news/secadv_20140806.txt">(original advisory)</a>. 
+    Reported by Adam Langley (Google).
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1i (Affected 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0n (Affected 1.0.0m, 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8zb (Affected 0.9.8za, 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2014-3507"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3507">CVE-2014-3507: </a></a></b>6th August 2014<p/></dt>
+  <dd><description>
+A DTLS memory leak from zero-length fragments was found.
+By sending carefully crafted DTLS packets an attacker could cause OpenSSL to
+leak memory. This could lead to a Denial of Service attack.
+    </description><a href="http://www.openssl.org/news/secadv_20140806.txt">(original advisory)</a>. 
+    Reported by Adam Langley (Google).
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1i (Affected 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0n (Affected 1.0.0m, 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8zb (Affected 0.9.8za, 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2014-3510"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3510">CVE-2014-3510: </a></a></b>6th August 2014<p/></dt>
+  <dd><description>
+A flaw in handling DTLS anonymous EC(DH) ciphersuites was found.
+OpenSSL DTLS clients enabling anonymous (EC)DH ciphersuites are subject to a
+denial of service attack. A malicious server can crash the client with a null
+pointer dereference (read) by specifying an anonymous (EC)DH ciphersuite and
+sending carefully crafted handshake messages.
+    </description><a href="http://www.openssl.org/news/secadv_20140806.txt">(original advisory)</a>. 
+    Reported by Felix Gröbert (Google).
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1i (Affected 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0n (Affected 1.0.0m, 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8zb (Affected 0.9.8za, 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name="2014-3511"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3511">CVE-2014-3511: </a></a></b>6th August 2014<p/></dt>
+  <dd><description>
+A flaw in the OpenSSL SSL/TLS server code causes the server to negotiate
+TLS 1.0 instead of higher protocol versions when the ClientHello message is
+badly fragmented. This allows a man-in-the-middle attacker to force a
+downgrade to TLS 1.0 even if both the server and the client support a higher
+protocol version, by modifying the client's TLS records.
+    </description><a href="http://www.openssl.org/news/secadv_20140806.txt">(original advisory)</a>. 
+    Reported by David Benjamin and Adam Langley (Google).
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1i (Affected 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <p/>
+  <dt><b><a name="2014-3512"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3512">CVE-2014-3512: </a></a></b>6th August 2014<p/></dt>
+  <dd><description>
+A SRP buffer overrun was found.
+A malicious client or server can send invalid SRP parameters and overrun
+an internal buffer. Only applications which are explicitly set up for SRP
+use are affected.
+    </description><a href="http://www.openssl.org/news/secadv_20140806.txt">(original advisory)</a>. 
+    Reported by Sean Devlin and Watson Ladd (Cryptography Services, NCC Group).
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1i (Affected 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <p/>
   <dt><b><a name="2014-0224"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224">CVE-2014-0224: </a></a></b>5th June 2014<p/></dt>
   <dd><description>
     An attacker can force the use of weak
