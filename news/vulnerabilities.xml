@@ -135,19 +135,6 @@ to freed memory.</description>
 
   <issue public="20140806">
     <cve name="2014-3505"/>
-    <affects base="0.9.8" version="0.9.8"/>
-    <affects base="0.9.8" version="0.9.8a"/>
-    <affects base="0.9.8" version="0.9.8b"/>
-    <affects base="0.9.8" version="0.9.8c"/>
-    <affects base="0.9.8" version="0.9.8d"/>
-    <affects base="0.9.8" version="0.9.8e"/>
-    <affects base="0.9.8" version="0.9.8f"/>
-    <affects base="0.9.8" version="0.9.8g"/>
-    <affects base="0.9.8" version="0.9.8h"/>
-    <affects base="0.9.8" version="0.9.8i"/>
-    <affects base="0.9.8" version="0.9.8j"/>
-    <affects base="0.9.8" version="0.9.8k"/>
-    <affects base="0.9.8" version="0.9.8l"/>
     <affects base="0.9.8" version="0.9.8m"/>
     <affects base="0.9.8" version="0.9.8n"/>
     <affects base="0.9.8" version="0.9.8o"/>
@@ -269,21 +256,6 @@ Service attack.
 
   <issue public="20140806">
     <cve name="2014-3507"/>
-    <affects base="0.9.8" version="0.9.8"/>
-    <affects base="0.9.8" version="0.9.8a"/>
-    <affects base="0.9.8" version="0.9.8b"/>
-    <affects base="0.9.8" version="0.9.8c"/>
-    <affects base="0.9.8" version="0.9.8d"/>
-    <affects base="0.9.8" version="0.9.8e"/>
-    <affects base="0.9.8" version="0.9.8f"/>
-    <affects base="0.9.8" version="0.9.8g"/>
-    <affects base="0.9.8" version="0.9.8h"/>
-    <affects base="0.9.8" version="0.9.8i"/>
-    <affects base="0.9.8" version="0.9.8j"/>
-    <affects base="0.9.8" version="0.9.8k"/>
-    <affects base="0.9.8" version="0.9.8l"/>
-    <affects base="0.9.8" version="0.9.8m"/>
-    <affects base="0.9.8" version="0.9.8n"/>
     <affects base="0.9.8" version="0.9.8o"/>
     <affects base="0.9.8" version="0.9.8p"/>
     <affects base="0.9.8" version="0.9.8q"/>
@@ -296,7 +268,6 @@ Service attack.
     <affects base="0.9.8" version="0.9.8x"/>
     <affects base="0.9.8" version="0.9.8y"/>
     <affects base="0.9.8" version="0.9.8za"/>
-    <affects base="1.0.0" version="1.0.0"/>
     <affects base="1.0.0" version="1.0.0a"/>
     <affects base="1.0.0" version="1.0.0b"/>
     <affects base="1.0.0" version="1.0.0c"/>
