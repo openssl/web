@@ -3,7 +3,7 @@
 <title>About, Roadmap</title>
 <h1><center>OpenSSL Project Roadmap</center></h1>
 <h2><center>First issued 30th June 2014</center></h2>
-<h2><center>Last modified 16th July 2014</center></h2>
+<h2><center>Last modified 7th September 2014</center></h2>
 <p>
 <br>
 </p>
@@ -94,10 +94,12 @@ These are:</p>
 </ul>
 <ol start="8">
 	<li><p>
+	<del>
 	<b>No published security strategy</b><br><br>We do not have a well-known
 	and published approach for how we appropriately inform all interested
 	parties of security advisories.<br><br>
 	</p>
+	</del>
 </ol>
 
 <h1>Objectives</h1>
@@ -279,6 +281,7 @@ produced within three months.</p>
 The Platform Strategy will be phased in over a period of time based
 on how quickly we can refactor the code.</p>
 <h2>Security Strategy</h2>
+<del>
 <p>
 We will be documenting a security strategy which will define our
 policy on:</p>
@@ -289,6 +292,11 @@ policy on:</p>
 	What (if any) pre-notification of forthcoming security releases will
 	be provided (and to whom) (Timescale: Within two months)</p>
 </ul>
+</del>
+<p>
+Objective met (7th September 2014): The OpenSSL security policy is available
+<a href="secpolicy.html">here</a>
+</p>
 <h1>Forthcoming Features</h1>
 <p>
 The primary focus of effort will be on achieving the objectives
@@ -324,6 +332,8 @@ The following changes have been made since the roadmap was first
 issued 30-June-2014.
 </p>
 <ul>
+	<li><p>
+	7-September-2014. Updated security policy section.</p>
 	<li><p>
 	16-July-2014. Updated code review section.</p>
 	<li><p>
