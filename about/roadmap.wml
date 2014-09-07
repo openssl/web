@@ -92,15 +92,15 @@ These are:</p>
 	place on a very limited set (usually Linux, FreeBSD and Windows)<br><br>
 	</p>
 </ul>
+<del>
 <ol start="8">
 	<li><p>
-	<del>
 	<b>No published security strategy</b><br><br>We do not have a well-known
 	and published approach for how we appropriately inform all interested
 	parties of security advisories.<br><br>
 	</p>
-	</del>
 </ol>
+</del>
 
 <h1>Objectives</h1>
 <p>
