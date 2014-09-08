@@ -4,6 +4,7 @@
 <h1><center>OpenSSL Project Roadmap</center></h1>
 <h2><center>First issued 30th June 2014</center></h2>
 <h2><center>Last modified 7th September 2014</center></h2>
+<h2><center>Last modified 8th September 2014</center></h2>
 <p>
 <br>
 </p>
@@ -120,6 +121,12 @@ new features.</b></p>
 	Reduce over time the existing RT backlog (Timescale: Ongoing). This
 	may include the mass closure of very old tickets, such as those
 	raised before the release of any currently supported version</p>
+	<a name="8-sep-2014"><p>Update (8th September 2014):</a>
+	we have made a great deal of progress on the backlog.
+	A <a href="ticket-activity.png">graph of ticket activity</a>
+	is available, as is the <a href="buglist.txt">raw data</a>
+	for every bug showing when it was open, and resolved. We will
+	update these files periodically.</a>
 </ol>
 <h2>Incomplete/incorrect documentation</h2>
 <ol>
@@ -332,6 +339,8 @@ The following changes have been made since the roadmap was first
 issued 30-June-2014.
 </p>
 <ul>
+	<li><p>
+	8-September-2014. Updated status on the RT backlog objective.</p>
 	<li><p>
 	7-September-2014. Updated security policy section.</p>
 	<li><p>
