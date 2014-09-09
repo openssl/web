@@ -22,7 +22,8 @@ An initial fix was prepared by Adam Langley <agl@chromium.org> and Emilia
 Käsper <ekasper@google.com> of Google. Additional refinements were added by
 Ben Laurie, Andy Polyakov and Stephen Henson of the OpenSSL group.
 
-Affected users should upgrade to OpenSSL 1.0.1d, 1.0.0k or 0.9.8y
+Affected users should upgrade to OpenSSL 1.0.1e, 1.0.0k or 0.9.8y
+(The fix in 1.0.1d wasn't complete, so please use 1.0.1e or later)
 
 TLS 1.1 and 1.2 AES-NI crash (CVE-2012-2686)
 =============================================
