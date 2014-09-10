@@ -9,9 +9,13 @@ Here is a short summary of the current development and release state
 of the OpenSSL project.
 
 <ul>
-<li>Next proposed minor releases: OpenSSL <b>0.9.8zb</b>, <b>1.0.0n</b> and <b>1.0.1i</b>, currently in development.<br>
-    The release date is yet to be set.
-<li>Next proposed FEATURE release: OpenSSL <b>1.0.2</b>, currently in development.<br>
+
+<li>On 6 August 2014, we released OpenSSL
+<b>0.9.8zb</b>, <b>1.0.0n</b> and <b>1.0.1i</b> with security fixes.
+See <a href="secadv_20140806.txt">the security advisory</a> for details.<br>
+
+<li>Next proposed FEATURE release: OpenSSL <b>1.0.2</b>, currently in beta-test.<br>
+
 <li>Next proposed MAJOR release: OpenSSL <b>1.1.0</b>, currently in development.<br>
     The release date is yet to be set.
 </ul>
