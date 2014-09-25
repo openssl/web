@@ -204,7 +204,7 @@ new features.</b></p>
 	(Timescale: Within six months)
 	</p>
 </ol>
-<h2>Release Strategy</h2>
+<h2><a name="relstrat">Release Strategy</a></h2>
 <p>
 We intend to develop a release strategy which will set out our plans
 for how frequently we plan to release, and when. It will also cover
@@ -233,7 +233,7 @@ The objectives are:</p>
 	We need a way to refactor code and make necessary binary
 	incompatible changes, deprecating APIs etc.</p>
 </ol>
-<h2>Platform Strategy</h2>
+<h2><a name="platstrat">Platform Strategy</a></h2>
 <p>
 Moving forward OpenSSL will adopt the following policy:</p>
 <ul>
