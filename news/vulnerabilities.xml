@@ -93,7 +93,7 @@
     <advisory url="http://www.openssl.org/news/secadv_20141015.txt"/>
   </issue>
   <issue public="20141015">
-    <cve name=""/>
+    <cve name="2014-3568"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
