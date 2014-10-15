@@ -34,13 +34,6 @@
 
   <issue public="20141015">
     <cve name="2014-3567"/>
-    <affects base="0.9.8" version="0.9.8"/>
-    <affects base="0.9.8" version="0.9.8a"/>
-    <affects base="0.9.8" version="0.9.8b"/>
-    <affects base="0.9.8" version="0.9.8c"/>
-    <affects base="0.9.8" version="0.9.8d"/>
-    <affects base="0.9.8" version="0.9.8e"/>
-    <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
     <affects base="0.9.8" version="0.9.8i"/>
