@@ -15,6 +15,66 @@ to a security vulnerability will be ignored.</p><p>Note that bugs only present i
 versions of OpenSSL since 0.9.6a was released on 5th April 2001.
 </p><p>Note: OpenSSL 0.9.6 versions and 0.9.7 versions are no longer supported and will not 
 receive security updates</p><h2>2014</h2><dl>
+  <dt><b><a name="CVE-2014-3513"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-CVE-2014-3513">CVE-CVE-2014-3513: </a></a></b>15th October 2014<p/></dt>
+  <dd><description>
+      A flaw in the DTLS SRTP extension parsing code allows an attacker, who
+      sends a carefully crafted handshake message, to cause OpenSSL to fail
+      to free up to 64k of memory causing a memory leak. This could be
+      exploited in a Denial Of Service attack. This issue affects OpenSSL
+      1.0.1 server implementations for both SSL/TLS and DTLS regardless of
+      whether SRTP is used or configured. Implementations of OpenSSL that
+      have been compiled with OPENSSL_NO_SRTP defined are not affected.
+    </description><a href="http://www.openssl.org/news/secadv_20141015.txt">(original advisory)</a>. 
+    Reported by LibreSSL project.
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1j (Affected 1.0.1i, 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <p/>
+  <dt><b><a name="CVE-2014-3567"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-CVE-2014-3567">CVE-CVE-2014-3567: </a></a></b>15th October 2014<p/></dt>
+  <dd><description>
+      When an OpenSSL SSL/TLS/DTLS server receives a session ticket the
+      integrity of that ticket is first verified. In the event of a session
+      ticket integrity check failing, OpenSSL will fail to free memory
+      causing a memory leak. By sending a large number of invalid session
+      tickets an attacker could exploit this issue in a Denial Of Service
+      attack.
+    </description><a href="http://www.openssl.org/news/secadv_20141015.txt">(original advisory)</a>. </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1j (Affected 1.0.1i, 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0o (Affected 1.0.0n, 1.0.0m, 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8zc (Affected 0.9.8zb, 0.9.8za, 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
+  <dt><b><a name=""/></b>15th October 2014<p/></dt>
+  <dd>
+    <description>
+      OpenSSL has added support for TLS_FALLBACK_SCSV to allow applications
+      to block the ability for a MITM attacker to force a protocol
+      downgrade.
+  
+      Some client applications (such as browsers) will reconnect using a
+      downgraded protocol to work around interoperability bugs in older
+      servers. This could be exploited by an active man-in-the-middle to
+      downgrade connections to SSL 3.0 even if both sides of the connection
+      support higher protocols. SSL 3.0 contains a number of weaknesses
+      including POODLE (CVE-2014-3566).
+  
+      See also
+      https://tools.ietf.org/html/draft-ietf-tls-downgrade-scsv-00 and
+      https://www.openssl.org/~bodo/ssl-poodle.pdf
+    </description>
+  </dd>
+  <p/>
+  <dd>Fixed in OpenSSL  
+      1.0.1j (Affected 1.0.1i, 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1) </dd>
+  <dd>Fixed in OpenSSL  
+      1.0.0o (Affected 1.0.0n, 1.0.0m, 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0) </dd>
+  <dd>Fixed in OpenSSL  
+      0.9.8zc (Affected 0.9.8zb, 0.9.8za, 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
+  <p/>
   <dt><b><a name="2014-3508"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3508">CVE-2014-3508: </a></a></b>6th August 2014<p/></dt>
   <dd><description>
 A flaw in OBJ_obj2txt may cause pretty printing functions such as
