@@ -7,7 +7,7 @@
 
 <security updated="20141015">
   <issue public="20141015">
-    <cve name="CVE-2014-3513"/>
+    <cve name="2014-3513"/>
     <affects base="1.0.1" version="1.0.1"/>
     <affects base="1.0.1" version="1.0.1a"/>
     <affects base="1.0.1" version="1.0.1b"/>
@@ -33,7 +33,7 @@
   </issue>
 
   <issue public="20141015">
-    <cve name="CVE-2014-3567"/>
+    <cve name="2014-3567"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -100,6 +100,7 @@
     <advisory url="http://www.openssl.org/news/secadv_20141015.txt"/>
   </issue>
   <issue public="20141015">
+    <cve name=""/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
