@@ -60,18 +60,18 @@ The current OpenSSL development team consists of (in alphabetical order):
 <tr><td>Viktor Dukhovni</td>  <td><a href="mailto:viktor@openssl.org">viktor@openssl.org</a></td> <td>US</td> <td></a></a></td></tr>
 <tr><td>Dr. Stephen Henson</td>  <td><a href="mailto:steve@openssl.org">steve@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x62605AA4334AF9F0DDE5D349D3577507FA40E9E2">FA40E9E2</a>, <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xA2D29B7BF295C759">F295C759 (old key)</a></td></tr>
 <tr><td>Tim Hudson</td>  <td><a href="mailto:tjh@openssl.org">tjh@openssl.org</a></td> <td>AU</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD">41FBF7DD</a></td></tr>
-<tr><td>Lutz J&auml;nicke</td>       <td><a href="mailto:jaenicke@openssl.org">jaenicke@openssl.org</a></td> <td>DE</td> <td><a href="http://pgp.mit.edu/pks/lookup?op=get&search=0x0A77335AADE74E6BB36CAD8ADFAB592ABDD52F1C">BDD52F1C</a>, <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x78993B149C58A66D">9C58A66D (old key)</a></td> </tr>
+<tr><td>Lutz J&auml;nicke</td>       <td><a href="mailto:jaenicke@openssl.org">jaenicke@openssl.org</a></td> <td>DE</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x0A77335AADE74E6BB36CAD8ADFAB592ABDD52F1C">BDD52F1C</a>, <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x78993B149C58A66D">9C58A66D (old key)</a></td> </tr>
 <tr><td>Emilia K&auml;sper</td>       <td><a href="mailto:emilia@openssl.org">emilia@openssl.org</a></td> <td>CH</td> <td></td> </tr>
 <tr><td>Ben Laurie</td>          <td><a href="mailto:ben@openssl.org">ben@openssl.org</a></td> <td>UK</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x765655DE62E396FF2587EB6C4F6DE1562118CF83">2118CF83</a></td> </tr>
 <tr><td>Steve Marquess</td>          <td><a href="mailto:marquess@openssl.org">marquess@openssl.org</a></td> <td>US</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x1F3B2A1B7F63F8C4CAAECC4224100B01CE69424E">CE69424E</td> </tr>
 <tr><td>Richard Levitte</td>     <td><a href="mailto:levitte@openssl.org">levitte@openssl.org</a></td> <td>SE</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C">7DF9EE8C</a> (old key: <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xA7AF9E78F709453B">F709453B</a>)</td> </tr>
 <tr><td>Bodo M&ouml;ller</td>        <td><a href="mailto:bodo@openssl.org">bodo@openssl.org</a></td> <td>CH</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xAA589DAC5A6A9B85">5A6A9B85</a></td> </tr>
 <tr><td>Andy Polyakov</td>       <td><a href="mailto:appro@openssl.org">appro@openssl.org</a></td> <td>SE</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xB652F27F2B8D1B8DA78D7061BA6CDA461FE8E023">1FE8E023</a></td> </tr>
-<tr><td>Kurt Roeckx</td>       <td><a href="mailto:kurt@openssl.org">kurt@openssl.org</a></td> <td>BE</td> <td><a href="http://pgp.mit.edu/pks/lookup?op=get&search=0xE5E52560DD91C556DDBDA5D02064C53641C25E5D">41C25E5D</a></td> </tr>
+<tr><td>Kurt Roeckx</td>       <td><a href="mailto:kurt@openssl.org">kurt@openssl.org</a></td> <td>BE</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0xE5E52560DD91C556DDBDA5D02064C53641C25E5D">41C25E5D</a></td> </tr>
 <tr><td>Rich Salz</td>
 <td><a href="mailto:rsalz@openssl.org">rsalz@openssl.org</a></td>
 <td>US</td>
-<td><a href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD099684DC7C21E02E14A8AFEF23479455C51B27C">5C51B27C<br>D099 684D C7C2 1E02 E14A 8AFE F234 7945 5C51 B27C</a></td>
+<td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0xD099684DC7C21E02E14A8AFEF23479455C51B27C">5C51B27C<br>D099 684D C7C2 1E02 E14A 8AFE F234 7945 5C51 B27C</a></td>
 </tr>
 <tr><td>Geoff Thorpe</td>        <td><a href="mailto:geoff@openssl.org">geoff@openssl.org</a></td> <td>QC</td> <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x1B3DF808C221D2A5ED74172F0833F510E18C1C32">E18C1C32</td> </tr>
 </table></blockquote>
