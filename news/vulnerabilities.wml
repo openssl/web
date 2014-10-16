@@ -48,7 +48,7 @@ receive security updates</p><h2>2014</h2><dl>
   <dd>Fixed in OpenSSL  
       0.9.8zc (Affected 0.9.8zb, 0.9.8za, 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g) </dd>
   <p/>
-  <dt><b><a name=""><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-">CVE-: </a></a></b>15th October 2014<p/></dt>
+  <dt>15th October 2014<p/></dt>
   <dd>
     <description>
       OpenSSL has added support for TLS_FALLBACK_SCSV to allow applications
@@ -777,7 +777,7 @@ A remote attacker could use this flaw to cause a DTLS server to crash
   <dd>Fixed in OpenSSL  
       0.9.8i (Affected 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8) </dd>
   <p/>
-  <dt><b><a name="2009-1377"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1377">CVE-2009-1377: </a><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1378">CVE-2009-1378: </a><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1379">CVE-2009-1379: </a></a></b>12th May 2009<p/></dt>
+  <dt><b><a name="2009-1377"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1377">CVE-2009-1377: </a></a></b><b><a name="2009-1378"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1378">CVE-2009-1378: </a></a></b><b><a name="2009-1379"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1379">CVE-2009-1379: </a></a></b>12th May 2009<p/></dt>
   <dd><description>
 Fix denial of service flaws in the DTLS implementation.  A
 remote attacker could use these flaws to cause a DTLS server to use

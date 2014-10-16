@@ -60,9 +60,7 @@ receive security updates</p>
 
 <xsl:template match="issue">
   <dt>
-  <b><a name="{cve/@name}">
   <xsl:apply-templates select="cve"/>
-</a></b>
 <xsl:call-template name="dateformat">
   <xsl:with-param name="date" select="@public"/>
 </xsl:call-template>
@@ -106,6 +104,8 @@ receive security updates</p>
 </xsl:template>
 
 <xsl:template match="cve">
+<xsl:if test="@name != ''">
+<b><a name="{@name}">
 <xsl:if test="@description = 'full'">
 The Common Vulnerabilities and Exposures project
 has assigned the name 
@@ -114,8 +114,9 @@ has assigned the name
 <xsl:if test="@description = 'full'">
  to this issue.
 </xsl:if>
+</a></b>
+</xsl:if>
 </xsl:template>
-
 </xsl:stylesheet>
 
 
