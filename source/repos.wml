@@ -43,7 +43,21 @@ $ git clone git://git.openssl.org/openssl.git
 
 Access to the specific branches is possible via standard git methods
 using the git branch and git checkout commands.
-See the discussion of branch naming below for more information.
+See the discussion of branch naming below for more information.<br/><br/>
+
+On Windows, once the repository is cloned, you  should ensure that line endings
+are set correctly:
+
+    <p>
+    <box bgcolor="#f0f0f0">
+    <b><verbatim>
+$ cd openssl
+$ git config core.autocrlf false
+$ git config core.eol lf
+$ git checkout .
+    </verbatim></b>
+    </box>
+    <p>
 
 <h3>git mirror sites</h2>
 
