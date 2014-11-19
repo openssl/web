@@ -21,13 +21,7 @@
 <mirror url="ftp://guest.kuria.katowice.pl/pub/openssl/" loc="PL">
 <mirror url="ftp://ftp.fi.muni.cz/pub/openssl/" loc="CZ">
 <mirror url="ftp://ftp.linux.hr/pub/openssl/" loc="HR">
-<mirror url="ftp://ftp.duth.gr/pub/OpenSSL/" loc="GR">
-<mirror url="http://openssl.linux-mirror.org/" loc="DE">
-<mirror url="http://www.securehost.com/mirror/openssl/" loc="BS">
-<mirror url="http://www.very-clever.com/download/openssl/" loc="DE">
-<mirror url="http://openssl.parentinginformed.com/" loc="CA">
 <mirror url="http://openssl.initrd.net/" loc="DE">
-<mirror url="ftp://ftp.tpnet.pl/pub/security/openssl/" loc="PL">
 <mirror url="rsync://ftp.tpnet.pl/pub/security/openssl/" loc="PL">
 <mirror url="http://openssl.skazkaforyou.com/" loc="CA">
 <mirror url="http://openssl.raffsoftware.com/" loc="CA">
