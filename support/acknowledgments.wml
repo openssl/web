@@ -34,6 +34,9 @@ Exceptional support:
         <a href="http://www.linux-foundation.org/">
         <img src="$(IMG)/lf-logo-med.png" align=center border=0>
         </a>
+        <a href="http://www.linuxfoundation.org/programs/core-infrastructure-initiative">
+        <img src="$(IMG)/cii-logo-med.png" align=center border=0>
+        </a>
         <br>
         <br>
         <br>
@@ -57,9 +60,6 @@ Platinum sponsors (listed chronologically, left to right).  The sustainable fund
     <tr>
     
     <td>
-        <a href="http://company.nokia.com/en">
-        <img src="$(IMG)/nokia-logo-med.jpg" align=center border=0>
-        </a>
         <a href="http://www.huawei.com/">
         <img src="$(IMG)/huawei-logo-med.jpg" align=center border=0>
         </a>
@@ -70,13 +70,35 @@ Platinum sponsors (listed chronologically, left to right).  The sustainable fund
     </tr>
 </table>
 
+
+<hr noshade size=1>
+Major sustaining support:
+<br>
+<br>
+<br>
+<table>
+    #<tr><td><hr noshade size=1></td><td><hr noshade size=1></td></tr>
+    <tr>
+
+    <td>
+        <a href="https://www.akamai.com/">
+        <img src="$(IMG)/akamai-logo-med.png" align=center border=0>
+        </a>
+        <br>
+        <br>
+    </td>
+
+    </tr>
+</table>
+
+
 <hr noshade size=1>
 Major support:
 <br>
 <br>
 <br>
 <table>
-    #<tr><td><hr noshade size=1></td><td><hr noshade size=1></td></tr>
+#<tr><td><hr noshade size=1></td><td><hr noshade size=1></td></tr>
     <tr>
     
     <td>
