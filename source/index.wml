@@ -13,10 +13,12 @@ Old releases can be found <a href="old">here</a>.
 <p>
 Alternatively, you can find all distribution tarballs in our FTP area,
 <a href="ftp://ftp.openssl.org/source/">ftp://ftp.openssl.org/source/</a>.
-Development snapshots can be found at
-<a href="ftp://ftp.openssl.org/snapshot/">ftp://ftp.openssl.org/snapshot/</a>.
 A list of FTP mirror sites can be found <a href="mirror.html">here</a>.
 </p>
+
+<p>
+Development snapshots can be found at
+<a href="ftp://ftp.openssl.org/snapshot/">ftp://ftp.openssl.org/snapshot/</a>.
 
 <p>
 We also maintain a clone at GitHub,
