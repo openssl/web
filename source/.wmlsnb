@@ -5,7 +5,6 @@
 <snb>
   <snb_button id=tarballs txt="Tarballs"     url=".">
   <snb_button id=license  txt="License"      url="license.html">
-  <snb_button id=contrib txt="Contribution"  url="../contrib/">
   <snb_button id=repos    txt="Repository"   url="repos.html">
   <snb_button id=mirror   txt="Mirror"       url="mirror.html">
   <snb_button id=gitweb   txt="GitWeb"       url="http://git.openssl.org/">
