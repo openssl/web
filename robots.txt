@@ -3,7 +3,5 @@
 ##
 
 User-agent: *
-Disallow: /source/cvs/
-Disallow: /source/exp/
 Disallow: /gitweb.cgi
 

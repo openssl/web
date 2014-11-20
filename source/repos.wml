@@ -82,9 +82,9 @@ into another branch.
 
 <h1>CVS (Legacy) repository</h1>
 
-All of the development history has been converted to Git. For reference
-the CVS source code repository is frozen and the final version is available
-via
+All of the development history has been converted to Git.
+The CVS source code repository is frozen and the final version is available
+at
 <p>
 <href url="http://cvs.openssl.org/">
 </p>

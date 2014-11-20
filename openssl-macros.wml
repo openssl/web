@@ -367,15 +367,6 @@ foreach $l (@L) {
 </pre>
 </define-tag>
 
-#   define a <cvs> container which can be used to reference 
-#   files within the CVS repository similar to <a>.
-<define-tag cvs endtag=required>
-<preserve href>\
-<set-var %attributes>\
-  <a href="$(ROOT)/source/exp/<get-var href>"><get-var href></a>\
-<restore href>\
-</define-tag>
-
 #
 <define-tag newsflash>
 <preserve from>
@@ -398,7 +389,6 @@ foreach $l (@L) {
         $ncol = ($ncol + 1) % 2;
         $col  = $COL[$ncol];
         s|="ROOT|="$(ROOT)|g;
-        s|="CVS|="$(ROOT)/source/exp/|g;
         if (m|^(.+?):(.+)|) {
             print "<tr bgcolor=\"$col\">\n";
             print "  <td align=right><font face=\"Arial,Helvetica\"><b>$1:</b></font></td> <td>&nbsp;&nbsp;$2</td>\n";
