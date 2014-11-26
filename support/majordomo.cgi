@@ -79,20 +79,15 @@ foreach $list (split(/,/, $qs{list})) {
 }
 
 #  send out mail
-open(MAIL, "| /usr/sbin/sendmail -oi -oee majordomo\@openssl.org");
-print MAIL $mail;
-close(MAIL);
+# open(MAIL, "| /usr/sbin/sendmail -oi -oee majordomo\@openssl.org");
+# print MAIL $mail;
+# close(MAIL);
 
 #  generate result page
 &send_page(
-    "Ok, the ingredients of the form were successfully parsed " .
-    "and forwarded to Majordomo via Email in the following format:" .
-    "<p>" .
-    "<table cellpadding=5 bgcolor=\"#f0f0f0\"><tr><td>" .
-    "<pre>".HTML::Entities::encode($mail)."</pre>\n" .
-    "</td></tr></table>" .
-    "<p>" .
-    "Expect a reply in your ".HTML::Entities::encode($qs{email})." Email folder the next minutes.\n"
+	"Mailing list changes are current frozen for a couple of days " .
+	"while we upgrade the mail system. Thank you for your" .
+	"patience.\n"
 );
 
 #   die gracefully
