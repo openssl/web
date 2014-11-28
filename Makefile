@@ -12,6 +12,8 @@ lock-hack: FRC.lock-hack
 	|| echo "There's already a build going on.  Skipping"
 FRC.lock-hack:
 
+PODSHOME=/v/openssl/checkouts/openssl/doc
+
 all: docs-depend docs HOWTOs miscs
 	@echo "[" `date` "] Recursive HTML Generation.... (be patient)"
 	@wmk -I $(PODSHOME)/.. -a
@@ -24,7 +26,6 @@ all: docs-depend docs HOWTOs miscs
 	@wmk -f news/index.wml
 	@echo "[" `date` "] Done"
 
-PODSHOME=/e/openssl/exp/openssl/doc
 HTMLGOAL=docs
 
 FRC.docs :
