@@ -14,8 +14,7 @@ FRC.lock-hack:
 
 PODSHOME=/v/openssl/checkouts/openssl/doc
 
-all: docs-depend docs HOWTOs miscs
-	@echo "[" `date` "] Recursive HTML Generation.... (be patient)"
+all: simple docs-depend docs HOWTOs miscs
 	@wmk -I $(PODSHOME)/.. -a
 	@# Because there's a conflict and wmk skips this one...
 	@wmk docs/apps/openssl.wml

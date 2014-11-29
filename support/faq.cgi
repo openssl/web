@@ -7,7 +7,7 @@ $|++;
 print "Content-type: text/html\r\n";
 print "\r\n";
 
-$file = "/e/openssl/exp/openssl/FAQ";
+$file = "/v/openssl/checkouts/openssl/FAQ";
 #$file = "/home/um/openssl/FAQ";
 open(FP, "<$file");
 
