@@ -13,19 +13,20 @@ lock-hack: FRC.lock-hack
 FRC.lock-hack:
 
 PODSHOME=/v/openssl/checkouts/openssl/doc
+HTMLGOAL=docs
 
-all: simple docs-depend docs HOWTOs miscs
+all: simple docs-depend docs
 	@wmk -I $(PODSHOME)/.. -a
 	@# Because there's a conflict and wmk skips this one...
 	@wmk docs/apps/openssl.wml
 	@# Because we're dependent of other files
-	@wmk -f source/index.wml docs/HOWTO/index.wml
-	@wmk -f source/mirror.wml
 	@wmk -f news/openssl-*notes.wml
 	@wmk -f news/index.wml
 	@echo "[" `date` "] Done"
 
-HTMLGOAL=docs
+simple:
+	cp $(PODFSHOME)/HOWTO/*.txt docs/HOWTO/.
+	wmk -I $(PODSHOME)/.. -a about news related source support docs/HOWTO *.wml
 
 FRC.docs :
 docs : FRC.docs
@@ -38,11 +39,3 @@ docs-depend : FRC.docs-depend
 	@find $(PODSHOME) -name '*.pod' -print | \
 		PODSHOME=$(PODSHOME) HTMLGOAL=$(HTMLGOAL) ./make-docs-makefile.pl \
 		> Makefile.docs
-
-FRC.HOWTOs :
-HOWTOs : FRC.HOWTOs
-	cp $(PODSHOME)/HOWTO/*.txt $(HTMLGOAL)/HOWTO/
-
-FRC.miscs :
-miscs : FRC.miscs
-	cp $(PODSHOME)/fingerprints.txt $(HTMLGOAL)/misc/
