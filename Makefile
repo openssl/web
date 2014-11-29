@@ -15,27 +15,7 @@ FRC.lock-hack:
 PODSHOME=/v/openssl/checkouts/openssl/doc
 HTMLGOAL=docs
 
-all: simple docs-depend docs
-	@wmk -I $(PODSHOME)/.. -a
-	@# Because there's a conflict and wmk skips this one...
-	@wmk docs/apps/openssl.wml
-	@# Because we're dependent of other files
-	@wmk -f news/openssl-*notes.wml
-	@wmk -f news/index.wml
-	@echo "[" `date` "] Done"
-
-simple:
+all:
 	cp $(PODSHOME)/HOWTO/*.txt docs/HOWTO/.
 	wmk -I $(PODSHOME)/.. -a about news related source support docs/HOWTO *.wml
-
-FRC.docs :
-docs : FRC.docs
-	@echo "[" `date` "] Documentation WML Generation... (be patient)"
-	@$(MAKE) -f Makefile.docs PODSHOME=$(PODSHOME) HTMLGOAL=$(HTMLGOAL)
-
-FRC.docs-depend :
-docs-depend : FRC.docs-depend
-	@echo "[" `date` "] Documentation dependency Generation..."
-	@find $(PODSHOME) -name '*.pod' -print | \
-		PODSHOME=$(PODSHOME) HTMLGOAL=$(HTMLGOAL) ./make-docs-makefile.pl \
-		> Makefile.docs
+	sh ./run-pod2html.sh $(PODSHOME)

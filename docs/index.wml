@@ -5,26 +5,23 @@
 
 <h1>OpenSSL Documents</h1>
 
-Here you can find the three manual pages documenting the three essential parts
-of the OpenSSL toolkit: The SSL library, the Crypto library and the command
-line tool, as well as a other miscellaneous documents.
-<br><br>
-<b>Note:</b> the documents are from the current development version of OpenSSL and
-may mention features which are not present or behave differently in previous
-versions of OpenSSL. 
+<p>
+Here are copies of the manpages from the latest snapshot, and other
+useful documentation. Since they are from the snapshot, they may describe
+features which are not present in other releases.
 
 <p>
 <ul>
-<li><a href="apps/openssl.html"><font id=sfl>openssl(1)</font></a>: [STILL INCOMPLETE]<br>
+<li><a href="apps/openssl.html"><font id=sfl>openssl(1)</font></a><br>
     Manual page documenting the <b>openssl</b> command line tool.
 <p>
-<li><a href="ssl/ssl.html"><font id=sfl>ssl(3)</font></a>: [STILL INCOMPLETE]<br>
+<li><a href="ssl/ssl.html"><font id=sfl>ssl(3)</font></a><br>
     Manual page documenting the OpenSSL <b>SSL/TLS</b> library.
 <p>
-<li><a href="crypto/crypto.html"><font id=sfl>crypto(3)</font></a>: [STILL INCOMPLETE]<br>
+<li><a href="crypto/crypto.html"><font id=sfl>crypto(3)</font></a><br>
     Manual page documenting the OpenSSL <b>Crypto</b> library.
 <p>
-<li><a href="HOWTO/"><font id=sfl>HOWTO</font></a>: [STILL INCOMPLETE]<br>
+<li><a href="HOWTO/"><font id=sfl>HOWTO</font></a><br>
     HOWTO documents to introduce concepts or explain them in a way that is not possible in the manuals.
 <p>
 <li><a href="http://wiki.openssl.org/"><font id=sfl>WIKI</font></a><br>
