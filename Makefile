@@ -25,7 +25,7 @@ all: simple docs-depend docs
 	@echo "[" `date` "] Done"
 
 simple:
-	cp $(PODFSHOME)/HOWTO/*.txt docs/HOWTO/.
+	cp $(PODSHOME)/HOWTO/*.txt docs/HOWTO/.
 	wmk -I $(PODSHOME)/.. -a about news related source support docs/HOWTO *.wml
 
 FRC.docs :
