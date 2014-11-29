@@ -13,9 +13,9 @@ lock-hack: FRC.lock-hack
 FRC.lock-hack:
 
 PODSHOME=/v/openssl/checkouts/openssl/doc
-HTMLGOAL=docs
 
+DOCS = docs/HOWTO docs/index.wml
 all:
 	cp $(PODSHOME)/HOWTO/*.txt docs/HOWTO/.
-	wmk -I $(PODSHOME)/.. -a about news related source support docs/HOWTO *.wml
+	wmk -I $(PODSHOME)/.. -a about news related source support $(DOCS) *.wml
 	sh ./run-pod2html.sh $(PODSHOME)
