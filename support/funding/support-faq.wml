@@ -5,4 +5,4 @@
 <title>Support Contract FAQ</title>
 <h1>Support Contract FAQ</h1>
 
-<!--#include "fundingfaq.inc" -->
+<!--#include virtual="/support/funding/fundingfaq.inc" -->
