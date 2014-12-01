@@ -7,5 +7,6 @@
   <snb_button id=tarballs txt="Download" url="source/">
   <snb_button id=sponsors  txt="Our Sponsors"  url="support/acknowledgments.html">
   <snb_button id=donations txt="Sponsor OpenSSL" url="support/donations.html">
+  <snb_button id=security txt="Security" url="news/vulnerabilities.html">
 </snb>
 

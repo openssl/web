@@ -130,12 +130,11 @@ H3    { font-weight: bold; font-size: 12pt; line-height: 12pt; \
   #   the buttons itself
   <navbar:button id=title    url="."      txt="Home"        img=page-navbar-ti-*.jpg>
   <navbar:button id=source   url=source/  txt="Download"       img=page-navbar-so-*.jpg>
-  <navbar:button id=FAQ      url=support/faq.html   txt="FAQ"          img=page-navbar-fq-*.jpg>
   <navbar:button id=about    url=about/   txt="About"        img=page-navbar-ab-*.jpg>
   <navbar:button id=news     url=news/    txt="News"         img=page-navbar-ne-*.jpg>
+  <navbar:button id=FAQ      url=support/faq.html   txt="FAQ"          img=page-navbar-fq-*.jpg>
   <navbar:button id=docs     url=docs/    txt="Documents"    img=page-navbar-do-*.jpg>
   <navbar:button id=support  url=support/ txt="Support"      img=page-navbar-su-*.jpg>
-  <navbar:button id=security url=news/vulnerabilities.html txt="Security"      img=page-navbar-se-*.jpg>
   #   button epilog
   <navbar:epilog>
     </td></tr>
