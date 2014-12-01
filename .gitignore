@@ -1,6 +1,11 @@
 *.html
 Makefile.docs
 pod2html-*cache
+pod2htmd.tmp
+pod2htmi.tmp
 index.cache
 *.pdf
 *.gz*
+news/changelog.inc
+support/faq.inc
+support/funding/support-faq.inc
