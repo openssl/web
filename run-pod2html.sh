@@ -1,5 +1,6 @@
 #! /bin/sh
 x=$1
+rm -rf pod2htm*
 for subdir in apps crypto ssl ; do
     mkdir -p docs/$subdir
     for I in $x/$subdir/*.pod ; do

@@ -12,11 +12,11 @@ lock-hack: FRC.lock-hack
 	|| echo "There's already a build going on.  Skipping"
 FRC.lock-hack:
 
-SNAP=
 SNAP=/v/openssl/checkouts/openssl
 PODSHOME=$(SNAP)/doc
 
 DOCS = docs/HOWTO docs/index.wml
+
 all: simple manpages
 
 simple:
