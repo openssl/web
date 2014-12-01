@@ -1,4 +1,4 @@
-#!wml -ofaq.html@u+x
+#!wml -ofaq.html
 
 #use wml::openssl area=support page=faq 
 

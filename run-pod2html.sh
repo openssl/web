@@ -11,3 +11,4 @@ for subdir in apps crypto ssl ; do
 	    "--podpath=apps:crypto:ssl"
     done
 done
+rm -rf pod2htm*

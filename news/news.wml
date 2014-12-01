@@ -1,4 +1,4 @@
-#!wml -onews.html@u+x
+#!wml -onews.html
 
 #use wml::openssl area=news page=news
 

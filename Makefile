@@ -14,6 +14,7 @@ FRC.lock-hack:
 
 SNAP=/v/openssl/checkouts/openssl
 PODSHOME=$(SNAP)/doc
+FORCE=#-f
 
 DOCS = docs/HOWTO docs/index.wml
 
@@ -24,7 +25,7 @@ simple:
 	perl run-faq.pl <$(SNAP)/FAQ >support/faq.inc
 	perl run-fundingfaq.pl < support/funding/support-faq.txt >support/funding/support-faq.inc
 	cp $(PODSHOME)/HOWTO/*.txt docs/HOWTO/.
-	wmk -I $(SNAP) -a about news related source support $(DOCS) *.wml
+	wmk $(FORCE) -I $(SNAP) -a about news related source support $(DOCS) *.wml
 
 manpages:
 	sh ./run-pod2html.sh $(PODSHOME)

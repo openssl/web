@@ -1,4 +1,4 @@
-#!wml -olicense.html@u+x
+#!wml -olicense.html
 
 #use wml::openssl area=source page=license
 
