@@ -48,11 +48,6 @@ Replys sent to <tt>rt@openssl.org</tt> keeping the ticket in the
 subject line unchanged will be recorded and added to the ticket by the
 request tracker, then forwarded to <tt>openssl-dev@openssl.org</tt>.
 
-<h2>Disclaimer/Setup</h2>
-
-The request tracker is currently under installation/test, features may change
-and malfunctions may occur.
-
 <h2>Request Tracker Software</h2>
 The request tracker is using the RT software, available from
 <a href="http://www.fsck.com/projects/rt/">http://www.fsck.com/projects/rt/</a>.

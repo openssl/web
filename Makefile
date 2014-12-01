@@ -10,12 +10,12 @@ PODSHOME=$(SNAP)/doc
 
 FORCE=#-f
 
-DIRS= about docs news related source support
+DIRS= about docs news source support
 
 all: simple manpages
 
 simple: generated
-	wmk $(FORCE) -I $(SNAP) -a $(DIRS) *.wml
+	wmk $(FORCE) -I $(SNAP) -a $(DIRS) index.wml
 
 manpages:
 	sh ./run-pod2html.sh $(PODSHOME)
