@@ -2,8 +2,7 @@
 
 #use wml::openssl area=funding page=index
 
-<title>Support, Frequently Asked Questions</title>
+<title>Support Contract FAQ</title>
+<h1>Support Contract FAQ</h1>
 
-<h1>Frequently Asked Questions</h1>
-
-<!--#include virtual="/cgi-bin/fundingfaq.cgi" -->
+<!--#include "fundingfaq.inc" -->

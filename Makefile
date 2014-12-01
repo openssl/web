@@ -12,10 +12,21 @@ lock-hack: FRC.lock-hack
 	|| echo "There's already a build going on.  Skipping"
 FRC.lock-hack:
 
-PODSHOME=/v/openssl/checkouts/openssl/doc
+SNAP=
+SNAP=/v/openssl/checkouts/openssl
+PODSHOME=$(SNAP)/doc
 
 DOCS = docs/HOWTO docs/index.wml
-all:
+all: simple manpages random
+
+simple:
 	cp $(PODSHOME)/HOWTO/*.txt docs/HOWTO/.
-	wmk -I $(PODSHOME)/.. -a about news related source support $(DOCS) *.wml
+	wmk -I $(SNAP) -a about news related source support $(DOCS) *.wml
+
+manpages:
 	sh ./run-pod2html.sh $(PODSHOME)
+
+random:
+	perl run-changelog.pl <$(SNAP)/CHANGES >news/changelog.inc
+	perl run-faq.pl <$(SNAP)/FAQ >support/faq.inc
+	perl run-fundingfaq.pl < support/funding/support-faq.txt >support/funding/support-faq.inc

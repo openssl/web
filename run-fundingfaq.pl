@@ -1,21 +1,12 @@
 #!/usr/bin/perl
-##
-##  faq.cgi -- Read FAQ file and pretty-print it as HTML
-##
+## read a FAQ file and pretty-print it as html
 
 $|++;
-print "Content-type: text/html\r\n";
-print "\r\n";
-
-$file = "/v/openssl/checkouts/openssl/FAQ";
-#$file = "/home/um/openssl/FAQ";
-open(FP, "<$file");
-
 # TOC
 $i=0; $l=""; $n=0;
 print "<ul>\n";
 print "<ol>\n";
-while (<FP>) {
+while (<STDIN>) {
     escape($_);
     last if /^=+$/;
     next if /^\w*$/;
@@ -35,7 +26,7 @@ print "</ul>\n\n";
 
 # Contents
 $l=""; $n=0; $pre=0; $snip=0;
-while (<FP>) {
+while (<STDIN>) {
     next if /^=+$/;
     if (/^----- snip:start -----/) {
 	print "<pre><listing>" unless $snip;
@@ -55,10 +46,12 @@ while (<FP>) {
     }
     if (/<URL:/ and not /<URL:.*>/) {
 	chomp;
-	$_ .= <FP>;
+	$_ .= <STDIN>;
     }
     s/<URL: *(.*?)>/\@\@\@$1\@\@\@/;
     escape($_);
+    s|\s\*(\S+)\*\s| <i>$1</i> |;
+    s/\@\@\@(.+)\((\S+)\)\@\@\@/<a href=\"$2\">$1<\/a>/;
     s/\@\@\@(.*?)\@\@\@/<a href=\"$1\">$1<\/a>/;
     if (s/\((.?)\)/XX$1XX/g) {
 	while (/([A-Za-z_\.]*)XX(.?)XX/) {
@@ -93,8 +86,6 @@ while (<FP>) {
     }
   cont:
 }
-
-close(FP);
 
 exit(0);
 
