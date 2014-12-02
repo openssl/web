@@ -1,6 +1,7 @@
 *.html
 *.pdf
 *.gz*
+blog
 news/changelog.inc
 support/faq.inc
 support/funding/support-faq.inc
