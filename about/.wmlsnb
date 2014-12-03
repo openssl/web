@@ -4,7 +4,8 @@
 
 <snb>
   <snb_button id=general  txt="General"         url="/about">
-  <snb_button id=rt           txt="Bugs"     url="/support/rt.html">
+  <snb_button id=binaries txt="Binaries"        url="binaries.html">
+  <snb_button id=rt       txt="Bugs"            url="/support/rt.html">
   <snb_button id=roadmap  txt="Roadmap"         url="roadmap.html">
   <snb_button id=secpol   txt="Security Policy" url="secpolicy.html">
   <snb_button id=contacts txt="Contacts"        url="contacts.html">
