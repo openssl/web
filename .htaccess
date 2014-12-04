@@ -1,15 +1,10 @@
-##
-##  .htaccess -- Apache per-dir config
-##
-#### NOTE: .htaccess files are disabled by main apache config
 
+RewriteEngine on
 
 Options +ExecCGI +FollowSymLinks
 
-#   redirect CGIs to original site when running on mirrors
-RewriteEngine on
-RewriteCond  %{SERVER_NAME}  !=www.openssl.org
-RewriteRule  ^(.+\.cgi)$     http://www.openssl.org/$1 [R,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule related/(.*) /about/$1
 
 <Files *.md5>
 ForceType application/binary
