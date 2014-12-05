@@ -24,14 +24,17 @@
 
 <h2>Reporting a security vulnerability</h2>
 
-<p>If you think you have found a security vulnerability then please send it to the
-OpenSSL security team using the private security list
-<a href="mailto:openssl-security@openssl.org">openssl-security@openssl.org</a>.  Encrypting your report is not necessary, but
-if you wish to do so please use the keys of the <a href="/about/">core team members</a>.
-Any email sent to the security team that does not relate
-to a security vulnerability will be ignored.</p>
+<p>If you think you have found a security vulnerability then please send
+  it to the OpenSSL team using the private security list
+  <a href="mailto:openssl-security@openssl.org">openssl-security@openssl.org</a>.
+  Encrypting your report is not necessary, but you can either use the
+  <a href="openssl-security.asc">team PGP key</a>. If you wish to
+  limit the initial disclosure, send it encrypted to specific team
+  members.</p>
 
-<p>Note that bugs only present in the openssl utility are not in general considered to be security issues.</p>
+<p>Any mail sent to that address that is not about a security vulnerability will be ignored.  In general, bugs that are only present in the openssl
+  command-line utility are not considered security issues.</p>
+  ind
 
 <h2>Notification of security vulnerabilities</h2>
 
