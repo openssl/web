@@ -34,7 +34,6 @@
 
 <p>Any mail sent to that address that is not about a security vulnerability will be ignored.  In general, bugs that are only present in the openssl
   command-line utility are not considered security issues.</p>
-  ind
 
 <h2>Notification of security vulnerabilities</h2>
 
