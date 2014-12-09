@@ -1,7 +1,3 @@
-##
-##  robots.txt -- Robot Exclusion Standard config file
-##
-
 User-agent: *
-Disallow: /gitweb.cgi
+Disallow: /source/old
 

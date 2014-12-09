@@ -3,5 +3,6 @@
 *.gz*
 blog
 news/changelog.inc
+news/vulnerabilities.wml
 support/faq.inc
 support/funding/support-faq.inc
