@@ -1,6 +1,8 @@
 *.html
 *.pdf
 *.gz*
+pod2htmd.tmp
+pod2htmi.tmp
 blog
 news/changelog.inc
 news/vulnerabilities.wml
