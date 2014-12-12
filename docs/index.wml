@@ -13,16 +13,19 @@ features which are not present in other releases.
 <p>
 <ul>
 <li><a href="apps/openssl.html" target="_blank"><font id=sfl>openssl(1)</font></a><br>
-    Manual page documenting the <b>openssl</b> command line tool.
-    (Opens in new page or tab).
+    Manual page documenting the <b>openssl</b> command line tool,
+    or the <a href="apps/">full command list</a>.
+    (Opens in new page or tab.)
 <p>
 <li><a href="ssl/ssl.html" target="_blank"><font id=sfl>ssl(3)</font></a><br>
-    Manual page documenting the OpenSSL <b>SSL/TLS</b> library.
-    (Opens in new page or tab).
+    Manual page documenting the OpenSSL <b>SSL/TLS</b> library,
+    or the <a href="ssl/">full list of SSL API's</a>.
+    (Opens in new page or tab.)
 <p>
 <li><a href="crypto/crypto.html" target="_blank"><font id=sfl>crypto(3)</font></a><br>
-    Manual page documenting the OpenSSL <b>Crypto</b> library.
-    (Opens in new page or tab).
+    Manual page documenting the OpenSSL <b>Crypto</b> library,
+    or the <a href="crypto/">full list of crypto API's</a>.
+    (Opens in new page or tab.)
 <p>
 <li><a href="HOWTO/"><font id=sfl>HOWTO</font></a><br>
     HOWTO documents to introduce concepts or explain them in a way that is not possible in the manuals.
