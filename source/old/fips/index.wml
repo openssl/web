@@ -1,0 +1,17 @@
+#use wml::openssl area=source page=old/fips
+
+<title>Old FIPS Releases</title>
+
+<h1>Old FIPS Releases</h1>
+
+<p>
+The table below lists the outdated FIPS releases.
+</p>
+
+<p>
+<rfilelist "*.gz">
+
+<h2>Legalities</h2>
+
+<disclaimer>
+
