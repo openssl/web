@@ -7,7 +7,8 @@
 
 <p>
 The table below lists the latest releases for every branch.
-Old releases can be found <a href="old">here</a>.
+Old releases can be found at
+<a href="old">https://www.openssl.org/source/old</a>.
 </p>
 
 <p>
@@ -31,4 +32,3 @@ We also maintain a clone at GitHub,
 <h2>Legalities</h2>
 
 <disclaimer>
-

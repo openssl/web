@@ -164,7 +164,7 @@ H3    { font-weight: bold; font-size: 12pt; line-height: 12pt; \
 #   define the <snb>...</snb> container tag
 <define-tag snb endtag=required>
   #   1. define the navigation bar through a grammar
-  <navbar:define name=snb urlbase="$(SNB_ROOT)" 
+  <navbar:define name=snb urlbase="$(SNB_ROOT)"
                  txtcol_normal="#666666" txtcol_select="#000000">
     #   bar header
     <navbar:header>\
@@ -288,7 +288,7 @@ sub ls {
         @T = localtime($S[9]);
         my @moy = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec');
-        push(@R, sprintf("%"."8d %"."s %"."2d %"."02d:%"."02d:%"."02d %"."d %"."s\n", 
+        push(@R, sprintf("%"."8d %"."s %"."2d %"."02d:%"."02d:%"."02d %"."d %"."s\n",
              $S[7], $moy[$T[4]], $T[3], $T[2], $T[1], $T[0], 1900+$T[5], $f));
     }
     return @R;
@@ -351,7 +351,7 @@ sub ls {
         @T = localtime($S[9]);
         my @moy = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec');
-        push(@R, sprintf("%"."8d %"."s %"."2d %"."02d:%"."02d:%"."02d %"."d %"."s\n", 
+        push(@R, sprintf("%"."8d %"."s %"."2d %"."02d:%"."02d:%"."02d %"."d %"."s\n",
              $S[7], $moy[$T[4]], $T[3], $T[2], $T[1], $T[0], 1900+$T[5], $f));
     }
     return @R;
@@ -535,23 +535,23 @@ IS YOUR RESPONSIBILITY.
 <p>
 <font face="Arial,Helvetica" size=-1>
 CREDIT INFORMATION:
-This product includes cryptographic software written by Eric Young.  
+This product includes cryptographic software written by Eric Young.
 This product includes software written by Tim Hudson (tjh@cryptsoft.com).
 </font>
 </define-tag>
 
-#  a tag displaying the used tools   
+#  a tag displaying the used tools
 <define-tag website-tools>
-<font face="Arial,Helvetica" size=-1> 
+<font face="Arial,Helvetica" size=-1>
 Website designed by
 <a href="http://www.engelschall.com/">Ralf S. Engelschall</a>
 and generated with
 <a href="http://thewml.org/"><font color="#000000">
 Website META Language</font></a> (WML).<br>
 All markup code and graphics on this website
-are Copyright &copy; 1999-2014 <a href="http://www.openssl.org/">The OpenSSL Project</a>, 
+are Copyright &copy; 1999-2014 <a href="http://www.openssl.org/">The OpenSSL Project</a>,
 All rights reserved.<br>
-This website is served by an 
+This website is served by an
 <a href="http://www.apache.org/"><font color="#000000">Apache</font></a>/
 <a href="http://www.modssl.org/"><font color="#000000">mod_ssl</font></a>
 webserver environment.<br>
@@ -591,7 +591,7 @@ webserver environment.<br>
 
 ##
 ##  Finally, the layout is now rendered, so divert all
-##  following stuff (the code in the local file after the #use 
+##  following stuff (the code in the local file after the #use
 ##  for this template!) into the white body area.
 ##
 
