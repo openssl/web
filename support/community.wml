@@ -9,15 +9,7 @@ We have moved all mailing lists over from to a new server and
 using <a href="http://www.gnu.org/software/mailman/">MailMan</a>.
 If you find any issues please contact postmaster at openssl.org.
 
-We will be installing better certificates and DNS names as soon as possible.
-
-<h1>OpenSSL Mailing Lists</h1>
-
-The OpenSSL project uses various mailing lists to coordinate the development
-and to provide support to the user community. They all have an Email address
-of <tt>openssl-</tt><i id=red>name</i><tt>@openssl.org</tt> and are remote
-controlled by the Majordomo robot under <tt
-id=red>majordomo</tt><tt>@openssl.org</tt>. 
+We will be installing better DNS names soon.
 
 <h2>Overview</h2>
 
@@ -38,7 +30,7 @@ Anyone can join.
    <td>openssl-announce</td>
    <td>Official Project Announcements; low-volume read-only.</td>
 </tr>
-   <td>openssl-commit</td>
+   <td>openssl-commits</td>
    <td>Commits to the source repository; read-only</td>
 </tr>
 <tr>
@@ -48,13 +40,13 @@ Anyone can join.
 </tr>
 <tr>
    <td>openssl-users</td>
-   <td>Application Development, installing and configure OpenSSL,
+   <td>Application Development, installing and configuring OpenSSL,
    etc.</td>
 </tr>
 </table>
 
 <p>
-In addition, there is a list "dedicated to the discussion of the effort to
+In addition, there is a list dedicated to the "discussion of the effort to
 improve unit/automated testing for OpenSSL." It is a Google group,
 available at
 <a href="https://groups.google.com/forum/#!forum/openssl-testing">
@@ -80,17 +72,17 @@ The mailing lists are automatically archived at the following locations:
     - <a href="http://marc.info/?l=openssl-users">
       http://marc.info/?l=openssl-users</a><br>
     - <a href="http://www.mail-archive.com/openssl-users@openssl.org/">
-      http://www.mail-archive.com/openssl-users@openssl.org/</a>
+      http://www.mail-archive.com/openssl-users@openssl.org/</a><br>
     - <a href="http://groups.google.com/groups?group=mailing.openssl.users">
       http://groups.google.com/groups?group=mailing.openssl.users</a><br>
 <li><b>openssl-dev</b>:<br>
     - <a href="http://marc.info/?l=openssl-dev">
       http://marc.info/?l=openssl-dev</a><br>
     - <a href="http://www.mail-archive.com/openssl-dev@openssl.org/">
-      http://www.mail-archive.com/openssl-dev@openssl.org/</a>
+      http://www.mail-archive.com/openssl-dev@openssl.org/</a><br>
     - <a href="http://groups.google.com/groups?group=mailing.openssl.dev">
       http://groups.google.com/groups?group=mailing.openssl.dev</a><br>
-<li><b>openssl-cvs</b>:<br>
+<li><b>openssl-commits</b>:<br>
     - <a href="http://marc.info/?l=openssl-cvs">
       http://marc.info/?l=openssl-cvs</a><br>
     - <a href="http://groups.google.com/groups?group=mailing.openssl.cvs">
