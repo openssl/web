@@ -10,12 +10,9 @@
 <h1>Git repository</h1>
 
 The OpenSSL package is developed in a Git-based repository.
-It is available via Git mechanisms at git.openssl.org and as snapshot
-tarballs through FTP on ftp.openssl.org for those people who either want to
-always stay at the bleeding edge or even want to participate in the
-development of OpenSSL. But use such repository snapshots only when you like
-to see OpenSSL dump core and you can help yourself in case of problems, of
-course.
+It is available via Git mechanisms at git.openssl.org or at
+<a href="https://github.com/openssl/openssl">
+https://github.com/openssl/openssl</a> on GitHub.
 
 <h2>Fetching Git repository snapshot tarballs</h2>
 

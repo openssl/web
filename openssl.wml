@@ -423,9 +423,12 @@ The major changes and known issues for the $minversion branch of the OpenSSL
 toolkit are summarised below. The contents reflect the current state of the
 <tt>NEWS</tt> file inside the git repository.
 <p>
-Additional details of changes can be found in the <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=blob_plain;f=CHANGES;hb=refs/heads/$brname">ChangeLog for OpenSSL $minversion</a>.
+Additional details of changes can be found in the
+<a href="https://github.com/openssl/openssl/blob/$brname/CHANGES">
+change log.</a>.
 <p>
-A complete list of changes to OpenSSL $minversion can be found in the <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=shortlog;h=refs/heads/$brname">git repository commit log</a>.
+The complete list of changes can be found in the
+<a href="https://github.com/openssl/openssl/commits/$brname">commit log</a>.
 <p>
 
 END

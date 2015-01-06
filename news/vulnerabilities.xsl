@@ -81,7 +81,7 @@ receive security updates</p>
       <dd>Fixed in OpenSSL  
       <xsl:value-of select="@version"/>
       <xsl:if test="git/@hash">
-         <xsl:text> </xsl:text><a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h={git/@hash}">(git commit)</a><xsl:text> </xsl:text>
+	<xsl:text> </xsl:text><a href="https://github.com/openssl/openssl/commit/{git/@hash}">(git commit)</a><xsl:text> </xsl:text>
       </xsl:if>
       <xsl:variable name="mybase" select="@base"/>
       <xsl:for-each select="../affects[@base=$mybase]|../maybeaffects[@base=$mybase]">

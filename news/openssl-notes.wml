@@ -8,10 +8,13 @@
 The major changes for all branches of the OpenSSL toolkit are summarised below. The contents reflect the state of the <tt>NEWS</tt> file inside the git
 repository.
 
-Additional details of changes to all versions of OpenSSL can be found in the <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=blob_plain;f=CHANGES;hb=refs/heads/master">ChangeLog</a>.
 <p>
-A complete list of changes to OpenSSL can be found in the <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=shortlog;h=refs/heads/master">git repository commit log</a>.
+Additional details of changes can be found in the
+<a href="https://github.com/openssl/openssl/blob/master/CHANGES">
+change log.</a>.
+<p>
+The complete list of changes can be found in the
+<a href="https://github.com/openssl/openssl/commits/master">commit log</a>.
 <p>
 
 <notes minversion="" maxversion="X" dirname="openssl">
-

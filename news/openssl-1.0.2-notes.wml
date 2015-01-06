@@ -8,11 +8,14 @@
 Version 1.0.2 of the OpenSSL toolkit is now in beta. Major changes
 and known issues are summarised below. This page will be updated regularly
 as problems are reported and fixed.
+
 <p>
-Additional details of changes to OpenSSL 1.0.2 can be found in the <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=blob_plain;f=CHANGES;hb=refs/heads/OpenSSL_1_0_2-stable">ChangeLog</a>.
+Additional details of changes can be found in the
+<a href="https://github.com/openssl/openssl/blob/OpenSSL_1_0_2-stable/CHANGES">
+change log.</a>.
 <p>
-A complete list of changes to OpenSSL 1.0.2 can be found in the <a href="http://git.openssl.org/gitweb/?p=openssl.git;a=shortlog;h=refs/heads/OpenSSL_1_0_2-stable">git repository commit log</a>.
+The complete list of changes can be found in the
+<a href="https://github.com/openssl/openssl/commits/OpenSSL_1_0_2-stable">commit log</a>.
 <p>
 
 <notes minversion="1.0.2" maxversion="1.0.2">
-
