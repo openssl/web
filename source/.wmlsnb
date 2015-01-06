@@ -8,6 +8,5 @@
   <snb_button id=rt       txt="Bugs"     url="/support/rt.html">
   <snb_button id=repos    txt="Repository"   url="repos.html">
   <snb_button id=mirror   txt="Mirror"       url="mirror.html">
-  <snb_button id=gitweb   txt="GitWeb"       url="http://git.openssl.org/">
 </snb>
 
