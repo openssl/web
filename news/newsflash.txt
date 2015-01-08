@@ -1,7 +1,7 @@
-15-Oct-2014: <a href="ROOT/news/secadv_20150108.txt">Security Advisory</a>: eight security fixes
-15-Oct-2014: OpenSSL 1.0.1k is now <a href="ROOT/source/">available</a>, including bug and security fixes
-15-Oct-2014: OpenSSL 1.0.0p is now <a href="ROOT/source/">available</a>, including bug and security fixes
-15-Oct-2014: OpenSSL 0.9.8zd is now <a href="ROOT/source/">available</a>, including bug and security fixes
+08-Jan-2015: <a href="ROOT/news/secadv_20150108.txt">Security Advisory</a>: eight security fixes
+08-Jan-2015: OpenSSL 1.0.1k is now <a href="ROOT/source/">available</a>, including bug and security fixes
+08-Jan-2015: OpenSSL 1.0.0p is now <a href="ROOT/source/">available</a>, including bug and security fixes
+08-Jan-2015: OpenSSL 0.9.8zd is now <a href="ROOT/source/">available</a>, including bug and security fixes
 15-Oct-2014: <a href="ROOT/news/secadv_20141015.txt">Security Advisory</a>: four security fixes
 15-Oct-2014: OpenSSL 1.0.1j is now <a href="ROOT/source/">available</a>, including bug and security fixes
 15-Oct-2014: OpenSSL 1.0.0o is now <a href="ROOT/source/">available</a>, including bug and security fixes
