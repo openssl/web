@@ -9,6 +9,7 @@ SNAP=/v/openssl/checkouts/openssl
 PODSHOME=$(SNAP)/doc
 
 FORCE=#-f
+QUIET=--quiet
 
 DIRS= about docs news source support
 
@@ -27,3 +28,13 @@ generated:
 	perl run-faq.pl <$(SNAP)/FAQ >support/faq.inc
 	perl run-fundingfaq.pl < support/funding/support-faq.txt >support/funding/support-faq.inc
 	( cd news && xsltproc vulnerabilities.xsl vulnerabilities.xml > vulnerabilities.wml )
+
+# Update release notes (and other items, but relnotes is the use-case)
+relupd:
+	( cd $(SNAP)/.. ; for dir in openssl* ; do \
+		echo Updating $$dir ; cd $$dir ; git pull $(QUIET) ; cd .. ; \
+		done )
+	git pull $(QUIET)
+	$(MAKE) simple
+
+
