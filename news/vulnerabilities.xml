@@ -5,7 +5,540 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20141015">
+<security updated="20150108">
+  <issue public="20150108">
+    <cve name="CVE-2014-3571"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="0.9.8" version="0.9.8u"/>
+    <affects base="0.9.8" version="0.9.8v"/>
+    <affects base="0.9.8" version="0.9.8w"/>
+    <affects base="0.9.8" version="0.9.8x"/>
+    <affects base="0.9.8" version="0.9.8y"/>
+    <affects base="0.9.8" version="0.9.8za"/>
+    <affects base="0.9.8" version="0.9.8zb"/>
+    <affects base="0.9.8" version="0.9.8zc"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.0" version="1.0.0n"/>
+    <affects base="1.0.0" version="1.0.0o"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <fixed base="1.0.1" version="1.0.1k" date="20150108"/>
+    <fixed base="1.0.0" version="1.0.0p" date="20150108"/>
+    <fixed base="0.9.8" version="0.9.8zd" date="20150108"/>
+
+    <description>
+      A carefully crafted DTLS message can cause a segmentation fault in OpenSSL
+      due to a NULL pointer dereference. This could lead to a Denial Of Service
+      attack.
+    </description>
+    <advisory url="http://www.openssl.org/news/secadv_20150108.txt"/>
+    <reported source="Markus Stenberg of Cisco Systems, Inc."/>
+  </issue>
+
+  <issue public="20150108">
+    <cve name="CVE-2015-0206"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.0" version="1.0.0n"/>
+    <affects base="1.0.0" version="1.0.0o"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <fixed base="1.0.1" version="1.0.1k" date="20150108"/>
+    <fixed base="1.0.0" version="1.0.0p" date="20150108"/>
+
+    <description>
+      A memory leak can occur in the dtls1_buffer_record function under certain
+      conditions. In particular this could occur if an attacker sent repeated
+      DTLS records with the same sequence number but for the next epoch. The
+      memory leak could be exploited by an attacker in a Denial of Service
+      attack through memory exhaustion.
+    </description>
+    <advisory url="http://www.openssl.org/news/secadv_20150108.txt"/>
+    <reported source="Chris Mueller"/>
+  </issue>
+
+  <issue public="20141021">
+    <cve name="CVE-2014-3569"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="0.9.8" version="0.9.8u"/>
+    <affects base="0.9.8" version="0.9.8v"/>
+    <affects base="0.9.8" version="0.9.8w"/>
+    <affects base="0.9.8" version="0.9.8x"/>
+    <affects base="0.9.8" version="0.9.8y"/>
+    <affects base="0.9.8" version="0.9.8za"/>
+    <affects base="0.9.8" version="0.9.8zb"/>
+    <affects base="0.9.8" version="0.9.8zc"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.0" version="1.0.0n"/>
+    <affects base="1.0.0" version="1.0.0o"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <fixed base="1.0.1" version="1.0.1k" date="20150108"/>
+    <fixed base="1.0.0" version="1.0.0p" date="20150108"/>
+    <fixed base="0.9.8" version="0.9.8zd" date="20150108"/>
+
+    <description>
+      When openssl is built with the no-ssl3 option and a SSL v3 ClientHello is
+      received the ssl method would be set to NULL which could later result in
+      a NULL pointer dereference.
+    </description>
+    <advisory url="http://www.openssl.org/news/secadv_20150108.txt"/>
+    <reported source="Frank Schmirler"/>
+  </issue>
+
+  <issue public="20150105">
+    <cve name="CVE-2014-3572"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="0.9.8" version="0.9.8u"/>
+    <affects base="0.9.8" version="0.9.8v"/>
+    <affects base="0.9.8" version="0.9.8w"/>
+    <affects base="0.9.8" version="0.9.8x"/>
+    <affects base="0.9.8" version="0.9.8y"/>
+    <affects base="0.9.8" version="0.9.8za"/>
+    <affects base="0.9.8" version="0.9.8zb"/>
+    <affects base="0.9.8" version="0.9.8zc"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.0" version="1.0.0n"/>
+    <affects base="1.0.0" version="1.0.0o"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <fixed base="1.0.1" version="1.0.1k" date="20150108"/>
+    <fixed base="1.0.0" version="1.0.0p" date="20150108"/>
+    <fixed base="0.9.8" version="0.9.8zd" date="20150108"/>
+
+    <description>
+      An OpenSSL client will accept a handshake using an ephemeral ECDH
+      ciphersuite using an ECDSA certificate if the server key exchange message
+      is omitted. This effectively removes forward secrecy from the ciphersuite.
+    </description>
+    <advisory url="http://www.openssl.org/news/secadv_20150108.txt"/>
+    <reported source="Karthikeyan Bhargavan of the PROSECCO team at INRIA"/>
+  </issue>
+
+  <issue public="20150106">
+    <cve name="CVE-2015-0204"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="0.9.8" version="0.9.8u"/>
+    <affects base="0.9.8" version="0.9.8v"/>
+    <affects base="0.9.8" version="0.9.8w"/>
+    <affects base="0.9.8" version="0.9.8x"/>
+    <affects base="0.9.8" version="0.9.8y"/>
+    <affects base="0.9.8" version="0.9.8za"/>
+    <affects base="0.9.8" version="0.9.8zb"/>
+    <affects base="0.9.8" version="0.9.8zc"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.0" version="1.0.0n"/>
+    <affects base="1.0.0" version="1.0.0o"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <fixed base="1.0.1" version="1.0.1k" date="20150108"/>
+    <fixed base="1.0.0" version="1.0.0p" date="20150108"/>
+    <fixed base="0.9.8" version="0.9.8zd" date="20150108"/>
+
+    <description>
+      An OpenSSL client will accept the use of an RSA temporary key in a
+      non-export RSA key exchange ciphersuite. A server could present a weak
+      temporary key and downgrade the security of the session.
+    </description>
+    <advisory url="http://www.openssl.org/news/secadv_20150108.txt"/>
+    <reported source="Karthikeyan Bhargavan of the PROSECCO team at INRIA"/>
+  </issue>
+
+  <issue public="20150108">
+    <cve name="CVE-2015-0205"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.0" version="1.0.0n"/>
+    <affects base="1.0.0" version="1.0.0o"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <fixed base="1.0.1" version="1.0.1k" date="20150108"/>
+    <fixed base="1.0.0" version="1.0.0p" date="20150108"/>
+
+    <description>
+      An OpenSSL server will accept a DH certificate for client authentication
+      without the certificate verify message. This effectively allows a client
+      to authenticate without the use of a private key. This only affects
+      servers which trust a client certificate authority which issues
+      certificates containing DH keys: these are extremely rare and hardly ever
+      encountered.
+    </description>
+    <advisory url="http://www.openssl.org/news/secadv_20150108.txt"/>
+    <reported source="Karthikeyan Bhargavan of the PROSECCO team at INRIA"/>
+  </issue>
+
+  <issue public="20150105">
+    <cve name="CVE-2014-8275"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="0.9.8" version="0.9.8u"/>
+    <affects base="0.9.8" version="0.9.8v"/>
+    <affects base="0.9.8" version="0.9.8w"/>
+    <affects base="0.9.8" version="0.9.8x"/>
+    <affects base="0.9.8" version="0.9.8y"/>
+    <affects base="0.9.8" version="0.9.8za"/>
+    <affects base="0.9.8" version="0.9.8zb"/>
+    <affects base="0.9.8" version="0.9.8zc"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.0" version="1.0.0n"/>
+    <affects base="1.0.0" version="1.0.0o"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <fixed base="1.0.1" version="1.0.1k" date="20150108"/>
+    <fixed base="1.0.0" version="1.0.0p" date="20150108"/>
+    <fixed base="0.9.8" version="0.9.8zd" date="20150108"/>
+
+    <description>
+      OpenSSL accepts several non-DER-variations of certificate signature
+      algorithm and signature encodings. OpenSSL also does not enforce a
+      match between the signature algorithm between the signed and unsigned
+      portions of the certificate. By modifying the contents of the
+      signature algorithm or the encoding of the signature, it is possible
+      to change the certificate's fingerprint.
+
+      This does not allow an attacker to forge certificates, and does not
+      affect certificate verification or OpenSSL servers/clients in any other
+      way. It also does not affect common revocation mechanisms. Only custom
+      applications that rely on the uniqueness of the fingerprint (e.g.
+      certificate blacklists) may be affected.
+    </description>
+    <advisory url="http://www.openssl.org/news/secadv_20150108.txt"/>
+    <reported source="Antti Karjalainen and Tuomo Untinen from the Codenomicon CROSS program/Konrad Kraszewski from Google"/>
+  </issue>
+
+  <issue public="20150108">
+    <cve name="CVE-2014-3570"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="0.9.8" version="0.9.8u"/>
+    <affects base="0.9.8" version="0.9.8v"/>
+    <affects base="0.9.8" version="0.9.8w"/>
+    <affects base="0.9.8" version="0.9.8x"/>
+    <affects base="0.9.8" version="0.9.8y"/>
+    <affects base="0.9.8" version="0.9.8za"/>
+    <affects base="0.9.8" version="0.9.8zb"/>
+    <affects base="0.9.8" version="0.9.8zc"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.0" version="1.0.0n"/>
+    <affects base="1.0.0" version="1.0.0o"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <fixed base="1.0.1" version="1.0.1k" date="20150108"/>
+    <fixed base="1.0.0" version="1.0.0p" date="20150108"/>
+    <fixed base="0.9.8" version="0.9.8zd" date="20150108"/>
+
+    <description>
+      Bignum squaring (BN_sqr) may produce incorrect results on some platforms,
+      including x86_64. This bug occurs at random with a very low probability,
+      and is not known to be exploitable in any way, though its exact impact is
+      difficult to determine. The following has been determined:
+
+      *) The probability of BN_sqr producing an incorrect result at random is
+      very low: 1/2^64 on the single affected 32-bit platform (MIPS) and 1/2^128
+      on affected 64-bit platforms.
+      *) On most platforms, RSA follows a different code path and RSA operations
+      are not affected at all. For the remaining platforms (e.g. OpenSSL built
+      without assembly support), pre-existing countermeasures thwart bug
+      attacks [1].
+      *) Static ECDH is theoretically affected: it is possible to construct
+      elliptic curve points that would falsely appear to be on the given curve.
+      However, there is no known computationally feasible way to construct such
+      points with low order, and so the security of static ECDH private keys is
+      believed to be unaffected.
+      *) Other routines known to be theoretically affected are modular
+      exponentiation, primality testing, DSA, RSA blinding, JPAKE and SRP. No
+      exploits are known and straightforward bug attacks fail - either the
+      attacker cannot control when the bug triggers, or no private key material
+      is involved.
+    </description>
+    <advisory url="http://www.openssl.org/news/secadv_20150108.txt"/>
+    <reported source="Pieter Wuille (Blockstream)"/>
+  </issue>
+
   <issue public="20141015">
     <cve name="2014-3513"/>
     <affects base="1.0.1" version="1.0.1"/>

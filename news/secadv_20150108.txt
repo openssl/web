@@ -1,0 +1,218 @@
+OpenSSL Security Advisory [08 Jan 2015]
+=======================================
+
+DTLS segmentation fault in dtls1_get_record (CVE-2014-3571)
+===========================================================
+
+Severity: Moderate
+
+A carefully crafted DTLS message can cause a segmentation fault in OpenSSL due
+to a NULL pointer dereference. This could lead to a Denial Of Service attack.
+
+This issue affects all current OpenSSL versions: 1.0.1, 1.0.0 and 0.9.8.
+
+OpenSSL 1.0.1 DTLS users should upgrade to 1.0.1k.
+OpenSSL 1.0.0 DTLS users should upgrade to 1.0.0p.
+OpenSSL 0.9.8 DTLS users should upgrade to 0.9.8zd.
+
+This issue was reported to OpenSSL on 22nd October 2014 by Markus Stenberg of
+Cisco Systems, Inc. The fix was developed by Stephen Henson of the OpenSSL
+core team.
+
+DTLS memory leak in dtls1_buffer_record (CVE-2015-0206)
+=======================================================
+
+Severity: Moderate
+
+A memory leak can occur in the dtls1_buffer_record function under certain
+conditions. In particular this could occur if an attacker sent repeated DTLS
+records with the same sequence number but for the next epoch. The memory leak
+could be exploited by an attacker in a Denial of Service attack through memory
+exhaustion.
+
+This issue affects OpenSSL versions: 1.0.1 and 1.0.0.
+
+OpenSSL 1.0.1 DTLS users should upgrade to 1.0.1k.
+OpenSSL 1.0.0 DTLS users should upgrade to 1.0.0p.
+
+This issue was reported to OpenSSL on 7th January 2015 by Chris Mueller who also
+provided an initial patch. Further analysis was performed by Matt Caswell of the
+OpenSSL development team, who also developed the final patch.
+
+no-ssl3 configuration sets method to NULL (CVE-2014-3569)
+=========================================================
+
+Severity: Low
+
+When openssl is built with the no-ssl3 option and a SSL v3 ClientHello is
+received the ssl method would be set to NULL which could later result in
+a NULL pointer dereference.
+
+This issue affects all current OpenSSL versions: 1.0.1, 1.0.0 and 0.9.8.
+
+OpenSSL 1.0.1 users should upgrade to 1.0.1k.
+OpenSSL 1.0.0 users should upgrade to 1.0.0p.
+OpenSSL 0.9.8 users should upgrade to 0.9.8zd.
+
+This issue was reported to OpenSSL on 17th October 2014 by Frank Schmirler. The
+fix was developed by Kurt Roeckx.
+
+
+ECDHE silently downgrades to ECDH [Client] (CVE-2014-3572)
+==========================================================
+
+Severity: Low
+
+An OpenSSL client will accept a handshake using an ephemeral ECDH ciphersuite
+using an ECDSA certificate if the server key exchange message is omitted. This
+effectively removes forward secrecy from the ciphersuite.
+
+This issue affects all current OpenSSL versions: 1.0.1, 1.0.0 and 0.9.8.
+
+OpenSSL 1.0.1 users should upgrade to 1.0.1k.
+OpenSSL 1.0.0 users should upgrade to 1.0.0p.
+OpenSSL 0.9.8 users should upgrade to 0.9.8zd.
+
+This issue was reported to OpenSSL on 22nd October 2014 by Karthikeyan
+Bhargavan of the PROSECCO team at INRIA. The fix was developed by Stephen
+Henson of the OpenSSL core team.
+
+
+RSA silently downgrades to EXPORT_RSA [Client] (CVE-2015-0204)
+==============================================================
+
+Severity: Low
+
+An OpenSSL client will accept the use of an RSA temporary key in a non-export
+RSA key exchange ciphersuite. A server could present a weak temporary key
+and downgrade the security of the session.
+
+This issue affects all current OpenSSL versions: 1.0.1, 1.0.0 and 0.9.8.
+
+OpenSSL 1.0.1 users should upgrade to 1.0.1k.
+OpenSSL 1.0.0 users should upgrade to 1.0.0p.
+OpenSSL 0.9.8 users should upgrade to 0.9.8zd.
+
+This issue was reported to OpenSSL on 22nd October 2014 by Karthikeyan
+Bhargavan of the PROSECCO team at INRIA. The fix was developed by Stephen
+Henson of the OpenSSL core team.
+
+
+DH client certificates accepted without verification [Server] (CVE-2015-0205)
+=============================================================================
+
+Severity: Low
+
+An OpenSSL server will accept a DH certificate for client authentication
+without the certificate verify message. This effectively allows a client
+to authenticate without the use of a private key. This only affects servers
+which trust a client certificate authority which issues certificates
+containing DH keys: these are extremely rare and hardly ever encountered.
+
+This issue affects OpenSSL versions: 1.0.1 and 1.0.0.
+
+OpenSSL 1.0.1 users should upgrade to 1.0.1k.
+OpenSSL 1.0.0 users should upgrade to 1.0.0p.
+
+This issue was reported to OpenSSL on 22nd October 2014 by Karthikeyan
+Bhargavan of the PROSECCO team at INRIA. The fix was developed by Stephen
+Henson of the OpenSSL core team.
+
+
+Certificate fingerprints can be modified (CVE-2014-8275)
+========================================================
+
+Severity: Low
+
+OpenSSL accepts several non-DER-variations of certificate signature
+algorithm and signature encodings. OpenSSL also does not enforce a
+match between the signature algorithm between the signed and unsigned
+portions of the certificate. By modifying the contents of the
+signature algorithm or the encoding of the signature, it is possible
+to change the certificate's fingerprint.
+
+This does not allow an attacker to forge certificates, and does not
+affect certificate verification or OpenSSL servers/clients in any
+other way. It also does not affect common revocation mechanisms. Only
+custom applications that rely on the uniqueness of the fingerprint
+(e.g. certificate blacklists) may be affected.
+
+This issue affects all current OpenSSL versions: 1.0.1, 1.0.0 and
+0.9.8.
+
+OpenSSL 1.0.1 users should upgrade to 1.0.1k.
+OpenSSL 1.0.0 users should upgrade to 1.0.0p.
+OpenSSL 0.9.8 users should upgrade to 0.9.8zd.
+
+One variant of this issue was discovered by Antti Karjalainen and
+Tuomo Untinen from the Codenomicon CROSS program and reported to
+OpenSSL on 1st December 2014 by NCSC-FI Vulnerability
+Co-ordination. Another variant was independently reported to OpenSSL
+on 12th December 2014 by Konrad Kraszewski from Google. Further
+analysis was conducted and fixes were developed by Stephen Henson of
+the OpenSSL core team.
+
+Bignum squaring may produce incorrect results (CVE-2014-3570)
+=============================================================
+
+Severity: Low
+
+Bignum squaring (BN_sqr) may produce incorrect results on some
+platforms, including x86_64. This bug occurs at random with a very
+low probability, and is not known to be exploitable in any way, though
+its exact impact is difficult to determine. The following has been
+determined:
+
+*) The probability of BN_sqr producing an incorrect result at random
+is very low: 1/2^64 on the single affected 32-bit platform (MIPS) and
+1/2^128 on affected 64-bit platforms.
+*) On most platforms, RSA follows a different code path and RSA
+operations are not affected at all. For the remaining platforms
+(e.g. OpenSSL built without assembly support), pre-existing
+countermeasures thwart bug attacks [1].
+*) Static ECDH is theoretically affected: it is possible to construct
+elliptic curve points that would falsely appear to be on the given
+curve. However, there is no known computationally feasible way to
+construct such points with low order, and so the security of static
+ECDH private keys is believed to be unaffected.
+*) Other routines known to be theoretically affected are modular
+exponentiation, primality testing, DSA, RSA blinding, JPAKE and
+SRP. No exploits are known and straightforward bug attacks fail -
+either the attacker cannot control when the bug triggers, or no
+private key material is involved.
+
+This issue affects all current OpenSSL versions: 1.0.1, 1.0.0 and 0.9.8.
+
+OpenSSL 1.0.1 users should upgrade to 1.0.1k.
+OpenSSL 1.0.0 users should upgrade to 1.0.0p.
+OpenSSL 0.9.8 users should upgrade to 0.9.8zd.
+
+This issue was reported to OpenSSL on 2nd November 2014 by Pieter Wuille
+(Blockstream) who also suggested an initial fix. Further analysis was
+conducted by the OpenSSL development team and Adam Langley of
+Google. The final fix was developed by Andy Polyakov of the OpenSSL
+core team.
+
+[1] http://css.csail.mit.edu/6.858/2013/readings/rsa-bug-attacks.pdf
+
+Note
+====
+
+As per our previous announcements and our Release Strategy
+(https://www.openssl.org/about/releasestrat.html), support for OpenSSL versions
+1.0.0 and 0.9.8 will cease on 31st December 2015. No security updates for these
+releases will be provided after that date. Users of these releases are advised
+to upgrade.
+
+References
+==========
+
+URL for this Security Advisory:
+https://www.openssl.org/news/secadv_20150108.txt
+
+Note: the online version of the advisory may be updated with additional
+details over time.
+
+For details of OpenSSL severity classifications please see:
+https://www.openssl.org/about/secpolicy.html
+
