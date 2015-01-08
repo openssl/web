@@ -32,9 +32,9 @@ generated:
 # Update release notes (and other items, but relnotes is the use-case)
 relupd:
 	( cd $(SNAP)/.. ; for dir in openssl* ; do \
-		echo Updating $$dir ; cd $$dir ; git pull $(QUIET) ; cd .. ; \
+		echo Updating $$dir ; cd $$dir ; sudo -u openssl git pull $(QUIET) ; cd .. ; \
 		done )
 	git pull $(QUIET)
-	$(MAKE) simple
+	sudo -u www-data $(MAKE) simple
 
 
