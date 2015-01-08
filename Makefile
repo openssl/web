@@ -21,8 +21,9 @@ manpages:
 	sh ./run-pod2html.sh $(PODSHOME)
 
 generated:
+	cp -f $(SNAP)/LICENSE source/license.inc
+	cp -f $(PODSHOME)/HOWTO/*.txt docs/HOWTO/.
 	perl run-changelog.pl <$(SNAP)/CHANGES >news/changelog.inc
 	perl run-faq.pl <$(SNAP)/FAQ >support/faq.inc
 	perl run-fundingfaq.pl < support/funding/support-faq.txt >support/funding/support-faq.inc
-	cp $(PODSHOME)/HOWTO/*.txt docs/HOWTO/.
 	( cd news && xsltproc vulnerabilities.xsl vulnerabilities.xml > vulnerabilities.wml )
