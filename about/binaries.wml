@@ -23,6 +23,13 @@ packages.</p>
 </ul>
 
 <ul>
+    <item name="OpenSSL for Windows"
+          info="Pre-compiled Win32/64 libraries without external dependencies to the Microsoft Visual Studio
+Runtime DLLs, expect for the system provided msvcrt.dll"
+          url="http://indy.fulgan.com/SSL/">
+</ul>
+
+<ul>
     <item name="OpenSSL for Solaris"
           info="Versions for Solaris 2.5 - 11 SPARC and X86"
           url=" http://www.unixpackages.com/">
