@@ -263,7 +263,7 @@ should be defined in a local header file that is not exported.
 
 Ideally, functions should be short and sweet, and do just one thing.
 A rule of thumb is that they should fit on one or two screenfuls of text
-as we all know), and do one thing and do that well.
+(25 lines as we all know), and do one thing and do that well.
 
 The maximum length of a function is often inversely proportional to the
 complexity and indentation level of that function. So, if you have a
@@ -449,7 +449,7 @@ Other API's use the following pattern:
     >= 1: success, with value returning additional information
     <= 0: failure with return value indicating why things failed
 
-Somtimes a return value of -1 can mean "should retry" (e.g., BIO, SSL, et al).
+Sometimes a return value of -1 can mean "should retry" (e.g., BIO, SSL, et al).
 
 Functions whose return value is the actual result of a computation,
 rather than an indication of whether the computation succeeded, are not
