@@ -34,7 +34,7 @@ relupd:
 	( cd $(SNAP)/.. ; for dir in openssl* ; do \
 		echo Updating $$dir ; cd $$dir ; sudo -u openssl git pull $(QUIET) ; cd .. ; \
 		done )
-	git pull $(QUIET)
+	sudo -u www-data git pull $(QUIET)
 	sudo -u www-data $(MAKE) simple
 
 
