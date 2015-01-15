@@ -31,6 +31,7 @@ generated:
 
 # Update release notes (and other items, but relnotes is the use-case)
 relupd:
+	id | grep -q root || { echo you must sudo ; exit 1; }
 	( cd $(SNAP)/.. ; for dir in openssl* ; do \
 		echo Updating $$dir ; cd $$dir ; sudo -u openssl git pull $(QUIET) ; cd .. ; \
 		done )
