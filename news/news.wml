@@ -11,7 +11,7 @@ the OpenSSL toolkit. The presented contents reflect the current state of the
 
 <ul>
 <li><a href="openssl-notes.html">Release notes for all OpenSSL branches.</a>
-<li><a href="openssl-1.0.2-notes.html">Pre-release notes for 1.0.2 branch of OpenSSL.</a>
+<li><a href="openssl-1.0.2-notes.html">Release notes for 1.0.2 branch of OpenSSL.</a>
 <li><a href="openssl-1.0.1-notes.html">Release notes for 1.0.1 branch of OpenSSL.</a>
 <li><a href="openssl-1.0.0-notes.html">Release notes for 1.0.0 branch of OpenSSL.</a>
 <li><a href="openssl-0.9.8-notes.html">Release notes for 0.9.8 branch of OpenSSL.</a>

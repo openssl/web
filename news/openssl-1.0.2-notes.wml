@@ -1,21 +1,4 @@
 
 #use wml::openssl area=news page=openssl-1.0.2-notes
 
-<title>OpenSSL 1.0.2 Notes</title>
-
-<h1>OpenSSL 1.0.2 Notes</h1>
-
-Version 1.0.2 of the OpenSSL toolkit is now in beta. Major changes
-and known issues are summarised below. This page will be updated regularly
-as problems are reported and fixed.
-
-<p>
-Additional details of changes can be found in the
-<a href="https://github.com/openssl/openssl/blob/OpenSSL_1_0_2-stable/CHANGES">
-change log.</a>.
-<p>
-The complete list of changes can be found in the
-<a href="https://github.com/openssl/openssl/commits/OpenSSL_1_0_2-stable">commit log</a>.
-<p>
-
-<notes minversion="1.0.2" maxversion="1.0.2">
+<notes>
