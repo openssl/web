@@ -1,3 +1,4 @@
+22-Jan-2015: OpenSSL 1.0.2 is now <a href="ROOT/source/">available</a>, a major release
 15-Jan-2015: New releases to resolve Windows/OpenVMS compilation problems:
 15-Jan-2015: OpenSSL 1.0.1l is now <a href="ROOT/source/">available</a>, including bug fixes
 15-Jan-2015: OpenSSL 1.0.0q is now <a href="ROOT/source/">available</a>, including bug fixes
