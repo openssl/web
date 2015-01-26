@@ -39,8 +39,11 @@ features which are not present in other releases.
 </ul>
 
 <p>
-Other standards:
+Other standards and documentation:
 <ul>
+    <item name="OpenSSL Cookbook"
+          info="A free ebook that covers configuration and command-line usage; highly recommended. First published in 2013; continuously updated)."
+          url="https://www.feistyduck.com/books/openssl-cookbook/">
     <item name="X.680 and X.690"
           info="The official ASN.1, BER and DER specifications."
           url="http://www.itu.int/ITU-T/studygroups/com10/languages/">
