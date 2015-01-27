@@ -120,60 +120,8 @@
 
   <issue public="20141021">
     <cve name="2014-3569"/>
-    <affects base="0.9.8" version="0.9.8"/>
-    <affects base="0.9.8" version="0.9.8a"/>
-    <affects base="0.9.8" version="0.9.8b"/>
-    <affects base="0.9.8" version="0.9.8c"/>
-    <affects base="0.9.8" version="0.9.8d"/>
-    <affects base="0.9.8" version="0.9.8e"/>
-    <affects base="0.9.8" version="0.9.8f"/>
-    <affects base="0.9.8" version="0.9.8g"/>
-    <affects base="0.9.8" version="0.9.8h"/>
-    <affects base="0.9.8" version="0.9.8i"/>
-    <affects base="0.9.8" version="0.9.8j"/>
-    <affects base="0.9.8" version="0.9.8k"/>
-    <affects base="0.9.8" version="0.9.8l"/>
-    <affects base="0.9.8" version="0.9.8m"/>
-    <affects base="0.9.8" version="0.9.8n"/>
-    <affects base="0.9.8" version="0.9.8o"/>
-    <affects base="0.9.8" version="0.9.8p"/>
-    <affects base="0.9.8" version="0.9.8q"/>
-    <affects base="0.9.8" version="0.9.8r"/>
-    <affects base="0.9.8" version="0.9.8s"/>
-    <affects base="0.9.8" version="0.9.8t"/>
-    <affects base="0.9.8" version="0.9.8u"/>
-    <affects base="0.9.8" version="0.9.8v"/>
-    <affects base="0.9.8" version="0.9.8w"/>
-    <affects base="0.9.8" version="0.9.8x"/>
-    <affects base="0.9.8" version="0.9.8y"/>
-    <affects base="0.9.8" version="0.9.8za"/>
-    <affects base="0.9.8" version="0.9.8zb"/>
     <affects base="0.9.8" version="0.9.8zc"/>
-    <affects base="1.0.0" version="1.0.0"/>
-    <affects base="1.0.0" version="1.0.0a"/>
-    <affects base="1.0.0" version="1.0.0b"/>
-    <affects base="1.0.0" version="1.0.0c"/>
-    <affects base="1.0.0" version="1.0.0d"/>
-    <affects base="1.0.0" version="1.0.0e"/>
-    <affects base="1.0.0" version="1.0.0f"/>
-    <affects base="1.0.0" version="1.0.0g"/>
-    <affects base="1.0.0" version="1.0.0i"/>
-    <affects base="1.0.0" version="1.0.0j"/>
-    <affects base="1.0.0" version="1.0.0k"/>
-    <affects base="1.0.0" version="1.0.0l"/>
-    <affects base="1.0.0" version="1.0.0m"/>
-    <affects base="1.0.0" version="1.0.0n"/>
     <affects base="1.0.0" version="1.0.0o"/>
-    <affects base="1.0.1" version="1.0.1"/>
-    <affects base="1.0.1" version="1.0.1a"/>
-    <affects base="1.0.1" version="1.0.1b"/>
-    <affects base="1.0.1" version="1.0.1c"/>
-    <affects base="1.0.1" version="1.0.1d"/>
-    <affects base="1.0.1" version="1.0.1e"/>
-    <affects base="1.0.1" version="1.0.1f"/>
-    <affects base="1.0.1" version="1.0.1g"/>
-    <affects base="1.0.1" version="1.0.1h"/>
-    <affects base="1.0.1" version="1.0.1i"/>
     <affects base="1.0.1" version="1.0.1j"/>
     <fixed base="1.0.1" version="1.0.1k" date="20150108"/>
     <fixed base="1.0.0" version="1.0.0p" date="20150108"/>
