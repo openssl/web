@@ -13,13 +13,7 @@ QUIET=--quiet
 
 DIRS= about docs news source support
 
-all: simple manpages
-
-simple: generated
-	wmk $(FORCE) -I $(SNAP) -a $(DIRS) index.wml
-
-manpages:
-	sh ./run-pod2html.sh $(PODSHOME)
+all: generated simple manpages
 
 generated:
 	cp -f $(SNAP)/LICENSE source/license.inc
@@ -29,6 +23,12 @@ generated:
 	perl run-fundingfaq.pl < support/funding/support-faq.txt >support/funding/support-faq.inc
 	( cd news && xsltproc vulnerabilities.xsl vulnerabilities.xml > vulnerabilities.wml )
 
+simple:
+	wmk $(FORCE) -I $(SNAP) -a $(DIRS) index.wml
+
+manpages:
+	sh ./run-pod2html.sh $(PODSHOME)
+
 # Update release notes (and other items, but relnotes is the use-case)
 relupd:
 	id | grep -q root || { echo you must sudo ; exit 1; }
@@ -36,6 +36,4 @@ relupd:
 		echo Updating $$dir ; cd $$dir ; sudo -u openssl git pull $(QUIET) ; cd .. ; \
 		done )
 	sudo -u www-data git pull $(QUIET)
-	sudo -u www-data $(MAKE) simple
-
-
+	sudo -u www-data $(MAKE) generated simple
