@@ -402,7 +402,7 @@ if ($maxversion eq "") {
 }
 
 
-my $dir = defined $ENV{PODSHOME} ? "$ENV{PODSHOME}/../.." : "/v/openssl/checkouts";
+my $dir = defined $ENV{PODSHOME} ? "$ENV{PODSHOME}/../.." : "/var/cache/openssl/checkouts";
 if ($dirname ne "") {
 	$file = "${dir}/$dirname/NEWS";
 	$custompage = 1;

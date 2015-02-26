@@ -5,7 +5,7 @@
 # Used to have a hack with a lockfile.
 # Not needed since this is fast now.
 
-SNAP=/v/openssl/checkouts/openssl
+SNAP=/var/cache/openssl/checkouts/openssl
 PODSHOME=$(SNAP)/doc
 
 FORCE=#-f
