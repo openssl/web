@@ -31,9 +31,12 @@ manpages:
 
 # Update release notes (and other items, but relnotes is the use-case)
 relupd:
-	id | grep -q root || { echo you must sudo ; exit 1; }
-	( cd $(SNAP)/.. ; for dir in openssl* ; do \
-		echo Updating $$dir ; cd $$dir ; sudo -u openssl git pull $(QUIET) ; cd .. ; \
-		done )
-	sudo -u www-data git pull $(QUIET)
-	sudo -u www-data $(MAKE) generated simple
+	if [ "`id -un`" != openssl; then \
+		echo "**** you must do 'sudo -u openssl -H bash'"; \
+		exit 1; \
+	fi
+	cd $(SNAP)/.. ; for dir in openssl* ; do \
+		echo Updating $$dir ; ( cd $$dir ; git pull $(QUIET) ) ; \
+	done
+	git pull $(QUIET)
+	$(MAKE) generated simple
