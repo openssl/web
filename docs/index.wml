@@ -42,7 +42,7 @@ features which are not present in other releases.
 Other standards and documentation:
 <ul>
     <item name="OpenSSL Cookbook"
-          info="A free ebook that covers configuration and command-line usage; highly recommended. First published in 2013; continuously updated)."
+          info="A free ebook that covers configuration and command-line usage; highly recommended. Updated in March, with more than 30 new pages."
           url="https://www.feistyduck.com/books/openssl-cookbook/">
     <item name="X.680 and X.690"
           info="The official ASN.1, BER and DER specifications."
