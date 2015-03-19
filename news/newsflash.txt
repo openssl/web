@@ -1,3 +1,7 @@
+19-Mar-2015: <a href="ROOT/news/secadv_20150319.txt">Security Advisory</a>: twelve security fixes
+19-Mar-2015: OpenSSL 1.0.1m is now <a href="ROOT/source/">available</a>, including bug and security fixes
+19-Mar-2015: OpenSSL 1.0.0r is now <a href="ROOT/source/">available</a>, including bug and security fixes
+19-Mar-2015: OpenSSL 0.9.8zf is now <a href="ROOT/source/">available</a>, including bug and security fixes
 22-Jan-2015: OpenSSL 1.0.2 is now <a href="ROOT/source/">available</a>, a major release
 15-Jan-2015: New releases to resolve Windows/OpenVMS compilation problems:
 15-Jan-2015: OpenSSL 1.0.1l is now <a href="ROOT/source/">available</a>, including bug fixes
