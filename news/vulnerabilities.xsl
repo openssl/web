@@ -63,6 +63,9 @@ receive security updates</p>
 <xsl:template match="issue">
   <dt>
   <xsl:apply-templates select="cve"/>
+  <xsl:if test="impact/@severity">
+    [<xsl:value-of select="impact/@severity"/> severity]
+  </xsl:if>
 <xsl:call-template name="dateformat">
   <xsl:with-param name="date" select="@public"/>
 </xsl:call-template>
