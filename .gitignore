@@ -6,6 +6,7 @@ pod2htmi.tmp
 blog
 news/changelog.inc
 news/vulnerabilities.wml
+source/license.inc
 support/faq.inc
 support/funding/support-faq.inc
 .ssh
