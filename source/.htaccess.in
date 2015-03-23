@@ -30,4 +30,4 @@ RewriteRule openssl-(fips.*)  old/fips/openssl-$1 [L]
     RemoveEncoding .gz
 </Files>
 
-RewriteRule ^/latest.tar.gz$ /%%LATEST%% [R=302,NC]
+RewriteRule ^latest\.tar\.gz$ %%LATEST%% [R=302,NC]
