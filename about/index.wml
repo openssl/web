@@ -12,7 +12,7 @@ commercial-grade, full-featured, and <a
 href="http://www.opensource.org/">Open Source</a> toolkit implementing the
 Secure Sockets Layer (SSL v2/v3) and
 Transport Layer Security (TLS
-v1) protocols as well as a full-strength general purpose cryptography library
+v1.0/v1.1/v1.2) protocols as well as a full-strength general purpose cryptography library
 managed by a worldwide community of volunteers that use the Internet to
 communicate, plan, and develop the OpenSSL toolkit and its related
 documentation.
