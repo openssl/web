@@ -154,10 +154,13 @@ a function or keyword. Use a space after most keywords:
     if, switch, case, for, do, while, return
 
 Do not use a space after sizeof, typeof, alignof, or __attribute__.
-They look somewhat like functions and are usually used with parentheses
-in OpenSSL, although they are not required in the language:
+They look somewhat like functions and should have parentheses
+in OpenSSL, although they are not required by the language. For sizeof,
+use a variable when at all possible, to ensure that type changes are
+properly reflected:
 
-    s = sizeof(struct file);
+    SOMETYPE *p = OPENSSL_malloc(sizeof(*p) * num_of_elements);
+
 
 Do not add spaces around the inside of parenthesized expressions.
 This example is wrong:
@@ -535,6 +538,20 @@ To maximise portability the version of C defined in ISO/IEC 9899:1990
 should be used. This is more commonly referred to as C90. ISO/IEC 9899:1999
 (also known as C99) is not supported on some platforms that OpenSSL is
 used on and therefore should be avoided.
+
+
+                Chapter 21: Miscellaneous
+
+Do not use ! to check if a pointer is NULL, or to see if a str...cmp
+function found a match.  For example, these are wrong:
+
+    if (!(p = BN_new())) ...
+    if (!strcmp(a, "FOO")) ...
+
+Do this instead:
+
+    if ((p = BN_new()) == NULL)...
+    if (strcmp(a, "FOO") == 0) ...
 
 
                 Appendix A: References
