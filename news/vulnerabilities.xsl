@@ -37,6 +37,8 @@
 
 <h2>Notification of security vulnerabilities</h2>
 
+<p>Please read the <a href="../about/secpolicy.html">OpenSSL Security Policy</a>.</p>
+
 <p>To get notified when an OpenSSL update addresses a security vulnerability please subscribe to the
 <a href="https://www.openssl.org/support/community.html">openssl-announce mailing list</a></p>
 
