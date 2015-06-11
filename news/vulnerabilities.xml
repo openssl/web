@@ -7,7 +7,7 @@
 
 <security updated="20150611">
   <issue public="20150611">
-    <cve name="CVE-2015-1788"/>
+    <cve name="2015-1788"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -67,7 +67,7 @@
   </issue>
 
   <issue public="20150611">
-    <cve name="CVE-2015-1789"/>
+    <cve name="2015-1789"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -157,7 +157,7 @@
   </issue>
 
   <issue public="20150611">
-    <cve name="CVE-2015-1790"/>
+    <cve name="2015-1790"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -243,7 +243,7 @@
   </issue>
 
   <issue public="20150611">
-    <cve name="CVE-2015-1792"/>
+    <cve name="2015-1792"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -327,7 +327,7 @@
   </issue>
 
   <issue public="20150602">
-    <cve name="CVE-2015-1791"/>
+    <cve name="2015-1791"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -409,7 +409,7 @@
   </issue>
 
   <issue public="20150611">
-    <cve name="CVE-2014-8176"/>
+    <cve name="2014-8176"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
