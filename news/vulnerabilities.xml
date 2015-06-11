@@ -48,7 +48,7 @@
     <affects base="1.0.1" version="1.0.1m"/>
     <affects base="1.0.2" version="1.0.2"/>
     <affects base="1.0.2" version="1.0.2a"/>
-    <fixed base="1.0.2" version="1.0.2a" date="20150611"/>
+    <fixed base="1.0.2" version="1.0.2b" date="20150611"/>
     <fixed base="1.0.1" version="1.0.1n" date="20150611"/>
     <fixed base="1.0.0" version="1.0.0e" date="20110906"/>
     <fixed base="0.9.8" version="0.9.8s" date="20120104"/>
@@ -134,7 +134,7 @@
     <affects base="1.0.1" version="1.0.1m"/>
     <affects base="1.0.2" version="1.0.2"/>
     <affects base="1.0.2" version="1.0.2a"/>
-    <fixed base="1.0.2" version="1.0.2a" date="20150611"/>
+    <fixed base="1.0.2" version="1.0.2b" date="20150611"/>
     <fixed base="1.0.1" version="1.0.1n" date="20150611"/>
     <fixed base="1.0.0" version="1.0.0s" date="20150611"/>
     <fixed base="0.9.8" version="0.9.8zg" date="20150611"/>
@@ -224,7 +224,7 @@
     <affects base="1.0.1" version="1.0.1m"/>
     <affects base="1.0.2" version="1.0.2"/>
     <affects base="1.0.2" version="1.0.2a"/>
-    <fixed base="1.0.2" version="1.0.2a" date="20150611"/>
+    <fixed base="1.0.2" version="1.0.2b" date="20150611"/>
     <fixed base="1.0.1" version="1.0.1n" date="20150611"/>
     <fixed base="1.0.0" version="1.0.0s" date="20150611"/>
     <fixed base="0.9.8" version="0.9.8zg" date="20150611"/>
@@ -310,7 +310,7 @@
     <affects base="1.0.1" version="1.0.1m"/>
     <affects base="1.0.2" version="1.0.2"/>
     <affects base="1.0.2" version="1.0.2a"/>
-    <fixed base="1.0.2" version="1.0.2a" date="20150611"/>
+    <fixed base="1.0.2" version="1.0.2b" date="20150611"/>
     <fixed base="1.0.1" version="1.0.1n" date="20150611"/>
     <fixed base="1.0.0" version="1.0.0s" date="20150611"/>
     <fixed base="0.9.8" version="0.9.8zg" date="20150611"/>
@@ -394,7 +394,7 @@
     <affects base="1.0.1" version="1.0.1m"/>
     <affects base="1.0.2" version="1.0.2"/>
     <affects base="1.0.2" version="1.0.2a"/>
-    <fixed base="1.0.2" version="1.0.2a" date="20150611"/>
+    <fixed base="1.0.2" version="1.0.2b" date="20150611"/>
     <fixed base="1.0.1" version="1.0.1n" date="20150611"/>
     <fixed base="1.0.0" version="1.0.0s" date="20150611"/>
     <fixed base="0.9.8" version="0.9.8zg" date="20150611"/>
