@@ -1,3 +1,4 @@
+06-Jul-2015: OpenSSL 1.0.2d and 1.0.1p <a href="https://mta.openssl.org/pipermail/openssl-announce/2015-July/000037.html">security releases due 9th July 2015</a>
 12-Jun-2015: New releases to resolve ABI compatibility problems:
 12-Jun-2015: OpenSSL 1.0.2c is now <a href="ROOT/source/">available</a>, including bug fixes
 12-Jun-2015: OpenSSL 1.0.1o is now <a href="ROOT/source/">available</a>, including bug fixes
