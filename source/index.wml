@@ -27,7 +27,7 @@ We also maintain a clone at GitHub,
 
 
 <p>
-<rfilelist "openssl-*.gz">
+<rfilelist "openssl-*.gz" "grep { !/latest/ }">
 
 <h2>Legalities</h2>
 
