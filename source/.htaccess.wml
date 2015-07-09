@@ -4,18 +4,40 @@
 
 RewriteEngine on
 
+RewriteBase /source
+
+# First, rewrite all the 'latest' URLs</protect>
+<:{
+    my @tarballs =
+        sort grep /openssl-\d+\.\d+\.\d+[a-z]*\.tar\.gz$/, glob("openssl-*.tar.gz");
+    my %series = ();
+    foreach(@tarballs) {
+        my ($version, $serie) = /^openssl-((\d+\.\d+\.\d+)[a-z]*)\./;
+	$series{$serie} = $_;
+    }
+
+    my $latest = $series{ (reverse sort keys %series)[0] };
+    print "RewriteRule ^latest\\.tar\\.gz\$ $latest [L,R=302,NC]\n";
+
+    foreach (sort keys %series) {
+        my $rule = "openssl-$_-latest.tar.gz"; $rule =~ s|\.|\\.|g;
+	my $target = $series{$_};
+        print "RewriteRule ^$rule\$ $target [L,R=302,NC]\n";
+    }
+}:>
+<protect>
 # Old distro's are in subdirs.
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule (openssl-0.9.8.*) old/0.9.x/$1 [L]
+RewriteRule (openssl-0\.9\.8.*) old/0.9.x/$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule openssl-(1.0.0.*) old/1.0.0/openssl-$1 [L]
+RewriteRule openssl-(1\.0\.0.*) old/1.0.0/openssl-$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule openssl-(1.0.1.*) old/1.0.1/openssl-$1 [L]
+RewriteRule openssl-(1\.0\.1.*) old/1.0.1/openssl-$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule openssl-(1.0.2.*) old/1.0.1/openssl-$1 [L]
+RewriteRule openssl-(1\.0\.2.*) old/1.0.1/openssl-$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule openssl-(fips.*)  old/fips/openssl-$1 [L]
@@ -29,23 +51,4 @@ RewriteRule openssl-(fips.*)  old/fips/openssl-$1 [L]
 <Files *.gz.sha1>
     RemoveEncoding .gz
 </Files>
-
-</protect>RewriteBase /source
-<:{
-    my @tarballs =
-        sort grep /openssl-\d+\.\d+\.\d+[a-z]*\.tar\.gz$/, glob("openssl-*.tar.gz");
-    my %series = ();
-    foreach(@tarballs) {
-        my ($version, $serie) = /^openssl-((\d+\.\d+\.\d+)[a-z]*)\./;
-	$series{$serie} = $_;
-    }
-
-    my $latest = $series{ (reverse sort keys %series)[0] };
-    print "RewriteRule ^latest\\.tar\\.gz\$ $latest [R=302,NC]\n";
-
-    foreach (sort keys %series) {
-        my $rule = "openssl-$_-latest.tar.gz"; $rule =~ s|\.|\\.|g;
-	my $target = $series{$_};
-        print "RewriteRule ^$rule\$ $target [R=302,NC]\n";
-    }
-}:>
+</protect>
