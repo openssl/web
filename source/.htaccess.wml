@@ -1,4 +1,4 @@
-##
+<protect>##
 ##  .htaccess -- Apache per-dir config
 ##
 
@@ -30,5 +30,22 @@ RewriteRule openssl-(fips.*)  old/fips/openssl-$1 [L]
     RemoveEncoding .gz
 </Files>
 
-RewriteBase /source
-RewriteRule ^latest\.tar\.gz$ %%LATEST%% [R=302,NC]
+</protect>RewriteBase /source
+<:{
+    my @tarballs =
+        sort grep /openssl-\d+\.\d+\.\d+[a-z]*\.tar\.gz$/, glob("openssl-*.tar.gz");
+    my %series = ();
+    foreach(@tarballs) {
+        my ($version, $serie) = /^openssl-((\d+\.\d+\.\d+)[a-z]*)\./;
+	$series{$serie} = $_;
+    }
+
+    my $latest = $series{ (reverse sort keys %series)[0] };
+    print "RewriteRule ^latest\\.tar\\.gz\$ $latest [R=302,NC]\n";
+
+    foreach (sort keys %series) {
+        my $rule = "openssl-$_-latest.tar.gz"; $rule =~ s|\.|\\.|g;
+	my $target = $series{$_};
+        print "RewriteRule ^$rule\$ $target [R=302,NC]\n";
+    }
+}:>

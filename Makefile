@@ -27,10 +27,7 @@ simple: rebuild hack-source_htaccess
 rebuild:
 	wmk $(FORCE) -I $(SNAP) -a $(DIRS) index.wml
 hack-source_htaccess:
-	latest=`grep '<span class="latest">' < source/index.html | \
-		sed -e 's|^.*<span class="latest">||' -e 's|</span>.*$$||'`; \
-	    sed -e "s|%%LATEST%%|$$latest|" \
-		< source/.htaccess.in > source/.htaccess
+	( cd source && wml -o .htaccess .htaccess.wml )
 
 manpages:
 	sh ./run-pod2html.sh $(PODSHOME)
