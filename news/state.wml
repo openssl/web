@@ -18,8 +18,9 @@ We also released version <b>1.0.1p</b> which has the same fixes for
 that branch.
 <br>
 
-<li>We declared <b>1.0.0</b> and <b>0.9.8</b> to be end of life, with
-all updates ending at the end of 2015.
+<li>In 2014, we declared <b>1.0.0</b> and <b>0.9.8</b> to be end of life, with
+all updates ending at the end of 2015. Until then, only security fixes will
+be released for those branches.
 <br>
 
 <li>Our next major release is <b>1.1.0</b>. It is currently in development.
