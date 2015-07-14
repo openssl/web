@@ -1,3 +1,4 @@
+RedirectMatch 404 .*/\.git/.*
 
 RewriteEngine on
 
