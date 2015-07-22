@@ -8,11 +8,14 @@
 If you haven't already, please read our <a href="fipsnotes.html">FIPS 140-2 Notes</a> page.
 
 <p>
-<font color="#cc3333">IMPORTANT NOTE:&nbsp;</font>The recent addition of
-<a href="http://opensslfoundation.com/fips/ig95.html">new formal requirements</a> has potentially
-complicated new private label validations, but as of August 2013 it appears such validations
-are again feasible. We'll be more certain of this once we've actually obtained a validation under
-the new rules.
+<font color="#cc3333">IMPORTANT NOTE:&nbsp;</font>The addition of
+multiple new formal requirements since the #1747 validation was first approved in 2012, and
+recent unfavorable experiences with increasingly unpredictable outcomes from the validation process, have increased
+to the point where private label validations are no longer economically feasible for a small
+organization of limited means; the risk doesn't justify the substantial investment of time and money required
+to pursue new validations. As of 2015 we are no longer performing any private label validations.
+<p>
+The rest of this page is of historical interest only.
 
 <h2>What It Is</h2>
 

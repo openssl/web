@@ -53,22 +53,16 @@ The OSF would really prefer to work on open source based validations of benefit
 to the OpenSSL user community at large, but financial support for that objective
 is intermittent at best.  On the other hand many vendors are interested in private label
 validations and the OSF will assist in such efforts on a paid basis.  We've done enough
-of these to be very cost competitive, and for uncomplicated validations we will work
-on a fixed price basis.  A routine private label validation on a single commodity
-platform can cost as little as
-<a href="privatelabel.html">US$35,000</a>.
-Contact the <a href="../../support/funding/support-contact.html">OSF</a> for more information.
+of these to be very cost competitive, and for uncomplicated validations we typically work
+on a fixed price basis.
+
 <p>
-<font color="#cc3333">Update:</font> In collaboration with an accredited CMVP testing laboratory we were through
-December 2012 offering a
-cost effective turnkey <a href="privatelabel.html">validation package</a> for routine private label validations.
-However, due to some changes in
-<a href="http://www.opensslfoundation.com/fips/ig95.html">CMVP requirements</a> 
-introduced in 2013 the current OpenSSL FIPS Object Module
-code base can no longer be readily be validated. We are still adding new
+<font color="#cc3333">Update:</font> As of 2015 we are no longer performing
+<a href="privatelabel.html">private label</a> validations.
+We are still adding new
 platforms to the 
  <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1747">#1747</a>
-validation.
+or related validations.
 
 <h2>Current Validations</h2>
 
@@ -84,10 +78,8 @@ And did we mention the <a href="UserGuide.pdf">User Guide</a>?
 <a name="transition">
 <font color="#cc3333">Important Note:</font>
 </a>
-Due to changes in the FIPS 140-2 validation requirements the current v1.2 Module is 
-no longer be a suitable model for private label validations in its current form past the year 2010.  See the NIST <a href="http://csrc.nist.gov/groups/STM/cmvp/notices.html">Notices</a>,
-<a href="http://csrc.nist.gov/groups/ST/key_mgmt/documents/Transitioning_CryptoAlgos_070209.pdf">discussion paper</a> and
-<a href="http://csrc.nist.gov/publications/drafts/800-131/draft-sp800-131_spd-june2010.pdf">SP 800-131</a>.
+Due to changes in the FIPS 140-2 validation requirements the current v2.0 Module is 
+no longer a suitable model for private label validations in its current form past the year 2014.
 <p>
 
 <h2>Upcoming Validations</h2>
