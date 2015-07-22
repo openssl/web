@@ -13,7 +13,9 @@ multiple new formal requirements since the #1747 validation was first approved i
 recent unfavorable experiences with increasingly unpredictable outcomes from the validation process, have increased
 to the point where private label validations are no longer economically feasible for a small
 organization of limited means; the risk doesn't justify the substantial investment of time and money required
-to pursue new validations. As of 2015 we are no longer performing any private label validations.
+to pursue new validations. As of 2015 we are no longer performing any private label validations. The addition of
+new platforms to the existing #1747 or <a href="http://openssl.com/fips/ransom.html">comparable</a> validations
+is still possible and those validation actions are still being performed.
 <p>
 The rest of this page is of historical interest only.
 
