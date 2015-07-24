@@ -7,7 +7,7 @@
 
 <p>Some people have offered to provide OpenSSL binary distributions for
 selected operating systems.  The condition to get a link here is that the
-link is stable and can provide continues support for OpenSSL for a while.</p>
+link is stable and can provide continued support for OpenSSL for a while.</p>
 
 <p>Note: many Linux distributions come with pre-compiled OpenSSL packages.
 Those are already well-known among the users of said distributions, and
@@ -25,7 +25,7 @@ packages.</p>
 <ul>
     <item name="OpenSSL for Windows"
           info="Pre-compiled Win32/64 libraries without external dependencies to the Microsoft Visual Studio
-Runtime DLLs, expect for the system provided msvcrt.dll"
+Runtime DLLs, except for the system provided msvcrt.dll"
           url="http://indy.fulgan.com/SSL/">
 </ul>
 
