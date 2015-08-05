@@ -8,10 +8,10 @@
 <p>Your donation to the OpenSSL team will support the ongoing development activities of the team members.
 </p>
 
-<p>Please note that the <a href="funding/support-contact.html">OpenSSL
-Software Foundation</a> (OSF) is incorporated in the the state of Delware,
+<p>Please note that the <a href="../about/openssl-contact.html">OpenSSL
+Software Foundation</a> (OSF) is incorporated in the the state of Delaware,
 United States, as a non-profit corporation.  It does not qualify as
-a charitable organisation under Section 501(c)(3) of the U.S. Internal
+a tax-exempt charitable organisation under Section 501(c)(3) of the U.S. Internal
 Revenue Code.  We looked into it and concluded that 501(c)(3) status
 would require more of an investment in time and money than we can justify
 at present.  This means that, for individuals within the U.S., donations
@@ -103,4 +103,4 @@ We also accept donations in any amount via credit card or PayPal:
 <br>
 <br>
 As noted above these donations are currently <em>not</em> tax-deductible!<br>
-For further information please contact the <a href="funding/support-contact.html">OpenSSL Software Foundation</a>.
+For further information please contact the <a href="../about/openssl-contact.html">OpenSSL Software Foundation</a>.

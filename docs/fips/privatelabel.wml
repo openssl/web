@@ -21,8 +21,8 @@ The rest of this page is of historical interest only.
 
 <h2>What It Is</h2>
 
-We have found that one of the most popular commercial services offered by the
-OpenSSL Software Foundation is the <a href="fipsnotes.html#privatelabel">private label validation</a>.  It's not a
+We have found that one of the most popular commercial services offered by the OpenSSL team 
+is the <a href="fipsnotes.html#privatelabel">private label validation</a>.  It's not a
 business we ever planned to be in, but as the originators of the source code based
 OpenSSL FIPS Object Module validations, and with lots of practice, we've gotten pretty good at it.
 The revenue we earn from these validations supports the OpenSSL project, and for some
@@ -95,4 +95,4 @@ Note minor software modifications can often be accommodated in a change letter m
 <p>
 <hr>
 
-Interested?  Contact the <a href="/support/funding/support-contact.html">OSF</a>.
+Interested?  Contact <a href="http://openssl.com/fips">OpenSSL Software Services</a>.

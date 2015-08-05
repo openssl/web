@@ -20,6 +20,71 @@ to dispose of.  You may <i>request</i> support, but it's the contact's
 responsability and freedom alone to decide if he wants to give any support
 or not, regardless of who makes the request.</p>
 
+<p>The <i>OpenSSL Software Foundation</i> represents the OpenSSL project in most capacities including contributor license
+agreements, managing donations, etc.</p>
+</p>
+
+<table>
+<tr><td><b id=sf>Address</b></td><td><b id=sf>Area covered</b></td></tr>
+<tr><td><hr noshade size=1></td><td><hr noshade size=1></td></tr>
+<tr><td>
+OpenSSL Software Foundation<br>
+20-22 Wenlock Road<br>
+London<br>
+N1 7GU<br>
+United Kingdom<br>
++44 1785508015  (UK)<br>
++1 877-OPENSSL(6775) (US toll free)<br>
++1 301-956-2281 (US)<br>
+<i>E-mail:</i> <a href="mailto:info@opensslfoundation.org">info@opensslfoundation.org</a>
+</td><td valign=top>
+Worldwide
+</td></tr>
+</table>
+
+<p><i>OpenSSL Software Services</i> represents the OpenSSL project for selected commercial or quasi-commercial contexts, such
+as providing formal support contracts and brokering consulting contracts for OpenSSL team members</p>
+</p>
+
+<table>
+<tr><td><b id=sf>Address</b></td><td><b id=sf>Area covered</b></td></tr>
+<tr><td><hr noshade size=1></td><td><hr noshade size=1></td></tr>
+<tr><td>
+OpenSSL Software Services Inc.<br>
+40 E Main St, Suite 744<br>
+Newark DE 19711<br>
+USA<br>
++1 240-215-3103<br>
+<i>E-mail:</i> <a href="mailto:info@opensslservices.com">info@opensslservices.com</a>
+</td><td valign=top>
+Worldwide
+</td></tr>
+</table>
+
+<p>
+Commercial activities specific to FIPS 140-2 validations and the OpenSSL FIPS Object Module are handled by <i>OpenSSL Validation Services</i>:
+</p>
+
+<table>
+<tr><td><b id=sf>Address</b></td><td><b id=sf>Area covered</b></td></tr>
+<tr><td><hr noshade size=1></td><td><hr noshade size=1></td></tr>
+<tr><td>
+OpenSSL Validation Services Inc.<br>
+1829 Mount Ephraim Road<br>
+Adamstown, MD  21710<br>
+USA<br>
++1 301-874-2571<br>
+<i>E-mail:</i> <a href="mailto:info@openssl.com">info@openssl.com</a>
+</td><td valign=top>
+Worldwide
+</td></tr>
+</table>
+
+<p>
+<p>
+Some OpenSSL team members are available for selected consulting engagements:
+<p>
+
 <table>
 <tr><td><b id=sf>Address</b></td><td><b id=sf>Area covered</b></td></tr>
 <tr><td><hr noshade size=1></td><td><hr noshade size=1></td></tr>
@@ -32,24 +97,6 @@ Sweden<br>
 <i>E-mail:</i> <a href="mailto:openssl-contact.SE@openssl.org">openssl-contact.SE@openssl.org</a>
 </td><td valign=top>
 Sweden only
-</td></tr>
-</table>
-
-<p>The <i>OpenSSL Software Foundation</i> represents the OpenSSL project in some capacities, such as providing formal support contracts, brokering consulting contracts for OpenSSL team members, and disbursing dontations.</p>
-</p>
-
-<table>
-<tr><td><b id=sf>Address</b></td><td><b id=sf>Area covered</b></td></tr>
-<tr><td><hr noshade size=1></td><td><hr noshade size=1></td></tr>
-<tr><td>
-OpenSSL Software Foundation<br>
-1829 Mount Ephraim Road<br>
-Adamstown, MD  21710<br>
-USA<br>
-+1 877 673 6775
-<i>E-mail:</i> <a href="mailto:info@opensslfoundation.com">info@opensslfoundation.com</a>
-</td><td valign=top>
-Worldwide
 </td></tr>
 </table>
 

@@ -15,7 +15,7 @@ is documented in the <a href="UserGuide-1.2.pdf">1.2 User Guide</a>.
 <p>
 <font color="#cc3333">Important Note:</font>
 Due to new requirements introduced in 2013 the current v2.0 Module is no longer suitable as a
-reference for private label validations; see the <a href="http://www.opensslfoundation.com/fips/ig95.html">I.G. 9.5 FAQ</a>.
+reference for private label validations; see the <a href="http://www.openssl.com/fips/ig95.html">I.G. 9.5 FAQ</a>.
 Due to earlier changes in the FIPS 140-2 validation
 requirements the v1.2 Module is no longer be a suitable model for private label validations
 in its current form past the year 2010; see the NIST
@@ -83,7 +83,7 @@ remain valid for the platforms tested at the time those revisions were approved.
 <a name="sponsors">
 <h2>Sponsors</h2>
 </a>
-The OpenSSL Software Foundation receives support from multiple sources for each
+The OpenSSL FIPS Object Module validations receive support from multiple sources for each
 validation effort; however only those sponsors who have elected to be recognised
 for their contribution to OpenSSL are listed below.
 <ul>
@@ -151,7 +151,7 @@ Directorate-sponsored Homeland Open Security Technology (HOST) program</a>, algo
 </ul>
 <p>
 If you have an interest in sponsoring any changes or additions to this validation
-please contact the <a href="http://openssl.org/support/funding/support-contact.html">OSF</a>.
+please contact <a href="http://openssl.com/fips">OpenSSL Validation Services</a>.
 <p>
 Some commercial software vendors ask us "what do we gain from sponsoring a validation
 that our competition can also use?".  Our answer is "nothing, if you think in terms of

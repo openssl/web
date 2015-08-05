@@ -31,7 +31,7 @@ features which are not present in other releases.
     HOWTO documents to introduce concepts or explain them in a way that is not possible in the manuals.
 <p>
 <li><a href="http://wiki.openssl.org/"><font id=sfl>WIKI</font></a><br>
-    A wiki providing information and guidance about openssl. Operated by the OpenSSL foundation.
+    A wiki providing information and guidance about openssl. Operated by the OpenSSL Software Foundation.
 <p>
 <li><a href="fips/"><font id=sfl>FIPS140</font></a>:<br>
     Data and documentation related to the FIPS140 validation support in OpenSSL
