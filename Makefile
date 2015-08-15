@@ -13,6 +13,7 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 news/changelog.inc news/changelog.txt \
 	 news/newsflash.inc \
 	 news/vulnerabilities.inc \
+	 source/.htaccess \
 	 source/license.txt \
 	 source/index.inc
 SRCLISTS = \
@@ -36,11 +37,8 @@ relupd: all
 	git pull $(QUIET)
 	$(MAKE)
 
-# To be fixed.
-hack-source_htaccess:
-	exit 1;
-
 # Legacy targets
+hack-source_htaccess: all
 simple: all
 generated: all
 manpages: all
@@ -81,6 +79,9 @@ docs/fips.inc:
 	@rm -f $@
 	./bin/mk-filelist docs/fips fips/ '*' >$@
 
+source/.htaccess:
+	@rm -f @?
+	./bin/mk-latest >$@
 source/license.txt: $(SNAP)/LICENSE
 	@rm -f $@
 	cp $? $@

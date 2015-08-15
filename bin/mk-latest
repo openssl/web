@@ -1,0 +1,48 @@
+#! /usr/bin/perl -w
+use strict;
+
+my @tarballs =
+	sort grep /openssl-\d+\.\d+\.\d+[a-z]*\.tar\.gz$/, glob("openssl-*.tar.gz");
+my %series = ();
+foreach(@tarballs) {
+	my ($version, $serie) = /^openssl-((\d+\.\d+\.\d+)[a-z]*)\./;
+	$series{$serie} = $_;
+}
+my $latest = $series{ (reverse sort keys %series)[0] };
+
+print "RewriteEngine on\n";
+print "RewriteBase /source\n";
+print "# First, rewrite all the 'latest' URLs\n";
+print "RewriteRule ^latest.tar.gz\$ $latest [L,R=302,NC]\n";
+
+foreach (sort keys %series) {
+	my $rule = "openssl-$_-latest.tar.gz";
+	#don't bother: $rule =~ s|\.|\\.|g;
+	my $target = $series{$_};
+	print "RewriteRule ^$rule\$ $target [L,R=302,NC]\n";
+}
+
+print <<\EOF
+
+# Old distro's are in subdirs.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (openssl-0\.9\.8.*) old/0.9.x/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule openssl-(1\.0\.0.*) old/1.0.0/openssl-$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule openssl-(1\.0\.1.*) old/1.0.1/openssl-$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule openssl-(1\.0\.2.*) old/1.0.1/openssl-$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule openssl-(fips.*)  old/fips/openssl-$1 [L]
+
+<Files *.gz.asc>
+    RemoveEncoding .gz
+</Files>
+<Files *.gz.md5>
+    RemoveEncoding .gz
+</Files>
+<Files *.gz.sha1>
+    RemoveEncoding .gz
+</Files>
+EOF

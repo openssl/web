@@ -6,7 +6,7 @@ docs/faq.txt
 news/changelog.txt
 news/vulnerabilities.html
 source/license.txt
-docs/HOWTO/*.txt
+source/.htaccess
 source/*.gz*
 source/*.patch
 source/old/*/*.tar.gz*
