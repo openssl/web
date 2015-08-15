@@ -3,7 +3,9 @@
 
 ##  Snapshot directory
 SNAP = /var/cache/openssl/checkouts/openssl
+## Where releases are found.
 RELEASEDIR = /var/www/openssl/source
+
 
 # All simple generated files.
 SIMPLE = newsflash.inc sitemap.txt \
@@ -22,16 +24,27 @@ SRCLISTS = \
 
 all: $(SIMPLE) $(SRCLISTS)
 
+relupd: all
+	if [ "`id -un`" != openssl ]; then \
+	    echo "You must run this as 'openssl'" ; \
+	    echo "     sudo -u openssl -H make"; \
+	    exit 1; \
+	fi
+	cd $(SNAP)/.. ; for dir in openssl* ; do \
+	    echo Updating $$dir ; ( cd $$dir ; git pull $(QUIET) ) ; \
+	done
+	git pull $(QUIET)
+	$(MAKE)
+
+# To be fixed.
+hack-source_htaccess:
+	exit 1;
+
 # Legacy targets
 simple: all
 generated: all
 manpages: all
 rebuild: all
-relupd: all
-
-# To be fixed.
-hack-source_htaccess:
-	exit 1;
 
 clean:
 	rm -f $(SIMPLE)

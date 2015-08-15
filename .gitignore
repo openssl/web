@@ -1,5 +1,6 @@
 *.swp
 *.inc
+blog
 sitemap.txt
 docs/faq.txt
 news/changelog.txt
@@ -8,10 +9,6 @@ source/license.txt
 docs/HOWTO/*.txt
 source/*.gz*
 source/*.patch
-source/old/x/*.tar.gz*
-source/old/0.9.x/*.tar.gz*
-source/old/0.9.x/*.patch
-source/old/1.0.0/*.tar.gz*
-source/old/1.0.1/*.tar.gz*
-source/old/1.0.2/*.tar.gz*
-source/old/fips/*.tar.gz*
+source/old/*/*.tar.gz*
+source/old/*/*.patch
+source/old/*/*.txt.asc
