@@ -90,7 +90,7 @@ source/index.inc:
 
 source/old/0.9.x/index.inc:
 	@rm -f $@
-	./bin/mk-filelist source/old/0.9.8 '' '*.gz' >$@
+	./bin/mk-filelist source/old/0.9.x '' '*.gz' >$@
 source/old/1.0.0/index.inc:
 	@rm -f $@
 	./bin/mk-filelist source/old/1.0.0 '' '*.gz' >$@
