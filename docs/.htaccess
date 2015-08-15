@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteBase /docs
+RewriteRule fips fips.html [L,R=302,NC]
+RewriteRule fips/* fips.html [L,R=302,NC]

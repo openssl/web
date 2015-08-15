@@ -1,16 +1,17 @@
 <!-- sidebar.inc -->
+<!-- This needs full paths since the subdirs include this navbar. -->
 <aside class="sidebar">
   <section>
-    <h1><a href=".">Downloads</a></h1>
+    <h1><a href="/source">Downloads</a></h1>
     <ul>
       <li>
-	<a href="gitrepo.html">Git Repository</a>
+	<a href="/source/gitrepo.html">Git Repository</a>
       </li>
       <li>
-	<a href="license.html">License</a>
+	<a href="/source/license.html">License</a>
       </li>
       <li>
-        <a href="old">Old Releases</a>
+        <a href="/source/old">Old Releases</a>
       </li>
       <li>
 	<a href="mirror.html">Mirror Sites</a>
