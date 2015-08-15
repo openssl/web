@@ -10,6 +10,9 @@
 	<a href="license.html">License</a>
       </li>
       <li>
+        <a href="old">Old Releases</a>
+      </li>
+      <li>
 	<a href="mirror.html">Mirror Sites</a>
       </li>
     </ul>

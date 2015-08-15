@@ -13,7 +13,7 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 news/vulnerabilities.inc \
 	 source/license.txt \
 	 source/index.inc
-SRCLISTS = source/old/index.inc \
+SRCLISTS = \
 	   source/old/0.9.x/index.inc \
 	   source/old/1.0.0/index.inc \
 	   source/old/1.0.1/index.inc \
