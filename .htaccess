@@ -4,6 +4,9 @@ RewriteEngine on
 
 Options +ExecCGI +FollowSymLinks
 
+RewriteRule licenses/openssl_ccla.pdf policies/openssl_ccla.pdf
+RewriteRule licenses/openssl_icla.pdf policies/openssl_icla.pdf
+
 <Files *.md5>
 ForceType application/binary
 </Files>

@@ -9,6 +9,8 @@ dodir()
     my @files = ();
     my @dirs = ();
 
+    return if $dir eq 'source/old' || $dir eq 'docs/fips';
+
     foreach my $entry ( glob($dir . "/*")) {
 	if (-f $entry ) {
 	    next unless $entry =~ m/.*\.(html|pdf|txt|png)$/;
@@ -26,7 +28,7 @@ dodir()
 
     foreach my $entry ( @dirs) {
 	$entry =~ s@^\.\/@@;
-	next if $entry =~ m/.git|inc|img|bin/;
+	next if $entry =~ m/.git|inc|img|bin|blog/;
 	next if $entry =~ m/secadv/;
 	my $simple = $entry;
 	$simple =~ s@.*/@@;
