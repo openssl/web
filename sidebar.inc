@@ -1,0 +1,31 @@
+<!-- sidebar.inc -->
+<aside class="sidebar">
+  <section>
+    <h1><a href=".">Home</a></h1>
+    <ul>
+      <li>
+        <a href="source">Downloads: Source code</a>
+      </li>
+      <li>
+        <a href="docs">Docs: FAQ, FIPS, manpages, ...</a>
+      </li>
+      <li>
+        <a href="news">News: Latest information</a>
+      </li>
+      <li>
+        <a href="policies">Policies: How we operate</a>
+      </li>
+      <li>
+        <a href="community">Community: Blog, bugs, email, ...</a>
+      </li>
+      <li>
+        <a href="support">Support: Commercial support and contracting</a>
+      </li>
+      <li>
+        <a href="support/acks.html">Sponsor Acknowledgements</a>
+      </li>
+    </ul>
+  </section>
+</aside>
+<!-- end -->
+

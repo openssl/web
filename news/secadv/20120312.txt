@@ -1,0 +1,33 @@
+OpenSSL Security Advisory [12 Mar 2012]
+=======================================
+
+CMS and S/MIME Bleichenbacher attack (CVE-2012-0884)
+====================================================
+
+A weakness in the OpenSSL CMS and PKCS #7 code can be exploited
+using Bleichenbacher's attack on PKCS #1 v1.5 RSA padding
+also known as the million message attack (MMA).
+
+Only users of CMS, PKCS #7, or S/MIME decryption operations are affected. A
+successful attack needs on average 2^20 messages. In practice only automated
+systems will be affected as humans will not be willing to process this many
+messages.
+
+SSL/TLS applications are *NOT* affected by this problem since the 
+SSL/TLS code does not use the PKCS#7 or CMS decryption code. 
+
+Thanks to Ivan Nestlerode <inestlerode@us.ibm.com> for discovering
+this weakness.
+
+The fix was developed by Stephen Henson of the OpenSSL core team.
+
+Affected users should upgrade to OpenSSL 1.0.0h or 0.9.8u.
+
+References
+==========
+
+RFC3218
+
+URL for this Security Advisory:
+http://www.openssl.org/news/secadv_20120312.txt
+

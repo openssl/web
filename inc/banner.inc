@@ -1,0 +1,33 @@
+<!-- banner.inc -->
+<header role="banner">
+  <hgroup>
+    <h1>
+      <a href="/">
+        <span id="header-open-text">Open</span><span id="header-ssl-text">SSL</span>
+      </a>
+    </h1>
+    <h2>
+      Cryptography and SSL/TLS Toolkit
+    </h2>
+  </hgroup>
+</header>
+
+<nav role="navigation">
+  <form action="https://www.google.com/search" method="get">
+    <fieldset role="search">
+      <input type="hidden" name="sitesearch" value="www.openssl.org" />
+      <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    </fieldset>
+  </form>
+
+  <ul class="main-navigation">
+    <li><a href="/" title="Home page">Home</a></li>
+    <li><a href="/source" title="Source code">Downloads</a></li>
+    <li><a href="/docs" title="FAQ, FIPS, manpages, ...">Docs</a></li>
+    <li><a href="/news" title="Latest information">News</a></li>
+    <li><a href="/policies" title="How we operate">Policies</a></li>
+    <li><a href="/community" title="Blog, bugs, email, ...">Community</a></li>
+    <li><a href="/support" title="Commercial support and contracting">Support</a></li>
+  </ul>
+  </nav>
+<!-- end -->

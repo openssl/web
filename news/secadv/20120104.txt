@@ -1,0 +1,109 @@
+OpenSSL Security Advisory [04 Jan 2012]
+=======================================
+
+Six security flaws have been fixed in OpenSSL 1.0.0f and 0.9.8s.
+
+DTLS Plaintext Recovery Attack (CVE-2011-4108)
+==============================================
+
+Nadhem Alfardan and Kenny Paterson have discovered an extension of the 
+Vaudenay padding oracle attack on CBC mode encryption which enables an 
+efficient plaintext recovery attack against the OpenSSL implementation
+of DTLS. Their attack exploits timing differences arising during
+decryption processing. A research paper describing this attack can be
+found at http://www.isg.rhul.ac.uk/~kp/dtls.pdf
+
+Thanks go to Nadhem Alfardan and Kenny Paterson of the Information
+Security Group at Royal Holloway, University of London
+(www.isg.rhul.ac.uk) for discovering this flaw and to Robin Seggelmann
+<seggelmann@fh-muenster.de> and Michael Tuexen <tuexen@fh-muenster.de>
+for preparing the fix.
+
+Affected users should upgrade to OpenSSL 1.0.0f or 0.9.8s.
+
+Double-free in Policy Checks (CVE-2011-4109)
+============================================
+
+If X509_V_FLAG_POLICY_CHECK is set in OpenSSL 0.9.8, then a policy
+check failure can lead to a double-free. The bug does not occur 
+unless this flag is set. Users of OpenSSL 1.0.0 are not affected.
+
+This flaw was discovered by Ben Laurie and a fix provided by Emilia
+Kasper <ekasper@google.com> of Google.
+
+Affected users should upgrade to OpenSSL 0.9.8s.
+
+Uninitialized SSL 3.0 Padding (CVE-2011-4576)
+=============================================
+
+OpenSSL prior to 1.0.0f and 0.9.8s failed to clear the bytes used as
+block cipher padding in SSL 3.0 records. This affects both clients and
+servers that accept SSL 3.0 handshakes: those that call SSL_CTX_new with
+SSLv3_{server|client}_method or SSLv23_{server|client}_method. It does
+not affect TLS.
+
+As a result, in each record, up to 15 bytes of uninitialized memory
+may be sent, encrypted, to the SSL peer. This could include sensitive
+contents of previously freed memory.
+
+However, in practice, most deployments do not use
+SSL_MODE_RELEASE_BUFFERS and therefore have a single write buffer per
+connection. That write buffer is partially filled with non-sensitive,
+handshake data at the beginning of the connection and, thereafter,
+only records which are longer any any previously sent record leak any
+non-encrypted data. This, combined with the small number of bytes
+leaked per record, serves to limit to severity of this issue.
+
+Thanks to Adam Langley <agl@chromium.org> for identifying and fixing
+this issue.
+
+Affected users should upgrade to OpenSSL 1.0.0f or 0.9.8s.
+
+Malformed RFC 3779 Data Can Cause Assertion Failures (CVE-2011-4577)
+====================================================================
+
+RFC 3779 data can be included in certificates, and if it is malformed,
+may trigger an assertion failure. This could be used in a
+denial-of-service attack.
+
+Note, however, that in the standard release of OpenSSL, RFC 3779
+support is disabled by default, and in this case OpenSSL is not
+vulnerable. Builds of OpenSSL are vulnerable if configured with 
+"enable-rfc3779".
+
+Thanks to Andrew Chi, BBN Technologies, for discovering the flaw, and
+Rob Austein <sra@hactrn.net> for fixing it.
+
+Affected users should upgrade to OpenSSL 1.0.0f or 0.9.8s.
+
+SGC Restart DoS Attack (CVE-2011-4619)
+======================================
+
+Support for handshake restarts for server gated cryptograpy (SGC) can
+be used in a denial-of-service attack.
+
+Thanks to George Kadianakis <desnacked@gmail.com> for identifying
+this issue and to Adam Langley <agl@chromium.org> for fixing it.
+
+Affected users should upgrade to OpenSSL 1.0.0f or 0.9.8s.
+
+Invalid GOST parameters DoS Attack (CVE-2012-0027)
+===================================================
+
+A malicious TLS client can send an invalid set of GOST parameters
+which will cause the server to crash due to lack of error checking.
+This could be used in a denial-of-service attack.
+
+Only users of the OpenSSL GOST ENGINE are affected by this bug.
+
+Thanks to Andrey Kulikov <amdeich@gmail.com> for identifying and fixing
+this issue.
+
+Affected users should upgrade to OpenSSL 1.0.0f.
+
+References
+==========
+
+URL for this Security Advisory:
+http://www.openssl.org/news/secadv_20120104.txt
+

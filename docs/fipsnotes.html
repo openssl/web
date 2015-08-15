@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--#include virtual="/inc/head.inc" -->
+<body>
+  <!--#include virtual="/inc/banner.inc" -->
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+	<article>
+	  <header><h2>Important Notes about OpenSSL and FIPS 140</h2></header>
+	  <div class="entry-content">
+	    <p>Please please read the <a href="UserGuide.pdf">User Guide</a>.
+	    Nothing will make sense otherwise (it still may not afterwards,
+	    but at least you've a better chance).</p>
+
+	    <p>No new validations are currently planned.</p>
+
+	    <h3>FIPS What?  Where Do I Start?</h3>
+
+	    <p>Ok, so your company needs FIPS validated cryptography to land
+	    that big sale, and your product currently uses OpenSSL. You
+	    haven't worked up the motivation to wade through the entire <a
+	    href="UserGuide.pdf">User Guide</a> and want the quick "executive
+	    summary".  Here is a grossly oversimplified account:</p>
+	    <p>
+
+	    <ul>
+
+	      <li>OpenSSL itself is not validated, and never will be.  Instead
+	      a special carefully defined software component called the
+	      OpenSSL FIPS Object Module has been created.  This Module was
+	      designed for compatibility with OpenSSL so that products using
+	      the OpenSSL API can be converted to use validated cryptography
+	      with minimal effort.</li>
+
+	      <li>The OpenSSL FIPS Object Module validation is unique among
+	      all FIPS 140-2 validations in that the product is "delivered" in
+	      source code form, meaning that if you can use it exactly as is
+	      and can build it (according to the very specific documented
+	      instructions) for your platform, then you can use it as
+	      validated cryptography on a "vendor affirmed" basis.</li>
+
+	      <li>If even the tiniest source code or build process changes are
+	      required for your intended application, you cannot use the open
+	      source based validated module directly.  You must obtain your
+	      own validation.  This situation is common; see "Private Label"
+	      validation, below.</li>
+
+	      <li>New FIPS 140-2 validations (of any type) are slow (6-12
+	      months is typical), expensive (US$50,000 is probably typical for
+	      an uncomplicated validation), and unpredictable (completion
+	      dates are not only uncertain when first beginning a validation,
+	      but remain so during the process).</li>
+
+	    </ul>
+
+	    <p>Note that FIPS 140-2 validation is a complicated topic that the
+	    above summary does not adequately address.  You have been
+	    warned!</p>
+
+	    <h2><a name="privatelable">The "Private Label" Validation</></h2>
+
+	    <p>We refer to validations based directly on the OpenSSL FIPS
+	    Object Module as "private label" validations.  These are also
+	    sometimes referred to as "cookie cutter" validations.  The usual
+	    reason for such separate validations is the need for small
+	    modifications which forces a complete new validation, but some
+	    vendors, for marketing or risk management reasons, have obtained
+	    private label validations for binaries produced from unmodified
+	    (or only cosmetically modified) source code.</p>
+
+	    <p>The OSF would really prefer to work on open source based
+	    validations of benefit to the OpenSSL user community at large, but
+	    financial support for that objective is intermittent at best.  On
+	    the other hand many vendors are interested in private label
+	    validations and the OSF will assist in such efforts on a paid
+	    basis.  We've done enough of these to be very cost competitive,
+	    and for uncomplicated validations we typically work on a fixed
+	    price basis.</p>
+
+	    <p><strong>Update:</strong> As of 2015 we are no longer performing private label validations. We are still adding new platforms to the <a
+	      href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1747">#1747</a>
+	    or related validations.</p>
+
+	    <h3>Current Validations</h3>
+
+	    <p> The most recent open source based validation is the FIPS 140-2
+	    certificate <a
+	      href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1747">#1747</a>.
+	    You will need the <a
+	      href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140sp/140sp1747.pdf">Security Policy</a>
+	    and <a href="/source/openssl-fips-2.0.tar.gz">source</a>
+	    at a minimum. And did we mention the
+	    <a href="UserGuide.pdf">User Guide</a>?</p>
+
+	    <h3>Performance at Startup</h3>
+
+	    <p>We have had many complaints about poor performance of the
+	    Power-On Self Test (POST) on low powered computers, as with some
+	    embedded devices. In the worst cases the POST can take several
+	    minutes. Such devices were not included as test platforms at the
+	    time the code was originally written.</p>
+	    <p>The current FIPS validated code performs a very comprehensive
+	    set of mandatory algorithm self tests when it enter FIPS mode
+	    covering many algorithm combinations. There is a DSA parameter
+	    generation self test which is especially CPU intensive.</p>
+	    <p>As a result of the POST performance issue we revisited the KAT
+	    (Known Answer Test) requirements in the POST process that were
+	    burning up most of those cycle.  In consultation with a CMVP test
+	    lab we determined that it should be possible to substantially
+	    reduce that performance penalty in a new validation.
+	    Unfortunately such a change can only be undertaken in the context
+	    of a new validation, and not as a change letter modification.</p>
+	    <p>Another factor affecting performance is the use (or not) of
+	    platform specific optimizations.  The x86/x64 Windows and Linux
+	    code makes use of assembly language optimizations for FIPS
+	    cryptographic algorithms. The C only version is much slower and so
+	    the POST is slower too.</p>
+	  </div>
+	  <footer>
+	    You are here: <a href="/">Home</a>
+	    : <a href=".">Docs</a>
+	    : <a href="">Important Notes about OpenSSL and FIPS-140</a>
+	    <br/><a href="/sitemap.txt">Sitemap</a>
+	  </footer>
+	</article>
+      </div>
+      <!--#include virtual="sidebar.inc" -->
+    </div>
+  </div>
+<!--#include virtual="/inc/footer.inc" -->
+</body>
+</html>

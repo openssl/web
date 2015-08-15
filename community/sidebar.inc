@@ -1,0 +1,32 @@
+<!-- sidebar.inc -->
+<aside class="sidebar">
+  <section>
+    <h1><a href=".">Community</a></h1>
+    <ul>
+      <li>
+	  <a href="team.html">Team</a>
+      </li>
+      <li>
+	  <a href="contacts.html">Contact Us</a>
+      </li>
+      <li>
+	  <a href="thanks.html">Thanks!</a>
+      </li>
+      <li>
+          <a href="mailinglists.html">Mailing Lists</a>
+      </li>
+      <li>
+          <a href="http://wiki.openssl.org">Wiki</a>
+      </li>
+      <li>
+          <a href="http://www.openssl.org/blog">Blog</a>
+      </li>
+      <li>
+	  <a href="binaries.html">Binaries</a>
+      </li>
+    </ul>
+  </section>
+</aside>
+<!-- end -->
+
+

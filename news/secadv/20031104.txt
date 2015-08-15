@@ -1,0 +1,71 @@
+OpenSSL Security Advisory [4 November 2003]
+
+Denial of Service in ASN.1 parsing
+==================================
+
+Previously, OpenSSL 0.9.6k was released on the 30 September 2003 to
+address various ASN.1 issues.  The issues were found using a test
+suite from NISCC (www.niscc.gov.uk) and fixed by Dr Stephen Henson
+(steve@openssl.org) of the OpenSSL core team.
+
+Subsequent to that release, Novell Inc. carried out further testing
+using the NISCC suite.  They discovered that there was a denial of
+service vulnerability in OpenSSL version 0.9.6k when running on a
+Windows platform.
+
+A bug in OpenSSL 0.9.6 would cause certain ASN.1 sequences to trigger
+a large recursion.  On platforms such as Windows this large recursion
+cannot be handled correctly and so the bug causes OpenSSL to crash.  A
+remote attacker could exploit this flaw if they can send arbitrary
+ASN.1 sequences which would cause OpenSSL to crash.  This could be
+performed for example by sending a client certificate to a SSL/TLS
+enabled server which is configured to accept them.
+
+We do not believe this issue could be exploited further than a Denial
+of Service attack.  
+
+Patches for this issue have been created by Dr Stephen Henson
+(steve@openssl.org) of the OpenSSL core team.
+
+Who is affected?
+----------------
+
+OpenSSL 0.9.6k is affected by the bug, but the denial of service does
+not affect all platforms.  This issue does not affect OpenSSL 0.9.7.
+Currently only OpenSSL running on Windows platforms is known to crash.
+
+Recommendations
+---------------
+
+Upgrade to OpenSSL 0.9.6l or 0.9.7c.  Recompile any OpenSSL
+applications statically linked to OpenSSL libraries.
+
+OpenSSL 0.9.6l is available for download via HTTP and FTP from the
+following master locations (you can find the various FTP mirrors under
+http://www.openssl.org/source/mirror.html):
+
+    o http://www.openssl.org/source/
+    o ftp://ftp.openssl.org/source/
+
+The distribution file name is:
+
+    o openssl-0.9.6l.tar.gz [normal]
+      MD5 checksum: 843a65ddc56634f0e30a4f9474bb5b27
+    o openssl-engine-0.9.6l.tar.gz [engine]
+      MD5 checksum: dd372198cdf31667f2cb29cd76fbda1c
+
+The checksums were calculated using the following command:
+
+    openssl md5 < openssl-0.9.6l.tar.gz
+    openssl md5 < openssl-engine-0.9.6l.tar.gz
+
+References
+----------
+
+The Common Vulnerabilities and Exposures project (cve.mitre.org) has
+assigned the name CAN-2003-0851 to this issue.
+
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0851
+
+URL for this Security Advisory:
+http://www.openssl.org/news/secadv_20031104.txt

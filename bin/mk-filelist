@@ -1,0 +1,52 @@
+#! /usr/bin/perl -w
+use strict;
+
+die "Missing args\n" if $#ARGV < 2;
+my $SRCDIR = $ARGV[0]; shift;
+my $URLBASE = $ARGV[0]; shift;
+my $GLOB = join(' ', @ARGV);
+
+my @months = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+	   'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec');
+
+sub ls {
+    my ($pat) = @_;
+    my @F = sort { (stat($b))[9] <=> (stat($a))[9]; } (glob($pat));
+    my @R = ();
+    foreach my $f (@F) {
+        next if ($f =~ m|^index.*|);
+	next if -d $f;
+        my @S = stat($f);
+        my @T = localtime($S[9]);
+        push(@R, sprintf("%d %d-%s-%02d %02d:%02d:%02d %s",
+             $S[7] / 1024,
+	     1900+$T[5], $months[$T[4]], $T[3],
+	     $T[2], $T[1], $T[0],
+	     $f));
+    }
+    return @R;
+}
+
+chdir $SRCDIR || die "Can't chdir $SRCDIR, $!";
+my @L = &ls($GLOB);
+foreach my $l (@L) {
+    next if $l =~ m|^\s*$|;
+    my @fields = split / /, $l;
+    # Size, date, time, filename
+    my $fs = $fields[0];
+    my $fd = $fields[1] . "&nbsp;" . $fields[2];
+    my $ff = $fields[3];
+    my $url = $URLBASE . $ff;
+    my $r = "<a href=\"$url\">$ff</a>";
+    $r .= " (<a href=\"$url.sha256\">SHA256</a>)" if -f "$ff.sha256";
+    $r .= " (<a href=\"$url.asc\">PGP sign</a>)" if -f "$ff.asc";
+    $r .= " (<a href=\"$url.sha1\">SHA1</a>)" if -f "$ff.sha1";
+    # $r .= " (<a href=\"$url.md5\">MD5</a>)" if -f "$ff.md5";
+    print "<tr>\n";
+    print "  <td>$fs&nbsp;</td>\n";
+    print "  <td>$fd&nbsp;</td>\n";
+    print "  <td>$r</td>\n";
+    print "</tr>\n";
+}
+
+exit(0);

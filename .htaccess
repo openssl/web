@@ -4,9 +4,6 @@ RewriteEngine on
 
 Options +ExecCGI +FollowSymLinks
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule related/(.*) /about/$1
-
 <Files *.md5>
 ForceType application/binary
 </Files>

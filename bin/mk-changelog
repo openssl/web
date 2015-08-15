@@ -1,0 +1,48 @@
+#! /usr/bin/perl -w
+use strict;
+
+# Read whole input.
+my $page;
+{
+    local $/;
+    $page .= <STDIN>;
+}
+
+# HTML entities.
+$page =~ s|&|&amp;|sg;
+$page =~ s|<|&lt;|sg;
+$page =~ s|>|&gt;|sg;
+
+# Make sub-headings.
+$page =~ s|^.+?(Changes.+?\n+)|$1|s;
+$page =~ s|(Changes between.+?)\n|</pre>\n<h3>$1</h3>\n<pre>\n|sg;
+
+# Wrap it, and remove empty <pre></pre>
+$page = '<pre>' . $page . '</pre>';
+$page =~ s|<pre></pre>||g;
+
+# Make a TOC
+my $ctr = 0;
+my $toc;
+my $out;
+my $top = '  <a href="#toc"><img src="/img/up.gif"/></a>';
+for (split /^/, $page) {
+    if ( /<h3>/ ) {
+	my $name = $_;
+	$name =~ s|<h3>(.*)</h3>|$1|;
+	chop ($name);
+	$out .= '<h3><a name="x' . $ctr . '">' . $name . "</a>$top</h3>\n";
+	$toc .= '<li><a href="#x' . $ctr . '">' . $name . "</a></li>\n";
+	$ctr++;
+    } else {
+	$out .= $_;
+    }
+}
+
+print "<h3><a name='toc'>Table of contents</a></h3>\n";
+print "<ul>";
+print $toc;
+print "</ul>";
+print $out;
+
+exit(0);

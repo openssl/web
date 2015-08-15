@@ -1,0 +1,40 @@
+#! /usr/bin/perl -w
+use strict;
+
+sub
+dodir()
+{
+    my $dir = shift;
+    my $level = shift || 1;
+    my @files = ();
+    my @dirs = ();
+
+    foreach my $entry ( glob($dir . "/*")) {
+	if (-f $entry ) {
+	    next unless $entry =~ m/.*\.(html|pdf|txt|png)$/;
+	    push @files, $entry;
+	} elsif ( -d $entry ) {
+	    push @dirs, $entry;
+	}
+    }
+
+    foreach my $entry ( @files ) {
+	$entry =~ s@.*/@@;
+	next if $entry eq 'template-file.html';
+	print "\t" x $level, $entry, "\n";
+    }
+
+    foreach my $entry ( @dirs) {
+	$entry =~ s@^\.\/@@;
+	next if $entry =~ m/.git|inc|img|bin/;
+	next if $entry =~ m/secadv/;
+	my $simple = $entry;
+	$simple =~ s@.*/@@;
+	print "\n", "\t" x $level, $simple, "/\n";
+	&dodir($entry, $level + 1);
+    }
+}
+
+print "/\n";
+&dodir('.', 0);
+exit(0);

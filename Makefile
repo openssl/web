@@ -1,45 +1,92 @@
 ##
-##  Makefile -- Top-level build procedure for www.openssl.org
-##
+## Build procedure for www.openssl.org
 
-# Used to have a hack with a lockfile.
-# Not needed since this is fast now.
+##  Snapshot directory
+SNAP = /var/cache/openssl/checkouts/openssl
+RELEASEDIR = /var/www/openssl/source
 
-SNAP=/var/cache/openssl/checkouts/openssl
-PODSHOME=$(SNAP)/doc
+# All simple generated files.
+SIMPLE = newsflash.inc sitemap.txt \
+	 docs/faq.txt docs/faq.inc docs/fips.inc \
+	 news/changelog.inc news/changelog.txt \
+	 news/newsflash.inc \
+	 news/vulnerabilities.inc \
+	 source/license.txt \
+	 source/index.inc
+SRCLISTS = source/old/index.inc \
+	   source/old/0.9.x/index.inc \
+	   source/old/1.0.0/index.inc \
+	   source/old/1.0.1/index.inc \
+	   source/old/1.0.2/index.inc \
+	   source/old/fips/index.inc \
 
-FORCE=#-f
-QUIET=--quiet
+all: $(SIMPLE) $(SRCLISTS)
 
-DIRS= about docs news source support
+# Legacy targets
+simple: all
+generated: all
+manpages: all
+rebuild: all
+relupd: all
 
-all: generated simple manpages
-
-generated:
-	cp -f $(SNAP)/LICENSE source/license.inc
-	cp -f $(PODSHOME)/HOWTO/*.txt docs/HOWTO/.
-	perl run-changelog.pl <$(SNAP)/CHANGES >news/changelog.inc
-	perl run-faq.pl <$(SNAP)/FAQ >support/faq.inc
-	perl run-fundingfaq.pl < support/funding/support-faq.txt >support/funding/support-faq.inc
-	( cd news && xsltproc vulnerabilities.xsl vulnerabilities.xml > vulnerabilities.wml )
-
-simple: rebuild hack-source_htaccess
-rebuild:
-	wmk $(FORCE) -I $(SNAP) -a $(DIRS) index.wml
+# To be fixed.
 hack-source_htaccess:
-	( cd source && wml -o .htaccess .htaccess.wml )
+	exit 1;
 
-manpages:
-	sh ./run-pod2html.sh $(PODSHOME)
+clean:
+	rm -f $(SIMPLE)
 
-# Update release notes (and other items, but relnotes is the use-case)
-relupd:
-	if [ "`id -un`" != openssl; then \
-		echo "**** you must do 'sudo -u openssl -H bash'"; \
-		exit 1; \
-	fi
-	cd $(SNAP)/.. ; for dir in openssl* ; do \
-		echo Updating $$dir ; ( cd $$dir ; git pull $(QUIET) ) ; \
-	done
-	git pull $(QUIET)
-	$(MAKE) generated simple
+newsflash.inc: news/newsflash.inc
+	@rm -f $@
+	head -6 $? >$@
+sitemap.txt:
+	@rm -f $@
+	./bin/mk-sitemap >$@
+
+news/changelog.inc: news/changelog.txt bin/mk-changelog
+	@rm -f $@
+	./bin/mk-changelog <news/changelog.txt >$@
+news/changelog.txt: $(SNAP)/CHANGES
+	@rm -f $@
+	cp $? $@
+news/newsflash.inc: news/newsflash.txt
+	sed <$? >$@ \
+	    -e 's@^@<tr><td class="d">@' \
+	    -e 's@: @</td><td class="t">@' \
+	    -e 's@$$@</td></tr>@'
+news/vulnerabilities.inc: bin/vulnerabilities.xsl news/vulnerabilities.xml
+	@rm -f $@
+	xsltproc bin/vulnerabilities.xsl news/vulnerabilities.xml >$@
+
+docs/faq.txt: $(SNAP)/FAQ
+	@rm -f $@
+	cp $? $@
+docs/faq.inc: docs/faq.txt
+	@rm -f $@
+	./bin/mk-faq <$? >$@
+docs/fips.inc:
+	@rm -f $@
+	./bin/mk-filelist docs/fips fips/ '*' >$@
+
+source/license.txt: $(SNAP)/LICENSE
+	@rm -f $@
+	cp $? $@
+source/index.inc:
+	@rm -f $@
+	./bin/mk-filelist $(RELEASEDIR) '' 'openssl-*.tar.gz' >$@
+
+source/old/0.9.x/index.inc:
+	@rm -f $@
+	./bin/mk-filelist source/old/0.9.8 '' '*.gz' >$@
+source/old/1.0.0/index.inc:
+	@rm -f $@
+	./bin/mk-filelist source/old/1.0.0 '' '*.gz' >$@
+source/old/1.0.1/index.inc:
+	@rm -f $@
+	./bin/mk-filelist source/old/1.0.1 '' '*.gz' >$@
+source/old/1.0.2/index.inc:
+	@rm -f $@
+	./bin/mk-filelist source/old/1.0.2 '' '*.gz' >$@
+source/old/fips/index.inc:
+	@rm -f $@
+	./bin/mk-filelist source/old/fips '' '*.gz' >$@

@@ -1,0 +1,107 @@
+#! /usr/bin/perl -w
+use strict;
+
+sub escape
+{
+    s/\&/\&amp;/g;
+    s/\</\&lt;/g;
+    s/\>/\&gt;/g;
+}
+
+# TOC
+my $l = "";
+my $n = 0;
+print "<h3><a name='toc'>Table of Contents</a></h3>\n";
+my $dirty = 0;
+while (<STDIN>) {
+    escape($_);
+    last if /^=+$/;
+    next if /^\w*$/;
+    if (/^\[([^\[]+)\] (.*)/) {
+	print "</ol>\n" if $dirty;
+	$l = $1;
+	$n = 0;
+	$dirty = 1;
+	print "<h4><a href=\"#$l\">$1</a> $2</h4>\n";
+	print "<ol>\n";
+    } elsif (/^\* (.*)/) {
+	$n++;
+	print "<li><a href=\"#$l$n\">$1</a></li>\n";
+    }
+}
+print "</ol>\n" if $dirty;
+
+# Contents
+my $top = '  <a href="#toc"><img src="/img/up.gif"/></a>';
+$l = "";
+$n = 0;
+my $pre = 0;
+my $snip = 0;
+while (<STDIN>) {
+    next if /^=+$/;
+    if (/^----- snip:start -----/) {
+	print "<pre>";
+	$snip = 1;
+	next;
+    }
+    if ($snip) {
+	if (/^----- snip:end -----/) {
+	    print "</pre>";
+	    $snip = 0;
+	} else {
+	    escape($_);
+	    print;
+	}
+	next;
+    }
+    if (/^ /) {
+	print "<pre>" unless $pre;
+	$pre = 1;
+	escape($_);
+	print;
+	next;
+    }
+    if ($pre) {
+	print "</pre>\n";
+	$pre = 0;
+    }
+    if (/^$/) {
+	print "<p>";
+	next;
+    }
+    if (/<URL:/ and not /<URL:.*>/) {
+	chomp;
+	$_ .= <STDIN>;
+    }
+    s/<URL: *(.*?)>/\@\@\@$1\@\@\@/;
+    escape($_);
+    s/\@\@\@(.*?)\@\@\@/<a href=\"$1\">$1<\/a>/;
+    if (s/\((.?)\)/XX$1XX/g) {
+	while (/([A-Za-z_\.]*)XX(.?)XX/) {
+	    foreach my $section ("apps", "ssl", "crypto") {
+		if (-f "../docs/$section/$1.html") {
+		    s|([A-Za-z_\.]*)XX(.?)XX|<a href=\"../docs/$section/$1.html\">$1($2)</a>|;
+		    goto found;
+		}
+	    }
+	    s/XX(.?)XX/($1)/;
+	  found:
+	}
+    }
+    if (/^\[([^\[]+)\] =+/) {
+	$l = $1;
+	$n = 0;
+	print "<hr>\n";
+	print "<h3>[<a name=\"$l\">$1</a>] $top</h3>\n";
+    } elsif (/^\* (.*)/) {
+	$n++;
+	print "\n<h4><a name=\"$l$n\">$n. $1</a>$top</h4>\n";
+    } elsif (/^$/) {
+	print "<p>";
+    }
+    else {
+	print;
+    }
+}
+
+exit(0);

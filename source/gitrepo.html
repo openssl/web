@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--#include virtual="/inc/head.inc" -->
+
+<body>
+<!--#include virtual="/inc/banner.inc" -->
+
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+	<article>
+	  <header><h2>Git Repository</h2></header>
+
+	  <div class="entry-content">
+	    <p>The OpenSSL software is developed using a Git repository.
+	    Read-only access to the repository is available at
+	    git.openssl.org. We also maintain a downstream clone on GitHub, at
+	    <a
+	    href="https://github.com/openssl/openssl">https://github.com/openssl/openssl</a>
+	  on GitHub.  This repository is updated with every commit and is
+	  accessible through a number of protocols.</p>
+
+	  <p>On the OpenSSL repository we only support the <em>git</em>
+	  protocol. Use the following command to clone the git repository
+	  including all available branches and tags:
+	  <code><pre>
+
+$ git clone git://git.openssl.org/openssl.git
+	  </pre></code>
+	</p>
+
+	<p>Access to the specific branches is possible via the standard branch
+	and checkout commands. See the discussion of branch naming below for
+	more information.</p>
+
+	<p>On Windows, once the repository is cloned, you  should ensure
+	that line endings are set correctly:</p>
+
+	<code><pre>
+
+$ cd openssl
+$ git config core.autocrlf false
+$ git config core.eol lf
+$ git checkout .
+	</pre></code>
+
+	<h3>Git branch names and tagging</h3>
+
+	<p>The <em>master</em> branch, also known as the development branch,
+	contains the latest bleeding edge code. There are also several
+	<em>stable</em> branches where stable releases come from. These take
+	the form <em>OpenSSL_x_y_z-stable</em> so for example the 1.0.0 stable
+	branch is <em>OpenSSL_1_0_0-stable</em>. When an actual release is
+	made it is tagged in the form <em>OpenSSL_x_y_zp</em> or a beta
+	<em>OpenSSL_x_y_xp-betan</em> though you should normally just download
+	the release tarball. Tags and branches are occasionally used for other
+	purposes such as testing experimental or unstable code before it is
+	merged into another branch.</p>
+
+	  </div>
+	  <footer>
+	    You are here: <a href="/">Home</a>
+	    : <a href=".">Downloads</a>
+	    : <a href="">Git Repository</a>
+	    <br/><a href="/sitemap.txt">Sitemap</a>
+	  </footer>
+	</article>
+      </div>
+      <!--#include virtual="sidebar.inc" -->
+    </div>
+  </div>
+
+<!--#include virtual="/inc/footer.inc" -->
+</body>
+
+</html>

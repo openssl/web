@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--#include virtual="/inc/head.inc" -->
+
+<body>
+<!--#include virtual="/inc/banner.inc" -->
+
+<div id="main">
+  <div id="content">
+    <div class="blog-index">
+      <article>
+	<header>
+	  <h2>Release Strategy</h2>
+	  <h5>
+	    First issued 23rd December 2014<br/>
+	    Last modified 9th August 2015
+	  </h5>
+	</header>
+
+	<div class="entry-content">
+
+	  <p>
+	  As of release 1.0.0 the OpenSSL versioning scheme was improved
+	  to better meet developers' and vendors' expectations. Letter
+	  releases, such as 1.0.1a, exclusively contain bug and security
+	  fixes and no new features. Minor releases that change the
+	  last digit, e.g. 1.0.1 vs. 1.0.2, can and are likely to
+	  contain new features, but in a way that does not break binary
+	  compatibility. This means that an application compiled and
+	  dynamically linked with 1.0.0 does not need to be recompiled
+	  when the shared library is updated to 1.0.2. It should be
+	  noted that some features are transparent to the application
+	  such as the maximum negotiated TLS version and cipher suites,
+	  performance improvements and so on. There is no need to
+	  recompile applications to benefit from these features.</p>
+
+	  <p>Binary compatibility also allows other possibilities. For
+	  example, consider an application that wishes to utilize
+	  a new cipher provided in a specific 1.0.x release, but it
+	  is also desirable to maintain the application in a 1.0.0
+	  context.  Customarily this would be resolved at compile time
+	  resulting in two binary packages targeting different OpenSSL
+	  versions. However, depending on the feature, it might be
+	  possible to check for its availability at run-time, thus cutting
+	  down on the maintenance of multiple binary packages. Admittedly
+	  it takes a certain discipline and some extra coding, but we
+	  would like to encourage such practice. This is because we
+	  want to see later releases being adopted faster, because new
+	  features can improve security.</p>
+
+	  <p>With regards to current and future releases the OpenSSL
+	  project has adopted the following policy:</p>
+
+	  <ul>
+	    <li>Support for version 0.9.8 will cease on 2015-12-31. No
+	    further releases of 0.9.8 will be made after that
+	    date. Security fixes only will be applied to 0.9.8 until
+	    then.</li>
+	    <li>Support for version 1.0.0 will cease on 2015-12-31. No
+	    further releases of 1.0.0 will be made after that
+	    date. Security fixes only will be applied to 1.0.0 until
+	    then.</li>
+	  </ul>
+
+	  <p>We may designate a release as a Long Term Support (LTS)
+	  release. LTS releases will be supported for at least five years
+	  and we will specify one at least every four years. Non-LTS
+	  releases will be supported for at least two years.</p>
+
+	  <p>As implied by the above paragraphs, during the final year
+	  of support, we do not commit to anything other than security
+	  fixes. Before that, bug and security fixes will be applied
+	  as appropriate.</p>
+
+	  <ul>
+	    <li>Version 1.0.1 will be supported until 2016-12-31.</li>
+	    <li>Version 1.0.2 will be supported until 2019-12-31.</li>
+	  </ul>
+
+	  <p>At this time, we are not planning a 1.0.3 release.</p>
+
+	  <p>Version 1.1.0 will (moderately) break source compatibility
+	  (for example we will make most structures opaque etc). We
+	  expect a preview version to be available mid 2015, with an
+	  expected release by the end of 2015. Preview means that we
+	  are not planning or expecting major API changes between the
+	  preview release and the final release (but are not categorically
+	  precluding that possibility).</p>
+	</div>
+	<footer>
+	  You are here: <a href="/">Home</a>
+	  : <a href="/policies">Policies</a>
+	  : <a href="">Release Strategy</a>
+	  <br/><a href="/sitemap.txt">Sitemap</a>
+	</footer>
+      </article>
+    </div>
+    <!--#include virtual="sidebar.inc" -->
+  </div>
+</div>
+
+<!--#include virtual="/inc/footer.inc" -->
+</body>
+
+</html>
+

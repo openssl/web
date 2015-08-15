@@ -1,0 +1,93 @@
+OpenSSL Security Advisory [11-Nov-2009]
+=======================================
+
+A potentially serious flaw in SSL and TLS has been worked around in
+OpenSSL 0.9.8l.
+
+Since many changes had occurred on the 0.9.8 branch without a public
+release it was decided to release 0.9.8l based on the last publicly
+tested release version 0.9.8k.
+
+Man-in-the-middle Renegotiation Attack
+======================================
+
+A man-in-the-middle (MitM) can intercept an SSL connection and instead
+make his own connection to the server. He can then send arbitrary data
+and trigger a renegotiation using the client's original connection
+data.
+
+From the server's point of view the client simply connected, sent
+data, renegotiated and continued.
+
+From the client's point of view he connects to the server
+normally. There is no indication at the SSL level that the attack
+occurred. There may be indications at the level of the protocol
+layered on top of SSL, for example, unexpected or pipelined responses.
+
+This attack can also be performed when the server requests a
+renegotiation - in this variant, the MitM would wait for the server's
+renegotiation request and at that point replay the clients original
+connection data.
+
+Once the original client connection data has been replayed, the MitM
+can no longer inject data, nor can he read the traffic over the SSL
+connection in either direction.
+
+Workaround
+==========
+
+The workaround in 0.9.8l simply bans all renegotiation. Because of the
+nature of the attack, this is only an effective defence when deployed
+on servers. Upgraded clients will still be vulnerable.
+
+Servers that need renegotiation to function correctly obviously cannot
+deploy this fix without breakage.
+
+Severity
+========
+
+Because of the enormous difficulty of analysing every possible attack
+on every protocol that is layered on SSL, the OpenSSL Team classify
+this as a severe issue and recommend that everyone who does not rely
+on renegotiation deploy 0.9.8l as soon as possible.
+
+History
+=======
+
+A small number of people knew about the problem in advance under NDA
+and a comprehensive fix was being developed. Unfortunately the issue
+was independently discovered and the details made public so a less
+than ideal brute force emergency fix had to be developed and released.
+
+Future Plans
+============
+
+A TLS extension has been defined which will cryptographically bind the
+session before renegotiation to the session after. We are working on
+incorporating this into 0.9.8m, which will also incorporate a number
+of other security and bug fixes.
+
+Because renegotiation is, in practice, rarely used we will not be
+rushing the production of 0.9.8m, but will instead test
+interoperability with other implementations, and ensure the stability
+of the other fixes before release.
+
+Acknowledgements
+================
+
+Thanks to Marsh Ray, who discovered the issue, and Steve Dispensa of
+PhoneFactor. Also thanks to ICASI who managed the early coordination
+of this issue.
+
+References
+===========
+
+CVE-2009-3555:
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3555
+
+TLS extension:
+https://svn.resiprocate.org/rep/ietf-drafts/ekr/draft-rescorla-tls-renegotiate.txt
+
+URL for this Security Advisory:
+http://www.openssl.org/news/secadv_20091111.txt
+

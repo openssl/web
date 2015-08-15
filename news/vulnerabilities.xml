@@ -22,7 +22,7 @@
       enabling them to use a valid leaf certificate to act as a CA and
       "issue" an invalid certificate.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150709.txt"/>
+    <advisory url="/news/secadv/20150709.txt"/>
     <reported source="Adam Langley and David Benjamin (Google/BoringSSL)"/>
   </issue>
   <issue public="20150611">
@@ -81,7 +81,7 @@
       certificates.  This includes TLS clients and TLS servers with
       client authentication enabled.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150611.txt"/>
+    <advisory url="/news/secadv/20150611.txt"/>
     <reported source="Joseph Birr-Pixton"/>
   </issue>
 
@@ -171,7 +171,7 @@
       authentication enabled may be affected if they use custom verification
       callbacks.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150611.txt"/>
+    <advisory url="/news/secadv/20150611.txt"/>
     <reported source="Robert Swiecki (Google) and (independently) Hanno Böck"/>
   </issue>
 
@@ -257,7 +257,7 @@
       structures from untrusted sources are affected. OpenSSL clients and
       servers are not affected.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150611.txt"/>
+    <advisory url="/news/secadv/20150611.txt"/>
     <reported source="Michal Zalewski (Google)"/>
   </issue>
 
@@ -341,7 +341,7 @@
       This can be used to perform denial of service against any system which
       verifies signedData messages using the CMS code.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150611.txt"/>
+    <advisory url="/news/secadv/20150611.txt"/>
     <reported source="Johannes Bauer"/>
   </issue>
 
@@ -423,7 +423,7 @@
       reuse a previous ticket then a race condition can occur potentially leading to
       a double free of the ticket data.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150611.txt"/>
+    <advisory url="/news/secadv/20150611.txt"/>
     <reported source="Emilia Käsper (OpenSSL)"/>
   </issue>
 
@@ -487,7 +487,7 @@
       free, resulting in a segmentation fault or potentially, memory
       corruption.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150611.txt"/>
+    <advisory url="/news/secadv/20150611.txt"/>
     <reported source="Praveen Kariyanahalli, and subsequently by Ivan Fratric and Felix Groebert (Google)"/>
   </issue>
   <issue public="20150319">
@@ -501,7 +501,7 @@ ClientHello sigalgs DoS.  If a client connects to an OpenSSL 1.0.2 server and re
 invalid signature algorithms extension a NULL pointer dereference will occur.
 This can be exploited in a DoS attack against the server.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150319.txt"/>
+    <advisory url="/news/secadv/20150319.txt"/>
     <reported source=" David Ramos (Stanford University)"/>
   </issue>
 
@@ -522,7 +522,7 @@ will only result in a failed connection. However if some other BIO is used then
 it is likely that a segmentation fault will be triggered, thus enabling a
 potential DoS attack.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150319.txt"/>
+    <advisory url="/news/secadv/20150319.txt"/>
     <reported source="Daniel Danner and Rainer Mueller"/>
   </issue>
 
@@ -540,7 +540,7 @@ fault. Errors processing the initial ClientHello can trigger this scenario. An
 example of such an error could be that a DTLS1.0 only client is attempting to
 connect to a DTLS1.2 only server.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150319.txt"/>
+    <advisory url="/news/secadv/20150319.txt"/>
     <reported source="Per Allansson"/>
   </issue>
 
@@ -594,7 +594,7 @@ certificate verification operation and exploited in a DoS attack. Any
 application which performs certificate verification is vulnerable including
 OpenSSL clients and servers which enable client authentication.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150319.txt"/>
+    <advisory url="/news/secadv/20150319.txt"/>
     <reported source="Stephen Henson (OpenSSL development team)"/>
   </issue>
 
@@ -614,7 +614,7 @@ certificate verification operation and exploited in a DoS attack. Any
 application which performs certificate verification is vulnerable including
 OpenSSL clients and servers which enable client authentication.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150319.txt"/>
+    <advisory url="/news/secadv/20150319.txt"/>
     <reported source="Brian Carpenter"/>
   </issue>
 
@@ -694,7 +694,7 @@ Reusing a structure in ASN.1 parsing may allow an attacker to cause
 memory corruption via an invalid write. Such reuse is and has been
 strongly discouraged and is believed to be rare.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150319.txt"/>
+    <advisory url="/news/secadv/20150319.txt"/>
     <reported source="Emilia Käsper (OpenSSL development team)"/>
   </issue>
 
@@ -777,7 +777,7 @@ Applications that verify PKCS#7 signatures, decrypt PKCS#7 data or
 otherwise parse PKCS#7 structures from untrusted sources are
 affected. OpenSSL clients and servers are not affected.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150319.txt"/>
+    <advisory url="/news/secadv/20150319.txt"/>
     <reported source="Michal Zalewski (Google)"/>
   </issue>
 
@@ -841,7 +841,7 @@ untrusted source could be affected (such as the PEM processing routines).
 Maliciously crafted base 64 data could trigger a segmenation fault or memory
 corruption. 
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150319.txt"/>
+    <advisory url="/news/secadv/20150319.txt"/>
     <reported source="Robert Dugal, also David Ramos, also Huzaifa Sidhpurwala (Red Hat)"/>
   </issue>
 
@@ -921,7 +921,7 @@ A malicious client can trigger an OPENSSL_assert in
 servers that both support SSLv2 and enable export cipher suites by sending
 a specially crafted SSLv2 CLIENT-MASTER-KEY message.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150319.txt"/>
+    <advisory url="/news/secadv/20150319.txt"/>
     <reported source="Sean Burford (Google) and Emilia Käsper (OpenSSL development team)"/>
   </issue>
 
@@ -937,7 +937,7 @@ If client auth is used then a server can seg fault in the event of a DHE
 ciphersuite being selected and a zero length ClientKeyExchange message being
 sent by the client. This could be exploited in a DoS attack.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150319.txt"/>
+    <advisory url="/news/secadv/20150319.txt"/>
     <reported source="Matt Caswell (OpenSSL development team)"/>
   </issue>
 
@@ -953,7 +953,7 @@ an unseeded PRNG. If the handshake succeeds then the client random that has been
 been generated from a PRNG with insufficient entropy and therefore the output
 may be predictable.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150319.txt"/>
+    <advisory url="/news/secadv/20150319.txt"/>
     <reported source="Matt Caswell (OpenSSL development team)"/>
   </issue>
 
@@ -1036,7 +1036,7 @@ or EVP_PKCS82PKEY) and could lead to a DoS attack or memory corruption
 for applications that receive EC private keys from untrusted
 sources. This scenario is considered rare.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150319.txt"/>
+    <advisory url="/news/secadv/20150319.txt"/>
     <reported source="The BoringSSL project"/>
   </issue>
 
@@ -1115,7 +1115,7 @@ X509_to_X509_REQ NULL pointer deref.
 The function X509_to_X509_REQ will crash with a NULL pointer dereference if
 the certificate key is invalid. This function is rarely used in practice.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150319.txt"/>
+    <advisory url="/news/secadv/20150319.txt"/>
     <reported source="Brian Carpenter"/>
   </issue>
 
@@ -1157,7 +1157,7 @@ the certificate key is invalid. This function is rarely used in practice.
       memory leak could be exploited by an attacker in a Denial of Service
       attack through memory exhaustion.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150108.txt"/>
+    <advisory url="/news/secadv/20150108.txt"/>
     <reported source="Chris Mueller"/>
   </issue>
 
@@ -1175,7 +1175,7 @@ the certificate key is invalid. This function is rarely used in practice.
       received the ssl method would be set to NULL which could later result in
       a NULL pointer dereference.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150108.txt"/>
+    <advisory url="/news/secadv/20150108.txt"/>
     <reported source="Frank Schmirler"/>
   </issue>
 
@@ -1245,7 +1245,7 @@ the certificate key is invalid. This function is rarely used in practice.
       ciphersuite using an ECDSA certificate if the server key exchange message
       is omitted. This effectively removes forward secrecy from the ciphersuite.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150108.txt"/>
+    <advisory url="/news/secadv/20150108.txt"/>
     <reported source="Karthikeyan Bhargavan of the PROSECCO team at INRIA"/>
   </issue>
 
@@ -1315,7 +1315,7 @@ the certificate key is invalid. This function is rarely used in practice.
       non-export RSA key exchange ciphersuite. A server could present a weak
       temporary key and downgrade the security of the session.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150108.txt"/>
+    <advisory url="/news/secadv/20150108.txt"/>
     <reported source="Karthikeyan Bhargavan of the PROSECCO team at INRIA"/>
   </issue>
 
@@ -1358,7 +1358,7 @@ the certificate key is invalid. This function is rarely used in practice.
       certificates containing DH keys: these are extremely rare and hardly ever
       encountered.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150108.txt"/>
+    <advisory url="/news/secadv/20150108.txt"/>
     <reported source="Karthikeyan Bhargavan of the PROSECCO team at INRIA"/>
   </issue>
 
@@ -1437,7 +1437,7 @@ the certificate key is invalid. This function is rarely used in practice.
       applications that rely on the uniqueness of the fingerprint (e.g.
       certificate blacklists) may be affected.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150108.txt"/>
+    <advisory url="/news/secadv/20150108.txt"/>
     <reported source="Antti Karjalainen and Tuomo Untinen from the Codenomicon CROSS program/Konrad Kraszewski from Google"/>
   </issue>
 
@@ -1526,7 +1526,7 @@ the certificate key is invalid. This function is rarely used in practice.
       attacker cannot control when the bug triggers, or no private key material
       is involved.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20150108.txt"/>
+    <advisory url="/news/secadv/20150108.txt"/>
     <reported source="Pieter Wuille (Blockstream)"/>
   </issue>
 
@@ -1552,7 +1552,7 @@ the certificate key is invalid. This function is rarely used in practice.
       whether SRTP is used or configured. Implementations of OpenSSL that
       have been compiled with OPENSSL_NO_SRTP defined are not affected.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20141015.txt"/>
+    <advisory url="/news/secadv/20141015.txt"/>
     <reported source="LibreSSL project"/>
   </issue>
 
@@ -1614,7 +1614,7 @@ the certificate key is invalid. This function is rarely used in practice.
       tickets an attacker could exploit this issue in a Denial Of Service
       attack.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20141015.txt"/>
+    <advisory url="/news/secadv/20141015.txt"/>
   </issue>
   <issue public="20141015">
     <cve name=""/>  <!-- this is deliberate -->
@@ -1754,7 +1754,7 @@ the certificate key is invalid. This function is rarely used in practice.
       could accept and complete a SSL 3.0 handshake, and clients could be
       configured to send them.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20141015.txt"/>
+    <advisory url="/news/secadv/20141015.txt"/>
     <reported source="Akamai Technologies"/>
   </issue>
   <issue public="20140806">
@@ -1820,7 +1820,7 @@ X509_name_oneline, X509_name_print_ex, to leak some information from the
 stack. Applications may be affected if they echo pretty printing output to the
 attacker.  OpenSSL SSL/TLS clients and servers themselves are not affected.
     </description>
-    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+    <advisory url="/news/secadv/20140806.txt"/>
     <reported source="Ivan Fratric (Google)"/>
   </issue>
 
@@ -1844,7 +1844,7 @@ could lead to a Denial of Service.
     <affects base="1.0.1" version="1.0.1h"/>
     <fixed base="1.0.1" version="1.0.1i" date="20140806">
     </fixed>
-    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+    <advisory url="/news/secadv/20140806.txt"/>
     <reported source="Joonas Kuorilehto and Riku Hietamäki (Codenomicon)"/>
   </issue>
 
@@ -1881,7 +1881,7 @@ to freed memory.</description>
     <fixed base="1.0.0" version="1.0.0n" date="20140806">
     </fixed>
     <reported source="Gabor Tyukasz (LogMeIn Inc)"/>
-    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+    <advisory url="/news/secadv/20140806.txt"/>
   </issue>
 
   <issue public="20140806">
@@ -1935,7 +1935,7 @@ processing DTLS packets due to memory being freed twice. This could lead to a
 Denial of Service attack.
     </description>
     <reported source="Adam Langley and Wan-Teh Chang (Google)"/>
-    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+    <advisory url="/news/secadv/20140806.txt"/>
   </issue>
 
   <issue public="20140806">
@@ -2002,7 +2002,7 @@ processing DTLS handshake messages. This could lead to a Denial of
 Service attack.
     </description>
     <reported source="Adam Langley (Google)"/>
-    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+    <advisory url="/news/secadv/20140806.txt"/>
   </issue>
 
   <issue public="20140806">
@@ -2052,7 +2052,7 @@ By sending carefully crafted DTLS packets an attacker could cause OpenSSL to
 leak memory. This could lead to a Denial of Service attack.
     </description>
     <reported source="Adam Langley (Google)"/>
-    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+    <advisory url="/news/secadv/20140806.txt"/>
   </issue>
 
   <issue public="20140806">
@@ -2120,7 +2120,7 @@ pointer dereference (read) by specifying an anonymous (EC)DH ciphersuite and
 sending carefully crafted handshake messages.
     </description>
     <reported source="Felix Gröbert (Google)"/>
-    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+    <advisory url="/news/secadv/20140806.txt"/>
   </issue>
 
   <issue public="20140806">
@@ -2144,7 +2144,7 @@ downgrade to TLS 1.0 even if both the server and the client support a higher
 protocol version, by modifying the client's TLS records.
     </description>
     <reported source="David Benjamin and Adam Langley (Google)"/>
-    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+    <advisory url="/news/secadv/20140806.txt"/>
   </issue>
 
   <issue public="20140806">
@@ -2167,7 +2167,7 @@ an internal buffer. Only applications which are explicitly set up for SRP
 use are affected.
     </description>
     <reported source="Sean Devlin and Watson Ladd (Cryptography Services, NCC Group)"/>
-    <advisory url="http://www.openssl.org/news/secadv_20140806.txt"/>
+    <advisory url="/news/secadv/20140806.txt"/>
   </issue>
 
   <issue public="20020730">
@@ -2178,7 +2178,7 @@ use are affected.
     <affects base="0.9.6" version="0.9.6c"/>
     <affects base="0.9.6" version="0.9.6d"/>
     <fixed base="0.9.6" version="0.9.6e" date="20020730"/>
-    <advisory url="http://www.openssl.org/news/secadv_20020730.txt"/>
+    <advisory url="/news/secadv/20020730.txt"/>
     <reported source="OpenSSL Group (A.L. Digital)"/>
     <description>
 Inproper handling of ASCII representations of integers on
@@ -2195,7 +2195,7 @@ service or possibly execute arbitrary code.
     <affects base="0.9.6" version="0.9.6c"/>
     <affects base="0.9.6" version="0.9.6d"/>
     <fixed base="0.9.6" version="0.9.6e" date="20020730"/>
-    <advisory url="http://www.openssl.org/news/secadv_20020730.txt"/>
+    <advisory url="/news/secadv/20020730.txt"/>
     <reported source="OpenSSL Group (A.L. Digital)"/>
     <description>
 A buffer overflow allowed remote attackers to execute
@@ -2206,7 +2206,7 @@ large session ID in SSL3.
 
   <issue public="20020730">
     <cve name="2002-0657"/>
-    <advisory url="http://www.openssl.org/news/secadv_20020730.txt"/>
+    <advisory url="/news/secadv/20020730.txt"/>
     <reported source="OpenSSL Group (A.L. Digital)"/>
     <description>
 A buffer overflow when Kerberos is enabled allowed attackers
@@ -2256,7 +2256,7 @@ s2_srvr.c.
     <affects base="0.9.6" version="0.9.6h"/>
     <fixed base="0.9.7" version="0.9.7a" date="20030219"/>
     <fixed base="0.9.6" version="0.9.6i" date="20030219"/>
-    <advisory url="http://www.openssl.org/news/secadv_20030219.txt"/>
+    <advisory url="/news/secadv/20030219.txt"/>
     <description>
 sl3_get_record in s3_pkt.c did not perform a MAC computation if an
 incorrect block cipher padding was used, causing an information leak
@@ -2283,7 +2283,7 @@ plaintext, aka the "Vaudenay timing attack."
     <affects base="0.9.7" version="0.9.7a"/>
     <fixed base="0.9.6" version="0.9.6j" date="20030410"/>
     <fixed base="0.9.7" version="0.9.7b" date="20030410"/>
-    <advisory url="http://www.openssl.org/news/secadv_20030319.txt"/>
+    <advisory url="/news/secadv/20030319.txt"/>
     <description>
 The SSL and TLS components allowed remote attackers to perform an
 unauthorized RSA private key operation via a modified Bleichenbacher
@@ -2308,7 +2308,7 @@ relationship between ciphertext and the associated plaintext, aka the
     <affects base="0.9.6" version="0.9.6i"/>
     <affects base="0.9.7" version="0.9.7"/>
     <affects base="0.9.7" version="0.9.7a"/>
-    <advisory url="http://www.openssl.org/news/secadv_20030317.txt"/>
+    <advisory url="/news/secadv/20030317.txt"/>
     <fixed base="0.9.7" version="0.9.7b" date="20030410"/>
     <fixed base="0.9.6" version="0.9.6j" date="20030410"/>
     <description>
@@ -2338,7 +2338,7 @@ multiplication algorithms ("Karatsuba" and normal).
     <affects base="0.9.7" version="0.9.7b"/>
     <fixed base="0.9.7" version="0.9.7c" date="20030930"/>
     <fixed base="0.9.6" version="0.9.6k" date="20030930"/>
-    <advisory url="http://www.openssl.org/news/secadv_20030930.txt"/>
+    <advisory url="/news/secadv/20030930.txt"/>
     <reported source="NISCC"/>
     <description>
 An integer overflow could allow remote attackers to cause a denial of
@@ -2365,7 +2365,7 @@ values.
     <affects base="0.9.6" version="0.9.6j"/>
     <fixed base="0.9.6" version="0.9.6k" date="20030930"/>
     <fixed base="0.9.7" version="0.9.7c" date="20030930"/>
-    <advisory url="http://www.openssl.org/news/secadv_20030930.txt"/>
+    <advisory url="/news/secadv/20030930.txt"/>
     <reported source="NISCC"/>
     <description>
 Incorrect tracking of the number of characters in certain
@@ -2381,7 +2381,7 @@ read past the end of a buffer when the long form is used.
     <affects base="0.9.7" version="0.9.7a"/>
     <affects base="0.9.7" version="0.9.7b"/>
     <fixed base="0.9.7" version="0.9.7c" date="20030930"/>
-    <advisory url="http://www.openssl.org/news/secadv_20030930.txt"/>
+    <advisory url="/news/secadv/20030930.txt"/>
     <reported source="NISCC"/>
     <description>
 Certain ASN.1 encodings that were rejected as invalid by the parser could
@@ -2394,7 +2394,7 @@ corrupting the stack, leading to a crash.
     <cve name="2003-0851"/>
     <affects base="0.9.6" version="0.9.6k"/>
     <fixed base="0.9.6" version="0.9.6l" date="20031104"/>
-    <advisory url="http://www.openssl.org/news/secadv_20031104.txt"/>
+    <advisory url="/news/secadv/20031104.txt"/>
     <reported source="Novell"/>
     <description> 
 A flaw in OpenSSL 0.9.6k (only) would cause certain ASN.1 sequences to
@@ -2425,7 +2425,7 @@ SSL/TLS enabled server which is configured to accept them.
     <affects base="0.9.7" version="0.9.7c"/>
     <fixed base="0.9.7" version="0.9.7d" date="20040317"/>
     <fixed base="0.9.6" version="0.9.6m" date="20040317"/>
-    <advisory url="http://www.openssl.org/news/secadv_20040317.txt"/>
+    <advisory url="/news/secadv/20040317.txt"/>
     <reported source="OpenSSL group"/>
     <description> 
 The Codenomicon TLS Test Tool uncovered a null-pointer assignment in the
@@ -2441,7 +2441,7 @@ OpenSSL library in such a way as to cause a crash.
     <affects base="0.9.6" version="0.9.6a"/>
     <affects base="0.9.6" version="0.9.6b"/>
     <affects base="0.9.6" version="0.9.6c"/>
-    <advisory url="http://www.openssl.org/news/secadv_20030317.txt"/>
+    <advisory url="/news/secadv/20030317.txt"/>
     <reported source="OpenSSL group"/>
     <description>
 The Codenomicon TLS Test Tool found that some unknown message types
@@ -2457,7 +2457,7 @@ of service (infinite loop).
     <affects base="0.9.7" version="0.9.7c"/>
     <fixed base="0.9.7" version="0.9.7d" date="20040317"/>
     <reported source="OpenSSL group (Stephen Henson)"/>
-    <advisory url="http://www.openssl.org/news/secadv_20040317.txt"/>
+    <advisory url="/news/secadv/20040317.txt"/>
     <description>
 A flaw in SSL/TLS handshaking code when using Kerberos ciphersuites.
 A remote attacker could perform a carefully crafted SSL/TLS handshake
@@ -2530,7 +2530,7 @@ distribution.
     <fixed base="0.9.7" version="0.9.7h" date="20051011"/>
     <fixed base="0.9.8" version="0.9.8a" date="20051011"/>
 
-    <advisory url="http://www.openssl.org/news/secadv_20051011.txt"/>
+    <advisory url="/news/secadv/20051011.txt"/>
     <reported source="researcher"/>
 
     <description>
@@ -2573,7 +2573,7 @@ downgrade to SSL 2.0 even if both parties support better protocols.
     <fixed base="0.9.7" version="0.9.7k" date="20060905"/>
     <fixed base="0.9.8" version="0.9.8c" date="20060905"/>
 
-    <advisory url="http://www.openssl.org/news/secadv_20060905.txt"/>
+    <advisory url="/news/secadv/20060905.txt"/>
     <reported source="openssl"/>
 
     <description>
@@ -2605,7 +2605,7 @@ verified by OpenSSL.
     <fixed base="0.9.7" version="0.9.7l" date="20060928"/>
     <fixed base="0.9.8" version="0.9.8d" date="20060928"/>
 
-    <advisory url="http://www.openssl.org/news/secadv_20060928.txt"/>
+    <advisory url="/news/secadv/20060928.txt"/>
     <reported source="openssl"/>
 
     <description>
@@ -2650,7 +2650,7 @@ consumes system memory
     <fixed base="0.9.7" version="0.9.7l" date="20060928"/>
     <fixed base="0.9.8" version="0.9.8d" date="20060928"/>
 
-    <advisory url="http://www.openssl.org/news/secadv_20060928.txt"/>
+    <advisory url="/news/secadv/20060928.txt"/>
     <reported source="openssl"/>
 
     <description>
@@ -2695,7 +2695,7 @@ service attack.
     <fixed base="0.9.7" version="0.9.7l" date="20060928"/>
     <fixed base="0.9.8" version="0.9.8d" date="20060928"/>
 
-    <advisory url="http://www.openssl.org/news/secadv_20060928.txt"/>
+    <advisory url="/news/secadv/20060928.txt"/>
     <reported source="openssl"/>
 
     <description>
@@ -2740,7 +2740,7 @@ application that uses this function and overrun a buffer.
     <fixed base="0.9.7" version="0.9.7l" date="20060928"/>
     <fixed base="0.9.8" version="0.9.8d" date="20060928"/>
 
-    <advisory url="http://www.openssl.org/news/secadv_20060928.txt"/>
+    <advisory url="/news/secadv/20060928.txt"/>
     <reported source="openssl"/>
 
     <description>
@@ -2759,7 +2759,7 @@ server, that server could cause the client to crash.
     <affects base="0.9.8" version="0.9.8d"/>
     <affects base="0.9.8" version="0.9.8e"/>
     <fixed base="0.9.8" version="0.9.8f" date="20071012"/>
-    <advisory url="http://www.openssl.org/news/secadv_20071012.txt"/>
+    <advisory url="/news/secadv/20071012.txt"/>
     <reported source="Andy Polyakov"/>
 
     <description>
@@ -2779,7 +2779,7 @@ not been verified.
     <affects base="0.9.8" version="0.9.8d"/>
     <affects base="0.9.8" version="0.9.8e"/>
     <fixed base="0.9.8" version="0.9.8f" date="20071012"/>
-    <advisory url="http://www.openssl.org/news/secadv_20071012.txt"/>
+    <advisory url="/news/secadv/20071012.txt"/>
     <reported source="Moritz Jodeit"/>
 
     <description>
@@ -2793,7 +2793,7 @@ only when applications are compiled for debugging.
 
   <issue public="20071129">
     <cve name="2007-5502"/>
-    <advisory url="http://www.openssl.org/news/secadv_20071129.txt"/>
+    <advisory url="/news/secadv/20071129.txt"/>
     <reported source="Geoff Lowe"/>
 
     <description>
@@ -2810,7 +2810,7 @@ randomness.
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <fixed base="0.9.8" version="0.9.8h" date="20080528"/>
-    <advisory url="http://www.openssl.org/news/secadv_20080528.txt"/>
+    <advisory url="/news/secadv/20080528.txt"/>
     <reported source="codenomicon"/>
     <description>
 Testing using the Codenomicon TLS test suite discovered a flaw in the
@@ -2826,7 +2826,7 @@ packet to a server application using OpenSSL and cause it to crash.
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <fixed base="0.9.8" version="0.9.8h" date="20080528"/>
-    <advisory url="http://www.openssl.org/news/secadv_20080528.txt"/>
+    <advisory url="/news/secadv/20080528.txt"/>
     <reported source="codenomicon"/>
     <description>
 Testing using the Codenomicon TLS test suite discovered a flaw if the
@@ -2850,7 +2850,7 @@ the client to crash.
     <affects base="0.9.8" version="0.9.8h"/>
     <affects base="0.9.8" version="0.9.8i"/>
     <fixed base="0.9.8" version="0.9.8j" date="20090107"/>
-    <advisory url="http://www.openssl.org/news/secadv_20090107.txt"/>
+    <advisory url="/news/secadv/20090107.txt"/>
     <reported source="google"/>
     <description>
 
@@ -2880,7 +2880,7 @@ vulnerable client, bypassing validation.
     <affects base="0.9.8" version="0.9.8i"/>
     <affects base="0.9.8" version="0.9.8j"/>
     <fixed base="0.9.8" version="0.9.8k" date="20090325"/>
-    <advisory url="http://www.openssl.org/news/secadv_20090325.txt"/>
+    <advisory url="/news/secadv/20090325.txt"/>
     <description>
 The function ASN1_STRING_print_ex() when used to print a BMPString or
 UniversalString will crash with an invalid memory access if the
@@ -2896,7 +2896,7 @@ this bug, including SSL servers, clients and S/MIME software.
     <affects base="0.9.8" version="0.9.8i"/>
     <affects base="0.9.8" version="0.9.8j"/>
     <fixed base="0.9.8" version="0.9.8k" date="20090325"/>
-    <advisory url="http://www.openssl.org/news/secadv_20090325.txt"/>
+    <advisory url="/news/secadv/20090325.txt"/>
     <reported source="Ivan Nestlerode, IBM"/>
     <description>
 The function CMS_verify() does not correctly handle an error condition
@@ -2921,7 +2921,7 @@ checked.
     <affects base="0.9.8" version="0.9.8j"/>
     <fixed base="0.9.8" version="0.9.8k" date="20090325"/>
     <reported source="Paolo Ganci"/>
-    <advisory url="http://www.openssl.org/news/secadv_20090325.txt"/>
+    <advisory url="/news/secadv/20090325.txt"/>
     <description>
 When a malformed ASN1 structure is received it's contents are freed up and
 zeroed and an error condition returned. On a small number of platforms where
@@ -2967,7 +2967,7 @@ A remote attacker could use this flaw to cause a DTLS server to crash
     <affects base="0.9.8" version="0.9.8k"/>
     <affects base="0.9.8" version="0.9.8l"/>
     <fixed base="0.9.8" version="0.9.8m" date="20100120"/>
-    <advisory url="http://www.openssl.org/news/secadv_20091111.txt"/>
+    <advisory url="/news/secadv/20091111.txt"/>
     <description>
 Implement RFC5746 to address vulnerabilities in SSL/TLS renegotiation.
     </description>
@@ -3111,7 +3111,7 @@ cipher suites during the TLS handshake
     <affects base="0.9.8" version="0.9.8l"/>
     <affects base="0.9.8" version="0.9.8m"/>
     <fixed base="0.9.8" version="0.9.8n" date="20100324"/>
-    <advisory url="http://www.openssl.org/news/secadv_20100324.txt"/>
+    <advisory url="/news/secadv/20100324.txt"/>
     <reported source="Bodo Moeller and Adam Langley (Google)"/>
     <description>
 In TLS connections, certain incorrectly formatted records can cause an
@@ -3131,7 +3131,7 @@ OpenSSL client or server to crash due to a read attempt at NULL.
     <affects base="0.9.8" version="0.9.8n"/>
     <fixed base="0.9.8" version="0.9.8o" date="20100601"/>
     <fixed base="1.0.0" version="1.0.0a" date="20100601"/>
-    <advisory url="http://www.openssl.org/news/secadv_20100601.txt"/>
+    <advisory url="/news/secadv/20100601.txt"/>
     <reported source="Ronald Moesbergen"/>
     <description>
 A flaw in the handling of CMS structures containing OriginatorInfo was found which 
@@ -3144,7 +3144,7 @@ disabled by default in OpenSSL 0.9.8 versions.
     <cve name="2010-1633"/>
     <affects base="1.0.0" version="1.0.0"/>
     <fixed base="1.0.0" version="1.0.0a" date="20100601"/>
-    <advisory url="http://www.openssl.org/news/secadv_20100601.txt"/>
+    <advisory url="/news/secadv/20100601.txt"/>
     <reported source="Peter-Michael Hager"/>
     <description>
 An invalid Return value check in pkey_rsa_verifyrecover was
@@ -3176,7 +3176,7 @@ an error code.  This could lead to an information leak.
     <affects base="1.0.0" version="1.0.0a"/>
     <fixed base="1.0.0" version="1.0.0b" date="20101116"/>
     <fixed base="0.9.8" version="0.9.8p" date="20101116"/>
-    <advisory url="http://www.openssl.org/news/secadv_20101116.txt"/>
+    <advisory url="/news/secadv/20101116.txt"/>
     <reported source="Rob Hulswit"/>
     <description>
 
@@ -3196,7 +3196,7 @@ affected.
     <affects base="1.0.0" version="1.0.0a"/>
     <affects base="1.0.0" version="1.0.0b"/>
     <fixed base="1.0.0" version="1.0.0c" date="20101202"/>
-    <advisory url="http://www.openssl.org/news/secadv_20101202.txt"/>
+    <advisory url="/news/secadv/20101202.txt"/>
     <reported source="Sebastian Martini"/>
     <description>
 An error in OpenSSL's experimental J-PAKE implementation which could
@@ -3230,7 +3230,7 @@ J-PAKE to be experimental and is not compiled by default.
     <affects base="1.0.0" version="1.0.0b"/>
     <fixed base="1.0.0" version="1.0.0c" date="20101202"/>
     <fixed base="0.9.8" version="0.9.8q" date="20101202"/>
-    <advisory url="http://www.openssl.org/news/secadv_20101202.txt"/>
+    <advisory url="/news/secadv/20101202.txt"/>
     <reported source="Martin Rex"/>
     <description>
 A flaw in the OpenSSL SSL/TLS server code where an old bug workaround
@@ -3251,7 +3251,7 @@ applications enable this by using the SSL_OP_ALL option).
     <affects base="1.0.0" version="1.0.0c"/>
     <affects base="1.0.0" version="1.0.0d"/>
     <fixed base="1.0.0" version="1.0.0e" date="20110906"/>
-    <advisory url="http://www.openssl.org/news/secadv_20110906.txt"/>
+    <advisory url="/news/secadv/20110906.txt"/>
     <reported source="Kaspar Brand"/>
     <description>
 Under certain circumstances OpenSSL's internal certificate
@@ -3290,7 +3290,7 @@ checking (such as Apache) are not affected.
     <affects base="1.0.0" version="1.0.0c"/>
     <affects base="1.0.0" version="1.0.0d"/>
     <fixed base="1.0.0" version="1.0.0e" date="20110906"/>
-    <advisory url="http://www.openssl.org/news/secadv_20110906.txt"/>
+    <advisory url="/news/secadv/20110906.txt"/>
     <reported source="Adam Langley"/>
     <description>
 OpenSSL server code for ephemeral ECDH ciphersuites is not
@@ -3331,7 +3331,7 @@ enabled in the configuration.
     <affects base="1.0.0" version="1.0.0e"/>
     <fixed base="1.0.0" version="1.0.0f" date="20120104"/>
     <fixed base="0.9.8" version="0.9.8s" date="20120104"/>
-    <advisory url="http://www.openssl.org/news/secadv_20120104.txt"/>
+    <advisory url="/news/secadv/20120104.txt"/>
     <reported source="Nadhem Alfardan and Kenny Paterson"/>
     <description>
 OpenSSL was susceptable an extension of the 
@@ -3364,7 +3364,7 @@ decryption processing.
     <affects base="0.9.8" version="0.9.8q"/>
     <affects base="0.9.8" version="0.9.8r"/>
     <fixed base="0.9.8" version="0.9.8s" date="20120104"/>
-    <advisory url="http://www.openssl.org/news/secadv_20120104.txt"/>
+    <advisory url="/news/secadv/20120104.txt"/>
     <reported source="Ben Laurie"/>
     <description>
 If X509_V_FLAG_POLICY_CHECK is set in OpenSSL 0.9.8, then a policy
@@ -3402,7 +3402,7 @@ unless this flag is set. Users of OpenSSL 1.0.0 are not affected
     <affects base="1.0.0" version="1.0.0e"/>
     <fixed base="1.0.0" version="1.0.0f" date="20120104"/>
     <fixed base="0.9.8" version="0.9.8s" date="20120104"/>
-    <advisory url="http://www.openssl.org/news/secadv_20120104.txt"/>
+    <advisory url="/news/secadv/20120104.txt"/>
     <reported source="Adam Langley"/>
     <description>
 OpenSSL failed to clear the bytes used as
@@ -3440,7 +3440,7 @@ the contents of memory in some circumstances.
     <affects base="1.0.0" version="1.0.0e"/>
     <fixed base="1.0.0" version="1.0.0f" date="20120104"/>
     <fixed base="0.9.8" version="0.9.8s" date="20120104"/>
-    <advisory url="http://www.openssl.org/news/secadv_20120104.txt"/>
+    <advisory url="/news/secadv/20120104.txt"/>
     <reported source="Andrew Chi"/>
     <description>
 RFC 3779 data can be included in certificates, and if it is malformed,
@@ -3479,7 +3479,7 @@ denial-of-service attack.  Builds of OpenSSL are only vulnerable if configured w
     <affects base="1.0.0" version="1.0.0e"/>
     <fixed base="1.0.0" version="1.0.0f" date="20120104"/>
     <fixed base="0.9.8" version="0.9.8s" date="20120104"/>
-    <advisory url="http://www.openssl.org/news/secadv_20120104.txt"/>
+    <advisory url="/news/secadv/20120104.txt"/>
     <reported source="George Kadianakis"/>
     <description>
 Support for handshake restarts for server gated cryptograpy (SGC) can
@@ -3496,7 +3496,7 @@ be used in a denial-of-service attack.
     <affects base="1.0.0" version="1.0.0d"/>
     <affects base="1.0.0" version="1.0.0e"/>
     <fixed base="1.0.0" version="1.0.0f" date="20120104"/>
-    <advisory url="http://www.openssl.org/news/secadv_20120104.txt"/>
+    <advisory url="/news/secadv/20120104.txt"/>
     <reported source="Andrey Kulikov"/>
     <description>
 A malicious TLS client can send an invalid set of GOST parameters
@@ -3512,7 +3512,7 @@ Only users of the OpenSSL GOST ENGINE are affected by this bug.
     <affects base="1.0.0" version="1.0.0f"/>
     <fixed base="1.0.0" version="1.0.0g" date="20120118"/>
     <fixed base="0.9.8" version="0.9.8t" date="20120118"/>
-    <advisory url="http://www.openssl.org/news/secadv_20120118.txt"/>
+    <advisory url="/news/secadv/20120118.txt"/>
     <reported source="Antonio Martin"/>
     <description>
 A flaw in the fix to CVE-2011-4108 can be exploited in a denial of
@@ -3553,7 +3553,7 @@ service attack. Only DTLS applications are affected.
     <affects base="1.0.0" version="1.0.0g"/>
     <fixed base="1.0.0" version="1.0.0h" date="20120312"/>
     <fixed base="0.9.8" version="0.9.8u" date="20120312"/>
-    <advisory url="http://www.openssl.org/news/secadv_20120312.txt"/>
+    <advisory url="/news/secadv/20120312.txt"/>
     <reported source="Ivan Nestlerode"/>
     <description>
 A weakness in the OpenSSL CMS and PKCS #7 code can be exploited
@@ -3583,7 +3583,7 @@ SSL/TLS applications are not affected by this issue.
     <affects base="1.0.0" version="1.0.0c"/>
     <fixed base="1.0.0" version="1.0.0d" date="20110208"/>
     <fixed base="0.9.8" version="0.9.8r" date="20110208"/>
-    <advisory url="http://www.openssl.org/news/secadv_20110208.txt"/>
+    <advisory url="/news/secadv/20110208.txt"/>
     <reported source="Neel Mehta"/>
     <description>
 A buffer over-read flaw was discovered in the way OpenSSL parsed the
@@ -3597,7 +3597,7 @@ server using the affected OpenSSL functionality.
     <cve name="2012-2131"/>
     <affects base="0.9.8" version="0.9.8v"/>
     <fixed base="0.9.8" version="0.9.8w" date="20120424"/>
-    <advisory url="http://www.openssl.org/news/secadv_20120424.txt"/>
+    <advisory url="/news/secadv/20120424.txt"/>
     <reported source="Red Hat"/>
     <description>
 It was discovered that the fix for CVE-2012-2110 released on 19 Apr
@@ -3644,7 +3644,7 @@ contain a patch sufficient to correct CVE-2012-2110.
     <fixed base="1.0.1" version="1.0.1a" date="20120419"/>
     <fixed base="1.0.0" version="1.0.0i" date="20120419"/>
     <fixed base="0.9.8" version="0.9.8v" date="20120419"/>
-    <advisory url="http://www.openssl.org/news/secadv_20120419.txt"/>
+    <advisory url="/news/secadv/20120419.txt"/>
     <reported source="Tavis Ormandy"/>
     <description>
 Multiple numeric conversion errors, leading to a buffer overflow, were
@@ -3697,7 +3697,7 @@ potentially, execute arbitrary code.
     <fixed base="1.0.1" version="1.0.1c" date="20120510"/>
     <fixed base="1.0.0" version="1.0.0j" date="20120510"/>
     <fixed base="0.9.8" version="0.9.8x" date="20120510"/>
-    <advisory url="http://www.openssl.org/news/secadv_20120510.txt"/>
+    <advisory url="/news/secadv/20120510.txt"/>
     <reported source="Codenomicon"/>
     <description>
 An integer underflow flaw, leading to a buffer over-read, was found in
@@ -3753,7 +3753,7 @@ peer.
     <fixed base="1.0.1" version="1.0.1d" date="20130205"/>
     <fixed base="1.0.0" version="1.0.0k" date="20130205"/>
     <fixed base="0.9.8" version="0.9.8y" date="20130205"/>
-    <advisory url="http://www.openssl.org/news/secadv_20130205.txt"/>
+    <advisory url="/news/secadv/20130205.txt"/>
     <reported source="Nadhem J. AlFardan and Kenneth G. Paterson of the Information Security Group Royal Holloway, University of London"/>
     <description>
 A weakness in the handling of CBC ciphersuites in SSL, TLS and DTLS which could
@@ -3769,7 +3769,7 @@ arising during MAC processing.
     <affects base="1.0.1" version="1.0.1b"/>
     <affects base="1.0.1" version="1.0.1c"/>
     <fixed base="1.0.1" version="1.0.1d" date="20130205"/>
-    <advisory url="http://www.openssl.org/news/secadv_20130205.txt"/>
+    <advisory url="/news/secadv/20130205.txt"/>
     <reported source="Adam Langley and Wolfgang Ettlinger"/>
     <description>
 A flaw in the OpenSSL handling of CBC ciphersuites in TLS 1.1 and TLS 1.2 on
@@ -3821,7 +3821,7 @@ AES-NI supporting platforms can be exploited in a DoS attack.
     <fixed base="1.0.1" version="1.0.1d" date="20130205"/>
     <fixed base="1.0.0" version="1.0.0k" date="20130205"/>
     <fixed base="0.9.8" version="0.9.8y" date="20130205"/>
-    <advisory url="http://www.openssl.org/news/secadv_20130205.txt"/>
+    <advisory url="/news/secadv/20130205.txt"/>
     <reported source="Stephen Henson"/>
     <description>
 A flaw in the OpenSSL handling of OCSP response verification can be exploited in
@@ -3968,7 +3968,7 @@ ECDSA Nonces Using the FLUSH+RELOAD Cache Side-channel Attack"
     <affects base="1.0.1" version="1.0.1f"/>
     <fixed base="1.0.1" version="1.0.1g" date="20140409">
     </fixed>
-    <advisory url="http://www.openssl.org/news/secadv_20140407.txt"/>
+    <advisory url="/news/secadv/20140407.txt"/>
     <reported source="Neel Mehta"/>
     <description>
 A missing bounds check in the handling of the TLS heartbeat extension can be
@@ -4037,7 +4037,7 @@ issue did not affect versions of OpenSSL prior to 1.0.1.
     by a Man-in-the-middle (MITM) attack where the attacker can decrypt and 
     modify traffic from the attacked client and server.
   </description>
-  <advisory url="http://www.openssl.org/news/secadv_20140605.txt"/>
+  <advisory url="/news/secadv/20140605.txt"/>
   <reported source="KIKUCHI Masashi (Lepidum Co. Ltd.)"/>
 </issue>
 
@@ -4096,7 +4096,7 @@ issue did not affect versions of OpenSSL prior to 1.0.1.
   <fixed base="0.9.8" version="0.9.8za" date="20140605">
   </fixed>
   <description>By sending an invalid DTLS handshake to an OpenSSL DTLS client the code can be made to recurse eventually crashing in a DoS attack. Only applications using OpenSSL as a DTLS client are affected.</description>
-  <advisory url="http://www.openssl.org/news/secadv_20140605.txt"/>
+  <advisory url="/news/secadv/20140605.txt"/>
   <reported source="Imre Rad (Search-Lab Ltd.)"/>
 </issue>
 
@@ -4143,7 +4143,7 @@ issue did not affect versions of OpenSSL prior to 1.0.1.
   to an OpenSSL DTLS client or server. This is potentially exploitable to
   run arbitrary code on a vulnerable client or server.  Only applications using OpenSSL as a DTLS client or server affected.
   </description>
-  <advisory url="http://www.openssl.org/news/secadv_20140605.txt"/>
+  <advisory url="/news/secadv/20140605.txt"/>
   <reported source="Jüri Aedla"/>
 </issue>
 
@@ -4177,7 +4177,7 @@ issue did not affect versions of OpenSSL prior to 1.0.1.
 cause a denial of service via a NULL pointer dereference.  This flaw
 only affects OpenSSL 1.0.0 and 1.0.1 where SSL_MODE_RELEASE_BUFFERS is
 enabled, which is not the default and not common.</description>
-  <advisory url="http://www.openssl.org/news/secadv_20140605.txt"/>
+  <advisory url="/news/secadv/20140605.txt"/>
 </issue>
 
 <issue public="20140408">
@@ -4211,7 +4211,7 @@ attackers to inject data across sessions or cause a denial of service.
 This flaw only affects multithreaded applications using OpenSSL 1.0.0
 and 1.0.1, where SSL_MODE_RELEASE_BUFFERS is enabled, which is not the
 default and not common.</description>
-  <advisory url="http://www.openssl.org/news/secadv_20140605.txt"/>
+  <advisory url="/news/secadv/20140605.txt"/>
 </issue>
 
 <issue public="20140530">
@@ -4271,7 +4271,7 @@ default and not common.</description>
   <description>OpenSSL TLS clients enabling anonymous ECDH ciphersuites are subject to a
   denial of service attack.</description>
   <reported source="Felix Gröbert and Ivan Fratrić (Google)"/>
-  <advisory url="http://www.openssl.org/news/secadv_20140605.txt"/>
+  <advisory url="/news/secadv/20140605.txt"/>
 </issue>
 
 </security>

@@ -1,8 +1,0 @@
-#!wml -oPAGE_HEADuPAGE_BODY:majordomo.head.html -oPAGE_FOOT:majordomo.foot.html
-
-#use wml::openssl area=support page=lists
-
-<title>Support, Mailing Lists</title>
-
-<h1>OpenSSL Mailing Lists</h1>
-
