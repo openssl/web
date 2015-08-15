@@ -47,7 +47,7 @@ manpages: all
 rebuild: all
 
 clean:
-	rm -f $(SIMPLE)
+	rm -f $(SIMPLE) $(SRCLISTS)
 
 newsflash.inc: news/newsflash.inc
 	@rm -f $@

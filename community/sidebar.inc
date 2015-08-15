@@ -19,7 +19,7 @@
           <a href="http://wiki.openssl.org">Wiki</a>
       </li>
       <li>
-          <a href="http://www.openssl.org/blog">Blog</a>
+          <a href="/blog">Blog</a>
       </li>
       <li>
 	  <a href="binaries.html">Binaries</a>
