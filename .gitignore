@@ -2,7 +2,6 @@
 *.inc
 blog
 sitemap.txt
-docs/faq.txt
 news/changelog.txt
 source/license.txt
 source/.htaccess

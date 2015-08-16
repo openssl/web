@@ -9,7 +9,7 @@ RELEASEDIR = /var/www/openssl/source
 
 # All simple generated files.
 SIMPLE = newsflash.inc sitemap.txt \
-	 docs/faq.txt docs/faq.inc docs/fips.inc \
+	 docs/faq.inc docs/fips.inc \
 	 news/changelog.inc news/changelog.txt \
 	 news/newsflash.inc \
 	 news/vulnerabilities.inc \
@@ -70,9 +70,6 @@ news/vulnerabilities.inc: bin/vulnerabilities.xsl news/vulnerabilities.xml
 	@rm -f $@
 	xsltproc bin/vulnerabilities.xsl news/vulnerabilities.xml >$@
 
-docs/faq.txt: $(SNAP)/FAQ
-	@rm -f $@
-	cp $? $@
 docs/faq.inc: docs/faq.txt
 	@rm -f $@
 	./bin/mk-faq <$? >$@
