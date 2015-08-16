@@ -4,7 +4,6 @@ blog
 sitemap.txt
 docs/faq.txt
 news/changelog.txt
-news/vulnerabilities.html
 source/license.txt
 source/.htaccess
 source/*.gz*
