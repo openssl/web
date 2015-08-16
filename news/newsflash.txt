@@ -1,3 +1,8 @@
+# Lines beginning with a poundsign are comments and are deleted
+# Only the first five lines appear on the main page; edit Makefile
+# to change that.
+# Format is two fields, colon-separated; the first line is the column
+# headings.  URL paths must all be absolute.
 Date: Item
 09-Jul-2015: <a href="/news/secadv/20150709.txt">Security Advisory</a>: one security fix
 09-Jul-2015: OpenSSL 1.0.2d is now available, including bug and security fixes
