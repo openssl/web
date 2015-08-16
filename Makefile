@@ -62,6 +62,7 @@ news/changelog.txt: $(SNAP)/CHANGES
 	cp $? $@
 news/newsflash.inc: news/newsflash.txt
 	sed <$? >$@ \
+	    -e '/^#/d' \
 	    -e 's@^@<tr><td class="d">@' \
 	    -e 's@: @</td><td class="t">@' \
 	    -e 's@$$@</td></tr>@'

@@ -1,17 +1,17 @@
 Date: Item
-09-Jul-2015: <a href="secadv/20150709.txt">Security Advisory</a>: one security fix
+09-Jul-2015: <a href="/news/secadv/20150709.txt">Security Advisory</a>: one security fix
 09-Jul-2015: OpenSSL 1.0.2d is now available, including bug and security fixes
 09-Jul-2015: OpenSSL 1.0.1p is now available, including bug and security fixes
 06-Jul-2015: OpenSSL 1.0.2d and 1.0.1p <a href="https://mta.openssl.org/pipermail/openssl-announce/2015-July/000037.html">security releases due 9th July 2015</a>
 12-Jun-2015: New releases to resolve ABI compatibility problems:
 12-Jun-2015: OpenSSL 1.0.2c is now available, including bug fixes
 12-Jun-2015: OpenSSL 1.0.1o is now available, including bug fixes
-11-Jun-2015: <a href="secadv/20150611.txt">Security Advisory</a>: five security fixes
+11-Jun-2015: <a href="/news/secadv/20150611.txt">Security Advisory</a>: five security fixes
 11-Jun-2015: OpenSSL 1.0.2b is now available, including bug and security fixes
 11-Jun-2015: OpenSSL 1.0.1n is now available, including bug and security fixes
 11-Jun-2015: OpenSSL 1.0.0s is now available, including bug and security fixes
 11-Jun-2015: OpenSSL 0.9.8zg is now available, including bug and security fixes
-19-Mar-2015: <a href="secadv/20150319.txt">Security Advisory</a>: twelve security fixes
+19-Mar-2015: <a href="/news/secadv/20150319.txt">Security Advisory</a>: twelve security fixes
 19-Mar-2015: OpenSSL 1.0.2a is now available, including bug and security fixes
 19-Mar-2015: OpenSSL 1.0.1m is now available, including bug and security fixes
 19-Mar-2015: OpenSSL 1.0.0r is now available, including bug and security fixes
@@ -21,107 +21,107 @@ Date: Item
 15-Jan-2015: OpenSSL 1.0.1l is now available, including bug fixes
 15-Jan-2015: OpenSSL 1.0.0q is now available, including bug fixes
 15-Jan-2015: OpenSSL 0.9.8ze is now available, including bug fixes
-08-Jan-2015: <a href="secadv/20150108.txt">Security Advisory</a>: eight security fixes
+08-Jan-2015: <a href="/news/secadv/20150108.txt">Security Advisory</a>: eight security fixes
 08-Jan-2015: OpenSSL 1.0.1k is now available, including bug and security fixes
 08-Jan-2015: OpenSSL 1.0.0p is now available, including bug and security fixes
 08-Jan-2015: OpenSSL 0.9.8zd is now available, including bug and security fixes
-15-Oct-2014: <a href="secadv/20141015.txt">Security Advisory</a>: four security fixes
+15-Oct-2014: <a href="/news/secadv/20141015.txt">Security Advisory</a>: four security fixes
 15-Oct-2014: OpenSSL 1.0.1j is now available, including bug and security fixes
 15-Oct-2014: OpenSSL 1.0.0o is now available, including bug and security fixes
 15-Oct-2014: OpenSSL 0.9.8zc is now available, including bug and security fixes
 25-Sep-2014: Beta 3 of OpenSSL 1.0.2 is now available, please test it now
-06-Aug-2014: <a href="secadv/20140806.txt">Security Advisory</a>: nine security fixes
+06-Aug-2014: <a href="/news/secadv/20140806.txt">Security Advisory</a>: nine security fixes
 06-Aug-2014: OpenSSL 1.0.1i is now available, including bug and security fixes
 06-Aug-2014: OpenSSL 1.0.0n is now available, including bug and security fixes
 06-Aug-2014: OpenSSL 0.9.8zb is now available, including bug and security fixes
 22-Jul-2014: Beta 2 of OpenSSL 1.0.2 is now available, please test it now
 30-Jun-2014: Project roadmap released
 24-Jun-2014: Team status changes including six new development team members
-05-Jun-2014: <a href="secadv/20140605.txt">Security Advisory</a>: seven security fixes
+05-Jun-2014: <a href="/news/secadv/20140605.txt">Security Advisory</a>: seven security fixes
 05-Jun-2014: OpenSSL 1.0.1h is now available, including bug and security fixes
 05-Jun-2014: OpenSSL 1.0.0m is now available, including bug and security fixes
 05-Jun-2014: OpenSSL 0.9.8za is now available, including bug and security fixes
 23-Apr-2014: Team status changes including new team member: Steve Marquess
-07-Apr-2014: <a href="secadv/20140407.txt">Security Advisory</a>: Heartbeat overflow issue.
+07-Apr-2014: <a href="/news/secadv/20140407.txt">Security Advisory</a>: Heartbeat overflow issue.
 07-Apr-2014: OpenSSL 1.0.1g is now available, including bug and security fixes
 24-Feb-2014: Beta 1 of OpenSSL 1.0.2 is now available, please test it now
 06-Jan-2014: OpenSSL 1.0.0l is now available, including bug and security fixes
 06-Jan-2014: OpenSSL 1.0.1f is now available, including bug and security fixes
-03-Jan-2014: UPDATE: site defacement <a href="secadv/hack.txt">final details.</a>
+03-Jan-2014: UPDATE: site defacement <a href="/news/secadv/hack.txt">final details.</a>
 11-Feb-2013: OpenSSL 1.0.1e is now available, including bug fixes
-05-Feb-2013: <a href="secadv/20130205.txt">Security Advisory</a>: three security fixes
+05-Feb-2013: <a href="/news/secadv/20130205.txt">Security Advisory</a>: three security fixes
 05-Feb-2013: OpenSSL 1.0.1d is now available, including bug and security fixes
 05-Feb-2013: OpenSSL 1.0.0k is now available, including security fixes
 05-Feb-2013: OpenSSL 0.9.8y is now available, including security fixes
-10-May-2012: <a href="secadv/20120510.txt">Security Advisory</a>: TLS/DTLS DoS issue
+10-May-2012: <a href="/news/secadv/20120510.txt">Security Advisory</a>: TLS/DTLS DoS issue
 10-May-2012: OpenSSL 1.0.1c is now available, including bug and security fixes
 10-May-2012: OpenSSL 1.0.0j is now available, including security fixes
 10-May-2012: OpenSSL 0.9.8x is now available, including security fixes
 26-Apr-2012: OpenSSL 1.0.1b is now available, including important bug fixes
 25-Apr-2012: Notice: OpenSSL 1.0.1a compilation problems with non x86 platforms
 24-Apr-2012: OpenSSL 0.9.8w is now available, including security fixes
-24-Apr-2012: <a href="secadv/20120424.txt">Security Advisory</a>: ASN1 incomplete fix for OpenSSL 0.9.8
+24-Apr-2012: <a href="/news/secadv/20120424.txt">Security Advisory</a>: ASN1 incomplete fix for OpenSSL 0.9.8
 19-Apr-2012: OpenSSL 1.0.1a is now available, including important bug and security fixes
 19-Apr-2012: OpenSSL 1.0.0i is now available, including important bug and security fixes
 19-Apr-2012: OpenSSL 0.9.8v is now available, including important bug and security fixes
-19-Apr-2012: <a href="secadv/20120419.txt">Security Advisory</a>: ASN1 overflow vulnerability
+19-Apr-2012: <a href="/news/secadv/20120419.txt">Security Advisory</a>: ASN1 overflow vulnerability
 14-Mar-2012: OpenSSL 1.0.1 is now available, including new features
-12-Mar-2012: <a href="secadv/20120312.txt">Security Advisory</a>: PKCS7/CMS MMA issue
+12-Mar-2012: <a href="/news/secadv/20120312.txt">Security Advisory</a>: PKCS7/CMS MMA issue
 12-Mar-2012: OpenSSL 0.9.8u is now available, including important bug and security fixes
 12-Mar-2012: OpenSSL 1.0.0h is now available, including important bug and security fixes
 23-Feb-2012: Beta 3 of OpenSSL 1.0.1 is now available, please test it now
 19-Jan-2012: Beta 2 of OpenSSL 1.0.1 is now available, please test it now
-18-Jan-2012: <a href="secadv/20120118.txt">Security Advisory</a>: DTLS DoS issue
+18-Jan-2012: <a href="/news/secadv/20120118.txt">Security Advisory</a>: DTLS DoS issue
 18-Jan-2012: OpenSSL 1.0.0g is now available, including important bug and security fixes
 18-Jan-2012: OpenSSL 0.9.8t is now available, including important bug and security fixes
-04-Jan-2012: <a href="secadv/20120104.txt">Security Advisory</a>: six security fixes
+04-Jan-2012: <a href="/news/secadv/20120104.txt">Security Advisory</a>: six security fixes
 04-Jan-2012: OpenSSL 0.9.8s is now available, including important bug and security fixes
 04-Jan-2012: OpenSSL 1.0.0f is now available, including important bug and security fixes
 03-Jan-2012: Beta 1 of OpenSSL 1.0.1 is now available, please test it now
 06-Sep-2011: OpenSSL 1.0.0e is now available, including important bug and security fixes
-06-Sep-2011: <a href="secadv/20110906.txt">Security Advisory</a>: two security fixes
-08-Feb-2011: <a href="secadv/20110208.txt">Security Advisory</a>: OCSP stapling vulnerability
+06-Sep-2011: <a href="/news/secadv/20110906.txt">Security Advisory</a>: two security fixes
+08-Feb-2011: <a href="/news/secadv/20110208.txt">Security Advisory</a>: OCSP stapling vulnerability
 08-Feb-2011: OpenSSL 1.0.0d is now available, including important bug and security fixes
 08-Feb-2011: OpenSSL 0.9.8r is now available, including important bug and security fixes
 09-Dec-2010: OpenSSL FIPS 140-2 module 1.2.2 is now available.
-02-Dec-2010: <a href="secadv/20101202.txt">Security Advisory</a>: ciphersuite downgrade fix
+02-Dec-2010: <a href="/news/secadv/20101202.txt">Security Advisory</a>: ciphersuite downgrade fix
 02-Dec-2010: OpenSSL 1.0.0c is now available, including important bug and security fixes
 02-Dec-2010: OpenSSL 0.9.8q is now available, including important bug and security fixes
 16-Nov-2010: OpenSSL 1.0.0b is now available, including important bug and security fixes
 16-Nov-2010: OpenSSL 0.9.8p is now available, including important bug and security fixes
-16-Nov-2010: <a href="secadv/20101116.txt">Security Advisory</a>: buffer overrun fix
+16-Nov-2010: <a href="/news/secadv/20101116.txt">Security Advisory</a>: buffer overrun fix
 01-Jun-2010: OpenSSL 0.9.8o is now available, including important bug and security fixes
 01-Jun-2010: OpenSSL 1.0.0a is now available, including important bug and security fixes
-01-Jun-2010: <a href="secadv/20100601.txt">Security Advisory</a>: two security fixes
+01-Jun-2010: <a href="/news/secadv/20100601.txt">Security Advisory</a>: two security fixes
 29-Mar-2010: OpenSSL 1.0.0 is now available, a major release
-24-Mar-2010: <a href="secadv/20100324.txt">Security Advisory</a>: "Record of death" security fix
+24-Mar-2010: <a href="/news/secadv/20100324.txt">Security Advisory</a>: "Record of death" security fix
 24-Mar-2010: OpenSSL 0.9.8n is now available, including important bug and security fixes
 25-Feb-2010: OpenSSL 0.9.8m is now available, including important bug and security fixes
 24-Jun-2009: Commercial support for OpenSSL is now available
 25-Mar-2009: OpenSSL 0.9.8k is now available, including important bug fixes
-25-Mar-2009: <a href="secadv/20090325.txt">Security Advisory</a>: Three moderate severity security issues
+25-Mar-2009: <a href="/news/secadv/20090325.txt">Security Advisory</a>: Three moderate severity security issues
 07-Jan-2009: OpenSSL 0.9.8j is now available, including important bug fixes
-07-Jan-2009: <a href="secadv/20090107.txt">Security Advisory</a>: incorrect checks for malformed signatures
+07-Jan-2009: <a href="/news/secadv/20090107.txt">Security Advisory</a>: incorrect checks for malformed signatures
 18-Nov-2008: OpenSSL FIPS 140-2 module 1.2 is now available
 15-Sep-2008: OpenSSL 0.9.8i is now available, including important bug fixes
-28-May-2008: <a href="secadv/20080528.txt">Security Advisory</a>: Two moderate severity security issues
+28-May-2008: <a href="/news/secadv/20080528.txt">Security Advisory</a>: Two moderate severity security issues
 28-May-2008: OpenSSL 0.9.8h is now available, including security and bug fixes
-29-Nov-2007: <a href="secadv/20071129.txt">Security Advisory</a>: FIPS 1.1.1 module PRNG security issue
+29-Nov-2007: <a href="/news/secadv/20071129.txt">Security Advisory</a>: FIPS 1.1.1 module PRNG security issue
 19-Oct-2007: OpenSSL 0.9.8g is now available, including bug fixes
-12-Oct-2007: <a href="secadv/20071012.txt">Security Advisory</a>: Various security issues
+12-Oct-2007: <a href="/news/secadv/20071012.txt">Security Advisory</a>: Various security issues
 11-Oct-2007: OpenSSL 0.9.8f is now available, including security and bug fixes
 23-Feb-2007: OpenSSL 0.9.8e is now available, including important bugfixes
 23-Feb-2007: OpenSSL 0.9.7m is now available, including important bugfixes
-28-Sep-2006: <a href="secadv/20060928.txt">Security Advisory</a>: Various security issues
+28-Sep-2006: <a href="/news/secadv/20060928.txt">Security Advisory</a>: Various security issues
 28-Sep-2006: OpenSSL 0.9.8d is now available, including security fixes
 28-Sep-2006: OpenSSL 0.9.7l is now available, including security fixes
-05-Sep-2006: <a href="secadv/20060905.txt">Security Advisory</a>: RSA Signature Forgery
+05-Sep-2006: <a href="/news/secadv/20060905.txt">Security Advisory</a>: RSA Signature Forgery
 05-Sep-2006: OpenSSL 0.9.8c is now available, including security fix
 05-Sep-2006: OpenSSL 0.9.7k is now available, including security fix
 04-May-2006: OpenSSL 0.9.8b is now available, including important bugfixes
 04-May-2006: OpenSSL 0.9.7j is now available, including important bugfixes
 15-oct-2005: OpenSSL 0.9.7i is now available, contains compatibility fix	
-11-oct-2005: <a href="secadv/20051011.txt">Security Advisory</a>: Potential SSL 2.0 rollback
+11-oct-2005: <a href="/news/secadv/20051011.txt">Security Advisory</a>: Potential SSL 2.0 rollback
 11-oct-2005: OpenSSL 0.9.8a is now available, including security fix
 11-oct-2005: OpenSSL 0.9.7h is now available, including security fix
 05-jul-2005: OpenSSL 0.9.8 is now available, a major release
@@ -134,26 +134,26 @@ Date: Item
 11-apr-2005: OpenSSL 0.9.7g is now available, including important bugfixes
 22-mar-2005: OpenSSL 0.9.7f is now available, including important bugfixes
 25-oct-2004: OpenSSL 0.9.7e is now available, including important bugfixes
-17-mar-2004: <a href="secadv/20040317.txt">Security Advisory</a>: Denial of Service flaws in 0.9.6l and 0.9.7c
+17-mar-2004: <a href="/news/secadv/20040317.txt">Security Advisory</a>: Denial of Service flaws in 0.9.6l and 0.9.7c
 17-mar-2004: OpenSSL 0.9.7d is now available, including important bugfixes
 17-mar-2004: OpenSSL 0.9.6m is now available, including security fix
 17-mar-2004: OpenSSL 0.9.6m [engine] is now available, including security fix
 04-nov-2003: OpenSSL 0.9.6l is now available, including security fix
 04-nov-2003: OpenSSL 0.9.6l [engine] is now available, including security fix
-04-nov-2003: <a href="secadv/20031104.txt">Security Advisory</a>: Denial of Service in ASN.1 parsing in 0.9.6k.
+04-nov-2003: <a href="/news/secadv/20031104.txt">Security Advisory</a>: Denial of Service in ASN.1 parsing in 0.9.6k.
 30-sep-2003: OpenSSL 0.9.7c is now available, including important bugfixes
 30-sep-2003: OpenSSL 0.9.6k is now available, including important bugfixes
 30-sep-2003: OpenSSL 0.9.6k [engine] is now available, including important bugfixes
-30-sep-2003: <a href="secadv/20030930.txt">Security Advisory</a>: Vulnerabilities in ASN.1 parsing.
+30-sep-2003: <a href="/news/secadv/20030930.txt">Security Advisory</a>: Vulnerabilities in ASN.1 parsing.
 10-apr-2003: OpenSSL 0.9.7b is now available, including important bugfixes
 10-apr-2003: OpenSSL 0.9.6j is now available, including important bugfixes
 10-apr-2003: OpenSSL 0.9.6j [engine] is now available, including important bugfixes
-19-Mar-2003: <a href="secadv/20030319.txt">Security Advisory</a>: Klima-Pokorny-Rosa attack.
-17-Mar-2003: <a href="secadv/20030317.txt">Security Advisory</a>: timing attacks, RSA blinding.
+19-Mar-2003: <a href="/news/secadv/20030319.txt">Security Advisory</a>: Klima-Pokorny-Rosa attack.
+17-Mar-2003: <a href="/news/secadv/20030317.txt">Security Advisory</a>: timing attacks, RSA blinding.
 19-feb-2003: OpenSSL 0.9.7a is now available, including important bugfixes
 19-feb-2003: OpenSSL 0.9.6i is now available, including important bugfixes
 19-feb-2003: OpenSSL 0.9.6i [engine] is now available, including important bugfixes
-19-feb-2003: <a href="secadv/20030219.txt">Security Advisory</a>: Vulnerabilities in OpenSSL versions before 0.9.6i and 0.9.7a
+19-feb-2003: <a href="/news/secadv/20030219.txt">Security Advisory</a>: Vulnerabilities in OpenSSL versions before 0.9.6i and 0.9.7a
 31-Dec-2002: OpenSSL 0.9.7 is now available, a major release
 17-dec-2002: Beta 6 of OpenSSL 0.9.7 is now available, please test it now
 5-dec-2002: Beta 5 of OpenSSL 0.9.7 is now available, please test it now
@@ -166,7 +166,7 @@ Date: Item
 8-aug-2002: OpenSSL 0.9.6f [engine] is now available, including important bugfixes
 30-Jul-2002: OpenSSL 0.9.6e is now available, including important bugfixes
 30-Jul-2002: OpenSSL 0.9.6e [engine] is now available, including important bugfixes
-30-Jul-2002: <a href="secadv/20020730.txt">Security Advisory</a>: Vulnerabilities in OpenSSL versions before 0.9.6e
+30-Jul-2002: <a href="/news/secadv/20020730.txt">Security Advisory</a>: Vulnerabilities in OpenSSL versions before 0.9.6e
 30-Jul-2002: Beta 3 of OpenSSL 0.9.7 is now available, please test it now
 16-jun-2002: Beta 2 of OpenSSL 0.9.7 is now available, please test it now
 01-jun-2002: Beta 1 of OpenSSL 0.9.7 is now available, please test it now
