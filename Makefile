@@ -81,7 +81,7 @@ docs/fips.inc:
 
 source/.htaccess:
 	@rm -f @?
-	./bin/mk-latest >$@
+	./bin/mk-latest source >$@
 source/license.txt: $(SNAP)/LICENSE
 	@rm -f $@
 	cp $? $@

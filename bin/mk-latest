@@ -1,8 +1,16 @@
 #! /usr/bin/perl -w
 use strict;
 
+die "Missing args\n" if $#ARGV < 0;
+my $SRCDIR = $ARGV[0]; shift;
+
+chdir $SRCDIR || die "Can't chdir $SRCDIR, $!";
+
 my @tarballs =
-	sort grep /openssl-\d+\.\d+\.\d+[a-z]*\.tar\.gz$/, glob("openssl-*.tar.gz");
+       sort grep /openssl-\d+\.\d+\.\d+[a-z]*\.tar\.gz$/,
+               glob("openssl-*.tar.gz");
+die "No tgz files found in $SRCDIR?\n" if $#tarballs < 1;
+
 my %series = ();
 foreach(@tarballs) {
 	my ($version, $serie) = /^openssl-((\d+\.\d+\.\d+)[a-z]*)\./;
