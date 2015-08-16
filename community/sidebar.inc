@@ -16,7 +16,7 @@
           <a href="mailinglists.html">Mailing Lists</a>
       </li>
       <li>
-          <a href="http://wiki.openssl.org">Wiki</a>
+          <a href="https://wiki.openssl.org">Wiki</a>
       </li>
       <li>
           <a href="/blog">Blog</a>

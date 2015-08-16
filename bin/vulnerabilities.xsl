@@ -130,7 +130,7 @@
 	    The Common Vulnerabilities and Exposures project
 	    has assigned the name 
 	  </xsl:if>
-	  <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-{@name}">CVE-<xsl:value-of select="@name"/> </a>
+	  <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-{@name}">CVE-<xsl:value-of select="@name"/> </a>
 	  <xsl:if test="@description = 'full'">
 	    to this issue.
 	  </xsl:if>
