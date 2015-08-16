@@ -7,7 +7,7 @@
 	<a href="newslog.html">Newslog</a>
       </li>
       <li>
-	<a href="vulnerabilities">Vulnerabilities</a>
+	<a href="vulnerabilities.html">Vulnerabilities</a>
       </li>
       <li>
 	<a href="changelog.html">Changelog</a>
