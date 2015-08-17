@@ -1,6 +1,4 @@
 RewriteEngine on
-RewriteBase /docs
-RewriteRule fips/ fips.html [L,R=302,NC]
-RewriteRule fips/fipsnotes.html fips.html [L,R=302,NC]
-RewriteRule docs/fips/fipsvalidation.html fips.html [L,R=302,NC]
-RewriteRule docs/fips/index.html fips.html [L,R=302,NC]
+RewriteRule /docs/fips/fipsnotes.html fips.html [L,R=302,NC]
+RewriteRule /docs/fips/fipsvalidation.html fips.html [L,R=302,NC]
+RewriteRule /docs/fips/index.html fips.html [L,R=302,NC]
