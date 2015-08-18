@@ -7,6 +7,9 @@
 	<a href="faq.html">FAQ</a>
       </li>
       <li>
+	<a href="manpages.html">Manpages</a>
+      </li>
+      <li>
         <a href="fips.html">FIPS-140 Validation</a>
       </li>
     </ul>
