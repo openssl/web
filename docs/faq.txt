@@ -481,7 +481,7 @@ administrators.
 
 Other projects do have other policies so you can for example extract the CA
 bundle used by Mozilla and/or modssl as described in this article:
-<URL: http://www.mail-archive.com/modssl-users@modssl.org/msg16980.html>
+<URL: https://www.mail-archive.com/modssl-users@modssl.org/msg16980.html>
 
 
 * Some secure servers 'hang' with OpenSSL 1.0.1, is this a bug?
@@ -532,7 +532,7 @@ when you run the test suite (using "make test").  The message returned is
 "bc: 1 not implemented".
 
 The best way to deal with this is to find another implementation of bc
-and compile/install it.  GNU bc (see <URL: http://www.gnu.org/software/software.html>
+and compile/install it.  GNU bc (see <URL: https://www.gnu.org/software/software.html>
 for download instructions) can be safely used, for example.
 
 
