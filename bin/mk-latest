@@ -43,6 +43,12 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule openssl-(1\.0\.2.*) old/1.0.1/openssl-$1 [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule openssl-(fips.*)  old/fips/openssl-$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule apps(.*)  manmaster/apps/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule crypto(.*)  manmaster/crypto/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ssl(.*)  manmaster/ssl/$1 [L]
 
 <Files *.gz.asc>
     RemoveEncoding .gz

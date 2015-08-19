@@ -10,3 +10,6 @@ source/*.patch
 source/old/*/*.tar.gz*
 source/old/*/*.patch
 source/old/*/*.txt.asc
+docs/*/apps
+docs/*/crypto
+docs/*/ssl
