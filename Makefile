@@ -1,8 +1,10 @@
 ##
 ## Build procedure for www.openssl.org
 
+##  Checkouts.
+CHECKOUTS = /var/cache/openssl/checkouts/openssl
 ##  Snapshot directory
-SNAP = /var/cache/openssl/checkouts/openssl
+SNAP = $(CHECKOUST)/openssl
 ## Where releases are found.
 RELEASEDIR = /var/www/openssl/source
 
@@ -31,17 +33,23 @@ relupd: all
 	    echo "     sudo -u openssl -H make"; \
 	    exit 1; \
 	fi
-	cd $(SNAP)/.. ; for dir in openssl* ; do \
+	cd $(CHECKOUTS) ; for dir in openssl* ; do \
 	    echo Updating $$dir ; ( cd $$dir ; git pull $(QUIET) ) ; \
 	done
 	git pull $(QUIET)
-	$(MAKE)
+	$(MAKE) all manpages
+
+manpages:
+	./bin/mk-manpages $(CHECKOUTS)/master master doc
+	#./bin/mk-manpages $(CHECKOUTS)/openssl-1.0.2-stable 1.0.2 doc
+	#./bin/mk-manpages $(CHECKOUTS)/openssl-1.0.1-stable 1.0.1 doc
+	#./bin/mk-manpages $(CHECKOUTS)/openssl-1.0.0-stable 1.0.0 doc
+	#./bin/mk-manpages $(CHECKOUTS)/openssl-0.9.8-stable 0.9.8 doc
 
 # Legacy targets
 hack-source_htaccess: all
 simple: all
 generated: all
-manpages: all
 rebuild: all
 
 clean:
