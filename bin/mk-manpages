@@ -48,18 +48,16 @@ EOFH
     my $sidebar = <<EOS;
 <aside class="sidebar">
   <section>
-    <h1><a href="/docs/manpages.html">Other Versions</a></h1>
+    <h1><a href="/docs/manpages.html">$release manpages</a></h1>
     <ul>
+      <li><a href="../apps/openssl.html">The openssl command</a></li>
+      <li><a href="../ssl/ssl.html">The ssl library</a></li>
+      <li><a href="../crypto/crypto.html">The crypto library</a></li>
 EOS
     foreach my $v ( @releases ) {
-	if ( $release eq $v ) {
-	    $sidebar .= 
-"<li><a href=\"/docs/man$v/$section/$file.html\"><em>this branch</em></a></li>
-";
-	} else {
-	    $sidebar .=
-"<li><a href=\"/docs/man$v/$section/$file.html\">$v</a></li>\n";
-	}
+        $sidebar .=
+"<li><a href=\"/docs/man$v/$section/$file.html\">$v version</a></li>\n"
+            if $release ne $v;
     }
     $sidebar .= <<EOS;
     </ul>
