@@ -48,7 +48,7 @@ EOFH
     my $sidebar = <<EOS;
 <aside class="sidebar">
   <section>
-    <h1><a href="/docs/manpages.html">All Versions</a></h1>
+    <h1><a href="/docs/manpages.html">Other Versions</a></h1>
     <ul>
 EOS
     foreach my $v ( @releases ) {
@@ -101,6 +101,8 @@ EOFT
 # $pod->index(1);
     $pod->perldoc_url_prefix("https://www.openssl.org/docs/man$release/$section/");
     $pod->perldoc_url_postfix(".html");
+    $pod->man_url_prefix("https://www.openssl.org/docs/man$release/$section/");
+    $pod->man_url_postfix(".html");
     $pod->html_header($header);
     $pod->html_footer($footer);
 # $pod->force_title("TILETITLETITLE");
@@ -166,7 +168,8 @@ foreach my $sect ( @sections  ) {
 	my $basename = $filename;
 	$basename =~ s@.*/@@;
 	$basename =~ s@.pod@@;
-	my $out = &genhtml ($RELEASE, $sect, $filename, "???", $basename);
+	my $title = $basename;
+	my $out = &genhtml($RELEASE, $sect, $filename, $title, $basename);
 	my $outfile = "$WWWDIR/man$RELEASE/$sect/$basename.html";
 	open(my $fh, ">", $outfile) || die "Can't open $outfile, $!";
 	print $fh $out || die "Can't print $outfile, $!";

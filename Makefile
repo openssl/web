@@ -2,9 +2,9 @@
 ## Build procedure for www.openssl.org
 
 ##  Checkouts.
-CHECKOUTS = /var/cache/openssl/checkouts/openssl
+CHECKOUTS = /var/cache/openssl/checkouts
 ##  Snapshot directory
-SNAP = $(CHECKOUST)/openssl
+SNAP = $(CHECKOUTS)/openssl
 ## Where releases are found.
 RELEASEDIR = /var/www/openssl/source
 
@@ -25,7 +25,7 @@ SRCLISTS = \
 	   source/old/1.0.2/index.inc \
 	   source/old/fips/index.inc \
 
-all: $(SIMPLE) $(SRCLISTS)
+all: $(SIMPLE) $(SRCLISTS) manmaster
 
 relupd: all
 	if [ "`id -un`" != openssl ]; then \
@@ -39,12 +39,14 @@ relupd: all
 	git pull $(QUIET)
 	$(MAKE) all manpages
 
-manpages:
-	./bin/mk-manpages $(CHECKOUTS)/master master doc
-	#./bin/mk-manpages $(CHECKOUTS)/openssl-1.0.2-stable 1.0.2 doc
-	#./bin/mk-manpages $(CHECKOUTS)/openssl-1.0.1-stable 1.0.1 doc
-	#./bin/mk-manpages $(CHECKOUTS)/openssl-1.0.0-stable 1.0.0 doc
-	#./bin/mk-manpages $(CHECKOUTS)/openssl-0.9.8-stable 0.9.8 doc
+manpages: manmaster
+	./bin/mk-manpages $(CHECKOUTS)/openssl-1.0.2-stable 1.0.2 docs
+	./bin/mk-manpages $(CHECKOUTS)/openssl-1.0.1-stable 1.0.1 docs
+	./bin/mk-manpages $(CHECKOUTS)/openssl-1.0.0-stable 1.0.0 docs
+	./bin/mk-manpages $(CHECKOUTS)/openssl-0.9.8-stable 0.9.8 docs
+
+manmaster:
+	./bin/mk-manpages $(CHECKOUTS)/openssl master docs
 
 # Legacy targets
 hack-source_htaccess: all
