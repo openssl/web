@@ -4,7 +4,7 @@ use strict;
 use Pod::Html;
 use Pod::Simple::XHTML;
 
-my @releases = ( 'master', '1.0.2', '1.0.1', '1.0.1', '0.9.8');
+my @releases = ( 'master', '1.0.2', '1.0.1', '1.0.0', '0.9.8');
 my %relmap = map { $_ => 1 } @releases;
 my @sections = ( 'apps', 'crypto', 'ssl' );
 
