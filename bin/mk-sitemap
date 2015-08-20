@@ -33,6 +33,7 @@ dodir()
 	my $simple = $entry;
 	$simple =~ s@.*/@@;
 	print "\n", "\t" x $level, $simple, "/\n";
+        next if $entry =~ m/man0.9.8|man1.0..|manmaster/;
 	&dodir($entry, $level + 1);
     }
 }
