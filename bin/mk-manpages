@@ -18,8 +18,11 @@ cleanup()
     die "No $dir/index.html" unless -f "$dir/index.html";
     foreach my $sect ( @sections ) {
 	mkdir "$dir/$sect" unless -d "$dir/$sect";
+	my $idx1 = "$dir/$sect/index.html";
+	my $idx2 = "$dir/$sect/index.inc";
 	foreach my $f ( glob("$dir/$sect/*") ) {
-	    unlink $f || warn "Can't unlink $f, $!";
+	    unlink $f || warn "Can't unlink $f, $!"
+		unless $f eq $idx1 || $f eq $idx2;
 	}
     }
 }

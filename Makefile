@@ -39,14 +39,20 @@ relupd: all
 	git pull $(QUIET)
 	$(MAKE) all manpages
 
+define makemanpges
+	./bin/mk-manpages $(1) $(2) docs
+	./bin/mk-filelist docs/man$(2)/apps '' '*.html' >docs/man$(2)/apps/index.inc
+	./bin/mk-filelist docs/man$(2)/crypto '' '*.html' >docs/man$(2)/crypto/index.inc
+	./bin/mk-filelist docs/man$(2)/ssl '' '*.html' >docs/man$(2)/ssl/index.inc
+endef
 manpages: manmaster
-	./bin/mk-manpages $(CHECKOUTS)/openssl-1.0.2-stable 1.0.2 docs
-	./bin/mk-manpages $(CHECKOUTS)/openssl-1.0.1-stable 1.0.1 docs
-	./bin/mk-manpages $(CHECKOUTS)/openssl-1.0.0-stable 1.0.0 docs
-	./bin/mk-manpages $(CHECKOUTS)/openssl-0.9.8-stable 0.9.8 docs
+	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.2-stable 1.0.2)
+	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.1-stable 1.0.1)
+	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.0-stable 1.0.0)
+	$(call makemanpages,$(CHECKOUTS)/openssl-0.9.8-stable 0.9.8)
 
 manmaster:
-	./bin/mk-manpages $(CHECKOUTS)/openssl master docs
+	$(call makemanpges,$(CHECKOUTS)/openssl,master)
 
 # Legacy targets
 hack-source_htaccess: all
