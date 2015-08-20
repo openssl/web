@@ -41,9 +41,9 @@ relupd: all
 
 define makemanpages
 	./bin/mk-manpages $(1) $(2) docs
-	./bin/mk-filelist docs/man$(2)/apps '' '*.html' >docs/man$(2)/apps/index.inc
-	./bin/mk-filelist docs/man$(2)/crypto '' '*.html' >docs/man$(2)/crypto/index.inc
-	./bin/mk-filelist docs/man$(2)/ssl '' '*.html' >docs/man$(2)/ssl/index.inc
+	./bin/mk-filelist -a docs/man$(2)/apps '' '*.html' >docs/man$(2)/apps/index.inc
+	./bin/mk-filelist -a docs/man$(2)/crypto '' '*.html' >docs/man$(2)/crypto/index.inc
+	./bin/mk-filelist -a docs/man$(2)/ssl '' '*.html' >docs/man$(2)/ssl/index.inc
 endef
 manpages: manmaster
 	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.2-stable,1.0.2)

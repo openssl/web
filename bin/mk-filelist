@@ -2,6 +2,12 @@
 use strict;
 
 die "Missing args\n" if $#ARGV < 2;
+my $timebased = 1;
+if ($ARGV[0] eq '-a') {
+    $timebased = 0;
+    shift;
+}
+
 my $SRCDIR = $ARGV[0]; shift;
 my $URLBASE = $ARGV[0]; shift;
 my $GLOB = join(' ', @ARGV);
@@ -11,7 +17,9 @@ my @months = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
 
 sub ls {
     my ($pat) = @_;
-    my @F = sort { (stat($b))[9] <=> (stat($a))[9]; } (glob($pat));
+    my @F = $timebased
+                ? sort { (stat($b))[9] <=> (stat($a))[9]; } (glob($pat))
+                : sort (glob($pat));
     my @R = ();
     foreach my $f (@F) {
         next if ($f =~ m|^index.*|);
