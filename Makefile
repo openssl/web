@@ -101,7 +101,7 @@ source/license.txt: $(SNAP)/LICENSE
 	cp $? $@
 source/index.inc:
 	@rm -f $@
-	./bin/mk-filelist $(RELEASEDIR) '' 'openssl-*.tar.gz' >$@
+	./bin/mk-filelist -a $(RELEASEDIR) '' 'openssl-*.tar.gz' >$@
 
 source/old/0.9.x/index.inc:
 	@rm -f $@
