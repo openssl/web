@@ -13,6 +13,7 @@ mk-manpages.pl
 news/changelog.inc
 news/changelog.txt
 news/newsflash.inc
+news/cl*.txt
 news/vulnerabilities.inc
 newsflash.inc
 source/*.gz*

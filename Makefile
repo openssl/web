@@ -13,6 +13,7 @@ RELEASEDIR = /var/www/openssl/source
 SIMPLE = newsflash.inc sitemap.txt \
 	 docs/faq.inc docs/fips.inc \
 	 news/changelog.inc news/changelog.txt \
+	 news/cl098.txt news/cl100.txt news/cl101.txt news/cl102.txt \
 	 news/newsflash.inc \
 	 news/vulnerabilities.inc \
 	 source/.htaccess \
@@ -76,6 +77,19 @@ news/changelog.inc: news/changelog.txt bin/mk-changelog
 news/changelog.txt: $(SNAP)/CHANGES
 	@rm -f $@
 	cp $? $@
+news/cl098.txt: $(CHECKOUTS)/openssl-0.9.8-stable/CHANGES
+	@rm -f $@
+	cp $? $@
+news/cl100.txt: $(CHECKOUTS)/openssl-1.0.0-stable/CHANGES
+	@rm -f $@
+	cp $? $@
+news/cl101.txt: $(CHECKOUTS)/openssl-1.0.1-stable/CHANGES
+	@rm -f $@
+	cp $? $@
+news/cl102.txt: $(CHECKOUTS)/openssl-1.0.2-stable/CHANGES
+	@rm -f $@
+	cp $? $@
+
 news/newsflash.inc: news/newsflash.txt
 	sed <$? >$@ \
 	    -e '/^#/d' \
