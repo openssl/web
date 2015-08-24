@@ -22,12 +22,12 @@
 
   <ul class="main-navigation">
     <li><a href="/" title="Home page">Home</a></li>
-    <li><a href="/source" title="Source code">Downloads</a></li>
-    <li><a href="/docs" title="FAQ, FIPS, manpages, ...">Docs</a></li>
-    <li><a href="/news" title="Latest information">News</a></li>
-    <li><a href="/policies" title="How we operate">Policies</a></li>
-    <li><a href="/community" title="Blog, bugs, email, ...">Community</a></li>
-    <li><a href="/support" title="Commercial support and contracting">Support</a></li>
+    <li><a href="/source/" title="Source code">Downloads</a></li>
+    <li><a href="/docs/" title="FAQ, FIPS, manpages, ...">Docs</a></li>
+    <li><a href="/news/" title="Latest information">News</a></li>
+    <li><a href="/policies/" title="How we operate">Policies</a></li>
+    <li><a href="/community/" title="Blog, bugs, email, ...">Community</a></li>
+    <li><a href="/support/" title="Commercial support and contracting">Support</a></li>
   </ul>
   </nav>
 <!-- end -->

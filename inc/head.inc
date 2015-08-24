@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <link rel="canonical" href="https://www.openssl.org/">
-  <link href="favicon.png" rel="icon">
+  <link href="/favicon.ico" rel="icon">
   <link href="/inc/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 
   <script src="/inc/modernizr-2.0.js"></script>
