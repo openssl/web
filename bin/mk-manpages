@@ -1,39 +1,229 @@
-#! /usr/bin/perl -w
+#! /usr/bin/perl
 
-use strict;
-use Pod::Html;
-use Pod::Simple::XHTML;
-
-my @releases = ( 'master', '1.0.2', '1.0.1', '1.0.0', '0.9.8');
-my %relmap = map { $_ => 1 } @releases;
-my @sections = ( 'apps', 'crypto', 'ssl' );
-
-# Remove all files from a manpage subtree, and leave only
-# the index and the section subdirs.
-sub
-cleanup()
 {
-    my ( $wwwdir, $release ) = @_;
-    my $dir = "$wwwdir/man$release";
-    die "No $dir/index.html" unless -f "$dir/index.html";
-    foreach my $sect ( @sections ) {
-	mkdir "$dir/$sect" unless -d "$dir/$sect";
-	my $idx1 = "$dir/$sect/index.html";
-	my $idx2 = "$dir/$sect/index.inc";
-	foreach my $f ( glob("$dir/$sect/*") ) {
-	    unlink $f || warn "Can't unlink $f, $!"
-		unless $f eq $idx1 || $f eq $idx2;
-	}
+    package Local::PSX;
+    use Pod::Simple::XHTML;
+    use parent qw(Pod::Simple::XHTML);
+
+    sub resolve_man_page_link {
+        my ( $self, $to, $section ) = @_;
+        return undef unless defined $to;
+        my ( $page, $part ) = $to =~ /^([^(]+)(?:[(](\d+)[)])?$/;
+        return undef unless $page;
+
+        return ( $self->man_url_prefix || '' )
+          . $self->encode_entities($page) . ( $self->man_url_postfix || '' );
     }
 }
 
+package Local::MkManPages;
 
-## Generate a manpage.
-sub
-genhtml()
-{
-    my ( $release, $section, $filename, $title, $file ) = @_;
-    my $header = <<EOFH;
+use strict;
+use warnings;
+use File::Basename qw(basename);
+use File::Spec ();
+use Getopt::Long qw(GetOptionsFromArray);
+use Pod::Usage qw(pod2usage);
+
+__PACKAGE__->run(@ARGV);
+
+sub Releases { return (qw(master 1.0.2 1.0.1 1.0.0 0.9.8)); }
+sub Sections { return (qw(apps crypto ssl)); }
+
+sub getRelease {
+    my ( $class, $ver ) = @_;
+    my %known = map { $_ => 1 } $class->Releases;
+    return @_ != 2 ? %known : defined $known{$ver} ? $ver : undef;
+}
+
+sub run {
+    my ( $class, @argv ) = @_;
+    my $opt = $class->process_options(@argv);
+    $class->cleanup( $opt->{WwwDir}, $opt->{RelVer} );
+    exit $class->main( $opt->{SrcDir}, $opt->{WwwDir}, $opt->{RelVer} );
+}
+
+sub main {
+    my ( $class, $srcdir, $wwwdir, $release ) = @_;
+
+    foreach my $sect ( $class->Sections ) {
+        my $dir = File::Spec->catfile( $srcdir, "doc", $sect );
+        opendir( my $dh, $dir ) or $class->die("opendir '$dir': $!");
+        while ( my $ent = readdir($dh) ) {
+            next if $ent =~ /^\./;
+            next if $ent !~ /\.pod$/;
+
+            my $filename = File::Spec->catfile( $dir, $ent );
+            my $basename = basename( $ent, ".pod" );
+            my $title = $basename;
+            my $out =
+              $class->genhtml( $release, $sect, $filename, $title, $basename );
+            my $outfile = File::Spec->catfile( $wwwdir, "man$release", $sect,
+                "$basename.html" );
+            open( my $fh, ">", $outfile )
+              or $class->die("Can't open $outfile: $!");
+            print $fh $out or $class->die("Can't print $outfile: $!");
+            close($fh) or $class->die("Can't close $outfile: $!");
+            my @altnames = $class->getnames( $filename, $basename );
+
+            foreach my $alt (@altnames) {
+                my $target = File::Spec->catfile( $wwwdir, "man$release", $sect,
+                    "$alt.html" );
+	        if ( ! -f $target ) {
+		    link( $outfile, $target )
+		      or $class->die("Can't link $outfile to $target: $!");
+	      }
+            }
+        }
+    }
+}
+
+# Generate a manpage
+sub genhtml {
+    my ( $class, $release, $section, $filename, $title, $file ) = @_;
+    my $header = $class->htmlHeader($title);
+    my $footer = $class->htmlFooter( $release, $section, $file );
+
+    open( my $fh, $filename ) || $class->die("Can't open $filename: $!");
+    my $infile = do { local $/; <$fh>; };
+
+    # L<asdf...|qwer...> ==> L<qwer>
+    $infile =~ s/L<[^|>]*\|([^>]+)>/L<$1>/g;
+
+    # L<asdf(x)> --> L<asdf>
+    $infile =~ s/L<([^>]+)\(\d\)>/L<$1>/g;
+
+    my $out;
+    my $pod = Local::PSX->new;
+    $pod->html_h_level(3);
+    $pod->perldoc_url_prefix(
+        "https://www.openssl.org/docs/man$release/$section/");
+    $pod->perldoc_url_postfix(".html");
+    $pod->man_url_prefix("https://www.openssl.org/docs/man$release/$section/");
+    $pod->man_url_postfix(".html");
+    $pod->html_header($header);
+    $pod->html_footer($footer);
+    $pod->output_string( \$out );
+    $pod->parse_string_document($infile);
+    return $out;
+}
+
+# Return all the OTHER names in a manpage
+sub getnames {
+    my ( $class, $infile, $basename ) = @_;
+    my @words = ();
+    open( my $fh, "<", $infile ) or $class->die("Can't open $infile: $!");
+    {
+        local $/ = "";
+        my $found = 0;
+        while (<$fh>) {
+            chop;
+            s/\n/ /gm;
+            if (/^=head1 /) {
+                $found = 0;
+            }
+            elsif ($found) {
+                if (/ - /) {
+                    s/ - .*//;
+                    s/,\s+/,/g;
+                    s/\s+,/,/g;
+                    s/^\s+//g;
+                    s/\s+$//g;
+                    s/\s/_/g;
+                    push @words, split ',';
+                }
+            }
+            if (/^=head1\s*NAME\s*$/) {
+                $found = 1;
+            }
+        }
+    }
+    return grep { $_ ne $basename } @words;
+}
+
+sub die {
+    my $class = shift;
+    $class->error(@_);
+    exit(2);
+}
+
+sub error {
+    my $class = shift;
+    my $prog  = basename($0);
+    warn("$prog: $_\n") for @_;
+}
+
+# Remove all files from a manpage subtree, and leave only
+# the index and the section subdirs.
+sub cleanup {
+    my ( $class, $wwwdir, $release ) = @_;
+    my $dir = File::Spec->catfile( $wwwdir, "man$release" );
+    my $idx = File::Spec->catfile( $dir,    "index.html" );
+
+    if ( !-d $dir ) {
+        mkdir($dir) or $class->die("mkdir '$dir': $!");
+    }
+
+    # TBD: was $class->die
+    $class->error("No $idx") unless ( -f $idx );
+    foreach my $sect ( $class->Sections ) {
+        my $sdir = File::Spec->catfile( $dir, $sect );
+        if ( !-d $sdir ) {
+            mkdir($sdir) or $class->die("mkdir '$sdir': $!");
+            next;
+        }
+
+        opendir( my $dh, $sdir ) or $class->die("opendir '$sdir': $!");
+        while ( my $ent = readdir($dh) ) {
+            next if $ent =~ /^\./;
+            next if $ent =~ /^index.(?:html|inc)$/;
+            my $f = File::Spec->catfile( $sdir, $ent );
+            unlink($f) or $class->error("Can't unlink '$f': $!");
+        }
+    }
+}
+
+sub process_options {
+    my ( $class, @argv ) = @_;
+    my %opt;
+
+    GetOptionsFromArray( \@argv, \%opt, "help", "man" )
+      or pod2usage( -verbose => 0 );
+
+    pod2usage( -verbose => 1 ) if ( $opt{help} or @argv != 3 );
+    pod2usage( -verbose => 2 ) if ( $opt{man} );
+
+    # <src/dir> <rel.ver> <www/dir>
+    my @argkeys = qw(SrcDir RelVer WwwDir);
+    @opt{@argkeys} = @argv;
+
+    # no empty values, directories must exist
+    my @err;
+    foreach my $key (@argkeys) {
+        push( @err, "Invalid $key argument '$opt{$key}'" )
+          if ( $opt{$key} =~ /^\s*$/ );
+        push( @err, "Directory '$opt{$key}': $!" )
+          if ( $key =~ /Dir$/ and !-d $opt{$key} );
+    }
+    $class->die(@err) if @err;
+
+    # each source dir has a set of subdirs with documentation
+    foreach my $sect ( $class->Sections ) {
+        my $dir = File::Spec->catfile( $opt{SrcDir}, "doc", $sect );
+        push( @err, "No directory '$dir'" ) unless ( -d $dir );
+    }
+
+    # verify release
+    push( @err, "Unknown release '$opt{RelVer}'" )
+      unless ( $class->getRelease( $opt{RelVer} ) );
+    $class->die(@err) if @err;
+
+    return \%opt;
+}
+
+sub htmlHeader {
+    my ( $class, $title ) = @_;
+    return <<EOFH;
 <!DOCTYPE html>
 <html lang="en">
 <!--#include virtual="/inc/head.inc" -->
@@ -42,44 +232,54 @@ genhtml()
   <div id="main">
     <div id="content">
       <div class="blog-index">
-	<article>
-	  <header><h2>$title</h2></header>
-	  <div class="entry-content">
-	    <p>
+        <article>
+          <header><h2>$title</h2></header>
+          <div class="entry-content">
+            <p>
 
 EOFH
-    my $sidebar = <<EOS;
+}
+
+# note: links could be bogus if file DNE in one of the other releases
+sub htmlSidebar {
+    my ( $class, $release, $section, $file ) = @_;
+
+    my $lirel = "";
+    foreach my $v ( grep { $release ne $_ } $class->Releases ) {
+        $lirel .=
+"\n<li><a href=\"/docs/man$v/$section/$file.html\">$v version</a></li>";
+    }
+
+    return <<EOS;
 <aside class="sidebar">
   <section>
     <h1><a href="/docs/manpages.html">$release manpages</a></h1>
     <ul>
       <li><a href="../apps/openssl.html">The openssl command</a></li>
       <li><a href="../ssl/ssl.html">The ssl library</a></li>
-      <li><a href="../crypto/crypto.html">The crypto library</a></li>
-EOS
-    foreach my $v ( @releases ) {
-        $sidebar .=
-"<li><a href=\"/docs/man$v/$section/$file.html\">$v version</a></li>\n"
-            if $release ne $v;
-    }
-    $sidebar .= <<EOS;
+      <li><a href="../crypto/crypto.html">The crypto library</a></li>$lirel
     </ul>
   </section>
 </aside>
 EOS
-    my $footer = <<EOFT;
-	    </p>
-	  </div>
-	  <footer>
-	    You are here: <a href="/">Home</a>
+}
+
+sub htmlFooter {
+    my ( $class, $release, $section, $file ) = @_;
+    my $sidebar = $class->htmlSidebar( $release, $section, $file );
+    return <<EOFT;
+            </p>
+          </div>
+          <footer>
+            You are here: <a href="/">Home</a>
             : <a href="/docs">Docs</a>
             : <a href="/docs/manpages.html">Manpages</a>
             : <a href="/docs/man$release">$release</a>
-	    : <a href="/docs/man$release/$section">$section</a>
-	    : <a href="/docs/man$release/$section/$file.html">$file</a>
+            : <a href="/docs/man$release/$section">$section</a>
+            : <a href="/docs/man$release/$section/$file.html">$file</a>
             <br/><a href="/sitemap.txt">Sitemap</a>
           </footer>
-	</article>
+        </article>
       </div>
       $sidebar
     </div>
@@ -88,97 +288,42 @@ EOS
 </body>
 </html>
 EOFT
-
-    open(my $fh, $filename) || die "Can't open $filename, $!";
-    my $infile = do { local $/; <$fh>; };
-    # L<asdf...|qwer...> ==> L<qwer>
-    $infile =~ s/L<[^|>]*\|([^>]+)>/L<$1>/g;
-    # L<asdf(x)> --> L<asdf>
-    $infile =~ s/L<([^>]+)\(\d\)>/L<$1>/g;
-
-    my $out;
-    my $pod = Pod::Simple::XHTML->new;
-    $pod->html_h_level(3);
-# $pod->index(1);
-    $pod->perldoc_url_prefix("https://www.openssl.org/docs/man$release/$section/");
-    $pod->perldoc_url_postfix(".html");
-    $pod->man_url_prefix("https://www.openssl.org/docs/man$release/$section/");
-    $pod->man_url_postfix(".html");
-    $pod->html_header($header);
-    $pod->html_footer($footer);
-# $pod->force_title("TILETITLETITLE");
-# $pod->backlink(1);
-    $pod->output_string(\$out);
-    $pod->parse_string_document($infile);
-    return $out;
 }
 
-# Return all the OTHER names in a manpage.
-sub
-getnames()
-{
-    my ( $infile, $basename ) = @_;
-    my @words = ();
-    open(my $fh, "<", $infile) || die "Can't open $infile, $!";
-    {
-	local $/ = "";
-	my $found = 0;
-	while ( <$fh> ) {
-	    chop;
-	    s/\n/ /gm;
-	    if (/^=head1 /) {
-		$found = 0;
-	    } elsif ( $found ) {
-		if (/ - /) {
-		    s/ - .*//;
-		    s/,\s+/,/g;
-		    s/\s+,/,/g;
-		    s/^\s+//g;
-		    s/\s+$//g;
-		    s/\s/_/g;
-		    push @words, split ',';
-		}
-	    }
-	    if (/^=head1\s*NAME\s*$/) {
-		$found = 1;
-	    }
-	}
-    }
-    return grep { $_ ne $basename } @words;
-}
+__END__
 
-die "Mssing args\n" if $#ARGV < 2;
+=pod
 
-# Verify source dir.
-my $SRCDIR = shift || die "Source dir missing";
-die "No source directory $SRCDIR" unless -d $SRCDIR;
-foreach my $sect ( @sections ) {
-    my $dir = "$SRCDIR/doc/$sect";
-    die "No directory $dir" unless -d $dir;
-}
-# Verify release.
-my $RELEASE = shift || die "RELEASE missing";
-die "Unknown release $RELEASE" unless defined $relmap{$RELEASE};
-# Cleanup and verify the destination.
-my $WWWDIR = shift || die "Destination missing";
-die "No destination directory $WWWDIR" unless -d $WWWDIR;
-&cleanup($WWWDIR, $RELEASE);
+=head1 NAME
 
-foreach my $sect ( @sections  ) {
-    foreach my $filename ( glob("$SRCDIR/doc/$sect/*.pod") ) {
-	my $basename = $filename;
-	$basename =~ s@.*/@@;
-	$basename =~ s@.pod@@;
-	my $title = $basename;
-	my $out = &genhtml($RELEASE, $sect, $filename, $title, $basename);
-	my $outfile = "$WWWDIR/man$RELEASE/$sect/$basename.html";
-	open(my $fh, ">", $outfile) || die "Can't open $outfile, $!";
-	print $fh $out || die "Can't print $outfile, $!";
-	close($fh) || die "Can't close $outfile, $!";
-	my @altnames = &getnames($filename, $basename);
-	foreach my $alt ( @altnames ) {
-	    my $target = "$WWWDIR/man$RELEASE/$sect/$alt.html";
-	    link $outfile, $target || die "Can't link $outfile,$target, $!";
-	}
-    }
-}
+mk-manpages - htmlize man pages from POD for the OpenSSL website
+
+=head1 SYNOPSIS
+
+mk-manpages [options] <SrcDir> <RelVer> <WwwDir>
+
+  <SrcDir>   top level directory of release <RelVer>, example 'OpenSSL_1_0_2-stable'
+  <RelVer>   version number associated with <SrcDir>, example '1.0.2'
+  <WwwDir>   top level directory beneath which generated html is stored, example 'web'
+
+    --help    display a brief help message
+    --man     display full documentation
+
+=head1 DESCRIPTION
+
+This utility is run on a web server generate the htmlized version of
+OpenSSL documentation from the original POD.  The resultant directory
+structure may look something like the following (where the contents of
+index.html do not come from this tool):
+
+ $ ls some/path/to/web
+ man0.9.8    man1.0.0    man1.0.1    man1.0.2    manmaster
+ $ ls some/path/to/web/man1.0.2
+ apps        crypto      index.html  ssl
+ $ ls some/path/to/web/man1.0.2/apps
+ CA.pl.html
+ asn1parse.html
+ c_rehash.html
+ ...
+
+=cut
