@@ -1,11 +1,10 @@
 RedirectMatch 404 .*/\.git/.*
 
-RewriteEngine on
-
 Options +ExecCGI +FollowSymLinks
 
-RewriteRule licenses/openssl_ccla.pdf policies/openssl_ccla.pdf
-RewriteRule licenses/openssl_icla.pdf policies/openssl_icla.pdf
+Redirect permanent /licenses/openssl_ccla.pdf /policies/openssl_ccla.pdf
+Redirect permanent /licenses/openssl_icla.pdf /policies/openssl_icla.pdf
+Redirect permanent /support/faq.html /docs/faq.html
 
 <Files *.md5>
 ForceType application/binary
