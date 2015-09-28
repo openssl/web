@@ -3,7 +3,7 @@
 		Jan 12 2015
 
 This document describes the coding style for the OpenSSL project. It is
-is derived from the Linux kernel coding style, which can be found at:
+derived from the Linux kernel coding style, which can be found at:
 
     https://www.kernel.org/doc/Documentation/CodingStyle
 
@@ -240,7 +240,7 @@ and are usually declared like this:
 For examples, look in ossl_type.h, but note that there are many exceptions
 such as BN_CTX. Typedef'd enum is used much less often and there is no
 convention, so consider not using a typedef. When doing that, the enum
-name is should be lowercase and the values (mostly) uppercase.
+name should be lowercase and the values (mostly) uppercase.
 
 The ASN.1 structures are an exception to this. The rationale is that if
 a structure (and its fields) is already defined in a standard it's more
@@ -281,7 +281,7 @@ it than you would have done.
 
 Another measure of complexity is the number of local variables. If there are
 more than five to 10, consider splitting it into smaller pieces. A human
-brain can generally easily keep track of about seven different things,
+brain can generally easily keep track of about seven different things;
 anything more and it gets confused. Often things which are simple and
 clear now are much less obvious two weeks from now, or to someone else.
 An exception to this is the command-line applications which support many
@@ -447,7 +447,7 @@ Sometimes an additional value is used:
 
     -1: something bad (e.g., internal error or memory allocation failure)
 
-Other API's use the following pattern:
+Other APIs use the following pattern:
 
     >= 1: success, with value returning additional information
     <= 0: failure with return value indicating why things failed
@@ -458,7 +458,7 @@ Functions whose return value is the actual result of a computation,
 rather than an indication of whether the computation succeeded, are not
 subject to these rules. Generally they indicate failure by returning some
 out-of-range result. The simplest example is functions that return pointers;
-they use NULL to report failure.
+they return NULL to report failure.
 
 
                 Chapter 17:  Deleted
@@ -493,14 +493,14 @@ indentation work correctly.
 
                 Chapter 19:  Processor-specific code
 
-In OpenSSL case the only reason to resort for processor-specific code
-is for performance. As it still exists in general platform-independent
-algorithm context, it has to be always backed up by neutral pure C one. This
-implies certain limitations. The most common way to resolve this conflict
-is to opt for short inline assembly function-like snippets, customarily
-implemented as macros, so that they can be easily interchanged with other
-platform-specific or neutral code. As with any macro, try to implement
-it as single expression.
+In OpenSSL's case the only reason to resort to processor-specific code
+is for performance. As it still exists in a general platform-independent
+algorithm context, it always has to be backed up by a neutral pure C one.
+This implies certain limitations. The most common way to resolve this
+conflict is to opt for short inline assembly function-like snippets,
+customarily implemented as macros, so that they can be easily interchanged
+with other platform-specific or neutral code. As with any macro, try to
+implement it as single expression.
 
 You may need to mark your asm statement as volatile, to prevent GCC from
 removing it if GCC doesn't notice any side effects. You don't always need
@@ -525,11 +525,11 @@ sequences with regular permutation of inputs. By adhering to specific
 coding rules, perlasm is also used to support multiple ABIs and assemblers,
 see crypto/perlasm/x86_64-xlate.pl for an example.
 
-Another option for processor-specific primarily SIMD capabilities is
-called compiler intrinsics. We avoid this, because it's not very much
-less complicated than coding pure assembly, and it doesn't provide same
-performance guarantee across different micro-architecture. Nor is it
-portable enough to meet our multi-platform support goals.
+Another option for processor-specific (primarily SIMD) capabilities is
+called "compiler intrinsics." We avoid this, because it's not very much
+less complicated than coding pure assembly, and it doesn't provide the
+same performance guarantee across different micro-architecture. Nor is
+it portable enough to meet our multi-platform support goals.
 
 
                 Chapter 20:  Portability
