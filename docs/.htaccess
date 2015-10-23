@@ -1,12 +1,12 @@
 RewriteEngine on
-RewriteRule fips/fipsnotes.html /docs/fipsnotes.html [L,R=302,NC]
-RewriteRule fips/fipsvalidation.html /docs/fipsvalidation.html [L,R=302,NC]
-RewriteRule fips/index.html /docs/fips/fips.html [L,R=302,NC]
+RewriteRule ^/fips/fipsnotes.html /docs/fipsnotes.html [L,R=302,NC]
+RewriteRule ^/fips/fipsvalidation.html /docs/fipsvalidation.html [L,R=302,NC]
+RewriteRule ^/fips/index.html /docs/fips/fips.html [L,R=302,NC]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule manmaster/apps/1/(.*)  /docs/manmaster/apps/$1 [L,R=302,NC]
+RewriteRule ^/manmaster/apps/1/(.*)  /docs/manmaster/apps/$1 [L,R=302,NC]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule apps/(..*)  /docs/manmaster/apps/$1 [L,R=302,NC]
+RewriteRule ^/apps/(..*)  /docs/manmaster/apps/$1 [L,R=302,NC]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule crypto/(..*)  /docs/manmaster/crypto/$1 [L,R=302,NC]
+RewriteRule ^/crypto/(..*)  /docs/manmaster/crypto/$1 [L,R=302,NC]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ssl/(..*)  /docs/manmaster/ssl/$1 [L,R=302,NC]
+RewriteRule ^/ssl/(..*)  /docs/manmaster/ssl/$1 [L,R=302,NC]
