@@ -4,6 +4,9 @@
     <h1><a href=".">Community</a></h1>
     <ul>
       <li>
+	  <a href="conduct.html">Code of Conduct</a>
+      </li>
+      <li>
 	  <a href="team.html">Team</a>
       </li>
       <li>
