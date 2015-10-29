@@ -56,7 +56,7 @@ Apply the attached patch to OpenSSL 0.9.6d, or upgrade to OpenSSL
 TLS.
 
 A patch for 0.9.7 is available from the OpenSSL website
-(http://www.openssl.org/).
+(https://www.openssl.org/).
 
 Servers can disable SSL2, alternatively disable all applications using
 SSL or TLS until the patches are applied. Users of 0.9.7 pre-release
@@ -74,9 +74,9 @@ possible, but have not released the exploit code.
 References
 ----------
 
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0655
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0656
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0657
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0655
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0656
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0657
 
 Acknowledgements
 ----------------
@@ -126,7 +126,7 @@ There are no known exploits for this vulnerability.
 References
 ----------
 
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0659
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0659
 
 Acknowledgements
 ----------------
@@ -141,10 +141,10 @@ The patch and advisory were prepared by Dr. Stephen Henson.
 
 
 Combined patches for OpenSSL 0.9.6d:
-http://www.openssl.org/news/patch_20020730_0_9_6d.txt
+https://www.openssl.org/news/patch_20020730_0_9_6d.txt
 
 Combined patches for OpenSSL 0.9.7 beta 2:
-http://www.openssl.org/news/patch_20020730_0_9_7.txt
+https://www.openssl.org/news/patch_20020730_0_9_7.txt
 
 URL for this Security Advisory:
-http://www.openssl.org/news/secadv_20020730.txt
+https://www.openssl.org/news/secadv_20020730.txt

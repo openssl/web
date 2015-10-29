@@ -61,12 +61,12 @@ References
 The Common Vulnerabilities and Exposures project (cve.mitre.org) has
 assigned the name CAN-2003-0545 for issue 1:
 
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0545
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0545
 
 and CAN-2003-0543 and CAN-2003-0544 for issue 2:
 
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0543
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0544
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0543
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0544
 
 URL for this Security Advisory:
-http://www.openssl.org/news/secadv_20030930.txt
+https://www.openssl.org/news/secadv_20030930.txt

@@ -199,6 +199,6 @@ References
 ===========
 
 URL for this Security Advisory:
-http://www.openssl.org/news/secadv_20101116.txt
+https://www.openssl.org/news/secadv_20101116.txt
 
 

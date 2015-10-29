@@ -48,7 +48,7 @@ plaintext block.
 
 OpenSSL version since 0.9.6c supposedly treat block cipher padding
 errors like MAC verification errors during record decryption
-(see http://www.openssl.org/~bodo/tls-cbc.txt), but MAC verification
+(see https://www.openssl.org/~bodo/tls-cbc.txt), but MAC verification
 was still skipped after detection of a padding error, which allowed
 the timing attack.  (Note that it is likely that other SSL/TLS
 implementations will have similar problems.)
@@ -208,7 +208,7 @@ http://lasecwww.epfl.ch/memo_ssl.shtml
 
 The Common Vulnerabilities and Exposures project (cve.mitre.org) has
 assigned the name CAN-2003-0078 to this issue:
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0078
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0078
 
 URL for this Security Advisory:
-http://www.openssl.org/news/secadv_20030219.txt
+https://www.openssl.org/news/secadv_20030219.txt

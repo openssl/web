@@ -63,9 +63,9 @@ following measures is sufficient.
 
     OpenSSL 0.9.8a and OpenSSL 0.9.7h are available for download via
     HTTP and FTP from the following master locations (you can find the
-    various FTP mirrors under http://www.openssl.org/source/mirror.html):
+    various FTP mirrors under https://www.openssl.org/source/mirror.html):
 
-        o http://www.openssl.org/source/
+        o https://www.openssl.org/source/
         o ftp://ftp.openssl.org/source/
 
     The distribution file names are:
@@ -88,7 +88,7 @@ following measures is sufficient.
     source code to resolve the problem.  The patch is compatible with
     the 0.9.6, 0.9.7, and 0.9.8 branches of OpenSSL.
 
-        o http://www.openssl.org/news/patch-CAN-2005-2969.txt
+        o https://www.openssl.org/news/patch-CAN-2005-2969.txt
 
     Whether you choose to upgrade to a new version or to apply the
     patch, make sure to recompile any applications statically linked
@@ -108,7 +108,7 @@ problem.
 References
 ----------
 
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2969
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2969
 
 URL for this Security Advisory:
-http://www.openssl.org/news/secadv_20051011.txt
+https://www.openssl.org/news/secadv_20051011.txt

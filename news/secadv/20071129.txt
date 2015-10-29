@@ -4,7 +4,7 @@ OpenSSL FIPS Object Module Vulnerabilities
 ------------------------------------------
 
 A significant flaw in the PRNG implementation for the OpenSSL FIPS Object 
-Module v1.1.1 (http://openssl.org/source/openssl-fips-1.1.1.tar.gz, FIPS 
+Module v1.1.1 (https://www.openssl.org/source/openssl-fips-1.1.1.tar.gz, FIPS 
 140-2 validation certificate #733, 
 http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#733) has 
 been reported by Geoff Lowe of Secure Computing Corporation.  Due to a coding 
@@ -32,11 +32,11 @@ Wait for official approval of a patched distribution.
 
 For reference purposes the patches
 
-        http://www.openssl.org/news/patch-CVE-2007-5502-1.txt 
+        https://www.openssl.org/news/patch-CVE-2007-5502-1.txt 
 
 (the simplest direct fix) and: 
 
-         http://www.openssl.org/news/patch-CVE-2007-5502-2.txt 
+         https://www.openssl.org/news/patch-CVE-2007-5502-2.txt 
 
 (a workaround which avoids touching the PRNG code directly) demonstrate two 
 different fixes that independently address the vulnerability.  However, for 
@@ -49,7 +49,7 @@ Institute (OSSI), has supplied the information needed for a "letter change"
 update request based on the latter of these two patches to the FIPS 140-2 
 test lab to be submitted for official approval.  Once (and if) approved the 
 new distribution containing this patch will be posted as 
-http://openssl.org/source/openssl-fips-1.1.2.tar.gz.  The timeline for this 
+https://www.openssl.org/source/openssl-fips-1.1.2.tar.gz.  The timeline for this 
 approval is presently unknown.
 
 

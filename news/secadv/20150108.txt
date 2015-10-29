@@ -193,7 +193,7 @@ conducted by the OpenSSL development team and Adam Langley of
 Google. The final fix was developed by Andy Polyakov of the OpenSSL
 core team.
 
-[1] http://css.csail.mit.edu/6.858/2013/readings/rsa-bug-attacks.pdf
+[1] https://css.csail.mit.edu/6.858/2013/readings/rsa-bug-attacks.pdf
 
 Note
 ====
@@ -215,4 +215,3 @@ details over time.
 
 For details of OpenSSL severity classifications please see:
 https://www.openssl.org/about/secpolicy.html
-

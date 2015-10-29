@@ -48,7 +48,7 @@ statically linked to OpenSSL libraries.
 
 OpenSSL 0.9.7d and OpenSSL 0.9.6m are available for download via HTTP and
 FTP from the following master locations (you can find the various FTP
-mirrors under http://www.openssl.org/source/mirror.html):
+mirrors under https://www.openssl.org/source/mirror.html):
 
     ftp://ftp.openssl.org/source/
 
@@ -79,10 +79,10 @@ References
 ----------
 
 http://www.codenomicon.com/testtools/tls/
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0079
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0112
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0079
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0112
 
 URL for this Security Advisory:
-http://www.openssl.org/news/secadv_20040317.txt
+https://www.openssl.org/news/secadv_20040317.txt
 
 

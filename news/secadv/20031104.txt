@@ -42,9 +42,9 @@ applications statically linked to OpenSSL libraries.
 
 OpenSSL 0.9.6l is available for download via HTTP and FTP from the
 following master locations (you can find the various FTP mirrors under
-http://www.openssl.org/source/mirror.html):
+https://www.openssl.org/source/mirror.html):
 
-    o http://www.openssl.org/source/
+    o https://www.openssl.org/source/
     o ftp://ftp.openssl.org/source/
 
 The distribution file name is:
@@ -65,7 +65,7 @@ References
 The Common Vulnerabilities and Exposures project (cve.mitre.org) has
 assigned the name CAN-2003-0851 to this issue.
 
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0851
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0851
 
 URL for this Security Advisory:
-http://www.openssl.org/news/secadv_20031104.txt
+https://www.openssl.org/news/secadv_20031104.txt

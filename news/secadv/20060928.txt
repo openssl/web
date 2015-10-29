@@ -79,9 +79,9 @@ These vulnerabilities are resolved in the following versions of OpenSSL:
 
 OpenSSL 0.9.8d and OpenSSL 0.9.7l are available for download via
 HTTP and FTP from the following master locations (you can find the
-various FTP mirrors under http://www.openssl.org/source/mirror.html):
+various FTP mirrors under https://www.openssl.org/source/mirror.html):
 
-    o http://www.openssl.org/source/
+    o https://www.openssl.org/source/
     o ftp://ftp.openssl.org/source/
 
 The distribution file names are:
@@ -108,4 +108,4 @@ References
 ==========
 
 URL for this Security Advisory:
-http://www.openssl.org/news/secadv_20060928.txt
+https://www.openssl.org/news/secadv_20060928.txt
