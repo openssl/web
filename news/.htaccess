@@ -1,3 +1,8 @@
+Redirect permanent /news/openssl-0.9.8-notes.html /news/cl098.txt
+Redirect permanent /news/openssl-1.0.0-notes.html /news/cl100.txt
+Redirect permanent /news/openssl-1.0.1-notes.html /news/cl101.txt
+Redirect permanent /news/openssl-1.0.2-notes.html /news/cl102.txt
+
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule secadv_(.*) /news/secadv/$1 [L,R=302,NC]
