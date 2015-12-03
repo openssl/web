@@ -5,7 +5,219 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20150709">
+<security updated="20151203">
+  <issue public="20151203">
+    <cve name="2015-3193"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <fixed base="1.0.2" version="1.0.2e" date="20151203"/>
+
+    <description>
+      There is a carry propagating bug in the x86_64 Montgomery squaring procedure. No
+      EC algorithms are affected. Analysis suggests that attacks against RSA and DSA
+      as a result of this defect would be very difficult to perform and are not
+      believed likely. Attacks against DH are considered just feasible (although very
+      difficult) because most of the work necessary to deduce information
+      about a private key may be performed offline. The amount of resources
+      required for such an attack would be very significant and likely only
+      accessible to a limited number of attackers. An attacker would
+      additionally need online access to an unpatched system using the target
+      private key in a scenario with persistent DH parameters and a private
+      key that is shared between multiple clients. For example this can occur by
+      default in OpenSSL DHE based SSL/TLS ciphersuites.
+    </description>
+    <advisory url="/news/secadv/20151203.txt"/>
+    <reported source="Hanno Böck"/>
+  </issue>
+  <issue public="20151203">
+    <cve name="2015-3194"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <affects base="1.0.1" version="1.0.1k"/>
+    <affects base="1.0.1" version="1.0.1l"/>
+    <affects base="1.0.1" version="1.0.1m"/>
+    <affects base="1.0.1" version="1.0.1n"/>
+    <affects base="1.0.1" version="1.0.1o"/>
+    <affects base="1.0.1" version="1.0.1p"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <fixed base="1.0.2" version="1.0.2e" date="20151203"/>
+    <fixed base="1.0.1" version="1.0.1q" date="20151203"/>
+
+    <description>
+      The signature verification routines will crash with a NULL pointer dereference
+      if presented with an ASN.1 signature using the RSA PSS algorithm and absent
+      mask generation function parameter. Since these routines are used to verify
+      certificate signature algorithms this can be used to crash any certificate
+      verification operation and exploited in a DoS attack. Any application which
+      performs certificate verification is vulnerable including OpenSSL clients and
+      servers which enable client authentication.
+    </description>
+    <advisory url="/news/secadv/20151203.txt"/>
+    <reported source="Loïc Jonas Etienne (Qnective AG)"/>
+  </issue>
+  <issue public="20151203">
+    <cve name="2015-3195"/>
+    <affects base="0.9.8" version="0.9.8"/>
+    <affects base="0.9.8" version="0.9.8a"/>
+    <affects base="0.9.8" version="0.9.8b"/>
+    <affects base="0.9.8" version="0.9.8c"/>
+    <affects base="0.9.8" version="0.9.8d"/>
+    <affects base="0.9.8" version="0.9.8e"/>
+    <affects base="0.9.8" version="0.9.8f"/>
+    <affects base="0.9.8" version="0.9.8g"/>
+    <affects base="0.9.8" version="0.9.8h"/>
+    <affects base="0.9.8" version="0.9.8i"/>
+    <affects base="0.9.8" version="0.9.8j"/>
+    <affects base="0.9.8" version="0.9.8k"/>
+    <affects base="0.9.8" version="0.9.8l"/>
+    <affects base="0.9.8" version="0.9.8m"/>
+    <affects base="0.9.8" version="0.9.8n"/>
+    <affects base="0.9.8" version="0.9.8o"/>
+    <affects base="0.9.8" version="0.9.8p"/>
+    <affects base="0.9.8" version="0.9.8q"/>
+    <affects base="0.9.8" version="0.9.8r"/>
+    <affects base="0.9.8" version="0.9.8s"/>
+    <affects base="0.9.8" version="0.9.8t"/>
+    <affects base="0.9.8" version="0.9.8u"/>
+    <affects base="0.9.8" version="0.9.8v"/>
+    <affects base="0.9.8" version="0.9.8w"/>
+    <affects base="0.9.8" version="0.9.8x"/>
+    <affects base="0.9.8" version="0.9.8y"/>
+    <affects base="0.9.8" version="0.9.8za"/>
+    <affects base="0.9.8" version="0.9.8zb"/>
+    <affects base="0.9.8" version="0.9.8zc"/>
+    <affects base="0.9.8" version="0.9.8zd"/>
+    <affects base="0.9.8" version="0.9.8ze"/>
+    <affects base="0.9.8" version="0.9.8zf"/>
+    <affects base="0.9.8" version="0.9.8zg"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0h"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.0" version="1.0.0n"/>
+    <affects base="1.0.0" version="1.0.0o"/>
+    <affects base="1.0.0" version="1.0.0p"/>
+    <affects base="1.0.0" version="1.0.0q"/>
+    <affects base="1.0.0" version="1.0.0r"/>
+    <affects base="1.0.0" version="1.0.0s"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <affects base="1.0.1" version="1.0.1k"/>
+    <affects base="1.0.1" version="1.0.1l"/>
+    <affects base="1.0.1" version="1.0.1m"/>
+    <affects base="1.0.1" version="1.0.1n"/>
+    <affects base="1.0.1" version="1.0.1o"/>
+    <affects base="1.0.1" version="1.0.1p"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <fixed base="1.0.2" version="1.0.2e" date="20151203"/>
+    <fixed base="1.0.1" version="1.0.1q" date="20151203"/>
+    <fixed base="1.0.0" version="1.0.0t" date="20151203"/>
+    <fixed base="0.9.8" version="0.9.8zh" date="20151203"/>
+
+    <description>
+      When presented with a malformed X509_ATTRIBUTE structure OpenSSL will leak
+      memory. This structure is used by the PKCS#7 and CMS routines so any
+      application which reads PKCS#7 or CMS data from untrusted sources is affected.
+      SSL/TLS is not affected.
+    </description>
+    <advisory url="/news/secadv/20151203.txt"/>
+    <reported source="Adam Langley (Google/BoringSSL) using libFuzzer"/>
+  </issue>
+  <issue public="20151203">
+    <cve name="2015-3196"/>
+    <affects base="1.0.0" version="1.0.0"/>
+    <affects base="1.0.0" version="1.0.0a"/>
+    <affects base="1.0.0" version="1.0.0b"/>
+    <affects base="1.0.0" version="1.0.0c"/>
+    <affects base="1.0.0" version="1.0.0d"/>
+    <affects base="1.0.0" version="1.0.0e"/>
+    <affects base="1.0.0" version="1.0.0f"/>
+    <affects base="1.0.0" version="1.0.0g"/>
+    <affects base="1.0.0" version="1.0.0h"/>
+    <affects base="1.0.0" version="1.0.0i"/>
+    <affects base="1.0.0" version="1.0.0j"/>
+    <affects base="1.0.0" version="1.0.0k"/>
+    <affects base="1.0.0" version="1.0.0l"/>
+    <affects base="1.0.0" version="1.0.0m"/>
+    <affects base="1.0.0" version="1.0.0n"/>
+    <affects base="1.0.0" version="1.0.0o"/>
+    <affects base="1.0.0" version="1.0.0p"/>
+    <affects base="1.0.0" version="1.0.0q"/>
+    <affects base="1.0.0" version="1.0.0r"/>
+    <affects base="1.0.0" version="1.0.0s"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <affects base="1.0.1" version="1.0.1k"/>
+    <affects base="1.0.1" version="1.0.1l"/>
+    <affects base="1.0.1" version="1.0.1m"/>
+    <affects base="1.0.1" version="1.0.1n"/>
+    <affects base="1.0.1" version="1.0.1o"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <fixed base="1.0.2" version="1.0.2d" date="20150709"/>
+    <fixed base="1.0.1" version="1.0.1p" date="20150709"/>
+    <fixed base="1.0.0" version="1.0.0t" date="20151203"/>
+
+    <description>
+      If PSK identity hints are received by a multi-threaded client then
+      the values are wrongly updated in the parent SSL_CTX structure. This can
+      result in a race condition potentially leading to a double free of the
+      identify hint data.
+    </description>
+    <advisory url="/news/secadv/20151203.txt"/>
+    <reported source="Stephen Henson (OpenSSL)"/>
+  </issue>
+
   <issue public="20150709">
     <cve name="2015-1793"/>
     <affects base="1.0.1" version="1.0.1n"/>
