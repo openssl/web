@@ -90,6 +90,31 @@ news/cl102.txt: $(CHECKOUTS)/openssl-1.0.2-stable/CHANGES
 	@rm -f $@
 	cp $? $@
 
+news/openssl-0.9.8-notes.html: news/openssl-notes.html.in
+	@rm -f $@
+	sed -e 's|@VERSION@|0.9.8|g' < $< > $@
+news/openssl-1.0.0-notes.html: news/openssl-notes.html.in
+	@rm -f $@
+	sed -e 's|@VERSION@|1.0.0|g' < $< > $@
+news/openssl-1.0.1-notes.html: news/openssl-notes.html.in
+	@rm -f $@
+	sed -e 's|@VERSION@|1.0.1|g' < $< > $@
+news/openssl-1.0.2-notes.html: news/openssl-notes.html.in
+	@rm -f $@
+	sed -e 's|@VERSION@|1.0.2|g' < $< > $@
+news/openssl-0.9.8-notes.inc: $(CHECKOUTS)/openssl-0.9.8-stable/NEWS news/openssl-0.9.8-notes.html
+	@rm -f $@
+	./bin/mk-notes 0.9.8 < $(CHECKOUTS)/openssl-0.9.8-stable/NEWS > $@
+news/openssl-1.0.0-notes.inc: $(CHECKOUTS)/openssl-1.0.0-stable/NEWS news/openssl-1.0.0-notes.html
+	@rm -f $@
+	./bin/mk-notes 1.0.0 < $(CHECKOUTS)/openssl-1.0.0-stable/NEWS > $@
+news/openssl-1.0.1-notes.inc: $(CHECKOUTS)/openssl-1.0.1-stable/NEWS news/openssl-1.0.1-notes.html
+	@rm -f $@
+	./bin/mk-notes 1.0.1 < $(CHECKOUTS)/openssl-1.0.1-stable/NEWS > $@
+news/openssl-1.0.2-notes.inc: $(CHECKOUTS)/openssl-1.0.2-stable/NEWS news/openssl-1.0.2-notes.html
+	@rm -f $@
+	./bin/mk-notes 1.0.2 < $(CHECKOUTS)/openssl-1.0.2-stable/NEWS > $@
+
 news/newsflash.inc: news/newsflash.txt
 	sed <$? >$@ \
 	    -e '/^#/d' \

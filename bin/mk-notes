@@ -1,0 +1,39 @@
+#! /usr/bin/perl -w
+use strict;
+
+my $SERIES = shift @ARGV;
+die "Missing series argument" if (! $SERIES);
+
+my $copy = 0;
+my $in_ul = 0;
+while ( <STDIN> ) {
+    chomp;
+    if (/^\s*(Major changes between|Known issues in).*(\d+\.\d+\.\d+)\D.*\[\d+\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s\d+\]:?$/) {
+	if ($in_ul) {
+	    print "</ul>\n";
+	    $in_ul = 0;
+	}
+	if ($2 eq $SERIES) {
+	    print "<h3>";
+	    print;
+	    print "</h3>\n";
+	    $copy = 1;
+	    next;
+	} elsif ($copy) {
+	    last;
+	}
+    }
+    if ($copy) {
+	# HTML entities.
+	s|&|&amp;|sg;
+	s|<|&lt;|sg;
+	s|>|&gt;|sg;
+	if (s/^\s+o\s+/<li>/ && !$in_ul) {
+	    print "<ul>\n";
+	    $in_ul = 1;
+	}
+	s/CVE-(\d{4}-\d{4})/<a href=vulnerabilities.html#$1>CVE-$1<\/a>/g;
+	print;
+    }
+}
+print "</ul>";
