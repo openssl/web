@@ -103,32 +103,32 @@ news/vulnerabilities.inc: bin/vulnerabilities.xsl news/vulnerabilities.xml
 docs/faq.inc: docs/faq.txt
 	@rm -f $@
 	./bin/mk-faq <$? >$@
-docs/fips.inc:
+docs/fips.inc: $(wildcard docs/fips/*)
 	@rm -f $@
 	./bin/mk-filelist docs/fips fips/ '*' >$@
 
-source/.htaccess:
+source/.htaccess: $(wildcard source/openssl-*.tar.gz)
 	@rm -f @?
 	./bin/mk-latest source >$@
 source/license.txt: $(SNAP)/LICENSE
 	@rm -f $@
 	cp $? $@
-source/index.inc:
+source/index.inc: $(wildcard $(RELEASEDIR)/openssl-*.tar.gz)
 	@rm -f $@
 	./bin/mk-filelist -a $(RELEASEDIR) '' 'openssl-*.tar.gz' >$@
 
-source/old/0.9.x/index.inc:
+source/old/0.9.x/index.inc: $(wildcard source/old/0.9.x/*.gz)
 	@rm -f $@
 	./bin/mk-filelist source/old/0.9.x '' '*.gz' >$@
-source/old/1.0.0/index.inc:
+source/old/1.0.0/index.inc: $(wildcard source/old/1.0.0/*.gz)
 	@rm -f $@
 	./bin/mk-filelist source/old/1.0.0 '' '*.gz' >$@
-source/old/1.0.1/index.inc:
+source/old/1.0.1/index.inc: $(wildcard source/old/1.0.1/*.gz)
 	@rm -f $@
 	./bin/mk-filelist source/old/1.0.1 '' '*.gz' >$@
-source/old/1.0.2/index.inc:
+source/old/1.0.2/index.inc: $(wildcard source/old/1.0.2/*.gz)
 	@rm -f $@
 	./bin/mk-filelist source/old/1.0.2 '' '*.gz' >$@
-source/old/fips/index.inc:
+source/old/fips/index.inc: $(wildcard source/old/fips/*.gz)
 	@rm -f $@
 	./bin/mk-filelist source/old/fips '' '*.gz' >$@
