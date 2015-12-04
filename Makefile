@@ -159,3 +159,11 @@ source/old/1.0.2/index.inc: $(wildcard source/old/1.0.2/*.gz)
 source/old/fips/index.inc: $(wildcard source/old/fips/*.gz)
 	@rm -f $@
 	./bin/mk-filelist source/old/fips '' '*.gz' >$@
+
+# Because these the indexes of old tarballs will inevitably be newer
+# than the tarballs that are moved into their respective directory,
+# we must declare them phony, or they will not be regenerated when
+# they should.
+.PHONY : source/old/0.9.x/index.inc source/old/1.0.0/index.inc \
+	 source/old/1.0.1/index.inc source/old/1.0.2/index.inc \
+	 source/old/fips/index.inc
