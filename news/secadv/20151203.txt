@@ -1,5 +1,9 @@
-OpenSSL Security Advisory [3 Dec 2015]
-=======================================
+OpenSSL Security Advisory [3 Dec 2015] - Updated [4 Dec 2015]
+=============================================================
+
+[Updated 4 Dec 2015]: This advisory has been updated to include the details of
+CVE-2015-1794, a Low severity issue affecting OpenSSL 1.0.2 which had a fix
+included in the released packages but was missed from the advisory text.
 
 NOTE: WE ANTICIPATE THAT 1.0.0t AND 0.9.8zh WILL BE THE LAST RELEASES FOR THE
 0.9.8 AND 1.0.0 VERSIONS AND THAT NO MORE SECURITY FIXES WILL BE PROVIDED (AS
@@ -96,6 +100,22 @@ The fix for this issue can be identified in the OpenSSL git repository by commit
 ids 3c66a669dfc7 (1.0.2), d6be3124f228 (1.0.1) and 1392c238657e (1.0.0).
 
 The fix was developed by Dr. Stephen Henson of the OpenSSL development team.
+
+Anon DH ServerKeyExchange with 0 p parameter (CVE-2015-1794)
+============================================================
+
+Severity: Low
+
+If a client receives a ServerKeyExchange for an anonymous DH ciphersuite with
+the value of p set to 0 then a seg fault can occur leading to a possible denial
+of service attack.
+
+This issue affects OpenSSL version 1.0.2.
+
+OpenSSL 1.0.2 users should upgrade to 1.0.2e
+
+This issue was reported to OpenSSL on August 3 2015 by Guy Leaver (Cisco). The
+fix was developed by Matt Caswell of the OpenSSL development team.
 
 Note
 ====

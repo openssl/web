@@ -6,6 +6,23 @@
 -->
 
 <security updated="20151203">
+  <issue public="20150811">
+    <cve name="2015-1794"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <fixed base="1.0.2" version="1.0.2e" date="20151203"/>
+
+    <description>
+      If a client receives a ServerKeyExchange for an anonymous DH ciphersuite with
+      the value of p set to 0 then a seg fault can occur leading to a possible denial
+      of service attack.
+    </description>
+    <advisory url="/news/secadv/20151203.txt"/>
+    <reported source="Guy Leaver (Cisco)"/>
+  </issue>
   <issue public="20151203">
     <cve name="2015-3193"/>
     <affects base="1.0.2" version="1.0.2"/>
