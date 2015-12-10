@@ -120,9 +120,9 @@ news/openssl-1.0.1-notes.inc: $(CHECKOUTS)/openssl-1.0.1-stable/NEWS news/openss
 news/openssl-1.0.2-notes.inc: $(CHECKOUTS)/openssl-1.0.2-stable/NEWS news/openssl-1.0.2-notes.html
 	@rm -f $@
 	./bin/mk-notes 1.0.2 < $(CHECKOUTS)/openssl-1.0.2-stable/NEWS > $@
-news/openssl-1.1.0-notes.inc: $(CHECKOUTS)/master/NEWS news/openssl-1.1.0-notes.html
+news/openssl-1.1.0-notes.inc: $(CHECKOUTS)/openssl/NEWS news/openssl-1.1.0-notes.html
 	@rm -f $@
-	./bin/mk-notes 1.1.0 < $(CHECKOUTS)/master/NEWS > $@
+	./bin/mk-notes 1.1.0 < $(CHECKOUTS)/openssl/NEWS > $@
 
 news/newsflash.inc: news/newsflash.txt
 	sed <$? >$@ \
