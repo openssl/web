@@ -31,17 +31,7 @@ SRCLISTS = \
 
 all: $(SIMPLE) $(SRCLISTS) manmaster
 
-relupd: all
-	if [ "`id -un`" != openssl ]; then \
-	    echo "You must run this as 'openssl'" ; \
-	    echo "     sudo -u openssl -H make"; \
-	    exit 1; \
-	fi
-	cd $(CHECKOUTS) ; for dir in openssl* ; do \
-	    echo Updating $$dir ; ( cd $$dir ; git pull $(QUIET) ) ; \
-	done
-	git pull $(QUIET)
-	$(MAKE) all manpages
+relupd: all manpages
 
 define makemanpages
 	./bin/mk-manpages $(1) $(2) docs
