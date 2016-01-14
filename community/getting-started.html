@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--#include virtual="/inc/head.inc" -->
+<body>
+  <!--#include virtual="/inc/banner.inc" -->
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+	<article>
+	  <header><h2>Getting Started as a contributor</h2></header>
+	  <div class="entry-content">
+            <p>We're always looking for people who want to help out.
+            Here are some tips to getting started. First, get familiar with
+            the information on this page, and the links to the side.
+            In particular, you should look at the <a
+              href="mailinglists.html">Mailing Lists</a> page and join
+            the <em>openssl-dev</em> or <em>openssl-users</em> list, or both.
+            After that, here are some ideas:</p>
+
+            <ul>
+              <li><em>Look through the open tickets on our ticket system.</em>
+              <br/>
+              <a
+                href="https://rt.openssl.org/NoAuth/Login.html?user=guest&password=guest">https://rt.openssl.org/NoAuth/Login.html?user=guest&amp;password=guest</a>.
+              Scan old tickets and offer patches, suggestions on how to
+              help fix, or even just point out which ones can be closed.
+              You won't be able to edit anything through this interface,
+              so if you want to give information on a bug (say it's number
+              1234) then send mail to the openssl-dev mailing list, and
+              put this text at the start of the Subject line: "[openssl.org
+              #1234]" followed by your text.  Plaintext (non-HTML) messages
+              are best.  Attachments, such as a proposed patch, are fine.
+              That special subject-line prefix will get your message
+              connected into the ticket log.
+              <p></p></li>
+
+              <li><em>Look through the OpenSSL issues on GitHub.</em>
+              <br/>
+              You can find issues that people have opened at
+              <a
+                href="https://github.com/openssl/openssl/issues">https://github.com/openssl/openssl/issues</a>.
+              Sometimes there are open tickets that can be related, it would
+              be good to cross-reference them (so somebody working on one,
+              sees the other).  Commentary on the issues is also good,
+              particularly when an issue should instead by a bug report
+              (RT ticket).  Open an RT (email to rt@openssl.org) and reference
+              the GitHub issue and then when the ticket is created, update
+              the issue with the ticket number.  Again, the whole point is
+              to tie issues, PR's, and tickets together so that closing one
+              will lead to all the related ones.
+              Even just commenting that you think an issue is important is
+              very useful!
+              <p></p></li>
+
+              <li><em>Look at the pull requests on GitHub.</em>
+              <br/>
+              You can find pull requests -- patches that people have
+              suggested -- at
+              <a
+                href="https://github.com/openssl/openssl/pulls">https://github.com/openssl/openssl/pulls</a>
+              Reviewing and commenting on these is helpful, like with
+              the issues mentioned above.
+              <p></p></li>
+
+              <li><em>Help update the documentation.</em>
+              <br/>
+              The documentation has gotten better, but there are still many
+              API's that are not documented.  Write a POD page, or report
+              bugs in existing pages.  It's probably better to get a whole
+              bunch of minor edits done one once.
+              <p></p></li>
+
+              <li><em>Write some test cases.</em>
+              <br/>
+              Simple stand-alone test programs that exercise various API's
+              are very useful, and can usually be added to our perl-based
+              test framework pretty easily.
+              Tests of the command-line program are also important, and
+              can be handled by the same framework but might require a bit
+              more digging.  We welcome all new test efforts!
+              <p></p></li>
+
+            </ul>
+	    </p>
+	  </div>
+	  <footer>
+	    You are here: <a href="/">Home</a>
+	    : <a href=".">Community</a>
+	    : <a href="">Getting Started</a>
+	    <br/><a href="/sitemap.txt">Sitemap</a>
+	  </footer>
+	</article>
+      </div>
+      <!--#include virtual="sidebar.inc" -->
+    </div>
+  </div>
+<!--#include virtual="/inc/footer.inc" -->
+</body>
+</html>

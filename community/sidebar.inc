@@ -13,6 +13,9 @@
 	  <a href="contacts.html">Contact Us</a>
       </li>
       <li>
+	  <a href="getting-started.html">Getting Started as a Contributor</a>
+      </li>
+      <li>
 	  <a href="thanks.html">Thanks!</a>
       </li>
       <li>
