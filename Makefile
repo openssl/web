@@ -27,6 +27,7 @@ SRCLISTS = \
 	   source/old/1.0.0/index.inc \
 	   source/old/1.0.1/index.inc \
 	   source/old/1.0.2/index.inc \
+	   source/old/1.1.0/index.inc \
 	   source/old/fips/index.inc \
 
 all: $(SIMPLE) $(SRCLISTS) manmaster
@@ -151,6 +152,9 @@ source/old/1.0.1/index.inc: $(wildcard source/old/1.0.1/*.gz)
 	@rm -f $@
 	./bin/mk-filelist source/old/1.0.1 '' '*.gz' >$@
 source/old/1.0.2/index.inc: $(wildcard source/old/1.0.2/*.gz)
+	@rm -f $@
+	./bin/mk-filelist source/old/1.0.2 '' '*.gz' >$@
+source/old/1.1.0/index.inc: $(wildcard source/old/1.1.0/*.gz)
 	@rm -f $@
 	./bin/mk-filelist source/old/1.0.2 '' '*.gz' >$@
 source/old/fips/index.inc: $(wildcard source/old/fips/*.gz)
