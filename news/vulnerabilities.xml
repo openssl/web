@@ -7,6 +7,7 @@
 
 <security updated="20151203">
   <issue public="20150811">
+    <impact severity="Low"/>
     <cve name="2015-1794"/>
     <affects base="1.0.2" version="1.0.2"/>
     <affects base="1.0.2" version="1.0.2a"/>
@@ -25,6 +26,7 @@
   </issue>
   <issue public="20151203">
     <cve name="2015-3193"/>
+    <impact severity="Moderate"/>
     <affects base="1.0.2" version="1.0.2"/>
     <affects base="1.0.2" version="1.0.2a"/>
     <affects base="1.0.2" version="1.0.2b"/>
@@ -51,6 +53,7 @@
   </issue>
   <issue public="20151203">
     <cve name="2015-3194"/>
+    <impact severity="Moderate"/>
     <affects base="1.0.1" version="1.0.1"/>
     <affects base="1.0.1" version="1.0.1a"/>
     <affects base="1.0.1" version="1.0.1b"/>
@@ -90,6 +93,7 @@
   </issue>
   <issue public="20151203">
     <cve name="2015-3195"/>
+    <impact severity="Moderate"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -181,6 +185,7 @@
   </issue>
   <issue public="20151203">
     <cve name="2015-3196"/>
+    <impact severity="Low"/>
     <affects base="1.0.0" version="1.0.0"/>
     <affects base="1.0.0" version="1.0.0a"/>
     <affects base="1.0.0" version="1.0.0b"/>
@@ -237,6 +242,7 @@
 
   <issue public="20150709">
     <cve name="2015-1793"/>
+    <impact severity="High"/>
     <affects base="1.0.1" version="1.0.1n"/>
     <affects base="1.0.1" version="1.0.1o"/>
     <affects base="1.0.2" version="1.0.2b"/>
@@ -316,6 +322,7 @@
 
   <issue public="20150611">
     <cve name="2015-1789"/>
+    <impact severity="Moderate"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -406,6 +413,7 @@
 
   <issue public="20150611">
     <cve name="2015-1790"/>
+    <impact severity="Moderate"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -492,6 +500,7 @@
 
   <issue public="20150611">
     <cve name="2015-1792"/>
+    <impact severity="Moderate"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -576,6 +585,7 @@
 
   <issue public="20150602">
     <cve name="2015-1791"/>
+    <impact severity="Low"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -658,6 +668,7 @@
 
   <issue public="20150611">
     <cve name="2014-8176"/>
+    <impact severity="Moderate"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
