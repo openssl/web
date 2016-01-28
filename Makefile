@@ -43,8 +43,6 @@ endef
 manpages: manmaster
 	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.2-stable,1.0.2)
 	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.1-stable,1.0.1)
-	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.0-stable,1.0.0)
-	$(call makemanpages,$(CHECKOUTS)/openssl-0.9.8-stable,0.9.8)
 
 manmaster:
 	$(call makemanpages,$(CHECKOUTS)/openssl,master)
