@@ -14,7 +14,6 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 docs/faq.inc docs/fips.inc \
 	 news/changelog.inc news/changelog.txt \
 	 news/cl098.txt news/cl100.txt news/cl101.txt news/cl102.txt \
-	 news/openssl-0.9.8-notes.inc news/openssl-1.0.0-notes.inc \
 	 news/openssl-1.0.1-notes.inc news/openssl-1.0.2-notes.inc \
 	 news/openssl-1.1.0-notes.inc \
 	 news/newsflash.inc \
@@ -23,8 +22,6 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 source/license.txt \
 	 source/index.inc
 SRCLISTS = \
-	   source/old/0.9.x/index.inc \
-	   source/old/1.0.0/index.inc \
 	   source/old/1.0.1/index.inc \
 	   source/old/1.0.2/index.inc \
 	   source/old/1.1.0/index.inc \
@@ -69,12 +66,6 @@ news/changelog.inc: news/changelog.txt bin/mk-changelog
 news/changelog.txt: $(SNAP)/CHANGES
 	@rm -f $@
 	cp $? $@
-news/cl098.txt: $(CHECKOUTS)/openssl-0.9.8-stable/CHANGES
-	@rm -f $@
-	cp $? $@
-news/cl100.txt: $(CHECKOUTS)/openssl-1.0.0-stable/CHANGES
-	@rm -f $@
-	cp $? $@
 news/cl101.txt: $(CHECKOUTS)/openssl-1.0.1-stable/CHANGES
 	@rm -f $@
 	cp $? $@
@@ -82,12 +73,6 @@ news/cl102.txt: $(CHECKOUTS)/openssl-1.0.2-stable/CHANGES
 	@rm -f $@
 	cp $? $@
 
-news/openssl-0.9.8-notes.html: news/openssl-notes.html.in
-	@rm -f $@
-	sed -e 's|@VERSION@|0.9.8|g' < $< > $@
-news/openssl-1.0.0-notes.html: news/openssl-notes.html.in
-	@rm -f $@
-	sed -e 's|@VERSION@|1.0.0|g' < $< > $@
 news/openssl-1.0.1-notes.html: news/openssl-notes.html.in
 	@rm -f $@
 	sed -e 's|@VERSION@|1.0.1|g' < $< > $@
@@ -97,12 +82,6 @@ news/openssl-1.0.2-notes.html: news/openssl-notes.html.in
 news/openssl-1.1.0-notes.html: news/openssl-notes.html.in
 	@rm -f $@
 	sed -e 's|@VERSION@|1.1.0|g' < $< > $@
-news/openssl-0.9.8-notes.inc: $(CHECKOUTS)/openssl-0.9.8-stable/NEWS news/openssl-0.9.8-notes.html
-	@rm -f $@
-	./bin/mk-notes 0.9.8 < $(CHECKOUTS)/openssl-0.9.8-stable/NEWS > $@
-news/openssl-1.0.0-notes.inc: $(CHECKOUTS)/openssl-1.0.0-stable/NEWS news/openssl-1.0.0-notes.html
-	@rm -f $@
-	./bin/mk-notes 1.0.0 < $(CHECKOUTS)/openssl-1.0.0-stable/NEWS > $@
 news/openssl-1.0.1-notes.inc: $(CHECKOUTS)/openssl-1.0.1-stable/NEWS news/openssl-1.0.1-notes.html
 	@rm -f $@
 	./bin/mk-notes 1.0.1 < $(CHECKOUTS)/openssl-1.0.1-stable/NEWS > $@
@@ -140,12 +119,6 @@ source/index.inc: $(wildcard $(RELEASEDIR)/openssl-*.tar.gz)
 	@rm -f $@
 	./bin/mk-filelist -a $(RELEASEDIR) '' 'openssl-*.tar.gz' >$@
 
-source/old/0.9.x/index.inc: $(wildcard source/old/0.9.x/*.gz)
-	@rm -f $@
-	./bin/mk-filelist source/old/0.9.x '' '*.gz' >$@
-source/old/1.0.0/index.inc: $(wildcard source/old/1.0.0/*.gz)
-	@rm -f $@
-	./bin/mk-filelist source/old/1.0.0 '' '*.gz' >$@
 source/old/1.0.1/index.inc: $(wildcard source/old/1.0.1/*.gz)
 	@rm -f $@
 	./bin/mk-filelist source/old/1.0.1 '' '*.gz' >$@
@@ -163,6 +136,6 @@ source/old/fips/index.inc: $(wildcard source/old/fips/*.gz)
 # than the tarballs that are moved into their respective directory,
 # we must declare them phony, or they will not be regenerated when
 # they should.
-.PHONY : source/old/0.9.x/index.inc source/old/1.0.0/index.inc \
+.PHONY : \
 	 source/old/1.0.1/index.inc source/old/1.0.2/index.inc \
 	 source/old/fips/index.inc
