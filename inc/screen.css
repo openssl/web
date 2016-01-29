@@ -27,6 +27,10 @@ ol, ul {
   list-style: none;
 }
 
+dd ul {
+    padding: 0.5em;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
