@@ -13,7 +13,7 @@ RELEASEDIR = /var/www/openssl/source
 SIMPLE = newsflash.inc sitemap.txt \
 	 docs/faq.inc docs/fips.inc \
 	 news/changelog.inc news/changelog.txt \
-	 news/cl098.txt news/cl100.txt news/cl101.txt news/cl102.txt \
+	 news/cl101.txt news/cl102.txt \
 	 news/openssl-1.0.1-notes.inc news/openssl-1.0.2-notes.inc \
 	 news/openssl-1.1.0-notes.inc \
 	 news/newsflash.inc \
