@@ -22,6 +22,8 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 source/license.txt \
 	 source/index.inc
 SRCLISTS = \
+	   source/old/0.9.x/index.inc \
+	   source/old/1.0.0/index.inc \
 	   source/old/1.0.1/index.inc \
 	   source/old/1.0.2/index.inc \
 	   source/old/1.1.0/index.inc \
@@ -119,6 +121,12 @@ source/index.inc: $(wildcard $(RELEASEDIR)/openssl-*.tar.gz)
 	@rm -f $@
 	./bin/mk-filelist -a $(RELEASEDIR) '' 'openssl-*.tar.gz' >$@
 
+source/old/0.9.x/index.inc: $(wildcard source/old/0.9.x/*.gz)
+	@rm -f $@
+	./bin/mk-filelist source/old/0.9.x '' '*.gz' >$@
+source/old/1.0.0/index.inc: $(wildcard source/old/1.0.0/*.gz)
+	@rm -f $@
+	./bin/mk-filelist source/old/1.0.0 '' '*.gz' >$@
 source/old/1.0.1/index.inc: $(wildcard source/old/1.0.1/*.gz)
 	@rm -f $@
 	./bin/mk-filelist source/old/1.0.1 '' '*.gz' >$@
