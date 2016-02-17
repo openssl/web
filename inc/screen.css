@@ -27,8 +27,12 @@ ol, ul {
   list-style: none;
 }
 
-dd ul {
+dd {
     padding: 0.5em;
+}
+
+dd ul {
+    padding: 1.0em;
 }
 
 table {
