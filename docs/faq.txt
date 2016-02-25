@@ -114,14 +114,6 @@ that came with the version of OpenSSL you are using. The pod format
 documentation is included in each OpenSSL distribution under the docs
 directory.
 
-There is some documentation about certificate extensions and PKCS#12
-in doc/openssl.txt
-
-The original SSLeay documentation is included in OpenSSL as
-doc/ssleay.txt.  It may be useful when none of the other resources
-help, but please note that it reflects the obsolete version SSLeay
-0.6.6.
-
 
 * How can I contact the OpenSSL developers?
 
