@@ -553,6 +553,7 @@ Do this instead:
     if ((p = BN_new()) == NULL)...
     if (strcmp(a, "FOO") == 0) ...
 
+
                 Chapter 22: Copyright and Contributions
 
 All source files should start with the following text (with appropriate
