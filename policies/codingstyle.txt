@@ -554,6 +554,24 @@ Do this instead:
     if (strcmp(a, "FOO") == 0) ...
 
 
+                Chapter 22: Copyright and Contributions
+
+All source files should start with the following text (with appropriate
+comment characters at the start of each line and the year(s) updated):
+
+    Copyright 20xx-20yy The OpenSSL Project Authors. All Rights Reserved.
+
+    Licensed under the OpenSSL license (the "License").  You may not use
+    this file except in compliance with the License.  You can obtain a copy
+    in the file LICENSE in the source distribution or at
+    https://www.openssl.org/source/license.html
+
+All non-trivial contributions must be covered by a Contributor's Licensing
+Agreement (CLA).  This gives the OpenSSL project the right to distribute
+the contributed code.  For information on the CLAs, see
+https://www.openssl.org/policies/cla.html
+
+
                 Appendix A: References
 
 The C Programming Language, Second Edition

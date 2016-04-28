@@ -7,7 +7,7 @@ OpenSSL  -  Frequently Asked Questions
 * Where is the documentation?
 * How can I contact the OpenSSL developers?
 * Where can I get a compiled version of OpenSSL?
-* Why aren't tools like 'autoconf' and 'libtool' used?
+* Why aren't tools like 'autoconf' and 'libtool' or 'cmake' used?
 * What is an 'engine' version?
 * How do I check the authenticity of the OpenSSL distribution?
 * How does the versioning scheme work?
@@ -114,14 +114,6 @@ that came with the version of OpenSSL you are using. The pod format
 documentation is included in each OpenSSL distribution under the docs
 directory.
 
-There is some documentation about certificate extensions and PKCS#12
-in doc/openssl.txt
-
-The original SSLeay documentation is included in OpenSSL as
-doc/ssleay.txt.  It may be useful when none of the other resources
-help, but please note that it reflects the obsolete version SSLeay
-0.6.6.
-
 
 * How can I contact the OpenSSL developers?
 
@@ -146,10 +138,19 @@ on how to obtain and install the free GNU C compiler.
 A number of Linux and *BSD distributions include OpenSSL.
 
 
-* Why aren't tools like 'autoconf' and 'libtool' used?
+* Why aren't tools like 'autoconf' and 'libtool' or 'cmake' used?
 
-autoconf will probably be used in future OpenSSL versions. If it was
-less Unix-centric, it might have been used much earlier.
+A number of these tools are great and wonderful, but are usually
+centered around one or a few platforms.  'autoconf' and 'libtool' are
+Unix centric.  'cmake' is a bit more widely spread, but not enough to
+cover the platforms we support.
+
+For OpenSSL 1.1, we decided to base our build system on perl,
+information files and build file (Makefile) templates, thereby
+covering all the systems we support.  Perl was the base language of
+choice because we already use it in diverse scripts, and it's one of
+the most widely spread scripting languages.
+
 
 * What is an 'engine' version?
 

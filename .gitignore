@@ -20,7 +20,6 @@ news/openssl-*-notes.inc
 newsflash.inc
 source/*.gz*
 source/*.patch
-source/.htaccess
 source/index.inc
 source/license.txt
 source/old/*/*.patch
