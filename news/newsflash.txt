@@ -4,6 +4,8 @@
 # Format is two fields, colon-separated; the first line is the column
 # headings.  URL paths must all be absolute.
 Date: Item
+03-May-2016: OpenSSL 1.0.2h is now available, including bug and security fixes
+03-May-2016: OpenSSL 1.0.1t is now available, including bug and security fixes
 28-Apr-2016: OpenSSL 1.0.2h and 1.0.1t <a href="https://mta.openssl.org/pipermail/openssl-announce/2016-April/000069.html">security releases due 3rd May 2016</a>
 19-Apr-2016: Beta 2 (pre-release 5) of OpenSSL 1.1.0 is now available: please download and test it
 16-Mar-2016: Beta 1 (pre-release 4) of OpenSSL 1.1.0 is now available: please download and test it

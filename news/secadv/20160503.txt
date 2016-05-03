@@ -1,0 +1,200 @@
+OpenSSL Security Advisory [3rd May 2016]
+========================================
+
+Memory corruption in the ASN.1 encoder (CVE-2016-2108)
+======================================================
+
+Severity: High
+
+This issue affected versions of OpenSSL prior to April 2015. The bug
+causing the vulnerability was fixed on April 18th 2015, and released
+as part of the June 11th 2015 security releases. The security impact
+of the bug was not known at the time.
+
+In previous versions of OpenSSL, ASN.1 encoding the value zero
+represented as a negative integer can cause a buffer underflow
+with an out-of-bounds write in i2c_ASN1_INTEGER. The ASN.1 parser does
+not normally create "negative zeroes" when parsing ASN.1 input, and
+therefore, an attacker cannot trigger this bug.
+
+However, a second, independent bug revealed that the ASN.1 parser
+(specifically, d2i_ASN1_TYPE) can misinterpret a large universal tag
+as a negative zero value. Large universal tags are not present in any
+common ASN.1 structures (such as X509) but are accepted as part of ANY
+structures.
+
+Therefore, if an application deserializes untrusted ASN.1 structures
+containing an ANY field, and later reserializes them, an attacker may
+be able to trigger an out-of-bounds write. This has been shown to
+cause memory corruption that is potentially exploitable with some
+malloc implementations.
+
+Applications that parse and re-encode X509 certificates are known to
+be vulnerable. Applications that verify RSA signatures on X509
+certificates may also be vulnerable; however, only certificates with
+valid signatures trigger ASN.1 re-encoding and hence the
+bug. Specifically, since OpenSSL's default TLS X509 chain verification
+code verifies the certificate chain from root to leaf, TLS handshakes
+could only be targeted with valid certificates issued by trusted
+Certification Authorities.
+
+OpenSSL 1.0.2 users should upgrade to 1.0.2c
+OpenSSL 1.0.1 users should upgrade to 1.0.1o
+
+This vulnerability is a combination of two bugs, neither of which
+individually has security impact. The first bug (mishandling of
+negative zero integers) was reported to OpenSSL by Huzaifa Sidhpurwala
+(Red Hat) and independently by Hanno Böck in April 2015. The second
+issue (mishandling of large universal tags) was found using libFuzzer,
+and reported on the public issue tracker on March 1st 2016. The fact
+that these two issues combined present a security vulnerability was
+reported by David Benjamin (Google) on March 31st 2016. The fixes were
+developed by Steve Henson of the OpenSSL development team, and David
+Benjamin.  The OpenSSL team would also like to thank Mark Brand and
+Ian Beer from the Google Project Zero team for their careful analysis
+of the impact.
+
+The fix for the "negative zero" memory corruption bug can be
+identified by commits
+
+3661bb4e7934668bd99ca777ea8b30eedfafa871 (1.0.2)
+and
+32d3b0f52f77ce86d53f38685336668d47c5bdfe (1.0.1)
+
+Padding oracle in AES-NI CBC MAC check (CVE-2016-2107)
+======================================================
+
+Severity: High
+
+A MITM attacker can use a padding oracle attack to decrypt traffic
+when the connection uses an AES CBC cipher and the server support
+AES-NI.
+
+This issue was introduced as part of the fix for Lucky 13 padding
+attack (CVE-2013-0169). The padding check was rewritten to be in
+constant time by making sure that always the same bytes are read and
+compared against either the MAC or padding bytes. But it no longer
+checked that there was enough data to have both the MAC and padding
+bytes.
+
+OpenSSL 1.0.2 users should upgrade to 1.0.2h
+OpenSSL 1.0.1 users should upgrade to 1.0.1t
+
+This issue was reported to OpenSSL on 13th of April 2016 by Juraj
+Somorovsky using TLS-Attacker. The fix was developed by Kurt Roeckx
+of the OpenSSL development team.
+
+EVP_EncodeUpdate overflow (CVE-2016-2105)
+=========================================
+
+Severity: Low
+
+An overflow can occur in the EVP_EncodeUpdate() function which is used for
+Base64 encoding of binary data. If an attacker is able to supply very large
+amounts of input data then a length check can overflow resulting in a heap
+corruption.
+
+Internally to OpenSSL the EVP_EncodeUpdate() function is primarly used by the
+PEM_write_bio* family of functions. These are mainly used within the OpenSSL
+command line applications. These internal uses are not considered vulnerable
+because all calls are bounded with length checks so no overflow is possible.
+User applications that call these APIs directly with large amounts of untrusted
+data may be vulnerable. (Note: Initial analysis suggested that the
+PEM_write_bio* were vulnerable, and this is reflected in the patch commit
+message. This is no longer believed to be the case).
+
+OpenSSL 1.0.2 users should upgrade to 1.0.2h
+OpenSSL 1.0.1 users should upgrade to 1.0.1t
+
+This issue was reported to OpenSSL on 3rd March 2016 by Guido Vranken. The
+fix was developed by Matt Caswell of the OpenSSL development team.
+
+EVP_EncryptUpdate overflow (CVE-2016-2106)
+==========================================
+
+Severity: Low
+
+An overflow can occur in the EVP_EncryptUpdate() function. If an attacker is
+able to supply very large amounts of input data after a previous call to
+EVP_EncryptUpdate() with a partial block then a length check can overflow
+resulting in a heap corruption. Following an analysis of all OpenSSL internal
+usage of the EVP_EncryptUpdate() function all usage is one of two forms.
+The first form is where the EVP_EncryptUpdate() call is known to be the first
+called function after an EVP_EncryptInit(), and therefore that specific call
+must be safe. The second form is where the length passed to EVP_EncryptUpdate()
+can be seen from the code to be some small value and therefore there is no
+possibility of an overflow. Since all instances are one of these two forms, it
+is believed that there can be no overflows in internal code due to this problem.
+It should be noted that EVP_DecryptUpdate() can call EVP_EncryptUpdate() in
+certain code paths. Also EVP_CipherUpdate() is a synonym for
+EVP_EncryptUpdate(). All instances of these calls have also been analysed too
+and it is believed there are no instances in internal usage where an overflow
+could occur.
+
+This could still represent a security issue for end user code that calls this
+function directly.
+
+OpenSSL 1.0.2 users should upgrade to 1.0.2h
+OpenSSL 1.0.1 users should upgrade to 1.0.1t
+
+This issue was reported to OpenSSL on 3rd March 2016 by Guido Vranken. The
+fix was developed by Matt Caswell of the OpenSSL development team.
+
+ASN.1 BIO excessive memory allocation (CVE-2016-2109)
+=====================================================
+
+Severity: Low
+
+When ASN.1 data is read from a BIO using functions such as d2i_CMS_bio()
+a short invalid encoding can casuse allocation of large amounts of memory
+potentially consuming excessive resources or exhausting memory.
+
+Any application parsing untrusted data through d2i BIO functions is affected.
+The memory based functions such as d2i_X509() are *not* affected. Since the
+memory based functions are used by the TLS library, TLS applications are not
+affected.
+
+OpenSSL 1.0.2 users should upgrade to 1.0.2h
+OpenSSL 1.0.1 users should upgrade to 1.0.1t
+
+This issue was reported to OpenSSL on 4th April 2016 by Brian Carpenter.
+The fix was developed by Stephen Henson of the OpenSSL development team.
+
+EBCDIC overread (CVE-2016-2176)
+===============================
+
+Severity: Low
+
+ASN1 Strings that are over 1024 bytes can cause an overread in applications
+using the X509_NAME_oneline() function on EBCDIC systems. This could result in
+arbitrary stack data being returned in the buffer.
+
+OpenSSL 1.0.2 users should upgrade to 1.0.2h
+OpenSSL 1.0.1 users should upgrade to 1.0.1t
+
+This issue was reported to OpenSSL on 5th March 2016 by Guido Vranken. The
+fix was developed by Matt Caswell of the OpenSSL development team.
+
+Note
+====
+
+As per our previous announcements and our Release Strategy
+(https://www.openssl.org/policies/releasestrat.html), support for OpenSSL
+version 1.0.1 will cease on 31st December 2016. No security updates for that
+version will be provided after that date. Users of 1.0.1 are advised to
+upgrade.
+
+Support for versions 0.9.8 and 1.0.0 ended on 31st December 2015. Those
+versions are no longer receiving security updates.
+
+References
+==========
+
+URL for this Security Advisory:
+https://www.openssl.org/news/secadv/20160503.txt
+
+Note: the online version of the advisory may be updated with additional details
+over time.
+
+For details of OpenSSL severity classifications please see:
+https://www.openssl.org/policies/secpolicy.html
