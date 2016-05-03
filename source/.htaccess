@@ -1,9 +1,9 @@
 RewriteEngine on
 RewriteBase /source
 # First, rewrite all the 'latest' URLs
-RewriteRule ^latest.tar.gz$ openssl-1.0.2g.tar.gz [L,R=302,NC]
-RewriteRule ^openssl-1.0.1-latest.tar.gz$ openssl-1.0.1s.tar.gz [L,R=302,NC]
-RewriteRule ^openssl-1.0.2-latest.tar.gz$ openssl-1.0.2g.tar.gz [L,R=302,NC]
+RewriteRule ^latest.tar.gz$ openssl-1.0.2h.tar.gz [L,R=302,NC]
+RewriteRule ^openssl-1.0.1-latest.tar.gz$ openssl-1.0.1t.tar.gz [L,R=302,NC]
+RewriteRule ^openssl-1.0.2-latest.tar.gz$ openssl-1.0.2h.tar.gz [L,R=302,NC]
 
 # Old distro's are in subdirs.
 RewriteCond %{REQUEST_FILENAME} !-f
