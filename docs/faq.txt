@@ -39,6 +39,7 @@ OpenSSL  -  Frequently Asked Questions
 
 [BUILD] Questions about building and testing OpenSSL
 
+* Why does Clang sanitizer give warnings?
 * Why does the linker complain about undefined symbols?
 * Why does the OpenSSL test fail with "bc: command not found"?
 * Why does the OpenSSL test fail with "bc: 1 no implemented"?
@@ -495,6 +496,11 @@ details and workarounds see:
 
 
 [BUILD] =======================================================================
+
+* Why does Clang sanitizer give warnings?
+
+You need to build with -DPEDANTIC to run sanitized tests, otherwise
+you will get optimized assembler versions of some functions.
 
 * Why does the linker complain about undefined symbols?
 
