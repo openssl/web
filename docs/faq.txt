@@ -162,10 +162,10 @@ so that the special release is no longer necessary.
 
 * How do I check the authenticity of the OpenSSL distribution?
 
-We provide MD5 digests and ASC signatures of each tarball.
-Use MD5 to check that a tarball from a mirror site is identical:
+We provide PGP signatures and a variety of digests on each release.
+For example:
 
-   md5sum TARBALL | awk '{print $1;}' | cmp - TARBALL.md5
+   sha1sum TARBALL | awk '{print $1;}' | cmp - TARBALL.sha1
 
 You can check authenticity using pgp or gpg. You need the OpenSSL team
 member public key used to sign it (download it from a key server, see a
