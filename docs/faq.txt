@@ -163,9 +163,10 @@ so that the special release is no longer necessary.
 * How do I check the authenticity of the OpenSSL distribution?
 
 We provide PGP signatures and a variety of digests on each release.
-For example:
+For example, one of the following might work on your system:
 
    sha1sum TARBALL | awk '{print $1;}' | cmp - TARBALL.sha1
+   sha256sum TARBALL | awk '{print $1;}' | cmp - TARBALL.sha256
 
 You can check authenticity using pgp or gpg. You need the OpenSSL team
 member public key used to sign it (download it from a key server, see a
