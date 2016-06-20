@@ -1,4 +1,5 @@
 RedirectMatch 404 .*/\.git/.*
+ErrorDocument 404 /err404.html
 
 Options +ExecCGI +FollowSymLinks
 
