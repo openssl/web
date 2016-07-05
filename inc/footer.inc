@@ -4,7 +4,7 @@
     Please report problems with this website to webmaster at openssl.org.
   </p>
   <p>
-    Copyright &copy; 2015, OpenSSL Software Foundation.
+    Copyright &copy; 2016, OpenSSL Software Foundation.
   </p>
 </footer>
 <!-- end -->
