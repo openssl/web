@@ -352,7 +352,7 @@ The preferred style for long (multi-line) comments is:
      * with beginning and ending almost-blank lines.
      */
 
-Note the initial hypen to prevent indent from modifying the comment.
+Note the initial hyphen to prevent indent from modifying the comment.
 Use this if the comment has particular formatting that must be preserved.
 
 It's also important to comment data, whether they are basic types or

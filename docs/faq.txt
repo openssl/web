@@ -414,7 +414,7 @@ whatever name they choose.
 
 The ways to print out the oneline format of the DN (Distinguished Name) have
 been extended in version 0.9.7 of OpenSSL. Using the new X509_NAME_print_ex()
-interface, the "-nameopt" option could be introduded. See the manual
+interface, the "-nameopt" option could be introduced. See the manual
 page of the "openssl x509" command line tool for details. The old behaviour
 has however been left as default for the sake of compatibility.
 
@@ -466,7 +466,7 @@ The purpose of this extension is to identify the authority certificate B. This
 can be done either by including the subject key identifier of B or its issuer
 name and serial number.
 
-In this latter case because it is identifying certifcate B it must contain the
+In this latter case because it is identifying certificate B it must contain the
 issuer name and serial number of B.
 
 It is often wrongly assumed that it should contain the subject name of B. If it
