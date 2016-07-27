@@ -10,21 +10,6 @@ Redirect permanent /support/faq.html /docs/faq.html
 Redirect permanent /licenses /policies/cla.html
 Redirect permanent /licenses/ /policies/cla.html
 
-# For those directories without index.html
-# Shut up the "give me a bounty" kiddies.
-Redirect permanent /docs/fips /docs/fips.html
-Redirect permanent /docs/fips/ /docs/fips.html
-Redirect permanent /news/secadv /news/vulnerabilities.html
-Redirect permanent /news/secadv/ /news/vulnerabilities.html
-Redirect permanent inc /index.html
-Redirect permanent inc/ /index.html
-Redirect permanent inc/libs /index.html
-Redirect permanent inc/libs/ /index.html
-Redirect permanent img /index.html
-Redirect permanent img/ /index.html
-Redirect permanent bin /index.html
-Redirect permanent bin/ /index.html
-
 <Files *.md5>
 ForceType application/binary
 </Files>
