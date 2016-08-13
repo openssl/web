@@ -9,6 +9,8 @@ Redirect permanent /licenses/openssl_icla.pdf /policies/openssl_icla.pdf
 Redirect permanent /support/faq.html /docs/faq.html
 Redirect permanent /licenses /policies/cla.html
 Redirect permanent /licenses/ /policies/cla.html
+Redirect permanent  /.well-known/acme-challenge/MX5CvUJNvymcKf22SNORcfjGk4oGQyIWJiBc_johfYo http://dcv.akamai.com/.well-known/acme-challenge/MX5CvUJNvymcKf22SNORcfjGk4oGQyIWJiBc_johfYo
+
 
 <Files *.md5>
 ForceType application/binary
