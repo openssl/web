@@ -40,7 +40,7 @@ RewriteRule ^openssl-(1\.0\.0.*) old/1.0.0/openssl-$1 [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^openssl-(1\.0\.1.*) old/1.0.1/openssl-$1 [L]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^openssl-(1\.0\.2.*) old/1.0.1/openssl-$1 [L]
+RewriteRule ^openssl-(1\.0\.2.*) old/1.0.2/openssl-$1 [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^openssl-(fips.*)  old/fips/openssl-$1 [L]
 
