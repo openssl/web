@@ -22,6 +22,7 @@
 
   <ul class="main-navigation">
     <li><a href="/" title="Home page">Home</a></li>
+    <li><a href="/blog/" title="Team blog">Blog</a></li>
     <li><a href="/source/" title="Source code">Downloads</a></li>
     <li><a href="/docs/" title="FAQ, FIPS, manpages, ...">Docs</a></li>
     <li><a href="/news/" title="Latest information">News</a></li>
