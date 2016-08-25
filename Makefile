@@ -59,7 +59,7 @@ clean:
 newsflash.inc: news/newsflash.inc
 	@rm -f $@
 	head -6 $? >$@
-sitemap.txt:
+sitemap.txt: bin/mk-sitemap
 	@rm -f $@
 	./bin/mk-sitemap >$@
 
@@ -88,13 +88,13 @@ news/openssl-1.0.2-notes.html: news/openssl-notes.html.in
 news/openssl-1.1.0-notes.html: news/openssl-notes.html.in
 	@rm -f $@
 	sed -e 's|@VERSION@|1.1.0|g' < $< > $@
-news/openssl-1.0.1-notes.inc: $(CHECKOUTS)/openssl-1.0.1-stable/NEWS news/openssl-1.0.1-notes.html
+news/openssl-1.0.1-notes.inc: $(CHECKOUTS)/openssl-1.0.1-stable/NEWS news/openssl-1.0.1-notes.html bin/mk-notes
 	@rm -f $@
 	./bin/mk-notes 1.0.1 < $(CHECKOUTS)/openssl-1.0.1-stable/NEWS > $@
-news/openssl-1.0.2-notes.inc: $(CHECKOUTS)/openssl-1.0.2-stable/NEWS news/openssl-1.0.2-notes.html
+news/openssl-1.0.2-notes.inc: $(CHECKOUTS)/openssl-1.0.2-stable/NEWS news/openssl-1.0.2-notes.html bin/mk-notes
 	@rm -f $@
 	./bin/mk-notes 1.0.2 < $(CHECKOUTS)/openssl-1.0.2-stable/NEWS > $@
-news/openssl-1.1.0-notes.inc: $(CHECKOUTS)/openssl-1.1.0-stable/NEWS news/openssl-1.1.0-notes.html
+news/openssl-1.1.0-notes.inc: $(CHECKOUTS)/openssl-1.1.0-stable/NEWS news/openssl-1.1.0-notes.html bin/mk-notes
 	@rm -f $@
 	./bin/mk-notes 1.1.0 < $(CHECKOUTS)/openssl-1.1.0-stable/NEWS > $@
 
@@ -108,39 +108,39 @@ news/vulnerabilities.inc: bin/vulnerabilities.xsl news/vulnerabilities.xml
 	@rm -f $@
 	xsltproc bin/vulnerabilities.xsl news/vulnerabilities.xml >$@
 
-docs/faq.inc: docs/faq.txt
+docs/faq.inc: docs/faq.txt bin/mk-faq
 	@rm -f $@
 	./bin/mk-faq <$? >$@
-docs/fips.inc: $(wildcard docs/fips/*)
+docs/fips.inc: $(wildcard docs/fips/*) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist docs/fips fips/ '*' >$@
 
-source/.htaccess: $(wildcard source/openssl-*.tar.gz)
+source/.htaccess: $(wildcard source/openssl-*.tar.gz) bin/mk-latest
 	@rm -f @?
 	./bin/mk-latest source >$@
 source/license.txt: $(SNAP)/LICENSE
 	@rm -f $@
 	cp $? $@
-source/index.inc: $(wildcard $(RELEASEDIR)/openssl-*.tar.gz)
+source/index.inc: $(wildcard $(RELEASEDIR)/openssl-*.tar.gz) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist -a $(RELEASEDIR) '' 'openssl-*.tar.gz' >$@
 
-source/old/0.9.x/index.inc: $(wildcard source/old/0.9.x/*.gz)
+source/old/0.9.x/index.inc: $(wildcard source/old/0.9.x/*.gz) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist source/old/0.9.x '' '*.gz' >$@
-source/old/1.0.0/index.inc: $(wildcard source/old/1.0.0/*.gz)
+source/old/1.0.0/index.inc: $(wildcard source/old/1.0.0/*.gz) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist source/old/1.0.0 '' '*.gz' >$@
-source/old/1.0.1/index.inc: $(wildcard source/old/1.0.1/*.gz)
+source/old/1.0.1/index.inc: $(wildcard source/old/1.0.1/*.gz) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist source/old/1.0.1 '' '*.gz' >$@
-source/old/1.0.2/index.inc: $(wildcard source/old/1.0.2/*.gz)
+source/old/1.0.2/index.inc: $(wildcard source/old/1.0.2/*.gz) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist source/old/1.0.2 '' '*.gz' >$@
-source/old/1.1.0/index.inc: $(wildcard source/old/1.1.0/*.gz)
+source/old/1.1.0/index.inc: $(wildcard source/old/1.1.0/*.gz) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist source/old/1.1.0 '' '*.gz' >$@
-source/old/fips/index.inc: $(wildcard source/old/fips/*.gz)
+source/old/fips/index.inc: $(wildcard source/old/fips/*.gz) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist source/old/fips '' '*.gz' >$@
 
