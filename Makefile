@@ -40,6 +40,7 @@ define makemanpages
 	./bin/mk-filelist -a docs/man$(2)/ssl '' '*.html' >docs/man$(2)/ssl/index.inc
 endef
 manpages: manmaster
+	$(call makemanpages,$(CHECKOUTS)/openssl-1.1.0-stable,1.1.0)
 	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.2-stable,1.0.2)
 	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.1-stable,1.0.1)
 
@@ -74,6 +75,9 @@ news/cl101.txt: $(CHECKOUTS)/openssl-1.0.1-stable/CHANGES
 news/cl102.txt: $(CHECKOUTS)/openssl-1.0.2-stable/CHANGES
 	@rm -f $@
 	cp $? $@
+news/cl110.txt: $(CHECKOUTS)/openssl-1.1.0-stable/CHANGES
+	@rm -f $@
+	cp $? $@
 
 news/openssl-1.0.1-notes.html: news/openssl-notes.html.in
 	@rm -f $@
@@ -90,9 +94,9 @@ news/openssl-1.0.1-notes.inc: $(CHECKOUTS)/openssl-1.0.1-stable/NEWS news/openss
 news/openssl-1.0.2-notes.inc: $(CHECKOUTS)/openssl-1.0.2-stable/NEWS news/openssl-1.0.2-notes.html
 	@rm -f $@
 	./bin/mk-notes 1.0.2 < $(CHECKOUTS)/openssl-1.0.2-stable/NEWS > $@
-news/openssl-1.1.0-notes.inc: $(CHECKOUTS)/openssl/NEWS news/openssl-1.1.0-notes.html
+news/openssl-1.1.0-notes.inc: $(CHECKOUTS)/openssl-1.1.0-stable/NEWS news/openssl-1.1.0-notes.html
 	@rm -f $@
-	./bin/mk-notes 1.1.0 < $(CHECKOUTS)/openssl/NEWS > $@
+	./bin/mk-notes 1.1.0 < $(CHECKOUTS)/openssl-1.1.0-stable/NEWS > $@
 
 news/newsflash.inc: news/newsflash.txt
 	sed <$? >$@ \
@@ -146,4 +150,4 @@ source/old/fips/index.inc: $(wildcard source/old/fips/*.gz)
 # they should.
 .PHONY : \
 	 source/old/1.0.1/index.inc source/old/1.0.2/index.inc \
-	 source/old/fips/index.inc
+	 source/old/1.1.0/index.inc source/old/fips/index.inc
