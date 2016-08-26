@@ -27,7 +27,7 @@ use Pod::Usage qw(pod2usage);
 
 __PACKAGE__->run(@ARGV);
 
-sub Releases { return (qw(master 1.0.2 1.0.1 1.0.0 0.9.8)); }
+sub Releases { return (qw(master 1.1.0 1.0.2 1.0.1)); }
 sub Sections { return (qw(apps crypto ssl)); }
 
 sub getRelease {
