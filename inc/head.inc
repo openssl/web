@@ -1,5 +1,6 @@
 <!-- head.inc -->
-  <title>OpenSSL</title>
+  <!--#config errmsg="OpenSSL" -->
+  <title><!--#echo var="$TITLE" --></title>
   <meta charset="utf-8">
   <meta name="author" content="OpenSSL Foundation, Inc.">
   <meta name="HandheldFriendly" content="True">
