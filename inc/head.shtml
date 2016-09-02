@@ -1,6 +1,6 @@
 <!-- head.inc -->
   <title>
-  <!--#echo var="DOCUMENT_URI"" -->
+  <!--#echo var="DOCUMENT_URI" -->
   </title>
   <meta charset="utf-8">
   <meta name="author" content="OpenSSL Foundation, Inc.">
