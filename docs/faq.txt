@@ -89,7 +89,7 @@ The current version is available from <URL: https://www.openssl.org>.
 
 In addition to the current stable release, you can also access daily
 snapshots of the OpenSSL development version at <URL:
-ftp://ftp.openssl.org/snapshot/>, or get it by anonymous Git access.
+https://www.openssl.org/source/snapshot/>, or get it by anonymous Git access.
 
 
 * Where is the documentation?
