@@ -1,2 +1,4 @@
-These are daily snapshots of the source tree. They are provided
-for convenience only and not even guaranteed to compile.
+These daily snapshots of the source tree are provided for convenience
+only and not even guaranteed to compile.  Note that keeping a git local
+repository and updating it every 24 hours is equivalent and will often be
+faster and more efficient.
