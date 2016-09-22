@@ -5,7 +5,595 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20160503">
+<security updated="20160922">
+  <issue public="20160922">
+    <impact severity="High"/>
+    <cve name="2016-6304"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <affects base="1.0.1" version="1.0.1k"/>
+    <affects base="1.0.1" version="1.0.1l"/>
+    <affects base="1.0.1" version="1.0.1m"/>
+    <affects base="1.0.1" version="1.0.1n"/>
+    <affects base="1.0.1" version="1.0.1o"/>
+    <affects base="1.0.1" version="1.0.1p"/>
+    <affects base="1.0.1" version="1.0.1q"/>
+    <affects base="1.0.1" version="1.0.1r"/>
+    <affects base="1.0.1" version="1.0.1s"/>
+    <affects base="1.0.1" version="1.0.1t"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+    <fixed base="1.1.0" version="1.1.0a" date="20160922"/>
+
+    <description>
+      A malicious client can send an excessively large OCSP Status Request extension.
+      If that client continually requests renegotiation, sending a large OCSP Status
+      Request extension each time, then there will be unbounded memory growth on the
+      server. This will eventually lead to a Denial Of Service attack through memory
+      exhaustion. Servers with a default configuration are vulnerable even if they do
+      not support OCSP. Builds using the "no-ocsp" build time option are not affected.
+
+      Servers using OpenSSL versions prior to 1.0.1g are not vulnerable in a default
+      configuration, instead only if an application explicitly enables OCSP stapling
+      support.
+    </description>
+    <advisory url="/news/secadv/20160922.txt"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+  </issue>
+  <issue public="20160922">
+    <impact severity="Moderate"/>
+    <cve name="2016-6305"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <fixed base="1.1.0" version="1.1.0a" date="20160922"/>
+
+    <description>
+      OpenSSL 1.1.0 SSL/TLS will hang during a call to SSL_peek() if the peer sends an
+      empty record. This could be exploited by a malicious peer in a Denial Of Service
+      attack.
+    </description>
+    <advisory url="/news/secadv/20160922.txt"/>
+    <reported source="Alex Gaynor"/>
+  </issue>
+  <issue public="20160824">
+    <impact severity="Low"/>
+    <cve name="2016-6303"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <affects base="1.0.1" version="1.0.1k"/>
+    <affects base="1.0.1" version="1.0.1l"/>
+    <affects base="1.0.1" version="1.0.1m"/>
+    <affects base="1.0.1" version="1.0.1n"/>
+    <affects base="1.0.1" version="1.0.1o"/>
+    <affects base="1.0.1" version="1.0.1p"/>
+    <affects base="1.0.1" version="1.0.1q"/>
+    <affects base="1.0.1" version="1.0.1r"/>
+    <affects base="1.0.1" version="1.0.1s"/>
+    <affects base="1.0.1" version="1.0.1t"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+
+    <description>
+      An overflow can occur in MDC2_Update() either if called directly or
+      through the EVP_DigestUpdate() function using MDC2. If an attacker
+      is able to supply very large amounts of input data after a previous
+      call to EVP_EncryptUpdate() with a partial block then a length check
+      can overflow resulting in a heap corruption.
+
+      The amount of data needed is comparable to SIZE_MAX which is impractical
+      on most platforms.
+    </description>
+    <advisory url="/news/secadv/20160922.txt"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+  </issue>
+  <issue public="20160823">
+    <impact severity="Low"/>
+    <cve name="2016-6302"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <affects base="1.0.1" version="1.0.1k"/>
+    <affects base="1.0.1" version="1.0.1l"/>
+    <affects base="1.0.1" version="1.0.1m"/>
+    <affects base="1.0.1" version="1.0.1n"/>
+    <affects base="1.0.1" version="1.0.1o"/>
+    <affects base="1.0.1" version="1.0.1p"/>
+    <affects base="1.0.1" version="1.0.1q"/>
+    <affects base="1.0.1" version="1.0.1r"/>
+    <affects base="1.0.1" version="1.0.1s"/>
+    <affects base="1.0.1" version="1.0.1t"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+
+    <description>
+      If a server uses SHA512 for TLS session ticket HMAC it is vulnerable to a
+      DoS attack where a malformed ticket will result in an OOB read which will
+      ultimately crash.
+
+      The use of SHA512 in TLS session tickets is comparatively rare as it requires
+      a custom server callback and ticket lookup mechanism.
+    </description>
+    <advisory url="/news/secadv/20160922.txt"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+  </issue>
+  <issue public="20160816">
+    <impact severity="Low"/>
+    <cve name="2016-2182"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <affects base="1.0.1" version="1.0.1k"/>
+    <affects base="1.0.1" version="1.0.1l"/>
+    <affects base="1.0.1" version="1.0.1m"/>
+    <affects base="1.0.1" version="1.0.1n"/>
+    <affects base="1.0.1" version="1.0.1o"/>
+    <affects base="1.0.1" version="1.0.1p"/>
+    <affects base="1.0.1" version="1.0.1q"/>
+    <affects base="1.0.1" version="1.0.1r"/>
+    <affects base="1.0.1" version="1.0.1s"/>
+    <affects base="1.0.1" version="1.0.1t"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+
+    <description>
+      The function BN_bn2dec() does not check the return value of BN_div_word().
+      This can cause an OOB write if an application uses this function with an
+      overly large BIGNUM. This could be a problem if an overly large certificate
+      or CRL is printed out from an untrusted source. TLS is not affected because
+      record limits will reject an oversized certificate before it is parsed.
+    </description>
+    <advisory url="/news/secadv/20160922.txt"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+  </issue>
+  <issue public="20160722">
+    <impact severity="Low"/>
+    <cve name="2016-2180"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <affects base="1.0.1" version="1.0.1k"/>
+    <affects base="1.0.1" version="1.0.1l"/>
+    <affects base="1.0.1" version="1.0.1m"/>
+    <affects base="1.0.1" version="1.0.1n"/>
+    <affects base="1.0.1" version="1.0.1o"/>
+    <affects base="1.0.1" version="1.0.1p"/>
+    <affects base="1.0.1" version="1.0.1q"/>
+    <affects base="1.0.1" version="1.0.1r"/>
+    <affects base="1.0.1" version="1.0.1s"/>
+    <affects base="1.0.1" version="1.0.1t"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+
+    <description>
+      The function TS_OBJ_print_bio() misuses OBJ_obj2txt(): the return value is
+      the total length the OID text representation would use and not the amount
+      of data written. This will result in OOB reads when large OIDs are presented.
+    </description>
+    <advisory url="/news/secadv/20160922.txt"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+  </issue>
+  <issue public="20160601">
+    <impact severity="Low"/>
+    <cve name="2016-2177"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <affects base="1.0.1" version="1.0.1k"/>
+    <affects base="1.0.1" version="1.0.1l"/>
+    <affects base="1.0.1" version="1.0.1m"/>
+    <affects base="1.0.1" version="1.0.1n"/>
+    <affects base="1.0.1" version="1.0.1o"/>
+    <affects base="1.0.1" version="1.0.1p"/>
+    <affects base="1.0.1" version="1.0.1q"/>
+    <affects base="1.0.1" version="1.0.1r"/>
+    <affects base="1.0.1" version="1.0.1s"/>
+    <affects base="1.0.1" version="1.0.1t"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+
+    <description>
+        Avoid some undefined pointer arithmetic
+
+        A common idiom in the codebase is to check limits in the following manner:
+        "p + len &gt; limit"
+
+        Where "p" points to some malloc'd data of SIZE bytes and
+        limit == p + SIZE
+
+        "len" here could be from some externally supplied data (e.g. from a TLS
+        message).
+
+        The rules of C pointer arithmetic are such that "p + len" is only well
+        defined where len &lt;= SIZE. Therefore the above idiom is actually
+        undefined behaviour.
+
+        For example this could cause problems if some malloc implementation
+        provides an address for "p" such that "p + len" actually overflows for
+        values of len that are too big and therefore p + len &lt; limit.
+    </description>
+    <advisory url="/news/secadv/20160922.txt"/>
+    <reported source="Guido Vranken"/>
+  </issue>
+  <issue public="20160607">
+    <impact severity="Low"/>
+    <cve name="2016-2178"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <affects base="1.0.1" version="1.0.1k"/>
+    <affects base="1.0.1" version="1.0.1l"/>
+    <affects base="1.0.1" version="1.0.1m"/>
+    <affects base="1.0.1" version="1.0.1n"/>
+    <affects base="1.0.1" version="1.0.1o"/>
+    <affects base="1.0.1" version="1.0.1p"/>
+    <affects base="1.0.1" version="1.0.1q"/>
+    <affects base="1.0.1" version="1.0.1r"/>
+    <affects base="1.0.1" version="1.0.1s"/>
+    <affects base="1.0.1" version="1.0.1t"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+
+    <description>
+      Operations in the DSA signing algorithm should run in constant time in order to
+      avoid side channel attacks. A flaw in the OpenSSL DSA implementation means that
+      a non-constant time codepath is followed for certain operations. This has been
+      demonstrated through a cache-timing attack to be sufficient for an attacker to
+      recover the private DSA key.
+    </description>
+    <advisory url="/news/secadv/20160922.txt"/>
+    <reported source="César Pereida (Aalto University), Billy Brumley (Tampere University of Technology), and Yuval Yarom (The University of Adelaide and NICTA)"/>
+  </issue>
+  <issue public="20160822">
+    <impact severity="Low"/>
+    <cve name="2016-2179"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <affects base="1.0.1" version="1.0.1k"/>
+    <affects base="1.0.1" version="1.0.1l"/>
+    <affects base="1.0.1" version="1.0.1m"/>
+    <affects base="1.0.1" version="1.0.1n"/>
+    <affects base="1.0.1" version="1.0.1o"/>
+    <affects base="1.0.1" version="1.0.1p"/>
+    <affects base="1.0.1" version="1.0.1q"/>
+    <affects base="1.0.1" version="1.0.1r"/>
+    <affects base="1.0.1" version="1.0.1s"/>
+    <affects base="1.0.1" version="1.0.1t"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+
+    <description>
+      In a DTLS connection where handshake messages are delivered out-of-order those
+      messages that OpenSSL is not yet ready to process will be buffered for later
+      use. Under certain circumstances, a flaw in the logic means that those messages
+      do not get removed from the buffer even though the handshake has been completed.
+      An attacker could force up to approx. 15 messages to remain in the buffer when
+      they are no longer required. These messages will be cleared when the DTLS
+      connection is closed. The default maximum size for a message is 100k. Therefore
+      the attacker could force an additional 1500k to be consumed per connection. By
+      opening many simulataneous connections an attacker could cause a DoS attack
+      through memory exhaustion.
+    </description>
+    <advisory url="/news/secadv/20160922.txt"/>
+    <reported source="Quan Luo"/>
+  </issue>
+  <issue public="20160819">
+    <impact severity="Low"/>
+    <cve name="2016-2181"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <affects base="1.0.1" version="1.0.1k"/>
+    <affects base="1.0.1" version="1.0.1l"/>
+    <affects base="1.0.1" version="1.0.1m"/>
+    <affects base="1.0.1" version="1.0.1n"/>
+    <affects base="1.0.1" version="1.0.1o"/>
+    <affects base="1.0.1" version="1.0.1p"/>
+    <affects base="1.0.1" version="1.0.1q"/>
+    <affects base="1.0.1" version="1.0.1r"/>
+    <affects base="1.0.1" version="1.0.1s"/>
+    <affects base="1.0.1" version="1.0.1t"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+
+    <description>
+      A flaw in the DTLS replay attack protection mechanism means that records that
+      arrive for future epochs update the replay protection "window" before the MAC
+      for the record has been validated. This could be exploited by an attacker by
+      sending a record for the next epoch (which does not have to decrypt or have a
+      valid MAC), with a very large sequence number. This means that all subsequent
+      legitimate packets are dropped causing a denial of service for a specific
+      DTLS connection.
+    </description>
+    <advisory url="/news/secadv/20160922.txt"/>
+    <reported source="OCAP audit team"/>
+  </issue>
+  <issue public="20160921">
+    <impact severity="Low"/>
+    <cve name="2016-6306"/>
+    <affects base="1.0.1" version="1.0.1"/>
+    <affects base="1.0.1" version="1.0.1a"/>
+    <affects base="1.0.1" version="1.0.1b"/>
+    <affects base="1.0.1" version="1.0.1c"/>
+    <affects base="1.0.1" version="1.0.1d"/>
+    <affects base="1.0.1" version="1.0.1e"/>
+    <affects base="1.0.1" version="1.0.1f"/>
+    <affects base="1.0.1" version="1.0.1g"/>
+    <affects base="1.0.1" version="1.0.1h"/>
+    <affects base="1.0.1" version="1.0.1i"/>
+    <affects base="1.0.1" version="1.0.1j"/>
+    <affects base="1.0.1" version="1.0.1k"/>
+    <affects base="1.0.1" version="1.0.1l"/>
+    <affects base="1.0.1" version="1.0.1m"/>
+    <affects base="1.0.1" version="1.0.1n"/>
+    <affects base="1.0.1" version="1.0.1o"/>
+    <affects base="1.0.1" version="1.0.1p"/>
+    <affects base="1.0.1" version="1.0.1q"/>
+    <affects base="1.0.1" version="1.0.1r"/>
+    <affects base="1.0.1" version="1.0.1s"/>
+    <affects base="1.0.1" version="1.0.1t"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+    <description>
+      In OpenSSL 1.0.2 and earlier some missing message length checks can result in
+      OOB reads of up to 2 bytes beyond an allocated buffer. There is a theoretical
+      DoS risk but this has not been observed in practice on common platforms.
+
+      The messages affected are client certificate, client certificate request and
+      server certificate. As a result the attack can only be performed against
+      a client or a server which enables client authentication.
+    </description>
+    <advisory url="/news/secadv/20160922.txt"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+  </issue>
+  <issue public="20160921">
+    <impact severity="Low"/>
+    <cve name="2016-6307"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <fixed base="1.1.0" version="1.1.0a" date="20160922"/>
+
+    <description>
+      A TLS message includes 3 bytes for its length in the header for the message.
+      This would allow for messages up to 16Mb in length. Messages of this length are
+      excessive and OpenSSL includes a check to ensure that a peer is sending
+      reasonably sized messages in order to avoid too much memory being consumed to
+      service a connection. A flaw in the logic of version 1.1.0 means that memory for
+      the message is allocated too early, prior to the excessive message length
+      check. Due to way memory is allocated in OpenSSL this could mean an attacker
+      could force up to 21Mb to be allocated to service a connection. This could lead
+      to a Denial of Service through memory exhaustion. However, the excessive message
+      length check still takes place, and this would cause the connection to
+      immediately fail. Assuming that the application calls SSL_free() on the failed
+      conneciton in a timely manner then the 21Mb of allocated memory will then be
+      immediately freed again. Therefore the excessive memory allocation will be
+      transitory in nature. This then means that there is only a security impact if:
+
+      1) The application does not call SSL_free() in a timely manner in the
+      event that the connection fails
+      or
+      2) The application is working in a constrained environment where there
+      is very little free memory
+      or
+      3) The attacker initiates multiple connection attempts such that there
+      are multiple connections in a state where memory has been allocated for
+      the connection; SSL_free() has not yet been called; and there is
+      insufficient memory to service the multiple requests.
+
+      Except in the instance of (1) above any Denial Of Service is likely to
+      be transitory because as soon as the connection fails the memory is
+      subsequently freed again in the SSL_free() call. However there is an
+      increased risk during this period of application crashes due to the lack
+      of memory - which would then mean a more serious Denial of Service.
+    </description>
+    <advisory url="/news/secadv/20160922.txt"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+  </issue>
+  <issue public="20160921">
+    <impact severity="Low"/>
+    <cve name="2016-6308"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <fixed base="1.1.0" version="1.1.0a" date="20160922"/>
+
+    <description>
+      A DTLS message includes 3 bytes for its length in the header for the message.
+      This would allow for messages up to 16Mb in length. Messages of this length are
+      excessive and OpenSSL includes a check to ensure that a peer is sending
+      reasonably sized messages in order to avoid too much memory being consumed to
+      service a connection. A flaw in the logic of version 1.1.0 means that memory for
+      the message is allocated too early, prior to the excessive message length
+      check. Due to way memory is allocated in OpenSSL this could mean an attacker
+      could force up to 21Mb to be allocated to service a connection. This could lead
+      to a Denial of Service through memory exhaustion. However, the excessive message
+      length check still takes place, and this would cause the connection to
+      immediately fail. Assuming that the application calls SSL_free() on the failed
+      conneciton in a timely manner then the 21Mb of allocated memory will then be
+      immediately freed again. Therefore the excessive memory allocation will be
+      transitory in nature. This then means that there is only a security impact if:
+
+      1) The application does not call SSL_free() in a timely manner in the
+      event that the connection fails
+      or
+      2) The application is working in a constrained environment where there
+      is very little free memory
+      or
+      3) The attacker initiates multiple connection attempts such that there
+      are multiple connections in a state where memory has been allocated for
+      the connection; SSL_free() has not yet been called; and there is
+      insufficient memory to service the multiple requests.
+
+      Except in the instance of (1) above any Denial Of Service is likely to
+      be transitory because as soon as the connection fails the memory is
+      subsequently freed again in the SSL_free() call. However there is an
+      increased risk during this period of application crashes due to the lack
+      of memory - which would then mean a more serious Denial of Service.
+    </description>
+    <advisory url="/news/secadv/20160922.txt"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+  </issue>
   <issue public="20160503">
     <impact severity="High"/>
     <cve name="2016-2108"/>
