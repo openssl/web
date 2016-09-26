@@ -1,0 +1,60 @@
+
+OpenSSL Security Advisory [26 Sep 2016]
+========================================
+
+This security update addresses issues that were caused by patches
+included in our previous security update, released on 22nd September
+2016.  Given the Critical severity of one of these flaws we have
+chosen to release this advisory immediately to prevent upgrades to the
+affected version, rather than delaying in order to provide our usual
+public pre-notification.
+
+
+Fix Use After Free for large message sizes (CVE-2016-6309)
+==========================================================
+
+Severity: Critical
+
+This issue only affects OpenSSL 1.1.0a, released on 22nd September 2016.
+
+The patch applied to address CVE-2016-6307 resulted in an issue where if a
+message larger than approx 16k is received then the underlying buffer to store
+the incoming message is reallocated and moved. Unfortunately a dangling pointer
+to the old location is left which results in an attempt to write to the
+previously freed location. This is likely to result in a crash, however it
+could potentially lead to execution of arbitrary code.
+
+OpenSSL 1.1.0 users should upgrade to 1.1.0b
+
+This issue was reported to OpenSSL on 23rd September 2016 by Robert
+Święcki (Google Security Team), and was found using honggfuzz. The fix
+was developed by Matt Caswell of the OpenSSL development team.
+
+Missing CRL sanity check (CVE-2016-7052)
+========================================
+
+Severity: Moderate
+
+This issue only affects OpenSSL 1.0.2i, released on 22nd September 2016.
+
+A bug fix which included a CRL sanity check was added to OpenSSL 1.1.0
+but was omitted from OpenSSL 1.0.2i. As a result any attempt to use
+CRLs in OpenSSL 1.0.2i will crash with a null pointer exception.
+
+OpenSSL 1.0.2i users should upgrade to 1.0.2j
+
+The issue was reported to OpenSSL on 22nd September 2016 by Bruce Stephens and
+Thomas Jakobi. The fix was developed by Matt Caswell of the OpenSSL development
+team.
+
+References
+==========
+
+URL for this Security Advisory:
+https://www.openssl.org/news/secadv/20160926.txt
+
+Note: the online version of the advisory may be updated with additional details
+over time.
+
+For details of OpenSSL severity classifications please see:
+https://www.openssl.org/policies/secpolicy.html

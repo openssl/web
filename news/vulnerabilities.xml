@@ -5,7 +5,42 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20160922">
+<security updated="20160926">
+  <issue public="20160926">
+    <impact severity="Critical"/>
+    <cve name="2016-6309"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <fixed base="1.1.0" version="1.1.0b" date="20160926"/>
+
+    <description>
+      This issue only affects OpenSSL 1.1.0a, released on 22nd September 2016.
+
+      The patch applied to address CVE-2016-6307 resulted in an issue where if a
+      message larger than approx 16k is received then the underlying buffer to store
+      the incoming message is reallocated and moved. Unfortunately a dangling pointer
+      to the old location is left which results in an attempt to write to the
+      previously freed location. This is likely to result in a crash, however it
+      could potentially lead to execution of arbitrary code.
+    </description>
+    <advisory url="/news/secadv/20160926.txt"/>
+    <reported source="Robert Święcki (Google Security Team)"/>
+  </issue>
+  <issue public="20160926">
+    <impact severity="Moderate"/>
+    <cve name="2016-7052"/>
+    <affects base="1.0.2" version="1.0.2i"/>
+    <fixed base="1.0.2" version="1.0.2j" date="20160926"/>
+
+    <description>
+      This issue only affects OpenSSL 1.0.2i, released on 22nd September 2016.
+
+      A bug fix which included a CRL sanity check was added to OpenSSL 1.1.0
+      but was omitted from OpenSSL 1.0.2i. As a result any attempt to use
+      CRLs in OpenSSL 1.0.2i will crash with a null pointer exception.
+    </description>
+    <advisory url="/news/secadv/20160926.txt"/>
+    <reported source="Bruce Stephens and Thomas Jakobi"/>
+  </issue>
   <issue public="20160922">
     <impact severity="High"/>
     <cve name="2016-6304"/>
