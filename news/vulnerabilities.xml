@@ -23,7 +23,7 @@
       could potentially lead to execution of arbitrary code.
     </description>
     <advisory url="/news/secadv/20160926.txt"/>
-    <reported source="Robert Święcki (Google Security Team)"/>
+    <reported source="Robert Święcki (Google Security Team)" date="20160923"/>
   </issue>
   <issue public="20160926">
     <impact severity="Moderate"/>
@@ -39,7 +39,7 @@
       CRLs in OpenSSL 1.0.2i will crash with a null pointer exception.
     </description>
     <advisory url="/news/secadv/20160926.txt"/>
-    <reported source="Bruce Stephens and Thomas Jakobi"/>
+    <reported source="Bruce Stephens and Thomas Jakobi" date="20160922"/>
   </issue>
   <issue public="20160922">
     <impact severity="High"/>
@@ -92,7 +92,7 @@
       support.
     </description>
     <advisory url="/news/secadv/20160922.txt"/>
-    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)" date="20160829"/>
   </issue>
   <issue public="20160922">
     <impact severity="Moderate"/>
@@ -106,7 +106,7 @@
       attack.
     </description>
     <advisory url="/news/secadv/20160922.txt"/>
-    <reported source="Alex Gaynor"/>
+    <reported source="Alex Gaynor" date="20160910"/>
   </issue>
   <issue public="20160824">
     <impact severity="Low"/>
@@ -155,7 +155,7 @@
       on most platforms.
     </description>
     <advisory url="/news/secadv/20160922.txt"/>
-    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)" date="20160811"/>
   </issue>
   <issue public="20160823">
     <impact severity="Low"/>
@@ -202,7 +202,7 @@
       a custom server callback and ticket lookup mechanism.
     </description>
     <advisory url="/news/secadv/20160922.txt"/>
-    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)" date="20160819"/>
   </issue>
   <issue public="20160816">
     <impact severity="Low"/>
@@ -248,7 +248,7 @@
       record limits will reject an oversized certificate before it is parsed.
     </description>
     <advisory url="/news/secadv/20160922.txt"/>
-    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)" date="20160802"/>
   </issue>
   <issue public="20160722">
     <impact severity="Low"/>
@@ -292,7 +292,7 @@
       of data written. This will result in OOB reads when large OIDs are presented.
     </description>
     <advisory url="/news/secadv/20160922.txt"/>
-    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)" date="20160721"/>
   </issue>
   <issue public="20160601">
     <impact severity="Low"/>
@@ -351,7 +351,7 @@
         values of len that are too big and therefore p + len &lt; limit.
     </description>
     <advisory url="/news/secadv/20160922.txt"/>
-    <reported source="Guido Vranken"/>
+    <reported source="Guido Vranken" date="20160504"/>
   </issue>
   <issue public="20160607">
     <impact severity="Low"/>
@@ -397,7 +397,7 @@
       recover the private DSA key.
     </description>
     <advisory url="/news/secadv/20160922.txt"/>
-    <reported source="César Pereida (Aalto University), Billy Brumley (Tampere University of Technology), and Yuval Yarom (The University of Adelaide and NICTA)"/>
+    <reported source="César Pereida (Aalto University), Billy Brumley (Tampere University of Technology), and Yuval Yarom (The University of Adelaide and NICTA)" date="20160523"/>
   </issue>
   <issue public="20160822">
     <impact severity="Low"/>
@@ -448,7 +448,7 @@
       through memory exhaustion.
     </description>
     <advisory url="/news/secadv/20160922.txt"/>
-    <reported source="Quan Luo"/>
+    <reported source="Quan Luo" date="20160622"/>
   </issue>
   <issue public="20160819">
     <impact severity="Low"/>
@@ -496,7 +496,7 @@
       DTLS connection.
     </description>
     <advisory url="/news/secadv/20160922.txt"/>
-    <reported source="OCAP audit team"/>
+    <reported source="OCAP audit team" date="20151121"/>
   </issue>
   <issue public="20160921">
     <impact severity="Low"/>
@@ -543,7 +543,7 @@
       a client or a server which enables client authentication.
     </description>
     <advisory url="/news/secadv/20160922.txt"/>
-    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)" date="20160822"/>
   </issue>
   <issue public="20160921">
     <impact severity="Low"/>
@@ -585,7 +585,7 @@
       of memory - which would then mean a more serious Denial of Service.
     </description>
     <advisory url="/news/secadv/20160922.txt"/>
-    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)" date="20160818"/>
   </issue>
   <issue public="20160921">
     <impact severity="Low"/>
@@ -627,7 +627,7 @@
       of memory - which would then mean a more serious Denial of Service.
     </description>
     <advisory url="/news/secadv/20160922.txt"/>
-    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)"/>
+    <reported source="Shi Lei (Gear Team, Qihoo 360 Inc.)" date="20160818"/>
   </issue>
   <issue public="20160503">
     <impact severity="High"/>
@@ -687,7 +687,7 @@
       Certification Authorities.
     </description>
     <advisory url="/news/secadv/20160503.txt"/>
-    <reported source="Huzaifa Sidhpurwala (Red Hat), Hanno Böck, David Benjamin (Google)"/>
+    <reported source="Huzaifa Sidhpurwala (Red Hat), Hanno Böck, David Benjamin (Google)" date="20160331"/>
   </issue>
   <issue public="20160503">
     <impact severity="High"/>
@@ -736,7 +736,7 @@
       bytes.
     </description>
     <advisory url="/news/secadv/20160503.txt"/>
-    <reported source="Juraj Somorovsky"/>
+    <reported source="Juraj Somorovsky" date="20160413"/>
   </issue>
   <issue public="20160503">
     <impact severity="Low"/>
@@ -788,7 +788,7 @@
       message. This is no longer believed to be the case).
     </description>
     <advisory url="/news/secadv/20160503.txt"/>
-    <reported source="Guido Vranken"/>
+    <reported source="Guido Vranken" date="20160303"/>
   </issue>
   <issue public="20160503">
     <impact severity="Low"/>
@@ -846,7 +846,7 @@
       this function directly.
     </description>
     <advisory url="/news/secadv/20160503.txt"/>
-    <reported source="Guido Vranken"/>
+    <reported source="Guido Vranken" date="20160303"/>
   </issue>
   <issue public="20160503">
     <impact severity="Low"/>
@@ -893,7 +893,7 @@
       TLS applications are not affected.
     </description>
     <advisory url="/news/secadv/20160503.txt"/>
-    <reported source="Brian Carpenter"/>
+    <reported source="Brian Carpenter" date="20160404"/>
   </issue>
   <issue public="20160503">
     <impact severity="Low"/>
@@ -935,7 +935,7 @@
       This could result in arbitrary stack data being returned in the buffer.
     </description>
     <advisory url="/news/secadv/20160503.txt"/>
-    <reported source="Guido Vranken"/>
+    <reported source="Guido Vranken" date="20160305"/>
   </issue>
   <issue public="20160301">
     <impact severity="High"/>
@@ -1014,7 +1014,7 @@
       not provide any "EXPORT" or "LOW" strength ciphers.
     </description>
     <advisory url="/news/secadv/20160301.txt"/>
-    <reported source="Nimrod Aviram and Sebastian Schinzel"/>
+    <reported source="Nimrod Aviram and Sebastian Schinzel" date="20151229"/>
   </issue>
   <issue public="20160301">
     <impact severity="Low"/>
@@ -1055,7 +1055,7 @@
       rare.
     </description>
     <advisory url="/news/secadv/20160301.txt"/>
-    <reported source="Adam Langley (Google/BoringSSL)"/>
+    <reported source="Adam Langley (Google/BoringSSL)" date="20160207"/>
   </issue>
   <issue public="20160301">
     <impact severity="Low"/>
@@ -1112,7 +1112,7 @@
       constant time.
     </description>
     <advisory url="/news/secadv/20160301.txt"/>
-    <reported source="OpenSSL"/>
+    <reported source="Emilia Käsper (OpenSSL)" date="20160223"/>
   </issue>
   <issue public="20160301">
     <impact severity="Low"/>
@@ -1165,7 +1165,7 @@
       also anticipated to be rare.
     </description>
     <advisory url="/news/secadv/20160301.txt"/>
-    <reported source="Guido Vranken"/>
+    <reported source="Guido Vranken" date="20160219"/>
   </issue>
   <issue public="20160301">
     <impact severity="Low"/>
@@ -1224,7 +1224,7 @@
       trigger these issues because of message size limits enforced within libssl.
     </description>
     <advisory url="/news/secadv/20160301.txt"/>
-    <reported source="Guido Vranken"/>
+    <reported source="Guido Vranken" date="20160223"/>
   </issue>
   <issue public="20160301">
     <impact severity="Low"/>
@@ -1266,7 +1266,7 @@
       the victim thread which is performing decryptions.
     </description>
     <advisory url="/news/secadv/20160301.txt"/>
-    <reported source="Yuval Yarom, The University of Adelaide and NICTA, Daniel Genkin, Technion and Tel Aviv University, and Nadia Heninger, University of Pennsylvania"/>
+    <reported source="Yuval Yarom, The University of Adelaide and NICTA, Daniel Genkin, Technion and Tel Aviv University, and Nadia Heninger, University of Pennsylvania" date="20160108"/>
   </issue>
   <issue public="20160301">
     <impact severity="High"/>
@@ -1355,7 +1355,7 @@
       computation.
     </description>
     <advisory url="/news/secadv/20160301.txt"/>
-    <reported source="David Adrian and J.Alex Halderman (University of Michigan)"/>
+    <reported source="David Adrian and J.Alex Halderman (University of Michigan)" date="20160210"/>
   </issue>
   <issue public="20160301">
     <impact severity="Moderate"/>
@@ -1438,7 +1438,7 @@
       the DROWN attack.
     </description>
     <advisory url="/news/secadv/20160301.txt"/>
-    <reported source="David Adrian and J.Alex Halderman (University of Michigan)"/>
+    <reported source="David Adrian and J.Alex Halderman (University of Michigan)" date="20160210"/>
   </issue>
   <issue public="20160128">
     <impact severity="High"/>
@@ -1500,7 +1500,7 @@
       and cannot be disabled. This could have some performance impact.
     </description>
     <advisory url="/news/secadv/20160128.txt"/>
-    <reported source="Antonio Sanso (Adobe)"/>
+    <reported source="Antonio Sanso (Adobe)" date="20160112"/>
   </issue>
   <issue public="20160128">
     <impact severity="Low"/>
@@ -1539,7 +1539,7 @@
       SSL_OP_NO_SSLv2.
     </description>
     <advisory url="/news/secadv/20160128.txt"/>
-    <reported source="Nimrod Aviram and Sebastian Schinzel"/>
+    <reported source="Nimrod Aviram and Sebastian Schinzel" date="20151226"/>
   </issue>
   <issue public="20150811">
     <impact severity="Low"/>
