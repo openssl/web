@@ -90,9 +90,18 @@
     </dt>
     <dd>
       <xsl:copy-of select="string(description)"/>
-      <xsl:if test="reported/@source">
-	Reported by <xsl:value-of select="reported/@source"/>.
-      </xsl:if>
+      <xsl:for-each select="reported">      
+        <xsl:if test="@source">
+          Reported by <xsl:value-of select="@source"/>
+          <xsl:if test="@date">
+            <xsl:text> on </xsl:text>
+            <xsl:call-template name="dateformat">
+              <xsl:with-param name="date" select="@date"/>
+            </xsl:call-template>
+          </xsl:if>
+          <xsl:text>.</xsl:text>
+        </xsl:if>
+      </xsl:for-each>
       <ul>
 	<xsl:for-each select="fixed">
 	  <li>Fixed in OpenSSL  
