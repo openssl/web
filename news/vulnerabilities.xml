@@ -1557,7 +1557,7 @@
       of service attack.
     </description>
     <advisory url="/news/secadv/20151203.txt"/>
-    <reported source="Guy Leaver (Cisco)"/>
+    <reported source="Guy Leaver (Cisco)" date="20150803"/>
   </issue>
   <issue public="20151203">
     <cve name="2015-3193"/>
@@ -1584,7 +1584,7 @@
       default in OpenSSL DHE based SSL/TLS ciphersuites.
     </description>
     <advisory url="/news/secadv/20151203.txt"/>
-    <reported source="Hanno Böck"/>
+    <reported source="Hanno Böck" date="20150813"/>
   </issue>
   <issue public="20151203">
     <cve name="2015-3194"/>
@@ -1624,7 +1624,7 @@
       servers which enable client authentication.
     </description>
     <advisory url="/news/secadv/20151203.txt"/>
-    <reported source="Loïc Jonas Etienne (Qnective AG)"/>
+    <reported source="Loïc Jonas Etienne (Qnective AG)" date="20150827"/>
   </issue>
   <issue public="20151203">
     <cve name="2015-3195"/>
@@ -1716,7 +1716,7 @@
       SSL/TLS is not affected.
     </description>
     <advisory url="/news/secadv/20151203.txt"/>
-    <reported source="Adam Langley (Google/BoringSSL) using libFuzzer"/>
+    <reported source="Adam Langley (Google/BoringSSL) using libFuzzer" date="20151109"/>
   </issue>
   <issue public="20151203">
     <cve name="2015-3196"/>
@@ -1793,7 +1793,7 @@
       "issue" an invalid certificate.
     </description>
     <advisory url="/news/secadv/20150709.txt"/>
-    <reported source="Adam Langley and David Benjamin (Google/BoringSSL)"/>
+    <reported source="Adam Langley and David Benjamin (Google/BoringSSL)" date="20150624"/>
   </issue>
   <issue public="20150611">
     <cve name="2015-1788"/>
@@ -1852,7 +1852,7 @@
       client authentication enabled.
     </description>
     <advisory url="/news/secadv/20150611.txt"/>
-    <reported source="Joseph Birr-Pixton"/>
+    <reported source="Joseph Birr-Pixton" date="20150406"/>
   </issue>
 
   <issue public="20150611">
@@ -1943,7 +1943,8 @@
       callbacks.
     </description>
     <advisory url="/news/secadv/20150611.txt"/>
-    <reported source="Robert Swiecki (Google) and (independently) Hanno Böck"/>
+    <reported source="Robert Święcki (Google Security Team)" date="20150408"/>
+    <reported source="Hanno Böck" date="20150411"/>    
   </issue>
 
   <issue public="20150611">
@@ -2030,7 +2031,7 @@
       servers are not affected.
     </description>
     <advisory url="/news/secadv/20150611.txt"/>
-    <reported source="Michal Zalewski (Google)"/>
+    <reported source="Michal Zalewski (Google)" date="20150418"/>
   </issue>
 
   <issue public="20150611">
@@ -2115,7 +2116,7 @@
       verifies signedData messages using the CMS code.
     </description>
     <advisory url="/news/secadv/20150611.txt"/>
-    <reported source="Johannes Bauer"/>
+    <reported source="Johannes Bauer" date="20150331"/>
   </issue>
 
   <issue public="20150602">
@@ -2263,7 +2264,7 @@
       corruption.
     </description>
     <advisory url="/news/secadv/20150611.txt"/>
-    <reported source="Praveen Kariyanahalli, and subsequently by Ivan Fratric and Felix Groebert (Google)"/>
+    <reported source="Praveen Kariyanahalli, and subsequently by Ivan Fratric and Felix Groebert (Google)" date="20140328"/>
   </issue>
   <issue public="20150319">
     <impact severity="High"/>
@@ -2277,7 +2278,7 @@ invalid signature algorithms extension a NULL pointer dereference will occur.
 This can be exploited in a DoS attack against the server.
     </description>
     <advisory url="/news/secadv/20150319.txt"/>
-    <reported source=" David Ramos (Stanford University)"/>
+    <reported source=" David Ramos (Stanford University)" date="20150226"/>
   </issue>
 
   <issue public="20150319">
@@ -2298,7 +2299,7 @@ it is likely that a segmentation fault will be triggered, thus enabling a
 potential DoS attack.
     </description>
     <advisory url="/news/secadv/20150319.txt"/>
-    <reported source="Daniel Danner and Rainer Mueller"/>
+    <reported source="Daniel Danner and Rainer Mueller" date="20150213"/>
   </issue>
 
   <issue public="20150319">
@@ -2316,7 +2317,7 @@ example of such an error could be that a DTLS1.0 only client is attempting to
 connect to a DTLS1.2 only server.
     </description>
     <advisory url="/news/secadv/20150319.txt"/>
-    <reported source="Per Allansson"/>
+    <reported source="Per Allansson" date="20150127"/>
   </issue>
 
   <issue public="20150319">
@@ -2390,7 +2391,7 @@ application which performs certificate verification is vulnerable including
 OpenSSL clients and servers which enable client authentication.
     </description>
     <advisory url="/news/secadv/20150319.txt"/>
-    <reported source="Brian Carpenter"/>
+    <reported source="Brian Carpenter" date="20150131"/>
   </issue>
 
   <issue public="20150319">
@@ -2553,7 +2554,7 @@ otherwise parse PKCS#7 structures from untrusted sources are
 affected. OpenSSL clients and servers are not affected.
     </description>
     <advisory url="/news/secadv/20150319.txt"/>
-    <reported source="Michal Zalewski (Google)"/>
+    <reported source="Michal Zalewski (Google)" date="20150216"/>
   </issue>
 
   <issue public="20150319">
