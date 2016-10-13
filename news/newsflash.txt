@@ -4,6 +4,7 @@
 # Format is two fields, colon-separated; the first line is the column
 # headings.  URL paths must all be absolute.
 Date: Item
+12-Oct-2016: New Blog post: <a href="https://www.openssl.org/blog/blog/2016/10/12/f2f-rt-github/">Face to Face: Goodbye RT, Hello GitHub</a>
 26-Sep-2016: <a href="/news/secadv/20160926.txt">Security Advisory</a>: Two security fixes
 26-Sep-2016: OpenSSL 1.1.0b is now available, including a security fix
 26-Sep-2016: OpenSSL 1.0.2j is now available, including a security fix
