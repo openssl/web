@@ -45,7 +45,11 @@ manpages: manmaster
 	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.1-stable,1.0.1)
 
 manmaster:
-	$(call makemanpages,$(CHECKOUTS)/openssl,master)
+	./bin/mk-manpages $(CHECKOUTS)/openssl master docs
+	./bin/mk-filelist -a docs/manmaster/man1 '' '*.html' >docs/manmaster/man1/index.inc
+	./bin/mk-filelist -a docs/manmaster/man3 '' '*.html' >docs/manmaster/man3/index.inc
+	./bin/mk-filelist -a docs/manmaster/man5 '' '*.html' >docs/manmaster/man5/index.inc
+	./bin/mk-filelist -a docs/manmaster/man7 '' '*.html' >docs/manmaster/man7/index.inc
 
 # Legacy targets
 hack-source_htaccess: all
