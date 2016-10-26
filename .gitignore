@@ -2,12 +2,14 @@
 *.swp
 blog
 sitemap.txt
-docs/*/apps/*
-!docs/*/apps/index.html
-docs/*/crypto/*
-!docs/*/crypto/index.html
-docs/*/ssl/*
-!docs/*/ssl/index.html
+docs/*/man1/*
+!docs/*/man1/index.html
+docs/*/man3/*
+!docs/*/man3/index.html
+docs/*/man5/*
+!docs/*/man5/index.html
+docs/*/man7/*
+!docs/*/man7/index.html
 docs/faq.inc
 docs/fips.inc
 mk-manpages.pl
@@ -28,3 +30,4 @@ source/old/*/*.patch
 source/old/*/*.tar.gz*
 source/old/*/*.txt.asc
 source/old/*/index.inc
+source/snapshot
