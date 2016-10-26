@@ -2,6 +2,12 @@
 *.swp
 blog
 sitemap.txt
+docs/*/apps/*
+!docs/*/apps/index.html
+docs/*/crypto/*
+!docs/*/crypto/index.html
+docs/*/ssl/*
+!docs/*/ssl/index.html
 docs/*/man1/*
 !docs/*/man1/index.html
 docs/*/man3/*
