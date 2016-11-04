@@ -754,30 +754,7 @@ LOT of false positives.
 
 * I'm SURE I've found a bug, how do I report it?
 
-To avoid duplicated reports check the mailing lists and release notes for the
-relevant version of OpenSSL to see if the problem has been reported already.
-
-Bug reports with no security implications should be sent to the request
-tracker. This can be done by mailing the report to <rt@openssl.org> (or its
-alias <openssl-bugs@openssl.org>), please note that messages sent to the
-request tracker also appear in the public openssl-dev mailing list.
-
-The report should be in plain text. Any patches should be sent as
-plain text attachments because some mailers corrupt patches sent inline.
-If your issue affects multiple versions of OpenSSL check any patches apply
-cleanly and, if possible include patches to each affected version.
-
-The report should be given a meaningful subject line briefly summarising the
-issue. Just "bug in OpenSSL" or "bug in OpenSSL 0.9.8n" is not very helpful.
-
-By sending reports to the request tracker the bug can then be given a priority
-and assigned to the appropriate maintainer. The history of discussions can be
-accessed and if the issue has been addressed or a reason why not. If patches
-are only sent to openssl-dev they can be mislaid if a team member has to
-wade through months of old messages to review the discussion.
-
-See also <URL: https://www.openssl.org/community>
-
+Please see <URL: https://www.openssl.org/community>
 
 * I've found a security issue, how do I report it?
 
