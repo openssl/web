@@ -5,7 +5,79 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20160926">
+<security updated="20161110">
+  <issue public="20161110">
+    <impact severity="High"/>
+    <cve name="2016-7054"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <fixed base="1.1.0" version="1.1.0c" date="20161110"/>
+    <description>
+      TLS connections using *-CHACHA20-POLY1305 ciphersuites are susceptible to
+      a DoS attack by corrupting larger payloads. This can result in an OpenSSL
+      crash. This issue is not considered to be exploitable beyond a DoS.
+    </description>
+    <advisory url="/news/secadv/20161110.txt"/>
+    <reported source="Robert Święcki (Google Security Team)" date="20160925"/>
+  </issue>
+  <issue public="20161110">
+    <impact severity="Moderate"/>
+    <cve name="2016-7053"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <fixed base="1.1.0" version="1.1.0c" date="20161110"/>
+    <description>
+      Applications parsing invalid CMS structures can crash with a NULL pointer
+      dereference. This is caused by a bug in the handling of the ASN.1 CHOICE
+      type in OpenSSL 1.1.0 which can result in a NULL value being passed to the
+      structure callback if an attempt is made to free certain invalid
+      encodings. Only CHOICE structures using a callback which do not handle
+      NULL value are affected.
+    </description>
+    <advisory url="/news/secadv/20161110.txt"/>
+    <reported source="Tyler Nighswander (ForAllSecure)" date="20161012"/>
+  </issue>
+  <issue public="20161110">
+    <impact severity="Low"/>
+    <cve name="2016-7055"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <affects base="1.0.2" version="1.0.2i"/>
+    <affects base="1.0.2" version="1.0.2j"/>
+    <fixed base="1.1.0" version="1.1.0c" date="20161110"/>
+    <description>
+      There is a carry propagating bug in the Broadwell-specific Montgomery
+      multiplication procedure that handles input lengths divisible by, but
+      longer than 256 bits. Analysis suggests that attacks against RSA, DSA
+      and DH private keys are impossible. This is because the subroutine in
+      question is not used in operations with the private key itself and an
+      input of the attacker's direct choice. Otherwise the bug can manifest
+      itself as transient authentication and key negotiation failures or
+      reproducible erroneous outcome of public-key operations with specially
+      crafted input. Among EC algorithms only Brainpool P-512 curves are
+      affected and one presumably can attack ECDH key negotiation. Impact was
+      not analyzed in detail, because pre-requisites for attack are considered
+      unlikely. Namely multiple clients have to choose the curve in question and
+      the server has to share the private key among them, neither of which is
+      default behaviour. Even then only clients that chose the curve will be
+      affected.ctures using a callback which do not handle NULL value are
+      affected.
+    </description>
+    <advisory url="/news/secadv/20161110.txt"/>
+    <reported source="Publicly reported" />
+  </issue>
   <issue public="20160926">
     <impact severity="Critical"/>
     <cve name="2016-6309"/>
