@@ -1,21 +1,5 @@
 #! /usr/bin/perl
 
-{
-    package Local::PSX;
-    use Pod::Simple::XHTML;
-    use parent qw(Pod::Simple::XHTML);
-
-    sub resolve_man_page_link {
-        my ( $self, $to, $section ) = @_;
-        return undef unless defined $to;
-        my ( $page, $part ) = $to =~ /^([^(]+)(?:[(](\d+)[)])?$/;
-        return undef unless $page;
-
-        return ( $self->man_url_prefix || '' )
-          . $self->encode_entities($page) . ( $self->man_url_postfix || '' );
-    }
-}
-
 package Local::MkManPages;
 
 use strict;
@@ -24,6 +8,7 @@ use File::Basename qw(basename);
 use File::Spec ();
 use Getopt::Long qw(GetOptionsFromArray);
 use Pod::Usage qw(pod2usage);
+use Pod::Simple::XHTML;
 
 __PACKAGE__->run(@ARGV);
 
@@ -87,19 +72,12 @@ sub genhtml {
     open( my $fh, $filename ) || $class->die("Can't open $filename: $!");
     my $infile = do { local $/; <$fh>; };
 
-    # L<asdf...|qwer...> ==> L<qwer>
-    $infile =~ s/L<[^|>]*\|([^>]+)>/L<$1>/g;
-
-    # L<asdf(x)> --> L<asdf>
-    $infile =~ s/L<([^>]+)\(\d\)>/L<$1>/g;
-
     my $out;
-    my $pod = Local::PSX->new;
+    my $pod = Pod::Simple::XHTML->new;
     $pod->html_h_level(3);
-    $pod->perldoc_url_prefix(
-        "https://www.openssl.org/docs/man$release/$section/");
+    $pod->perldoc_url_prefix("https://www.openssl.org/docs/man$release/man");
     $pod->perldoc_url_postfix(".html");
-    $pod->man_url_prefix("https://www.openssl.org/docs/man$release/$section/");
+    $pod->man_url_prefix("https://www.openssl.org/docs/man$release/man");
     $pod->man_url_postfix(".html");
     $pod->html_header($header);
     $pod->html_footer($footer);
