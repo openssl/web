@@ -96,10 +96,9 @@ sub genhtml {
     my $out;
     my $pod = Local::PSX->new;
     $pod->html_h_level(3);
-    $pod->perldoc_url_prefix(
-        "https://www.openssl.org/docs/man$release/$section/");
+    $pod->perldoc_url_prefix("/docs/man$release/$section/");
     $pod->perldoc_url_postfix(".html");
-    $pod->man_url_prefix("https://www.openssl.org/docs/man$release/$section/");
+    $pod->man_url_prefix("/docs/man$release/$section/");
     $pod->man_url_postfix(".html");
     $pod->html_header($header);
     $pod->html_footer($footer);
