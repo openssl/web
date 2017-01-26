@@ -5,7 +5,97 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20161110">
+<security updated="20170126">
+  <issue public="20170126">
+    <impact severity="Moderate"/>
+    <cve name="2017-3731"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <affects base="1.1.0" version="1.1.0c"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <affects base="1.0.2" version="1.0.2i"/>
+    <affects base="1.0.2" version="1.0.2j"/>
+    <fixed base="1.1.0" version="1.1.0d" date="20170126"/>
+    <fixed base="1.0.2" version="1.0.2k" date="20170126"/>
+    <description>
+      If an SSL/TLS server or client is running on a 32-bit host, and a specific
+      cipher is being used, then a truncated packet can cause that server or
+      client to perform an out-of-bounds read, usually resulting in a crash.
+
+      For OpenSSL 1.1.0, the crash can be triggered when using
+      CHACHA20/POLY1305; users should upgrade to 1.1.0d.
+
+      For Openssl 1.0.2, the crash can be triggered when using RC4-MD5; users
+      who have not disabled that algorithm should update to 1.0.2k
+    </description>
+    <advisory url="/news/secadv/20170126.txt"/>
+    <reported source="Robert Święcki of Google" />
+  </issue>
+  <issue public="20170126">
+    <impact severity="Moderate"/>
+    <cve name="2017-3730"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <affects base="1.1.0" version="1.1.0c"/>
+    <fixed base="1.1.0" version="1.1.0d" date="20170126"/>
+    <description>
+      If a malicious server supplies bad parameters for a DHE or ECDHE key
+      exchange then this can result in the client attempting to dereference a
+      NULL pointer leading to a client crash. This could be exploited in a
+      Denial of Service attack.
+    </description>
+    <advisory url="/news/secadv/20170126.txt"/>
+    <reported source="Guido Vranken" />
+  </issue>
+  <issue public="20170126">
+    <impact severity="Moderate"/>
+    <cve name="2017-3732"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <affects base="1.1.0" version="1.1.0c"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <affects base="1.0.2" version="1.0.2i"/>
+    <affects base="1.0.2" version="1.0.2j"/>
+    <fixed base="1.1.0" version="1.1.0d" date="20170126"/>
+    <fixed base="1.0.2" version="1.0.2k" date="20170126"/>
+    <description>
+      There is a carry propagating bug in the x86_64 Montgomery squaring
+      procedure. No EC algorithms are affected. Analysis suggests that attacks
+      against RSA and DSA as a result of this defect would be very difficult to
+      perform and are not believed likely. Attacks against DH are considered
+      just feasible (although very difficult) because most of the work necessary
+      to deduce information about a private key may be performed offline. The
+      amount of resources required for such an attack would be very significant
+      and likely only accessible to a limited number of attackers. An attacker
+      would additionally need online access to an unpatched system using the
+      target private key in a scenario with persistent DH parameters and a
+      private key that is shared between multiple clients. For example this can
+      occur by default in OpenSSL DHE based SSL/TLS ciphersuites. Note: This
+      issue is very similar to CVE-2015-3193 but must be treated as a separate
+      problem.
+    </description>
+    <advisory url="/news/secadv/20170126.txt"/>
+    <reported source="OSS-Fuzz project" />
+  </issue>
   <issue public="20161110">
     <impact severity="High"/>
     <cve name="2016-7054"/>
@@ -57,6 +147,7 @@
     <affects base="1.0.2" version="1.0.2i"/>
     <affects base="1.0.2" version="1.0.2j"/>
     <fixed base="1.1.0" version="1.1.0c" date="20161110"/>
+    <fixed base="1.0.2" version="1.0.2k" date="20170126"/>
     <description>
       There is a carry propagating bug in the Broadwell-specific Montgomery
       multiplication procedure that handles input lengths divisible by, but
