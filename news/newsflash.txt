@@ -4,8 +4,8 @@
 # Format is two fields, colon-separated; the first line is the column
 # headings.  URL paths must all be absolute.
 Date: Item
-26-Sep-2017: OpenSSL 1.1.0d is now available, including bug and security fixes
-26-Sep-2017: OpenSSL 1.0.2k is now available, including bug and security fixes
+26-Jan-2017: OpenSSL 1.1.0d is now available, including bug and security fixes
+26-Jan-2017: OpenSSL 1.0.2k is now available, including bug and security fixes
 23-Jan-2017: OpenSSL 1.1.0d, 1.0.2k <a href="https://mta.openssl.org/pipermail/openssl-announce/2017-January/000091.html">security release due on 26th January 2017</a>
 02-Jan-2017: The OpenSSL 1.0.1 series of releases are now out of support. Please upgrade to 1.1.0 or 1.0.2.
 10-Nov-2016: <a href="/news/secadv/20161110.txt">Security Advisory</a>: several security fixes
