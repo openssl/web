@@ -56,9 +56,16 @@ required for such an attack would be very significant and likely only
 accessible to a limited number of attackers. An attacker would
 additionally need online access to an unpatched system using the target
 private key in a scenario with persistent DH parameters and a private
-key that is shared between multiple clients. For example this can occur by
-default in OpenSSL DHE based SSL/TLS ciphersuites. Note: This issue is very
-similar to CVE-2015-3193 but must be treated as a separate problem.
+key that is shared between multiple clients.
+
+UPDATE 31 Jan 2017.  The original text said
+    For example this can occur by
+    default in OpenSSL DHE based SSL/TLS ciphersuites.
+This is not true.  DHE key re-use was removed by commit c5b831f for 1.0.2
+or commit ffaef3f for 1.1.0 on 17 December 2015
+
+Note: This issue is very similar to CVE-2015-3193 but must be treated as
+a separate problem.
 
 OpenSSL 1.1.0 users should upgrade to 1.1.0d
 OpenSSL 1.0.2 users should upgrade to 1.0.2k
