@@ -27,7 +27,7 @@ use Pod::Usage qw(pod2usage);
 
 __PACKAGE__->run(@ARGV);
 
-sub Releases { return (qw(master 1.1.0 1.0.2 1.0.1)); }
+sub Releases { return (qw(master 1.1.0 1.0.2)); }
 sub Sections { return (qw(apps crypto ssl)); }
 
 sub getRelease {
@@ -316,7 +316,7 @@ structure may look something like the following (where the contents of
 index.html do not come from this tool):
 
  $ ls some/path/to/web
- man0.9.8    man1.0.0    man1.0.1    man1.0.2    manmaster
+ man1.0.2    man1.1.0    manmaster
  $ ls some/path/to/web/man1.0.2
  apps        crypto      index.html  ssl
  $ ls some/path/to/web/man1.0.2/apps

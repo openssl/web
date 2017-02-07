@@ -13,8 +13,8 @@ RELEASEDIR = /var/www/openssl/source
 SIMPLE = newsflash.inc sitemap.txt \
 	 docs/faq.inc docs/fips.inc \
          news/changelog.inc news/changelog.txt \
-         news/cl101.txt news/cl102.txt news/cl110.txt \
-         news/openssl-1.0.1-notes.inc news/openssl-1.0.2-notes.inc \
+         news/cl102.txt news/cl110.txt \
+         news/openssl-1.0.2-notes.inc \
          news/openssl-1.1.0-notes.inc \
 	 news/newsflash.inc \
 	 news/vulnerabilities.inc \
@@ -42,7 +42,6 @@ endef
 manpages: manmaster
 	$(call makemanpages,$(CHECKOUTS)/openssl-1.1.0-stable,1.1.0)
 	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.2-stable,1.0.2)
-	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.1-stable,1.0.1)
 
 manmaster:
 	./bin/mk-manmaster $(CHECKOUTS)/openssl master docs
@@ -73,9 +72,6 @@ news/changelog.inc: news/changelog.txt bin/mk-changelog
 news/changelog.txt: $(SNAP)/CHANGES
 	@rm -f $@
 	cp $? $@
-news/cl101.txt: $(CHECKOUTS)/openssl-1.0.1-stable/CHANGES
-	@rm -f $@
-	cp $? $@
 news/cl102.txt: $(CHECKOUTS)/openssl-1.0.2-stable/CHANGES
 	@rm -f $@
 	cp $? $@
@@ -83,18 +79,12 @@ news/cl110.txt: $(CHECKOUTS)/openssl-1.1.0-stable/CHANGES
 	@rm -f $@
 	cp $? $@
 
-news/openssl-1.0.1-notes.html: news/openssl-notes.html.in
-	@rm -f $@
-	sed -e 's|@VERSION@|1.0.1|g' < $< > $@
 news/openssl-1.0.2-notes.html: news/openssl-notes.html.in
 	@rm -f $@
 	sed -e 's|@VERSION@|1.0.2|g' < $< > $@
 news/openssl-1.1.0-notes.html: news/openssl-notes.html.in
 	@rm -f $@
 	sed -e 's|@VERSION@|1.1.0|g' < $< > $@
-news/openssl-1.0.1-notes.inc: $(CHECKOUTS)/openssl-1.0.1-stable/NEWS news/openssl-1.0.1-notes.html bin/mk-notes
-	@rm -f $@
-	./bin/mk-notes 1.0.1 < $(CHECKOUTS)/openssl-1.0.1-stable/NEWS > $@
 news/openssl-1.0.2-notes.inc: $(CHECKOUTS)/openssl-1.0.2-stable/NEWS news/openssl-1.0.2-notes.html bin/mk-notes
 	@rm -f $@
 	./bin/mk-notes 1.0.2 < $(CHECKOUTS)/openssl-1.0.2-stable/NEWS > $@
