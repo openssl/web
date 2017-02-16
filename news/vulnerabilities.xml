@@ -5,7 +5,25 @@
      1.0.0 on 20100329
 -->
 
-<security updated="20170126">
+<security updated="20170216">
+  <issue public="20170216">
+    <impact severity="High"/>
+    <cve name="2017-3733"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <affects base="1.1.0" version="1.1.0c"/>
+    <affects base="1.1.0" version="1.1.0d"/>
+    <fixed base="1.1.0" version="1.1.0e" date="20170216"/>
+    <description>
+      During a renegotiation handshake if the Encrypt-Then-Mac extension is
+      negotiated where it was not in the original handshake (or vice-versa) then
+      this can cause OpenSSL to crash (dependent on ciphersuite). Both clients
+      and servers are affected.
+    </description>
+    <advisory url="/news/secadv/20170216.txt"/>
+    <reported source="Joe Orton (Red Hat)" />
+  </issue>
   <issue public="20170126">
     <impact severity="Moderate"/>
     <cve name="2017-3731"/>
