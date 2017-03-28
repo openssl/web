@@ -24,7 +24,8 @@ html {
 }
 
 ol, ul {
-  list-style: none;
+    list-style: none;
+    padding-left: 2em;
 }
 
 dd {
