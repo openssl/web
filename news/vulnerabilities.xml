@@ -15,6 +15,8 @@
     <affects base="1.1.0" version="1.1.0c"/>
     <affects base="1.1.0" version="1.1.0d"/>
     <fixed base="1.1.0" version="1.1.0e" date="20170216"/>
+    <problemtype>protocol error</problemtype>
+    <title>Encrypt-Then-Mac renegotiation crash</title>
     <description>
       During a renegotiation handshake if the Encrypt-Then-Mac extension is
       negotiated where it was not in the original handshake (or vice-versa) then
@@ -44,6 +46,8 @@
     <affects base="1.0.2" version="1.0.2j"/>
     <fixed base="1.1.0" version="1.1.0d" date="20170126"/>
     <fixed base="1.0.2" version="1.0.2k" date="20170126"/>
+    <problemtype>out-of-bounds read</problemtype>
+    <title>Truncated packet could crash via OOB read</title>
     <description>
       If an SSL/TLS server or client is running on a 32-bit host, and a specific
       cipher is being used, then a truncated packet can cause that server or
@@ -66,6 +70,8 @@
     <affects base="1.1.0" version="1.1.0b"/>
     <affects base="1.1.0" version="1.1.0c"/>
     <fixed base="1.1.0" version="1.1.0d" date="20170126"/>
+    <problemtype>NULL pointer deference</problemtype>
+    <title>Bad (EC)DHE parameters cause a client crash</title>
     <description>
       If a malicious server supplies bad parameters for a DHE or ECDHE key
       exchange then this can result in the client attempting to dereference a
@@ -95,6 +101,8 @@
     <affects base="1.0.2" version="1.0.2j"/>
     <fixed base="1.1.0" version="1.1.0d" date="20170126"/>
     <fixed base="1.0.2" version="1.0.2k" date="20170126"/>
+    <problemtype>carry-propagating bug</problemtype>
+    <title>BN_mod_exp may produce incorrect results on x86_64</title>
     <description>
       There is a carry propagating bug in the x86_64 Montgomery squaring
       procedure. No EC algorithms are affected. Analysis suggests that attacks
@@ -121,6 +129,8 @@
     <affects base="1.1.0" version="1.1.0a"/>
     <affects base="1.1.0" version="1.1.0b"/>
     <fixed base="1.1.0" version="1.1.0c" date="20161110"/>
+    <problemtype>protocol error</problemtype>
+    <title>ChaCha20/Poly1305 heap-buffer-overflow</title>
     <description>
       TLS connections using *-CHACHA20-POLY1305 ciphersuites are susceptible to
       a DoS attack by corrupting larger payloads. This can result in an OpenSSL
@@ -136,6 +146,8 @@
     <affects base="1.1.0" version="1.1.0a"/>
     <affects base="1.1.0" version="1.1.0b"/>
     <fixed base="1.1.0" version="1.1.0c" date="20161110"/>
+    <problemtype>NULL pointer deference</problemtype>
+    <title>CMS Null dereference</title>
     <description>
       Applications parsing invalid CMS structures can crash with a NULL pointer
       dereference. This is caused by a bug in the handling of the ASN.1 CHOICE
@@ -166,6 +178,8 @@
     <affects base="1.0.2" version="1.0.2j"/>
     <fixed base="1.1.0" version="1.1.0c" date="20161110"/>
     <fixed base="1.0.2" version="1.0.2k" date="20170126"/>
+    <problemtype>carry propagating bug</problemtype>
+    <title>Montgomery multiplication may produce incorrect results</title>
     <description>
       There is a carry propagating bug in the Broadwell-specific Montgomery
       multiplication procedure that handles input lengths divisible by, but
@@ -193,6 +207,7 @@
     <affects base="1.1.0" version="1.1.0a"/>
     <fixed base="1.1.0" version="1.1.0b" date="20160926"/>
 
+    <problemtype>write to free</problemtype>                    
     <description>
       This issue only affects OpenSSL 1.1.0a, released on 22nd September 2016.
 
@@ -212,6 +227,7 @@
     <affects base="1.0.2" version="1.0.2i"/>
     <fixed base="1.0.2" version="1.0.2j" date="20160926"/>
 
+    <problemtype>NULL pointer exception</problemtype>                        
     <description>
       This issue only affects OpenSSL 1.0.2i, released on 22nd September 2016.
 
@@ -260,6 +276,7 @@
     <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
     <fixed base="1.1.0" version="1.1.0a" date="20160922"/>
 
+    <problemtype>memory leak</problemtype>                            
     <description>
       A malicious client can send an excessively large OCSP Status Request extension.
       If that client continually requests renegotiation, sending a large OCSP Status
