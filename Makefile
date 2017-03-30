@@ -29,9 +29,12 @@ SRCLISTS = \
 	   source/old/1.1.0/index.inc \
 	   source/old/fips/index.inc \
 
-all: $(SIMPLE) $(SRCLISTS) manmaster
 
-relupd: all manpages
+all: suball sitemap
+
+suball: $(SIMPLE) $(SRCLISTS) manmaster
+
+relupd: suball manpages sitemap
 
 define makemanpages
 	./bin/mk-manpages $(1) $(2) docs
@@ -50,6 +53,10 @@ manmaster:
 	./bin/mk-filelist -a docs/manmaster/man5 '' '*.html' >docs/manmaster/man5/index.inc
 	./bin/mk-filelist -a docs/manmaster/man7 '' '*.html' >docs/manmaster/man7/index.inc
 
+sitemap:
+	@rm -f sitemap.txt
+	./bin/mk-sitemap > sitemap.txt
+
 # Legacy targets
 hack-source_htaccess: all
 simple: all
@@ -62,9 +69,6 @@ clean:
 newsflash.inc: news/newsflash.inc
 	@rm -f $@
 	head -7 $? >$@
-sitemap.txt: bin/mk-sitemap
-	@rm -f $@
-	./bin/mk-sitemap >$@
 
 news/changelog.inc: news/changelog.txt bin/mk-changelog
 	@rm -f $@
