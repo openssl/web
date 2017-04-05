@@ -29,11 +29,11 @@ dodir()
     foreach my $entry ( @dirs) {
 	$entry =~ s@^\.\/@@;
 	next if $entry =~ m/.git|inc|img|bin|blog/;
-	next if $entry =~ m/secadv/;
 	my $simple = $entry;
 	$simple =~ s@.*/@@;
 	print "\n", "\t" x $level, $simple, "/\n";
-        next if $entry =~ m/man0.9.8|man1.0..|manmaster/;
+	next if $entry =~ m/secadv/;
+        next if $entry =~ m/man1.0.2|man1.1.0|manmaster/;
 	&dodir($entry, $level + 1);
     }
 }
