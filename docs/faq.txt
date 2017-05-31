@@ -168,9 +168,9 @@ For example, one of the following might work on your system:
    sha1sum TARBALL | awk '{print $1;}' | cmp - TARBALL.sha1
    sha256sum TARBALL | awk '{print $1;}' | cmp - TARBALL.sha256
 
-You can check authenticity using pgp or gpg. You need the OpenSSL team
-member public key used to sign it (download it from a key server, see a
-list of keys at <URL: https://www.openssl.org/community/team.html>). Then
+You can check authenticity using pgp or gpg. You need the OpenSSL OMC
+member public key used to sign it (download it from a key server or see a
+list of keys at <URL: https://www.openssl.org/community/omc.html>). Then
 just do:
 
    pgp TARBALL.asc
@@ -762,8 +762,8 @@ If you think your bug has security implications then please send it to
 openssl-security@openssl.org if you don't get a prompt reply at least
 acknowledging receipt then resend or mail it directly to one of the
 more active team members (e.g. Steve). If you wish to use PGP to send
-in a report please use one or more of the keys of the team members listed
-at <URL: https://www.openssl.org/community/team.html>
+in a report please use one or more of the keys of the OMC listed
+at <URL: https://www.openssl.org/community/omc.html>
 
 Note that bugs only present in the openssl utility are not in general
 considered to be security issues.
