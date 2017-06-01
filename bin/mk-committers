@@ -17,7 +17,12 @@ for member in json:
     if name and github:
         name = name.encode('ascii', 'xmlcharrefreplace')
         github = github.encode('ascii', 'xmlcharrefreplace')
-        members.append("<tr><td>%s</td><td>%s</td></tr>" % (name, github))
+        if github == '--':
+            url = 'https://github.com/openssl'
+        else:
+            url = 'https://github.com/' + github
+        members.append("<tr><td>%s</td><td><a href='%s'>%s</a></td></tr>" % \
+            (name, url, github))
 
 members.sort()
 for m in members:
