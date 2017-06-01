@@ -64,6 +64,7 @@ manmaster:
 	./bin/mk-filelist -a docs/manmaster/man7 '' '*.html' >docs/manmaster/man7/index.inc
 
 ## $(SIMPLE) -- SIMPLE GENERATED FILES
+.PHONY: sitemap community/committers.inc
 newsflash.inc: news/newsflash.inc
 	@rm -f $@
 	head -7 $? >$@
@@ -73,8 +74,9 @@ sitemap:
 
 community/committers.inc:
 	@rm -f $@
-	wget -q https://api.openssl.org/0/Group/commit/Members | \
-	    ./bin/mk-committers >$@
+	wget -q https://api.openssl.org/0/Group/commit/Members
+	./bin/mk-committers <Members >$@
+	@rm -f Members
 
 docs/faq.inc: docs/faq.txt bin/mk-faq
 	@rm -f $@
