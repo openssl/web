@@ -73,7 +73,7 @@ sitemap:
 
 community/committers.inc:
 	@rm -f $@
-	wget -q https://api.openssl.org/0/Group/commit/Members |
+	wget -q https://api.openssl.org/0/Group/commit/Members | \
 	    ./bin/mk-committers >$@
 
 docs/faq.inc: docs/faq.txt bin/mk-faq
