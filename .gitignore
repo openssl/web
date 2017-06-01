@@ -16,7 +16,7 @@ docs/*/man5/*
 !docs/*/man5/index.html
 docs/*/man7/*
 !docs/*/man7/index.html
-communmity/committers.inc
+community/committers.inc
 docs/faq.inc
 docs/fips.inc
 news/changelog.inc
