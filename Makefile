@@ -78,9 +78,9 @@ community/committers.inc:
 	./bin/mk-committers <Members >$@
 	@rm -f Members
 
-docs/faq.inc: docs/faq.txt bin/mk-faq
+docs/faq.inc: $(wildcard docs/faq-[0-9]-*.txt) bin/mk-faq
 	@rm -f $@
-	./bin/mk-faq <$? >$@
+	./bin/mk-faq docs/faq-[0-9]-*txt >$@
 docs/fips.inc: $(wildcard docs/fips/*) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist docs/fips fips/ '*' >$@
