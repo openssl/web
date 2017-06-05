@@ -1,0 +1,254 @@
+Using the OpenSSL application
+
+* Why do I get a "PRNG not seeded" error message?
+
+Cryptographic software needs a source of unpredictable data to work
+correctly.  Many open source operating systems provide a "randomness
+device" (/dev/urandom or /dev/random) that serves this purpose.
+All OpenSSL versions try to use /dev/urandom by default; starting with
+version 0.9.7, OpenSSL also tries /dev/random if /dev/urandom is not
+available.
+
+On other systems, applications have to call the RAND_add(3) or
+RAND_seed(3) function with appropriate data before generating keys or
+performing public key encryption. (These functions initialize the
+pseudo-random number generator, PRNG.)  Some broken applications do
+not do this.  As of version 0.9.5, the OpenSSL functions that need
+randomness report an error if the random number generator has not been
+seeded with at least 128 bits of randomness.  If this error occurs and
+is not discussed in the documentation of the application you are
+using, please contact the author of that application; it is likely
+that it never worked correctly.  OpenSSL 0.9.5 and later make the
+error visible by refusing to perform potentially insecure encryption.
+
+On systems without /dev/urandom and /dev/random, it is a good idea to
+use the Entropy Gathering Demon (EGD); see the RAND_egd(3) manpage for
+details.  Starting with version 0.9.7, OpenSSL will automatically look
+for an EGD socket at /var/run/egd-pool, /dev/egd-pool, /etc/egd-pool and
+/etc/entropy.
+
+Most components of the openssl command line utility automatically try
+to seed the random number generator from a file.  The name of the
+default seeding file is determined as follows: If environment variable
+RANDFILE is set, then it names the seeding file.  Otherwise if
+environment variable HOME is set, then the seeding file is $HOME/.rnd.
+If neither RANDFILE nor HOME is set, versions up to OpenSSL 0.9.6 will
+use file .rnd in the current directory while OpenSSL 0.9.6a uses no
+default seeding file at all.  OpenSSL 0.9.6b and later will behave
+similarly to 0.9.6a, but will use a default of "C:\" for HOME on
+Windows systems if the environment variable has not been set.
+
+If the default seeding file does not exist or is too short, the "PRNG
+not seeded" error message may occur.
+
+The openssl command line utility will write back a new state to the
+default seeding file (and create this file if necessary) unless
+there was no sufficient seeding.
+
+Pointing $RANDFILE to an Entropy Gathering Daemon socket does not work.
+Use the "-rand" option of the OpenSSL command line tools instead.
+The $RANDFILE environment variable and $HOME/.rnd are only used by the
+OpenSSL command line tools. Applications using the OpenSSL library
+provide their own configuration options to specify the entropy source,
+please check out the documentation coming the with application.
+
+* Why do I get an "unable to write 'random state'" error message?
+
+Sometimes the openssl command line utility does not abort with
+a "PRNG not seeded" error message, but complains that it is
+"unable to write 'random state'".  This message refers to the
+default seeding file (see previous answer).  A possible reason
+is that no default filename is known because neither RANDFILE
+nor HOME is set.  (Versions up to 0.9.6 used file ".rnd" in the
+current directory in this case, but this has changed with 0.9.6a.)
+
+* How do I create certificates or certificate requests?
+
+Check out the CA.pl(1) manual page. This provides a simple wrapper round
+the 'req', 'verify', 'ca' and 'pkcs12' utilities. For finer control check
+out the manual pages for the individual utilities and the certificate
+extensions documentation (in ca(1),
+req(1),
+and x509v3_config(5) ).
+
+* Why can't I create certificate requests?
+
+You typically get the error:
+<PRE>
+    unable to find 'distinguished_name' in config
+    problems making Certificate Request
+</PRE>
+
+This is because it can't find the configuration file. Check out the
+DIAGNOSTICS section of req(1) for more information.
+
+* Why does &lt;SSL program&gt; fail with a certificate verify error?
+
+This problem is usually indicated by log messages saying something like
+"unable to get local issuer certificate" or "self signed certificate".
+When a certificate is verified its root CA must be "trusted" by OpenSSL
+this typically means that the CA certificate must be placed in a directory
+or file and the relevant program configured to read it. The OpenSSL program
+'verify' behaves in a similar way and issues similar error messages: check
+the verify(1) program manual page for more information.
+
+* Why can I only use weak ciphers when I connect to a server using OpenSSL?
+
+This is almost certainly because you are using an old "export grade" browser
+which only supports weak encryption. Upgrade your browser to support 128 bit
+ciphers.
+
+* How can I create DSA certificates?
+
+Check the CA.pl(1) manual page for a DSA certificate example.
+
+* Why can't I make an SSL connection to a server using a DSA certificate?
+
+Typically you'll see a message saying there are no shared ciphers when
+the same setup works fine with an RSA certificate. There are two possible
+causes. The client may not support connections to DSA servers most web
+browsers (including Netscape and MSIE) only support connections to servers
+supporting RSA cipher suites. The other cause is that a set of DH parameters
+has not been supplied to the server. DH parameters can be created with the
+dhparam(1) command and loaded using the
+SSL_CTX_set_tmp_dh(3) for example:
+check the source to s_server in apps/s_server.c for an example.
+
+* How can I remove the passphrase on a private key?
+
+Firstly you should be really *really* sure you want to do this. Leaving
+a private key unencrypted is a major security risk. If you decide that
+you do have to do this check the EXAMPLES sections of the rsa(1) and
+dsa(1) manual pages.
+
+* Why can't I use OpenSSL certificates with SSL client authentication?
+
+What will typically happen is that when a server requests authentication
+it will either not include your certificate or tell you that you have
+no client certificates (Netscape) or present you with an empty list box
+(MSIE). The reason for this is that when a server requests a client
+certificate it includes a list of CAs names which it will accept. Browsers
+will only let you select certificates from the list on the grounds that
+there is little point presenting a certificate which the server will
+reject.
+
+The solution is to add the relevant CA certificate to your servers "trusted
+CA list". How you do this depends on the server software in uses. You can
+print out the servers list of acceptable CAs using the OpenSSL s_client tool:
+
+<PRE>
+    openssl s_client -connect www.some.host:443 -prexit
+</PRE>
+
+If your server only requests certificates on certain URLs then you may need
+to manually issue an HTTP GET command to get the list when s_client connects:
+
+<PRE>
+    GET /some/page/needing/a/certificate.html
+</PRE>
+
+If your CA does not appear in the list then this confirms the problem.
+
+* Why does my browser give a warning about a mismatched hostname?
+
+Browsers expect the server's hostname to match the value in the commonName
+(CN) field of the certificate. If it does not then you get a warning.
+
+* How do I install a CA certificate into a browser?
+
+The usual way is to send the DER encoded certificate to the browser as
+MIME type application/x-x509-ca-cert, for example by clicking on an appropriate
+link. On MSIE certain extensions such as .der or .cacert may also work, or you
+can import the certificate using the certificate import wizard.
+
+You can convert a certificate to DER form using the command:
+
+openssl x509 -in ca.pem -outform DER -out ca.der
+
+Occasionally someone suggests using a command such as:
+
+openssl pkcs12 -export -out cacert.p12 -in cacert.pem -inkey cakey.pem
+
+DO NOT DO THIS! This command will give away your CAs private key and
+reduces its security to zero: allowing anyone to forge certificates in
+whatever name they choose.
+
+* Why is OpenSSL x509 DN output not conformant to RFC2253?
+
+The ways to print out the oneline format of the DN (Distinguished Name) have
+been extended in version 0.9.7 of OpenSSL. Using the new X509_NAME_print_ex(3)
+interface, the "-nameopt" option could be introduced. See the manual
+page of the "openssl x509" command line tool for details. The old behaviour
+has however been left as default for the sake of compatibility.
+
+* What is a "128 bit certificate"? Can I create one with OpenSSL?
+
+The term "128 bit certificate" is a highly misleading marketing term. It does
+not refer to the size of the public key in the certificate! A certificate
+containing a 128 bit RSA key would have negligible security.
+
+There were various other names such as "magic certificates", "SGC
+certificates", "step up certificates" etc.
+
+You can't generally create such a certificate using OpenSSL but there is no
+need to any more. Nowadays web browsers using unrestricted strong encryption
+are generally available.
+
+When there were tight restrictions on the export of strong encryption
+software from the US only weak encryption algorithms could be freely exported
+(initially 40 bit and then 56 bit). It was widely recognised that this was
+inadequate. A relaxation of the rules allowed the use of strong encryption but
+only to an authorised server.
+
+Two slightly different techniques were developed to support this, one used by
+Netscape was called "step up", the other used by MSIE was called "Server Gated
+Cryptography" (SGC). When a browser initially connected to a server it would
+check to see if the certificate contained certain extensions and was issued by
+an authorised authority. If these test succeeded it would reconnect using
+strong encryption.
+
+Only certain (initially one) certificate authorities could issue the
+certificates and they generally cost more than ordinary certificates.
+
+Although OpenSSL can create certificates containing the appropriate extensions
+the certificate would not come from a permitted authority and so would not
+be recognized.
+
+The export laws were later changed to allow almost unrestricted use of strong
+encryption so these certificates are now obsolete.
+
+* Why does OpenSSL set the authority key identifier (AKID) extension incorrectly?
+
+It doesn't: this extension is often the cause of confusion.
+
+Consider a certificate chain A->B->C so that A signs B and B signs C. Suppose
+certificate C contains AKID.
+
+The purpose of this extension is to identify the authority certificate B. This
+can be done either by including the subject key identifier of B or its issuer
+name and serial number.
+
+In this latter case because it is identifying certificate B it must contain the
+issuer name and serial number of B.
+
+It is often wrongly assumed that it should contain the subject name of B. If it
+did this would be redundant information because it would duplicate the issuer
+name of C.
+
+* How can I set up a bundle of commercial root CA certificates?
+
+The OpenSSL software is shipped without any root CA certificate as the
+OpenSSL project does not have any policy on including or excluding
+any specific CA and does not intend to set up such a policy. Deciding
+about which CAs to support is up to application developers or
+administrators.
+
+Other projects do have other policies so you can for example extract the CA
+bundle used by Mozilla and/or modssl as described in this article:
+@@@https://www.mail-archive.com/modssl-users@modssl.org/msg16980.html@@@
+
+* Some secure servers 'hang' with OpenSSL 1.0.1, is this a bug?
+
+OpenSSL 1.0.1 is the first release to support TLS 1.2, among other things,
+this increases the size of the default ClientHello message to more than
+255 bytes in length. Some software cannot handle this and hangs.
