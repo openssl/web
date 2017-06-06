@@ -1,9 +1,6 @@
 Miscellaneous
 
 * Which is the current version of OpenSSL?
-Miscellaneous
-
-* Which is the current version of OpenSSL?
 
 The current version is available from @@@https://www.openssl.org@@@.
 
