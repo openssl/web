@@ -1,0 +1,6 @@
+Older Versions and Platforms
+
+* What does "old" mean here?
+
+Any OpenSSL release before 1.0.2, and any platform that is not in wide use,
+and doesn't get full support.  Or something like that.
