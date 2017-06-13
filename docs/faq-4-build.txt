@@ -123,10 +123,7 @@ possible alternative might be to switch to GCC.
 * Test suite still fails, what to do?
 
 Another common reason for test failures is bugs in the toolchain
-or run-time environment.  Known cases of this are documented in the
-PROBLEMS file, please review it before you beat the drum. Even if you
-don't find anything in that file, please do consider the possibility
-of a compiler bug. Compiler bugs often appear in rather bizarre ways,
+or run-time environment. Compiler bugs often appear in rather bizarre ways,
 they never make sense, and tend to emerge when you least expect
 them. One thing to try is to reduce the level of optimization (such
 as by editing the CFLAG variable line in the top-level Makefile),
