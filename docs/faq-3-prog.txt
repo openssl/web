@@ -212,13 +212,6 @@ Due to the TLS protocol definition, a client will only send a certificate,
 if explicitly asked by the server. Use the SSL_VERIFY_PEER flag of the
 SSL_CTX_set_verify(3) function to enable the use of client certificates.
 
-* Why does compilation fail due to an undefined symbol NID_uniqueIdentifier?
-
-For OpenSSL 0.9.7 the OID table was extended and corrected. In earlier
-versions, uniqueIdentifier was incorrectly used for X.509 certificates.
-The correct name according to RFC2256 (LDAP) is x500UniqueIdentifier.
-Change your code to use the new name when compiling against OpenSSL 0.9.7.
-
 * I think I've detected a memory leak, is this a bug?
 
 In most cases the cause of an apparent memory leak is an OpenSSL internal table
