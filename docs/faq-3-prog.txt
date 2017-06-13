@@ -2,15 +2,18 @@ Programming with OpenSSL
 
 * Is OpenSSL thread-safe?
 
-Provided an application sets up the thread callback functions, the
-answer is yes. There are limitations; for example, an SSL connection
+Yes but with some limitations; for example, an SSL connection
 cannot be used concurrently by multiple threads.  This is true for
 most OpenSSL objects.
 
-To do this, your application must call CRYPTO_set_locking_callback(3)
-and one of the CRYPTO_THREADID_set... API's.  See the OpenSSL threads
-manpage for details and "note on multi-threading" in the INSTALL file in
-the source distribution.
+For version 1.1.0 and later, there is nothing further you need do.
+
+For earlier versions than 1.1.0, it is necessary for your
+application to set up the thread callback functions.  To do this,
+your application must call CRYPTO_set_locking_callback(3) and one of
+the CRYPTO_THREADID_set... API's.  See the OpenSSL threads manpage for
+details and "note on multi-threading" in the INSTALL file in the source
+distribution.
 
 * I've compiled a program under Windows and it crashes: why?
 
