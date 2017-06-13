@@ -92,12 +92,6 @@ or file and the relevant program configured to read it. The OpenSSL program
 'verify' behaves in a similar way and issues similar error messages: check
 the verify(1) program manual page for more information.
 
-* Why can I only use weak ciphers when I connect to a server using OpenSSL?
-
-This is almost certainly because you are using an old "export grade" browser
-which only supports weak encryption. Upgrade your browser to support 128 bit
-ciphers.
-
 * How can I create DSA certificates?
 
 Check the CA.pl(1) manual page for a DSA certificate example.
