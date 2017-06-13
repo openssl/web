@@ -86,30 +86,6 @@ relevant updates in packages up to and including 0.9.6b.
 A possible way around this is to persuade Red Hat to produce a non-US
 version of Red Hat Linux.
 
-* Why does the OpenSSL compilation fail on MacOS X?
-
-If the failure happens when trying to build the "openssl" binary, with
-a large number of undefined symbols, it's very probable that you have
-OpenSSL 0.9.6b delivered with the operating system (you can find out by
-running '/usr/bin/openssl version') and that you were trying to build
-OpenSSL 0.9.7 or newer.  The problem is that the loader ('ld') in
-MacOS X has a misfeature that's quite difficult to go around.
-Look in the file PROBLEMS for a more detailed explanation and for possible
-solutions.
-
-* Why does the OpenSSL test suite fail on MacOS X?
-
-If the failure happens when running 'make test' and the RC4 test fails,
-it's very probable that you have OpenSSL 0.9.6b delivered with the
-operating system (you can find out by running '/usr/bin/openssl version')
-and that you were trying to build OpenSSL 0.9.6d.  The problem is that
-the loader ('ld') in MacOS X has a misfeature that's quite difficult to
-go around and has linked the programs "openssl" and the test programs
-with /usr/lib/libcrypto.dylib and /usr/lib/libssl.dylib instead of the
-libraries you just built.
-Look in the file PROBLEMS for a more detailed explanation and for possible
-solutions.
-
 * Why does the OpenSSL test suite fail in BN_sqr test [on a 64-bit platform]?
 
 Failure in BN_sqr test is most likely caused by a failure to configure the
