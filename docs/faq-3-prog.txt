@@ -139,17 +139,6 @@ Rules (DER): these uniquely specify how a given structure is encoded.
 Therefore, because DER is a special case of BER, DER is an acceptable encoding
 for BER.
 
-* I've tried using &lt;M_some_evil_pkcs12_macro&gt; and I get errors why?
-
-This usually happens when you try compiling something using the PKCS12
-macros with a C++ compiler. There is hardly ever any need to use the
-PKCS12 macros in a program, it is much easier to parse and create
-PKCS12 files using the PKCS12_parse(3)
-and PKCS12_create(3) functions
-documented in doc/openssl.txt and with examples in demos/pkcs12. The
-'pkcs12' application has to use the macros because it prints out
-debugging information.
-
 * I've called &lt;some function&gt; and it fails, why?
 
 Before submitting a report or asking in one of the mailing lists, you
