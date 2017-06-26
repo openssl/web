@@ -62,6 +62,14 @@ is that no default filename is known because neither RANDFILE
 nor HOME is set.  (Versions up to 0.9.6 used file ".rnd" in the
 current directory in this case, but this has changed with 0.9.6a.)
 
+* Why do I get errors when trying to decrypt 1.0.2 data with 1.1.0?
+
+A message digest is used to create the encrypt/decrypt key from
+a human-entered passphrase.  In OpenSSL 1.1.0 we changed from MD5 to
+SHA-256.  We did this as part of an overall change to move away from
+the now-insecure and broken MD5 algorithm.  If you have old files,
+use the "-md md5" flag to decrypt them.
+
 * How do I create certificates or certificate requests?
 
 Check out the CA.pl(1) manual page. This provides a simple wrapper round
