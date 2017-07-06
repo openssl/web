@@ -207,7 +207,10 @@ In most cases the cause of an apparent memory leak is an OpenSSL internal table
 that is allocated when an application starts up. Since such tables do not grow
 in size over time they are harmless.
 
-These internal tables can be freed up when an application closes using various
+Starting with OpenSSL 1.1.0, everything should be cleaned up on exit (or
+when the shared library unloads).  If not, please find out what resource is
+leaked and report an issue.  In previous releases, internal tables can be
+freed up when an application closes using various
 functions.  Currently these include following:
 
 Thread-local cleanup functions include ERR_remove_state(3).
