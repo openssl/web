@@ -10,27 +10,34 @@
 	  <header><h2>FIPS-140</h2></header>
 	  <div class="entry-content">
 
-	    <p>The OpenSSL project has collaborated with the <a
-	      href="http://oss-institute.org/"> Open Source Software Institute</a>
-	    on the groundbreaking OpenSSL FIPS Object Module and other
-	    validations. For a basic introduction and some general
+	    <p>
+	    For a basic introduction and some general
 	    background see <a
 	      href="fipsnotes.html">Important Notes About OpenSSL and FIPS 140-2</a>.
 	    For information about sponsorship and support, see
-	    <a href="fipsvalidation.html">OpenSSL and FIPS 140-2</a>
+	    <a href="fipsvalidation.html">OpenSSL and FIPS 140-2</a>.
 	    </p>
 
 
 	    <p>The most recent open source based validation of a cryptographic
-	    module (Module) compatible with the OpenSSL libraries is v2.0.9,
+	    module (Module) compatible with the OpenSSL 1.0.1 and 1.0.2 libraries is v2.0.16,
 	    FIPS 140-2 certificate <a
 	    href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1747">#1747</a>.
+	    For convoluted bureaucratic reasons the same module is also available under the validations
+	    <a
+            href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#2398">#2398</a>
+	    (revision 2.0.16) and
+	    <a
+            href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#2473">#2473</a>
+	    (revision 2.0.10).
 	    This Module is documented in the
 	    <a href="UserGuide-2.0.pdf">2.0 User Guide</a>.
 	    </p>
 
-	    <p>Thanks to multiple platform sponsorships the 2.0 validation
-	    includes the largest number of formally tested platforms for any
+	    <p>In mid-year 2017 work began on a new FIPS module for use with OpenSSL release 1.1.
+
+	    <p>Thanks to multiple platform sponsorships the 2.0 validations
+	    include the largest number of formally tested platforms for any
 	    validated module.</p>
 
 	    The <a href="/source/openssl-fips-2.0.9.tar.gz">source code</a>,
