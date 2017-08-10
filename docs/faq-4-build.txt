@@ -1,5 +1,19 @@
 Questions on Building and Testing OpenSSL
 
+* Does OpenSSL use AES-NI or other speedups?
+
+The short answer is yes, unless you configure with "no-asm."
+
+What OpenSSL does is not obvious.  The INSTALL document talks about the
+no-asm configuration option.  Details about what the assembler code does
+in terms of optimization are only available by reading the source code
+comments in the various Perl files that generate the assembler, mostly.
+
+On x86, the assembly code uses the CPUID instruction (see the
+OPENSSL_ia32cap.pod manpage) to determine if various instructions (AES,
+SSE, MMX, etc) are available and will use them if so.  For other processors,
+similar tests are performed if at all possible.
+
 * Why does Clang sanitizer give warnings?
 
 You need to build with -DPEDANTIC to run sanitized tests, otherwise
