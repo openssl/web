@@ -278,7 +278,6 @@
       unlikely. Namely multiple clients have to choose the curve in question and
       the server has to share the private key among them, neither of which is
       default behaviour. Even then only clients that chose the curve will be
-      affected.ctures using a callback which do not handle NULL value are
       affected.
     </description>
     <advisory url="/news/secadv/20161110.txt"/>
