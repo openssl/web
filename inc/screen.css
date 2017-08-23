@@ -141,7 +141,6 @@ body > header h2 {
   color: black;
   position: relative;
   top: -0.8em;
-  left: 5em;
 }
 
 #header-open-text {
@@ -655,13 +654,12 @@ body > header h1 a, body > header h1 a:visited, body > header h1 a:hover {
   text-decoration: none;
 }
 body > header h2 {
-  margin: .2em 0 0;
+  margin: .2em 0 0 5em;
   font-weight: 300;
   font-size: 0.8em;
   color: black;
   position: relative;
   top: -0.8em;
-  left: 5em;
 }
 
 body > nav {
