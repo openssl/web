@@ -6,6 +6,40 @@
 -->
 
 <security updated="20170216">
+  <issue public="20170828">
+    <impact severity="Low"/>
+    <cve name="2017-3735"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <affects base="1.1.0" version="1.1.0c"/>
+    <affects base="1.1.0" version="1.1.0d"/>
+    <affects base="1.1.0" version="1.1.0e"/>
+    <affects base="1.1.0" version="1.1.0f"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <affects base="1.0.2" version="1.0.2i"/>
+    <affects base="1.0.2" version="1.0.2j"/>
+    <affects base="1.0.2" version="1.0.2k"/>
+    <affects base="1.0.2" version="1.0.2l"/>
+    <fixed base="1.0.2" version="1.0.2l-git" date="20170828"/>
+    <fixed base="1.1.0" version="1.1.0f-git" date="20170828"/>
+    <problemtype>out-of-bounds read</problemtype>
+    <title>Possible Overread in parsing X.509 IPAdressFamily</title>
+    <description>
+      While parsing an IPAdressFamily extension in an X.509 certificate,
+      it is possible to do a one-byte overread. This would result in
+      an incorrect text display of the certificate.
+    </description>
+    <advisory url="/news/secadv/20170828.txt"/>
+    <reported source="Google OSS-Fuzz"/>
+  </issue>
   <issue public="20170216">
     <impact severity="High"/>
     <cve name="2017-3733"/>

@@ -1,0 +1,38 @@
+
+OpenSSL Security Advisory [28 Aug 2017]
+========================================
+
+Malformed X.509 IPAdressFamily could cause OOB read (CVE-2017-3735)
+===================================================================
+
+Severity: Low
+
+If an X.509 certificate has a malformed IPAddressFamily extension,
+OpenSSL could do a one-byte buffer overread. The most likely result
+would be an erroneous display of the certificate in text format.
+
+As this is a low severity fix, no release is being made. The fix can be
+found in the source repository (1.0.2, 1.1.0, and master branches) in
+the X509v3_addr_get_afi function.  This bug has been present since 2006.
+
+This issue was found by Google's OSS-Fuzz project on August 22.
+The fix was developed by Rich Salz of the OpenSSL development team.
+
+Note
+====
+
+Support for version 1.0.1 ended on 31st December 2016. Support for versions
+0.9.8 and 1.0.0 ended on 31st December 2015. Those versions are no longer
+receiving security updates.
+
+References
+==========
+
+URL for this Security Advisory:
+https://www.openssl.org/news/secadv/20170126.txt
+
+Note: the online version of the advisory may be updated with additional details
+over time.
+
+For details of OpenSSL severity classifications please see:
+https://www.openssl.org/policies/secpolicy.html
