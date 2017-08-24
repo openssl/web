@@ -31,11 +31,11 @@ SRCLISTS = \
 	   source/old/fips/index.inc \
 
 
-all: suball sitemap
+all: suball
 
 suball: $(SIMPLE) $(SRCLISTS) manmaster
 
-relupd: suball manpages sitemap
+relupd: suball manpages
 
 clean:
 	rm -f $(SIMPLE) $(SRCLISTS)
@@ -68,7 +68,7 @@ manmaster:
 newsflash.inc: news/newsflash.inc
 	@rm -f $@
 	head -7 $? >$@
-sitemap:
+sitemap sitemap.txt:
 	@rm -f sitemap.txt
 	./bin/mk-sitemap > sitemap.txt
 
