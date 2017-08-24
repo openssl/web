@@ -137,21 +137,23 @@ body > header h1 {
 }
 
 body > header h2 {
+  margin-left: 4.7em;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.5em;
   color: black;
   position: relative;
-  top: -0.8em;
+  top: -1em;
 }
 
 #header-open-text {
   font-weight: 400;
-  font-size: 1.8em;
+  font-size: 1.7em;
   color: #721412;
 }
 
 #header-ssl-text {
   font-weight: bold;
-  font-size: 1.8em;
+  font-size: 1.7em;
   color: black;
 }
 
@@ -654,12 +656,12 @@ body > header h1 a, body > header h1 a:visited, body > header h1 a:hover {
   text-decoration: none;
 }
 body > header h2 {
-  margin: .2em 0 0 5em;
+  margin: .2em 0 0 4.7em;
   font-weight: 300;
   font-size: 0.8em;
   color: black;
   position: relative;
-  top: -0.8em;
+  top: -1em;
 }
 
 body > nav {
