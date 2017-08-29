@@ -5,6 +5,8 @@
      1.0.0 on 20100329
 -->
 
+<!-- The updated attribute should be the same as the first public issue,
+     unless an old entry was updated. -->
 <security updated="20170828">
   <issue public="20170828">
     <impact severity="Low"/>
@@ -28,8 +30,8 @@
     <affects base="1.0.2" version="1.0.2j"/>
     <affects base="1.0.2" version="1.0.2k"/>
     <affects base="1.0.2" version="1.0.2l"/>
-    <fixed base="1.0.2" version="1.0.2l-git" date="20170828"/>
-    <fixed base="1.1.0" version="1.1.0f-git" date="20170828"/>
+    <fixed base="1.0.2" version="1.0.2m-dev" date="20170828"/>
+    <fixed base="1.1.0" version="1.1.0g-dev" date="20170828"/>
     <problemtype>out-of-bounds read</problemtype>
     <title>Possible Overread in parsing X.509 IPAdressFamily</title>
     <description>
