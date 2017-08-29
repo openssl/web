@@ -2,7 +2,7 @@
 OpenSSL Security Advisory [28 Aug 2017]
 ========================================
 
-Malformed X.509 IPAdressFamily could cause OOB read (CVE-2017-3735)
+Malformed X.509 IPAddressFamily could cause OOB read (CVE-2017-3735)
 ===================================================================
 
 Severity: Low
