@@ -12,4 +12,4 @@ find . -type f -mmin -60 \
     | fgrep -v .git \
     | fgrep -v ./docs/ \
     | sed -e s@^./@https://www.openssl.org/@ \
-    | ~rsalz/bin/akamai-purge delete
+    | ~rsalz/bin/akamai-purge invalidate
