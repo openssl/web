@@ -1,0 +1,15 @@
+#! /bin/sh
+
+# Script to purge everything more recent than one hour
+
+# Set HOME because 'sudo' might not and the credentials
+cd /var/www/openssl
+HOME=~openssl ; export HOME
+
+# If I were more of a find guru I could merge the find/fgrep/fgrep
+# into a single find line.  Oh well.
+find . -type f -mmin -60 \
+    | fgrep -v .git \
+    | fgrep -v ./docs/ \
+    | sed -e s@^./@https://www.openssl.org/@ \
+    | ~rsalz/bin/akamai-purge delete
