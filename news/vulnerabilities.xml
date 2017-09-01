@@ -4238,7 +4238,7 @@ service by sending invalid encodings.
     </description>
   </issue>
 
-  <issue>
+  <issue public="20020808">
     <cve name="2002-1568"/>
     <affects base="0.9.6" version="0.9.6e"/>
     <fixed base="0.9.6" version="0.9.6f" date="20020808"/>
