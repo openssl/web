@@ -142,6 +142,19 @@ Rules (DER): these uniquely specify how a given structure is encoded.
 Therefore, because DER is a special case of BER, DER is an acceptable encoding
 for BER.
 
+* I tried to set a cipher list with a valid cipher, but the call fails, why?
+
+OpenSSL 1.1.0 introduced the concept of a &ldquo;security level&rdquo;, allowing
+for a configuration to be made more secure by excluding algorithms
+and key sizes that are known to be flawed or susceptible to brute force at
+a given level of work.  SSL_CTX_set_security_level(3) can be used to
+programmatically set a security level, or the keyword "@SECLEVEL=N" can
+be used in a TLS cipher string, for values of N from 0 to 5 (inclusive).
+The default is level 1, which excludes MD5 as the MAC and algorithms
+with less than 80 bits of security.  A value of 0 can be used, with appropriate
+caution, to produce behavior compatible with previous versions of OpenSSL
+(to the extent possible), but this is not recommended for general usage.
+
 * I've called &lt;some function&gt; and it fails, why?
 
 Before submitting a report or asking in one of the mailing lists, you
