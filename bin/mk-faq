@@ -70,7 +70,7 @@ foreach my $f ( @ARGV ) {
         } elsif ( /(.*)@@@(.*)@@@(.*)/ ) {
             # URL: @@@http:....@@@
             print "$1<a href='$2'>$2</a>$3\n";
-        } elsif ( /(\w+)\((\d)\)/ ) {
+        } elsif ( /([-\.\w]+)\((\d)\)/ ) {
             # Manpage "foo(1)"
             my ($page, $sec) = ($1, $2);
             my $link = "/docs/manmaster/man$sec/$page.html";
