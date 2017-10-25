@@ -1,26 +1,3 @@
 #! /bin/sh
 
-# Script to purge everything more recent than one hour
-
-# Set HOME because 'sudo' might not find the credentials
-cd /var/www/openssl
-HOME=~openssl ; export HOME
-
-# Always purge the blog top
-cat <<EOF >>/tmp/p$$
-https://www.openssl.org/
-https://www.openssl.org/index.html
-https://www.openssl.org/blog
-https://www.openssl.org/blog/
-https://www.openssl.org/blog/index.html
-EOF
-
-# If I were more of a find guru I could merge the find/fgrep/fgrep
-# into a single find line.  Oh well.
-find . -type f -mmin -60 \
-    | fgrep -v .git \
-    | fgrep -v ./docs/ \
-    | sed -e s@^./@https://www.openssl.org/@ >>/tmp/p$$
-    
-~rsalz/bin/akamai-purge invalidate < /tmp/p$$
-rm /tmp/p$$
+/opt/openssl/maker/triggered-makers/akamai-purge
