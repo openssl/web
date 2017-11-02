@@ -11,14 +11,17 @@ If an X.509 certificate has a malformed IPAddressFamily extension,
 OpenSSL could do a one-byte buffer overread. The most likely result
 would be an erroneous display of the certificate in text format.
 
-As this is a low severity fix, no release is being made. The fix can be
-found in the source repository (1.0.2, 1.1.0, and master branches); see
-https://github.com/openssl/openssl/pull/4276. This bug has been present
-since 2006.
+This bug has been present since 2006.
 
+OpenSSL 1.1.0 users should upgrade to 1.1.0g
+OpenSSL 1.0.2 users should upgrade to 1.0.2m
 
 This issue was found by Google's OSS-Fuzz project on August 22.
 The fix was developed by Rich Salz of the OpenSSL development team.
+
+UPDATE 02 November 2017: At the time of the original security advisory the fix
+was only available in the development versions. The advisory has now been
+updated with the release information.
 
 Note
 ====
