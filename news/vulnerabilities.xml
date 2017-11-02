@@ -7,10 +7,10 @@
 
 <!-- The updated attribute should be the same as the first public issue,
      unless an old entry was updated. -->
-<security updated="20170828">
-  <issue public="20170828">
-    <impact severity="Low"/>
-    <cve name="2017-3735"/>
+<security updated="20171102">
+  <issue public="20171102">
+    <impact severity="Moderate"/>
+    <cve name="2017-3736"/>
     <affects base="1.1.0" version="1.1.0"/>
     <affects base="1.1.0" version="1.1.0a"/>
     <affects base="1.1.0" version="1.1.0b"/>
@@ -18,6 +18,7 @@
     <affects base="1.1.0" version="1.1.0d"/>
     <affects base="1.1.0" version="1.1.0e"/>
     <affects base="1.1.0" version="1.1.0f"/>
+    <affects base="1.0.2" version="1.0.2"/>
     <affects base="1.0.2" version="1.0.2a"/>
     <affects base="1.0.2" version="1.0.2b"/>
     <affects base="1.0.2" version="1.0.2c"/>
@@ -30,8 +31,54 @@
     <affects base="1.0.2" version="1.0.2j"/>
     <affects base="1.0.2" version="1.0.2k"/>
     <affects base="1.0.2" version="1.0.2l"/>
-    <fixed base="1.0.2" version="1.0.2m-dev" date="20170828"/>
-    <fixed base="1.1.0" version="1.1.0g-dev" date="20170828"/>
+    <fixed base="1.0.2" version="1.0.2m" date="20171102"/>
+    <fixed base="1.1.0" version="1.1.0g" date="20171102"/>
+    <problemtype>carry-propagating bug</problemtype>
+    <title>bn_sqrx8x_internal carry bug on x86_64</title>
+    <description>
+      There is a carry propagating bug in the x86_64 Montgomery squaring procedure. No
+      EC algorithms are affected. Analysis suggests that attacks against RSA and DSA
+      as a result of this defect would be very difficult to perform and are not
+      believed likely. Attacks against DH are considered just feasible (although very
+      difficult) because most of the work necessary to deduce information
+      about a private key may be performed offline. The amount of resources
+      required for such an attack would be very significant and likely only
+      accessible to a limited number of attackers. An attacker would
+      additionally need online access to an unpatched system using the target
+      private key in a scenario with persistent DH parameters and a private
+      key that is shared between multiple clients.
+
+      This only affects processors that support the BMI1, BMI2 and ADX extensions like
+      Intel Broadwell (5th generation) and later or AMD Ryzen.
+    </description>
+    <advisory url="/news/secadv/20171102.txt"/>
+    <reported source="Google OSS-Fuzz"/>
+  </issue>
+  <issue public="20170828">
+    <impact severity="Low"/>
+    <cve name="2017-3735"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <affects base="1.1.0" version="1.1.0c"/>
+    <affects base="1.1.0" version="1.1.0d"/>
+    <affects base="1.1.0" version="1.1.0e"/>
+    <affects base="1.1.0" version="1.1.0f"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <affects base="1.0.2" version="1.0.2i"/>
+    <affects base="1.0.2" version="1.0.2j"/>
+    <affects base="1.0.2" version="1.0.2k"/>
+    <affects base="1.0.2" version="1.0.2l"/>
+    <fixed base="1.0.2" version="1.0.2m" date="20171102"/>
+    <fixed base="1.1.0" version="1.1.0g" date="20171102"/>
     <problemtype>out-of-bounds read</problemtype>
     <title>Possible Overread in parsing X.509 IPAdressFamily</title>
     <description>
