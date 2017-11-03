@@ -4,7 +4,7 @@
 # Format is two fields, colon-separated; the first line is the column
 # headings.  URL paths must all be absolute.
 Date: Item
-02-Nov-2017: <a href="/news/secadv/20171102.html">Security Advisory</a>: Internal carry bug on X86_64
+02-Nov-2017: <a href="/news/secadv/20171102.txt">Security Advisory</a>: Internal carry bug on X86_64
 02-Nov-2017: OpenSSL 1.1.0g is now available, including bug and security fixes
 02-Nov-2017: OpenSSL 1.0.2m is now available, including bug and security fixes
 27-Oct-2017: <a href="/policies/trademark.html">Trademark policy created</a>
