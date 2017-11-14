@@ -26,7 +26,7 @@
 
 	    <ul>
 
-	      <li>OpenSSL itself is not validated, and never will be.  Instead
+	      <li>OpenSSL itself is not validated.  Instead
 	      a special carefully defined software component called the
 	      OpenSSL FIPS Object Module has been created.  This Module was
 	      designed for compatibility with OpenSSL so that products using
@@ -43,14 +43,7 @@
 	      <li>If even the tiniest source code or build process changes are
 	      required for your intended application, you cannot use the open
 	      source based validated module directly.  You must obtain your
-	      own validation.  This situation is common; see "Private Label"
-	      validation, below.</li>
-
-	      <li>New FIPS 140-2 validations (of any type) are slow (6-12
-	      months is typical), expensive (US$50,000 is probably typical for
-	      an uncomplicated validation), and unpredictable (completion
-	      dates are not only uncertain when first beginning a validation,
-	      but remain so during the process).</li>
+	      own validation.</li>
 
 	    </ul>
 
@@ -68,15 +61,6 @@
 	    vendors, for marketing or risk management reasons, have obtained
 	    private label validations for binaries produced from unmodified
 	    (or only cosmetically modified) source code.</p>
-
-	    <p>The OSF would really prefer to work on open source based
-	    validations of benefit to the OpenSSL user community at large, but
-	    financial support for that objective is intermittent at best.  On
-	    the other hand many vendors are interested in private label
-	    validations and the OSF will assist in such efforts on a paid
-	    basis.  We've done enough of these to be very cost competitive,
-	    and for uncomplicated validations we typically work on a fixed
-	    price basis.</p>
 
 	    <p><strong>Update:</strong> As of 2015 we are no longer performing private label validations. We are still adding new platforms to the <a
 	      href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1747">#1747</a>
