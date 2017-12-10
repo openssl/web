@@ -9,20 +9,9 @@
 	<article>
 	  <header><h2>Important Notes about OpenSSL and FIPS 140</h2></header>
 	  <div class="entry-content">
-	    <p>Please please read the <a href="fips/UserGuide.pdf">User Guide</a>.
-	    Nothing will make sense otherwise (it still may not afterwards,
-	    but at least you've a better chance).</p>
-
-	    <p>No new validations are currently planned.</p>
+	    <p>Please please read the <a href="fips/UserGuide.pdf">User Guide</a>.</p>
 
 	    <h3>FIPS What?  Where Do I Start?</h3>
-
-	    <p>Ok, so your company needs FIPS validated cryptography to land
-	    that big sale, and your product currently uses OpenSSL. You
-	    haven't worked up the motivation to wade through the entire <a
-	    href="fips/UserGuide.pdf">User Guide</a> and want the quick "executive
-	    summary".  Here is a grossly oversimplified account:</p>
-	    <p>
 
 	    <ul>
 
@@ -33,10 +22,9 @@
 	      the OpenSSL API can be converted to use validated cryptography
 	      with minimal effort.</li>
 
-	      <li>The OpenSSL FIPS Object Module validation is unique among
-	      all FIPS 140-2 validations in that the product is "delivered" in
-	      source code form, meaning that if you can use it exactly as is
-	      and can build it (according to the very specific documented
+	      <li>The OpenSSL FIPS Object Module validation 
+	      is "delivered" in source code form, meaning that if you can use it 
+	      exactly as is and can build it (according to the very specific documented
 	      instructions) for your platform, then you can use it as
 	      validated cryptography on a "vendor affirmed" basis.</li>
 
@@ -65,29 +53,6 @@
             We are not currently taking on any additional validation work
             nor adding new platforms to the existing "1747" validation.
 
-	    <h3>Performance at Startup</h3>
-
-	    <p>We have had many complaints about poor performance of the
-	    Power-On Self Test (POST) on low powered computers, as with some
-	    embedded devices. In the worst cases the POST can take several
-	    minutes. Such devices were not included as test platforms at the
-	    time the code was originally written.</p>
-	    <p>The current FIPS validated code performs a very comprehensive
-	    set of mandatory algorithm self tests when it enter FIPS mode
-	    covering many algorithm combinations. There is a DSA parameter
-	    generation self test which is especially CPU intensive.</p>
-	    <p>As a result of the POST performance issue we revisited the KAT
-	    (Known Answer Test) requirements in the POST process that were
-	    burning up most of those cycle.  In consultation with a CMVP test
-	    lab we determined that it should be possible to substantially
-	    reduce that performance penalty in a new validation.
-	    Unfortunately such a change can only be undertaken in the context
-	    of a new validation, and not as a change letter modification.</p>
-	    <p>Another factor affecting performance is the use (or not) of
-	    platform specific optimizations.  The x86/x64 Windows and Linux
-	    code makes use of assembly language optimizations for FIPS
-	    cryptographic algorithms. The C only version is much slower and so
-	    the POST is slower too.</p>
 	  </div>
 	  <footer>
 	    You are here: <a href="/">Home</a>
