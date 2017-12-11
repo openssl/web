@@ -1,13 +1,10 @@
 <!-- sidebar.inc -->
 <aside class="sidebar">
   <section>
-    <h1><a href=".">Policies</a></h1>
+    <h1><a href=".">Project</a></h1>
     <ul>
       <li>
 	<a href="roadmap.html">Roadmap</a>
-      </li>
-      <li>
-        <a href="trademark.html">Trademark Policy</a>
       </li>
       <li>
         <a href="platformpolicy.html">Platform Policy</a>
@@ -17,9 +14,6 @@
       </li>
       <li>
 	<a href="secpolicy.html">Security Policy</a>
-      </li>
-      <li>
-	<a href="omc-bylaws.html">OMC (project) Bylaws</a>
       </li>
       <li>
         <a href="committers.html">Guidelines for Committers</a>
