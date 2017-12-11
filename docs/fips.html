@@ -11,30 +11,25 @@
 	  <div class="entry-content">
 
 	    <p>
-	    For a basic introduction and some general
-	    background see <a
-	      href="fipsnotes.html">Important Notes About OpenSSL and FIPS 140-2</a>.
-	    For information about sponsorship and support, see
-	    <a href="fipsvalidation.html">OpenSSL and FIPS 140-2</a>.
+            For a basic introduction and some general,
+            <a href="#background">see below</a>.
 	    </p>
-
 
 	    <p>The most recent open source based validation of a cryptographic
-	    module (Module) compatible with the OpenSSL 1.0.1 and 1.0.2 libraries is v2.0.16,
-	    FIPS 140-2 certificate <a
+	    module (Module) compatible with the OpenSSL 1.0.1 and 1.0.2
+	    libraries is v2.0.16, FIPS 140-2 certificate <a
 	    href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1747">#1747</a>.
-	    For convoluted bureaucratic reasons the same module is also available under the validations
-	    <a
-            href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#2398">#2398</a>
-	    (revision 2.0.16) and
-	    <a
-            href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#2473">#2473</a>
-	    (revision 2.0.10).
 	    This Module is documented in the
 	    <a href="fips/UserGuide-2.0.pdf">2.0 User Guide</a>.
+	    For convoluted bureaucratic reasons the same module is also
+	    available under the validations <a
+            href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#2398">#2398</a>
+	    (revision 2.0.16) and <a
+            href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#2473">#2473</a>
+	    (revision 2.0.10).
 	    </p>
 
-	    <p>Thanks to multiple platform sponsorships the 2.0 validations
+	    <p>Thanks to multiple platform sponsorships, the 2.0 validations
 	    include the largest number of formally tested platforms for any
 	    validated module.</p>
 
@@ -43,7 +38,6 @@
             <a href="fips/SecurityPolicy-2.0.16.pdf">Security Policy</a>
             are available.
 	    Here is the complete set of files:</p>
-
 
 	    <table>
 	      <tr>
@@ -54,6 +48,33 @@
 	      <!--#include virtual="fips.inc" -->
 	    </table>
 	    <p>&nbsp;</p>
+
+            <h3><a name="background">Background</a></h3>
+
+	    <p>Please please read the <a
+              href="fips/UserGuide.pdf">User Guide</a>.</p>
+
+	    <ul>
+
+	      <li>OpenSSL itself is not validated.  Instead a special
+	      carefully defined software component called the OpenSSL FIPS
+	      Object Module has been created.  This Module was designed for
+	      compatibility with OpenSSL so that products using the OpenSSL
+	      API can be converted to use validated cryptography with minimal
+	      effort.</li>
+
+	      <li>The OpenSSL FIPS Object Module validation is "delivered" in
+	      source code form, meaning that if you can use it exactly as is
+	      and can build it (according to the very specific documented
+	      instructions) for your platform, then you can use it as
+	      validated cryptography on a "vendor affirmed" basis.</li>
+
+	      <li>If even the tiniest source code or build process changes are
+	      required for your intended application, you cannot use the open
+	      source based validated module directly.  You must obtain your
+	      own validation.</li>
+
+	    </ul>
 
 	  </div>
 	  <footer>
