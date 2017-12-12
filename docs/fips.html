@@ -10,18 +10,23 @@
 	  <header><h2>FIPS-140</h2></header>
 	  <div class="entry-content">
 
-	    <p>
-            For a basic introduction and some general information,
-            <a href="#background">see below</a>.
-	    </p>
+	    <p>For a basic introduction,
+	    <a href="#background">see below</a>.  Thanks to multiple platform
+	    sponsorships, the 2.0 validations include the largest number of
+	    formally tested platforms for any validated module.</p>
 
 	    <p>The most recent open source based validation of a cryptographic
 	    module (Module) compatible with the OpenSSL 1.0.1 and 1.0.2
 	    libraries is v2.0.16, FIPS 140-2 certificate <a
 	    href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1747">#1747</a>.
 	    This Module is documented in the
-	    <a href="fips/UserGuide-2.0.pdf">2.0 User Guide</a>.
-	    For convoluted bureaucratic reasons the same module is also
+	    <a href="fips/UserGuide-2.0.pdf">2.0 User Guide</a>;
+	    the <a href="/source/openssl-fips-2.0.16.tar.gz">source code</a>,
+	    and <a href="fips/SecurityPolicy-2.0.16.pdf">Security Policy</a>
+            are also available.
+
+            <p>
+	    For convoluted bureaucratic reasons, the same module is also
 	    available under the validations <a
             href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#2398">#2398</a>
 	    (revision 2.0.16) and <a
@@ -29,15 +34,10 @@
 	    (revision 2.0.10).
 	    </p>
 
-	    <p>Thanks to multiple platform sponsorships, the 2.0 validations
-	    include the largest number of formally tested platforms for any
-	    validated module.</p>
-
-	    The <a href="/source/openssl-fips-2.0.16.tar.gz">source code</a>,
-	    <a href="fips/UserGuide-2.0.pdf">User Guide</a>, and
-            <a href="fips/SecurityPolicy-2.0.16.pdf">Security Policy</a>
-            are available.
-	    Here is the complete set of files:</p>
+            <p>
+	    Here is the complete set of files. Note that if you are interested
+            in the "1747" validation, you only need the three files mentioned
+            above.</p>
 
 	    <table>
 	      <tr>
@@ -73,6 +73,9 @@
 	      required for your intended application, you cannot use the open
 	      source based validated module directly.  You must obtain your
 	      own validation.</li>
+
+              <li>None of the validations will work with OpenSSL 1.1.0 or
+              later.</li>
 
 	    </ul>
 
