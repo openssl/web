@@ -167,7 +167,7 @@ This example is wrong:
 
     s = sizeof( struct file );
 
-When declaring pointer data or a function that returns a pointer type, the
+When declaring pointer data or a function that returns a pointer type,
 the asterisk goes next to the data or function name, and not the type:
 
     char *openssl_banner;
@@ -255,7 +255,7 @@ Windows headers use X509 and X590_NAME. Consider using a prefix, as with
 CMS_ContentInfo, if the name is common or generic. Of course, you often
 don't find out until the code is ported to other platforms.
 
-A final word on struct's. OpenSSL has has historically made all struct
+A final word on struct's. OpenSSL has historically made all struct
 definitions public; this has caused problems with maintaining binary
 compatibility and adding features. Our stated direction is to have struct's
 be opaque and only expose pointers in the API. The actual struct definition
