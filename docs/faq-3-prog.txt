@@ -15,6 +15,18 @@ the CRYPTO_THREADID_set... API's.  See the OpenSSL threads manpage for
 details and "note on multi-threading" in the INSTALL file in the source
 distribution.
 
+* My code gets "undefined structure" when building with 1.1.0 or later.
+
+In 1.1.0 we made most of the structures opaque. This means that you can
+no longer access the fields directly, but must use settor and accessor
+functions. You can also no longer have direct instances of the objects,
+but can only use pointers to them.
+For example, the first line below is wrong; the second is correct:
+<PRE>
+    RSA r; /* wrong */
+    RSA *r; /* right */
+</PRE>
+
 * I've compiled a program under Windows and it crashes: why?
 
 This is usually because you've missed the comment in INSTALL.W32.
