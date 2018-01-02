@@ -170,3 +170,19 @@ at @@@https://www.openssl.org/community/omc.html@@@.
 
 Note that bugs only present in the openssl utility are not in general
 considered to be security issues.
+
+* How do I enable weak ciphers?
+
+Warning: known-insecure ciphers are disabled in newer releases of OpenSSL.
+There is good reason why these have been disabled by default. Consider upgrading
+to more robust options as these ciphers may only provide a facade of security.
+This option is not recommended for anyone other than maintainers of legacy
+applications.
+
+You must set the weak ciphers flag and override the default SECLEVEL with:
+
+<PRE>
+    ./config enable-weak-ssl-ciphers -DOPENSSL_TLS_SECURITY_LEVEL=0
+</PRE>
+
+Then follow compilation/install procedure like normal...
