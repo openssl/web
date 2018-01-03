@@ -177,12 +177,26 @@ Warning: known-insecure ciphers are disabled in newer releases of OpenSSL.
 There is good reason why these have been disabled by default. Consider upgrading
 to more robust options as these ciphers may only provide a facade of security.
 This option is not recommended for anyone other than maintainers of legacy
-applications.
+applications.  There are two parts to doing this.  First, you must configure
+with "enable-weak-ssl-ciphers."  This compiles the ciphers, but does not
+enable them at run-time; to do this you must set the "security level" flag.
+This can be done at build time to change the default, or it can be done at
+runtime to change it for particular SSL_CTX; see
+@@@https://www.openssl.org/docs/manmaster/man3/SSL_CTX_set_security_level.html@@@
+for details.
 
-You must set the weak ciphers flag and override the default SECLEVEL with:
+In other words, you should do one of the following:
 
 <PRE>
     ./config enable-weak-ssl-ciphers -DOPENSSL_TLS_SECURITY_LEVEL=0
 </PRE>
 
-Then follow compilation/install procedure like normal...
+or
+
+<PRE>
+    # To configure and build
+    ./config enable-weak-ssl-ciphers
+
+    /* In your code */
+    SSL_CTX_set_security_level(ctx, 0);
+</PRE>
