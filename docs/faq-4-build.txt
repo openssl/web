@@ -179,10 +179,15 @@ to more robust options as these ciphers may only provide a facade of security.
 This option is not recommended for anyone other than maintainers of legacy
 applications.
 
-You must set the weak ciphers flag and override the default SECLEVEL with:
+You must set the weak ciphers flag and override the default SECLEVEL, as with:
 
 <PRE>
     ./config enable-weak-ssl-ciphers -DOPENSSL_TLS_SECURITY_LEVEL=0
 </PRE>
 
 Then follow compilation/install procedure like normal...
+
+It is also possible to override the default SECLEVEL on a per-SSL or
+per-SSL_CTX basis, if changing the default to 0 (insecure) is not
+desired.  This is done by appending "@SECLEVEL=<N>" to the cipher string,
+as in "ALL@SECLEVEL=0".
