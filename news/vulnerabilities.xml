@@ -4356,6 +4356,8 @@ large session ID in SSL3.
   <issue public="20020730">
     <cve name="2002-0657"/>
     <advisory url="/news/secadv/20020730.txt"/>
+    <affects base="0.9.7" version="0.9.7-beta3"/>    
+    <fixed base="0.9.7" version="0.9.7" date="20021210"/>    
     <reported source="OpenSSL Group (A.L. Digital)"/>
     <description>
 A buffer overflow when Kerberos is enabled allowed attackers
@@ -4366,6 +4368,7 @@ flaw did not affect any released version of 0.9.6 or 0.9.7
 
   <issue public="20020730">
     <cve name="2002-0659"/>
+    <advisory url="/news/secadv/20020730.txt"/>
     <affects base="0.9.6" version="0.9.6a"/>
     <affects base="0.9.6" version="0.9.6b"/>
     <affects base="0.9.6" version="0.9.6c"/>
@@ -4944,7 +4947,8 @@ only when applications are compiled for debugging.
     <cve name="2007-5502"/>
     <advisory url="/news/secadv/20071129.txt"/>
     <reported source="Geoff Lowe"/>
-
+    <affects base="fips-1.1" version="fips-1.1.1"/>
+    <fixed base="fips-1.1" version="fips-1.1.2" date="20071201"/>
     <description>
 The PRNG implementation for the OpenSSL FIPS Object Module 1.1.1 does
 not perform auto-seeding during the FIPS self-test, which generates
@@ -6046,6 +6050,7 @@ server could use this flaw to crash a connecting client.  This issue only affect
 
   <issue public="20140214">
     <cve name="2014-0076"/>
+    <advisory url="https://www.openssl.org/news/secadv/20140605.txt"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
