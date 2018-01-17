@@ -4381,7 +4381,7 @@ service by sending invalid encodings.
   </issue>
 
   <issue public="20020808">
-    <cve name="2002-1568"/>
+    <cve name="2002-1568"/><!-- todo: needs advisory or git hash -->
     <affects base="0.9.6" version="0.9.6e"/>
     <fixed base="0.9.6" version="0.9.6f" date="20020808"/>
     <description>
@@ -4620,7 +4620,7 @@ use Kerberos ciphersuites and will therefore be unaffected.
   </issue>
 
   <issue public="20040930">
-    <cve name="2004-0975"/>
+    <cve name="2004-0975"/><!-- todo: needs advisory or git hash -->
     <affects base="0.9.7" version="0.9.7"/>
     <affects base="0.9.7" version="0.9.7a"/>
     <affects base="0.9.7" version="0.9.7b"/>
@@ -5085,7 +5085,7 @@ read, for example RSA public keys.
   </issue>
 
   <issue public="20090602">
-    <cve name="2009-1386"/>
+    <cve name="2009-1386"/><!-- todo: needs advisory or git hash -->
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -5127,7 +5127,7 @@ Implement RFC5746 to address vulnerabilities in SSL/TLS renegotiation.
   </issue>
 
   <issue public="20090205">
-    <cve name="2009-1387"/>
+    <cve name="2009-1387"/><!-- todo: needs advisory or git hash -->
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -5150,7 +5150,7 @@ remote attacker could use this flaw to cause a DTLS server to crash.
   </issue>
 
   <issue public="20090512">
-    <cve name="2009-1377"/>
+    <cve name="2009-1377"/><!-- todo: needs advisory or git hash -->
     <cve name="2009-1378"/>
     <cve name="2009-1379"/>
     <affects base="0.9.8" version="0.9.8"/>
@@ -5176,7 +5176,7 @@ excessive amounts of memory, or crash.
   </issue>
 
   <issue public="20100113">
-    <cve name="2009-4355"/>
+    <cve name="2009-4355"/><!-- todo: needs advisory or git hash -->
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -5201,7 +5201,7 @@ function.
   </issue>
 
   <issue public="20100223">
-    <cve name="2009-3245"/>
+    <cve name="2009-3245"/><!-- todo: needs advisory or git hash -->
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -5226,7 +5226,7 @@ or, possibly, execute arbitrary code
   </issue>
 
   <issue public="20100119">
-    <cve name="2010-0433"/>
+    <cve name="2010-0433"/><!-- todo: needs advisory or git hash -->
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -6031,7 +6031,7 @@ This issue only affected OpenSSL 1.0.1 versions.
   </issue>
 
  <issue public="20140106">
-    <cve name="2013-4353"/>
+   <cve name="2013-4353"/>
     <affects base="1.0.1" version="1.0.1"/>
     <affects base="1.0.1" version="1.0.1a"/>
     <affects base="1.0.1" version="1.0.1b"/>
@@ -6050,7 +6050,7 @@ server could use this flaw to crash a connecting client.  This issue only affect
 
   <issue public="20140214">
     <cve name="2014-0076"/>
-    <advisory url="https://www.openssl.org/news/secadv/20140605.txt"/>
+    <advisory url="/news/secadv/20140605.txt"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
