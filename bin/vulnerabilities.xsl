@@ -77,8 +77,9 @@
   <xsl:template match="issue">
     <dt>
       <xsl:apply-templates select="cve"/>
+      <xsl:text> </xsl:text>
       <xsl:if test="advisory/@url">
-	<xsl:text> </xsl:text><a href="{advisory/@url}">(OpenSSL advisory) </a>
+	<a href="{advisory/@url}">(OpenSSL advisory)</a><xsl:text> </xsl:text>
       </xsl:if>
       <xsl:if test="impact/@severity">
 	[<xsl:value-of select="impact/@severity"/> severity]
