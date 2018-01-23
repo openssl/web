@@ -12,99 +12,38 @@
 	  <header>
 	    <h2>Security Policy</h2>
 	    <h5>
-	      Last modified 28th September 2015
+	      Last modified 23rd January 2018
 	    </h5>
 	</header>
 	  <div class="entry-content">
 
-	    <h2>Introduction</h2>
-
-	    <p>Our policy on how we internally handle security issues
-	    is based on experience and has evolved over the years.</p>
-
 	    <h2>Reporting security issues</h2>
 
 	    <p>
-	    We have an email address which can be used to notify
-	    us of possible security vulnerabilities.  A subset of
-	    OpenSSL team members receive this mail, and messages
-	    can be sent using PGP encryption.  Full details are at <a
-	    href="/news/vulnerabilities.html">https://www.openssl.org/news/vulnerabilities.html</a>
+            If you wish to report a possible security issue in OpenSSL
+            please <a href="/news/vulnerabilities.html">notify us</a>.  
 	    </p>
 
+            <h2>Issue triage</h2>
+            
 	    <p>
-	    When we are notified about an issue we engage resources
-	    within the OpenSSL team to investigate and prioritise it.
-	    We may also utilise resources from the <a href="/community/thanks.html">employers</a> of our team
-	    members or committers, as well as others we have worked with before.
+            Notifications are received by a group of OpenSSL Management Committee
+            members.  We engage resources within
+	    OpenSSL to start the investigation and prioritisation.  We may work in private
+	    with individuals who are not on the OpenSSL Management Committee as
+	    well as other organisations and
+	    our <a href="/community/thanks.html">employers</a> where we believe
+	    this can help with the issue investigation, resolution, or
+	    testing.</p>
+
 	    </p>
 
-	    <h2>Background</h2>
+	    <h2>Issue severity</h2>
 
-	    <p>
-	    Everyone would like to get advance notice of security issues
-	    in OpenSSL.  This is a complex topic and we need to set out
-	    some background with our findings:
-	    </p>
-	    <ul>
-	      <li>The more people you tell in advance the higher the
-	      likelihood that a leak will occur.  We have seen this
-	      happen before, both with OpenSSL and other projects.</li>
-
-	      <li>A huge number of products from an equally large number of
-	      organisations use OpenSSL. It's not just secure websites, you're
-	      just as likely to find OpenSSL inside your smart TV, car, or
-	      fridge.</li>
-
-	      <li>We strongly believe that the right to advance patches/info
-	      should not be based in any way on paid membership to some forum.
-	      You can not pay us to get security patches in advance.</li>
-
-	      <li>We can benefit from peer review of the patches and advisory.
-	      Keeping security issues private means they can't get the level
-	      of testing or scrutiny that they otherwise would.</li>
-
-	      <li>It is not acceptable for organisations to use advance notice
-	      in marketing as a competitive advantage.  For example "if you
-	      had bought our product/used our service you would have been
-	      protected a week ago".</li>
-
-	      <li>There are actually not a large number of serious
-	      vulnerabilities in OpenSSL which make it worth spending
-	      significant time keeping our own list of vendors we trust, or
-	      signing framework agreements, or dealing with changes, and
-	      policing the policy.  This is a significant amount of effort per
-	      issue that is better spent on other things.</li>
-
-	      <li>We have previously used third parties to handle notification
-	      for us including CPNI, oCERT, or CERT/CC, but none were
-	      suitable.</li>
-
-	      <li>It's in the best interests of the Internet as a whole to get
-	      fixes for OpenSSL security issues out quickly. OpenSSL embargoes
-	      should be measured in days and weeks, not months or years.</li>
-
-	      <li>Many sites affected by OpenSSL issues will be running a
-	      version of OpenSSL they got from some vendor (and likely bundled
-	      with an operating system).  The most effective way for these
-	      sites to get protected is to get an updated version from that
-	      vendor.  Sites who use their own OpenSSL compilations should be
-	      able to handle a quick patch and recompile once the issue is
-	      public.</li>
-	    </ul>
-
-	    <h2>Internal handling of security issues</h2>
-
-	    <p>This leads us to our policy for security issues notified
-	    to us or found by our team which are not yet public.</p>
-
-	    <p>"private" means kept within the OpenSSL management 
-	    team.</p>
-
-	    <p>We will determine the risk of each issue being addressed.
-	    We will take into account our experience dealing with past
+	    <p>We will determine the risk of each issue,
+	    taking into account our experience dealing with past
 	    issues, versions affected, common defaults, and use cases.
-	    We divide the issues into the following categories:</p>
+	    We use the following severity categories:</p>
 
 	    <ul>
               <li><em>CRITICAL Severity.</em>
@@ -149,49 +88,55 @@
 	      releases.</li>
 	    </ul>
 
-	    <p>During the investigation of issues we may work with individuals
-	    and organisations who are not on the OpenSSL Management Committee.  
-	    We do this because past experience has shown that they can add value to our
-	    understanding of the issue and the ability to test patches.  In
-	    cases where protocols are affected this is the best way to
-	    mitigate the risk that a poorly reviewed update causes significant
-	    breakage, or to detect if issues are being exploited in the wild.
-	    We have a strict policy on what these organisations and
-	    individuals can do with the information and will review the need
-	    on a case by case basis.</p>
-
 	    <h2>Prenotification policy</h2>
 
-	    <p>Where we are planning an update that fixes security issues
-	    we will notify the openssl-announce list and update the openssl
+	    <ul><li>Where we are planning an update that fixes security issues
+	    we will notify the <a href="https://mta.openssl.org/mailman/listinfo/openssl-announce">openssl-announce list</a> and update the OpenSSL
 	    website to give our scheduled update release date and time and
 	    the severity of issues being fixed by the update.  No further
-	    information about the issues will be given.  This is to aid
-	    organisations that need to ensure they have staff available
-	    to handle triaging our announcement and what it means to
-	    their organisation.</p>
+	    information about the issues will be given.</li>
 
-	    <p>For updates that include critical or high severity issues we will
-	    also prenotify with more details and patches.  Our policy
-	    is to let the organisations that have a general purpose OS
-	    that uses OpenSSL have a few days notice in order to prepare
-	    packages for their users and feedback test results.</p>
-
-	    <p>We use the mailing list described at <a
-	    href="http://oss-security.openwall.org/wiki/mailing-lists/distros">http://oss-security.openwall.org/wiki/mailing-lists/distros</a>
-	    for this.  We may also include other organisations that
-	    would otherwise qualify for list membership.  We may
-	    withdraw notifying individual organisations from future
+	    <li>Where we are planning an update that include CRITICAL or HIGH severity issues we will
+	    also prenotify certain organisations with more details and
+	    patches. <ul>
+            <li>The organisations we prenotify include those that produce a
+	    general purpose OS
+	    that uses OpenSSL as included on
+	    <a
+	    href="http://oss-security.openwall.org/wiki/mailing-lists/distros">this
+	    list of Operating System distribution security contacts</a>.</li>
+	    <li>We may also include other organisations that are not listed but
+	    would otherwise qualify for list membership.  </li>
+            <li>We may
+	    withdraw notifying certain organisations from future
 	    prenotifications if they leak issues before they are public
-	    or over time do not add value (value can be added by providing
-	    feedback, corrections, test results, etc.)</p>
+	    or over time do not add value. </li></ul></li></ul>
 
-	    <p>Finally, note that not all security issues are notified to
-	    us directly; some come from third parties such as companies
-	    that pay for vulnerabilities, some come from country CERTs.
-	    These intermediaries, or the researchers themselves, may
-	    follow a different style of notification. This is within their
-	    rights and outside of the control of the OpenSSL team.</p>
+	    <p>Note: researchers or intermediaries who
+            notify us of issues may have their own prenotification policy in addition
+            to ours.</p>
+
+	    <h2>Principles</h2>
+
+            <p>The policy above is guided by our security principles:</p>
+            
+	    <ul>
+	      <li>We strongly believe that the right to advance patches/info
+	      should not be based in any way on paid membership to some forum.
+	      You can not pay us to get security patches in advance.</li>
+
+	      <li>It's in the best interests of the Internet as a whole to get
+	      fixes for OpenSSL security issues out quickly. OpenSSL embargoes
+	      should be measured in days and weeks, not months or years.</li>
+
+	      <li>Many sites affected by OpenSSL issues will be running a
+	      version of OpenSSL they got from some vendor (and likely bundled
+	      with an operating system).  The most effective way for these
+	      sites to get protected is to get an updated version from that
+	        vendor.</li>
+
+	    </ul>
+
 
 	  </div>
 	  <footer>
