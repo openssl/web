@@ -539,8 +539,34 @@ should be used. This is more commonly referred to as C90. ISO/IEC 9899:1999
 (also known as C99) is not supported on some platforms that OpenSSL is
 used on and therefore should be avoided.
 
+                Chapter 21: Assertions
 
-                Chapter 21: Miscellaneous
+Utilize ossl_assert() which ensures the following behavior in the case of a failed condition:
+
+        Debug build would abort
+        Production build would return from the function with an error
+
+Example code:
+
+        if (!ossl_assert(!should_not_happen)) {
+                /* push internal error onto error stack */
+                return BAD;
+        }
+
+When unavoidable, use assert(). Conditions like this may occur when no initial "if" condition exists like this: 
+
+        switch(val) {
+        case VAL1:
+                /* handle VAL1 */
+                break;
+        case VAL2:
+                /* handle VAL2 */
+                break;
+        default:
+                assert("We forgot to handle a value" == NULL);
+        }
+
+                Chapter 22: Miscellaneous
 
 Do not use ! to check if a pointer is NULL, or to see if a str...cmp
 function found a match.  For example, these are wrong:
