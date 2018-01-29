@@ -48,12 +48,11 @@ def merge_affects(issue,base):
         
 parser = OptionParser()
 parser.add_option("-i", "--input", help="input vulnerability file live openssl-web/news/vulnerabilities.xml", dest="input")
-parser.add_option("-o", "--outdir", help="output directory to write html files", dest="outdir")
 (options, args) = parser.parse_args()
 
 # We need an output directory not stdout because we might write multiple files
-if not options.input or not options.outdir:
-   print "needs input file and output directory"
+if not options.input:
+   print "needs input file"
    parser.print_help()
    exit();
 
@@ -110,5 +109,5 @@ preface += ", ".join( "<a href=\"#y%s\">%s</a>" %(year,year) for year in allyear
 preface += "</p>"
 preface += allissues
 
-with codecs.open(options.outdir+"/vulnerabilities.inc","w","utf-8") as htmlfile:
-    htmlfile.write(preface)
+sys.stdout.write(preface.encode('utf-8'))
+
