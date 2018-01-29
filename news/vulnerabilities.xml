@@ -4383,7 +4383,9 @@ service by sending invalid encodings.
   <issue public="20020808">
     <cve name="2002-1568"/>
     <affects base="0.9.6" version="0.9.6e"/>
-    <fixed base="0.9.6" version="0.9.6f" date="20020808"/>
+    <fixed base="0.9.6" version="0.9.6f" date="20020808">
+      <git hash="517a0e7fa0f5453c860a3aec17b678bd55d5aad7"/>
+    </fixed>
     <description>
 The use of assertions when detecting buffer overflow attacks
 allowed remote attackers to cause a denial of service (crash) by
@@ -4392,7 +4394,6 @@ OpenSSL to abort from a failed assertion, as demonstrated using SSLv2
 CLIENT_MASTER_KEY messages, which were not properly handled in
 s2_srvr.c.
     </description>
-    <git hash="517a0e7fa0f5453c860a3aec17b678bd55d5aad7"/>
   </issue>
 
   <issue public="20030219">
@@ -4642,9 +4643,10 @@ use Kerberos ciphersuites and will therefore be unaffected.
     <affects base="0.9.6" version="0.9.6k"/>
     <affects base="0.9.6" version="0.9.6l"/>
     <affects base="0.9.6" version="0.9.6m"/>
-    <fixed base="0.9.7" version="0.9.7f" date="20050322"/>
+    <fixed base="0.9.7" version="0.9.7f" date="20050322">
+          <git hash="5fee606442a6738fd06a756d7076be53b7b7734c"/>
+    </fixed>
     <fixed base="0.9.6" version="0.9.6-cvs" date="20041114"/>
-    <git hash="5fee606442a6738fd06a756d7076be53b7b7734c"/>
     <!-- der_chop was removed 20041114 -->
 
     <description>
@@ -5097,9 +5099,10 @@ read, for example RSA public keys.
     <affects base="0.9.8" version="0.9.8f"/>
     <affects base="0.9.8" version="0.9.8g"/>
     <affects base="0.9.8" version="0.9.8h"/>
-    <fixed base="0.9.8" version="0.9.8i" date="20080915"/>
+    <fixed base="0.9.8" version="0.9.8i" date="20080915">
+      <git hash="1cbf663a6c89dcf8f7706d30a8bae675e2e0199a"/>
+    </fixed>
     <reported source="Alex Lam"/>
-    <git hash="1cbf663a6c89dcf8f7706d30a8bae675e2e0199a"/>
     <description>
 Fix a NULL pointer dereference if a DTLS server recieved
 ChangeCipherSpec as first record.
@@ -5169,7 +5172,9 @@ remote attacker could use this flaw to cause a DTLS server to crash.
     <affects base="0.9.8" version="0.9.8j"/>
     <affects base="0.9.8" version="0.9.8k"/>
     <affects base="0.9.8" version="0.9.8l"/>
-    <fixed base="0.9.8" version="0.9.8m" date="20100120"/>
+    <fixed base="0.9.8" version="0.9.8m" date="20100120">
+      <git hash="88b48dc68024dcc437da4296c9fb04419b0ccbe1"/>
+    </fixed>
     <reported source="Daniel Mentz, Robin Seggelmann"/>
     <description>
 Fix a denial of service flaw in the DTLS implementation.  
@@ -5179,7 +5184,6 @@ currently no limitation to this buffer allowing an attacker to perform
 a DOS attack to a DTLS server by sending records with future epochs until there is no  
 memory left.
     </description>
-    <git hash="88b48dc68024dcc437da4296c9fb04419b0ccbe1"/>
   </issue>
 
     <issue public="20090512">
@@ -5198,9 +5202,10 @@ memory left.
     <affects base="0.9.8" version="0.9.8j"/>
     <affects base="0.9.8" version="0.9.8k"/>
     <affects base="0.9.8" version="0.9.8l"/>
-    <fixed base="0.9.8" version="0.9.8m" date="20100120"/>
+    <fixed base="0.9.8" version="0.9.8m" date="20100120">
+      <git hash="abda7c114791fa7fe95672ec7a66fc4733c40dbc"/>
+    </fixed>
     <reported source="Daniel Mentz, Robin Seggelmann"/>
-    <git hash="abda7c114791fa7fe95672ec7a66fc4733c40dbc"/>
     <description>
       Fix a denial of service flaw in the DTLS implementation.
 In dtls1_process_out_of_seq_message() the check if the current message 
@@ -5227,9 +5232,10 @@ left.
     <affects base="0.9.8" version="0.9.8j"/>
     <affects base="0.9.8" version="0.9.8k"/>
     <affects base="0.9.8" version="0.9.8l"/>
-    <fixed base="0.9.8" version="0.9.8m" date="20100120"/>
+    <fixed base="0.9.8" version="0.9.8m" date="20100120">
+      <git hash="561cbe567846a376153bea7f1f2d061e78029c2d"/>
+    </fixed>
     <reported source="Daniel Mentz, Robin Seggelmann"/>
-    <git hash="561cbe567846a376153bea7f1f2d061e78029c2d"/>
     <description>
       Use-after-free vulnerability in the dtls1_retrieve_buffered_fragment
       function could cause a client accessing a malicious DTLS server to
@@ -5252,8 +5258,9 @@ left.
     <affects base="0.9.8" version="0.9.8j"/>
     <affects base="0.9.8" version="0.9.8k"/>
     <affects base="0.9.8" version="0.9.8l"/>
-    <fixed base="0.9.8" version="0.9.8m" date="20100120"/>
-    <git hash="1b31b5ad560b16e2fe1cad54a755e3e6b5e778a3"/>
+    <fixed base="0.9.8" version="0.9.8m" date="20100120">
+      <git hash="1b31b5ad560b16e2fe1cad54a755e3e6b5e778a3"/>
+    </fixed>
     <reported source="Michael K Johnson and Andy Grimm (rPath)"/>
     <description>
 A memory leak in the zlib_stateful_finish function in crypto/comp/c_zlib.c
@@ -5278,8 +5285,9 @@ function.
     <affects base="0.9.8" version="0.9.8j"/>
     <affects base="0.9.8" version="0.9.8k"/>
     <affects base="0.9.8" version="0.9.8l"/>
-    <fixed base="0.9.8" version="0.9.8m" date="20100120"/>
-    <git hash="7e4cae1d2f555cbe9226b377aff4b56c9f7ddd4d"/>
+    <fixed base="0.9.8" version="0.9.8m" date="20100120">
+      <git hash="7e4cae1d2f555cbe9226b377aff4b56c9f7ddd4d"/>
+    </fixed>
     <reported source="Martin Olsson, Neel Mehta"/>
     <description>
 It was discovered that OpenSSL did not always check the return value of the
@@ -5305,8 +5313,9 @@ or, possibly, execute arbitrary code
     <affects base="0.9.8" version="0.9.8k"/>
     <affects base="0.9.8" version="0.9.8l"/>
     <affects base="0.9.8" version="0.9.8m"/>
-    <fixed base="0.9.8" version="0.9.8n" date="20100324"/>
-    <git hash="cca1cd9a3447dd067503e4a85ebd1679ee78a48e"/>
+    <fixed base="0.9.8" version="0.9.8n" date="20100324">
+      <git hash="cca1cd9a3447dd067503e4a85ebd1679ee78a48e"/>
+    </fixed>
     <reported source="Todd Rinaldo, Tomas Hoger (Red Hat)"/>
     <description>
 A missing return value check flaw was discovered in OpenSSL, that could
