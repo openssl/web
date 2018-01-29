@@ -84,7 +84,7 @@ for issue in sorted(issues, key=lambda x: (x.getAttribute('public'), x.getElemen
     for adv in issue.getElementsByTagName('advisory'):
         allissues += "<a href=\"%s\">(OpenSSL advisory)</a> " %(adv.getAttribute("url"))
     for sev in issue.getElementsByTagName('impact'):
-        allissues += "<a href=\"/policies/secpolicy.html#%s\">[%s severity]</a> " %(sev.getAttribute('severity'),sev.getAttribute('severity'))
+        allissues += "<a href=\"/policies/secpolicy.html#%s\">[%s severity]</a> " %(sev.getAttribute('severity').lower(),sev.getAttribute('severity'))
     t = datetime.datetime(int(date[:4]), int(date[4:6]), int(date[6:8]), 0, 0)
     allissues += t.strftime("%d %B %Y: ")
 
