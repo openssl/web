@@ -73,7 +73,7 @@ for issue in sorted(issues, key=lambda x: (x.getAttribute('public'), x.getElemen
     if (year != thisyear):
         if (thisyear != ""):
             allissues += "</dl>";
-        allissues += "<h3><a name=\"y%s\">%s</a><dl>" %(year,year)
+        allissues += "<h3><a name=\"y%s\">%s</a></h3><dl>" %(year,year)
         allyears.append(year)
         thisyear = year
     cve = issue.getElementsByTagName('cve')[0].getAttribute('name')
