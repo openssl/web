@@ -115,10 +115,9 @@ news/newsflash.inc: news/newsflash.txt
 	    -e 's@^@<tr><td class="d">@' \
 	    -e 's@: @</td><td class="t">@' \
 	    -e 's@$$@</td></tr>@'
-news/vulnerabilities.inc: bin/vulnerabilities.xsl news/vulnerabilities.xml
+news/vulnerabilities.inc: bin/mk-cvepage news/vulnerabilities.xml
 	@rm -f $@
-	xsltproc bin/vulnerabilities.xsl news/vulnerabilities.xml >$@
-
+        ./bin/mk-cvepage -i news/vulnerabilities.xml > $@
 source/.htaccess: $(wildcard source/openssl-*.tar.gz) bin/mk-latest
 	@rm -f @?
 	./bin/mk-latest source >$@
