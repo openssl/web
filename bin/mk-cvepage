@@ -110,5 +110,5 @@ preface += ", ".join( "<a href=\"#y%s\">%s</a>" %(year,year) for year in allyear
 preface += "</p>"
 preface += allissues
 
-with codecs.open(options.outdir+"/vulnerabilities.html","w","utf-8") as htmlfile:
+with codecs.open(options.outdir+"/vulnerabilities.inc","w","utf-8") as htmlfile:
     htmlfile.write(preface)
