@@ -19,6 +19,13 @@ SIMPLE = newsflash.inc sitemap.txt \
          news/openssl-1.1.0-notes.inc \
 	 news/newsflash.inc \
 	 news/vulnerabilities.inc \
+	 news/vulnerabilities-1.1.0.inc \
+	 news/vulnerabilities-1.0.2.inc \
+	 news/vulnerabilities-1.0.1.inc \
+	 news/vulnerabilities-1.0.0.inc \
+	 news/vulnerabilities-0.9.8.inc \
+	 news/vulnerabilities-0.9.7.inc \
+	 news/vulnerabilities-0.9.6.inc \
 	 source/.htaccess \
 	 source/license.txt \
 	 source/index.inc
@@ -118,6 +125,27 @@ news/newsflash.inc: news/newsflash.txt
 news/vulnerabilities.inc: bin/mk-cvepage news/vulnerabilities.xml
 	@rm -f $@
 	./bin/mk-cvepage -i news/vulnerabilities.xml > $@
+news/vulnerabilities-1.1.0.inc: bin/mk-cvepage news/vulnerabilities.xml
+	@rm -f $@
+	./bin/mk-cvepage -i news/vulnerabilities.xml -b 1.1.0 > $@
+news/vulnerabilities-1.0.2.inc: bin/mk-cvepage news/vulnerabilities.xml
+	@rm -f $@
+	./bin/mk-cvepage -i news/vulnerabilities.xml -b 1.0.2 > $@
+news/vulnerabilities-1.0.1.inc: bin/mk-cvepage news/vulnerabilities.xml
+	@rm -f $@
+	./bin/mk-cvepage -i news/vulnerabilities.xml -b 1.0.1 > $@
+news/vulnerabilities-1.0.0.inc: bin/mk-cvepage news/vulnerabilities.xml
+	@rm -f $@
+	./bin/mk-cvepage -i news/vulnerabilities.xml -b 1.0.0 > $@
+news/vulnerabilities-0.9.8.inc: bin/mk-cvepage news/vulnerabilities.xml
+	@rm -f $@
+	./bin/mk-cvepage -i news/vulnerabilities.xml -b 0.9.8 > $@
+news/vulnerabilities-0.9.7.inc: bin/mk-cvepage news/vulnerabilities.xml
+	@rm -f $@
+	./bin/mk-cvepage -i news/vulnerabilities.xml -b 0.9.7 > $@
+news/vulnerabilities-0.9.6.inc: bin/mk-cvepage news/vulnerabilities.xml
+	@rm -f $@
+	./bin/mk-cvepage -i news/vulnerabilities.xml -b 0.9.6 > $@
 source/.htaccess: $(wildcard source/openssl-*.tar.gz) bin/mk-latest
 	@rm -f @?
 	./bin/mk-latest source >$@
