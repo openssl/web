@@ -25,7 +25,7 @@ news/cl*.txt
 news/newsflash.inc
 news/openssl-*-notes.html
 news/openssl-*-notes.inc
-news/vulnerabilities.inc
+news/vulnerabilities*.inc
 newsflash.inc
 source/*.gz*
 source/*.patch
