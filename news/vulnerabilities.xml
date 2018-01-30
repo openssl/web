@@ -72,7 +72,9 @@
     <affects base="1.0.2" version="1.0.2l"/>
     <affects base="1.0.2" version="1.0.2m"/>
     <fixed base="1.0.2" version="1.0.2n" date="20171207"/>
-    <fixed base="1.1.0" version="1.1.0h-dev" date="20171207"/>
+    <fixed base="1.1.0" version="1.1.0h-dev" date="20171207">
+      <git hash="e502cc86df9dafded1694fceb3228ee34d11c11a"/>
+    </fixed>
     <problemtype>carry-propagating bug</problemtype>
     <title>bn_sqrx8x_internal carry bug on x86_64</title>
     <description>
@@ -125,7 +127,9 @@
     <affects base="1.0.2" version="1.0.2k"/>
     <affects base="1.0.2" version="1.0.2l"/>
     <fixed base="1.0.2" version="1.0.2m" date="20171102"/>
-    <fixed base="1.1.0" version="1.1.0g" date="20171102"/>
+    <fixed base="1.1.0" version="1.1.0g" date="20171102">
+      <git hash="4443cf7aa0099e5ce615c18cee249fff77fb0871"/>
+    </fixed>
     <problemtype>carry-propagating bug</problemtype>
     <title>bn_sqrx8x_internal carry bug on x86_64</title>
     <description>
@@ -171,7 +175,9 @@
     <affects base="1.0.2" version="1.0.2k"/>
     <affects base="1.0.2" version="1.0.2l"/>
     <fixed base="1.0.2" version="1.0.2m" date="20171102"/>
-    <fixed base="1.1.0" version="1.1.0g" date="20171102"/>
+    <fixed base="1.1.0" version="1.1.0g" date="20171102">
+      <git hash="068b963bb7afc57f5bdd723de0dd15e7795d5822"/>
+    </fixed>
     <problemtype>out-of-bounds read</problemtype>
     <title>Possible Overread in parsing X.509 IPAdressFamily</title>
     <description>
@@ -190,7 +196,9 @@
     <affects base="1.1.0" version="1.1.0b"/>
     <affects base="1.1.0" version="1.1.0c"/>
     <affects base="1.1.0" version="1.1.0d"/>
-    <fixed base="1.1.0" version="1.1.0e" date="20170216"/>
+    <fixed base="1.1.0" version="1.1.0e" date="20170216">
+      <git hash="4ad93618d26a3ea23d36ad5498ff4f59eff3a4d2"/>
+    </fixed>
     <problemtype>protocol error</problemtype>
     <title>Encrypt-Then-Mac renegotiation crash</title>
     <description>
@@ -220,7 +228,9 @@
     <affects base="1.0.2" version="1.0.2h"/>
     <affects base="1.0.2" version="1.0.2i"/>
     <affects base="1.0.2" version="1.0.2j"/>
-    <fixed base="1.1.0" version="1.1.0d" date="20170126"/>
+    <fixed base="1.1.0" version="1.1.0d" date="20170126">
+      <git hash="00d965474b22b54e4275232bc71ee0c699c5cd21"/>
+    </fixed>
     <fixed base="1.0.2" version="1.0.2k" date="20170126"/>
     <problemtype>out-of-bounds read</problemtype>
     <title>Truncated packet could crash via OOB read</title>
@@ -245,7 +255,9 @@
     <affects base="1.1.0" version="1.1.0a"/>
     <affects base="1.1.0" version="1.1.0b"/>
     <affects base="1.1.0" version="1.1.0c"/>
-    <fixed base="1.1.0" version="1.1.0d" date="20170126"/>
+    <fixed base="1.1.0" version="1.1.0d" date="20170126">
+      <git hash="efbe126e3"/>
+    </fixed>
     <problemtype>NULL pointer deference</problemtype>
     <title>Bad (EC)DHE parameters cause a client crash</title>
     <description>
@@ -275,7 +287,9 @@
     <affects base="1.0.2" version="1.0.2h"/>
     <affects base="1.0.2" version="1.0.2i"/>
     <affects base="1.0.2" version="1.0.2j"/>
-    <fixed base="1.1.0" version="1.1.0d" date="20170126"/>
+    <fixed base="1.1.0" version="1.1.0d" date="20170126">
+      <git hash="a59b90bf491410f1f2bc4540cc21f1980fd14c5b"/>
+    </fixed>
     <fixed base="1.0.2" version="1.0.2k" date="20170126"/>
     <problemtype>carry-propagating bug</problemtype>
     <title>BN_mod_exp may produce incorrect results on x86_64</title>
@@ -304,7 +318,9 @@
     <affects base="1.1.0" version="1.1.0"/>
     <affects base="1.1.0" version="1.1.0a"/>
     <affects base="1.1.0" version="1.1.0b"/>
-    <fixed base="1.1.0" version="1.1.0c" date="20161110"/>
+    <fixed base="1.1.0" version="1.1.0c" date="20161110">
+      <git hash="99d97842ddb5fbbbfb5e9820a64ebd19afe569f6"/>
+    </fixed>
     <problemtype>protocol error</problemtype>
     <title>ChaCha20/Poly1305 heap-buffer-overflow</title>
     <description>
@@ -321,7 +337,9 @@
     <affects base="1.1.0" version="1.1.0"/>
     <affects base="1.1.0" version="1.1.0a"/>
     <affects base="1.1.0" version="1.1.0b"/>
-    <fixed base="1.1.0" version="1.1.0c" date="20161110"/>
+    <fixed base="1.1.0" version="1.1.0c" date="20161110">
+      <git hash="610b66267e41a32805ab54cbc580c5a6d5826cb4"/>
+    </fixed>
     <problemtype>NULL pointer deference</problemtype>
     <title>CMS Null dereference</title>
     <description>
@@ -352,7 +370,9 @@
     <affects base="1.0.2" version="1.0.2h"/>
     <affects base="1.0.2" version="1.0.2i"/>
     <affects base="1.0.2" version="1.0.2j"/>
-    <fixed base="1.1.0" version="1.1.0c" date="20161110"/>
+    <fixed base="1.1.0" version="1.1.0c" date="20161110">
+      <git hash="2a7dd548a6f5d6f7f84a89c98323b70a2822406e"/>
+    </fixed>
     <fixed base="1.0.2" version="1.0.2k" date="20170126"/>
     <problemtype>carry propagating bug</problemtype>
     <title>Montgomery multiplication may produce incorrect results</title>
@@ -380,7 +400,9 @@
     <impact severity="Critical"/>
     <cve name="2016-6309"/>
     <affects base="1.1.0" version="1.1.0a"/>
-    <fixed base="1.1.0" version="1.1.0b" date="20160926"/>
+    <fixed base="1.1.0" version="1.1.0b" date="20160926">
+      <git hash="acacbfa7565c78d2273c0b2a2e5e803f44afefeb"/>
+    </fixed>
 
     <problemtype>write to free</problemtype>                    
     <description>
@@ -449,7 +471,9 @@
     <affects base="1.1.0" version="1.1.0"/>
     <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
     <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
-    <fixed base="1.1.0" version="1.1.0a" date="20160922"/>
+    <fixed base="1.1.0" version="1.1.0a" date="20160922">
+      <git hash="a59ab1c4dd27a4c7c6e88f3c33747532fd144412"/>
+    </fixed>
 
     <problemtype>memory leak</problemtype>                            
     <description>
@@ -471,7 +495,9 @@
     <impact severity="Moderate"/>
     <cve name="2016-6305"/>
     <affects base="1.1.0" version="1.1.0"/>
-    <fixed base="1.1.0" version="1.1.0a" date="20160922"/>
+    <fixed base="1.1.0" version="1.1.0a" date="20160922">
+      <git hash="63658103d4441924f8dbfc517b99bb54758a98b9"/>
+    </fixed>
 
     <description>
       OpenSSL 1.1.0 SSL/TLS will hang during a call to SSL_peek() if the peer sends an
@@ -922,7 +948,9 @@
     <impact severity="Low"/>
     <cve name="2016-6307"/>
     <affects base="1.1.0" version="1.1.0"/>
-    <fixed base="1.1.0" version="1.1.0a" date="20160922"/>
+    <fixed base="1.1.0" version="1.1.0a" date="20160922">
+      <git hash="4b390b6c3f8df925dc92a3dd6b022baa9a2f4650"/>
+    </fixed>
 
     <description>
       A TLS message includes 3 bytes for its length in the header for the message.
@@ -964,7 +992,9 @@
     <impact severity="Low"/>
     <cve name="2016-6308"/>
     <affects base="1.1.0" version="1.1.0"/>
-    <fixed base="1.1.0" version="1.1.0a" date="20160922"/>
+    <fixed base="1.1.0" version="1.1.0a" date="20160922">
+      <git hash="df6b5e29ffea2d5a3e08de92fb765fdb21c7a21e"/>
+    </fixed>
 
     <description>
       A DTLS message includes 3 bytes for its length in the header for the message.
