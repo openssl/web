@@ -23,7 +23,9 @@
     <affects base="1.0.2" version="1.0.2k"/>
     <affects base="1.0.2" version="1.0.2l"/>
     <affects base="1.0.2" version="1.0.2m"/>
-    <fixed base="1.0.2" version="1.0.2n" date="20171207"/>
+    <fixed base="1.0.2" version="1.0.2n" date="20171207">
+      <git hash="898fb884b706aaeb283de4812340bb0bde8476dc"/>
+    </fixed>
     <problemtype>Unauthenticated read/unencrypted write</problemtype>
     <title>Read/write after SSL object in error state</title>
     <description>
@@ -231,7 +233,9 @@
     <fixed base="1.1.0" version="1.1.0d" date="20170126">
       <git hash="00d965474b22b54e4275232bc71ee0c699c5cd21"/>
     </fixed>
-    <fixed base="1.0.2" version="1.0.2k" date="20170126"/>
+    <fixed base="1.0.2" version="1.0.2k" date="20170126">
+      <git hash="8e20499629b6bcf868d0072c7011e590b5c2294d"/>
+    </fixed>
     <problemtype>out-of-bounds read</problemtype>
     <title>Truncated packet could crash via OOB read</title>
     <description>
@@ -422,8 +426,9 @@
     <impact severity="Moderate"/>
     <cve name="2016-7052"/>
     <affects base="1.0.2" version="1.0.2i"/>
-    <fixed base="1.0.2" version="1.0.2j" date="20160926"/>
-
+    <fixed base="1.0.2" version="1.0.2j" date="20160926">
+      <git hash="8b7c51a0e4a03895a657cf2eb8d5c2aa1ca3586f"/>
+    </fixed>
     <problemtype>NULL pointer exception</problemtype>                        
     <description>
       This issue only affects OpenSSL 1.0.2i, released on 22nd September 2016.
@@ -541,7 +546,9 @@
     <affects base="1.0.2" version="1.0.2g"/>
     <affects base="1.0.2" version="1.0.2h"/>
     <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
-    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922">
+      <git hash="1027ad4f34c30b8585592764b9a670ba36888269"/>
+    </fixed>
 
     <description>
       An overflow can occur in MDC2_Update() either if called directly or
@@ -832,7 +839,9 @@
     <affects base="1.0.2" version="1.0.2g"/>
     <affects base="1.0.2" version="1.0.2h"/>
     <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
-    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922">
+      <git hash="26f2c5774f117aea588e8f31fad38bcf14e83bec"/>
+    </fixed>
 
     <description>
       In a DTLS connection where handshake messages are delivered out-of-order those
@@ -931,7 +940,9 @@
     <affects base="1.0.2" version="1.0.2g"/>
     <affects base="1.0.2" version="1.0.2h"/>
     <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
-    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922">
+      <git hash="006a788c84e541c8920dd2ad85fb62b52185c519"/>
+    </fixed>
     <description>
       In OpenSSL 1.0.2 and earlier some missing message length checks can result in
       OOB reads of up to 2 bytes beyond an allocated buffer. There is a theoretical
@@ -1124,7 +1135,9 @@
     <affects base="1.0.2" version="1.0.2f"/>
     <affects base="1.0.2" version="1.0.2g"/>
     <fixed base="1.0.1" version="1.0.1t" date="20160503"/>
-    <fixed base="1.0.2" version="1.0.2h" date="20160503"/>
+    <fixed base="1.0.2" version="1.0.2h" date="20160503">
+      <git hash="68595c0c2886e7942a14f98c17a55a88afb6c292"/>
+    </fixed>
 
     <description>
       A MITM attacker can use a padding oracle attack to decrypt traffic
