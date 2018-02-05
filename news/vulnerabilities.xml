@@ -4638,6 +4638,8 @@ OpenSSL library in such a way as to cause a crash.
     <affects base="0.9.6" version="0.9.6a"/>
     <affects base="0.9.6" version="0.9.6b"/>
     <affects base="0.9.6" version="0.9.6c"/>
+    <fixed base="0.9.6" version="0.9.6d" date="20020603"/> <!-- guessed date -->
+    
     <advisory url="/news/secadv/20030317.txt"/>
     <reported source="OpenSSL group"/>
     <description>
