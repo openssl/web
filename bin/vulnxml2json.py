@@ -23,14 +23,16 @@ neverreleased = "1.0.0h,";
 # Location of CVE JSON schema (default, can use local file etc)
 default_cve_schema = "https://raw.githubusercontent.com/CVEProject/automation-working-group/master/cve_json_schema/CVE_JSON_4.0_min_public.schema"
 
-def merge_affects(issue):
+def merge_affects(issue,base):
     # let's merge the affects into a nice list which is better for Mitre text but we have to take into account our stange lettering scheme
     prev = ""
     anext = ""
     alist = list()
     vlist = list()
     for affects in issue.getElementsByTagName('affects'): # so we can sort them
-       vlist.append(affects.getAttribute("version"))
+       version = affects.getAttribute("version")
+       if (not base or base in version):
+           vlist.append(version)
     for ver in sorted(vlist):
        # print "version %s (last was %s, next was %s)" %(ver,prev,anext)
        if (ver != anext):
@@ -110,18 +112,17 @@ for issue in issues:
     if refs:
         cve['references'] = { "reference_data": refs  }
 
-    allaffects = list()
-    for affects in issue.getElementsByTagName('affects'):
-        allaffects.append({ "version_value":"openssl-"+affects.getAttribute("version")})
+    vv = list()
+    for affects in issue.getElementsByTagName('fixed'):
+        text = "Fixed in OpenSSL %s (Affected %s)" %(affects.getAttribute('version'),merge_affects(issue,affects.getAttribute("base")))
+        # Let's condense into a list form since the format of this field is 'free text' at the moment, not machine readable (as per mail with George Theall)
+        vv.append({"version_value":text})
+        # Mitre want the fixed/affected versions in the text too
+        desc += " "+text+"."
 
-    cve['affects'] = { "vendor" : { "vendor_data" : [ { "vendor_name": "OpenSSL", "product": { "product_data" : [ { "product_name": "OpenSSL", "version": { "version_data" : allaffects}}]}}]}}
-
-    # Mitre want the fixed/affected versions in the text too
-    
-    desc += " (Affects "+merge_affects(issue)+")."
+    cve['affects'] = { "vendor" : { "vendor_data" : [ { "vendor_name": "OpenSSL", "product": { "product_data" : [ { "product_name": "OpenSSL", "version": { "version_data" : vv}}]}}]}}
         
     # Mitre want newlines and excess spaces stripped
-
     desc = re.sub('[\n ]+',' ', desc)
         
     cve['description'] = { "description_data": [ { "lang":"eng", "value": desc} ] }
