@@ -115,7 +115,7 @@ for issue in sorted(issues, key=lambda x: (x.getAttribute('public'), x.getElemen
     allissues += "<ul>"
 
     also = []
-    for affects in issue.getElementsByTagName('fixed'):
+    for affects in sorted(issue.getElementsByTagName('fixed'), key=lambda x: (x.getAttribute("base")), reverse=True):
         if options.base:
             if (affects.getAttribute("base") not in options.base):
                 also.append("OpenSSL <a href=\"vulnerabilities-%s.html#CVE-%s\">%s</a>" %( affects.getAttribute('base'), cve, affects.getAttribute('version')))
