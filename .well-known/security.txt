@@ -2,4 +2,4 @@ Contact: openssl-security@openssl.org
 Encryption: https://www.openssl.org/news/openssl-security.asc
 Acknowledgement: https://www.openssl.org/news/vulnerabilities.html
 Policy: https://www.openssl.org/policies/secpolicy.html
-signature: https://www.openssl.org/.well-known/security.txt.sig
+Signature: https://www.openssl.org/.well-known/security.txt.asc
