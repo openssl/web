@@ -73,7 +73,9 @@
     <affects base="1.0.2" version="1.0.2k"/>
     <affects base="1.0.2" version="1.0.2l"/>
     <affects base="1.0.2" version="1.0.2m"/>
-    <fixed base="1.0.2" version="1.0.2n" date="20171207"/>
+    <fixed base="1.0.2" version="1.0.2n" date="20171207">
+      <git hash="ca51bafc1a88d8b8348f5fd97adc5d6ca93f8e76"/>
+    </fixed>
     <fixed base="1.1.0" version="1.1.0h-dev" date="20171207">
       <git hash="e502cc86df9dafded1694fceb3228ee34d11c11a"/>
     </fixed>
@@ -128,7 +130,9 @@
     <affects base="1.0.2" version="1.0.2j"/>
     <affects base="1.0.2" version="1.0.2k"/>
     <affects base="1.0.2" version="1.0.2l"/>
-    <fixed base="1.0.2" version="1.0.2m" date="20171102"/>
+    <fixed base="1.0.2" version="1.0.2m" date="20171102">
+      <git hash="38d600147331d36e74174ebbd4008b63188b321b"/>
+    </fixed>
     <fixed base="1.1.0" version="1.1.0g" date="20171102">
       <git hash="4443cf7aa0099e5ce615c18cee249fff77fb0871"/>
     </fixed>
@@ -176,7 +180,9 @@
     <affects base="1.0.2" version="1.0.2j"/>
     <affects base="1.0.2" version="1.0.2k"/>
     <affects base="1.0.2" version="1.0.2l"/>
-    <fixed base="1.0.2" version="1.0.2m" date="20171102"/>
+    <fixed base="1.0.2" version="1.0.2m" date="20171102">
+      <git hash="31c8b265591a0aaa462a1f3eb5770661aaac67db"/>
+    </fixed>
     <fixed base="1.1.0" version="1.1.0g" date="20171102">
       <git hash="068b963bb7afc57f5bdd723de0dd15e7795d5822"/>
     </fixed>
@@ -234,7 +240,7 @@
       <git hash="00d965474b22b54e4275232bc71ee0c699c5cd21"/>
     </fixed>
     <fixed base="1.0.2" version="1.0.2k" date="20170126">
-      <git hash="8e20499629b6bcf868d0072c7011e590b5c2294d"/>
+      <git hash="51d009043670a627d6abe66894126851cf3690e9"/>
     </fixed>
     <problemtype>out-of-bounds read</problemtype>
     <title>Truncated packet could crash via OOB read</title>
@@ -294,7 +300,9 @@
     <fixed base="1.1.0" version="1.1.0d" date="20170126">
       <git hash="a59b90bf491410f1f2bc4540cc21f1980fd14c5b"/>
     </fixed>
-    <fixed base="1.0.2" version="1.0.2k" date="20170126"/>
+    <fixed base="1.0.2" version="1.0.2k" date="20170126">
+      <git hash="760d04342a495ee86bf5adc71a91d126af64397f"/>
+    </fixed>
     <problemtype>carry-propagating bug</problemtype>
     <title>BN_mod_exp may produce incorrect results on x86_64</title>
     <description>
@@ -377,7 +385,9 @@
     <fixed base="1.1.0" version="1.1.0c" date="20161110">
       <git hash="2a7dd548a6f5d6f7f84a89c98323b70a2822406e"/>
     </fixed>
-    <fixed base="1.0.2" version="1.0.2k" date="20170126"/>
+    <fixed base="1.0.2" version="1.0.2k" date="20170126">
+      <git hash="57c4b9f6a2f800b41ce2836986fe33640f6c3f8a"/>
+    </fixed>
     <problemtype>carry propagating bug</problemtype>
     <title>Montgomery multiplication may produce incorrect results</title>
     <description>
@@ -427,7 +437,7 @@
     <cve name="2016-7052"/>
     <affects base="1.0.2" version="1.0.2i"/>
     <fixed base="1.0.2" version="1.0.2j" date="20160926">
-      <git hash="8b7c51a0e4a03895a657cf2eb8d5c2aa1ca3586f"/>
+      <git hash="6e629b5be45face20b4ca71c4fcbfed78b864a2e"/>
     </fixed>
     <problemtype>NULL pointer exception</problemtype>                        
     <description>
@@ -474,8 +484,12 @@
     <affects base="1.0.2" version="1.0.2g"/>
     <affects base="1.0.2" version="1.0.2h"/>
     <affects base="1.1.0" version="1.1.0"/>
-    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
-    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922">
+      <git hash="2c0d295e26306e15a92eb23a84a1802005c1c137"/>
+    </fixed>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922">
+      <git hash="ea39b16b71e4e72a228a4535bd6d6a02c5edbc1f"/>
+    </fixed>
     <fixed base="1.1.0" version="1.1.0a" date="20160922">
       <git hash="a59ab1c4dd27a4c7c6e88f3c33747532fd144412"/>
     </fixed>
@@ -545,7 +559,9 @@
     <affects base="1.0.2" version="1.0.2f"/>
     <affects base="1.0.2" version="1.0.2g"/>
     <affects base="1.0.2" version="1.0.2h"/>
-    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922">
+      <git hash="2b4029e68fd7002d2307e6c3cde0f3784eef9c83"/>
+    </fixed>
     <fixed base="1.0.2" version="1.0.2i" date="20160922">
       <git hash="1027ad4f34c30b8585592764b9a670ba36888269"/>
     </fixed>
@@ -596,8 +612,12 @@
     <affects base="1.0.2" version="1.0.2f"/>
     <affects base="1.0.2" version="1.0.2g"/>
     <affects base="1.0.2" version="1.0.2h"/>
-    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
-    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922">
+      <git hash="1bbe48ab149893a78bf99c8eb8895c928900a16f"/>
+    </fixed>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922">
+      <git hash="baaabfd8fdcec04a691695fad9a664bea43202b6"/>
+    </fixed>
 
     <description>
       If a server uses SHA512 for TLS session ticket HMAC it is vulnerable to a
@@ -838,7 +858,9 @@
     <affects base="1.0.2" version="1.0.2f"/>
     <affects base="1.0.2" version="1.0.2g"/>
     <affects base="1.0.2" version="1.0.2h"/>
-    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922">
+      <git hash="00a4c1421407b6ac796688871b0a49a179c694d9"/>
+    </fixed>
     <fixed base="1.0.2" version="1.0.2i" date="20160922">
       <git hash="26f2c5774f117aea588e8f31fad38bcf14e83bec"/>
     </fixed>
@@ -891,8 +913,13 @@
     <affects base="1.0.2" version="1.0.2f"/>
     <affects base="1.0.2" version="1.0.2g"/>
     <affects base="1.0.2" version="1.0.2h"/>
-    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
-    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922">
+      <git hash="b77ab018b79a00f789b0fb85596b446b08be4c9d"/>
+    </fixed>
+    <fixed base="1.0.2" version="1.0.2i" date="20160922">
+      <git hash="3884b47b7c255c2e94d9b387ee83c7e8bb981258"/>
+    </fixed>
+    
 
     <description>
       A flaw in the DTLS replay attack protection mechanism means that records that
@@ -939,7 +966,9 @@
     <affects base="1.0.2" version="1.0.2f"/>
     <affects base="1.0.2" version="1.0.2g"/>
     <affects base="1.0.2" version="1.0.2h"/>
-    <fixed base="1.0.1" version="1.0.1u" date="20160922"/>
+    <fixed base="1.0.1" version="1.0.1u" date="20160922">
+      <git hash="bb1a4866034255749ac578adb06a76335fc117b1"/>
+    </fixed>
     <fixed base="1.0.2" version="1.0.2i" date="20160922">
       <git hash="006a788c84e541c8920dd2ad85fb62b52185c519"/>
     </fixed>
