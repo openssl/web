@@ -17,8 +17,10 @@ SIMPLE = newsflash.inc sitemap.txt \
          news/cl102.txt news/cl110.txt \
          news/openssl-1.0.2-notes.inc \
          news/openssl-1.1.0-notes.inc \
+         news/openssl-1.1.1-notes.inc \
 	 news/newsflash.inc \
 	 news/vulnerabilities.inc \
+	 news/vulnerabilities-1.1.1.inc \
 	 news/vulnerabilities-1.1.0.inc \
 	 news/vulnerabilities-1.0.2.inc \
 	 news/vulnerabilities-1.0.1.inc \
@@ -67,6 +69,7 @@ define newmakemanpages
 	./bin/mk-filelist -a docs/man$(2)/man7 '' '*.html' >docs/man$(2)/man7/index.inc
 endef
 manpages: manmaster
+	$(call newmakemanpages,$(CHECKOUTS)/openssl-1.1.1-stable,1.1.1)
 	$(call makemanpages,$(CHECKOUTS)/openssl-1.1.0-stable,1.1.0)
 	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.2-stable,1.0.2)
 
@@ -107,18 +110,27 @@ news/cl102.txt: $(CHECKOUTS)/openssl-1.0.2-stable/CHANGES
 news/cl110.txt: $(CHECKOUTS)/openssl-1.1.0-stable/CHANGES
 	@rm -f $@
 	cp $? $@
+news/cl111.txt: $(CHECKOUTS)/openssl-1.1.1-stable/CHANGES
+	@rm -f $@
+	cp $? $@
 news/openssl-1.0.2-notes.html: news/openssl-notes.html.in
 	@rm -f $@
 	sed -e 's|@VERSION@|1.0.2|g' < $< > $@
 news/openssl-1.1.0-notes.html: news/openssl-notes.html.in
 	@rm -f $@
 	sed -e 's|@VERSION@|1.1.0|g' < $< > $@
+news/openssl-1.1.1-notes.html: news/openssl-notes.html.in
+	@rm -f $@
+	sed -e 's|@VERSION@|1.1.1|g' < $< > $@
 news/openssl-1.0.2-notes.inc: $(CHECKOUTS)/openssl-1.0.2-stable/NEWS news/openssl-1.0.2-notes.html bin/mk-notes
 	@rm -f $@
 	./bin/mk-notes 1.0.2 < $(CHECKOUTS)/openssl-1.0.2-stable/NEWS > $@
 news/openssl-1.1.0-notes.inc: $(CHECKOUTS)/openssl-1.1.0-stable/NEWS news/openssl-1.1.0-notes.html bin/mk-notes
 	@rm -f $@
 	./bin/mk-notes 1.1.0 < $(CHECKOUTS)/openssl-1.1.0-stable/NEWS > $@
+news/openssl-1.1.1-notes.inc: $(CHECKOUTS)/openssl-1.1.1-stable/NEWS news/openssl-1.1.1-notes.html bin/mk-notes
+	@rm -f $@
+	./bin/mk-notes 1.1.1 < $(CHECKOUTS)/openssl-1.1.1-stable/NEWS > $@
 news/newsflash.inc: news/newsflash.txt
 	sed <$? >$@ \
 	    -e '/^#/d' \
@@ -128,6 +140,9 @@ news/newsflash.inc: news/newsflash.txt
 news/vulnerabilities.inc: bin/mk-cvepage news/vulnerabilities.xml
 	@rm -f $@
 	./bin/mk-cvepage -i news/vulnerabilities.xml > $@
+news/vulnerabilities-1.1.1.inc: bin/mk-cvepage news/vulnerabilities.xml
+	@rm -f $@
+	./bin/mk-cvepage -i news/vulnerabilities.xml -b 1.1.1 > $@
 news/vulnerabilities-1.1.0.inc: bin/mk-cvepage news/vulnerabilities.xml
 	@rm -f $@
 	./bin/mk-cvepage -i news/vulnerabilities.xml -b 1.1.0 > $@
@@ -175,6 +190,9 @@ source/old/1.0.2/index.inc: $(wildcard source/old/1.0.2/*.gz) bin/mk-filelist
 source/old/1.1.0/index.inc: $(wildcard source/old/1.1.0/*.gz) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist source/old/1.1.0 '' '*.gz' >$@
+source/old/1.1.1/index.inc: $(wildcard source/old/1.1.1/*.gz) bin/mk-filelist
+	@rm -f $@
+	./bin/mk-filelist source/old/1.1.1 '' '*.gz' >$@
 source/old/fips/index.inc: $(wildcard source/old/fips/*.gz) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist source/old/fips '' '*.gz' >$@
@@ -185,4 +203,5 @@ source/old/fips/index.inc: $(wildcard source/old/fips/*.gz) bin/mk-filelist
 # they should.
 .PHONY : \
 	 source/old/1.0.1/index.inc source/old/1.0.2/index.inc \
-	 source/old/1.1.0/index.inc source/old/fips/index.inc
+	 source/old/1.1.0/index.inc source/old/1.1.1/index.inc \
+	 source/old/fips/index.inc

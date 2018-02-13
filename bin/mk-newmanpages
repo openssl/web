@@ -12,7 +12,7 @@ use Pod::Simple::XHTML;
 
 __PACKAGE__->run(@ARGV);
 
-sub Releases { return (qw(master)); }
+sub Releases { return (qw(1.1.1 master)); }
 sub Sections { return (qw(man1 man3 man5 man7)); }
 
 sub getRelease {
