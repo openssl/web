@@ -59,16 +59,19 @@ define makemanpages
 	./bin/mk-filelist -a docs/man$(2)/crypto '' '*.html' >docs/man$(2)/crypto/index.inc
 	./bin/mk-filelist -a docs/man$(2)/ssl '' '*.html' >docs/man$(2)/ssl/index.inc
 endef
+define newmakemanpages
+	./bin/mk-newmanpages $(1) $(2) docs
+	./bin/mk-filelist -a docs/man$(2)/man1 '' '*.html' >docs/man$(2)/man1/index.inc
+	./bin/mk-filelist -a docs/man$(2)/man3 '' '*.html' >docs/man$(2)/man3/index.inc
+	./bin/mk-filelist -a docs/man$(2)/man5 '' '*.html' >docs/man$(2)/man5/index.inc
+	./bin/mk-filelist -a docs/man$(2)/man7 '' '*.html' >docs/man$(2)/man7/index.inc
+endef
 manpages: manmaster
 	$(call makemanpages,$(CHECKOUTS)/openssl-1.1.0-stable,1.1.0)
 	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.2-stable,1.0.2)
 
 manmaster:
-	./bin/mk-manmaster $(CHECKOUTS)/openssl master docs
-	./bin/mk-filelist -a docs/manmaster/man1 '' '*.html' >docs/manmaster/man1/index.inc
-	./bin/mk-filelist -a docs/manmaster/man3 '' '*.html' >docs/manmaster/man3/index.inc
-	./bin/mk-filelist -a docs/manmaster/man5 '' '*.html' >docs/manmaster/man5/index.inc
-	./bin/mk-filelist -a docs/manmaster/man7 '' '*.html' >docs/manmaster/man7/index.inc
+	$(call newmakemanpages,$(CHECKOUTS)/openssl,master)
 
 ## $(SIMPLE) -- SIMPLE GENERATED FILES
 .PHONY: sitemap community/committers.inc
