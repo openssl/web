@@ -1,0 +1,68 @@
+A summary of the discussion thread so far.  Not surprisingly, it's all about
+the whitespace. :)
+
+The descriptions here were written to be understandable stand-alone.  Once we
+come to a conclusion, we'll wordsmith them into the coding style.
+
+Do not put a space after sizeof; do use parens:
+
+	sizeof(foo)
+
+When breaking long lines, if there are Boolean conditionals, put them at the
+start of the line.  Consider doing this consistently, and don't merge even if
+they fit.  Here is a bad example, it should be three lines:
+
+	some_long_condition()
+	&& short1() && short2()
+
+Related conditions should be on one line if they fit, else given an extra
+level of indent
+
+	some_long_condition()
+	    && (short1() || short2())
+	    && some_other_flag != 0
+
+If the expression for an if statement does not fit, indent the continuation
+lines an extra level
+
+	if (this_is_true()
+		&& !that_is_false()) {
+	    code();
+	    ...
+
+Try not to break long lines within a function call, but if you have to, indent
+the rest of the parameter list to be after the function's opening paren.
+
+Remember a blank line after variable declarations (even local ones).
+
+Treat a single-statement with comment as if it were multi-line and use curly
+braces. Note that this could end up having "cascading curly" effects.
+
+	if (test()) {
+	    /* already alerted */
+	    close();
+	}
+
+Arguments inside macro expansions should be parenthesized, except when
+using the stringify or concatenation operators (# and ## respectively).
+The following examples show examples of this, and proper spacing.
+
+	#define foo(a, b) ((a) * (b))
+	#define quote(a) #a
+	#define join(a, b) a ## quote(a)
+
+Free routines should properly handle null; don't check for null before calling
+a free routine.
+
+Argument names in function definition should match the declaration, but you
+can use "unused_" as a prefix in the definition for unused arguments.
+
+When possible, use size_t for sizes of things (including array indicies)
+
+Prefer ossl_assert over assert. Do not use OPENSSL_assert() in libcrypto or
+libssl.
+
+[ Matt said "initialize in the declaration if appropriate; can someone provide wording? ]
+
+This is controversial, so maybe drop it.  Don't use else after return or goto
+unless it makes the flow more clear.
