@@ -23,7 +23,7 @@ level of indent
 	    && some_other_flag != 0
 
 If the expression for an if statement does not fit, indent the continuation
-lines an extra level
+lines an extra level (this is not necessary for an else-if)
 
 	if (this_is_true()
 		&& !that_is_false()) {
@@ -32,6 +32,8 @@ lines an extra level
 
 Try not to break long lines within a function call, but if you have to, indent
 the rest of the parameter list to be after the function's opening paren.
+If the open paren is "far to the right," however, indent less and try to
+avoid a column of text.
 
 Remember a blank line after variable declarations (even local ones).
 
