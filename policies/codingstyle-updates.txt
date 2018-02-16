@@ -38,7 +38,9 @@ avoid a column of text.
 Remember a blank line after variable declarations (even local ones).
 
 Treat a single-statement with comment as if it were multi-line and use curly
-braces. Note that this could end up having "cascading curly" effects.
+braces, unless the comment is part of a "series" of right-hand comments as in
+a cascading else-if chain. Note that this could end up having "cascading
+curly" effects.
 
 	if (test()) {
 	    /* already alerted */
@@ -53,8 +55,8 @@ The following examples show examples of this, and proper spacing.
 	#define quote(a) #a
 	#define join(a, b) a ## quote(a)
 
-Free routines should properly handle null; don't check for null before calling
-a free routine.
+Object freeing subroutines should properly handle null (like C's free()
+function); don't check for null before calling any of them.
 
 Argument names in function definition should match the declaration, but you
 can use "unused_" as a prefix in the definition for unused arguments.
