@@ -63,11 +63,13 @@ can use "unused_" as a prefix in the definition for unused arguments.
 
 When possible, use size_t for sizes of things (including array indicies)
 
-Prefer ossl_assert over assert. Do not use OPENSSL_assert() in libcrypto or
-libssl.
+Do not use OPENSSL_assert() in libcrypto or libssl (we do not want to crash in
+production builds, and OPENSSL_assert always did that).  Instead use
+ossl_assert() or assert(), as appropriate.
 
 Favor variable initialization as part of declaration unless it makes the
 intent of the code less clear.
 
-This is controversial, so maybe drop it.  Don't use else after return or goto
-unless it makes the flow more clear.
+Don't use else after return or goto unless it makes the flow more clear. One
+example where it can help is in a sequence of cascading if/else-if statements
+(i.e., like a switch).
