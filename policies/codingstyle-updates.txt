@@ -53,7 +53,7 @@ The following examples show examples of this, and proper spacing.
 
 	#define foo(a, b) ((a) * (b))
 	#define quote(a) #a
-	#define join(a, b) a ## quote(a)
+	#define join(a, b) a ## quote(b)
 
 Object freeing subroutines should properly handle null (like C's free()
 function); don't check for null before calling any of them.
@@ -66,7 +66,8 @@ When possible, use size_t for sizes of things (including array indicies)
 Prefer ossl_assert over assert. Do not use OPENSSL_assert() in libcrypto or
 libssl.
 
-[ Matt said "initialize in the declaration if appropriate; can someone provide wording? ]
+Favor variable initialization as part of declaration unless it makes the
+intent of the code less clear.
 
 This is controversial, so maybe drop it.  Don't use else after return or goto
 unless it makes the flow more clear.
