@@ -23,7 +23,7 @@ level of indent
 	    && some_other_flag != 0
 
 If the expression for an if statement does not fit, indent the continuation
-lines an extra level (this is not necessary for an else-if)
+lines a total of TWO extra levels (this is not necessary for an else-if)
 
 	if (this_is_true()
 		&& !that_is_false()) {
