@@ -4,6 +4,7 @@
 # Format is two fields, colon-separated; the first line is the column
 # headings.  URL paths must all be absolute.
 Date: Item
+27-Feb-2018: Alpha 2 of OpenSSL 1.1.1 is now available: please download and test it
 13-Feb-2018: Alpha 1 of OpenSSL 1.1.1 is now available: please download and test it
 10-Jan-2018: New Blog post: <a href="https://www.openssl.org/blog/blog/2018/01/10/levchin/">OpenSSL wins the Levchin prize</a>
 07-Dec-2017: <a href="/news/secadv/20171207.txt">Security Advisory</a>: one security fix
