@@ -37,6 +37,7 @@ SRCLISTS = \
 	   source/old/1.0.1/index.inc \
 	   source/old/1.0.2/index.inc \
 	   source/old/1.1.0/index.inc \
+	   source/old/1.1.1/index.inc \
 	   source/old/fips/index.inc \
 
 
