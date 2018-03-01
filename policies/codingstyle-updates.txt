@@ -19,8 +19,11 @@ Related conditions should be on one line if they fit, else given an extra
 level of indent
 
 	some_long_condition()
-	    && (short1() || short2())
-	    && some_other_flag != 0
+        && (some_other_long()
+            || short2())
+
+	some_long_condition()
+        && (short1() || short2())
 
 If the expression for an if statement does not fit, indent the continuation
 lines a total of TWO extra levels (this is not necessary for an else-if)
