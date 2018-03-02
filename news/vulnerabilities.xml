@@ -266,7 +266,7 @@
     <affects base="1.1.0" version="1.1.0b"/>
     <affects base="1.1.0" version="1.1.0c"/>
     <fixed base="1.1.0" version="1.1.0d" date="20170126">
-      <git hash="efbe126e3"/>
+      <git hash="efbe126e3ebb9123ac9d058aa2bb044261342aaa"/>
     </fixed>
     <problemtype>NULL pointer deference</problemtype>
     <title>Bad (EC)DHE parameters cause a client crash</title>
