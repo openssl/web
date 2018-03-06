@@ -1,8 +1,6 @@
-A summary of the discussion thread so far.  Not surprisingly, it's all about
-the whitespace. :)
-
-The descriptions here were written to be understandable stand-alone.  Once we
-come to a conclusion, we'll wordsmith them into the coding style.
+NOTE: The descriptions here were written to be understandable stand-alone.
+Once we come to a conclusion, we'll wordsmith them into the existing
+coding style document.
 
 Do not put a space after sizeof; do use parens:
 
