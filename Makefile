@@ -30,7 +30,6 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 news/vulnerabilities-0.9.7.inc \
 	 news/vulnerabilities-0.9.6.inc \
 	 source/.htaccess \
-	 source/license.txt \
 	 source/index.inc
 SRCLISTS = \
 	   source/old/0.9.x/index.inc \
@@ -174,9 +173,6 @@ news/vulnerabilities-0.9.6.inc: bin/mk-cvepage news/vulnerabilities.xml
 source/.htaccess: $(wildcard source/openssl-*.tar.gz) bin/mk-latest
 	@rm -f @?
 	./bin/mk-latest source >$@
-source/license.txt: $(SNAP)/LICENSE
-	@rm -f $@
-	cp $? $@
 source/index.inc: $(wildcard $(RELEASEDIR)/openssl-*.tar.gz) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist $(RELEASEDIR) '' 'openssl-*.tar.gz' >$@
