@@ -4,6 +4,7 @@
 # Format is two fields, colon-separated; the first line is the column
 # headings.  URL paths must all be absolute.
 Date: Item
+20-Mar-2018: OpenSSL 1.1.0h, 1.0.2o <a href="https://mta.openssl.org/pipermail/openssl-announce/2018-March/000116.html">security release due on 27th March 2018</a>
 20-Mar-2018: Beta 1 of OpenSSL 1.1.1 is now available: please download and test it
 01-Mar-2018: New Blog post: <a href="https://www.openssl.org/blog/blog/2018/03/01/last-license/">Seeking Last Group of Contributors</a>
 27-Feb-2018: Alpha 2 of OpenSSL 1.1.1 is now available: please download and test it
