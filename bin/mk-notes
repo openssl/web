@@ -8,7 +8,7 @@ my $copy = 0;
 my $in_ul = 0;
 while ( <STDIN> ) {
     chomp;
-    if (/^\s*(Major changes between|Known issues in).*(\d+\.\d+\.\d+)\D.*\[(in pre-release|\d+\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s\d+)\]:?$/) {
+    if (/^\s*(Major changes between|Known issues in).*(\d+\.\d+\.\d+)\D.*\[(in pre-release|under development|\d+\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s\d+)\]:?$/) {
 	if ($in_ul) {
 	    print "</ul>\n";
 	    $in_ul = 0;
