@@ -14,7 +14,7 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 community/committers.inc \
 	 docs/faq.inc docs/fips.inc \
          news/changelog.inc news/changelog.txt \
-         news/cl102.txt news/cl110.txt \
+         news/cl102.txt news/cl110.txt news/cl111.txt \
          news/openssl-1.0.2-notes.inc \
          news/openssl-1.1.0-notes.inc \
          news/openssl-1.1.1-notes.inc \
