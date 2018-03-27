@@ -1,0 +1,82 @@
+
+OpenSSL Security Advisory [27 Mar 2018]
+========================================
+
+Constructed ASN.1 types with a recursive definition could exceed the stack (CVE-2018-0739)
+==========================================================================================
+
+Severity: Moderate
+
+Constructed ASN.1 types with a recursive definition (such as can be found in
+PKCS7) could eventually exceed the stack given malicious input with
+excessive recursion. This could result in a Denial Of Service attack. There are
+no such structures used within SSL/TLS that come from untrusted sources so this
+is considered safe.
+
+OpenSSL 1.1.0 users should upgrade to 1.1.0h
+OpenSSL 1.0.2 users should upgrade to 1.0.2o
+
+This issue was reported to OpenSSL on 4th January 2018 by the OSS-fuzz project.
+The fix was developed by Matt Caswell of the OpenSSL development team.
+
+Incorrect CRYPTO_memcmp on HP-UX PA-RISC (CVE-2018-0733)
+========================================================
+
+Severity: Moderate
+
+Because of an implementation bug the PA-RISC CRYPTO_memcmp function is
+effectively reduced to only comparing the least significant bit of each byte.
+This allows an attacker to forge messages that would be considered as
+authenticated in an amount of tries lower than that guaranteed by the security
+claims of the scheme. The module can only be compiled by the HP-UX assembler, so
+that only HP-UX PA-RISC targets are affected.
+
+OpenSSL 1.1.0 users should upgrade to 1.1.0h
+
+This issue was reported to OpenSSL on 2nd March 2018 by Peter Waltenberg (IBM).
+The fix was developed by Andy Polyakov of the OpenSSL development team.
+
+rsaz_1024_mul_avx2 overflow bug on x86_64 (CVE-2017-3738)
+=========================================================
+
+Severity: Low
+
+This issue has been reported in a previous OpenSSL security advisory and a fix
+was provided for OpenSSL 1.0.2. Due to the low severity no fix was released at
+that time for OpenSSL 1.1.0. The fix is now available in OpenSSL 1.1.0h.
+
+There is an overflow bug in the AVX2 Montgomery multiplication procedure
+used in exponentiation with 1024-bit moduli. No EC algorithms are affected.
+Analysis suggests that attacks against RSA and DSA as a result of this defect
+would be very difficult to perform and are not believed likely. Attacks
+against DH1024 are considered just feasible, because most of the work
+necessary to deduce information about a private key may be performed offline.
+The amount of resources required for such an attack would be significant.
+However, for an attack on TLS to be meaningful, the server would have to share
+the DH1024 private key among multiple clients, which is no longer an option
+since CVE-2016-0701.
+
+This only affects processors that support the AVX2 but not ADX extensions
+like Intel Haswell (4th generation).
+
+Note: The impact from this issue is similar to CVE-2017-3736, CVE-2017-3732
+and CVE-2015-3193.
+
+OpenSSL 1.1.0 users should upgrade to 1.1.0h
+OpenSSL 1.0.2 users should upgrade to 1.0.2n
+
+This issue was reported to OpenSSL on 22nd November 2017 by David Benjamin
+(Google). The issue was originally found via the OSS-Fuzz project. The fix was
+developed by Andy Polyakov of the OpenSSL development team.
+
+References
+==========
+
+URL for this Security Advisory:
+https://www.openssl.org/news/secadv/20180327.txt
+
+Note: the online version of the advisory may be updated with additional details
+over time.
+
+For details of OpenSSL severity classifications please see:
+https://www.openssl.org/policies/secpolicy.html

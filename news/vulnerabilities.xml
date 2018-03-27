@@ -7,7 +7,76 @@
 
 <!-- The updated attribute should be the same as the first public issue,
      unless an old entry was updated. -->
-<security updated="20171102">
+<security updated="20180327">
+  <issue public="20180327">
+    <impact severity="Moderate"/>
+    <cve name="2018-0739"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <affects base="1.1.0" version="1.1.0c"/>
+    <affects base="1.1.0" version="1.1.0d"/>
+    <affects base="1.1.0" version="1.1.0e"/>
+    <affects base="1.1.0" version="1.1.0f"/>
+    <affects base="1.1.0" version="1.1.0g"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <affects base="1.0.2" version="1.0.2i"/>
+    <affects base="1.0.2" version="1.0.2j"/>
+    <affects base="1.0.2" version="1.0.2k"/>
+    <affects base="1.0.2" version="1.0.2l"/>
+    <affects base="1.0.2" version="1.0.2m"/>
+    <affects base="1.0.2" version="1.0.2n"/>
+    <fixed base="1.1.0" version="1.1.0h" date="20180327">
+      <git hash="2ac4c6f7b2b2af20c0e2b0ba05367e454cd11b33"/>
+    </fixed>
+    <fixed base="1.0.2" version="1.0.2o" date="20180327">
+      <git hash="9310d45087ae546e27e61ddf8f6367f29848220d"/>
+    </fixed>
+    <problemtype>Stack overflow</problemtype>
+    <title>Constructed ASN.1 types with a recursive definition could exceed the stack</title>
+    <description>
+      Constructed ASN.1 types with a recursive definition (such as can be found
+      in PKCS7) could eventually exceed the stack given malicious input with
+      excessive recursion. This could result in a Denial Of Service attack.
+      There are no such structures used within SSL/TLS that come from untrusted
+      sources so this is considered safe.
+    </description>
+    <advisory url="/news/secadv/20180327.txt"/>
+    <reported source="OSS-fuzz"/>
+  </issue>
+  <issue public="20180327">
+    <impact severity="Moderate"/>
+    <cve name="2018-0733"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <affects base="1.1.0" version="1.1.0c"/>
+    <affects base="1.1.0" version="1.1.0d"/>
+    <affects base="1.1.0" version="1.1.0e"/>
+    <affects base="1.1.0" version="1.1.0f"/>
+    <affects base="1.1.0" version="1.1.0g"/>
+    <fixed base="1.1.0" version="1.1.0h" date="20180327">
+      <git hash="56d5a4bfcaf37fa420aef2bb881aa55e61cf5f2f"/>
+    </fixed>
+    <problemtype>Message forgery</problemtype>
+    <title>Incorrect CRYPTO_memcmp on HP-UX PA-RISC</title>
+    <description>
+      Because of an implementation bug the PA-RISC CRYPTO_memcmp function is
+      effectively reduced to only comparing the least significant bit of each
+      byte. This allows an attacker to forge messages that would be considered
+      as authenticated in an amount of tries lower than that guaranteed by the
+      security claims of the scheme. The module can only be compiled by the
+      HP-UX assembler, so that only HP-UX PA-RISC targets are affected.
+    </description>
+    <advisory url="/news/secadv/20180327.txt"/>
+    <reported source="Peter Waltenberg (IBM)"/>
+  </issue>
   <issue public="20171207">
     <impact severity="Moderate"/>
     <cve name="2017-3737"/>
@@ -76,7 +145,7 @@
     <fixed base="1.0.2" version="1.0.2n" date="20171207">
       <git hash="ca51bafc1a88d8b8348f5fd97adc5d6ca93f8e76"/>
     </fixed>
-    <fixed base="1.1.0" version="1.1.0h-dev" date="20171207">
+    <fixed base="1.1.0" version="1.1.0h" date="20180327">
       <git hash="e502cc86df9dafded1694fceb3228ee34d11c11a"/>
     </fixed>
     <problemtype>carry-propagating bug</problemtype>
