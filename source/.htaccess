@@ -1,3 +1,0 @@
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(openssl-(\d+\.\d+\.\d+).*\.tar\.gz) /source/old/$2/$1 [L,R=301,NC]
