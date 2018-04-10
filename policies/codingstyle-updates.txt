@@ -1,0 +1,76 @@
+NOTE: The descriptions here were written to be understandable stand-alone.
+Once we come to a conclusion, we'll wordsmith them into the existing
+coding style document.
+
+Do not put a space after sizeof; do use parens:
+
+	sizeof(foo)
+
+When breaking long lines, if there are Boolean conditionals, put them at the
+start of the line.  Consider doing this consistently, and don't merge even if
+they fit.  Here is a bad example, it should be three lines:
+
+	some_long_condition()
+	&& short1() && short2()
+
+Related conditions should be on one line if they fit, else given an extra
+level of indent
+
+	some_long_condition()
+        && (some_other_long()
+            || short2())
+
+	some_long_condition()
+        && (short1() || short2())
+
+If the expression for an if statement does not fit, indent the continuation
+lines a total of TWO extra levels (this is not necessary for an else-if)
+
+	if (this_is_true()
+		&& !that_is_false()) {
+	    code();
+	    ...
+
+Try not to break long lines within a function call, but if you have to, indent
+the rest of the parameter list to be after the function's opening paren.
+If the open paren is "far to the right," however, indent less and try to
+avoid a column of text.
+
+Remember a blank line after variable declarations (even local ones).
+
+Treat a single-statement with comment as if it were multi-line and use curly
+braces, unless the comment is part of a "series" of right-hand comments as in
+a cascading else-if chain. Note that this could end up having "cascading
+curly" effects.
+
+	if (test()) {
+	    /* already alerted */
+	    close();
+	}
+
+Arguments inside macro expansions should be parenthesized, except when
+using the stringify or concatenation operators (# and ## respectively).
+The following examples show examples of this, and proper spacing.
+
+	#define foo(a, b) ((a) * (b))
+	#define quote(a) #a
+	#define join(a, b) a ## quote(b)
+
+Object freeing subroutines should properly handle null (like C's free()
+function); don't check for null before calling any of them.
+
+Argument names in function definition should match the declaration, but you
+can use "unused_" as a prefix in the definition for unused arguments.
+
+When possible, use size_t for sizes of things (including array indicies)
+
+Do not use OPENSSL_assert() in libcrypto or libssl (we do not want to crash in
+production builds, and OPENSSL_assert always did that).  Instead use
+ossl_assert() or assert(), as appropriate.
+
+Favor variable initialization as part of declaration unless it makes the
+intent of the code less clear.
+
+Don't use else after return or goto unless it makes the flow more clear. One
+example where it can help is in a sequence of cascading if/else-if statements
+(i.e., like a switch).
