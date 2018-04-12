@@ -3,8 +3,11 @@
 # Convert our XML file to a JSON file as accepted by Mitre for CNA purposes
 # as per https://github.com/CVEProject/automation-working-group/blob/master/cve_json_schema/DRAFT-JSON-file-format-v4.md
 #
+# ASF httpd and OpenSSL use quite similar files, so this script is designed to work with either
+#
 
 from xml.dom import minidom
+import HTMLParser
 import simplejson as json
 import codecs
 import re
@@ -17,45 +20,15 @@ from jsonschema import validate
 from jsonschema import Draft4Validator
 import urllib
 
-# Versions of OpenSSL we never released, to allow us to display ranges
-neverreleased = "1.0.0h,";
+# Specific project stuff is here
+import vulnxml2jsonproject as cfg
 
 # Location of CVE JSON schema (default, can use local file etc)
 default_cve_schema = "https://raw.githubusercontent.com/CVEProject/automation-working-group/master/cve_json_schema/CVE_JSON_4.0_min_public.schema"
 
-def merge_affects(issue,base):
-    # let's merge the affects into a nice list which is better for Mitre text but we have to take into account our stange lettering scheme
-    prev = ""
-    anext = ""
-    alist = list()
-    vlist = list()
-    for affects in issue.getElementsByTagName('affects'): # so we can sort them
-       version = affects.getAttribute("version")
-       if (not base or base in version):
-           vlist.append(version)
-    for ver in sorted(vlist):
-       # print "version %s (last was %s, next was %s)" %(ver,prev,anext)
-       if (ver != anext):
-          alist.append([ver])
-       elif len(alist[-1]) > 1:
-          alist[-1][-1] = ver
-       else:
-          alist[-1].append(ver)
-       prev = ver
-       if (unicode.isdigit(ver[-1])):   # First version after 1.0.1 is 1.0.1a
-           anext = ver + "a"
-       elif (ver[-1] == "y"):
-           anext = ver[:-1] + "za"    # We ran out of letters once so y->za->zb....
-       else:
-           anext = ver[:-1]+chr(ord(ver[-1])+1) # otherwise after 1.0.1a is 1.0.1b
-       while (anext in neverreleased): # skip unreleased versions
-          anext = anext[:-1]+chr(ord(anext[-1])+1)
-
-    return ",".join(['-'.join(map(str,aff)) for aff in alist])
-        
 parser = OptionParser()
 parser.add_option("-s", "--schema", help="location of schema to check (default "+default_cve_schema+")", default=default_cve_schema,dest="schema")
-parser.add_option("-i", "--input", help="input vulnerability file live openssl-web/news/vulnerabilities.xml", dest="input")
+parser.add_option("-i", "--input", help="input vulnerability file vulnerabilities.xml", dest="input")
 parser.add_option("-c", "--cve", help="comma separated list of cve names to generate a json file for (or all)", dest="cves")
 parser.add_option("-o", "--outputdir", help="output directory for json file (default ./)", default=".", dest="outputdir")
 (options, args) = parser.parse_args()
@@ -74,61 +47,99 @@ cvej = list()
 with codecs.open(options.input,"r","utf-8") as vulnfile:
     vulns = vulnfile.read()
 dom = minidom.parseString(vulns.encode("utf-8"))
-issues = dom.getElementsByTagName('issue')
-for issue in issues:
-    cve = issue.getElementsByTagName('cve')[0].getAttribute('name')
-    if (cve == ""):
+
+for issue in dom.getElementsByTagName('issue'):
+    if not issue.getElementsByTagName('cve'):
+        continue
+    # ASF httpd has CVE- prefix, but OpenSSL does not, make either work
+    cvename = issue.getElementsByTagName('cve')[0].getAttribute('name').replace('CVE-','')
+    if (cvename == ""):
        continue
-    if (options.cves):
-       if (not cve in options.cves):
+    if (options.cves): # If we only want a certain list of CVEs, skip the rest
+       if (not cvename in options.cves):
           continue
+
     cve = dict()
     cve['data_type']="CVE"
     cve['data_format']="MITRE"
     cve['data_version']="4.0"
-    cve['CVE_data_meta']= { "ID": "CVE-"+issue.getElementsByTagName('cve')[0].getAttribute('name'), "ASSIGNER": "openssl-security@openssl.org", "STATE":"PUBLIC" }
+    cve['CVE_data_meta']= { "ID": "CVE-"+cvename, "ASSIGNER": cfg.config['cve_meta_assigner'], "STATE":"PUBLIC" }
     datepublic = issue.getAttribute("public")
-    cve['CVE_data_meta']['DATE_PUBLIC'] = datepublic[:4]+'-'+datepublic[4:6]+'-'+datepublic[6:8]
+    if datepublic:
+       cve['CVE_data_meta']['DATE_PUBLIC'] = datepublic[:4]+'-'+datepublic[4:6]+'-'+datepublic[6:8]
     if issue.getElementsByTagName('title'):
-        cve['CVE_data_meta']['TITLE'] = issue.getElementsByTagName('title')[0].childNodes[0].nodeValue.strip()            
-    desc = issue.getElementsByTagName('description')[0].childNodes[0].nodeValue.strip()
+        cve['CVE_data_meta']['TITLE'] = issue.getElementsByTagName('title')[0].childNodes[0].nodeValue.strip()
+    desc = ""
+    for d in issue.getElementsByTagName('description')[0].childNodes:
+#        if d.nodeType == d.ELEMENT_NODE:
+            if desc:
+                desc += " "
+            desc += re.sub('<[^<]+?>', '', d.toxml().strip())
+    desc = HTMLParser.HTMLParser().unescape(desc)
     problemtype = "(undefined)"
     if issue.getElementsByTagName('problemtype'):
         problemtype = issue.getElementsByTagName('problemtype')[0].childNodes[0].nodeValue.strip()    
     cve['problemtype'] = { "problemtype_data": [ { "description" : [ { "lang":"eng", "value": problemtype} ] } ] }
-    impact = issue.getElementsByTagName('impact')
+    impact = issue.getElementsByTagName('impact') # openssl does it like this
     if impact:
-        cve['impact'] = [ { "lang":"eng", "value":impact[0].getAttribute('severity'), "url":"https://www.openssl.org/policies/secpolicy.html#"+impact[0].getAttribute('severity') } ]
-    for reported in issue.getElementsByTagName('reported'):
-        cve['credit'] = [ { "lang":"eng", "value":reported.getAttribute("source")} ]
+        cve['impact'] = [ { "lang":"eng", "value":impact[0].getAttribute('severity'), "url":cfg.config['security_policy_url']+impact[0].getAttribute('severity') } ]
+    impact = issue.getElementsByTagName('severity')  # httpd does it like this
+    if impact:
+        cve['impact'] = [ { "lang":"eng", "value":impact[0].childNodes[0].nodeValue, "url":cfg.config['security_policy_url']+impact[0].childNodes[0].nodeValue } ]
+
+    # Create the list of credits
+    
+    credit = list()
+    for reported in issue.getElementsByTagName('reported'):  # openssl style credits
+        credit.append( { "lang":"eng", "value":re.sub('[\n ]+',' ', reported.getAttribute("source"))} )
+    for reported in issue.getElementsByTagName('acknowledgements'): # ASF httpd style credits
+        credit.append(  { "lang":"eng", "value":re.sub('[\n ]+',' ', reported.childNodes[0].nodeValue.strip())} )
+    if credit:
+        cve['credit']=credit        
+
+    # Create the list of references
+        
     refs = list()
     for adv in issue.getElementsByTagName('advisory'):
        url = adv.getAttribute("url")
        if (not url.startswith("htt")):
-          url = "https://www.openssl.org"+url
-       refs.append({"url":url})
-    for git in issue.getElementsByTagName('git'):
-       refs.append({"url":"https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h="+git.getAttribute("hash")})
+          url = cfg.config['default_reference_prefix']+url
+       refs.append({"url":url,"name":url,"refsource":"CONFIRM"})
+    for git in issue.getElementsByTagName('git'): # openssl style references to git
+       url = cfg.config['git_prefix']+git.getAttribute("hash")
+       refs.append({"url":url,"name":url,"refsource":"CONFIRM"})       
+    if cfg.config['project'] == 'httpd': # ASF httpd has no references so fake them
+       for fixed in issue.getElementsByTagName('fixed'):
+          base = "".join(fixed.getAttribute("version").split('.')[:-1])
+          refurl = cfg.config['default_reference']+base+".html#CVE-"+cvename
+          refs.append({"url":refurl,"name":refurl,"refsource":"CONFIRM"})
     if refs:
         cve['references'] = { "reference_data": refs  }
 
+    # Create the "affected products" list
+        
     vv = list()
-    for affects in issue.getElementsByTagName('fixed'):
-        text = "Fixed in OpenSSL %s (Affected %s)" %(affects.getAttribute('version'),merge_affects(issue,affects.getAttribute("base")))
-        # Let's condense into a list form since the format of this field is 'free text' at the moment, not machine readable (as per mail with George Theall)
-        vv.append({"version_value":text})
-        # Mitre want the fixed/affected versions in the text too
-        desc += " "+text+"."
+    for affects in issue.getElementsByTagName('fixed'): # OpenSSL and httpd since April 2018 does it this way
+       text = "Fixed in %s %s (Affected %s)" %(cfg.config['product_name'],affects.getAttribute('version'),cfg.merge_affects(issue,affects.getAttribute("base")))
+       # Let's condense into a list form since the format of this field is 'free text' at the moment, not machine readable (as per mail with George Theall)
+       vv.append({"version_value":text})
+       # Mitre want the fixed/affected versions in the text too
+       desc += " "+text+"."
 
-    cve['affects'] = { "vendor" : { "vendor_data" : [ { "vendor_name": "OpenSSL", "product": { "product_data" : [ { "product_name": "OpenSSL", "version": { "version_data" : vv}}]}}]}}
-        
+#    if issue.getAttribute('fixed'): # httpd used to do it this way
+#        base = ".".join(issue.getAttribute("fixed").split('.')[:-1])+"."
+#        text = "Fixed in %s %s (Affected %s)" %(cfg.config['product_name'],issue.getAttribute('fixed'),cfg.merge_affects(issue,base))
+#        vv.append({"version_value":text})
+#        # Mitre want the fixed/affected versions in the text too
+#        desc += " "+text+"."            
+
+    cve['affects'] = { "vendor" : { "vendor_data" : [ { "vendor_name": cfg.config['vendor_name'], "product": { "product_data" : [ { "product_name": cfg.config['product_name'], "version": { "version_data" : vv}}]}}]}}
+            
     # Mitre want newlines and excess spaces stripped
-    desc = re.sub('[\n ]+',' ', desc)
-        
+    desc = re.sub('[\n ]+',' ', desc)        
     cve['description'] = { "description_data": [ { "lang":"eng", "value": desc} ] }
     cvej.append(cve)
         
-
 for issue in cvej:
     fn = issue['CVE_data_meta']['ID'] + ".json"
     if not issue:
