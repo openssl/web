@@ -8,6 +8,49 @@
 <!-- The updated attribute should be the same as the first public issue,
      unless an old entry was updated. -->
 <security updated="20180327">
+  <issue public="20180416">
+    <impact severity="Low"/>
+    <cve name="2018-0737"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <affects base="1.1.0" version="1.1.0c"/>
+    <affects base="1.1.0" version="1.1.0d"/>
+    <affects base="1.1.0" version="1.1.0e"/>
+    <affects base="1.1.0" version="1.1.0f"/>
+    <affects base="1.1.0" version="1.1.0g"/>
+    <affects base="1.1.0" version="1.1.0h"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <affects base="1.0.2" version="1.0.2i"/>
+    <affects base="1.0.2" version="1.0.2j"/>
+    <affects base="1.0.2" version="1.0.2k"/>
+    <affects base="1.0.2" version="1.0.2l"/>
+    <affects base="1.0.2" version="1.0.2m"/>
+    <affects base="1.0.2" version="1.0.2n"/>
+    <affects base="1.0.2" version="1.0.2o"/>
+    <fixed base="1.1.0" version="1.1.0i-dev" date="20180416">
+      <git hash="6939eab03a6e23d2bd2c3f5e34fe1d48e542e787"/>
+    </fixed>
+    <fixed base="1.0.2" version="1.0.2p-dev" date="20180416">
+      <git hash="349a41da1ad88ad87825414752a8ff5fdd6a6c3f"/>
+    </fixed>
+    <problemtype>Constant time issue</problemtype>
+    <title>Cache timing vulnerability in RSA Key Generation</title>
+    <description>
+      The OpenSSL RSA Key generation algorithm has been shown to be vulnerable
+      to a cache timing side channel attack. An attacker with sufficient access
+      to mount cache timing attacks during the RSA key generation process could
+      recover the private key.
+    </description>
+    <advisory url="/news/secadv/20180416.txt"/>
+    <reported source="Alejandro Cabrera Aldaya, Billy Brumley, Cesar Pereida Garcia and Luis Manuel Alvarez Tapia"/>
+  </issue>
   <issue public="20180327">
     <impact severity="Moderate"/>
     <cve name="2018-0739"/>

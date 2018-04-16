@@ -1,0 +1,35 @@
+
+OpenSSL Security Advisory [16 Apr 2018]
+========================================
+
+Cache timing vulnerability in RSA Key Generation (CVE-2018-0737)
+================================================================
+
+Severity: Low
+
+The OpenSSL RSA Key generation algorithm has been shown to be vulnerable to a
+cache timing side channel attack. An attacker with sufficient access to mount
+cache timing attacks during the RSA key generation process could recover the
+private key.
+
+Due to the low severity of this issue we are not issuing a new release of
+OpenSSL 1.1.0 or 1.0.2 at this time. The fix will be included in OpenSSL 1.1.0i
+and OpenSSL 1.0.2p when they become available. The fix is also available in
+commit 6939eab03 (for 1.1.0) and commit 349a41da1 (for 1.0.2) in the OpenSSL git
+repository.
+
+This issue was reported to OpenSSL on 4th April 2018 by Alejandro Cabrera
+Aldaya, Billy Brumley, Cesar Pereida Garcia and Luis Manuel Alvarez Tapia.
+The fix was developed by Billy Brumley.
+
+References
+==========
+
+URL for this Security Advisory:
+https://www.openssl.org/news/secadv/20180416.txt
+
+Note: the online version of the advisory may be updated with additional details
+over time.
+
+For details of OpenSSL severity classifications please see:
+https://www.openssl.org/policies/secpolicy.html
