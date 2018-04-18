@@ -103,3 +103,13 @@ in the next minor release.
 
 It was decided after the release of OpenSSL 0.9.8y the next version should
 be 0.9.8za then 0.9.8zb and so on.
+
+* Do you have a bug bounty program?
+
+The project does not.  Google runs a program
+@@@https://www.google.com/about/appsecurity/patch-rewards/@@@; so does
+HackerOne, @@@https://hackerone.com/ibb-openssl@@@. In general, if you
+have found a security issue, send email to openssl-security@openssl.org.
+Please note that we do not consider DNS configurations or Website
+configuration to be security issues.
+
