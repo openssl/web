@@ -289,11 +289,15 @@ options.
 
 In source files, separate functions with one blank line.
 
+In source files, unused function parameters names may be prefixed with
+'unused_'.
+
 In function prototypes, include parameter names with their data types.
 Although this is not required by the C language, it is preferred in OpenSSL
 because it is a simple way to add valuable information for the reader.
-The name in the prototype declaration should match the name in the function
-definition.
+The function and parameter names in the prototype declaration should match
+the name in the function definition, although the 'unused_' prefix should
+be omitted there.
 
 
                 Chapter 7: Centralized exiting of functions
