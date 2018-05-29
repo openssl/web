@@ -13,7 +13,7 @@
 	  <h2>Release Strategy</h2>
 	  <h5>
 	    First issued 23rd December 2014<br/>
-	    Last modified 6th February 2018
+	    Last modified 29th May 2018
 	  </h5>
 	</header>
 
@@ -69,10 +69,10 @@
 	  fixes. Before that, bug and security fixes will be applied
 	  as appropriate.</p>
 
-	  <p>The next version of OpenSSL will be 1.1.1. This is currently in
-	  development and has a primary focus of implementing TLSv1.3. The
-	  RFC for TLSv1.3 has not yet been published by the IETF. OpenSSL 1.1.1
-	  will not have its final release until that has happened.</p>
+	  <p>The next version of OpenSSL will be 1.1.1 which will be an LTS release.
+	  This is currently in development and has a primary focus of implementing
+	  TLSv1.3. The RFC for TLSv1.3 has not yet been published by the IETF.
+	  OpenSSL 1.1.1 will not have its final release until that has happened.</p>
 
 	  <p>The draft release timetable for 1.1.1 is as follows. This may be
           amended at any time as the need arises.</p>
@@ -88,9 +88,10 @@
 	    <li>3rd April 2018, beta release 2 (pre4)</li>
 	    <li>17th April 2018, beta release 3 (pre5)</li>
 	    <li>1st May 2018, beta release 4 (pre6)</li>
-	    <li>8th May 2018, release readiness check (new release
-		cycles added if required, first possible final release date:
-		15th May 2018)</li>
+	    <li>29th May 2018, beta release 5 (pre7)</li>
+	    <li>19th June 2018, beta release 6 (pre8)</li>
+	    <li>Release readiness check following pre8 release (new release
+	        cycles added if required)</li>
 	  </ul>
 
 	  <p>An alpha release means:</p>
@@ -113,7 +114,7 @@
 	    <li>Clean builds in Travis and Appveyor for two days</li>
 	    <li>run-checker.sh to be showing as clean 2 days before release</li>
 	    <li>No open Coverity issues (not flagged as "False Positive" or "Ignore")</li>
-	    <li>TLSv1.3 RFC published</li>
+	    <li>TLSv1.3 RFC published (with at least one beta release after the publicaction)</li>
 	  </ul>
 
 	  <p>Valid reasons for closing an issue/PR with a 1.1.1 milestone might be:</p>
