@@ -34,20 +34,6 @@
 	  performance improvements and so on. There is no need to
 	  recompile applications to benefit from these features.</p>
 
-	  <p>Binary compatibility also allows other possibilities. For
-	  example, consider an application that wishes to utilize
-	  a new cipher provided in a specific 1.0.x release, but it
-	  is also desirable to maintain the application in a 1.0.0
-	  context.  Customarily this would be resolved at compile time
-	  resulting in two binary packages targeting different OpenSSL
-	  versions. However, depending on the feature, it might be
-	  possible to check for its availability at run-time, thus cutting
-	  down on the maintenance of multiple binary packages. Admittedly
-	  it takes a certain discipline and some extra coding, but we
-	  would like to encourage such practice. This is because we
-	  want to see later releases being adopted faster, because new
-	  features can improve security.</p>
-
 	  <p>With regards to current and future releases the OpenSSL
 	  project has adopted the following policy:</p>
 
@@ -64,7 +50,7 @@
 	  and we will specify one at least every four years. Non-LTS
 	  releases will be supported for at least two years.</p>
 
-	  <p>As implied by the above paragraphs, during the final year
+	  <p>During the final year
 	  of support, we do not commit to anything other than security
 	  fixes. Before that, bug and security fixes will be applied
 	  as appropriate.</p>
