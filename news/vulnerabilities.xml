@@ -7,7 +7,53 @@
 
 <!-- The updated attribute should be the same as the first public issue,
      unless an old entry was updated. -->
-<security updated="20180327">
+<security updated="20180612">
+  <issue public="20180612">
+    <impact severity="Low"/>
+    <cve name="2018-0732"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <affects base="1.1.0" version="1.1.0c"/>
+    <affects base="1.1.0" version="1.1.0d"/>
+    <affects base="1.1.0" version="1.1.0e"/>
+    <affects base="1.1.0" version="1.1.0f"/>
+    <affects base="1.1.0" version="1.1.0g"/>
+    <affects base="1.1.0" version="1.1.0h"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <affects base="1.0.2" version="1.0.2i"/>
+    <affects base="1.0.2" version="1.0.2j"/>
+    <affects base="1.0.2" version="1.0.2k"/>
+    <affects base="1.0.2" version="1.0.2l"/>
+    <affects base="1.0.2" version="1.0.2m"/>
+    <affects base="1.0.2" version="1.0.2n"/>
+    <affects base="1.0.2" version="1.0.2o"/>
+    <fixed base="1.1.0" version="1.1.0i-dev" date="20180612">
+      <git hash="ea7abeeabf92b7aca160bdd0208636d4da69f4f4"/>
+    </fixed>
+    <fixed base="1.0.2" version="1.0.2p-dev" date="20180612">
+      <git hash="3984ef0b72831da8b3ece4745cac4f8575b19098"/>
+    </fixed>
+    <problemtype>Client side Denial of Service</problemtype>
+    <title>Client DoS due to large DH parameter</title>
+    <description>
+        During key agreement in a TLS handshake using a DH(E) based ciphersuite
+        a malicious server can send a very large prime value to the client. This
+        will cause the client to spend an unreasonably long period of time
+        generating a key for this prime resulting in a hang until the client has
+        finished. This could be exploited in a Denial Of Service attack.
+    </description>
+    <advisory url="/news/secadv/20180416.txt"/>
+    <reported source="Guido Vranken"/>
+  </issue>
   <issue public="20180416">
     <impact severity="Low"/>
     <cve name="2018-0737"/>
