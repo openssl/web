@@ -51,7 +51,7 @@
         generating a key for this prime resulting in a hang until the client has
         finished. This could be exploited in a Denial Of Service attack.
     </description>
-    <advisory url="/news/secadv/20180416.txt"/>
+    <advisory url="/news/secadv/20180612.txt"/>
     <reported source="Guido Vranken"/>
   </issue>
   <issue public="20180416">
