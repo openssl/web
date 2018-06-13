@@ -12,6 +12,7 @@ RELEASEDIR = /var/www/openssl/source
 # All simple generated files.
 SIMPLE = newsflash.inc sitemap.txt \
 	 community/committers.inc \
+	 community/omc.inc community/omc-alumni.inc \
 	 docs/faq.inc docs/fips.inc \
          news/changelog.inc news/changelog.txt \
          news/cl102.txt news/cl110.txt news/cl111.txt \
@@ -78,7 +79,7 @@ manmaster:
 	$(call newmakemanpages,$(CHECKOUTS)/openssl,master)
 
 ## $(SIMPLE) -- SIMPLE GENERATED FILES
-.PHONY: sitemap community/committers.inc
+.PHONY: sitemap community/committers.inc community/omc.inc community/omc-alumni.inc
 newsflash.inc: news/newsflash.inc
 	@rm -f $@
 	head -7 $? >$@
@@ -91,6 +92,11 @@ community/committers.inc:
 	wget -q https://api.openssl.org/0/Group/commit/Members
 	./bin/mk-committers <Members >$@
 	@rm -f Members
+
+community/omc.inc:
+	./bin/mk-omc -n -e -l -p -t 'OMC Members' omc omc-inactive > $@
+community/omc-alumni.inc:
+	./bin/mk-omc -n -l -t 'OMC Alumni' omc-alumni omc-emeritus > $@
 
 docs/faq.inc: $(wildcard docs/faq-[0-9]-*.txt) bin/mk-faq
 	@rm -f $@
