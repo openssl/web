@@ -6,6 +6,7 @@ use warnings;
 use Getopt::Long;
 use Pod::Usage;
 use OpenSSL::Query::REST;
+use HTML::Entities;
 
 my %options = ();
 GetOptions(
@@ -73,7 +74,7 @@ foreach my $key (sort { my $sortablename_a =
     push @columndata,
 	join('',
 	     $data{$key}->{active} ? "" : "<i>",
-	     "$key",
+	     encode_entities($key),
 	     $data{$key}->{active} ? "" : "</i> (I)",
 	     $data{$key}->{emeritus} ? " (OMC Emeritus)" : "")
 	if $options{name};
