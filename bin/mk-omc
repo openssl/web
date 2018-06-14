@@ -56,14 +56,7 @@ print join("    <th>&nbsp;&nbsp;</th>\n",
 	   map { "    <th>$_</th>\n" } @columns);
 print "  </tr>\n";
 
-foreach my $key (sort { my $sortablename_a =
-			    ($a =~ m|^(\S+(?:\s\S\.)?)\s+(.*)$|,
-			     "$2, $1");
-			my $sortablename_b =
-			    ($b =~ m|^(\S+(?:\s\S\.)?)\s+(.*)$|,
-			     "$2, $1");
-			$sortablename_a cmp $sortablename_b }
-		     keys %data) {
+foreach my $key (sort { mk_sortable($a) cmp mk_sortable($b) } keys %data) {
     my $pgpurl = $data{$key}->{pgpid} if $options{pgp};
     $pgpurl =~ s|\s+||g if $pgpurl;
     $pgpurl =
@@ -94,3 +87,18 @@ foreach my $key (sort { my $sortablename_a =
 }
 
 print "</table>\n";
+
+sub mk_sortable {
+    my $name = shift;
+
+    # Peel off any title
+    $name =~ s/(Dr|Mr|Mrs|Miss)\.?\s+//;
+
+    # Split into first+middle name and last names and flip them over with
+    # a comma between.
+    # We work with the assumption that the middle name, if included, is
+    # given as a single letter followed by a possible period.
+    $name = ($name =~ m|^(\S+(?:\s\S\.?)?)\s+(.*)$|, "$2, $1");
+
+    return $name;
+}
