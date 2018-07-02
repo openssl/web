@@ -10,15 +10,10 @@
 	  <header><h2>FIPS-140</h2></header>
 	  <div class="entry-content">
 
-	    <p>For a basic introduction,
-	    <a href="#background">see below</a>.  Thanks to multiple platform
-	    sponsorships, the 2.0 validations include the largest number of
-	    formally tested platforms for any validated module.</p>
-
 	    <p>The most recent open source based validation of a cryptographic
-	    module (Module) compatible with the OpenSSL 1.0.1 and 1.0.2
-	    libraries is v2.0.16, FIPS 140-2 certificate <a
-	    href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1747">#1747</a>.
+	    module (Module) compatible with the OpenSSL 1.0.2
+	    is v2.0.16, FIPS 140-2 certificate <a
+	    href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/1747">#1747</a>.
 	    This Module is documented in the
 	    <a href="fips/UserGuide-2.0.pdf">2.0 User Guide</a>;
 	    the <a href="/source/openssl-fips-2.0.16.tar.gz">source code</a>,
@@ -26,12 +21,10 @@
             are also available.
 
             <p>
-	    For convoluted bureaucratic reasons, the same module is also
-	    available under the validations <a
-            href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#2398">#2398</a>
-	    (revision 2.0.16) and <a
-            href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#2473">#2473</a>
-	    (revision 2.0.10).
+	    For various bureaucratic reasons, the same module is also
+	    available as validation <a
+            href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/2398">#2398</a>
+	    (revision 2.0.16).
 	    </p>
 
             <p>
@@ -69,13 +62,17 @@
 	      instructions) for your platform, then you can use it as
 	      validated cryptography on a "vendor affirmed" basis.</li>
 
-	      <li>If even the tiniest source code or build process changes are
-	      required for your intended application, you cannot use the open
+	      <li>If even a single line of the source code or build process
+              has to be changed
+	      for your intended application, you cannot use the open
 	      source based validated module directly.  You must obtain your
 	      own validation.</li>
 
               <li>None of the validations will work with OpenSSL 1.1.0 or
               later.</li>
+
+              <li>We are starting work on a new validation based on the
+              upcoming 1.1.1 release.</li>
 
 	    </ul>
 
