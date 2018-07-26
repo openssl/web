@@ -154,6 +154,25 @@ Rules (DER): these uniquely specify how a given structure is encoded.
 Therefore, because DER is a special case of BER, DER is an acceptable encoding
 for BER.
 
+* The encoding for GeneralName is wrong; why is the SEQUENCE tag missing?
+
+In RFC 5280 GeneralName is defined in the module in Appendix A.2, and that
+module specifies the use of IMPLICIT tagging. This means that there is not an
+explicit SEQUENCE (30) tag following the A0 tag (you just know from the ASN.1
+that what follows the A1 tag is a SEQUENCE). This is in contrast to the value
+field within OtherName (test@kerberose-domain.internal), where the tag for
+UTF8String (0C) follows the A0 tag, since EXPLICIT tagging is specified for
+that particular field.
+
+You will notice the same thing if you look at other choices within
+GeneralName. If you look at the DNS names encoded in the subjectAltName
+extension, the 82 tag (corresponding to [2]) is not followed by a tag for
+IA5String (22). It is not needed since the ASN.1 indicates that what follows
+the 82 tag is an IA5String. However, if the module specified EXPLICIT
+encoding, then there would be a 16 tag after the 82 tag.
+
+(Thanks to David Cooper for this text.)
+
 * I tried to set a cipher list with a valid cipher, but the call fails, why?
 
 OpenSSL 1.1.0 introduced the concept of a &ldquo;security level&rdquo;, allowing
