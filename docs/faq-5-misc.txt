@@ -33,6 +33,13 @@ that came with the version of OpenSSL you are using. The pod format
 documentation is included in each OpenSSL distribution under the docs
 directory.
 
+* I need a FIPS validated offering
+
+Please see
+@@@https://www.openssl.org/docs/fips.html@@@; the OpenSSL project is no longer
+involved in private label validations nor adding platforms to the existing
+certificates.
+
 * How can I contact the OpenSSL developers?
 
 The README file describes how to submit bug reports and patches to
