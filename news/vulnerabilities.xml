@@ -7,7 +7,7 @@
 
 <!-- The updated attribute should be the same as the first public issue,
      unless an old entry was updated. -->
-<security updated="20180612">
+<security updated="20180814">
   <issue public="20180612">
     <impact severity="Low"/>
     <cve name="2018-0732"/>
@@ -36,10 +36,10 @@
     <affects base="1.0.2" version="1.0.2m"/>
     <affects base="1.0.2" version="1.0.2n"/>
     <affects base="1.0.2" version="1.0.2o"/>
-    <fixed base="1.1.0" version="1.1.0i-dev" date="20180612">
+    <fixed base="1.1.0" version="1.1.0i" date="20180814">
       <git hash="ea7abeeabf92b7aca160bdd0208636d4da69f4f4"/>
     </fixed>
-    <fixed base="1.0.2" version="1.0.2p-dev" date="20180612">
+    <fixed base="1.0.2" version="1.0.2p" date="20180814">
       <git hash="3984ef0b72831da8b3ece4745cac4f8575b19098"/>
     </fixed>
     <problemtype>Client side Denial of Service</problemtype>
@@ -82,10 +82,10 @@
     <affects base="1.0.2" version="1.0.2m"/>
     <affects base="1.0.2" version="1.0.2n"/>
     <affects base="1.0.2" version="1.0.2o"/>
-    <fixed base="1.1.0" version="1.1.0i-dev" date="20180416">
+    <fixed base="1.1.0" version="1.1.0i" date="20180814">
       <git hash="6939eab03a6e23d2bd2c3f5e34fe1d48e542e787"/>
     </fixed>
-    <fixed base="1.0.2" version="1.0.2p-dev" date="20180416">
+    <fixed base="1.0.2" version="1.0.2p" date="20180814">
       <git hash="349a41da1ad88ad87825414752a8ff5fdd6a6c3f"/>
     </fixed>
     <problemtype>Constant time issue</problemtype>
