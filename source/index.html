@@ -30,11 +30,20 @@
 	    A list of mirror sites can be found <a href="mirror.html">here</a>.
 	    </p>
 
-	    <p><em>Note:</em> The latest stable version is the 1.1.0 series.
-            The 1.0.2 series is our Long Term
-	    Support (LTS) release, supported until 31st December 2019.
-            The 0.9.8, 1.0.0 and 1.0.1 versions are now out of support and
-	    should not be used.</p>
+	    <p><em>Note:</em> The latest stable version is the 1.1.1 series. This is
+        also our Long Term Support (LTS) version, supported until 11th September
+        2023. Our previous LTS version (1.0.2 series) will continue to be
+        supported until 31st December 2019 (security fixes only during the last
+        year of support). The 1.1.0 series is currently only receiving security
+        fixes and will go out of support on 11th September 2019. All users of
+        1.0.2 and 1.1.0 are encouraged to upgrade to 1.1.1 as soon as possible.
+        The 0.9.8, 1.0.0 and 1.0.1 versions are now out of support and should
+        not be used.</p>
+
+        <p>The OpenSSL FIPS Object Module 2.0 (FOM) is also available for
+        download. It is no longer receiving updates. It must be used in
+        conjunction with a FIPS capable version of OpenSSL (1.0.2 series). A
+        new FIPS module is currently in development.</p>
 
 	    <table>
 	      <tr>
@@ -47,9 +56,12 @@
 	    <p>&nbsp;</p>
 
 	    <p>When building a release for the first time, please make sure
-	    to look at the README and INSTALL files in the distribution.
-	    If you have problems, look at the FAQ, which can be
-	    found <a href="/docs/faq.html">online</a>.</p>
+	    to look at the INSTALL file in the distribution along with any NOTES
+        file applicable to your platform. If you have problems, look at the FAQ,
+        which can be found <a href="/docs/faq.html">online</a>. If you
+        still need more help, then join the
+        <a href="/community/mailinglists.html">openssl-users</a> email list and
+        post a question there.</p>
 
 	    <p>PGP keys for the signatures are available from the
 	    <a href="https://www.openssl.org/community/omc.html">OMC page</a>.
