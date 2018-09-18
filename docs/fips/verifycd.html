@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--#include virtual="/inc/head.shtml" -->
+<body>
+  <!--#include virtual="/inc/banner.shtml" -->
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+	<article>
+          <header><h2>FIPS 140-2 verification of the OpenSSL FIPS Object Module source distribution file</h2></header>
+	  <div class="entry-content">
+            
+    <p>
+    <img src="./verifycd.jpg" align="left" border="0" alt="image of CD label" width="200" height="200">
+    The latest of the OpenSSL FIPS Object Module ("FIPS module")
+    FIPS 140-2 validations saw the introduction of a new requirement
+    by the CMVP:
+    <blockquote>
+      <em>The distribution tar file, shall be verified using an
+        independently acquired FIPS 140-2 validated cryptographic
+        module...</em>
+    </blockquote>
+    Some prospective users of the OpenSSL FIPS Object Module 2.0 already
+    have ready access to an existing securely-installed software product
+    using FIPS 140-2 validated cryptography that is capable of calculating
+    the HMAC-SHA-1 digest of a file on disk, in which case satisfying this
+    requirement is easy (simply calculate the HMAC-SHA-1 digest of the
+    source distribution file using the key <code>"etaonrishdlcupfm"</code>
+    and confirm it is that same as documented in the <a
+      href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm">Security Policy</a>
+    document (e.g., <code>"2cdd29913c6523df8ad38da11c342b80ed3f1dae"</code> for
+    <em>openssl-fips-2.0.tar.gz</em>).
+    </p>
+
+    <p>For most prospective users the identification, acquisition,
+    installation, and configuration of a suitable product may be a challenge.
+    (See Section 6.6 of our FIPS
+    <a href="/docs/fips/UserGuide-2.0.pdf">User
+      Guide</a>)
+    The requirement for this verification with an independently acquired
+    FIPS 140-2 validated cryptographic module does not apply when the
+    distribution file is distributed using a "secure" means. Distribution
+    on physical media is considered secure in this context, so as a
+    convenience a copy of the distribution files can be obtained from
+    <a href="/community/contacts.html">OSS</a> as a CD-ROM disks via postal mail.</p>
+
+    <p>The fee for this is $100 in US Dollars. At this time we are only able
+      to accept US wire transfers.
+    Email us at <a href="mailto:osf-contact@openssl.org">osf-contact@openssl.org</a>
+    and we will send you our ABA and account information.
+    <b>We cannot do credit cards, purchase orders, or anything other
+      than a US-based bank transfer at this time.</b>
+    We can mail internationally (the CD contains only open source code
+    and so may be exported under the TSU exception of EAR ECCN 5D002).
+    It will take a week or two to process your order.</p>
+
+    <p>Note that the files you will receive on these CDs will be
+    <em>identical</em> in every respect (except for formal FIPS 140-2
+    compliance) with the files you can download from <a
+      href="/source/">https://www.openssl.org/source/</a>
+    Once the distribution files have been received on this CD
+    they can be redistributed internally within an organizational
+    entity (corporation, institution, or agency) by normal means.
+    </p>
+
+	  </div>
+	  <footer>
+	    You are here: <a href="/">Home</a>
+	    : <a href="../">Docs</a>
+	    : <a href="../fips.html">FIPS</a>            
+	    : <a href="">FIPS-140 Verify CD</a>
+	    <br/><a href="/sitemap.txt">Sitemap</a>
+	  </footer>
+	</article>
+      </div>
+      <!--#include virtual="sidebar.shtml" -->
+    </div>
+  </div>
+<!--#include virtual="/inc/footer.shtml" -->
+</body>
+</html>
