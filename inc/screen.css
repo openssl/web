@@ -362,10 +362,7 @@ article blockquote cite:before {
 
 /* @extend this to force long lines of continuous text to wrap */
 .force-wrap, article a, aside.sidebar a {
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  white-space: pre-wrap;
+  white-space: normal;
   word-wrap: break-word;
 }
 
