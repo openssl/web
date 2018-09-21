@@ -25,10 +25,17 @@
 	  </p>
 
 	  <p>
-	    With this format, API/ABI compatibility will only be guaranteed
+	    With this format, API/ABI compatibility will be guaranteed
 	    for the same MAJOR version number. Previously we guaranteed
 	    API/ABI compatibility across the same MAJOR.MINOR combination.
 	  </p>
+
+	  <ul>
+	    <li>MAJOR: API/ABI incompatible changes will increase this number</li>
+	    <li>MINOR: API/ABI compatible feature releases will change this</li>
+	    <li>PATCH: Bug fix releases will increment this number. We also
+            allow backporting of accessor functions in these releases.</li>
+	  </ul>
 
 	  <p>
 	    This more closely aligns with the expectations of users who are
@@ -44,8 +51,8 @@
 	      As of release 1.0.0 the OpenSSL versioning scheme was improved
 	      to better meet developers' and vendors' expectations. Letter
 	      releases, such as 1.0.2a, exclusively contain bug and security
-	      fixes and no new features. Minor releases that change the
-	      last digit, e.g. 1.1.0 vs. 1.1.1, can and are likely to
+	      fixes and no new features. Releases that change the last digit,
+	      e.g. 1.1.0 vs. 1.1.1, can and are likely to
 	      contain new features, but in a way that does not break binary
 	      compatibility. This means that an application compiled and
 	      dynamically linked with 1.1.0 does not need to be recompiled
@@ -63,10 +70,11 @@
 	  project has adopted the following policy:</p>
 
 	  <ul>
-	    <li>Version 1.1.1 will be supported until 2023-09-11 (LTS)</li>
+	    <li>The next version of OpenSSL will be 3.0.0.</li>
+	    <li>Version 1.1.1 will be supported until 2023-09-11 (LTS).</li>
 	    <li>Version 1.1.0 will be supported until 2019-09-11.</li>
 	    <li>Version 1.0.2 will be supported until 2019-12-31 (LTS).</li>
-            <li>Version 1.0.1 is no longer supported.</li>
+	    <li>Version 1.0.1 is no longer supported.</li>
 	    <li>Version 1.0.0 is no longer supported.</li>
 	    <li>Version 0.9.8 is no longer supported.</li>
 	  </ul>
@@ -108,19 +116,19 @@
 	  <ul>
 	    <li>
 	      All open github issues/PRs older than 2 weeks at the time of
-	      release to be assessed for relevance to the version to be
+	      release need to be assessed for relevance to the version being
 	      released. Any flagged with the a milestone for the version
-	      to be released must be closed (see below)
+	      to be released must be closed (see below).
 	    </li>
 	    <li>
-	      Clean builds in Travis and Appveyor for two days
+	      Clean builds in Travis and Appveyor for two days.
 	    </li>
 	    <li>
-	      run-checker.sh to be showing as clean 2 days before release
+	      run-checker.sh succeeds on 2 consecutive days before release.
 	    </li>
 	    <li>
 	      No open Coverity issues (not flagged as "False Positive" or
-	      "Ignore")
+	      "Ignore").
 	    </li>
 	  </ul>
 
@@ -141,7 +149,7 @@
 	      Working as intended
 	    </li>
 	    <li>
-	      Deliberate decision not to fix until a later release (this
+	      Deliberate decision not to fix this issue until a later release (this
 	      wouldn't actually close the issue/PR but change the milestone
 	      instead)
 	    </li>
@@ -149,6 +157,26 @@
 	      Not enough information and unable to contact reporter
 	    </li>
 	  </ul>
+
+	  <hr />
+
+	  <p>No API or ABI breaking changes are allowed in a minor or patch release.
+	  The following stability rules apply to all changes made to code
+	  targeted for a major release from version 3.0.0 or later:</p>
+	  <ul>
+	    <li>No existing public interface can be modified except where changes
+	    are unlikely to break source compatibility or where structures are made
+	    opaque.
+	    <li>No existing public interface can be removed until its replacement
+	    has been in place in an LTS stable release. The original interface must
+	    also have been documented as deprecated for at least 5 years. A public
+	    interface is any function, structure or macro declared in a public
+	    header file.</li>
+	    <li>When structures are made opaque, any newly required accessor
+	    macros or functions are added in a feature release of the extant LTS
+	    release and all supported intermediate successor releases.</li>
+	  </ul>
+
 	</div>
 	<footer>
 	  You are here: <a href="/">Home</a>
