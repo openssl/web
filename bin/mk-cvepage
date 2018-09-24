@@ -147,7 +147,7 @@ preface += "</p>"
 if allissues != "":
     preface += allissues + "</dl>"
 else:
-    preface += "No vulnerabilities"
+    preface += "No vulnerabilities fixed"
 
 sys.stdout.write(preface.encode('utf-8'))
 
