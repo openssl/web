@@ -239,11 +239,11 @@ ul ul, ul ol, ol ul, ol ol {
   margin-bottom: 0em;
 }
 
-strong {
+strong, b {
   font-weight: bold;
 }
 
-em {
+em, i {
   font-style: italic;
 }
 
