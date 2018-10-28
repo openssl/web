@@ -1,0 +1,31 @@
+OpenSSL Security Advisory [29 October 2018]
+===========================================
+
+Timing vulnerability in ECDSA signature generation (CVE-2018-0735)
+==================================================================
+
+Severity: Low
+
+The OpenSSL ECDSA signature algorithm has been shown to be vulnerable to a
+timing side channel attack. An attacker could use variations in the signing
+algorithm to recover the private key.
+
+Due to the low severity of this issue we are not issuing a new release
+of OpenSSL 1.1.1 or 1.1.0 at this time. The fix will be included in
+OpenSSL 1.1.1a and OpenSSL 1.1.0j when they become available. The fix
+is also available in commit b1d6d55ece (for 1.1.1) and commit 56fb454d28
+(for 1.1.0) in the OpenSSL git repository.
+
+This issue was reported to OpenSSL on 25th October 2018 by Samuel Weiser.
+
+References
+==========
+
+URL for this Security Advisory:
+https://www.openssl.org/news/secadv/20181029.txt
+
+Note: the online version of the advisory may be updated with additional details
+over time.
+
+For details of OpenSSL severity classifications please see:
+https://www.openssl.org/policies/secpolicy.html
