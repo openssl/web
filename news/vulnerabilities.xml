@@ -72,10 +72,10 @@
     <affects base="1.1.0" version="1.1.0g"/>
     <affects base="1.1.0" version="1.1.0h"/>
     <affects base="1.1.0" version="1.1.0i"/>
-    <fixed base="1.1.0" version="1.1.0j" date="20181029">
+    <fixed base="1.1.0" version="1.1.0j-dev" date="20181029">
       <git hash="56fb454d281a023b3f950d969693553d3f3ceea1"/>
     </fixed>
-    <fixed base="1.1.1" version="1.1.1a" date="20181029">
+    <fixed base="1.1.1" version="1.1.1a-dev" date="20181029">
       <git hash="b1d6d55ece1c26fa2829e2b819b038d7b6d692b4"/>
     </fixed>
     <problemtype>Constant time issue</problemtype>
