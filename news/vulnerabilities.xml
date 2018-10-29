@@ -7,7 +7,57 @@
 
 <!-- The updated attribute should be the same as the first public issue,
      unless an old entry was updated. -->
-<security updated="20181029">
+<security updated="20181030">
+  <issue public="20181030">
+    <impact severity="Low"/>
+    <cve name="2018-0734"/>
+    <affects base="1.1.1" version="1.1.1"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <affects base="1.1.0" version="1.1.0c"/>
+    <affects base="1.1.0" version="1.1.0d"/>
+    <affects base="1.1.0" version="1.1.0e"/>
+    <affects base="1.1.0" version="1.1.0f"/>
+    <affects base="1.1.0" version="1.1.0g"/>
+    <affects base="1.1.0" version="1.1.0h"/>
+    <affects base="1.1.0" version="1.1.0i"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <affects base="1.0.2" version="1.0.2i"/>
+    <affects base="1.0.2" version="1.0.2j"/>
+    <affects base="1.0.2" version="1.0.2k"/>
+    <affects base="1.0.2" version="1.0.2l"/>
+    <affects base="1.0.2" version="1.0.2m"/>
+    <affects base="1.0.2" version="1.0.2n"/>
+    <affects base="1.0.2" version="1.0.2o"/>
+    <affects base="1.0.2" version="1.0.2p"/>
+    <fixed base="1.1.1" version="1.1.1a-dev" date="20181029">
+      <git hash="8abfe72e8c1de1b95f50aa0d9134803b4d00070f"/>
+    </fixed>
+    <fixed base="1.1.0" version="1.1.0j-dev" date="20181029">
+      <git hash="ef11e19d1365eea2b1851e6f540a0bf365d303e7"/>
+    </fixed>
+    <fixed base="1.0.2" version="1.0.2q-dev" date="20181030">
+      <git hash="43e6a58d4991a451daf4891ff05a48735df871ac"/>
+    </fixed>
+    <problemtype>Constant time issue</problemtype>
+    <title>Timing attack against DSA</title>
+    <description>
+      The OpenSSL DSA signature algorithm has been shown to be vulnerable
+      to a timing side channel attack. An attacker could use variations
+      in the signing algorithm to recover the private key.
+    </description>
+    <advisory url="/news/secadv/20181030.txt"/>
+    <reported source="Samuel Weiser"/>
+  </issue>
   <issue public="20181029">
     <impact severity="Low"/>
     <cve name="2018-0735"/>
