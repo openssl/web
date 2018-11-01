@@ -19,6 +19,11 @@ git repository.
 
 This issue was reported to OpenSSL on 16th October 2018 by Samuel Weiser.
 
+As a result of the changes made to mitigate this vulnerability, a new
+side channel attack was created.  The mitigation for this new vulnerability
+can be found in these commits: 6039651c43 (for 1.1.1), 26d7fce13d (for 1.1.0)
+and 880d1c76ed (for 1.0.2)
+
 References
 ==========
 
