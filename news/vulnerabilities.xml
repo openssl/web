@@ -2482,6 +2482,7 @@
   </issue>
   <issue public="20150611">
     <cve name="2015-1788"/>
+    <impact severity="Moderate"/>    
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
