@@ -7,7 +7,53 @@
 
 <!-- The updated attribute should be the same as the first public issue,
      unless an old entry was updated. -->
-<security updated="20181030">
+<security updated="20181112">
+  <issue public="20181102">
+    <impact severity="Low"/>
+    <cve name="2018-5407"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <affects base="1.1.0" version="1.1.0c"/>
+    <affects base="1.1.0" version="1.1.0d"/>
+    <affects base="1.1.0" version="1.1.0e"/>
+    <affects base="1.1.0" version="1.1.0f"/>
+    <affects base="1.1.0" version="1.1.0g"/>
+    <affects base="1.1.0" version="1.1.0h"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <affects base="1.0.2" version="1.0.2i"/>
+    <affects base="1.0.2" version="1.0.2j"/>
+    <affects base="1.0.2" version="1.0.2k"/>
+    <affects base="1.0.2" version="1.0.2l"/>
+    <affects base="1.0.2" version="1.0.2m"/>
+    <affects base="1.0.2" version="1.0.2n"/>
+    <affects base="1.0.2" version="1.0.2o"/>
+    <affects base="1.0.2" version="1.0.2p"/>
+    <fixed base="1.1.0" version="1.1.0i" date="20180814">
+      <git hash="aab7c770353b1dc4ba045938c8fb446dd1c4531e"/>
+    </fixed>
+    <fixed base="1.0.2" version="1.0.2q-dev" date="20181112">
+      <git hash="b18162a7c9bbfb57112459a4d6631fa258fd8c0cq"/>
+    </fixed>
+    <problemtype>Side Channel Attack</problemtype>
+    <title>Microarchitecture timing vulnerability in ECC scalar multiplication</title>
+    <description>
+      OpenSSL ECC scalar multiplication, used in e.g. ECDSA and ECDH, has been shown
+      to be vulnerable to a microarchitecture timing side channel attack. An attacker
+      with sufficient access to mount local timing attacks during ECDSA signature
+      generation could recover the private key.
+    </description>
+    <advisory url="/news/secadv/20181112.txt"/>
+    <reported source="Alejandro Cabrera Aldaya, Billy Brumley, Sohaib ul Hassan, Cesar Pereida Garcia and Nicola Tuveri"/>
+  </issue>
   <issue public="20181030">
     <impact severity="Low"/>
     <cve name="2018-0734"/>
