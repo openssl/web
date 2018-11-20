@@ -40,7 +40,7 @@
     <fixed base="1.1.0" version="1.1.0i" date="20180814">
       <git hash="aab7c770353b1dc4ba045938c8fb446dd1c4531e"/>
     </fixed>
-    <fixed base="1.0.2" version="1.0.2q-dev" date="20181112">
+    <fixed base="1.0.2" version="1.0.2q" date="20181112">
       <git hash="b18162a7c9bbfb57112459a4d6631fa258fd8c0cq"/>
     </fixed>
     <problemtype>Side Channel Attack</problemtype>
@@ -85,13 +85,13 @@
     <affects base="1.0.2" version="1.0.2n"/>
     <affects base="1.0.2" version="1.0.2o"/>
     <affects base="1.0.2" version="1.0.2p"/>
-    <fixed base="1.1.1" version="1.1.1a-dev" date="20181029">
+    <fixed base="1.1.1" version="1.1.1a" date="20181029">
       <git hash="8abfe72e8c1de1b95f50aa0d9134803b4d00070f"/>
     </fixed>
-    <fixed base="1.1.0" version="1.1.0j-dev" date="20181029">
+    <fixed base="1.1.0" version="1.1.0j" date="20181029">
       <git hash="ef11e19d1365eea2b1851e6f540a0bf365d303e7"/>
     </fixed>
-    <fixed base="1.0.2" version="1.0.2q-dev" date="20181030">
+    <fixed base="1.0.2" version="1.0.2q" date="20181030">
       <git hash="43e6a58d4991a451daf4891ff05a48735df871ac"/>
     </fixed>
     <problemtype>Constant time issue</problemtype>
@@ -118,10 +118,10 @@
     <affects base="1.1.0" version="1.1.0g"/>
     <affects base="1.1.0" version="1.1.0h"/>
     <affects base="1.1.0" version="1.1.0i"/>
-    <fixed base="1.1.0" version="1.1.0j-dev" date="20181029">
+    <fixed base="1.1.0" version="1.1.0j" date="20181029">
       <git hash="56fb454d281a023b3f950d969693553d3f3ceea1"/>
     </fixed>
-    <fixed base="1.1.1" version="1.1.1a-dev" date="20181029">
+    <fixed base="1.1.1" version="1.1.1a" date="20181029">
       <git hash="b1d6d55ece1c26fa2829e2b819b038d7b6d692b4"/>
     </fixed>
     <problemtype>Constant time issue</problemtype>
