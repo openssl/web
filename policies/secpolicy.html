@@ -12,7 +12,7 @@
 	  <header>
 	    <h2>Security Policy</h2>
 	    <h5>
-	      Last modified 16th May 2018
+	      Last modified 29th November 2018
 	    </h5>
 	</header>
 	  <div class="entry-content">
@@ -38,12 +38,34 @@
 
 	    </p>
 
+	    <h2>Threat Model</h2>
+
+            <p>Certain threats are currently considered outside of the scope of the OpenSSL threat model.
+              Accordingly, we do not consider OpenSSL secure against the following classes of attacks:</p>
+              <ul>
+                <li>local side channel</li>
+                <li>same-VM side channel</li>
+                <li>same-physical system side channel</li>
+                <li>CPU flaws</li>
+                <li>physical fault injection</li>
+                <li>power consumption observations</li>
+              </ul>
+
+             <p>Mitigations for security issues outside of our threat scope may
+               still be addressed, however we do not class these as OpenSSL vulnerabilities
+               and will therefore not issue CVEs for any mitigations to address these issues.</p>
+
+             <p>Prior to the threat model being included in this policy, CVEs
+               were sometimes issued for these classes of attacks. The
+               existence of a previous CVE does not override this policy going
+               forward.</p>
+
 	    <h2>Issue severity</h2>
 
 	    <p>We will determine the risk of each issue,
 	    taking into account our experience dealing with past
 	    issues, versions affected, common defaults, and use cases.
-	    We use the following severity categories:</p>
+            We use the following severity categories:</p>
 
 	    <ul>
               <li><em><a name="critical">CRITICAL</a> Severity.</em>
@@ -51,8 +73,8 @@
               be exploitable. Examples include significant disclosure of the
               contents of server memory (potentially revealing user details),
               vulnerabilities which can be easily exploited remotely to
-              compromise server private keys (excluding local, theoretical or
-              difficult to exploit side channel attacks) or where remote code
+              compromise server private keys 
+              or where remote code
               execution is considered likely in common situations.  These
               issues will be kept private and will trigger a new release of
               all supported versions.  We will attempt to address these as
@@ -79,8 +101,8 @@
 	      <li>
 	      <em><a name="low">LOW</a> Severity.</em>
 	      This includes issues such as those that only affect the
-	      openssl command line utility, unlikely configurations, or hard
-	      to exploit timing (side channel) attacks.  These will in general
+	      openssl command line utility, or unlikely configurations
+	      These will in general
 	      be fixed immediately in latest development versions, and may be
 	      backported to older versions that are still getting updates.  We
 	      will update the vulnerabilities page and note the issue CVE in
