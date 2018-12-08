@@ -21,11 +21,11 @@
 
 	    <p>
             If you wish to report a possible security issue in OpenSSL
-            please <a href="/community/#securityreports">notify us</a>.  
+            please <a href="/community/#securityreports">notify us</a>.
 	    </p>
 
             <h2>Issue triage</h2>
-            
+
 	    <p>
             Notifications are received by a group of OpenSSL Management Committee
             members.  We engage resources within
@@ -43,10 +43,8 @@
             <p>Certain threats are currently considered outside of the scope of the OpenSSL threat model.
               Accordingly, we do not consider OpenSSL secure against the following classes of attacks:</p>
               <ul>
-                <li>local side channel</li>
-                <li>same-VM side channel</li>
-                <li>same-physical system side channel</li>
-                <li>CPU flaws</li>
+                <li>same physical system side channel</li>
+                <li>CPU/hardware flaws</li>
                 <li>physical fault injection</li>
                 <li>power consumption observations</li>
               </ul>
@@ -54,6 +52,9 @@
              <p>Mitigations for security issues outside of our threat scope may
                still be addressed, however we do not class these as OpenSSL vulnerabilities
                and will therefore not issue CVEs for any mitigations to address these issues.</p>
+
+             <p>We are working towards making the same physical system side
+               channel attacks very hard.</p>
 
              <p>Prior to the threat model being included in this policy, CVEs
                were sometimes issued for these classes of attacks. The
@@ -73,7 +74,7 @@
               be exploitable. Examples include significant disclosure of the
               contents of server memory (potentially revealing user details),
               vulnerabilities which can be easily exploited remotely to
-              compromise server private keys 
+              compromise server private keys
               or where remote code
               execution is considered likely in common situations.  These
               issues will be kept private and will trigger a new release of
@@ -89,7 +90,7 @@
               versions.  We will attempt to keep the time these issues are
               private to a minimum; our aim would be no longer than a month
               where this is something under our control</li>
-              
+
 	      <li>
 	      <em><a name="moderate">MODERATE</a> Severity.</em>
 	      This includes issues like crashes in client applications,
@@ -97,11 +98,11 @@
 	      and local flaws.  These will in general be kept private until
 	      the next release, and that release will be scheduled so that it
 	      can roll up several such flaws at one time.</li>
-              
+
 	      <li>
 	      <em><a name="low">LOW</a> Severity.</em>
 	      This includes issues such as those that only affect the
-	      openssl command line utility, or unlikely configurations
+	      openssl command line utility, or unlikely configurations.
 	      These will in general
 	      be fixed immediately in latest development versions, and may be
 	      backported to older versions that are still getting updates.  We
@@ -140,7 +141,7 @@
 	    <h2>Principles</h2>
 
             <p>The policy above is guided by our security principles:</p>
-            
+
 	    <ul>
 	      <li>It's in the best interests of the Internet as a whole to get
 	      fixes for OpenSSL security issues out quickly. OpenSSL embargoes
