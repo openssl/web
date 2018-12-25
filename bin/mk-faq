@@ -1,88 +1,30 @@
-#! /usr/bin/perl
-use strict;
-use warnings;
+#! /bin/sh
 
-# Filename->anchor name
-my %anchors;
-foreach my $f ( @ARGV ) {
-    next unless $f =~ /faq-[0-9]-(.*).txt/;
-    $anchors{$f} = uc($1);
-}
+cat <<EOF
+<h3><a name='toc'>Table of Contents</a></h3>
+<ol>
+EOF
+for faqfile in "$@"; do
+    anchor=`basename $faqfile .txt | cut -f3 -d- | tr '[:lower:]' '[:upper:]'`
+    title=`head -1 $faqfile | sed -e 's|^##* *||'`
 
-my $top = '  <a href="#toc"><img src="/img/up.gif"/></a>';
-print "<h3><a name='toc'>Table of Contents</a></h3>\n";
+    cat <<EOF
+  <h4><a href='#$anchor'>$title</a></h4>
+EOF
+done
+cat <<EOF
+</ol>
+EOF
 
-# Print the TOC
-foreach my $f ( @ARGV ) {
-    my $a = $anchors{$f};
-    open(IN, "<$f") || die "Can't open $f, $!";
-    my $title = <IN>;
-    $title =~ s|\R$||;
-    print "\n  <h4><a href='#$a'>$title</a></h4>\n";
-    my $i = 1;
-    print "  <ol>\n";
-    while ( <IN> ) {
-        s|\R$||;
-        next unless /^\* /;
-        s/^\* //;
-        print "    <li><a href='#$a$i'>$_</a></li>\n";
-        $i++;
-    }
-    print "  </ol>\n";
-    close(IN);
-}
+for faqfile in "$@"; do
+    anchor=`basename $faqfile .txt | cut -f3 -d- | tr '[:lower:]' '[:upper:]'`
 
-# Print the contents.
-foreach my $f ( @ARGV ) {
-    my $a = $anchors{$f};
-    open(IN, "<$f") || die "Can't open $f, $!";
-    my $title = <IN>;
-    $title =~ s|\R$||;
-    print "\n\n<hr>\n";
-    print "<h3><a name='$a'>$title</a>$top</h3>\n";
-    my $i = 1;
-    my $pre = 0;
-    while ( <IN> ) {
-        s|\R$||;
-        # Comments lines start with #
-        next if /^#/;
-        if ( /^\* / ) {
-            # New item: "* question text..."
-            s/\* //;
-            print "\n<h4><a name='$a$i'>$i. $_</a>$top</h4>\n";
-            $i++;
-        } elsif ( m@<PRE>@i ) {
-            # Start of a <pre> section
-            die "Nested <PRE> in $f" if $pre != 0;
-            print "<pre>\n";
-            $pre = 1;
-        } elsif ( m@</PRE>@i ) {
-            # End of a <pre> section
-            die "Unbalanced </PRE> in $f" if $pre != 1;
-            print "</pre>\n";
-            $pre = 0;
-        } elsif ( $pre ) {
-            # If in <pre> state, just print
-            print "$_\n";
-        } elsif ( /^$/ ) {
-            # Blank lines separate paragraphs
-            print "<p>\n";
-        } elsif ( /(.*)@@@(.*)@@@(.*)/ ) {
-            # URL: @@@http:....@@@
-            print "$1<a href='$2'>$2</a>$3\n";
-        } elsif ( /([-\.\w]+)\((\d)\)/ ) {
-            # Manpage "foo(1)"
-            my ($page, $sec) = ($1, $2);
-            my $link = "/docs/manmaster/man$sec/$page.html";
-            s|$page\($sec\)|<a href="$link">$page($sec)</a>|;
-            print "$_\n";
-        } else {
-            # Ordinary line.
-            print "$_\n";
-        }
-    }
-    close(IN);
-    die "Unclosed <PRE> in $f" if $pre != 0;
-}
-
-exit(0);
+    cat <<EOF
+<hr />
+EOF
+    cat $faqfile \
+	| perl -pe 'BEGIN { $count = 0 } s/^(#### )/$1|'${anchor}'|/; s/^(\* *)(?{ $count++ })/$1|'${anchor}'${count}|/' \
+	| pandoc -t html --no-highlight \
+	| sed -E -e 's/ id="[-a-z]*">/>/' \
+	| sed -E -e 's/<([^<>]*)>\|([A-Z]*[0-9]*)\|/<\1 id="\2">/'
+done

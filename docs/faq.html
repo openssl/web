@@ -10,7 +10,7 @@
       <div class="blog-index">
 	<article>
 	  <header><h2>Frequently Asked Questions</h2></header>
-	  <div class="entry-content">
+	  <div class="faq">
 	    <!--#include virtual="faq.inc" -->
 	  </div>
 	  <footer>
@@ -28,4 +28,11 @@
 <!--#include virtual="/inc/footer.shtml" -->
 </body>
 
+<script>
+$(document).ready(function(){
+  $(".faq ul > li").click(function(){
+    $(this).toggleClass("open");
+  });
+});
+</script>
 </html>
