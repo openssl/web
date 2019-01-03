@@ -4,7 +4,7 @@
 dir=$1
 cd $dir
 
-for m in `find . -name '*.html'`; do
+for m in `find . -name '*.html' | sort`; do
     description=`grep -F '<!-- OSSL: description:' $m | sed -e 's|^[^:]*: *||' -e 's|^[^:]*: *||' -e 's| *-->||'`
     manfile=`echo $m | sed -e 's|\./||'`
     manname=`basename $manfile .html`
