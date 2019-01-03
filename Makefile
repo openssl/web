@@ -58,16 +58,16 @@ rebuild: all
 
 define makemanpages
 	./bin/mk-manpages $(1) $(2) docs
-	./bin/mk-filelist -a docs/man$(2)/apps '' '*.html' >docs/man$(2)/apps/index.inc
-	./bin/mk-filelist -a docs/man$(2)/crypto '' '*.html' >docs/man$(2)/crypto/index.inc
-	./bin/mk-filelist -a docs/man$(2)/ssl '' '*.html' >docs/man$(2)/ssl/index.inc
+	./bin/mk-apropos docs/man$(2)/apps   > docs/man$(2)/apps/index.inc
+	./bin/mk-apropos docs/man$(2)/crypto > docs/man$(2)/crypto/index.inc
+	./bin/mk-apropos docs/man$(2)/ssl    > docs/man$(2)/ssl/index.inc
 endef
 define newmakemanpages
 	./bin/mk-newmanpages $(1) $(2) docs
-	./bin/mk-filelist -a docs/man$(2)/man1 '' '*.html' >docs/man$(2)/man1/index.inc
-	./bin/mk-filelist -a docs/man$(2)/man3 '' '*.html' >docs/man$(2)/man3/index.inc
-	./bin/mk-filelist -a docs/man$(2)/man5 '' '*.html' >docs/man$(2)/man5/index.inc
-	./bin/mk-filelist -a docs/man$(2)/man7 '' '*.html' >docs/man$(2)/man7/index.inc
+	./bin/mk-apropos docs/man$(2)/man1 > docs/man$(2)/man1/index.inc
+	./bin/mk-apropos docs/man$(2)/man3 > docs/man$(2)/man3/index.inc
+	./bin/mk-apropos docs/man$(2)/man5 > docs/man$(2)/man5/index.inc
+	./bin/mk-apropos docs/man$(2)/man7 > docs/man$(2)/man7/index.inc
 endef
 manpages: manmaster
 	$(call newmakemanpages,$(CHECKOUTS)/openssl-1.1.1-stable,1.1.1)
