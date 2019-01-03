@@ -58,24 +58,23 @@ rebuild: all
 
 define makemanpages
 	./bin/mk-manpages $(1) $(2) docs
-	./bin/mk-apropos docs/man$(2)/apps   > docs/man$(2)/apps/index.inc
-	./bin/mk-apropos docs/man$(2)/crypto > docs/man$(2)/crypto/index.inc
-	./bin/mk-apropos docs/man$(2)/ssl    > docs/man$(2)/ssl/index.inc
-endef
-define newmakemanpages
-	./bin/mk-newmanpages $(1) $(2) docs
 	./bin/mk-apropos docs/man$(2)/man1 > docs/man$(2)/man1/index.inc
 	./bin/mk-apropos docs/man$(2)/man3 > docs/man$(2)/man3/index.inc
 	./bin/mk-apropos docs/man$(2)/man5 > docs/man$(2)/man5/index.inc
 	./bin/mk-apropos docs/man$(2)/man7 > docs/man$(2)/man7/index.inc
 endef
+define makemanmap
+	./bin/mk-manmap docs/man$(1) > docs/man$(1)/.htaccess
+endef
 manpages: manmaster
-	$(call newmakemanpages,$(CHECKOUTS)/openssl-1.1.1-stable,1.1.1)
+	$(call makemanpages,$(CHECKOUTS)/openssl-1.1.1-stable,1.1.1)
 	$(call makemanpages,$(CHECKOUTS)/openssl-1.1.0-stable,1.1.0)
+	$(call makemanmap,1.1.0)
 	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.2-stable,1.0.2)
+	$(call makemanmap,1.0.2)
 
 manmaster:
-	$(call newmakemanpages,$(CHECKOUTS)/openssl,master)
+	$(call makemanpages,$(CHECKOUTS)/openssl,master)
 
 ## $(SIMPLE) -- SIMPLE GENERATED FILES
 .PHONY: sitemap community/committers.inc community/omc.inc community/omc-alumni.inc
