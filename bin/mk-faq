@@ -1,11 +1,27 @@
 #! /bin/sh
 
+cat <<EOF
+<h3><a name='toc'>Table of Contents</a></h3>
+EOF
 for faqfile in "$@"; do
     anchor=`basename $faqfile .txt | cut -f3 -d- | tr '[:lower:]' '[:upper:]'`
-    count=0
+    title=`head -1 $faqfile | sed -e 's|^##* *||'`
 
+    cat <<EOF
+  <h4><a href='#$anchor'>$title</a></h4>
+EOF
+done
+
+for faqfile in "$@"; do
+    anchor=`basename $faqfile .txt | cut -f3 -d- | tr '[:lower:]' '[:upper:]'`
+
+    cat <<EOF
+<hr />
+EOF
     cat $faqfile \
-	| perl -pe 'BEGIN { $count = 0} s/^(\* *)(?{ $count++ })/$1\|'${anchor}'${count}\|/' \
+	| perl -pe 'BEGIN { $count = 0 } s/^(#### )/$1|'${anchor}'|/; s/^(\* *)(?{ $count++ })/$1|'${anchor}'${count}|/' \
+	| tee /dev/tty \
 	| pandoc -t html --no-highlight \
+	| sed -E -e 's/ id="[-a-z]*">/>/' \
 	| sed -E -e 's/<([^<>]*)>\|([A-Z]*[0-9]*)\|/<\1 id="\2">/'
 done
