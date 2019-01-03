@@ -114,7 +114,7 @@ sub getdata {
                     s/^\s+//g;
                     s/\s+$//g;
                     s/\s/_/g;
-                    push @words, split ',';
+                    push @{$data{names}}, split ',';
                 }
             }
             if (/^=head1\s+NAME\s*$/) {
