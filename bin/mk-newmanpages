@@ -43,7 +43,8 @@ sub main {
             my $title = $basename;
             my %data = $class->getdata( $filename );
             my $out =
-              $class->genhtml( $release, $sect, $filename, $title, $basename );
+                $class->genhtml( $release, $sect, $filename, $title, $basename,
+                                 $data{description});
             my $outfile = File::Spec->catfile( $wwwdir, "man$release", $sect,
                 "$basename.html" );
             open( my $fh, ">", $outfile )
@@ -65,8 +66,8 @@ sub main {
 
 # Generate a manpage
 sub genhtml {
-    my ( $class, $release, $section, $filename, $title, $file ) = @_;
-    my $header = $class->htmlHeader($title);
+    my ( $class, $release, $section, $filename, $title, $file, $desc ) = @_;
+    my $header = $class->htmlHeader( $title, $desc );
     my $footer = $class->htmlFooter( $release, $section, $file );
 
     open( my $fh, $filename ) || $class->die("Can't open $filename: $!");
@@ -88,7 +89,8 @@ sub genhtml {
 
 # Return diverse data from a manpage if available, currently:
 # {
-#    names       => [ ... ]             # list of all the names
+#    names       => [ ... ]             # list of all OTHER names
+#    description => "text"              # the short description from NAME
 # }
 sub getdata {
     my ( $class, $infile ) = @_;
@@ -105,13 +107,14 @@ sub getdata {
             }
             elsif ($foundname) {
                 if (/ - /) {
-                    s/ - .*//;
+                    $data{description} = $';
+                    $_ = $`;
                     s/,\s+/,/g;
                     s/\s+,/,/g;
                     s/^\s+//g;
                     s/\s+$//g;
                     s/\s/_/g;
-                    push @words, split ',';
+                    push @{$data{names}}, split ',';
                 }
             }
             if (/^=head1\s+NAME\s*$/) {
@@ -203,10 +206,11 @@ sub process_options {
 }
 
 sub htmlHeader {
-    my ( $class, $title ) = @_;
+    my ( $class, $title, $desc ) = @_;
     return <<EOFH;
 <!DOCTYPE html>
 <html lang="en">
+<!-- OSSL: description: $desc -->
 <!--#include virtual="/inc/head.shtml" -->
 <body>
   <!--#include virtual="/inc/banner.shtml" -->
