@@ -20,7 +20,6 @@ for faqfile in "$@"; do
 EOF
     cat $faqfile \
 	| perl -pe 'BEGIN { $count = 0 } s/^(#### )/$1|'${anchor}'|/; s/^(\* *)(?{ $count++ })/$1|'${anchor}'${count}|/' \
-	| tee /dev/tty \
 	| pandoc -t html --no-highlight \
 	| sed -E -e 's/ id="[-a-z]*">/>/' \
 	| sed -E -e 's/<([^<>]*)>\|([A-Z]*[0-9]*)\|/<\1 id="\2">/'
