@@ -56,6 +56,7 @@ sub main {
             my $filename = File::Spec->catfile( $dir, $ent );
             my $basename = basename( $ent, ".pod" );
             my $title = $basename;
+            my %data = $class->getdata( $filename );
             my $out =
               $class->genhtml( $release, $sect, $filename, $title, $basename );
             my $outfile = File::Spec->catfile( $wwwdir, "man$release", $sect,
@@ -64,9 +65,8 @@ sub main {
               or $class->die("Can't open $outfile: $!");
             print $fh $out or $class->die("Can't print $outfile: $!");
             close($fh) or $class->die("Can't close $outfile: $!");
-            my @altnames = $class->getnames( $filename, $basename );
 
-            foreach my $alt (@altnames) {
+            foreach my $alt (grep { $_ ne $basename } @{$data{names}}) {
                 my $target = File::Spec->catfile( $wwwdir, "man$release", $sect,
                     "$alt.html" );
 	        if ( ! -f $target ) {
@@ -107,21 +107,24 @@ sub genhtml {
     return $out;
 }
 
-# Return all the OTHER names in a manpage
-sub getnames {
-    my ( $class, $infile, $basename ) = @_;
-    my @words = ();
+# Return diverse data from a manpage if available, currently:
+# {
+#    names       => [ ... ]             # list of all the names
+# }
+sub getdata {
+    my ( $class, $infile ) = @_;
+    my %data = ();
     open( my $fh, "<", $infile ) or $class->die("Can't open $infile: $!");
     {
         local $/ = "";
-        my $found = 0;
+        my $foundname = 0;
         while (<$fh>) {
             chop;
             s/\n/ /gm;
             if (/^=head1 /) {
-                $found = 0;
+                $foundname = 0;
             }
-            elsif ($found) {
+            elsif ($foundname) {
                 if (/ - /) {
                     s/ - .*//;
                     s/,\s+/,/g;
@@ -129,15 +132,15 @@ sub getnames {
                     s/^\s+//g;
                     s/\s+$//g;
                     s/\s/_/g;
-                    push @words, split ',';
+                    push @{$data{names}}, split ',';
                 }
             }
-            if (/^=head1\s*NAME\s*$/) {
-                $found = 1;
+            if (/^=head1\s+NAME\s*$/) {
+                $foundname = 1;
             }
         }
     }
-    return grep { $_ ne $basename } @words;
+    return %data;
 }
 
 sub die {
