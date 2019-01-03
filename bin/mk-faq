@@ -2,6 +2,7 @@
 
 cat <<EOF
 <h3><a name='toc'>Table of Contents</a></h3>
+<blockquote>
 EOF
 for faqfile in "$@"; do
     anchor=`basename $faqfile .txt | cut -f3 -d- | tr '[:lower:]' '[:upper:]'`
@@ -11,6 +12,9 @@ for faqfile in "$@"; do
   <h4><a href='#$anchor'>$title</a></h4>
 EOF
 done
+cat <<EOF
+</blockquote>
+EOF
 
 for faqfile in "$@"; do
     anchor=`basename $faqfile .txt | cut -f3 -d- | tr '[:lower:]' '[:upper:]'`
