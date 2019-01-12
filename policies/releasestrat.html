@@ -20,19 +20,44 @@
 	<div class="entry-content">
 
 	  <p>
-	  As of release 1.0.0 the OpenSSL versioning scheme was improved
-	  to better meet developers' and vendors' expectations. Letter
-	  releases, such as 1.0.2a, exclusively contain bug and security
-	  fixes and no new features. Minor releases that change the
-	  last digit, e.g. 1.1.0 vs. 1.1.1, can and are likely to
-	  contain new features, but in a way that does not break binary
-	  compatibility. This means that an application compiled and
-	  dynamically linked with 1.1.0 does not need to be recompiled
-	  when the shared library is updated to 1.1.1. It should be
-	  noted that some features are transparent to the application
-	  such as the maximum negotiated TLS version and cipher suites,
-	  performance improvements and so on. There is no need to
-	  recompile applications to benefit from these features.</p>
+	    As of release 3.0.0, the OpenSSL versioning scheme is changing
+	    to a more contemporary format: MAJOR.MINOR.PATCH
+	  </p>
+
+	  <p>
+	    With this format, API/ABI compatibility will only be guaranteed
+	    for the same MAJOR version number. Previously we guaranteed
+	    API/ABI compatibility across the same MAJOR.MINOR combination.
+	  </p>
+
+	  <p>
+	    This more closely aligns with the expectations of users who are
+	    familiar with semantic versioning.  However, we have not adopted
+	    semantic versioning in the strict sense of its rules, because it
+	    would mean changing our current LTS policies and practices.
+	  </p>
+
+	  <p>
+	    The current 1.1.1 and 1.0.2 versioning scheme remains unchanged:
+
+	    <blockquote><i>
+	      As of release 1.0.0 the OpenSSL versioning scheme was improved
+	      to better meet developers' and vendors' expectations. Letter
+	      releases, such as 1.0.2a, exclusively contain bug and security
+	      fixes and no new features. Minor releases that change the
+	      last digit, e.g. 1.1.0 vs. 1.1.1, can and are likely to
+	      contain new features, but in a way that does not break binary
+	      compatibility. This means that an application compiled and
+	      dynamically linked with 1.1.0 does not need to be recompiled
+	      when the shared library is updated to 1.1.1. It should be
+	      noted that some features are transparent to the application
+	      such as the maximum negotiated TLS version and cipher suites,
+	      performance improvements and so on. There is no need to
+	      recompile applications to benefit from these features.
+	    </i></blockquote>
+	  </p>
+
+	  <hr />
 
 	  <p>With regards to current and future releases the OpenSSL
 	  project has adopted the following policy:</p>
