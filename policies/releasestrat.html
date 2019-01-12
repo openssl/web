@@ -83,39 +83,71 @@
 
 	  <hr />
 
-	  <p>An alpha release means:</p>
+	  <p>
+	    Before a major release, we make a number of pre-releases, labeled
+	    <i>alpha</i> and <i>beta</i>.
+	  </p>
+
+	  <p>An <i>alpha</i> release means:</p>
 	  <ul>
 	    <li>Not (necessarily) feature complete</li>
 	    <li>Not necessarily all new APIs in place yet</li>
 	  </ul>
 
-	  <p>A beta release means:</p>
+	  <p>A <i>beta</i> release means:</p>
 	  <ul>
-	    <li>Feature complete/Feature freeze (but may include a non-final implementation of the TLSv1.3 specification)</li>
+	    <li>Feature complete/Feature freeze</li>
 	    <li>Bug fixes only</li>
 	  </ul>
 
-	  <p>We have defined the following release criteria for 1.1.1:</p>
+	  <p>
+	    For any major or minor release, we have defined the following
+	    release criteria:
+	  </p>
+
 	  <ul>
-	    <li>All open github issues/PRs older than 2 weeks at the time of release
-	    to be assessed for relevance to 1.1.1. Any flagged with the 1.1.1
-	    milestone to be closed (see below)</li>
-	    <li>Clean builds in Travis and Appveyor for two days</li>
-	    <li>run-checker.sh to be showing as clean 2 days before release</li>
-	    <li>No open Coverity issues (not flagged as "False Positive" or "Ignore")</li>
-	    <li>TLSv1.3 RFC published (with at least one beta release after the publicaction)</li>
+	    <li>
+	      All open github issues/PRs older than 2 weeks at the time of
+	      release to be assessed for relevance to the version to be
+	      released. Any flagged with the a milestone for the version
+	      to be released must be closed (see below)
+	    </li>
+	    <li>
+	      Clean builds in Travis and Appveyor for two days
+	    </li>
+	    <li>
+	      run-checker.sh to be showing as clean 2 days before release
+	    </li>
+	    <li>
+	      No open Coverity issues (not flagged as "False Positive" or
+	      "Ignore")
+	    </li>
 	  </ul>
 
-	  <p>Valid reasons for closing an issue/PR with a 1.1.1 milestone might be:</p>
+	  <p>
+	    Valid reasons for closing an issue/PR with a milestone for the
+	    version might be:
+	  </p>
+
 	  <ul>
-	    <li>We have just now or sometime in the past fixed the issue</li>
-	    <li>Unable to reproduce (following discussion with original reporter if
-	    possible)</li>
-	    <li>Working as intended</li>
-	    <li>Deliberate decision not to fix until a later release (this wouldn't
-	    actually close the issue/PR but change the milestone instead)</li>
-	    <li>Not enough information and unable to contact reporter</li>
-	    <li>etc</li>
+	    <li>
+	      We have just now or sometime in the past fixed the issue
+	    </li>
+	    <li>
+	      Unable to reproduce (following discussion with original reporter
+	      if possible)
+	    </li>
+	    <li>
+	      Working as intended
+	    </li>
+	    <li>
+	      Deliberate decision not to fix until a later release (this
+	      wouldn't actually close the issue/PR but change the milestone
+	      instead)
+	    </li>
+	    <li>
+	      Not enough information and unable to contact reporter
+	    </li>
 	  </ul>
 	</div>
 	<footer>
