@@ -109,7 +109,7 @@ sub genhtml {
           <header><h2>$title</h2></header>
           <div class="entry-content">
             <p>
-<!-- #include virtual="$origbase.inc" -->
+<!--#include virtual="$origbase.inc" -->
             </p>
           </div>
           <footer>
@@ -133,7 +133,7 @@ sub genhtml {
             <li><a href="../man7">Overviews</a></li>
           </ul>
         </section>
-<!-- #include virtual="$htmlbase.cross" -->
+<!--#include virtual="$htmlbase.cross" -->
       </aside>
     </div>
   </div>
