@@ -1,0 +1,15 @@
+#! /bin/sh
+
+template="$0.tmpl.html5"
+
+for f in "$@"; do
+    b=`basename "$f" .md`
+    if [ "$f" != "$b" ]; then
+	bns=`echo "$b" | sed -e 's|  *||g'`
+	t=`dirname "$b"`.tmpl.html5
+	if [ ! -f "$t" ]; then
+	    t="$template"
+	fi
+	pandoc -t html5 --template="$t" "$f" > "$bns.html"
+    fi
+done
