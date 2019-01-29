@@ -57,7 +57,7 @@ generated: all
 rebuild: all
 
 define makemanpages
-	./bin/mk-manpages $(1) $(2) docs
+	./bin/mk-manpages $(1)/doc $(2) docs/man$(2)
 	./bin/mk-apropos docs/man$(2)/man1 > docs/man$(2)/man1/index.inc
 	./bin/mk-apropos docs/man$(2)/man3 > docs/man$(2)/man3/index.inc
 	./bin/mk-apropos docs/man$(2)/man5 > docs/man$(2)/man5/index.inc

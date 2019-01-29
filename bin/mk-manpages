@@ -34,61 +34,122 @@ sub main {
     my ( $class, $srcdir, $wwwdir, $release ) = @_;
 
     foreach my $subdir ( $class->Dirs ) {
-        my $dir = File::Spec->catfile( $srcdir, "doc", $subdir );
+        my $dir = File::Spec->catfile( $srcdir, $subdir );
         if ( opendir( my $dh, $dir ) ) {
             while ( my $ent = readdir($dh) ) {
                 next if $ent =~ /^\./;
                 next if $ent !~ /\.pod$/;
 
-                my $filename = File::Spec->catfile( $dir, $ent );
-                my $basename = basename( $ent, ".pod" );
-                my $title = $basename;
+                my $origbase = basename( $ent, ".pod" );
+                my $title = $origbase;
+                my $tmp_sect = { $class->Dir2Section }->{$subdir} // $subdir;
+                (my $tmp_sectnum = $tmp_sect) =~ s|^man||;
                 # In addition to what getdata() gives us, we add a few
                 # defaults of our own:
                 #
+                #       release => "..."        # 
                 #       subdir  => "..."        # The original subdir
                 #       sect    => "..."        # Output section subdir
                 #       sectnum => n            # Default section number
                 #
-                my $tmp_sect = { $class->Dir2Section }->{$subdir} // $subdir;
-                (my $tmp_sectnum = $tmp_sect) =~ s|^man||;
                 my %data = (
-                    subdir  => $subdir,
-                    sect    => $tmp_sect,
-                    sectnum => $tmp_sectnum,
-                    $class->getdata( $filename, $basename )
-                   );
-                my $out = $class->genhtml( $release, $filename, $title,
-                                           $basename, %data );
-                my $outfile =
-                    File::Spec->catfile( $wwwdir, "man$release", $data{sect},
-                                         "$basename.html" );
-                open( my $fh, ">", $outfile )
-                    or $class->die("Can't open $outfile: $!");
-                print $fh $out or $class->die("Can't print $outfile: $!");
-                close($fh) or $class->die("Can't close $outfile: $!");
+                    subdir   => $subdir,
+                    sect     => $tmp_sect,
+                    sectnum  => $tmp_sectnum,
+                    $class->getdata( File::Spec->catfile ( $dir, $ent ) )
+                );
+                # These are for display
+                my $podfile = File::Spec->catfile( $subdir, $ent );
+                my $incfile = File::Spec->catfile( $data{sect},
+                                                   "$origbase.inc" );
+                # These are files we're actually manipulating
+                my $inpod = File::Spec->catfile( $srcdir, $podfile );
+                my $outinc = File::Spec->catfile( $wwwdir, $incfile );
 
-                foreach my $alt (grep { $_ ne $basename } @{$data{names}}) {
-                    my $target = File::Spec->catfile( $wwwdir, "man$release",
-                                                      $data{sect}, "$alt.html" );
-                    if ( ! -f $target ) {
-                        link( $outfile, $target )
-                            or $class->die("Can't link $outfile to $target: $!");
-                    }
+                # Get main HTML output
+                my $out = $class->geninc( $release, $inpod, %data );
+                open( my $fh, ">", $outinc )
+                    or $class->die("Can't open $outinc: $!");
+                print $fh $out or $class->die("Can't print $outinc: $!");
+                close($fh) or $class->die("Can't close $outinc: $!");
+
+                foreach my $htmlname (@{$data{names}}) {
+                    my $htmlfile = File::Spec->catdir( $data{sect},
+                                                       "$htmlname.html" );
+                    my $outhtml = File::Spec->catfile( $wwwdir, $htmlfile );
+                    $out = $class->genhtml( $release, $title, $origbase,
+                                            $htmlname, %data );
+                    open( $fh, ">", $outhtml )
+                        or $class->die("Can't open $outhtml: $!");
+                    print $fh $out or $class->die("Can't print $outhtml: $!");
+                    close($fh) or $class->die("Can't close $outhtml: $!");
                 }
             }
         }
     }
 }
 
-# Generate a manpage
+# Generate manpag HTML wrapper
 sub genhtml {
-    my ( $class, $release, $filename, $title, $file, %data ) = @_;
-    my $header = $class->htmlHeader( $title, %data );
-    my $footer = $class->htmlFooter( $release, $file, %data );
+    my ( $class, $release, $title, $origbase, $htmlbase, %data ) = @_;
+    return <<EOH;
+<!DOCTYPE html>
+<html lang="en">
+<!-- OSSL: original subdir: $data{subdir} -->
+<!-- OSSL: subdir: $data{sect} -->
+<!-- OSSL: section: $data{sectnum} -->
+<!-- OSSL: description: $data{description} -->
+<!--#include virtual="/inc/head.shtml" -->
+<body>
+<!--#include virtual="/inc/banner.shtml" -->
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+        <article>
+          <header><h2>$title</h2></header>
+          <div class="entry-content">
+            <p>
+<!-- #include virtual="$origbase.inc" -->
+            </p>
+          </div>
+          <footer>
+            You are here: <a href="/">Home</a>
+            : <a href="/docs">Docs</a>
+            : <a href="/docs/manpages.html">Manpages</a>
+            : <a href="/docs/man$release/">$release</a>
+            : <a href="/docs/man$release/$data{sect}">$data{sect}</a>
+            : <a href="/docs/man$release/$data{sect}/$htmlbase.html">$htmlbase</a>
+            <br/><a href="/sitemap.txt">Sitemap</a>
+          </footer>
+        </article>
+      </div>
+      <aside class="sidebar">
+        <section>
+          <h1><a href="/docs/man$release/">$release manpages</a></h1>
+          <ul>
+            <li><a href="../man1">Commands</a></li>
+            <li><a href="../man3">Libraries</a></li>
+            <li><a href="../man5">File Formats</a></li>
+            <li><a href="../man7">Overviews</a></li>
+          </ul>
+        </section>
+<!-- #include virtual="$htmlbase.cross" -->
+      </aside>
+    </div>
+  </div>
+<!--#include virtual="/inc/footer.shtml" -->
+</body>
+</html>
+EOH
+}
 
-    open( my $fh, $filename ) || $class->die("Can't open $filename: $!");
+# Generate manpage content
+sub geninc {
+    my ( $class, $release, $filename, %data ) = @_;
+
+    open( my $fh, $filename ) or $class->die("Can't open $filename: $!");
     my $infile = do { local $/; <$fh>; };
+    close( $fh );
 
     # L<asdf...|qwer...> ==> L<qwer>
     $infile =~ s/L<[^|>]*\|([^>]+)>/L<$1>/g;
@@ -103,8 +164,8 @@ sub genhtml {
     $pod->perldoc_url_postfix(".html");
     $pod->man_url_prefix("/docs/man$release/$data{sect}/");
     $pod->man_url_postfix(".html");
-    $pod->html_header($header);
-    $pod->html_footer($footer);
+    $pod->html_header('');
+    $pod->html_footer('');
     $pod->output_string( \$out );
     $pod->parse_string_document($infile);
     return $out;
@@ -169,24 +230,23 @@ sub error {
 # the index and the section subdirs.
 sub cleanup {
     my ( $class, $wwwdir, $release ) = @_;
-    my $dir = File::Spec->catfile( $wwwdir, "man$release" );
-    my $idx = File::Spec->catfile( $dir,    "index.html" );
+    my $idx = File::Spec->catfile( $wwwdir, "index.html" );
 
-    if ( !-d $dir ) {
-        mkdir($dir) or $class->die("mkdir '$dir': $!");
+    if ( !-d $wwwdir ) {
+        mkdir($wwwdir) or $class->die("mkdir '$wwwdir': $!");
     }
 
     # TBD: was $class->die
     $class->error("No $idx") unless ( -f $idx );
     foreach my $subdir ( $class->Dirs ) {
         my $realsubdir = { $class->Dir2Section }->{$subdir} // $subdir;
-        my $realsdir = File::Spec->catfile( $dir, $realsubdir );
+        my $realsdir = File::Spec->catfile( $wwwdir, $realsubdir );
         if ( !-d $realsdir ) {
             mkdir($realsdir) or $class->die("mkdir '$realsdir': $!");
             next;
         }
 
-        my $sdir = File::Spec->catfile( $dir, $subdir );
+        my $sdir = File::Spec->catfile( $wwwdir, $subdir );
         if ( -d $sdir ) {
             opendir( my $dh, $sdir ) or $class->die("opendir '$sdir': $!");
             while ( my $ent = readdir($dh) ) {
@@ -230,7 +290,7 @@ sub process_options {
 
     # each source dir has a set of subdirs with documentation
     my @found_dirs = ();
-    my $docdir = File::Spec->catfile( $opt{SrcDir}, "doc" );
+    my $docdir = File::Spec->catfile( $opt{SrcDir} );
     foreach my $subdir ( $class->Dirs ) {
         my $dir = File::Spec->catfile( $docdir, $subdir );
         push @found_dirs, $dir if -d $dir;
@@ -246,85 +306,6 @@ sub process_options {
     return \%opt;
 }
 
-sub htmlHeader {
-    my ( $class, $title, %data ) = @_;
-    return <<EOFH;
-<!DOCTYPE html>
-<html lang="en">
-<!-- OSSL: original subdir: $data{subdir} -->
-<!-- OSSL: subdir: $data{sect} -->
-<!-- OSSL: section: $data{sectnum} -->
-<!-- OSSL: description: $data{description} -->
-<!--#include virtual="/inc/head.shtml" -->
-<body>
-  <!--#include virtual="/inc/banner.shtml" -->
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-        <article>
-          <header><h2>$title</h2></header>
-          <div class="entry-content">
-            <p>
-
-EOFH
-}
-
-# note: links could be bogus if file DNE in one of the other releases
-sub htmlSidebar {
-    my ( $class, $release, $file, %data ) = @_;
-
-    my $lirel = "\n";
-    foreach my $v ( grep { $release ne $_ } $class->Releases ) {
-        $lirel .= <<EOS;
-<li><a href="/docs/man$v/$data{sect}/$file.html">$v version</a></li>
-EOS
-    }
-
-    return <<EOS;
-<aside class="sidebar">
-  <section>
-    <h1><a href="/docs/man$release.html">$release manpages</a></h1>
-    <ul>
-      <li><a href="../man1">Commands</a></li>
-      <li><a href="../man3">Libraries</a></li>
-      <li><a href="../man5">File Formats</a></li>
-      <li><a href="../man7">Overviews</a></li>
-    </ul>
-  </section>
-  <section>
-    <h1><a href="/docs/manpages.html">Manpages</a></h1>
-    <ul>$lirel</ul>
-  </section>
-</aside>
-EOS
-}
-
-sub htmlFooter {
-    my ( $class, $release, $file, %data ) = @_;
-    my $sidebar = $class->htmlSidebar( $release, $file, %data );
-    return <<EOFT;
-            </p>
-          </div>
-          <footer>
-            You are here: <a href="/">Home</a>
-            : <a href="/docs">Docs</a>
-            : <a href="/docs/manpages.html">Manpages</a>
-            : <a href="/docs/man$release">$release</a>
-            : <a href="/docs/man$release/$data{sect}">$data{sect}</a>
-            : <a href="/docs/man$release/$data{sect}/$file.html">$file</a>
-            <br/><a href="/sitemap.txt">Sitemap</a>
-          </footer>
-        </article>
-      </div>
-      $sidebar
-    </div>
-  </div>
-  <!--#include virtual="/inc/footer.shtml" -->
-</body>
-</html>
-EOFT
-}
-
 __END__
 
 =pod
@@ -337,7 +318,7 @@ mk-manpages - htmlize man pages from POD for the OpenSSL website
 
 mk-manpages [options] <SrcDir> <RelVer> <WwwDir>
 
-  <SrcDir>   top level directory of release <RelVer>, example 'OpenSSL_1_0_2-stable'
+  <SrcDir>   doc directory of release <RelVer>, example 'OpenSSL_1_0_2-stable/doc'
   <RelVer>   version number associated with <SrcDir>, example '1.0.2'
   <WwwDir>   top level directory beneath which generated html is stored, example 'web'
 
