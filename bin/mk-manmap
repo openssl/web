@@ -7,6 +7,11 @@ cd $dir
 for m in `find . -name '*.html'`; do
     origsubdir=`grep -F '<!-- OSSL: original subdir:' $m | cut -f3 -d: | sed -e 's| *-->||' -e 's| ||g'`
     subdir=`grep -F '<!-- OSSL: subdir:' $m | cut -f3 -d: | sed -e 's| *-->||' -e 's| ||g'`
+    # If no subdir information is present, this is not a rendered manpage,
+    # but something else, like index.html
+    if [ "$origsubdir$subdir" = "" ]; then
+	continue
+    fi
     manfile=`echo $m | sed -e 's|\./||'`
     origmanfile=`echo $manfile | sed -e "s|^$subdir|$origsubdir|"`
     case ${origsubdir}:${subdir} in
