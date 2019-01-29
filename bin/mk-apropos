@@ -6,6 +6,11 @@ cd $dir
 
 for m in `find . -name '*.html' | sort`; do
     description=`grep -F '<!-- OSSL: description:' $m | sed -e 's|^[^:]*: *||' -e 's|^[^:]*: *||' -e 's| *-->||'`
+    # If there isn't a description, it isn't a manpage and should not be
+    # included
+    if [ "$description" = "" ]; then
+	continue
+    fi
     manfile=`echo $m | sed -e 's|\./||'`
     manname=`basename $manfile .html`
     origmanfile=`echo $manfile | sed -e "s|^$subdir|$origsubdir|"`
