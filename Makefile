@@ -41,11 +41,11 @@ SRCLISTS = \
 	   source/old/fips/index.inc \
 
 
-all: suball
+all: suball manmaster mancross
 
-suball: $(SIMPLE) $(SRCLISTS) manmaster
+suball: $(SIMPLE) $(SRCLISTS)
 
-relupd: suball manpages
+relupd: suball manpages mancross
 
 clean:
 	rm -f $(SIMPLE) $(SRCLISTS)
@@ -75,6 +75,9 @@ manpages: manmaster
 
 manmaster:
 	$(call makemanpages,$(CHECKOUTS)/openssl,master)
+
+mancross:
+	./bin/mk-mancross
 
 ## $(SIMPLE) -- SIMPLE GENERATED FILES
 .PHONY: sitemap community/committers.inc community/omc.inc community/omc-alumni.inc

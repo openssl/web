@@ -1,5 +1,6 @@
 *~
 *.swp
+*.cross
 blog
 sitemap.txt
 docs/*/apps/*
