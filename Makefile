@@ -15,6 +15,7 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 community/omc.inc community/omc-alumni.inc \
 	 docs/faq.inc docs/fips.inc \
 	 docs/OpenSSLStrategicArchitecture.html \
+	 docs/OpenSSL300Design.html \
          news/changelog.inc news/changelog.txt \
          news/cl102.txt news/cl110.txt news/cl111.txt \
          news/openssl-1.0.2-notes.inc \
@@ -108,6 +109,9 @@ docs/fips.inc: $(wildcard docs/fips/*) bin/mk-filelist
 	./bin/mk-filelist docs/fips fips/ '*' >$@
 
 docs/OpenSSLStrategicArchitecture.html: docs/OpenSSLStrategicArchitecture.md
+	@rm -f $@
+	./bin/md-to-html5 $<
+docs/OpenSSL300Design.html: docs/OpenSSL300Design.md
 	@rm -f $@
 	./bin/md-to-html5 $<
 
