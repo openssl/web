@@ -48,16 +48,16 @@ in the Markdown file and try again.
 Using an add-on in Google Docs and using the result
 ---------------------------------------------------
 
-Unfortunately, it seems that there are things that have Pandoc lose
-track of what it's doing.  I have not analyzed if it's a pandoc bug or
-if the ODT input was bad.  Also, pandoc isn't very good at recognising
+Unfortunately, it seems that there are things where Pandoc loses track
+of what it's doing.  I have not analyzed if it's a pandoc bug or if
+the ODT input was bad.  Also, pandoc isn't very good at recognising
 code sections.
 
 The other option is to use an add-on in Google Docs.  I've played with
 [gd2md](https://github.com/evbacher/gd2md-html/wiki) with fairly
 satisfactory results.
 
-Things to be ready for with gd2md are:
+Things to be wary of with gd2md are:
 
 -   It doesn't make a difference between ordered lists with numbers
     and ordered lists with letters, it makes them all numbered items.
