@@ -25,10 +25,17 @@
 	  </p>
 
 	  <p>
-	    With this format, API/ABI compatibility will only be guaranteed
+	    With this format, API/ABI compatibility will be guaranteed
 	    for the same MAJOR version number. Previously we guaranteed
 	    API/ABI compatibility across the same MAJOR.MINOR combination.
 	  </p>
+
+	  <ul>
+	    <li>MAJOR: API/ABI incompatible changes will increase this number</li>
+	    <li>MINOR: API/ABI compatible feature releases will change this</li>
+	    <li>PATCH: Bug fix releases will increment this number. We also
+            allow backporting of accessor functions in these releases.</li>
+	  </ul>
 
 	  <p>
 	    This more closely aligns with the expectations of users who are
@@ -109,19 +116,19 @@
 	  <ul>
 	    <li>
 	      All open github issues/PRs older than 2 weeks at the time of
-	      release to be assessed for relevance to the version to be
+	      release need to be assessed for relevance to the version being
 	      released. Any flagged with the a milestone for the version
-	      to be released must be closed (see below)
+	      to be released must be closed (see below).
 	    </li>
 	    <li>
-	      Clean builds in Travis and Appveyor for two days
+	      Clean builds in Travis and Appveyor for two days.
 	    </li>
 	    <li>
-	      run-checker.sh to be showing as clean 2 days before release
+	      run-checker.sh succeeds on 2 consecutive days before release.
 	    </li>
 	    <li>
 	      No open Coverity issues (not flagged as "False Positive" or
-	      "Ignore")
+	      "Ignore").
 	    </li>
 	  </ul>
 
@@ -142,7 +149,7 @@
 	      Working as intended
 	    </li>
 	    <li>
-	      Deliberate decision not to fix until a later release (this
+	      Deliberate decision not to fix thjis issue until a later release (this
 	      wouldn't actually close the issue/PR but change the milestone
 	      instead)
 	    </li>
