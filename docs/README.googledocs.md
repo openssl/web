@@ -34,7 +34,7 @@ s|(\n\s*)> |$1|g;
 done
 ```
 
-When an Markdown file has been produced, a litte bit of editing is
+When a Markdown file has been produced, a litte bit of editing is
 required.  A required thing is to look for all lines starting with
 `#!#` and replace them with an appropriate number of `#` characters,
 depending on the original heading's level.  ATX format headings are

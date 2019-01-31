@@ -37,10 +37,10 @@ Currently, OpenSSL is split into four principal components:
     algorithm implementations. Usually these are alternative implementations
     of algorithms already provided by libcrypto (e.g. to enable hardware
     acceleration of the algorithm), but they may also include algorithms not
-    implemented in default OpenSSL (e.g. the afalg engine provides access to
-    the linux kernel cryptographic algorithms). Some engines are provided as
-    part of the OpenSSL distribution, and some are provided by external
-    third parties (e.g. GOST).
+    implemented in default OpenSSL (e.g. the GOST engine implements the GOST
+    algorithm family). Some engines are provided as part of the OpenSSL
+    distribution, and some are provided by external third parties (again,
+    GOST).
 
 3.  libssl. This library depends on libcrypto and implements the TLS and
     DTLS protocols.
