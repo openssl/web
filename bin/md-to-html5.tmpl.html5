@@ -5,15 +5,28 @@
 $for(header-includes)$
   $header-includes$
 $endfor$
+<style type="text/css">
+  .state {
+      position: fixed;
+      color: rgba(0,0,0,0.1);
+      font-family: sans-serif;
+      font-size: 25vh;
+      transform-origin: right top;
+      transform: rotate(-45deg);
+      z-index: 100;
+  }
+</style>
 </head>
 
 <body>
 <!--#include virtual="/inc/banner.shtml" -->
-
   <div id="main">
     <div id="content">
       <div class="blog-index">
         <article>
+$if(state)$
+<span class="state">$state$</span>
+$endif$
 $if(title)$
 <header>
 <h1 class="title">$title$</h1>
