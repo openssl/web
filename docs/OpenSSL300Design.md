@@ -3,6 +3,11 @@ title: OpenSSL 3.0.0 Design
 author: OpenSSL Management Committee (OMC)
 date: January, 2019
 state: draft
+header-includes:
+- |
+  <style type="text/css">
+  ol, ol ol, ol ol ol { list-style-type: decimal; }
+  </style>
 ---
 ## Introduction
 
