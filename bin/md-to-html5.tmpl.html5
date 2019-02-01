@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <!--#include virtual="/inc/head.shtml" -->
+$for(header-includes)$
+  $header-includes$
+$endfor$
+</head>
 
 <body>
 <!--#include virtual="/inc/banner.shtml" -->
