@@ -43,6 +43,12 @@ SRCLISTS = \
 	   source/old/fips/index.inc \
 
 
+.SUFFIXES: .md .html
+
+.md.html:
+	@rm -f $@
+	./bin/md-to-html5 $<
+
 all: suball manmaster mancross
 
 suball: $(SIMPLE) $(SRCLISTS)
@@ -107,13 +113,6 @@ docs/faq.inc: $(wildcard docs/faq-[0-9]-*.txt) bin/mk-faq
 docs/fips.inc: $(wildcard docs/fips/*) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist docs/fips fips/ '*' >$@
-
-docs/OpenSSLStrategicArchitecture.html: docs/OpenSSLStrategicArchitecture.md
-	@rm -f $@
-	./bin/md-to-html5 $<
-docs/OpenSSL300Design.html: docs/OpenSSL300Design.md
-	@rm -f $@
-	./bin/md-to-html5 $<
 
 news/changelog.inc: news/changelog.txt bin/mk-changelog
 	@rm -f $@
