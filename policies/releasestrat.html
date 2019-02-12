@@ -51,8 +51,8 @@
 	      As of release 1.0.0 the OpenSSL versioning scheme was improved
 	      to better meet developers' and vendors' expectations. Letter
 	      releases, such as 1.0.2a, exclusively contain bug and security
-	      fixes and no new features. Minor releases that change the
-	      last digit, e.g. 1.1.0 vs. 1.1.1, can and are likely to
+	      fixes and no new features. Releases that change the last digit,
+	      e.g. 1.1.0 vs. 1.1.1, can and are likely to
 	      contain new features, but in a way that does not break binary
 	      compatibility. This means that an application compiled and
 	      dynamically linked with 1.1.0 does not need to be recompiled
@@ -167,9 +167,10 @@
 	    <li>No existing public interface can be modified except where changes
 	    are unlikely to break source compatibility.
 	    <li>No existing public interface can be removed until its replacement
-	    has been in place in an LTS stable release. The original function must
+	    has been in place in an LTS stable release. The original interface must
 	    also have been documented as deprecated for at least 5 years. A public
-	    interface is any function or macro declared in a public header file.</li>
+	    interface is any function, structure or macro declared in a public
+        header file.</li>
 	    <li>When structures are made opaque, any newly required accessor
 	    macros or functions are added in a feature release of the extant LTS
 	    release and all supported intermediate successor releases.</li>
