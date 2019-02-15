@@ -5,7 +5,7 @@
 # headings.  URL paths must all be absolute.
 Date: Item
 11-Feb-2019: <a href="/docs/OpenSSL300Design.html">3.0.0 Design (draft)</a> is now available
-11-Feb-2019: <a href="/docs/OpenSSLStrategicArchiteture.html">Strategic Architecture</a> for OpenSSL 3.0.0 and beyond is now available
+11-Feb-2019: <a href="/docs/OpenSSLStrategicArchitecture.html">Strategic Architecture</a> for OpenSSL 3.0.0 and beyond is now available
 20-Nov-2018: OpenSSL 1.1.1a is now available, including bug and security fixes
 20-Nov-2018: OpenSSL 1.1.0j is now available, including bug and security fixes
 20-Nov-2018: OpenSSL 1.0.2q is now available, including bug and security fixes
