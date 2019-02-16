@@ -2711,7 +2711,7 @@ bar = bar_section
 
 [foo_section]
 provider_id = myfoo
-module_path = /usr/share/openssl/providers/foo.so
+module_path = /usr/lib/openssl/providers/foo.so
 selftests = foo_selftest_section
 algorithms = RSA, DSA, DH
 
@@ -2724,7 +2724,7 @@ The Core side provider structure for the provider "foo" could then
 answer to these requested parameter keys:
 
 *   `"provider_id"` (value is `"myfoo"`)
-*   `"module_path"` (value is `"/usr/share/openssl/providers/foo.so"`)
+*   `"module_path"` (value is `"/usr/lib/openssl/providers/foo.so"`)
 *   `"selftests.doodah"` (value is `1`)
 *   `"selftests.cookie"` (value is `0`)
 *   `"algorithms"` (value is `"RSA, DSA, DH"`)
