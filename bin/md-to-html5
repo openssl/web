@@ -1,15 +1,170 @@
 #! /bin/sh
 
-template="$0.tmpl.html5"
+HERE=$(cd $(dirname $0); pwd)
+THIS=$(basename $0)
+
+template="$HERE/../inc/pandoc-template.html5"
+
+######################################################################
+#
+#  Option processing
+#
+
+output=
+index=
+
+shortopts='io:h'
+longopts='index,output:,help'
+usage="\
+Usage 1: $THIS [ options ] [ key=value ... ] < file.md > file
+Usage 2: $THIS [ options ] [ key=value ... ] file.md ...
+
+Options:
+    -o, --output=PATH           Relative path of the output file
+    -i, --index                 Indicates that this is an index file
+    -h, --help                  Output this usage and do nothing else
+
+In usage 1, the template is read from standard input and the processing
+result is output to the path given by --output.  In this usage, the --output
+option is mandatory.
+
+In usage 2, the templates are read from the files given as argument, and
+the processing result for each of them is written to a corresponding file
+without the '.md' suffix.  All given file names must have the '.md' suffix.
+
+In both usages, one can also set template variables with with the form
+key=value.  They must come before any file name."
+
+# Standard getopt calling sequence
+if ! TEMP=$(getopt -o "$shortopts" --long "$longopts" -n $THIS -- "$@"); then
+    echo >&2 "$usage"
+    exit 1
+fi
+eval set -- "$TEMP"
+unset TEMP
+
+# Check the parsed options
+while true; do
+    case "$1" in
+	'-o' | '--output' )
+	    output="$2"
+	    shift 2
+	    ;;
+	'-i' | '--index' )
+	    index=1
+	    shift
+	    ;;
+	'-h' | '--help' )
+	    echo >&2 "$usage"
+	    exit 0
+	    ;;
+	'--' )
+	    shift
+	    break
+	    ;;
+	* )
+	    echo >&2 'Internal error!'
+	    echo >&2 "$usage"
+	    exit 1
+	    ;;
+    esac
+done
+
+######################################################################
+#
+#  Main
+#
+
+# If there are no other arguments, read from stdin, write to path given with
+# --output.  Otherwise, read from the input files and write to corresponding
+# output files.
+if [ $# -eq 0 ]; then
+    if [ -z "$output" ]; then
+	echo >&2 'Output path must be set with -o / --output in this mode'
+	exit 1
+    fi
+
+    if [ "$(basename "$output" .html)" = "$output" ]; then
+	echo >&2 'Output path must end with .html'
+	exit 1
+    fi
+
+    # Set '-' to mean stdin / stdout
+    set -- -
+elif [ -n "$output" ]; then
+    echo >&2 '-o / --output is confusing in this mode'
+    exit 1
+fi
+
+# Check that all the arguments are existing and correctly named files
+errfiles=
+nofiles=
+for f in "$@"; do
+    [ "$f" = "-" ] && continue
+
+    base=$(basename "$f" .md)
+
+    if [ "$base" = "$f" ]; then
+	errfiles="$errfiles '$f'"
+    elif [ ! -f "$f" ]; then
+	nofiles="$nofiles '$f'"
+    fi
+done
+if [ -n "$errfiles" ]; then
+    echo >&2 "Files not ending with .md:$errfiles"
+fi
+if [ -n "$nofiles" ]; then
+    echo >&2 "Files no present:$nofiles"
+fi
+if [ -n "$errfiles" -o -n "$nofiles" ]; then
+    exit 1
+fi
 
 for f in "$@"; do
-    b=`basename "$f" .md`
-    d=`dirname "$f"`
-    if [ "$f" != "$b" ]; then
-	t="$d/$b.tmpl.html5"
-	if [ ! -f "$t" ]; then
-	    t="$template"
+    if [ "$f" != "-" ]; then
+	base=$(basename "$f" .md)
+	dir=$(dirname "$f")
+
+	if [ "$f" = "$base" ]; then
+	    continue;
 	fi
-	pandoc -t html5 --template="$t" "$f" > "$d/$b.html"
+    else
+	base=$(basename "$output" .html)
+	dir=$(dirname "$output")
     fi
+
+    if [ "$dir" = "." -o "$dir" = "" ]; then
+	title="/$base.html"
+	top=""
+    else
+	title="/$dir/$base.html"
+	top=`echo "$dir" | sed -E -e 's|[^/]+|..|g'`/
+    fi
+
+    # is it an index file?
+    def_isindex=
+    if [ -n "$index" -o "$base" = "index" ]; then
+	def_isindex="-M is-index=true"
+    fi
+
+    (
+	# metadata
+	meta="$dir/dirdata.yaml"
+	if [ -f "$meta" ]; then
+	    cat $meta
+	fi
+
+	if [ "$f" = "-" ]; then
+	    cat
+	else
+	    cat "$f"
+	fi
+    ) | (
+	cd $dir
+	pandoc -t html5 --template="$template" \
+	       -M pagetitle="$title" \
+	       $def_isindex -M top="$top"
+    ) | (
+	cat > "$dir/$base.html"
+    )
 done
