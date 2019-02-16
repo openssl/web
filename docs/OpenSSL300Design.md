@@ -420,7 +420,7 @@ create and provide its own library context, an internal default one
 will be used.
 
 
-```
+``` C
 OPENSSL_CTX *OPENSSL_CTX_new();
 void OPENSSL_CTX_free(OPENSSL_CTX *ctx);
 ```
@@ -707,7 +707,7 @@ entry point.
 
 A provider module _must_ have the following  well known entry point:
 
-```
+``` C
 int OSSL_provider_init(const OSSL_PROVIDER *provider,
                        const OSSL_DISPATCH *in,
                        const OSSL_DISPATCH **out);
@@ -735,7 +735,7 @@ function-pointer >` tuple mentioned in the introduction of
 [Core and Provider Design](#core-and-provider-design):
 
 
-```
+``` C
 typedef struct ossl_dispatch_st {
     int function_id;
     void *(*function)();
@@ -760,7 +760,7 @@ numbers. More function numbers can be added in later releases as
 required without breaking backwards compatibility.
 
 
-```
+``` C
 /* Functions provided by the Core to the provider */
 #define OSSL_FUNC_ERR_PUT_ERROR                        1
 #define OSSL_FUNC_GET_PARAMS                           2
@@ -773,7 +773,7 @@ required without breaking backwards compatibility.
 The Core will set up an array of the well known callback functions:
 
 
-```
+``` C
 static OSSL_DISPATCH core_callbacks[] = {
     { OSSL_FUNC_ERR_PUT_ERROR, ERR_put_error },
     /* int ossl_get_params(OSSL_PROVIDER *prov, OSSL_PARAM params[]); */
@@ -789,7 +789,7 @@ testing, instrumentation etc as the need comes up.
 Once the module is loaded and the well known entry point located, the
 init entry point can be invoked by the Core:
 
-```
+``` C
 /*
  * NOTE: this code is meant as a simple demonstration of what could happen
  * in the core.  This is an area where the OSSL_PROVIDER type is not opaque.
@@ -857,7 +857,7 @@ code.
 Operations are identified by a unique number. For example:
 
 
-```
+``` C
 #define OSSL_OP_DIGEST                     1
 #define OSSL_OP_SYM_ENCRYPT                2
 #define OSSL_OP_SEAL                       3
@@ -906,7 +906,7 @@ for init functions for other operations, those will have their own
 unique numbers. For example, for the digest operation, these functions
 are required:
 
-```
+``` C
 #define OSSL_OP_DIGEST_NEWCTX_FUNC         1
 #define OSSL_OP_DIGEST_INIT_FUNC           2
 #define OSSL_OP_DIGEST_UPDATE_FUNC         3
@@ -923,7 +923,7 @@ typedef void (*OSSL_OP_digest_freectx_fn)(void *ctx);
 An all in one version is also advisable for devices that cannot handle
 multi-part operations:
 
-```
+``` C
 #define OSSL_OP_DIGEST_FUNC                6
 typedef int (*OSSL_OP_digest)(const OSSL_PROVIDER *prov,
                               const void *data, size_t len,
@@ -938,7 +938,7 @@ for each operation.  The algorithm descriptor was mentioned higher up,
 and would be publically defined like this:
 
 
-```
+``` C
 typedef struct ossl_algorithm_st {
     const char *name;
     const char *properties;
@@ -952,7 +952,7 @@ querying function such as `fips_query_operation` below returns) the
 FIPS module may define arrays like this for the SHA1 algorithm:
 
 
-```
+``` C
 static OSSL_DISPATCH fips_sha1_callbacks[] = {
     { OSSL_OP_DIGEST_NEWCTX_FUNC, fips_sha1_newctx },
     { OSSL_OP_DIGEST_INIT_FUNC, fips_sha1_init },
@@ -1105,8 +1105,7 @@ application to specify a non-default library context if required
 (`osslctx` in this example):
 
 
-```
-
+``` C
 EVP_CIPHER_CTX *ctx;
 EVP_CIPHER *ciph;
 
@@ -2344,7 +2343,7 @@ There is functionality to create diverse EVP method structures in
 OpenSSL 1.1.x, easily found like this:
 
 
-```
+``` shell
 grep EVP_CIPHER_meth util/libcrypto.num
 grep EVP_MD_meth util/libcrypto.num
 grep EVP_PKEY_meth util/libcrypto.num
@@ -2663,7 +2662,7 @@ time.
 
 We have macros to declare the type of content in `data_type`:
 
-```
+``` C
 #define OSSL_PARAM_INTEGER              1
 #define OSSL_PARAM_UNSIGNED_INTEGER     2
 #define OSSL_PARAM_UTF8_STRING          3
