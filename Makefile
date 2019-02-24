@@ -21,10 +21,9 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 docs/OpenSSLStrategicArchitecture.html \
 	 docs/OpenSSL300Design.html \
          news/changelog.inc news/changelog.txt \
-         news/cl102.txt news/cl110.txt news/cl111.txt \
-         news/openssl-1.0.2-notes.inc \
-         news/openssl-1.1.0-notes.inc \
-         news/openssl-1.1.1-notes.inc \
+	 $(foreach S,$(SERIES),news/cl$(subst .,,$(S)).txt) \
+	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
+	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
 	 news/newsflash.inc \
 	 news/vulnerabilities.inc \
 	 news/vulnerabilities-1.1.1.inc \
@@ -121,36 +120,28 @@ docs/fips.inc: $(wildcard docs/fips/*) bin/mk-filelist
 news/changelog.inc: news/changelog.txt bin/mk-changelog
 	@rm -f $@
 	./bin/mk-changelog <news/changelog.txt >$@
-news/changelog.txt: $(SNAP)/CHANGES
-	@rm -f $@
-	cp $? $@
-news/cl102.txt: $(CHECKOUTS)/openssl-1.0.2-stable/CHANGES
-	@rm -f $@
-	cp $? $@
-news/cl110.txt: $(CHECKOUTS)/openssl-1.1.0-stable/CHANGES
-	@rm -f $@
-	cp $? $@
-news/cl111.txt: $(CHECKOUTS)/openssl-1.1.1-stable/CHANGES
-	@rm -f $@
-	cp $? $@
-news/openssl-1.0.2-notes.html: news/openssl-notes.html.in
-	@rm -f $@
-	sed -e 's|@VERSION@|1.0.2|g' < $< > $@
-news/openssl-1.1.0-notes.html: news/openssl-notes.html.in
-	@rm -f $@
-	sed -e 's|@VERSION@|1.1.0|g' < $< > $@
-news/openssl-1.1.1-notes.html: news/openssl-notes.html.in
-	@rm -f $@
-	sed -e 's|@VERSION@|1.1.1|g' < $< > $@
-news/openssl-1.0.2-notes.inc: $(CHECKOUTS)/openssl-1.0.2-stable/NEWS news/openssl-1.0.2-notes.html bin/mk-notes
-	@rm -f $@
-	./bin/mk-notes 1.0.2 < $(CHECKOUTS)/openssl-1.0.2-stable/NEWS > $@
-news/openssl-1.1.0-notes.inc: $(CHECKOUTS)/openssl-1.1.0-stable/NEWS news/openssl-1.1.0-notes.html bin/mk-notes
-	@rm -f $@
-	./bin/mk-notes 1.1.0 < $(CHECKOUTS)/openssl-1.1.0-stable/NEWS > $@
-news/openssl-1.1.1-notes.inc: $(CHECKOUTS)/openssl-1.1.1-stable/NEWS news/openssl-1.1.1-notes.html bin/mk-notes
-	@rm -f $@
-	./bin/mk-notes 1.1.1 < $(CHECKOUTS)/openssl-1.1.1-stable/NEWS > $@
+
+# $(1) = output file, $(2) = source directory in CHECKOUTS
+define mknews_changelogtxt
+news/$(1): $(CHECKOUTS)/$(2)/CHANGES
+	@rm -f $$@
+	cp $$? $$@
+endef
+$(eval $(call mknews_changelogtxt,changelog.txt,openssl))
+$(foreach S,$(SERIES),\
+$(eval $(call mknews_changelogtxt,cl$(subst .,,$(S)).txt,openssl-$(S)-stable)))
+
+# $(1) = release version
+define mknews_noteshtml
+news/openssl-$(1)-notes.html: news/openssl-notes.html.in
+	@rm -f $$@
+	sed -e 's|@VERSION@|$(1)|g' < $$< > $$@
+news/openssl-$(1)-notes.inc: $(CHECKOUTS)/openssl-$(1)-stable/NEWS bin/mk-notes
+	@rm -f $$@
+	./bin/mk-notes $(1) < $(CHECKOUTS)/openssl-$(1)-stable/NEWS > $$@
+endef
+$(foreach S,$(SERIES),$(eval $(call mknews_noteshtml,$(S))))
+
 news/newsflash.inc: news/newsflash.txt
 	sed <$? >$@ \
 	    -e '/^#/d' \
