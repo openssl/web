@@ -1,0 +1,9 @@
+[% # Ensure dir contains no repeated slashes, and no ending slash
+   dir = dir.replace('//+', '/').replace('/$', '');
+   # Calculate the path to the top directory.
+   # It will always have an ending slash.
+   top = "";
+   IF dir != ".";
+     top = "../";
+     top = top.repeat(dir.split("/").size);
+   END -%]
