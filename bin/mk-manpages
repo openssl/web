@@ -19,7 +19,6 @@ sub Dir2Section { return ( apps => "man1", crypto => "man3", ssl => "man3" ) }
 sub run {
     my ( $class, @argv ) = @_;
     my $opt = $class->process_options(@argv);
-    $class->cleanup( $opt->{WwwDir}, $opt->{RelVer} );
     exit $class->main( $opt->{SrcDir}, $opt->{WwwDir}, $opt->{RelVer} );
 }
 
@@ -217,44 +216,6 @@ sub error {
     my $class = shift;
     my $prog  = basename($0);
     warn("$prog: $_\n") for @_;
-}
-
-# Remove all files from a manpage subtree, and leave only
-# the index and the section subdirs.
-sub cleanup {
-    my ( $class, $wwwdir, $release ) = @_;
-    my $idx = File::Spec->catfile( $wwwdir, "index.html" );
-
-    if ( !-d $wwwdir ) {
-        mkdir($wwwdir) or $class->die("mkdir '$wwwdir': $!");
-    }
-
-    # TBD: was $class->die
-    $class->error("No $idx") unless ( -f $idx );
-    foreach my $subdir ( $class->Dirs ) {
-        my $realsubdir = { $class->Dir2Section }->{$subdir} // $subdir;
-        my $realsdir = File::Spec->catfile( $wwwdir, $realsubdir );
-        if ( !-d $realsdir ) {
-            mkdir($realsdir) or $class->die("mkdir '$realsdir': $!");
-            next;
-        }
-
-        my $sdir = File::Spec->catfile( $wwwdir, $subdir );
-        if ( -d $sdir ) {
-            opendir( my $dh, $sdir ) or $class->die("opendir '$sdir': $!");
-            while ( my $ent = readdir($dh) ) {
-                next if $ent =~ /^\./;
-                next if $realsdir eq $sdir && $ent =~ /^index.(?:html|inc)$/;
-                my $f = File::Spec->catfile( $sdir, $ent );
-                unlink($f) or $class->error("Can't unlink '$f': $!");
-            }
-            closedir( $dh );
-
-            if ( $realsubdir ne $subdir ) {
-                rmdir $sdir;
-            }
-        }
-    }
 }
 
 sub process_options {
