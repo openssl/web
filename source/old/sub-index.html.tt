@@ -7,9 +7,8 @@
   <div id="content">
     <div class="blog-index">
       <article>
-        <header><h2>Old 0.9.x Releases</h2></header>
+        <header><h2>[% releasetitle %]</h2></header>
         <div class="entry-content">
-          <p>Here are the old 0.9.x releases.</p>
           <table>
             <tr>
               <td>KBytes&nbsp;</td>
@@ -25,10 +24,12 @@
           You are here: <a href="/">Home</a>
           : <a href="/source">Downloads</a>
           : <a href="/source/old">Old Releases</a>
-          : <a href="">0.9.x</a>
+          : <a href="">[% release %]</a>
           <br/><a href="/sitemap.txt">Sitemap</a>
         </footer>
       </article>
+
+
     </div>
     <!--#include virtual="../../sidebar.shtml" -->
   </div>
