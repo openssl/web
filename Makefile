@@ -26,14 +26,7 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
 	 news/newsflash.inc \
 	 news/vulnerabilities.inc \
-	 news/vulnerabilities-1.1.1.inc \
-	 news/vulnerabilities-1.1.0.inc \
-	 news/vulnerabilities-1.0.2.inc \
-	 news/vulnerabilities-1.0.1.inc \
-	 news/vulnerabilities-1.0.0.inc \
-	 news/vulnerabilities-0.9.8.inc \
-	 news/vulnerabilities-0.9.7.inc \
-	 news/vulnerabilities-0.9.6.inc \
+	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).inc) \
 	 source/.htaccess \
 	 source/index.inc
 SRCLISTS = \
@@ -148,33 +141,16 @@ news/newsflash.inc: news/newsflash.txt
 	    -e 's@^@<tr><td class="d">@' \
 	    -e 's@: @</td><td class="t">@' \
 	    -e 's@$$@</td></tr>@'
-news/vulnerabilities.inc: bin/mk-cvepage news/vulnerabilities.xml
-	@rm -f $@
-	./bin/mk-cvepage -i news/vulnerabilities.xml > $@
-news/vulnerabilities-1.1.1.inc: bin/mk-cvepage news/vulnerabilities.xml
-	@rm -f $@
-	./bin/mk-cvepage -i news/vulnerabilities.xml -b 1.1.1 > $@
-news/vulnerabilities-1.1.0.inc: bin/mk-cvepage news/vulnerabilities.xml
-	@rm -f $@
-	./bin/mk-cvepage -i news/vulnerabilities.xml -b 1.1.0 > $@
-news/vulnerabilities-1.0.2.inc: bin/mk-cvepage news/vulnerabilities.xml
-	@rm -f $@
-	./bin/mk-cvepage -i news/vulnerabilities.xml -b 1.0.2 > $@
-news/vulnerabilities-1.0.1.inc: bin/mk-cvepage news/vulnerabilities.xml
-	@rm -f $@
-	./bin/mk-cvepage -i news/vulnerabilities.xml -b 1.0.1 > $@
-news/vulnerabilities-1.0.0.inc: bin/mk-cvepage news/vulnerabilities.xml
-	@rm -f $@
-	./bin/mk-cvepage -i news/vulnerabilities.xml -b 1.0.0 > $@
-news/vulnerabilities-0.9.8.inc: bin/mk-cvepage news/vulnerabilities.xml
-	@rm -f $@
-	./bin/mk-cvepage -i news/vulnerabilities.xml -b 0.9.8 > $@
-news/vulnerabilities-0.9.7.inc: bin/mk-cvepage news/vulnerabilities.xml
-	@rm -f $@
-	./bin/mk-cvepage -i news/vulnerabilities.xml -b 0.9.7 > $@
-news/vulnerabilities-0.9.6.inc: bin/mk-cvepage news/vulnerabilities.xml
-	@rm -f $@
-	./bin/mk-cvepage -i news/vulnerabilities.xml -b 0.9.6 > $@
+
+# $(1) = output file mod, $(2) = release version switch, $(3) = release version
+define mknews_vulnerability
+news/vulnerabilities$(1).inc: bin/mk-cvepage news/vulnerabilities.xml
+	@rm -f $$@
+	./bin/mk-cvepage -i news/vulnerabilities.xml $(2) > $$@
+endef
+$(eval $(call mknews_vulnerability,,))
+$(foreach S,$(SERIES) $(OLDSERIES),$(eval $(call mknews_vulnerability,-$(S),-b $(S))))
+
 source/.htaccess: $(wildcard source/openssl-*.tar.gz) bin/mk-latest
 	@rm -f @?
 	./bin/mk-latest source >$@
