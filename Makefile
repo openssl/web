@@ -12,6 +12,7 @@ RELEASEDIR = /var/www/openssl/source
 SERIES=1.1.1 1.1.0 1.0.2
 ##  Older series
 OLDSERIES=1.0.1 1.0.0 0.9.8 0.9.7 0.9.6
+OLDSERIES2=1.0.1 1.0.0 0.9.x
 ##  Current series with newer and older manpage layout
 ##  (when the number of old man layout releases drop to none, this goes away)
 NEWMANSERIES=1.1.1
@@ -32,15 +33,9 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 news/vulnerabilities.inc \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).inc) \
 	 source/.htaccess \
-	 source/index.inc
-SRCLISTS = \
-	   source/old/0.9.x/index.inc \
-	   source/old/1.0.0/index.inc \
-	   source/old/1.0.1/index.inc \
-	   source/old/1.0.2/index.inc \
-	   source/old/1.1.0/index.inc \
-	   source/old/1.1.1/index.inc \
-	   source/old/fips/index.inc \
+	 source/index.inc \
+	 source/old/index.html
+SRCLISTS = $(foreach S,$(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
 
 
 .SUFFIXES: .md .html
@@ -190,33 +185,24 @@ source/index.inc: $(wildcard $(RELEASEDIR)/openssl-*.tar.gz) bin/mk-filelist
 	./bin/mk-filelist $(RELEASEDIR) '' 'openssl-*.tar.gz' >$@
 
 ## $(SRCLISTS) -- LISTS OF SOURCES
-source/old/0.9.x/index.inc: $(wildcard source/old/0.9.x/*.gz) bin/mk-filelist
+# $(1) = release, $(2) = release title
+define mkoldsourceindex
+source/old/$(1)/index.inc: $(wildcard $(RELEASEDIR)/old/$(1)/*.gz) bin/mk-filelist
+	@rm -f $$@
+	./bin/mk-filelist $(RELEASEDIR)/old/$(1) '' '*.gz' > $$@
+source/old/$(1)/index.html: source/old/sub-index.html.tt bin/from-tt
+	@rm -f $$@
+	./bin/from-tt -d source/old/$(1) \
+		      release='$(1)' releasetitle='Old $(2) Releases' \
+		      < $$< > $$@
+endef
+$(foreach S,fips $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsourceindex,$(S),$(patsubst fips,FIPS,$(S)))))
+source/old/index.html: source/old/index.html.tt bin/from-tt
 	@rm -f $@
-	./bin/mk-filelist source/old/0.9.x '' '*.gz' >$@
-source/old/1.0.0/index.inc: $(wildcard source/old/1.0.0/*.gz) bin/mk-filelist
-	@rm -f $@
-	./bin/mk-filelist source/old/1.0.0 '' '*.gz' >$@
-source/old/1.0.1/index.inc: $(wildcard source/old/1.0.1/*.gz) bin/mk-filelist
-	@rm -f $@
-	./bin/mk-filelist source/old/1.0.1 '' '*.gz' >$@
-source/old/1.0.2/index.inc: $(wildcard source/old/1.0.2/*.gz) bin/mk-filelist
-	@rm -f $@
-	./bin/mk-filelist source/old/1.0.2 '' '*.gz' >$@
-source/old/1.1.0/index.inc: $(wildcard source/old/1.1.0/*.gz) bin/mk-filelist
-	@rm -f $@
-	./bin/mk-filelist source/old/1.1.0 '' '*.gz' >$@
-source/old/1.1.1/index.inc: $(wildcard source/old/1.1.1/*.gz) bin/mk-filelist
-	@rm -f $@
-	./bin/mk-filelist source/old/1.1.1 '' '*.gz' >$@
-source/old/fips/index.inc: $(wildcard source/old/fips/*.gz) bin/mk-filelist
-	@rm -f $@
-	./bin/mk-filelist source/old/fips '' '*.gz' >$@
+	./bin/from-tt releases='fips $(SERIES) $(OLDSERIES2)' $<
 
 # Because these the indexes of old tarballs will inevitably be newer
 # than the tarballs that are moved into their respective directory,
 # we must declare them phony, or they will not be regenerated when
 # they should.
-.PHONY : \
-	 source/old/1.0.1/index.inc source/old/1.0.2/index.inc \
-	 source/old/1.1.0/index.inc source/old/1.1.1/index.inc \
-	 source/old/fips/index.inc
+.PHONY : $(SRCLISTS)

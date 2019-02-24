@@ -33,8 +33,5 @@ source/*.gz*
 source/*.patch
 source/.htaccess
 source/index.inc
-source/old/*/*.patch
-source/old/*/*.tar.gz*
-source/old/*/*.txt.asc
-source/old/*/index.inc
+source/old/*/
 source/snapshot

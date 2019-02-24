@@ -11,13 +11,9 @@
         <div class="entry-content">
           <p>Here are the old releases.</p>
           <ul>
-            <li><a href="0.9.x">0.9.x</a></li>
-            <li><a href="1.0.0">1.0.0</a></li>
-            <li><a href="1.0.1">1.0.1</a></li>
-            <li><a href="1.0.2">1.0.2</a></li>
-            <li><a href="1.1.0">1.1.0</a></li>
-            <li><a href="1.1.1">1.1.1</a></li>
-            <li><a href="fips">fips</a></li>
+[% FOREACH release IN releases.split('\s+').reverse -%]
+            <li><a href="[% release %]">[% release %]</a></li>
+[% END -%]
           </ul>
         </div>
         <!--#include virtual="/inc/legalities.shtml" -->
