@@ -29,8 +29,10 @@
             For other branches, the changelogs are distributed with
             the source, but are also available here:
             <ul>
-              <li><a href="cl102.txt">1.0.2</a></li>
-              <li><a href="cl110.txt">1.1.0</a></li>
+[% FOREACH release IN releases.split('\s+').reverse -%]
+              <li><a href="cl[% release.replace('\.', '') %].txt">[%
+              release %]</a></li>
+[% END -%]
             </ul>
 	    <!--#include virtual="changelog.inc" -->
 	  </div>
