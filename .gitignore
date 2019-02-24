@@ -28,6 +28,7 @@ news/newsflash.inc
 news/openssl-*-notes.html
 news/openssl-*-notes.inc
 news/vulnerabilities*.inc
+news/vulnerabilities*.html
 newsflash.inc
 source/*.gz*
 source/*.patch
