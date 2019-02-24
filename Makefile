@@ -24,6 +24,7 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 docs/faq.inc docs/fips.inc \
 	 docs/OpenSSLStrategicArchitecture.html \
 	 docs/OpenSSL300Design.html \
+	 docs/manpages.html \
          news/changelog.html \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
@@ -99,6 +100,9 @@ manpages: $(foreach S,$(NEWMANSERIES),manpages-$(S)) \
 mancross:
 	./bin/mk-mancross master $(SERIES)
 
+docs/manpages.html: docs/manpages.html.tt
+	@rm -f $@
+	./bin/from-tt releases='master $(SERIES)' docs/manpages.html.tt
 
 ## $(SIMPLE) -- SIMPLE GENERATED FILES
 .PHONY: sitemap community/committers.inc community/omc.inc community/omc-alumni.inc
