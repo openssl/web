@@ -67,6 +67,12 @@ rebuild: all
 # $(1) = input directory in CHECKOUTS, $(2) = release version
 define makemanpages
 manpages-$(2):
+	@rm -rf docs/man$(2)
+	@mkdir -p docs/man$(2) \
+		  docs/man$(2)/man1 \
+		  docs/man$(2)/man3 \
+		  docs/man$(2)/man5 \
+		  docs/man$(2)/man7
 	./bin/mk-manpages $(CHECKOUTS)/$(1)/doc $(2) docs/man$(2)
 	./bin/mk-apropos docs/man$(2)/man1 > docs/man$(2)/man1/index.inc
 	./bin/mk-apropos docs/man$(2)/man3 > docs/man$(2)/man3/index.inc
