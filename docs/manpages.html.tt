@@ -13,10 +13,9 @@
             The manual pages for all releases are available online:
 	    </p>
             <ul>
-              <li><a href="manmaster">master</a></li>
-              <li><a href="man1.1.1">1.1.1</a></li>
-              <li><a href="man1.1.0">1.1.0</a></li>
-              <li><a href="man1.0.2">1.0.2</a></li>
+[% FOREACH release IN releases.split('\s+') -%]
+              <li><a href="man[% release %]">[% release %]</a></li>
+[% END -%]
             </ul>
 	  </div>
 	  <footer>
