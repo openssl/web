@@ -31,7 +31,9 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
 	 news/newsflash.inc \
 	 news/vulnerabilities.inc \
+	 news/vulnerabilities.html \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).inc) \
+	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).html) \
 	 source/.htaccess \
 	 source/index.inc \
 	 source/old/index.html
@@ -173,6 +175,9 @@ define mknews_vulnerability
 news/vulnerabilities$(1).inc: bin/mk-cvepage news/vulnerabilities.xml
 	@rm -f $$@
 	./bin/mk-cvepage -i news/vulnerabilities.xml $(2) > $$@
+news/vulnerabilities$(1).html: news/vulnerabilities.html.tt bin/from-tt
+	@rm -f $$@
+	./bin/from-tt -d news vulnerabilitiesinc='vulnerabilities$(1).inc' < $$< > $$@
 endef
 $(eval $(call mknews_vulnerability,,))
 $(foreach S,$(SERIES) $(OLDSERIES),$(eval $(call mknews_vulnerability,-$(S),-b $(S))))

@@ -15,9 +15,7 @@
               If you think you have found a security bug in OpenSSL,
               please <a href="/community/#securityreports">report it to us</a>.
 	    </p>
-            <h2>Note: Support for OpenSSL 1.0.1 ended on 31st December 2016 and
-            is no longer receiving security updates</h2>
-            <!--#include virtual="vulnerabilities-1.0.1.inc" -->
+            <!--#include virtual="[% vulnerabilitiesinc %]" -->
 	    </p>
 	  </div>
 	  <footer>
