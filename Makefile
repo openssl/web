@@ -24,8 +24,7 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 docs/faq.inc docs/fips.inc \
 	 docs/OpenSSLStrategicArchitecture.html \
 	 docs/OpenSSL300Design.html \
-         news/changelog.inc news/changelog.txt \
-	 $(foreach S,$(SERIES),news/cl$(subst .,,$(S)).txt) \
+         news/changelog.html \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
 	 news/newsflash.inc \
@@ -121,6 +120,10 @@ docs/fips.inc: $(wildcard docs/fips/*) bin/mk-filelist
 news/changelog.inc: news/changelog.txt bin/mk-changelog
 	@rm -f $@
 	./bin/mk-changelog <news/changelog.txt >$@
+news/changelog.html: news/changelog.html.tt news/changelog.inc
+	@rm -f $@
+	./bin/from-tt 'releases=$(SERIES)' $<
+news/changelog.html: $(foreach S,$(SERIES),news/cl$(subst .,,$(S)).txt)
 
 # $(1) = output file, $(2) = source directory in CHECKOUTS
 define mknews_changelogtxt

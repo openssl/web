@@ -20,6 +20,7 @@ docs/*/man7/*
 community/committers.inc
 docs/faq.inc
 docs/fips.inc
+news/changelog.html
 news/changelog.inc
 news/changelog.txt
 news/cl*.txt
