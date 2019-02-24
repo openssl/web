@@ -7,35 +7,26 @@
     <div id="content">
       <div class="blog-index">
 	<article>
-	  <header><h2>libraries</h2></header>
+	  <header><h2>Manpages for [% release %]</h2></header>
 	  <div class="entry-content">
 	    <p>
-	    This is the OpenSSL API for the SSL and Crypto libraries.
-	    The <a href="../man7/ssl.html">ssl</a> and
-	    <a href="../man7/crypto.html">crypto</a> manpages are
-	    general overviews of those libraries.
+            The manual pages for the [% release %] branch are
+            available here.
+            The OpenSSL documentation is divided into the following
+            sections:
 	    </p>
-
-	    <p>
-	    The detailed list is here:
-	    </p>
-
-	    <table style="border-spacing: 10px 0;">
-	      <tr>
-		<td>NAME</td>
-		<td>Description</td>
-	      </tr>
-	      <!--#include virtual="index.inc" -->
-	    </table>
-	    <p>&nbsp;</p>
-
+            <ul>
+              <li><a href="man1">Commands</a></li>
+              <li><a href="man3">Libraries</a></li>
+              <li><a href="man5">File Formats</a></li>
+              <li><a href="man7">Overviews</a></li>
+            </ul>
 	  </div>
 	  <footer>
 	    You are here: <a href="/">Home</a>
 	    : <a href="/docs">Documentation</a>
 	    : <a href="/docs/manpages.html">Manpages</a>
-	    : <a href="/docs/man1.1.0">1.1.0</a>
-	    : <a href="/docs/man1.1.0/man3">libraries</a>
+	    : <a href="">[% release %]</a>
 	    <br/><a href="/sitemap.txt">Sitemap</a>
 	  </footer>
 	</article>
@@ -46,3 +37,4 @@
 <!--#include virtual="/inc/footer.shtml" -->
 </body>
 </html>
+

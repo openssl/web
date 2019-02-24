@@ -7,26 +7,24 @@
     <div id="content">
       <div class="blog-index">
 	<article>
-	  <header><h2>Manpages for master</h2></header>
+	  <header><h2>OpenSSL file formats and conventions</h2></header>
 	  <div class="entry-content">
-	    <p>
-            The manual pages for the master branch are
-            available here.
-            The OpenSSL documentation is divided into the following
-            sections:
-	    </p>
-            <ul>
-              <li><a href="man1">Commands</a></li>
-              <li><a href="man3">Libraries</a></li>
-              <li><a href="man5">File Formats</a></li>
-              <li><a href="man7">Overviews</a></li>
-            </ul>
+	    <table style="border-spacing: 10px 0;">
+	      <tr>
+		<td>NAME</td>
+		<td>Description</td>
+	      </tr>
+	      <!--#include virtual="index.inc" -->
+	    </table>
+	    <p>&nbsp;</p>
+
 	  </div>
 	  <footer>
 	    You are here: <a href="/">Home</a>
 	    : <a href="/docs">Documentation</a>
 	    : <a href="/docs/manpages.html">Manpages</a>
-	    : <a href="">master</a>
+	    : <a href="/docs/man[% release %]">[% release %]</a>
+	    : <a href="/docs/man[% release %]/man5">file formats</a>
 	    <br/><a href="/sitemap.txt">Sitemap</a>
 	  </footer>
 	</article>
@@ -37,4 +35,3 @@
 <!--#include virtual="/inc/footer.shtml" -->
 </body>
 </html>
-
