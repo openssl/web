@@ -8,6 +8,10 @@ SNAP = $(CHECKOUTS)/openssl
 ## Where releases are found.
 RELEASEDIR = /var/www/openssl/source
 
+##  Current series
+SERIES=1.1.1 1.1.0 1.0.2
+##  Older series
+OLDSERIES=1.0.1 1.0.0 0.9.8 0.9.7 0.9.6
 
 # All simple generated files.
 SIMPLE = newsflash.inc sitemap.txt \
