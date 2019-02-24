@@ -71,6 +71,16 @@ manpages-$(2):
 	./bin/mk-apropos docs/man$(2)/man3 > docs/man$(2)/man3/index.inc
 	./bin/mk-apropos docs/man$(2)/man5 > docs/man$(2)/man5/index.inc
 	./bin/mk-apropos docs/man$(2)/man7 > docs/man$(2)/man7/index.inc
+	./bin/from-tt -d docs/man$(2)/man1 releases='$(SERIES)' release='$(2)' \
+		      < docs/sub-man1-index.html.tt > docs/man$(2)/man1/index.html
+	./bin/from-tt -d docs/man$(2)/man1 releases='$(SERIES)' release='$(2)' \
+		      < docs/sub-man3-index.html.tt > docs/man$(2)/man3/index.html
+	./bin/from-tt -d docs/man$(2)/man1 releases='$(SERIES)' release='$(2)' \
+		      < docs/sub-man5-index.html.tt > docs/man$(2)/man5/index.html
+	./bin/from-tt -d docs/man$(2)/man1 releases='$(SERIES)' release='$(2)' \
+		      < docs/sub-man7-index.html.tt > docs/man$(2)/man7/index.html
+	./bin/from-tt -d docs/man$(2) releases='$(SERIES)' release='$(2)' \
+		      < docs/sub-index.html.tt > docs/man$(2)/index.html
 endef
 # $(1) = release version
 define makeoldmanmap
