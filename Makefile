@@ -12,6 +12,10 @@ RELEASEDIR = /var/www/openssl/source
 SERIES=1.1.1 1.1.0 1.0.2
 ##  Older series
 OLDSERIES=1.0.1 1.0.0 0.9.8 0.9.7 0.9.6
+##  Current series with newer and older manpage layout
+##  (when the number of old man layout releases drop to none, this goes away)
+NEWMANSERIES=1.1.1
+OLDMANSERIES=1.1.0 1.0.2
 
 # All simple generated files.
 SIMPLE = newsflash.inc sitemap.txt \
@@ -60,28 +64,32 @@ simple: all
 generated: all
 rebuild: all
 
+# $(1) = input directory in CHECKOUTS, $(2) = release version
 define makemanpages
-	./bin/mk-manpages $(1)/doc $(2) docs/man$(2)
+manpages-$(2):
+	./bin/mk-manpages $(CHECKOUTS)/$(1)/doc $(2) docs/man$(2)
 	./bin/mk-apropos docs/man$(2)/man1 > docs/man$(2)/man1/index.inc
 	./bin/mk-apropos docs/man$(2)/man3 > docs/man$(2)/man3/index.inc
 	./bin/mk-apropos docs/man$(2)/man5 > docs/man$(2)/man5/index.inc
 	./bin/mk-apropos docs/man$(2)/man7 > docs/man$(2)/man7/index.inc
 endef
-define makemanmap
+# $(1) = release version
+define makeoldmanmap
+manmap-$(1):
 	./bin/mk-manmap docs/man$(1) > docs/man$(1)/.htaccess
 endef
-manpages: manmaster
-	$(call makemanpages,$(CHECKOUTS)/openssl-1.1.1-stable,1.1.1)
-	$(call makemanpages,$(CHECKOUTS)/openssl-1.1.0-stable,1.1.0)
-	$(call makemanmap,1.1.0)
-	$(call makemanpages,$(CHECKOUTS)/openssl-1.0.2-stable,1.0.2)
-	$(call makemanmap,1.0.2)
 
-manmaster:
-	$(call makemanpages,$(CHECKOUTS)/openssl,master)
+$(eval $(call makemanpages,openssl,master))
+$(foreach S,$(SERIES),$(eval $(call makemanpages,openssl-$(S)-stable,$(S))))
+$(foreach S,$(OLDMANSERIES),$(eval $(call makeoldmanmap,$(S))))
+
+manmaster: manpages-master
+manpages: $(foreach S,$(NEWMANSERIES),manpages-$(S)) \
+	  $(foreach S,$(OLDMANSERIES),manpages-$(S) manmap-$(S))
 
 mancross:
 	./bin/mk-mancross
+
 
 ## $(SIMPLE) -- SIMPLE GENERATED FILES
 .PHONY: sitemap community/committers.inc community/omc.inc community/omc-alumni.inc
