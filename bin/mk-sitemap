@@ -1,6 +1,8 @@
 #! /usr/bin/perl -w
 use strict;
 
+my @series = @ARGV;
+
 sub
 dodir()
 {
@@ -33,7 +35,7 @@ dodir()
 	$simple =~ s@.*/@@;
 	print "\n", "\t" x $level, $simple, "/\n";
 	next if $entry =~ m/secadv/;
-        next if $entry =~ m/man1.0.2|man1.1.0|manmaster/;
+	next if grep { $entry eq "man$_" } @series;
 	&dodir($entry, $level + 1);
     }
 }

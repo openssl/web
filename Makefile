@@ -88,7 +88,7 @@ manpages: $(foreach S,$(NEWMANSERIES),manpages-$(S)) \
 	  $(foreach S,$(OLDMANSERIES),manpages-$(S) manmap-$(S))
 
 mancross:
-	./bin/mk-mancross
+	./bin/mk-mancross master $(SERIES)
 
 
 ## $(SIMPLE) -- SIMPLE GENERATED FILES
@@ -98,7 +98,7 @@ newsflash.inc: news/newsflash.inc
 	head -7 $? >$@
 sitemap sitemap.txt:
 	@rm -f sitemap.txt
-	./bin/mk-sitemap > sitemap.txt
+	./bin/mk-sitemap master $(SERIES) > sitemap.txt
 
 community/committers.inc:
 	@rm -f $@

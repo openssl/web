@@ -12,16 +12,9 @@ use Pod::Simple::XHTML;
 
 __PACKAGE__->run(@ARGV);
 
-sub Releases    { return (qw(master 1.1.1 1.1.0 1.0.2)) }
 sub Dirs        { return (qw(apps crypto ssl
                              man1 man3 man5 man7)) }
 sub Dir2Section { return ( apps => "man1", crypto => "man3", ssl => "man3" ) }
-
-sub getRelease {
-    my ( $class, $ver ) = @_;
-    my %known = map { $_ => 1 } $class->Releases;
-    return @_ != 2 ? %known : defined $known{$ver} ? $ver : undef;
-}
 
 sub run {
     my ( $class, @argv ) = @_;
@@ -297,11 +290,6 @@ sub process_options {
     }
     push( @err, "No documentation directories in $docdir" )
         unless ( @found_dirs );
-
-    # verify release
-    push( @err, "Unknown release '$opt{RelVer}'" )
-      unless ( $class->getRelease( $opt{RelVer} ) );
-    $class->die(@err) if @err;
 
     return \%opt;
 }
