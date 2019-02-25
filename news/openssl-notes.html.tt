@@ -9,10 +9,10 @@
     <div id="content">
       <div class="blog-index">
 	<article>
-	  <header><h2>OpenSSL @VERSION@ Series Release Notes<h2></header>
+	  <header><h2>OpenSSL [% release %] Series Release Notes<h2></header>
 	  <div class="entry-content">
 	    <p>
-	    The major changes and known issues for the @VERSION@ branch
+	    The major changes and known issues for the [% release %] branch
 	    of the OpenSSL toolkit are summarised below. The contents
 	    reflect the current state of the <tt>NEWS</tt> file inside
 	    the git repository.
@@ -22,7 +22,7 @@
 	    More details can be found in the <a href="changelog.html">ChangeLog</a>.
 	    </p>
 
-	    <!--#include virtual="openssl-@VERSION@-notes.inc" -->
+	    <!--#include virtual="openssl-[% release %]-notes.inc" -->
 	  </div>
 	  <footer>
 	    You are here: <a href="/">Home</a>

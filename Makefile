@@ -154,9 +154,9 @@ $(eval $(call mknews_changelogtxt,cl$(subst .,,$(S)).txt,openssl-$(S)-stable)))
 
 # $(1) = release version
 define mknews_noteshtml
-news/openssl-$(1)-notes.html: news/openssl-notes.html.in
+news/openssl-$(1)-notes.html: news/openssl-notes.html.tt
 	@rm -f $$@
-	sed -e 's|@VERSION@|$(1)|g' < $$< > $$@
+	./bin/from-tt -d news release='$(1)' < $$< > $$@
 news/openssl-$(1)-notes.inc: $(CHECKOUTS)/openssl-$(1)-stable/NEWS bin/mk-notes
 	@rm -f $$@
 	./bin/mk-notes $(1) < $(CHECKOUTS)/openssl-$(1)-stable/NEWS > $$@
