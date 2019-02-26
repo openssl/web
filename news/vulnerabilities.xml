@@ -47,7 +47,7 @@
       Stitched ciphersuites are optimised implementations of certain commonly used
       ciphersuites. Also the application must call SSL_shutdown() twice even if a
       protocol error has occurred (applications should not do this but some do
-      anyway).
+      anyway). AEAD ciphersuites are not impacted.
     </description>
     <advisory url="/news/secadv/20190226.txt"/>
     <reported source="Juraj Somorovsky, Robert Merget and Nimrod Aviram, with additional investigation by Steven Collison and Andrew Hourselt"/>
