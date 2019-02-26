@@ -7,7 +7,51 @@
 
 <!-- The updated attribute should be the same as the first public issue,
      unless an old entry was updated. -->
-<security updated="20181112">
+<security updated="20190226">
+  <issue public="20190226">
+    <impact severity="Moderate"/>
+    <cve name="2019-1559"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <affects base="1.0.2" version="1.0.2i"/>
+    <affects base="1.0.2" version="1.0.2j"/>
+    <affects base="1.0.2" version="1.0.2k"/>
+    <affects base="1.0.2" version="1.0.2l"/>
+    <affects base="1.0.2" version="1.0.2m"/>
+    <affects base="1.0.2" version="1.0.2n"/>
+    <affects base="1.0.2" version="1.0.2o"/>
+    <affects base="1.0.2" version="1.0.2p"/>
+    <affects base="1.0.2" version="1.0.2q"/>
+    <fixed base="1.0.2" version="1.0.2r" date="20190226">
+      <git hash="e9bbefbf0f24c57645e7ad6a5a71ae649d18ac8e"/>
+    </fixed>
+    <problemtype>Padding Oracle</problemtype>
+    <title>0-byte record padding oracle</title>
+    <description>
+      If an application encounters a fatal protocol error and then calls
+      SSL_shutdown() twice (once to send a close_notify, and once to receive one) then
+      OpenSSL can respond differently to the calling application if a 0 byte record is
+      received with invalid padding compared to if a 0 byte record is received with an
+      invalid MAC. If the application then behaves differently based on that in a way
+      that is detectable to the remote peer, then this amounts to a padding oracle
+      that could be used to decrypt data.
+
+      In order for this to be exploitable "non-stitched" ciphersuites must be in use.
+      Stitched ciphersuites are optimised implementations of certain commonly used
+      ciphersuites. Also the application must call SSL_shutdown() twice even if a
+      protocol error has occurred (applications should not do this but some do
+      anyway).
+    </description>
+    <advisory url="/news/secadv/20190226.txt"/>
+    <reported source="Juraj Somorovsky, Robert Merget and Nimrod Aviram, with additional investigation by Steven Collison and Andrew Hourselt"/>
+  </issue>
   <issue public="20181102">
     <impact severity="Low"/>
     <cve name="2018-5407"/>

@@ -1,0 +1,48 @@
+OpenSSL Security Advisory [26 February 2019]
+============================================
+
+0-byte record padding oracle (CVE-2019-1559)
+============================================
+
+Severity: Moderate
+
+If an application encounters a fatal protocol error and then calls
+SSL_shutdown() twice (once to send a close_notify, and once to receive one) then
+OpenSSL can respond differently to the calling application if a 0 byte record is
+received with invalid padding compared to if a 0 byte record is received with an
+invalid MAC. If the application then behaves differently based on that in a way
+that is detectable to the remote peer, then this amounts to a padding oracle
+that could be used to decrypt data.
+
+In order for this to be exploitable "non-stitched" ciphersuites must be in use.
+Stitched ciphersuites are optimised implementations of certain commonly used
+ciphersuites. Also the application must call SSL_shutdown() twice even if a
+protocol error has occurred (applications should not do this but some do
+anyway).
+
+This issue does not impact OpenSSL 1.1.1 or 1.1.0.
+
+OpenSSL 1.0.2 users should upgrade to 1.0.2r.
+
+This issue was discovered by Juraj Somorovsky, Robert Merget and Nimrod Aviram,
+with additional investigation by Steven Collison and Andrew Hourselt. It was
+reported to OpenSSL on 10th December 2018.
+
+Note
+====
+
+OpenSSL 1.0.2 and 1.1.0 are currently only receiving security updates. Support
+for 1.0.2 will end on 31st December 2019. Support for 1.1.0 will end on 11th
+September 2019. Users of these versions should upgrade to OpenSSL 1.1.1.
+
+References
+==========
+
+URL for this Security Advisory:
+https://www.openssl.org/news/secadv/20190226.txt
+
+Note: the online version of the advisory may be updated with additional details
+over time.
+
+For details of OpenSSL severity classifications please see:
+https://www.openssl.org/policies/secpolicy.html
