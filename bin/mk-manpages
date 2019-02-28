@@ -65,7 +65,9 @@ sub main {
                 print $fh $out or $class->die("Can't print $outinc: $!");
                 close($fh) or $class->die("Can't close $outinc: $!");
 
-                foreach my $htmlname (@{$data{names}}) {
+                foreach my $htmlname (
+                    map { (my $x = $_) =~ s|/|-|g; $x }
+                        @{$data{names}}) {
                     my $htmlfile = File::Spec->catdir( $data{sect},
                                                        "$htmlname.html" );
                     my $outhtml = File::Spec->catfile( $wwwdir, $htmlfile );
