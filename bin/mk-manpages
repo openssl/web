@@ -41,7 +41,6 @@ sub main {
                 #
                 #       release => "..."        # 
                 #       subdir  => "..."        # The original subdir
-                #       sect    => "..."        # Output section subdir
                 #       sectnum => n            # Default section number
                 #
                 my %data = (
@@ -52,7 +51,7 @@ sub main {
                 );
                 # These are for display
                 my $podfile = File::Spec->catfile( $subdir, $ent );
-                my $incfile = File::Spec->catfile( $data{sect},
+                my $incfile = File::Spec->catfile( "man$data{sectnum}",
                                                    "$origbase.inc" );
                 # These are files we're actually manipulating
                 my $inpod = File::Spec->catfile( $srcdir, $podfile );
@@ -68,7 +67,7 @@ sub main {
                 foreach my $htmlname (
                     map { (my $x = $_) =~ s|/|-|g; $x }
                         @{$data{names}}) {
-                    my $htmlfile = File::Spec->catdir( $data{sect},
+                    my $htmlfile = File::Spec->catdir( "man$data{sectnum}",
                                                        "$htmlname.html" );
                     my $outhtml = File::Spec->catfile( $wwwdir, $htmlfile );
                     $out = $class->genhtml( $release, $title, $origbase,
@@ -90,7 +89,7 @@ sub genhtml {
 <!DOCTYPE html>
 <html lang="en">
 <!-- OSSL: original subdir: $data{subdir} -->
-<!-- OSSL: subdir: $data{sect} -->
+<!-- OSSL: subdir: man$data{sectnum} -->
 <!-- OSSL: section: $data{sectnum} -->
 <!-- OSSL: description: $data{description} -->
 <!--#include virtual="/inc/head.shtml" -->
@@ -111,8 +110,8 @@ sub genhtml {
             : <a href="/docs">Docs</a>
             : <a href="/docs/manpages.html">Manpages</a>
             : <a href="/docs/man$release/">$release</a>
-            : <a href="/docs/man$release/$data{sect}">$data{sect}</a>
-            : <a href="/docs/man$release/$data{sect}/$htmlbase.html">$htmlbase</a>
+            : <a href="/docs/man$release/man$data{sectnum}">man$data{sectnum}</a>
+            : <a href="/docs/man$release/man$data{sectnum}/$htmlbase.html">$htmlbase</a>
             <br/><a href="/sitemap.txt">Sitemap</a>
           </footer>
         </article>
@@ -145,18 +144,12 @@ sub geninc {
     my $infile = do { local $/; <$fh>; };
     close( $fh );
 
-    # L<asdf...|qwer...> ==> L<qwer>
-    $infile =~ s/L<[^|>]*\|([^>]+)>/L<$1>/g;
-
-    # L<asdf(x)> --> L<asdf>
-    $infile =~ s/L<([^>]+)\(\d\)>/L<$1>/g;
-
     my $out;
     my $pod = Pod::Simple::XHTML->new;
     $pod->html_h_level(3);
-    $pod->perldoc_url_prefix("/docs/man$release/$data{sect}/");
+    $pod->perldoc_url_prefix("/docs/man$release/man$data{sectnum}/");
     $pod->perldoc_url_postfix(".html");
-    $pod->man_url_prefix("/docs/man$release/$data{sect}/");
+    $pod->man_url_prefix("/docs/man$release/man");
     $pod->man_url_postfix(".html");
     $pod->html_header('');
     $pod->html_footer('');
@@ -183,7 +176,6 @@ sub getdata {
             s/\n/ /gm;
             if (/^=for comment openssl_manual_section:\s*(\d+)/) {
                 $data{sectnum} = "$1";
-                $data{sect} = "man$1";
             }
             elsif (/^=head1\s/) {
                 $foundname = 0;
