@@ -4,6 +4,7 @@
 # Format is two fields, colon-separated; the first line is the column
 # headings.  URL paths must all be absolute.
 Date: Item
+06-Mar-2019: <a href="/news/secadv/20190306.txt">Security Advisory</a>: one low severity fix in ChaCha20-Poly1305
 26-Feb-2019: OpenSSL 1.1.1b is now available, including bug fixes
 26-Feb-2019: OpenSSL 1.0.2r is now available, including bug and security fixes
 11-Feb-2019: <a href="/docs/OpenSSL300Design.html">3.0.0 Design (draft)</a> is now available
