@@ -553,7 +553,7 @@ The OpenSSL Core and providers have to exchange data while keeping
 OpenSSL and provider structures opaque.  All composite values will be
 passed as an array of items, using the public data structure defined
 in
-[Appendix 2 - OpenSSL parameter passing](#openssl-parameter-passing).
+[Appendix 2 - OpenSSL parameter passing](#appendix-2---parameter-passing).
 Parameters will be identified using their name (as a string) and each
 contains its own type and size information.
 
@@ -2118,7 +2118,7 @@ All ASN.1 serialization/deserialization will be performed in
 libcrypto, with composite-value **key, parameter and signature**
 structures crossing the Core/provider boundary as an array of items,
 using the public data structure defined in
-[Appendix 2 - OpenSSL parameter passing](#appendix-2---openssl-parameter-passing).
+[Appendix 2 - OpenSSL parameter passing](#appendix-2---parameter-passing).
 
 The encoded digest OIDs used for **RSA PKCS #1 padding** will either
 be pre-generated (as was done in the old FIPS module using the SHA_DATA macro)
