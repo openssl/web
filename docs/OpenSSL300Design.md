@@ -710,7 +710,8 @@ A provider module _must_ have the following  well known entry point:
 ``` C
 int OSSL_provider_init(const OSSL_PROVIDER *provider,
                        const OSSL_DISPATCH *in,
-                       const OSSL_DISPATCH **out);
+                       const OSSL_DISPATCH **out
+                       void **provider_ctx);
 ```
 
 If the entry point does not exist in the dynamically loaded object,
@@ -720,6 +721,11 @@ then it is not a valid module and loading it will fail.
 
 `out` is an array of provider functions that the provider passes back
 to the Core.
+
+`provider_ctx` (may be shortened to `provctx` elsewhere in this
+document) is an object optionally created by the provider for its own
+use (storing data it needs to keep around safely).  This pointer will
+be passed back to appropriate provider functions.
 
 `provider` is a handle to a provider object belonging to the Core.
 This can serve as a unique provider identity which may be required in
@@ -829,8 +835,6 @@ The `OSSL_provider_init` entry point does not register any algorithms
 that will be needed, but it will return at least these two callbacks
 to enable this process:
 
-
-
 1.  `OSSL_FUNC_QUERY_OPERATION`, which is used to find out what
     implementations of an operation are available.  This must return
     an array of `OSSL_ALGORITHM` (see further down), which maps
@@ -838,7 +842,7 @@ to enable this process:
     dispatch tables.  This function must also be able to indicate if
     the resulting array may be cached by the Core or not. This is
     explained in further detail below.
-1.  `OSSL_FUNC_TEARDOWN`, which is used when the provider is unloaded.
+2.  `OSSL_FUNC_TEARDOWN`, which is used when the provider is unloaded.
 
 The provider register callback can only be run after the
 `OSSL_provider_init()` call succeeds.
@@ -887,8 +891,8 @@ form of a function table.
 
 A provider will also offer a service for returning information (in the
 form of parameters as specified in
-[Appendix 2 - Parameter Passing](#appendix-2---parameter-passing)) via a callback provided by the
-provider, such as:
+[Appendix 2 - Parameter Passing](#appendix-2---parameter-passing)) via
+a callback provided by the provider, such as:
 
 
 *   version number
@@ -912,7 +916,7 @@ are required:
 #define OSSL_OP_DIGEST_UPDATE_FUNC         3
 #define OSSL_OP_DIGEST_FINAL_FUNC          4
 #define OSSL_OP_DIGEST_FREECTX_FUNC        5
-typedef void *(*OSSL_OP_digest_newctx_fn)(const OSSL_PROVIDER *prov);
+typedef void *(*OSSL_OP_digest_newctx_fn)(void *provctx);
 typedef int (*OSSL_OP_digest_init_fn)(void *ctx);
 typedef int (*OSSL_OP_digest_update_fn)(void *ctx, void *data, size_t len);
 typedef int (*OSSL_OP_digest_final_fn)(void *ctx, void *md, size_t mdsize,
@@ -925,7 +929,7 @@ multi-part operations:
 
 ``` C
 #define OSSL_OP_DIGEST_FUNC                6
-typedef int (*OSSL_OP_digest)(const OSSL_PROVIDER *prov,
+typedef int (*OSSL_OP_digest)(void *provctx,
                               const void *data, size_t len,
                               unsigned char *md, size_t mdsize,
                               size_t *outlen);
@@ -974,8 +978,8 @@ The FIPS provider init module entry point function might look like
 this:
 
 ``` C
-static int fips_query_operation(const OSSL_PROVIDER *provider,
-                         int op_id, const OSSL_ALGORITHM **map)
+static int fips_query_operation(void *provctx, int op_id,
+                                const OSSL_ALGORITHM **map)
 {
     *map = NULL;
     switch (op_id) {
@@ -991,8 +995,7 @@ static int fips_query_operation(const OSSL_PROVIDER *provider,
     (o)->data_type = OSSL_PARAM_UTF8_STRING_PTR;                    \
     if ((o)->result_size != NULL) *(o)->result_size = sizeof(s);    \
 } while(0)
-static int fips_get_parms(const OSSL_PROVIDER *provider,
-                          OSSL_PARAM *outparams)
+static int fips_get_params(void *provctx, OSSL_PARAM *outparams)
 {
     while (outparams->key != NULL) {
         if (strcmp(outparams->key, "provider.name") == 0) {
@@ -1016,7 +1019,8 @@ static core_get_params_fn *core_get_params = NULL;
 
 int OSSL_provider_init(const OSSL_PROVIDER *provider,
                        const OSSL_DISPATCH *in,
-                       const OSSL_DISPATCH **out)
+                       const OSSL_DISPATCH **out
+                       void **provider_ctx)
 {
     int ret = 0;
 
