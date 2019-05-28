@@ -7,7 +7,7 @@
 
 <!-- The updated attribute should be the same as the first public issue,
      unless an old entry was updated. -->
-<security updated="20190306">
+<security updated="20190528">
   <issue public="20190306">
     <impact severity="Low"/>
     <cve name="2019-1543"/>
@@ -25,10 +25,10 @@
     <affects base="1.1.0" version="1.1.0h"/>
     <affects base="1.1.0" version="1.1.0i"/>
     <affects base="1.1.0" version="1.1.0j"/>
-    <fixed base="1.1.1" version="1.1.1c-dev" date="20190306">
+    <fixed base="1.1.1" version="1.1.1c" date="20190528">
       <git hash="f426625b6ae9a7831010750490a5f0ad689c5ba3"/>
     </fixed>
-    <fixed base="1.1.0" version="1.1.0k-dev" date="20190306">
+    <fixed base="1.1.0" version="1.1.0k" date="20190528">
       <git hash="ee22257b1418438ebaf54df98af4e24f494d1809"/>
     </fixed>
     <problemtype>Nonce Reuse</problemtype>
