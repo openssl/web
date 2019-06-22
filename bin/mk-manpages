@@ -64,9 +64,17 @@ sub main {
                 print $fh $out or $class->die("Can't print $outinc: $!");
                 close($fh) or $class->die("Can't close $outinc: $!");
 
-                foreach my $htmlname (
-                    map { (my $x = $_) =~ s|/|-|g; $x }
-                        @{$data{names}}) {
+                my @htmlnames =
+                    map { (my $x = $_) =~ s|/|-|g; $x } @{$data{names}};
+                # Older OpenSSL pods have file names that do not correspond
+                # to any of the names in the NAME section.
+                # Strictly speaking, we shouldn't use that name, but HTML
+                # pages with that name have been produced in the past, so
+                # we keep doing so as long as it's relevant.
+                if (! grep { $_ eq $origbase } @htmlnames) {
+                    push @htmlnames, $origbase;
+                }
+                foreach my $htmlname (@htmlnames) {
                     my $htmlfile = File::Spec->catdir( "man$data{sectnum}",
                                                        "$htmlname.html" );
                     my $outhtml = File::Spec->catfile( $wwwdir, $htmlfile );
