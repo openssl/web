@@ -7,7 +7,88 @@
 
 <!-- The updated attribute should be the same as the first public issue,
      unless an old entry was updated. -->
-<security updated="20190528">
+<security updated="20190730">
+  <issue public="20190730">
+    <impact severity="Low"/>
+    <cve name="2019-1552"/>
+    <affects base="1.1.1" version="1.1.1"/>
+    <affects base="1.1.1" version="1.1.1a"/>
+    <affects base="1.1.1" version="1.1.1b"/>
+    <affects base="1.1.1" version="1.1.1c"/>
+    <affects base="1.1.0" version="1.1.0"/>
+    <affects base="1.1.0" version="1.1.0a"/>
+    <affects base="1.1.0" version="1.1.0b"/>
+    <affects base="1.1.0" version="1.1.0c"/>
+    <affects base="1.1.0" version="1.1.0d"/>
+    <affects base="1.1.0" version="1.1.0e"/>
+    <affects base="1.1.0" version="1.1.0f"/>
+    <affects base="1.1.0" version="1.1.0g"/>
+    <affects base="1.1.0" version="1.1.0h"/>
+    <affects base="1.1.0" version="1.1.0i"/>
+    <affects base="1.1.0" version="1.1.0j"/>
+    <affects base="1.1.0" version="1.1.0k"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <affects base="1.0.2" version="1.0.2i"/>
+    <affects base="1.0.2" version="1.0.2j"/>
+    <affects base="1.0.2" version="1.0.2k"/>
+    <affects base="1.0.2" version="1.0.2l"/>
+    <affects base="1.0.2" version="1.0.2m"/>
+    <affects base="1.0.2" version="1.0.2n"/>
+    <affects base="1.0.2" version="1.0.2o"/>
+    <affects base="1.0.2" version="1.0.2p"/>
+    <affects base="1.0.2" version="1.0.2q"/>
+    <affects base="1.0.2" version="1.0.2r"/>
+    <affects base="1.0.2" version="1.0.2s"/>
+    <fixed base="1.1.1" version="1.1.1d" date="20190706">
+      <git hash="54aa9d51b09d67e90db443f682cface795f5af9e"/>
+    </fixed>
+    <fixed base="1.1.0" version="1.1.0l" date="20190727">
+      <git hash="e32bc855a81a2d48d215c506bdeb4f598045f7e9"/>
+      <git hash="b15a19c148384e73338aa7c5b12652138e35ed28"/>
+    </fixed>
+    <fixed base="1.0.2" version="1.0.2t" date="20190725">
+      <git hash="d333ebaf9c77332754a9d5e111e2f53e1de54fdd"/>
+    </fixed>
+    <problemtype>Insecure defaults</problemtype>
+    <title>Windows builds with insecure path defaults</title>
+    <description>
+      OpenSSL has internal defaults for a directory tree where it can find a
+      configuration file as well as certificates used for verification in
+      TLS.  This directory is most commonly referred to as OPENSSLDIR, and
+      is configurable with the --prefix / --openssldir configuration options.
+
+      For OpenSSL versions 1.1.0 and 1.1.1, the mingw configuration targets
+      assume that resulting programs and libraries are installed in a
+      Unix-like environment and the default prefix for program installation
+      as well as for OPENSSLDIR should be '/usr/local'.
+
+      However, mingw programs are Windows programs, and as such, find
+      themselves looking at sub-directories of 'C:/usr/local', which may be
+      world writable, which enables untrusted users to modify OpenSSL's
+      default configuration, insert CA certificates, modify (or even
+      replace) existing engine modules, etc.
+
+      For OpenSSL 1.0.2, '/usr/local/ssl' is used as default for OPENSSLDIR
+      on all Unix and Windows targets, including Visual C builds.  However,
+      some build instructions for the diverse Windows targets on 1.0.2
+      encourage you to specify your own --prefix.
+
+      OpenSSL versions 1.1.1, 1.1.0 and 1.0.2 are affected by this issue.
+      Due to the limited scope of affected deployments this has been
+      assessed as low severity and therefore we are not creating new
+      releases at this time.
+    </description>
+    <advisory url="/news/secadv/20190730.txt"/>
+    <reported source="Rich Mirch"/>
+  </issue>
   <issue public="20190306">
     <impact severity="Low"/>
     <cve name="2019-1543"/>
