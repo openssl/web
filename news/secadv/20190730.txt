@@ -42,7 +42,7 @@ The 1.1.1 and 1.1.0 mitigation set more appropriate defaults for
 mingw, while the 1.0.2 mitigation documents the issue and provides
 enhanced examples.
 
-This issue was reported by Rich Mirth.  The fix was developed by
+This issue was reported by Rich Mirch.  The fix was developed by
 Richard Levitte from the OpenSSL development team.  It was reported to
 OpenSSL on 9th Jun 2019.
 
