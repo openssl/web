@@ -55,7 +55,7 @@ will end on 11th September 2019. Users of these versions should
 upgrade to OpenSSL 1.1.1.
 
 
-Referenses
+References
 ==========
 
 URL for this Security Advisory:
