@@ -94,7 +94,7 @@ last 1.1.0 release.
 Users of these versions should upgrade to OpenSSL 1.1.1.
 
 
-Referenses
+References
 ==========
 
 URL for this Security Advisory:
