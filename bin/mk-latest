@@ -56,4 +56,7 @@ RewriteRule ^openssl-(fips.*)  old/fips/openssl-$1 [L]
 <Files *.gz.sha1>
     RemoveEncoding .gz
 </Files>
+<Files *.gz.sha256>
+    RemoveEncoding .gz
+</Files>
 EOF
