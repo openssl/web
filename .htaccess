@@ -21,6 +21,10 @@ ForceType application/binary
 ForceType application/binary
 </Files>
 
+<Files *.sha256>
+ForceType application/binary
+</Files>
+
 <Files *.asc>
 ForceType application/binary
 </Files>
