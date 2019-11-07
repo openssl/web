@@ -4,6 +4,7 @@
 # Format is two fields, colon-separated; the first line is the column
 # headings.  URL paths must all be absolute.
 Date: Item
+07-Nov-2019: New Blog post: <a href="https://www.openssl.org/blog/blog/2019/11/07/3.0-update/">Update on 3.0 Development, FIPS and 1.0.2 EOL</a>
 10-Sep-2019: <a href="/news/secadv/20190910.txt">Security Advisory</a>: three low severity fixes
 10-Sep-2019: OpenSSL 1.1.1d is now available, including bug and security fixes
 10-Sep-2019: OpenSSL 1.1.0l is now available, including security fixes
