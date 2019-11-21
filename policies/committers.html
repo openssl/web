@@ -10,7 +10,7 @@
 	<div class="blog-index">
 	  <article>
 	    <header>
-	      <h1>Guidelines for OpenSSL Committers</h1>
+	      <h1>Policy for OpenSSL Committers</h1>
 	    </header>
 
 	    <div class="entry-content">
@@ -24,8 +24,8 @@
 
               <h2>How to become a committer?</h2>
               <p>Commit access is granted by the OpenSSL Management Committee
-              (OMC) (see the
-              <a href="/policies/omc-bylaws.html">OpenSSL bylaws</a>).
+              (OMC) typically on the recommendation of the OpenSSL Technical Committee (OTC)
+              (see the <a href="/policies/omc-bylaws.html">OpenSSL Bylaws</a>).
 
               <p>We welcome contributors who become domain experts in some
               part of the library (for example, low-level crypto) as well as
@@ -45,42 +45,38 @@
               <a href="https://github.com/openssl/openssl/issues">Github issue tracker</a>,
               and our
               <a href="/community/mailinglists.html">mailing lists</a>
-              find impactful ideas to work on. Seek feedback from multiple OMC
-              members to understand the project, and to support your
-              application. Let them know that you'd like to become a committer
-              - they'll nominate you when your code review record demonstrates
-              impact as well as understanding of the codebase and coding style
-              (usually after a few months of activity). The final decision to
-              grant commit access is taken by an OMC vote.</p>
+              find impactful ideas to work on.</p>
 
-              <h2>How to maintain commit status?</h2>
-              <p>To maintain commit status, you should stay active in the
-              project. As stated in the project bylaws, if you remain inactive
-              for several months, your commit access will be withdrawn - but
-              you are always welcome back, just ask an OMC member to
-              re-nominate you.</p>
+              <h2>How to maintain committer status?</h2>
+              <p>To maintain committer status, you must stay active in the
+              project. Refer to the <a href="/policies/omc-bylaws.html">OpenSSL Bylaws</a>
+              for details.</p>
               <p>In the unlikely and unfortunate event that your actions
               conflict with the project objectives or are otherwise
-              disruptive, commit access may also be revoked by vote of the
-              OMC.</p>
+              disruptive, committer status may also be revoked by the OMC.</p>
 
-              <h2>Code reviews</h2>
+              <h2>Approvals and code reviews</h2>
               <p>All submissions must be reviewed and approved by at least two
-              committers, one of whom must also be an OMC member. If the
+              committers, one of whom must also be an OTC member. If the
               author is also a committer then that counts as one of the
               reviews. In other words:</p>
               <ul>
-                <li>OMC members need one approval from any committer</li>
-                <li>Committers need one approval from a committer within the
-                OMC</li>
+                <li>OTC members need one approval from any committer</li>
+                <li>Committers need one approval from an OTC member</li>
                 <li>Contributors without commit rights need two approvals,
-                including one from the OMC.</li>
+                including one from an OTC member.</li>
               </ul>
 
-              <p>This process may seem a little heavy, but OpenSSL is a large,
-              complicated codebase, and we think two reviews help prevent
-              security bugs, as well as disseminate knowledge to the growing
-              contributor base.</p>
+              <p>An OMC member may apply an OMC-hold to a submission.
+              An OTC member may apply an OTC-hold to a submission.
+              An OMC-hold may be cleared by being removed by the member
+              that put in place the hold or by a vote of the OMC.
+              An OTC-hold may be cleared by being removed by the member
+              that put in place the hold or by a vote of the OTC.</p>
+
+              <p>Approved submissions (outside of the automated release process and NEWS and
+              CHANGES file updates) shall only be applied after a 24-hour delay from the
+              approval (except for minor build and test breakage fix approvals).</p>
 
               <p>Contributors without commit rights cannot formally approve
               patches but are nevertheless welcome to comment on submissions
@@ -97,7 +93,7 @@
                 href="mailto:openssl-project@openssl.org">openssl-project@openssl.org</a>
               (public, moderated).
               On GitHub, you can target the OMC members with @openssl/omc,
-              and committers with @openssl/committers.</p>
+              OTC members with @openssl/otc, or committers with @openssl/committers.</p>
 
               <h2>Commit workflow</h2>
               <p>We do code reviews on GitHub. The
@@ -116,12 +112,12 @@
               a potential security issue, we ask that you report it to
               <a href="mailto:openssl-security@openssl.org"> openssl-security@openssl.org</a>
               and don't discuss it further in public. We review security
-              sensitive patches privately, off GitHub. We do not currently
-              have a way to open access to those reviews after the patches
-              have been released.</p>
+              issues privately, however acceptance of a submission for a security issue
+              does not bypass the review process that applies to all submissions.</p>
 
               <h2>A note on CLAs</h2>
-              <p>All authors, including committers, must have current <a href="/policies/cla.html">CLAs</a> on
+              <p>All authors, including committers,
+              must have current <a href="/policies/cla.html">CLAs</a> on
               file. A CLA is not required for trivial contributions (e.g. the
               fix of a spelling mistake). Refer to the
               <a href="cla.html">CLA</a> page for further details.
