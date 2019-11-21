@@ -13,7 +13,7 @@
           <h2>OpenSSL Bylaws</h2>
           <h5>
             First issued 13th February 2017<br/>
-	    Last modified 20th December 2017
+            Last modified 10th December 2019
           </h5>
         </header>
 
@@ -72,10 +72,26 @@
           <p>The OMC:</p>
           <ul>
             <li>makes all decisions regarding management and strategic direction
-            of the project;</li>
-            <li>sets and maintains all policies and procedures;</li>
-            <li>nominates, elects and removes committers and OMC members as
-            required;</li>
+            of the project; including:
+            <ul>
+              <li>business requirements;</li>
+              <li>feature requirements;</li>
+              <li>platform requirements;</li>
+              <li>roadmap requirements and priority;</li>
+              <li>end-of-life decisions;</li>
+              <li>release timing and requirement decisions;</li>
+            </ul>
+            </li>
+            <li>maintains the project infrastructure;</li>
+            <li>maintains the project website;</li>
+            <li>maintains the project code of conduct;</li>
+            <li>sets and maintains all project Bylaws;</li>
+            <li>sets and maintains all non-technical policies and non-technical procedures;</li>
+            <li>nominates and elects OMC members as required;</li>
+            <li>approves or rejects OTC nominations for committers and OTC members;</li>
+            <li>adds or removes OMC, OTC, or committers as required;</li>
+            <li>adjudicates any objections to OTC decisions;</li>
+            <li>adjudicates any objections to any commits to project repositories;</li>
             <li>ensures security issues are dealt with in an appropriate
             manner;</li>
             <li>schedules releases and determines future release plans and the
@@ -95,13 +111,20 @@
           but the ones that count in order to participate in the OMC
           decision-making process are the ones listed below.</p>
 
+          <p>In general, the OMC will leave technical decisions to the OpenSSL
+          Technical Committee (OTC, see below) and not participate in
+          discussions related to development and documention of the OpenSSL
+          Toolkit. In exceptional cases however an OTC vote can be overruled
+          by an OMC vote. Such an exceptional case would be for example if an
+          OTC decision stands contrary to OMC policies or decisions.</p>
+
           <p>OMC members may become inactive. In order to remain active a member
           must, in any calendar quarter, contribute by:</p>
           <ul>
             <li>a) Having authored, or been recorded as a reviewer of, at least
             one commit made to any OpenSSL repository (including non-code based
             ones) and</li>
-            <li>b) vote in at least two-thirds of the total votes closed in the
+            <li>b) vote in at least two-thirds of the OMC votes closed in the
             first two months of the quarter and the last month of the preceding
             quarter.</li>
           </ul>
@@ -129,30 +152,7 @@
           to vote on and participate in discussions. They retain access to OMC
           internal resources.</p>
 
-          <h3>OpenSSL Software Foundation (OSF)</h3>
-
-          <p>The OpenSSL Software Foundation represents the OpenSSL project in
-          legal and most official formal capacities in relation to external
-          entities and individuals. This includes, but is not limited to,
-          managing contributor license agreements, managing donations,
-          registering and holding trademarks, registering and holding domain
-          names, obtaining external legal advice, and so on.</p>
-
-          <p>Any OMC member may serve as a director of OSF if they wish. To do
-          so they should send a request to any existing OSF director.</p>
-
-          <h3>OpenSSL Software Services (OSS)</h3>
-
-          <p>OpenSSL Software Services represents the OpenSSL project for most
-          commercial and quasi-commercial  contexts, such as providing formal
-          support contracts and brokering consulting contracts for OpenSSL
-          committers.</p>
-
-          <p>Any OMC member may serve as a director of OSS if they wish, subject
-          to certain contractual requirements. To do so they should send a
-          request to any existing OSS director.</p>
-
-          <h2><a name="voting">OMC Voting Procedures</a></h2>
+          <h4><a name="voting">OMC Voting Procedures</a></h4>
 
           <p>A vote to change these bylaws will pass if it obtains an in favour
           vote by more than two thirds of the active OMC members and less than
@@ -189,41 +189,187 @@
           <p>All votes and their outcomes should be recorded and available to
           all OMC members.</p>
 
-	  <h2><a name="leave">Leave of absence</a></h2>
+          <h3><a name="OTC">OpenSSL Technical Committee (OTC)</a></h3>
 
-	  <p>An active OMC member or committer may request a leave of absence 
-	  from the project. A leave of absence from the OMC or committer shall 
-	  suspend inactivity determination for the specified role. All access to 
-	  OMC or committer resources shall be suspended (disabled) and the OMC
-	  member shall be excluded from voting and the committer shall be excluded
-	  from reviewing or approving source changes. On return from a leave of 
-	  absence, the OMC member or committer will be deemed to have become active 
-	  as of the date of return.</p>
+          <p>The OTC represents the official technical voice of the project. All
+          OTC decisions are taken on the basis of a vote.</p>
 
-	  <p>All of the following criteria must be met in order to qualify as a
-	  leave of absence:</p>
-	  <ul>
-	    <li>a) the member must request via email to the OMC a leave of 
-	           absence at least one week in advance of the requested
-	           period of leave;</li>
-	    <li>b) only one leave of absence is permitted per calendar year;</li>
-	    <li>c) the leave of absence must specify the date of return from
-	           the leave of absence; </li>
-	  <li>d) the length of the leave of absence shall be a minimum of one calendar 
-	         month and shall not exceed three calendar months (one quarter); and </li>
-	  <li>e) the leave of absence applies to all the roles within the 
-	         project (i.e. both OMC and committer if both roles apply).</li>
-	  </ul>
+          <p>The OTC:</p>
+          <ul>
+            <li>makes all technical decisions of the code and documentation for OpenSSL including:
+            <ul>
+              <li>design;</li>
+              <li>architecture;</li>
+              <li>implementation;</li>
+              <li>testing;</li>
+              <li>documentation;</li>
+              <li>code review;</li>
+              <li>quality assurance;</li>
+              <li>classification of security issues in accordance with the security policy;</li>
+            </ul>
+            </li>
 
-	  <h2><a name="update">Bylaws Update History</a></h2>
-	  <p>
-	  The following changes have been made since the bylaws were first 
-	  issued 13-February-2017.
-	  </p>
-	  <ul>
-	    <li>20-December-2017.
-	    Added <i>Leave of absence</i> section.</li>
-	  </ul>
+            <li>produces releases according to OMC requirements;</li>
+            <li>establishes and maintains technical policies and technical procedures such as:
+              <ul>
+                <li>GitHub labels and milestone usage;</li>
+                <li>coding style;</li>
+              </ul>
+            </li>
+            <li>nominates to the OMC, addition or removal of OTC members and committers;</li>
+            <li>ensures technical aspects of security issues are dealt with in an appropriate
+            manner;</li>
+          </ul>
+
+          <p>Membership of the OTC is by invitation only from the OMC.
+          OTC members must be committers and hence all rules that apply to committers also apply.
+          OTC members may be OMC members and in which case all rules that apply to OMC members
+          also apply.</p>
+
+          <p>The OTC makes technical decisions on behalf of the project based on
+          requirements specified by the OMC. In order to have
+          a valid voice on the OTC, members must be actively contributing to the
+          technical aspects of the project. Note that there are many ways to contribute to the project
+          but the ones that count in order to participate in the OTC
+          decision-making process are the ones listed below.</p>
+
+          <p>OTC members may become inactive. In order to remain active a member
+          must, in any calendar quarter, contribute by:</p>
+          <ul>
+            <li>a) Having authored, or been recorded as a reviewer of, at least
+            one commit made to any OpenSSL repository (including non-code based
+            ones) and</li>
+            <li>b) vote in at least two-thirds of the OTC votes closed in the
+            first two months of the quarter and the last month of the preceding
+            quarter and </li>
+            <li>c) maintain committer status.</li>
+          </ul>
+
+          <p>The above rules will be applied at the beginning of each calender
+          quarter. It does not apply if the OTC member was first appointed, or
+          became active again during the previous calendar quarter. The voting
+          requirement only includes those votes after the time the member joined
+          or was made active again.</p>
+
+          <p>If an OTC member remains inactive for one calendar quarter then
+          they will no longer be considered an OTC member.</p>
+
+          <p>An OTC member can declare themselves inactive, leave the OTC, or
+          leave the project entirely. This does not require a vote.</p>
+
+          <p>An inactive OTC member can propose a vote that the OTC declare them
+          active again. Inactive OTC members cannot vote but can propose issues
+          to vote on and participate in discussions. They retain access to OTC
+          internal resources.</p>
+
+          <h4><a name="voting">OTC Voting Procedures</a></h4>
+
+          <p>A vote will pass if it has had a vote registered from
+          a majority of active OTC members and has had more votes registered in
+          favour than votes registered against.</p>
+
+          <p>Only active OTC members may vote. A registered vote is a vote in
+          favour, a vote against, or an abstention.</p>
+
+          <p>Any OTC member (active or inactive) can propose a vote.
+          Each vote must include a closing date which must be between seven and fourteen
+          calendar days after the start of the vote. </p>
+
+          <p>In exceptional cases, the closing date
+          could be less than seven calendar days; for example, a critical issue
+          that needs rapid action. A critical issue is hard to define precisely
+          but would include cases where a security fix is needed and the details
+          will soon be made public. At least one other active OTC member besides
+          the proposer needs to agree to the shorter timescale.</p>
+
+          <p>A vote closes on its specified date. In addition, any active OTC
+          member can declare a vote closed once the number of uncast votes could
+          not affect the outcome. Any active OTC member may change their vote up
+          until the vote is closed. No vote already cast can be changed after
+          the vote is closed. Votes may continue to be cast and recorded after a
+          vote is closed up until fourteen days after the start of the vote.
+          These votes will count for the purposes of determining OTC member
+          activity, but will otherwise not affect the outcome of the vote.</p>
+
+          <p>All votes and their outcomes should be recorded and available to
+          all OTC and OMC members.</p>
+
+          <h4><a name="transparency">OTC Transparency</a></h4>
+          <p>
+          The majority of the activity of the OTC will take place in public.
+          Non-public discussions or votes shall only occur for issues such as:
+          <ul>
+            <li>pre-disclosure security problems</li>
+            <li>pre-agreement discussions with third parties that require confidentiality</li>
+            <li>nominees for OTC or committer roles</li>
+            <li>personal conflicts among project personnel</li>
+          </ul>
+          </p>
+
+          <p>Full details (topic, dates, voting members, specific votes cast, vote result) of
+          all public votes shall be made available in a public repository.</p>
+
+          <h3>OpenSSL Software Foundation (OSF)</h3>
+
+          <p>The OpenSSL Software Foundation represents the OpenSSL project in
+          legal and most official formal capacities in relation to external
+          entities and individuals. This includes, but is not limited to,
+          managing contributor license agreements, managing donations,
+          registering and holding trademarks, registering and holding domain
+          names, obtaining external legal advice, and so on.</p>
+
+          <p>Any OMC member may serve as a director of OSF if they wish. To do
+          so they should send a request to any existing OSF director.</p>
+
+          <h3>OpenSSL Software Services (OSS)</h3>
+
+          <p>OpenSSL Software Services represents the OpenSSL project for most
+          commercial and quasi-commercial  contexts, such as providing formal
+          support contracts and brokering consulting contracts for OpenSSL
+          committers.</p>
+
+          <p>Any OMC member may serve as a director of OSS if they wish, subject
+          to certain contractual requirements. To do so they should send a
+          request to any existing OSS director.</p>
+
+
+          <h2><a name="leave">Leave of absence</a></h2>
+
+          <p>An active OMC member, OTC member, or committer may request a leave of absence
+          from the project. A leave of absence from the OMC, OTC or committer shall
+          suspend inactivity determination for the specified role. All access to
+          OMC, OTC or committer resources shall be suspended (disabled) and the OMC
+          or OTC member shall be excluded from voting and the committer shall be excluded
+          from reviewing or approving source changes. On return from a leave of
+          absence, the OMC or OTC member or committer will be deemed to have become active
+          as of the date of return.</p>
+
+          <p>All of the following criteria must be met in order to qualify as a
+          leave of absence:</p>
+          <ul>
+            <li>a) the member must request via email to the OMC a leave of
+                   absence at least one week in advance of the requested
+                   period of leave;</li>
+            <li>b) only one leave of absence is permitted per calendar year;</li>
+            <li>c) the leave of absence must specify the date of return from
+                   the leave of absence; </li>
+            <li>d) the length of the leave of absence shall be a minimum of one calendar
+                   month and shall not exceed three calendar months (one quarter); and </li>
+            <li>e) the leave of absence applies to all the roles within the
+                   project (i.e. OMC, OTC and committer if all three roles apply).</li>
+          </ul>
+
+          <h2><a name="update">Bylaws Update History</a></h2>
+          <p>
+          The following changes have been made since the bylaws were first
+          issued 13-February-2017.
+          </p>
+          <ul>
+            <li>21-November-2019.
+            Added <i>OTC</i>. and other related changes.</li>
+            <li>20-December-2017.
+            Added <i>Leave of absence</i> section.</li>
+          </ul>
 
         </div>
         <footer>
