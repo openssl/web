@@ -1,0 +1,49 @@
+OpenSSL Security Advisory [6 December 2019]
+===========================================
+
+rsaz_512_sqr overflow bug on x86_64 (CVE-2019-1551)
+===================================================
+
+Severity: Low
+
+There is an overflow bug in the x64_64 Montgomery squaring procedure used in
+exponentiation with 512-bit moduli. No EC algorithms are affected. Analysis
+suggests that attacks against 2-prime RSA1024, 3-prime RSA1536, and DSA1024 as a
+result of this defect would be very difficult to perform and are not believed
+likely. Attacks against DH512 are considered just feasible. However, for an
+attack the target would have to re-use the DH512 private key, which is not
+recommended anyway. Also applications directly using the low level API
+BN_mod_exp may be affected if they use BN_FLG_CONSTTIME.
+
+OpenSSL versions 1.1.1 and 1.0.2 are affected by this issue. However due to the
+low severity of this issue we are not creating new releases at this time. The
+1.1.1 mitigation for this issue can be found in commit 419102400. The 1.0.2
+mitigation for this issue can be found in commit f1c5eea8a.
+
+This issue was found by OSS-Fuzz and Guido Vranken and reported to OpenSSL on
+12th September 2019. The fix was developed by Andy Polyakov with additional
+analysis by Bernd Edlinger.
+
+Note
+=====
+
+OpenSSL 1.0.2 is currently only receiving security updates. Support for 1.0.2
+will end on 31st December 2019. Extended support is available for premium
+support customers: https://www.openssl.org/support/contracts.html
+
+OpenSSL 1.1.0 is out of support and no longer receiving updates. It is unknown
+whether issues in this advisory affect it.
+
+Users of these versions should upgrade to OpenSSL 1.1.1.
+
+References
+==========
+
+URL for this Security Advisory:
+https://www.openssl.org/news/secadv/20191206.txt
+
+Note: the online version of the advisory may be updated with additional details
+over time.
+
+For details of OpenSSL severity classifications please see:
+https://www.openssl.org/policies/secpolicy.html
