@@ -36,7 +36,7 @@ whether issues in this advisory affect it.
 
 Users of these versions should upgrade to OpenSSL 1.1.1.
 
-Referenses
+References
 ==========
 
 URL for this Security Advisory:
