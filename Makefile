@@ -17,14 +17,14 @@ RELEASEDIR = /var/www/openssl/source
 ##
 
 ##  Current series
-SERIES=1.1.1 1.1.0 1.0.2
+SERIES=1.1.1 1.0.2
 ##  Older series.  The second type is for source listings
-OLDSERIES=1.0.1 1.0.0 0.9.8 0.9.7 0.9.6
-OLDSERIES2=1.0.1 1.0.0 0.9.x
+OLDSERIES=1.1.0 1.0.1 1.0.0 0.9.8 0.9.7 0.9.6
+OLDSERIES2=1.1.0 1.0.1 1.0.0 0.9.x
 ##  Current series with newer and older manpage layout
 ##  (when the number of old man layout releases drop to none, this goes away)
 NEWMANSERIES=1.1.1
-OLDMANSERIES=1.1.0 1.0.2
+OLDMANSERIES=1.0.2
 
 # All simple generated files.
 SIMPLE = newsflash.inc sitemap.txt \
