@@ -140,6 +140,9 @@ preface += "<p>Show issues fixed only in OpenSSL " + ", ".join(bases)
 if options.base:
     preface += ", or <a href=\"vulnerabilities.html\">all versions</a>"
     preface += "<h2>Fixed in OpenSSL %s</h2>" %(options.base)
+    for statement in dom.getElementsByTagName('statement'):
+        if (statement.getAttribute("base") in options.base):
+            preface += statement.firstChild.data.strip()
 preface += "</p>"
 if len(allyears)>1: # If only vulns in this year no need for the year table of contents
     preface += "<p><a name=\"toc\">Jump to year: </a>" + ", ".join( "<a href=\"#y%s\">%s</a>" %(year,year) for year in allyears)
