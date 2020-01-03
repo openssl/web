@@ -29,7 +29,7 @@ OLDMANSERIES=1.0.2
 # All simple generated files.
 SIMPLE = newsflash.inc sitemap.txt \
 	 community/committers.inc \
-	 community/omc.inc community/omc-alumni.inc \
+	 community/otc.inc community/omc.inc community/omc-alumni.inc \
 	 docs/faq.inc docs/fips.inc \
 	 docs/OpenSSLStrategicArchitecture.html \
 	 docs/OpenSSL300Design.html \
@@ -153,7 +153,7 @@ docs/manpages.html: docs/manpages.html.tt
 ##
 ##  $(SIMPLE) -- SIMPLE GENERATED FILES
 ##
-.PHONY: sitemap community/committers.inc community/omc.inc community/omc-alumni.inc
+.PHONY: sitemap community/committers.inc community/otc.inc community/omc.inc community/omc-alumni.inc
 newsflash.inc: news/newsflash.inc
 	@rm -f $@
 	head -7 $? >$@
@@ -167,6 +167,8 @@ community/committers.inc:
 	./bin/mk-committers <Members >$@
 	@rm -f Members
 
+community/otc.inc:
+	./bin/mk-omc -n -t 'OTC Members' otc otc-inactive > $@
 community/omc.inc:
 	./bin/mk-omc -n -e -l -p -t 'OMC Members' omc omc-inactive > $@
 community/omc-alumni.inc:
