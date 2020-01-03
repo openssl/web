@@ -7336,6 +7336,14 @@ default and not common.</description>
   <advisory url="/news/secadv/20140605.txt"/>
 </issue>
 
+  <statement base="0.9.6">OpenSSL 0.9.6 is out of support and no longer receiving updates.</statement>
+  <statement base="0.9.7">OpenSSL 0.9.7 is out of support and no longer receiving updates.</statement>
+  <statement base="0.9.8">OpenSSL 0.9.8 is out of support since 1st January 2016 and no longer receiving updates.</statement>
+  <statement base="1.0.0">OpenSSL 1.0.0 is out of support since 1st January 2016 and no longer receiving updates.</statement>
+  <statement base="1.0.1">OpenSSL 1.0.1 is out of support since 1st January 2017 and no longer receiving updates.</statement>
+  <statement base="1.0.2">OpenSSL 1.0.2 is out of support since 1st January 2020 and is no longer receiving updates.  Extended support is available from OpenSSL Software Services for premium support customers</statement>
+  <statement base="1.1.0">OpenSSL 1.1.0 is out of support since 12th September 2019 and no longer receiving updates.</statement>
+
 </security>
 
 
