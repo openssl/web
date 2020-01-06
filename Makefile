@@ -17,14 +17,10 @@ RELEASEDIR = /var/www/openssl/source
 ##
 
 ##  Current series
-SERIES=1.1.1 1.0.2
+SERIES=1.1.1
 ##  Older series.  The second type is for source listings
-OLDSERIES=1.1.0 1.0.1 1.0.0 0.9.8 0.9.7 0.9.6
-OLDSERIES2=1.1.0 1.0.1 1.0.0 0.9.x
-##  Current series with newer and older manpage layout
-##  (when the number of old man layout releases drop to none, this goes away)
-NEWMANSERIES=1.1.1
-OLDMANSERIES=1.0.2
+OLDSERIES=1.1.0 1.0.2 1.0.1 1.0.0 0.9.8 0.9.7 0.9.6
+OLDSERIES2=1.1.0 1.0.2 1.0.1 1.0.0 0.9.x
 
 # All simple generated files.
 SIMPLE = newsflash.inc sitemap.txt \
@@ -113,17 +109,6 @@ manpages-$(2):
 		      < docs/sub-index.html.tt > docs/man$(2)/index.html
 endef
 
-# makeoldmanmap creates a .htaccess for the man-pages of a given OpenSSL
-# release.  This is only needed for OpenSSL releases where the subdirectories
-# of doc/ are apps/, crypto/ and ssl/.  OpenSSL 1.1.1 and later have a
-# different structure and don't need this: man1/, man3/, man5/ and man7/.
-#
-# $(1) = release version
-define makeoldmanmap
-manmap-$(1):
-	./bin/mk-manmap docs/man$(1) > docs/man$(1)/.htaccess
-endef
-
 # Now that we have the generating macros in place, let's use them!
 #
 # Start off with creating the 'manpages-master' target, taking the
@@ -134,13 +119,8 @@ $(eval $(call makemanpages,openssl,master))
 # source from $(CHECKOUTS)/openssl-x.y.z-stable/doc
 $(foreach S,$(SERIES),$(eval $(call makemanpages,openssl-$(S)-stable,$(S))))
 
-# Finally, create 'manmap-x.y.z' for all releases with the old doc/
-# structure.
-$(foreach S,$(OLDMANSERIES),$(eval $(call makeoldmanmap,$(S))))
-
 manmaster: manpages-master
-manpages: $(foreach S,$(NEWMANSERIES),manpages-$(S)) \
-	  $(foreach S,$(OLDMANSERIES),manpages-$(S) manmap-$(S))
+manpages: $(foreach S,$(SERIES),manpages-$(S))
 
 mancross:
 	./bin/mk-mancross master $(SERIES)
