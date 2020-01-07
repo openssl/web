@@ -13,7 +13,7 @@
 	  <h2>Release Strategy</h2>
 	  <h5>
 	    First issued 23rd December 2014<br/>
-	    Last modified 25th February 2019
+	    Last modified 7th January 2020
 	  </h5>
 	</header>
 
@@ -45,7 +45,7 @@
 	  </p>
 
 	  <p>
-	    The current 1.1.1 and 1.0.2 versioning scheme remains unchanged:
+	    The current 1.1.1 versioning scheme remains unchanged:
 
 	    <blockquote><i>
 	      As of release 1.0.0 the OpenSSL versioning scheme was improved
@@ -72,11 +72,10 @@
 	  <ul>
 	    <li>The next version of OpenSSL will be 3.0.0.</li>
 	    <li>Version 1.1.1 will be supported until 2023-09-11 (LTS).</li>
-	    <li>Version 1.1.0 will be supported until 2019-09-11.</li>
-	    <li>Version 1.0.2 will be supported until 2019-12-31 (LTS).</li>
-	    <li>Version 1.0.1 is no longer supported.</li>
-	    <li>Version 1.0.0 is no longer supported.</li>
-	    <li>Version 0.9.8 is no longer supported.</li>
+	    <li>Version 1.0.2 is no longer supported. Extended support
+	    for 1.0.2 to gain access to security fixes for that version is
+	    <a href="/support/contracts.html">available</a>.</li>
+	    <li>Versions 1.1.0, 1.0.1, 1.0.0 and 0.9.8 are no longer supported.</li>
 	  </ul>
 
 	  <p>We may designate a release as a Long Term Support (LTS)
@@ -108,6 +107,21 @@
 	    <li>Bug fixes only</li>
 	  </ul>
 
+	  <p>The following alpha and beta releases for OpenSSL 3.0 are currently
+	  scheduled. Note that these dates are subject to change and alpha or beta
+	  releases may be inserted or removed as required:</p>
+	  <ul>
+	    <li>alpha1, 2020-03-31: Basic functionality plus basic FIPS module</li>
+	    <li>alpha2, 2020-04-21: Complete external provider support (serialization,
+	    support for new algs, support for providers which only include
+	    operations in a class)</li>
+	    <li>alpha3, 2020-05-21: Aiming to test the API completeness before beta1
+	    freezes it)</li>
+	    <li>beta1, 2020-06-02: Code complete (API stable, feature freeze)</li>
+	    <li>betaN: Other beta releases TBD</li>
+	    <li>Final: 2020 early Q4</li>
+	  </ul>
+      
 	  <p>
 	    For any major or minor release, we have defined the following
 	    release criteria:
