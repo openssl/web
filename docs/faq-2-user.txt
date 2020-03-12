@@ -213,3 +213,18 @@
     this increases the size of the default ClientHello message to more than
     255 bytes in length. Some software cannot handle this and hangs.
 
+*   Some secure servers emit an infinite loop of HTTP headers with an OpenSSL
+    1.1.0 client, is this a bug?
+
+    OpenSSL 1.1.0 introduced support for several new TLS extensions, including
+    encrypt-then-mac and extended-master-secret, both of which provide
+    significant security improvements.  Unfortunately, some deployed TLS
+    servers are severely broken and do not implement extensibility in a
+    standards-compliant manner; these servers may exhibit strange behavior
+    such as repeating the HTTP headers in a loop after receiving a ClientHello
+    that includes such TLS extensions unknown to them.  While these new TLS
+    extensions provide significant security benefits to clients and are
+    accordingly enabled by default in modern TLS clients, if bringing the
+    server into compliance is not possible, the extension(s) in question can
+    be disabled on a per-connection basis when talking to the buggy server, by
+    using SSL_set_options(3).
