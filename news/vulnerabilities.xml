@@ -37,7 +37,7 @@
     <affects base="1.0.2" version="1.0.2r"/>
     <affects base="1.0.2" version="1.0.2s"/>
     <affects base="1.0.2" version="1.0.2t"/>
-    <fixed base="1.1.1" version="1.1.1e-dev" date="20191206">
+    <fixed base="1.1.1" version="1.1.1e" date="20191206">
       <git hash="419102400a2811582a7a3d4a4e317d72e5ce0a8f"/>
     </fixed>
     <fixed base="1.0.2" version="1.0.2u" date="20191220">

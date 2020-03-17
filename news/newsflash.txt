@@ -4,6 +4,7 @@
 # Format is two fields, colon-separated; the first line is the column
 # headings.  URL paths must all be absolute.
 Date: Item
+17-Mar-2020: OpenSSL 1.1.1e is now available, including bug and security fixes
 17-Feb-2020: New Blog post: <a href="https://www.openssl.org/blog/blog/2020/02/17/QUIC-and-OpenSSL/">QUIC and OpenSSL</a>
 20-Dec-2019: OpenSSL 1.0.2u is now available, including security fixes
 06-Dec-2019: <a href="/news/secadv/20191206.txt">Security Advisory</a>: one low severity fix
