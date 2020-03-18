@@ -48,7 +48,7 @@
 
 *   Where can I get a compiled version of OpenSSL?
 
-    You can finder pointers to binary distributions in
+    You can find pointers to binary distributions in
     https://www.openssl.org/community/binaries.html.
 
     Some applications that use OpenSSL are distributed in binary form.
