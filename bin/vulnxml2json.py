@@ -146,7 +146,7 @@ for issue in cvej:
        continue
 
     f = codecs.open(options.outputdir+"/"+fn, 'w', 'utf-8')
-    f.write(json.dumps(issue, sort_keys=True, indent=4))
+    f.write(json.dumps(issue, sort_keys=True, indent=4, separators=(',',': ')))
     print "wrote %s" %(options.outputdir+"/"+fn)
     f.close()
 
