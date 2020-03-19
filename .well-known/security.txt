@@ -1,5 +1,27 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Canonical: https://www.openssl.org/.well-known/security.txt
 Contact: openssl-security@openssl.org
+Contact: https://www.openssl.org/community/#securityreports
 Encryption: https://www.openssl.org/news/openssl-security.asc
 Acknowledgement: https://www.openssl.org/news/vulnerabilities.html
 Policy: https://www.openssl.org/policies/secpolicy.html
-Signature: https://www.openssl.org/.well-known/security.txt.asc
+
+-----BEGIN PGP SIGNATURE-----
+
+iQJMBAEBCAA2FiEE78CkZ9YTy4PH7W0w2JTizos9efUFAl5zf7QYHG9wZW5zc2wt
+b21jQG9wZW5zc2wub3JnAAoJENiU4s6LPXn1BP8P/1nvn2szpgh5acMdccb6BJlP
+LKSmtkQpwp7SNF7qMwTJ1aB4cjO29n1NE4JGwNLgv4k4jCPsip7CjAbtm4dJolSF
+y3y0SaMShkByeeVqB50Sp7EGgPbt91mb094viQiDkqxDnKw9pljG4jqQO/Aj4PQF
+/u6b7sDmArLVZMM/62gGxqopovtiRxXxefg7Lp6Qb60JmULdkEJqpzm3lCoGZMuM
+m3riCZRhUWVwIzdJtcmtD06QH6KNKNoZGhD2Kxp2zLm2rmn2FtCR8pfa106Nz3SI
+gsvVrFymM6NYROMl0T4B71pTXrQJBmAfkp+JXbSIX/ta+bRaNx4Z1ChIEG0llRsf
+Bn8YWQ6ub8VAApoi4bbvlIv2BUp+xrGaSoeqQ8wJSJ5yVNcTXCxjN0OhgZFIH0QE
+cHn1hqhrCIyhX3NfYgZeeXSfYxUu7AqGufs25YZ6gtNu76nH6/HbYMFVDpCEp94n
+dyU2JTIMihalylm54tUulQ/+TX2uTVD42OmcBvBfJ60e3qHNk4NmgiM7g90Gb9QF
+dUwGf2QkUi+7xd2NaNGNhkrNvE1eKgPiJxalvWFLhGPOw2FBLxOK3LWpw+IhTacM
+CsQnWt+LX9KvAGhd+4+3xThVbJOHBasa8R4o3sHWwTa5Jdi1oO+BaycZdvn8JBL/
+BN+h2A7B4GNYIGaDnYj2
+=w4IR
+-----END PGP SIGNATURE-----
