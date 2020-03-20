@@ -39,7 +39,11 @@ if not options.input:
    exit();
 
 if options.schema:
-   response = urllib.urlopen(options.schema)
+   try:
+      response = urllib.urlopen(options.schema)
+   except:
+      print "Problem opening schema: try downloading it manually then specify it using --schema option: %s" % options.schema
+      exit()
    schema_doc = json.loads(response.read())
 
 cvej = list()
