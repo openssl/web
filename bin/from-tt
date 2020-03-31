@@ -4,24 +4,31 @@ HERE=$(cd $(dirname $0); pwd)
 THIS=$(basename $0)
 
 dir=
+input=
+output=
 
-shortopts='d:h'
-longopts='dir:,help'
+shortopts='d:i:o:h'
+longopts='dir:,input:,output:,help'
 usage="\
 Usage 1: $THIS [ options ] [ key=value ... ] < file.tt > file
 Usage 2: $THIS [ options ] [ key=value ... ] file.tt ...
 
 Options:
     -d, --dir=DIR               Directory of the output file
+    -i, --input=FILE            Input file (usage 1 only)
+    -o, --output=FILE           Output file (usage 1 only)
     -h, --help                  Output this usage and do nothing else
 
-In usage 1, the template is read from standard input and the processing
-result is output to standard output.  In this usage, the --dir option is
-mandatory.
+In usage 1, the template is read from standard input or the file given
+with --input and the processing result is output to standard output or
+the file given with --output.  When the output goes to stdout, the --dir
+option is mandatory.
 
 In usage 2, the templates are read from the files given as argument, and
 the processing result for each of them is written to a corresponding file
 without the '.tt' suffix.  All given file names must have the '.tt' suffix.
+In this usage, --input, --output, standard input and standard output are
+ignored.
 
 In both usages, one can also set template variables with with the form
 key=value.  They must come before any file name."
@@ -39,6 +46,16 @@ while true; do
     case "$1" in
 	'-d' | '--dir' )
 	    dir="$2"
+	    shift 2
+	    continue
+	    ;;
+	'-i' | '--input' )
+	    input="$2"
+	    shift 2
+	    continue
+	    ;;
+	'-o' | '--output' )
+	    output="$2"
 	    shift 2
 	    continue
 	    ;;
@@ -80,8 +97,10 @@ if [ $# -eq 0 ]; then
     fi
     (
 	cd $dir
-	( cat $HERE/../inc/common.tt; cat ) | \
-	    eval "$tpagecmd --define 'dir=${dir:-filedir}'"
+	( cat $HERE/../inc/common.tt;
+          if [ -n "$input" ]; then cat "$input"; else cat; fi ) \
+        | eval "$tpagecmd --define 'dir=${dir:-filedir}'" \
+        | ( if [ -n "$output" ]; then cat > "$output"; else cat; fi )
     )
 else
     errfiles=

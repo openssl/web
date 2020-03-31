@@ -161,9 +161,10 @@ docs/fips.inc: $(wildcard docs/fips/*) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist docs/fips fips/ '*' >$@
 
-news/changelog.inc: news/changelog.txt bin/mk-changelog
+news/changelog.inc: news/changelog.md bin/mk-changelog
 	@rm -f $@
-	./bin/mk-changelog <news/changelog.txt >$@
+	(echo 'Table of contents'; sed -e '1,/^OpenSSL Releases$$/d' < $<) \
+		| pandoc -t html5 -f commonmark | ./bin/post-process-html5 >$@
 news/changelog.html: news/changelog.html.tt news/changelog.inc
 	@rm -f $@
 	./bin/from-tt 'releases=$(SERIES)' $<
@@ -175,41 +176,42 @@ news/changelog.html: $(foreach S,$(SERIES),news/cl$(subst .,,$(S)).txt)
 # mknews_changelogtxt creates a target and ruleset for any changelog text
 # file depending on the CHANGES file from the target release.
 #
-# $(1) = output file, $(2) = source directory in CHECKOUTS
+# $(1) = output file, $(2) = CHANGES files, relative to CHECKOUTS
 define mknews_changelogtxt
-news/$(1): $(CHECKOUTS)/$(2)/CHANGES
+news/$(1): $(CHECKOUTS)/$(2)
 	@rm -f $$@
 	cp $$? $$@
 endef
 
 # Create the target 'news/changelog.txt', taking the source from
-# $(CHECKOUTS)/openssl/CHANGES
-$(eval $(call mknews_changelogtxt,changelog.txt,openssl))
+# $(CHECKOUTS)/openssl/CHANGES.md
+$(eval $(call mknews_changelogtxt,changelog.md,openssl/CHANGES.md))
 
 # Create the targets 'news/clxyz.txt' for all current releases, taking the
 # source from $(CHECKOUTS)/openssl-x.y.z-stable/CHANGES
 $(foreach S,$(SERIES),\
-$(eval $(call mknews_changelogtxt,cl$(subst .,,$(S)).txt,openssl-$(S)-stable)))
+$(eval $(call mknews_changelogtxt,cl$(subst .,,$(S)).txt,openssl-$(S)-stable/CHANGES)))
 
 # mknews_noteshtml creates two targets and rulesets for creating notes from
 # the NEWS file for each release.  One target is to create a wrapping HTML
 # file from a template, the other is to create the inclusion file with the
 # actual text.
 #
-# $(1) = release version
+# $(1) = release version, $(2) = NEWS file, relative to CHECKOUTS
 define mknews_noteshtml
 news/openssl-$(1)-notes.html: news/openssl-notes.html.tt
 	@rm -f $$@
-	./bin/from-tt -d news release='$(1)' < $$< > $$@
-news/openssl-$(1)-notes.inc: $(CHECKOUTS)/openssl-$(1)-stable/NEWS bin/mk-notes
+	./bin/from-tt -d news -i $$< -o $$@ release='$(1)'
+news/openssl-$(1)-notes.inc: $(CHECKOUTS)/$(2) bin/mk-notes
 	@rm -f $$@
-	./bin/mk-notes $(1) < $(CHECKOUTS)/openssl-$(1)-stable/NEWS > $$@
+	./bin/mk-notes $(1) < $(CHECKOUTS)/$(2) > $$@
 endef
 
 # Create the targets 'news/openssl-x.y.z-notes.html' and
 # 'news/openssl-x.y.z-notes.inc' for each release number x.y.z, taking
-# the source from $(CHECKOUTS)/openssl-$(1)-stable/NEWS
-$(foreach S,$(SERIES),$(eval $(call mknews_noteshtml,$(S))))
+# the source from the news file given as second argument.
+$(foreach S,$(SERIES),\
+$(eval $(call mknews_noteshtml,$(S),openssl-$(S)-stable/NEWS)))
 
 news/newsflash.inc: news/newsflash.txt
 	sed <$? >$@ \

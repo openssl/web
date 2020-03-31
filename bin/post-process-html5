@@ -1,0 +1,18 @@
+#! /usr/bin/perl
+
+use strict;
+
+while ( <STDIN> ) {
+    s/<h(\d)/"<h".($1 + 1)/eg;
+    s/<\/h(\d)/"<\/h".($1 + 1)/eg;
+
+    # This is for OpenSSL's CHANGES.md
+    my $gfmid = sub {
+        my $x = lc $_[0];
+        $x =~ s/\s+/-/g;
+        $x =~ s/\.//g;
+        $x
+    };
+    s/(<h3)(>)(OpenSSL .*?)(<\/h3>)/$1.' id="'.$gfmid->($3).'"'.$2.$3.$4/eg;
+    print;
+}
