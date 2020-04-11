@@ -9,7 +9,6 @@ chdir $SRCDIR || die "Can't chdir $SRCDIR, $!";
 my @tarballs =
        sort grep /openssl-\d+\.\d+\.\d+[a-z]*\.tar\.gz$/,
                glob("openssl-*.tar.gz");
-die "No tgz files found in $SRCDIR?\n" if $#tarballs < 1;
 
 my %series = ();
 foreach(@tarballs) {
