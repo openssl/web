@@ -1,0 +1,48 @@
+OpenSSL Security Advisory [21 April 2020]
+=========================================
+
+Segmentation fault in SSL_check_chain (CVE-2020-1967)
+=====================================================
+
+Severity: High
+
+Server or client applications that call the SSL_check_chain() function during or
+after a TLS 1.3 handshake may crash due to a NULL pointer dereference as a
+result of incorrect handling of the "signature_algorithms_cert" TLS extension.
+The crash occurs if an invalid or unrecognised signature algorithm is received
+from the peer. This could be exploited by a malicious peer in a Denial of
+Service attack.
+
+OpenSSL version 1.1.1d, 1.1.1e, and 1.1.1f are affected by this issue.  This
+issue did not affect OpenSSL versions prior to 1.1.1d.
+
+Affected OpenSSL 1.1.1 users should upgrade to 1.1.1g
+
+This issue was found by Bernd Edlinger and reported to OpenSSL on 7th April
+2020. It was found using the new static analysis pass being implemented in GCC,
+-fanalyzer. Additional analysis was performed by Matt Caswell and Benjamin
+Kaduk.
+
+Note
+=====
+
+This issue did not affect OpenSSL 1.0.2 however these versions are out of
+support and no longer receiving public updates. Extended support is available
+for premium support customers: https://www.openssl.org/support/contracts.html
+
+This issue did not affect OpenSSL 1.1.0 however these versions are out of
+support and no longer receiving updates.
+
+Users of these versions should upgrade to OpenSSL 1.1.1.
+
+References
+==========
+
+URL for this Security Advisory:
+https://www.openssl.org/news/secadv/20200421.txt
+
+Note: the online version of the advisory may be updated with additional details
+over time.
+
+For details of OpenSSL severity classifications please see:
+https://www.openssl.org/policies/secpolicy.html

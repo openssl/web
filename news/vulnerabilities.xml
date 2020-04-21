@@ -7,7 +7,30 @@
 
 <!-- The updated attribute should be the same as the first public issue,
      unless an old entry was updated. -->
-<security updated="20191206">
+<security updated="20200421">
+  <issue public="20200421">
+    <impact severity="High"/>
+    <cve name="2020-1967"/>
+    <affects base="1.1.1" version="1.1.1d"/>
+    <affects base="1.1.1" version="1.1.1e"/>
+    <affects base="1.1.1" version="1.1.1f"/>
+    <fixed base="1.1.1" version="1.1.1g" date="20200421">
+      <git hash="eb563247aef3e83dda7679c43f9649270462e5b1"/>
+    </fixed>
+    <problemtype>NULL pointer dereference</problemtype>
+    <title>Segmentation fault in SSL_check_chain</title>
+    <description>
+      Server or client applications that call the SSL_check_chain() function during or
+      after a TLS 1.3 handshake may crash due to a NULL pointer dereference as a
+      result of incorrect handling of the "signature_algorithms_cert" TLS extension.
+      The crash occurs if an invalid or unrecognised signature algorithm is received
+      from the peer. This could be exploited by a malicious peer in a Denial of
+      Service attack. OpenSSL version 1.1.1d, 1.1.1e, and 1.1.1f are affected by this issue.  This
+      issue did not affect OpenSSL versions prior to 1.1.1d.
+    </description>
+    <advisory url="/news/secadv/20200421.txt"/>
+    <reported source="Bernd Edlinger"/>
+  </issue>
   <issue public="20191206">
     <impact severity="Low"/>
     <cve name="2019-1551"/>
