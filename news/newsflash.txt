@@ -4,6 +4,7 @@
 # Format is two fields, colon-separated; the first line is the column
 # headings.  URL paths must all be absolute.
 Date: Item
+21-Apr-2020: <a href="/news/secadv/20200421.txt">Security Advisory</a>: one high severity fix in SSL_check_chain()
 21-Apr-2020: OpenSSL 1.1.1g is now available, including a security fix
 31-Mar-2020: OpenSSL 1.1.1f is now available, including bug fixes
 17-Mar-2020: OpenSSL 1.1.1e is now available, including bug and security fixes
