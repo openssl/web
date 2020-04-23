@@ -21,6 +21,9 @@ SERIES=1.1.1
 ##  Older series.  The second type is for source listings
 OLDSERIES=1.1.0 1.0.2 1.0.1 1.0.0 0.9.8 0.9.7 0.9.6
 OLDSERIES2=1.1.0 1.0.2 1.0.1 1.0.0 0.9.x
+##  Series for manual layouts
+MANSERIES1=1.1.1
+MANSERIES3=3.0
 
 # All simple generated files.
 SIMPLE = newsflash.inc sitemap.txt \
@@ -79,13 +82,19 @@ rebuild: all
 ##
 ##  A lot of the work is made with generated rules.
 
-# makemanpages creates rules for targets like manpages-1.1.1, to
-# build the set of man-pages and indexes of man-pages for the given
-# OpenSSL release (such as 1.1.1)
+# makemanpages1 and makemanpages3 creates rules for targets like man-pages-1.1.1,
+# to build the set of man-pages.  makemanpages1 is used for pre-3.0 OpenSSL,
+# while makemanpages3 is used for OpenSSL 3.0 and on.
+# makemanapropos creates rules for targets like man-apropos-1.1.1, to build
+# 'apropos' like indexes for all the manpages.
+# makemanindexes creates rules for targets like man-index-1.1.1, to build the
+# main HTML index for a set of man-pages.
 #
 # $(1) = input directory in CHECKOUTS, $(2) = release version
-define makemanpages
-manpages-$(2):
+
+# This variant is for pre-3.0 documentation
+define makemanpages1
+man-pages-$(2):
 	@rm -rf docs/man$(2)
 	@mkdir -p docs/man$(2) \
 		  docs/man$(2)/man1 \
@@ -93,34 +102,67 @@ manpages-$(2):
 		  docs/man$(2)/man5 \
 		  docs/man$(2)/man7
 	./bin/mk-manpages $(CHECKOUTS)/$(1)/doc $(2) docs/man$(2)
+endef
+# This variant is for 3.0 documentation
+define makemanpages3
+man-pages-$(2):
+	@rm -rf tmp
+	@mkdir tmp
+	(cd tmp; $(CHECKOUTS)/$(1)/Configure cc && $(MAKE) build_html_docs)
+	@rm -rf docs/man$(2)
+	@mkdir -p docs/man$(2) \
+		  docs/man$(2)/man1 \
+		  docs/man$(2)/man3 \
+		  docs/man$(2)/man5 \
+		  docs/man$(2)/man7
+	(cd tmp/doc/html; find -type f) | while read F; do \
+		./bin/strip-man-html < tmp/doc/html/$$$$F > docs/man$(2)/$$$$F; \
+	done
+endef
+define makemanapropos
+man-apropos-$(2): man-pages-$(2)
 	./bin/mk-apropos docs/man$(2)/man1 > docs/man$(2)/man1/index.inc
 	./bin/mk-apropos docs/man$(2)/man3 > docs/man$(2)/man3/index.inc
 	./bin/mk-apropos docs/man$(2)/man5 > docs/man$(2)/man5/index.inc
 	./bin/mk-apropos docs/man$(2)/man7 > docs/man$(2)/man7/index.inc
+endef
+define makemanindexes
+man-index-$(2):
 	./bin/from-tt -d docs/man$(2)/man1 releases='$(SERIES)' release='$(2)' \
 		      < docs/sub-man1-index.html.tt > docs/man$(2)/man1/index.html
-	./bin/from-tt -d docs/man$(2)/man1 releases='$(SERIES)' release='$(2)' \
+	./bin/from-tt -d docs/man$(2)/man3 releases='$(SERIES)' release='$(2)' \
 		      < docs/sub-man3-index.html.tt > docs/man$(2)/man3/index.html
-	./bin/from-tt -d docs/man$(2)/man1 releases='$(SERIES)' release='$(2)' \
+	./bin/from-tt -d docs/man$(2)/man5 releases='$(SERIES)' release='$(2)' \
 		      < docs/sub-man5-index.html.tt > docs/man$(2)/man5/index.html
-	./bin/from-tt -d docs/man$(2)/man1 releases='$(SERIES)' release='$(2)' \
+	./bin/from-tt -d docs/man$(2)/man7 releases='$(SERIES)' release='$(2)' \
 		      < docs/sub-man7-index.html.tt > docs/man$(2)/man7/index.html
 	./bin/from-tt -d docs/man$(2) releases='$(SERIES)' release='$(2)' \
 		      < docs/sub-index.html.tt > docs/man$(2)/index.html
+endef
+define makemanuals1
+$(eval $(call makemanpages1,$(1),$(2)))
+$(eval $(call makemanapropos,$(1),$(2)))
+$(eval $(call makemanindexes,$(1),$(2)))
+endef
+define makemanuals3
+$(eval $(call makemanpages3,$(1),$(2)))
+$(eval $(call makemanapropos,$(1),$(2)))
+$(eval $(call makemanindexes,$(1),$(2)))
 endef
 
 # Now that we have the generating macros in place, let's use them!
 #
 # Start off with creating the 'manpages-master' target, taking the
 # source from $(CHECKOUTS)/openssl/doc
-$(eval $(call makemanpages,openssl,master))
+$(eval $(call makemanuals3,openssl,master))
+#$(foreach S,$(MANSERIES3),$(eval $(call makemanuals3,openssl-$(S),$(S))))
 
 # Next, create 'manpages-x.y.z' for all current releases, taking the
 # source from $(CHECKOUTS)/openssl-x.y.z-stable/doc
-$(foreach S,$(SERIES),$(eval $(call makemanpages,openssl-$(S)-stable,$(S))))
+$(foreach S,$(MANSERIES1),$(eval $(call makemanuals1,openssl-$(S)-stable,$(S))))
 
-manmaster: manpages-master
-manpages: $(foreach S,$(SERIES),manpages-$(S))
+manmaster: man-apropos-master man-index-master
+manpages: $(foreach S,$(MANSERIES1),man-apropos-$(S) man-index-$(S))
 
 mancross:
 	./bin/mk-mancross master $(SERIES)
