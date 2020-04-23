@@ -4,6 +4,7 @@
 # Format is two fields, colon-separated; the first line is the column
 # headings.  URL paths must all be absolute.
 Date: Item
+23-Apr-2020: New Blog post: <a href="https://www.openssl.org/blog/blog/2020/04/23/OpenSSL3.0Alpha1/">OpenSSL 3.0 Alpha1 Release</a>
 23-Apr-2020: Alpha 1 of OpenSSL 3.0 is now available: please download and test it
 21-Apr-2020: <a href="/news/secadv/20200421.txt">Security Advisory</a>: one high severity fix in SSL_check_chain()
 21-Apr-2020: OpenSSL 1.1.1g is now available, including a security fix
