@@ -182,7 +182,7 @@ sub getdata {
         while (<$fh>) {
             chop;
             s/\n/ /gm;
-            if (/^=for comment openssl_manual_section:\s*(\d+)/) {
+            if (/^=for (?:comment|openssl) openssl_manual_section:\s*(\d+)/) {
                 $data{sectnum} = "$1";
             }
             elsif (/^=head1\s/) {

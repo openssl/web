@@ -1,0 +1,34 @@
+#! /bin/bash -e
+
+HERE=$(dirname $0)
+checkoutdir=$1
+series=$2
+destdir=$3
+
+rm -rf tmp
+mkdir tmp
+
+(cd tmp; $checkoutdir/Configure cc && make build_html_docs)
+
+srcdir=tmp/doc/html
+(cd $srcdir; find -type f) | while read F; do
+    Dn=$(dirname $F)
+    Fn=$(basename $F .html)
+    G=$Dn/$Fn.inc
+    $HERE/strip-man-html < $srcdir/$F > $destdir/$G
+
+    section=$(basename $Dn | sed -e 's|^man||')
+    description="$($HERE/all-html-man-names < $destdir/$G | sed 's|^.* - ||')"
+    names="$($HERE/all-html-man-names < $destdir/$G | sed -e 's| - .*||' -e 's|, *| |g' -e 's|/|-|g')"
+    for name in $names; do
+        G=$Dn/$name.html
+	cat $HERE/../inc/manpage-template.html5 \
+            | sed -E \
+                  -e "s|\\\$release\\\$|$series|g" \
+                  -e "s|\\\$sectnum\\\$|$section|g" \
+                  -e "s|\\\$description\\\$|$description|g" \
+                  -e "s|\\\$name\\\$|$name|g" \
+                  -e "s|\\\$origname\\\$|$Fn|g" \
+                  > $destdir/$G
+    done
+done

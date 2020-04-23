@@ -1,0 +1,16 @@
+#! /usr/bin/env perl
+
+
+local $/;                       # Slurp the whole file
+my $contents = <STDIN>;
+
+$contents =~ m@^<h3 id="NAME">NAME</h3>@m;
+$contents = $';       # Everything before and including NAME is removed
+$contents =~ m@^<h3@m;
+$contents = $`; # Everything including and efter the next h3 is removed
+$contents =~ s@</?p>@@g;        # All paragraph tags are removed
+$contents =~ s@^\s+@@s;         # All whitespace at the beginning is removed
+$contents =~ s@\s+$@@s;         # All whitespace at the end is removed
+$contents =~ s@\s+@ @gs;        # All whitespace blocks are collapsed to a space
+
+print $contents;
