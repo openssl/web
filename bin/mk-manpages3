@@ -19,7 +19,7 @@ srcdir=tmp/doc/html
 
     section=$(basename $Dn | sed -e 's|^man||')
     description="$($HERE/all-html-man-names < $destdir/$G | sed 's|^.* - ||')"
-    names="$($HERE/all-html-man-names < $destdir/$G | sed -e 's| - .*||' -e 's|, *| |g')"
+    names="$($HERE/all-html-man-names < $destdir/$G | sed -e 's| - .*||' -e 's|, *| |g' -e 's|/|-|g')"
     for name in $names; do
         G=$Dn/$name.html
 	cat $HERE/../inc/manpage-template.html5 \
