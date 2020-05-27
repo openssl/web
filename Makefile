@@ -27,8 +27,6 @@ MANSERIES3=3.0
 
 # All simple generated files.
 SIMPLE = newsflash.inc sitemap.txt \
-	 community/committers.inc \
-	 community/otc.inc community/omc.inc community/omc-alumni.inc \
 	 docs/faq.inc docs/fips.inc \
 	 docs/OpenSSLStrategicArchitecture.html \
 	 docs/OpenSSL300Design.html \
@@ -106,18 +104,13 @@ endef
 # This variant is for 3.0 documentation
 define makemanpages3
 man-pages-$(2):
-	@rm -rf tmp
-	@mkdir tmp
-	(cd tmp; $(CHECKOUTS)/$(1)/Configure cc && $(MAKE) build_html_docs)
 	@rm -rf docs/man$(2)
 	@mkdir -p docs/man$(2) \
 		  docs/man$(2)/man1 \
 		  docs/man$(2)/man3 \
 		  docs/man$(2)/man5 \
 		  docs/man$(2)/man7
-	(cd tmp/doc/html; find -type f) | while read F; do \
-		./bin/strip-man-html < tmp/doc/html/$$$$F > docs/man$(2)/$$$$F; \
-	done
+	./bin/mk-manpages3 $(CHECKOUTS)/$(1) $(2) docs/man$(2)
 endef
 define makemanapropos
 man-apropos-$(2): man-pages-$(2)

@@ -98,9 +98,9 @@ if [ $# -eq 0 ]; then
     (
 	cd $dir
 	( cat $HERE/../inc/common.tt;
-          if [ -n "$input" ]; then cat "$input"; else cat; fi ) \
-        | eval "$tpagecmd --define 'dir=${dir:-filedir}'" \
-        | ( if [ -n "$output" ]; then cat > "$output"; else cat; fi )
+          if [ -n "$input" ]; then cat "$HERE/../$input"; else cat; fi ) \
+        | eval "$tpagecmd --define 'dir=$HERE/../${dir:-filedir}'" \
+        | ( if [ -n "$output" ]; then cat > "$HERE/../$output"; else cat; fi )
     )
 else
     errfiles=
