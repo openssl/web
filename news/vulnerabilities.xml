@@ -7,7 +7,52 @@
 
 <!-- The updated attribute should be the same as the first public issue,
      unless an old entry was updated. -->
-<security updated="20200421">
+<security updated="20200909">
+  <issue public="20200909">
+    <impact severity="Low"/>
+    <cve name="2020-1968"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <affects base="1.0.2" version="1.0.2i"/>
+    <affects base="1.0.2" version="1.0.2j"/>
+    <affects base="1.0.2" version="1.0.2k"/>
+    <affects base="1.0.2" version="1.0.2l"/>
+    <affects base="1.0.2" version="1.0.2m"/>
+    <affects base="1.0.2" version="1.0.2n"/>
+    <affects base="1.0.2" version="1.0.2o"/>
+    <affects base="1.0.2" version="1.0.2p"/>
+    <affects base="1.0.2" version="1.0.2q"/>
+    <affects base="1.0.2" version="1.0.2r"/>
+    <affects base="1.0.2" version="1.0.2s"/>
+    <affects base="1.0.2" version="1.0.2t"/>
+    <affects base="1.0.2" version="1.0.2u"/>
+    <affects base="1.0.2" version="1.0.2v"/>    
+    <fixed base="1.0.2" version="1.0.2w" date="20200909"></fixed>
+    <problemtype>Protocol flaw</problemtype>
+    <title>Raccoon attack</title>
+    <description>
+The Raccoon attack exploits a flaw in the TLS specification which can lead to
+an attacker being able to compute the pre-master secret in connections which
+have used a Diffie-Hellman (DH) based ciphersuite. In such a case this would
+result in the attacker being able to eavesdrop on all encrypted communications
+sent over that TLS connection. The attack can only be exploited if an
+implementation re-uses a DH secret across multiple TLS connections. Note that
+this issue only impacts DH ciphersuites and not ECDH ciphersuites.
+
+This issue affects OpenSSL 1.0.2 which is out of support and no longer
+receiving public updates.  OpenSSL 1.1.1 is not vulnerable to this
+issue.
+    </description>
+    <advisory url="/news/secadv/20200909.txt"/>
+    <reported source="Robert Merget, Marcus Brinkmann, Nimrod Aviram, and Juraj Somorovsky"/>
+  </issue>
   <issue public="20200421">
     <impact severity="High"/>
     <cve name="2020-1967"/>
