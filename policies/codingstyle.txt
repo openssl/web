@@ -289,12 +289,69 @@ options.
 
 In source files, separate functions with one blank line.
 
+                Chapter 6.1: Function Arguments
+
+Most API functions in OpenSSL revolve around a specific type (e.g. SSL_CTX,
+EVP_PKEY, X509 etc). When adding new API functions relevant to a given type, the
+following argument ordering should be used:
+
+    rettype TYPE_get_something(TYPE *,[args])
+    rettype TYPE_do_something(TYPE *,[args])
+    TYPE *TYPE_new([args])
+
+Where present the TYPE argument should always be first. In constructors or
+object factory type functions (such as a "fetch" function), the key argument
+that identifies the thing be constructed should be placed first (if such an
+argument exists). For example in a "fetch" function the name of the algorithm
+being fetched would be first.
+
+The remaining argument list should be put into order of importance. Deciding the
+relative importance of arguments is necessarily somewhat subjective, but the
+following guidelines should be considered:
+
+1) Any "context" arguments should be first. If multiple contexts are necessary
+   then they should be in order of most general to most specific. In some cases
+   (typically with an OPENSSL_CTX), a context may be NULL to indicate a default
+   context should be used. This does not lessen its importance. Since such a
+   context is always used, even though a default value may be applied, it does
+   not make it an "optional" argument.
+2) Required arguments should be placed after the context.
+3) Optional arguments (i.e. those that are only be used in certain circumstances
+   and therefore may be "NULL" or empty) are placed after required arguments.
+4) Output parameters are placed after optional arguments.
+5) Callbacks are placed after output parameters.
+
+Consistency with widely established practices may override these guidelines in
+some cases. For example in a "copy" type function, such as EVP_MD_CTX_copy, it
+is common practice to place the "destination" (an output parameter) first,
+followed by the "source" (a required input parameter).
+
 In function prototypes, include parameter names with their data types.
 Although this is not required by the C language, it is preferred in OpenSSL
 because it is a simple way to add valuable information for the reader.
 The name in the prototype declaration should match the name in the function
 definition.
 
+                Chapter 6.2: Extending existing functions
+
+From time to time it is necessary to extend an existing function. Typically this
+will mean adding additional arguments, but it may also include removal of some.
+
+Where an extended function should be added the orginal function should be kept
+and a new version created with the same name and an "_ex" suffix. For example,
+the "RAND_bytes" function has an extended form called "RAND_bytes_ex".
+
+Where an extended version of a function already exists and a second extended
+version needs to be created then it should have an "_ex2" suffix, and so on for
+further extensions.
+
+When an extended version of a function is created the order of existing
+parameters from the original function should be retained even where it does not
+conform to the guidelines in Chapter 6.1. However new parameters may be inserted
+at any point (they do not have to be at the end), and no longer required
+parameters may be removed. When adding new arguments consideration should be
+given for how best to apply the guidelines from Chapter 6.1, while retaining
+coherency of the existing arguments.
 
                 Chapter 7: Centralized exiting of functions
 
