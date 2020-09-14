@@ -295,6 +295,23 @@ because it is a simple way to add valuable information for the reader.
 The name in the prototype declaration should match the name in the function
 definition.
 
+                Chapter 6.1: Extending existing functions
+
+From time to time it is necessary to extend an existing function. Typically this
+will mean adding additional arguments, but it may also include removal of some.
+
+Where an extended function should be added the original function should be kept
+and a new version created with the same name and an "_ex" suffix. For example,
+the "RAND_bytes" function has an extended form called "RAND_bytes_ex".
+
+Where an extended version of a function already exists and a second extended
+version needs to be created then it should have an "_ex2" suffix, and so on for
+further extensions.
+
+When an extended version of a function is created the order of existing
+parameters from the original function should be retained. However new parameters
+may be inserted at any point (they do not have to be at the end), and no longer
+required parameters may be removed.
 
                 Chapter 7: Centralized exiting of functions
 
