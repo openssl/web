@@ -296,26 +296,35 @@ EVP_PKEY, X509 etc). When adding new API functions relevant to a given type, the
 following argument ordering should be used:
 
     rettype TYPE_get_something(TYPE *,[args])
+    rettype TYPE_set_something(TYPE *,[args])
     rettype TYPE_do_something(TYPE *,[args])
     TYPE *TYPE_new([args])
 
-Where present the TYPE argument should always be first. In constructors or
-object factory type functions (such as a "fetch" function), the key argument
-that identifies the thing be constructed should be placed first (if such an
-argument exists). For example in a "fetch" function the name of the algorithm
-being fetched would be first.
+Some more complex complex APIs have a TYPE and TYPE_CTX pair, where TYPE usually
+represents the set of function pointers to the implementation, while TYPE_CTX is
+the collection of attributes to perform the intended operation.
+For that case, the pattern should also include:
+
+    TYPE_CTX *TYPE_CTX_new([args])
+    rettype TYPE_CTX_get_something(TYPE_CTX *,[args])
+    rettype TYPE_CTX_set_something(TYPE_CTX *,[args])
+    rettype TYPE_do_something(TYPE_CTX *,[args])
+
+Where present the TYPE (or TYPE_CTX) argument should always be first as shown
+in the examples above. In constructors or object factory type functions (such as
+a "fetch" function), the key argument that identifies the thing be constructed
+should be placed first (if such an argument exists). For example in a "fetch"
+function the name of the algorithm being fetched would be first.
 
 The remaining argument list should be put into order of importance. Deciding the
 relative importance of arguments is necessarily somewhat subjective, but the
 following guidelines should be considered:
 
-1) Any "context" arguments should be first. If multiple contexts are necessary
-   then they should be in order of most general to most specific. In some cases
-   (typically with an OPENSSL_CTX), a context may be NULL to indicate a default
-   context should be used. This does not lessen its importance. Since such a
-   context is always used, even though a default value may be applied, it does
-   not make it an "optional" argument.
-2) Required arguments should be placed after the context.
+1) Any additional "context" arguments should be first. If multiple contexts are
+   necessary then they should be in order of most general to most specific. In
+   some cases (typically with an OSSL_LIB_CTX), a context may be NULL to indicate
+   a default context should be used.
+2) Required arguments should be placed after the additional contexts.
 3) Optional arguments (i.e. those that are only be used in certain circumstances
    and therefore may be "NULL" or empty) are placed after required arguments.
 4) Output parameters are placed after optional arguments.
