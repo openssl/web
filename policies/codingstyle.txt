@@ -268,6 +268,10 @@ Ideally, functions should be short and sweet, and do just one thing.
 A rule of thumb is that they should fit on one or two screenfuls of text
 (25 lines as we all know), and do one thing and do that well.
 
+Function names should start with an uppercase word (usually a type) if the
+function forms part of the public API. Internal function names should start with
+a lowercase word.
+
 The maximum length of a function is often inversely proportional to the
 complexity and indentation level of that function. So, if you have a
 conceptually simple function that is just one long (but simple) switch
