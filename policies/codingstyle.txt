@@ -300,9 +300,20 @@ following argument ordering should be used:
     rettype TYPE_do_something(TYPE *,[args])
     TYPE *TYPE_new([args])
 
-Some more complex complex APIs have a TYPE and TYPE_CTX pair, where TYPE usually
-represents the set of function pointers to the implementation, while TYPE_CTX is
-the collection of attributes to perform the intended operation.
+Some more complex APIs with diverse underlying implementations have TYPE
+paired with a TYPE_METHOD, where TYPE usually represents a collection of
+attributes while TYPE_METHOD represents the set of function pointers to the
+implementation. The public API remains as above, except for the constructor,
+which should look like one of these (the latter being a constructor that
+uses a factory pool referred to by some context):
+
+    TYPE *TYPE_new(TYPE_METHOD *, [args])
+    TYPE *TYPE_new(OSSL_LIB_CTX *, TYPE_METHOD *, [args])
+
+A variant for the same sort of complex APIs is also seen, with the
+corresponding type pair being TYPE_CTX and TYPE, where TYPE usually
+represents the set of function pointers to the implementation, while
+TYPE_CTX is the collection of attributes to perform the intended operation.
 For that case, the pattern should also include:
 
     TYPE_CTX *TYPE_CTX_new([args])
@@ -311,10 +322,12 @@ For that case, the pattern should also include:
     rettype TYPE_do_something(TYPE_CTX *,[args])
 
 Where present the TYPE (or TYPE_CTX) argument should always be first as shown
-in the examples above. The remaining argument list should be put into order of
-importance. Deciding the relative importance of arguments is necessarily
-somewhat subjective, but the following guideline ordering of the arguments
-should be considered:
+in the examples above.
+
+For all of the above patterns, the remaining argument list should be put into
+order of importance. Deciding the relative importance of arguments is
+necessarily somewhat subjective, but the following guideline ordering of the
+arguments should be considered:
 
 1) Additional context arguments
 
