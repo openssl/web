@@ -314,7 +314,7 @@ A variant for the same sort of complex APIs is also seen, with the
 corresponding type pair being TYPE_CTX and TYPE, where TYPE usually
 represents the set of function pointers to the implementation, while
 TYPE_CTX is the collection of attributes to perform the intended operation.
-For that case, the pattern should also include:
+For that case, the pattern should include:
 
     TYPE_CTX *TYPE_CTX_new([args])
     rettype TYPE_CTX_get_something(TYPE_CTX *,[args])
@@ -362,7 +362,7 @@ definition.
 From time to time it is necessary to extend an existing function. Typically this
 will mean adding additional arguments, but it may also include removal of some.
 
-Where an extended function should be added the orginal function should be kept
+Where an extended function should be added the original function should be kept
 and a new version created with the same name and an "_ex" suffix. For example,
 the "RAND_bytes" function has an extended form called "RAND_bytes_ex".
 
