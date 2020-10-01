@@ -4,7 +4,7 @@
     <h1><a href=".">Policies</a></h1>
     <ul>
       <li>
-	<a href="roadmap.html">Roadmap</a>
+        <a href="roadmap.html">Roadmap</a>
       </li>
       <li>
         <a href="trademark.html">Trademark Policy</a>
@@ -13,22 +13,25 @@
         <a href="platformpolicy.html">Platform Policy</a>
       </li>
       <li>
-	<a href="releasestrat.html">Release Strategy</a>
+        <a href="releasestrat.html">Release Strategy</a>
       </li>
       <li>
         <a href="travel.html">Travel Reimbursement Policy</a>.
       </li>
       <li>
-	<a href="secpolicy.html">Security Policy</a>
+        <a href="secpolicy.html">Security Policy</a>
       </li>
       <li>
-	<a href="omc-bylaws.html">OpenSSL Bylaws</a>
+        <a href="omc-bylaws.html">OpenSSL Bylaws</a>
+      </li>
+      <li>
+        <a href="otc-policies.html">OpenSSL Technical Policies</a>
       </li>
       <li>
         <a href="committers.html">Policy for Committers</a>
       </li>
       <li>
-	<a href="codingstyle.html">Coding Style</a>
+        <a href="codingstyle.html">Coding Style</a>
       </li>
       <li>
         <a href="cla.html">Contributor Agreements</a>
