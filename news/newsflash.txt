@@ -5,6 +5,7 @@
 # headings.  URL paths must all be absolute.
 Date: Item
 
+21-Oct-2020: New Blog post: <a href="/blog/blog/2020/10/20/OpenSSL3.0Alpha7/">OpenSSL 3.0 Alpha7 Release</a>
 15-Oct-2020: Alpha 7 of OpenSSL 3.0 is now available: please download and test it
 22-Sep-2020: OpenSSL 1.1.1h is now available, including bug fixes
 09-Sep-2020: <a href="/news/secadv/20200909.txt">Security Advisory</a>: Raccoon attack</a>
