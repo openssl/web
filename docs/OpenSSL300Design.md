@@ -3301,28 +3301,6 @@ All comply with <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/re
    <td>For TLS 1.2 and 1.3.
    </td>
   </tr>
-  <tr>
-   <td>
-   </td>
-   <td>RSA
-   </td>
-   <td>
-   </td>
-   <td>N/A
-   </td>
-   <td rowspan="2" ><em>These two are not algorithms, they serve as a reminder that the custom code for these in libssl would need to move to libcrypto and then be incorporated into the FIPS module.</em>
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>CBC
-   </td>
-   <td>
-   </td>
-   <td>N/A
-   </td>
-  </tr>
 </table>
 
 <!-- Footnotes themselves at the bottom. -->
