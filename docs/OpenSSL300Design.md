@@ -2868,7 +2868,7 @@ Security Policy statement regarding the <a href="https://csrc.nist.gov/publicati
    </td>
    <td><a href="https://csrc.nist.gov/publications/detail/sp/800-38d/final">SP 800-38D</a>
    </td>
-   <td>✗
+   <td>✓
    </td>
    <td>Changes in IV. Module must generate the IV.
    </td>
@@ -2904,7 +2904,7 @@ Security Policy statement regarding the <a href="https://csrc.nist.gov/publicati
    </td>
    <td><a href="https://csrc.nist.gov/publications/detail/sp/800-38e/final">SP 800-38E</a>
    </td>
-   <td>✗
+   <td>✓
    </td>
    <td>See <a href="https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Module-Validation-Program/documents/fips140-2/FIPS1402IG.pdf">FIPS 140-2 I.G.</a> A.9.  Needs key check added.  This mode does not support 192 bits.  Check added by <a href="https://github.com/openssl/openssl/pull/7120">#7120</a>.
    </td>
@@ -3058,7 +3058,7 @@ Security Policy statement regarding the <a href="https://csrc.nist.gov/publicati
    </td>
    <td><a href="https://csrc.nist.gov/publications/detail/sp/800-90a/rev-1/final">SP 800-90A</a>
    </td>
-   <td>✗
+   <td>✓
    </td>
    <td rowspan="3" >Issues with <a href="https://csrc.nist.gov/publications/detail/sp/800-90c/draft">SP 800-90C</a>.
 <p>
@@ -3072,7 +3072,7 @@ All comply with <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/re
    </td>
    <td><a href="https://csrc.nist.gov/publications/detail/sp/800-90a/rev-1/final">SP 800-90A</a>
    </td>
-   <td>✗
+   <td>✓
    </td>
   </tr>
   <tr>
@@ -3082,7 +3082,7 @@ All comply with <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/re
    </td>
    <td><a href="https://csrc.nist.gov/publications/detail/sp/800-90a/rev-1/final">SP 800-90A</a>
    </td>
-   <td>✗
+   <td>✓
    </td>
   </tr>
   <tr>
@@ -3104,7 +3104,7 @@ All comply with <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/re
    </td>
    <td><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">FIPS 186-4</a>
    </td>
-   <td>✗
+   <td>✓
    </td>
    <td>Refer also to <a href="https://csrc.nist.gov/publications/detail/sp/800-56b/rev-2/draft">SP 800-56B</a>.  PKCS#1.5, PSS, Key pair generation.  Modulus size changes.
    </td>
@@ -3116,7 +3116,7 @@ All comply with <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/re
    </td>
    <td><a href="https://csrc.nist.gov/publications/detail/sp/800-56b/rev-2/draft">SP 800-56B</a>
    </td>
-   <td>✗
+   <td>✓
    </td>
    <td>OAEP.  Update to <a href="https://csrc.nist.gov/publications/detail/sp/800-56b/rev-2/draft">SP 800-56B rev-1</a> standard.
    </td>
@@ -3128,7 +3128,7 @@ All comply with <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/re
    </td>
    <td><a href="https://csrc.nist.gov/publications/detail/sp/800-56a/rev-3/final">SP 800-56A</a>
    </td>
-   <td>✗
+   <td>✓
    </td>
    <td>Update to <a href="https://csrc.nist.gov/publications/detail/sp/800-56a/rev-3/final">SP 800-56A rev-3</a> standard.
    </td>
@@ -3140,7 +3140,7 @@ All comply with <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/re
    </td>
    <td><a href="https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Algorithm-Validation-Program/documents/keymgmt/KASVS.pdf">KASVS</a>
    </td>
-   <td>✗
+   <td>✓
    </td>
    <td>Additional testing to meet ZZonly.  CVL/KAS.
    </td>
@@ -3152,7 +3152,7 @@ All comply with <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/re
    </td>
    <td><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">FIPS 186-4</a>
    </td>
-   <td>✗
+   <td>✓
    </td>
    <td>PQG generation & verification, signature generation & verification, key pair generation.
    </td>
@@ -3164,7 +3164,7 @@ All comply with <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/re
    </td>
    <td><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">FIPS 186-4</a>
    </td>
-   <td>✗
+   <td>✓
    </td>
    <td>Key pair generation, public key generation, signature generation & verification.
    </td>
@@ -3176,7 +3176,7 @@ All comply with <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/re
    </td>
    <td><a href="https://csrc.nist.gov/publications/detail/sp/800-56a/rev-3/final">SP 800-56A</a>
    </td>
-   <td>✗
+   <td>✓
    </td>
    <td>B-233, 283, 409, 571; K-233, 283, 409, 571; P-224, 256, 384, 521.  Update to <a href="https://csrc.nist.gov/publications/detail/sp/800-56a/rev-3/final">SP 800-56A rev-3</a> standard.
    </td>
@@ -3188,7 +3188,7 @@ All comply with <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/re
    </td>
    <td><a href="https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Algorithm-Validation-Program/documents/keymgmt/KASVS.pdf">KASVS</a>
    </td>
-   <td>✗
+   <td>✓
    </td>
    <td>Additional testing to meet ZZonly.  CVL/KAS.
    </td>
@@ -3200,7 +3200,7 @@ All comply with <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/re
    </td>
    <td><a href="https://csrc.nist.gov/publications/detail/sp/800-132/final">SP 800-132</a>
    </td>
-   <td>✗
+   <td>✓
    </td>
    <td>Verify conformance with standards.  See <a href="https://github.com/openssl/openssl/pull/6674">#6674</a>.
    </td>
@@ -3296,7 +3296,7 @@ All comply with <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/re
    </td>
    <td>
    </td>
-   <td>✗
+   <td>✓
    </td>
    <td>For TLS 1.2 and 1.3.
    </td>
