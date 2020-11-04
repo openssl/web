@@ -1,7 +1,7 @@
 ---
 title: OpenSSL 3.0.0 Design
 author: OpenSSL Management Committee (OMC)
-date: January, 2019
+date: November, 2020
 state: DRAFT
 header-includes:
 - |
@@ -2804,13 +2804,37 @@ Security Policy statement regarding the <a href="https://csrc.nist.gov/publicati
   <tr>
    <td>
    </td>
+   <td>CBC CTS
+   </td>
+   <td>
+   </td>
+   <td>✓
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
    <td>CCM
    </td>
    <td><a href="https://csrc.nist.gov/publications/detail/sp/800-38c/final">SP 800-38C</a>
    </td>
    <td>✓
    </td>
-   <td>It's likely easier to include all of these than to remove some of them.
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>CFB
+   </td>
+   <td><a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">SP 800-38A</a>
+   </td>
+   <td>✓
+   </td>
+   <td>
    </td>
   </tr>
   <tr>
@@ -2855,6 +2879,18 @@ Security Policy statement regarding the <a href="https://csrc.nist.gov/publicati
    <td>GMAC
    </td>
    <td><a href="https://csrc.nist.gov/publications/detail/sp/800-38d/final">SP 800-38D</a>
+   </td>
+   <td>✓
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>OFB
+   </td>
+   <td><a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">SP 800-38A</a>
    </td>
    <td>✓
    </td>
@@ -2973,6 +3009,42 @@ Security Policy statement regarding the <a href="https://csrc.nist.gov/publicati
    <td>SHA-3
    </td>
    <td><a href="https://www.nist.gov/publications/keyed-hash-message-authentication-code-hmac-0?pub_id=901614">FIPS 198-1</a>
+   </td>
+   <td>✓
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>CMAC
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>✓
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>GMAC
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>✓
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>KMAC
+   </td>
+   <td>
+   </td>
+   <td>
    </td>
    <td>✓
    </td>
@@ -3131,6 +3203,90 @@ All comply with <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/re
    <td>✗
    </td>
    <td>Verify conformance with standards.  See <a href="https://github.com/openssl/openssl/pull/6674">#6674</a>.
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>HKDF
+   </td>
+   <td>
+   </td>
+   <td>✓
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>SSKDF
+   </td>
+   <td>
+   </td>
+   <td>✓
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>SSHKDF
+   </td>
+   <td>
+   </td>
+   <td>✓
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>X9.42 KDF
+   </td>
+   <td>
+   </td>
+   <td>✓
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>X9.63 KDF
+   </td>
+   <td>
+   </td>
+   <td>✓
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>KBKDF
+   </td>
+   <td>
+   </td>
+   <td>✓
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>TLS PRF
+   </td>
+   <td>
+   </td>
+   <td>✓
+   </td>
+   <td>
    </td>
   </tr>
   <tr>
