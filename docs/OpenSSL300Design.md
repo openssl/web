@@ -2888,9 +2888,6 @@ Security Policy statement regarding the <a href="https://csrc.nist.gov/publicati
   <tr>
    <td>
    </td>
-  <tr>
-   <td>
-   </td>
    <td>OFB
    </td>
    <td><a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">SP 800-38A</a>
@@ -2900,6 +2897,9 @@ Security Policy statement regarding the <a href="https://csrc.nist.gov/publicati
    <td>
    </td>
   </tr>
+  <tr>
+   <td>
+   </td>
    <td>XTS
    </td>
    <td><a href="https://csrc.nist.gov/publications/detail/sp/800-38e/final">SP 800-38E</a>
