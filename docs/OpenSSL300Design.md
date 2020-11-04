@@ -3000,16 +3000,6 @@ All comply with <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/re
    </td>
   </tr>
   <tr>
-   <td>DRBG
-   </td>
-   <td>Testing
-   </td>
-   <td>SP 800-90
-   </td>
-   <td>Support DRBG health test as per current version of these standards: <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/rev-1/final">A</a>, <a href="https://csrc.nist.gov/publications/detail/sp/800-90b/final">B</a> & <a href="https://csrc.nist.gov/publications/detail/sp/800-90c/draft">C</a>.
-   </td>
-  </tr>
-  <tr>
    <td>RSA
    </td>
    <td>
