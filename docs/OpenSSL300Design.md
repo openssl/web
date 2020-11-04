@@ -2910,17 +2910,7 @@ Security Policy statement regarding the <a href="https://csrc.nist.gov/publicati
    </td>
    <td><a href="http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>
    </td>
-   <td>224, 256, 384, 512.
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>SHA-2
-   </td>
-   <td><a href="http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>
-   </td>
-   <td>512/224, 512/256.
+   <td>224, 256, 384, 512, 512/224, 512/256.
    </td>
   </tr>
   <tr>
