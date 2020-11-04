@@ -1,7 +1,7 @@
 ---
 title: OpenSSL 3.0.0 Design
 author: OpenSSL Management Committee (OMC)
-date: November, 2019
+date: November, 2020
 state: DRAFT
 header-includes:
 - |
