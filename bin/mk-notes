@@ -41,7 +41,7 @@ while ( <STDIN> ) {
 	    print "<ul>\n";
 	    $in_ul = 1;
 	}
-	s/CVE-(\d{4}-\d{4})/<a href=vulnerabilities.html#$1>CVE-$1<\/a>/g;
+	s/CVE-\d{4}-\d{4}/<a href=vulnerabilities.html#$&>$&<\/a>/g;
 	print;
     }
 }
