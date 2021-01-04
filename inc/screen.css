@@ -1369,7 +1369,7 @@ figure.code .highlight {
   border-bottom: 0;
 }
 
-.download-source, html a[href*=raw], figure.code figcaption a {
+.download-source, figure.code figcaption a {
   position: absolute;
   right: .8em;
   text-decoration: none;
@@ -1379,7 +1379,7 @@ figure.code .highlight {
   text-shadow: #cbcccc 0 1px 0;
   padding-left: 3em;
 }
-.download-source:hover, html a[href*=raw]:hover, figure.code figcaption a:hover {
+.download-source:hover, figure.code figcaption a:hover {
   text-decoration: underline;
 }
 
