@@ -5,6 +5,7 @@
 # headings.  URL paths must all be absolute.
 Date: Item
 
+07-Jan-2021: Alpha 10 of OpenSSL 3.0 is now available: please download and test it
 08-Dec-2020: OpenSSL 1.1.1i is now available, including bug and security fixes
 26-Nov-2020: Alpha 9 of OpenSSL 3.0 is now available: please download and test it
 05-Nov-2020: Alpha 8 of OpenSSL 3.0 is now available: please download and test it
