@@ -218,7 +218,7 @@ news/$(1): $(CHECKOUTS)/$(2)
 	cp $$? $$@
 endef
 
-# Create the target 'news/changelog.txt', taking the source from
+# Create the target 'news/changelog.md', taking the source from
 # $(CHECKOUTS)/openssl/CHANGES.md
 $(eval $(call mknews_changelogtxt,changelog.md,openssl/CHANGES.md))
 
