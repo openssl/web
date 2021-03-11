@@ -22,8 +22,8 @@
             <p>
             This is the changelog for the master branch, the one that is
             currently in active development.
-	    The plain-text version of this document is available
-	    here: <a href="changelog.txt">changelog.txt</a>
+	    The plain-text / markdown version of this document is available
+	    here: <a href="changelog.md">changelog.md</a>
             </p>
 	    </p>
             For other branches, the changelogs are distributed with

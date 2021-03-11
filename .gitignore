@@ -14,7 +14,7 @@ docs/fips.inc
 docs/man*/
 news/changelog.html
 news/changelog.inc
-news/changelog.txt
+news/changelog.md
 news/cl*.txt
 news/newsflash.inc
 news/openssl-*-notes.html
