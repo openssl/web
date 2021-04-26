@@ -11,7 +11,7 @@
         <div class="entry-content">
           <p>Here are the old releases.</p>
           <ul>
-[% FOREACH release IN releases.split('\s+').reverse -%]
+[% FOREACH release IN releases.split('\s+') -%]
             <li><a href="[% release %]">[% release %]</a></li>
 [% END -%]
           </ul>
