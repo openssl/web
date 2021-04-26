@@ -44,6 +44,8 @@ RewriteRule ^(openssl-0\.9\.\d.*) old/0.9.x/$1 [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(openssl-(\d+\.\d+\.\d+).*) old/$2/$1 [L]
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(openssl-(\d+\.\d+).*) old/$2/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^openssl-(fips.*)  old/fips/openssl-$1 [L]
 
 <Files *.gz.asc>
