@@ -321,7 +321,7 @@ $(foreach S,fips $(FUTURESERIES) $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsour
 
 source/old/index.html: source/old/index.html.tt bin/from-tt
 	@rm -f $@
-	./bin/from-tt releases='fips $(SERIES) $(OLDSERIES2)' $<
+	./bin/from-tt releases='fips $(FUTURESERIES) $(SERIES) $(OLDSERIES2)' $<
 
 # Because these the indexes of old tarballs will inevitably be newer
 # than the tarballs that are moved into their respective directory,
