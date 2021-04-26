@@ -25,6 +25,11 @@ OLDSERIES2=1.1.0 1.0.2 1.0.1 1.0.0 0.9.x
 MANSERIES1=1.1.1
 MANSERIES3=3.0
 
+##  Future series, i.e. a series that hasn't had any final release yet.
+##  We distinguish them to avoid having to produce notes, vulnerability
+##  documents, ...
+FUTURESERIES=3.0
+
 # All simple generated files.
 SIMPLE = newsflash.inc sitemap.txt \
 	 docs/faq.inc docs/fips.inc \
@@ -42,7 +47,7 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 source/.htaccess \
 	 source/index.inc \
 	 source/old/index.html
-SRCLISTS = $(foreach S,$(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
+SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
 
 
 .SUFFIXES: .md .html
@@ -312,7 +317,7 @@ endef
 # We also create a list specifically for the old FIPS module, carefully
 # crafting an HTML title with an uppercase 'FIPS' while the subdirectory
 # remains named 'fips'
-$(foreach S,fips $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsourceindex,$(S),$(patsubst fips,FIPS,$(S)))))
+$(foreach S,fips $(FUTURESERIES) $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsourceindex,$(S),$(patsubst fips,FIPS,$(S)))))
 
 source/old/index.html: source/old/index.html.tt bin/from-tt
 	@rm -f $@
