@@ -6415,7 +6415,7 @@ remote attacker could use this flaw to cause a DTLS server to crash.
 
   <issue public="20090512">
     <cve name="2009-1377"/>
-    <advisory url="https://web.archive.org/web/20120306065500/http://rt.openssl.org/Ticket/Display.html?id=1930&user=guest&pass=guest"/>
+    <advisory url="https://web.archive.org/web/20120306065500/http://rt.openssl.org/Ticket/Display.html?id=1930&amp;user=guest&amp;pass=guest"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -6445,7 +6445,7 @@ memory left.
 
     <issue public="20090512">
     <cve name="2009-1378"/>
-    <advisory url="https://web.archive.org/web/20101120211136/http://rt.openssl.org/Ticket/Display.html?id=1931&user=guest&pass=guest"/>
+    <advisory url="https://web.archive.org/web/20101120211136/http://rt.openssl.org/Ticket/Display.html?id=1931&amp;user=guest&amp;pass=guest"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
@@ -6475,7 +6475,7 @@ left.
 
   <issue public="20090512">
     <cve name="2009-1379"/>
-    <advisory url="https://web.archive.org/web/20100824233642/http://rt.openssl.org/Ticket/Display.html?id=1923&user=guest&pass=guest"/>
+    <advisory url="https://web.archive.org/web/20100824233642/http://rt.openssl.org/Ticket/Display.html?id=1923&amp;user=guest&amp;pass=guest"/>
     <affects base="0.9.8" version="0.9.8"/>
     <affects base="0.9.8" version="0.9.8a"/>
     <affects base="0.9.8" version="0.9.8b"/>
