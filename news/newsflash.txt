@@ -5,6 +5,7 @@
 # headings.  URL paths must all be absolute.
 Date: Item
 
+20-May-2021: Alpha 17 of OpenSSL 3.0 is now available: please download and test it
 06-May-2021: Alpha 16 of OpenSSL 3.0 is now available: please download and test it
 22-Apr-2021: Alpha 15 of OpenSSL 3.0 is now available: please download and test it
 08-Apr-2021: Alpha 14 of OpenSSL 3.0 is now available: please download and test it
