@@ -56,14 +56,17 @@ SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$
 	@rm -f $@
 	./bin/md-to-html5 $<
 
-all: suball manmaster mancross
+all: suball manmaster mancross akamai-purge
 
 suball: $(SIMPLE) $(SRCLISTS)
 
-relupd: suball manpages mancross
+relupd: suball manpages mancross akamai-purge
 
 clean:
 	rm -f $(SIMPLE) $(SRCLISTS)
+
+akamai-purge:
+	./bin/purge-one-hour
 
 # Legacy targets
 hack-source_htaccess: all
