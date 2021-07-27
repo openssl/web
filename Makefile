@@ -32,6 +32,8 @@ FUTURESERIES=3.0
 
 # All simple generated files.
 SIMPLE = newsflash.inc sitemap.txt \
+	 community/committers.inc community/otc.inc \
+	 community/omc.inc community/omc-alumni.inc \
 	 docs/faq.inc docs/fips.inc \
 	 docs/OpenSSLStrategicArchitecture.html \
 	 docs/OpenSSL300Design.html \
@@ -176,7 +178,7 @@ docs/manpages.html: docs/manpages.html.tt
 ##
 ##  $(SIMPLE) -- SIMPLE GENERATED FILES
 ##
-.PHONY: sitemap community/committers.inc community/otc.inc community/omc.inc community/omc-alumni.inc
+.PHONY: sitemap
 newsflash.inc: news/newsflash.inc
 	@rm -f $@
 	head -7 $? >$@
