@@ -60,7 +60,7 @@ foreach my $key (sort { mk_sortable($a) cmp mk_sortable($b) } keys %data) {
     my $pgpurl = $data{$key}->{pgpid} if $options{pgp};
     $pgpurl =~ s|\s+||g if $pgpurl;
     $pgpurl =
-	"http://pool.sks-keyservers.net:11371/pks/lookup?op=get&search=0x$pgpurl"
+	"https://keys.openpgp.org/search?q=$pgpurl"
 	if $pgpurl;
 
     my @columndata = ();
