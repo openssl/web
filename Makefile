@@ -8,6 +8,14 @@ SNAP = $(CHECKOUTS)/openssl
 ## Where releases are found.
 RELEASEDIR = /var/www/openssl/source
 
+## The OMC repository checkout can be used for dependencies.
+## By default, we don't assume it, as not everyone has access to it.
+## If you have it, do 'make PERSONDB=PATH/TO/omc/persondb.yaml' where
+## PATH/TO/omc is the checked out OMC repository.
+## We let it be FORCE by default...  This forces the production of files
+## that depend on this database, instead of just conditionally.
+PERSONDB=FORCE
+
 ######################################################################
 ##
 ##  Release series.  These represent our release branches, and are
@@ -186,17 +194,17 @@ sitemap sitemap.txt:
 	@rm -f sitemap.txt
 	./bin/mk-sitemap master $(SERIES) > sitemap.txt
 
-community/committers.inc:
+community/committers.inc: $(PERSONDB)
 	@rm -f $@
 	wget -q https://api.openssl.org/0/Group/commit/Members
 	./bin/mk-committers <Members >$@
 	@rm -f Members
 
-community/otc.inc:
+community/otc.inc: $(PERSONDB)
 	./bin/mk-omc -n -t 'OTC Members' otc otc-inactive > $@
-community/omc.inc:
+community/omc.inc: $(PERSONDB)
 	./bin/mk-omc -n -e -l -p -t 'OMC Members' omc omc-inactive > $@
-community/omc-alumni.inc:
+community/omc-alumni.inc: $(PERSONDB)
 	./bin/mk-omc -n -l -t 'OMC Alumni' omc-alumni omc-emeritus > $@
 
 docs/faq.inc: $(wildcard docs/faq-[0-9]-*.txt) bin/mk-faq
@@ -332,4 +340,4 @@ source/old/index.html: source/old/index.html.tt bin/from-tt
 # than the tarballs that are moved into their respective directory,
 # we must declare them phony, or they will not be regenerated when
 # they should.
-.PHONY : $(SRCLISTS)
+.PHONY : $(SRCLISTS) FORCE
