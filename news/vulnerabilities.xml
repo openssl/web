@@ -94,7 +94,7 @@ heap allocated.
     <affects base="1.0.2" version="1.0.2w"/>
     <affects base="1.0.2" version="1.0.2x"/>
     <affects base="1.0.2" version="1.0.2y"/>
-    <fixed base="1.1.1" version="1.1.1j" date="20210824">
+    <fixed base="1.1.1" version="1.1.1l" date="20210824">
       <git hash="94d23fcff9b2a7a8368dfe52214d5c2569882c11"/>
     </fixed>
     <fixed base="1.0.2" version="1.0.2za" date="20210824">
