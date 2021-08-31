@@ -24,19 +24,17 @@ PERSONDB=FORCE
 ##  The numbers given here RULE
 ##
 
-##  Current series
-SERIES=1.1.1
+##  Current series.  Variable names are numbered to indicate:
+##  SERIES1	OpenSSL pre-3.0
+##  SERIES3	OpenSSL 3.0 and on
+SERIES1=1.1.1
+SERIES3=3.0
 ##  Older series.  The second type is for source listings
 OLDSERIES=1.1.0 1.0.2 1.0.1 1.0.0 0.9.8 0.9.7 0.9.6
 OLDSERIES2=1.1.0 1.0.2 1.0.1 1.0.0 0.9.x
 ##  Series for manual layouts
 MANSERIES1=1.1.1
 MANSERIES3=3.0
-
-##  Future series, i.e. a series that hasn't had any final release yet.
-##  We distinguish them to avoid having to produce notes, vulnerability
-##  documents, ...
-FUTURESERIES=3.0
 
 # All simple generated files.
 SIMPLE = newsflash.inc sitemap.txt \
@@ -47,17 +45,17 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 docs/OpenSSL300Design.html \
 	 docs/manpages.html \
          news/changelog.html \
-	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
-	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
+	 $(foreach S,$(SERIES3) $(SERIES1),news/openssl-$(S)-notes.inc) \
+	 $(foreach S,$(SERIES3) $(SERIES1),news/openssl-$(S)-notes.html) \
 	 news/newsflash.inc \
 	 news/vulnerabilities.inc \
 	 news/vulnerabilities.html \
-	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).inc) \
-	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).html) \
+	 $(foreach S,$(SERIES3) $(SERIES1) $(OLDSERIES),news/vulnerabilities-$(S).inc) \
+	 $(foreach S,$(SERIES3) $(SERIES1) $(OLDSERIES),news/vulnerabilities-$(S).html) \
 	 source/.htaccess \
 	 source/index.inc \
 	 source/old/index.html
-SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
+SRCLISTS = $(foreach S,$(SERIES3) $(SERIES1) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
 
 
 .SUFFIXES: .md .html
@@ -139,15 +137,15 @@ man-apropos-$(2): man-pages-$(2)
 endef
 define makemanindexes
 man-index-$(2):
-	./bin/from-tt -d docs/man$(2)/man1 releases='$(SERIES)' release='$(2)' \
+	./bin/from-tt -d docs/man$(2)/man1 releases='$(SERIES3) $(SERIES1)' release='$(2)' \
 		      < docs/sub-man1-index.html.tt > docs/man$(2)/man1/index.html
-	./bin/from-tt -d docs/man$(2)/man3 releases='$(SERIES)' release='$(2)' \
+	./bin/from-tt -d docs/man$(2)/man3 releases='$(SERIES3) $(SERIES1)' release='$(2)' \
 		      < docs/sub-man3-index.html.tt > docs/man$(2)/man3/index.html
-	./bin/from-tt -d docs/man$(2)/man5 releases='$(SERIES)' release='$(2)' \
+	./bin/from-tt -d docs/man$(2)/man5 releases='$(SERIES3) $(SERIES1)' release='$(2)' \
 		      < docs/sub-man5-index.html.tt > docs/man$(2)/man5/index.html
-	./bin/from-tt -d docs/man$(2)/man7 releases='$(SERIES)' release='$(2)' \
+	./bin/from-tt -d docs/man$(2)/man7 releases='$(SERIES3) $(SERIES1)' release='$(2)' \
 		      < docs/sub-man7-index.html.tt > docs/man$(2)/man7/index.html
-	./bin/from-tt -d docs/man$(2) releases='$(SERIES)' release='$(2)' \
+	./bin/from-tt -d docs/man$(2) releases='$(SERIES3) $(SERIES1)' release='$(2)' \
 		      < docs/sub-index.html.tt > docs/man$(2)/index.html
 endef
 define makemanuals1
@@ -166,21 +164,24 @@ endef
 # Start off with creating the 'manpages-master' target, taking the
 # source from $(CHECKOUTS)/openssl/doc
 $(eval $(call makemanuals3,openssl,master))
-#$(foreach S,$(MANSERIES3),$(eval $(call makemanuals3,openssl-$(S),$(S))))
 
-# Next, create 'manpages-x.y.z' for all current releases, taking the
+# Next, create 'manpages-x.y' for all current releases from 3.0 and on,
+# taking the source from $(CHECKOUTS)/openssl-x.y/doc
+$(foreach S,$(MANSERIES3),$(eval $(call makemanuals3,openssl-$(S),$(S))))
+
+# Next, create 'manpages-x.y.z' for all current pre-3.0 releases, taking the
 # source from $(CHECKOUTS)/openssl-x.y.z-stable/doc
 $(foreach S,$(MANSERIES1),$(eval $(call makemanuals1,openssl-$(S)-stable,$(S))))
 
 manmaster: man-apropos-master man-index-master
-manpages: $(foreach S,$(MANSERIES1),man-apropos-$(S) man-index-$(S))
+manpages: $(foreach S,$(MANSERIES3) $(MANSERIES1),man-apropos-$(S) man-index-$(S))
 
 mancross:
-	./bin/mk-mancross master $(SERIES)
+	./bin/mk-mancross master $(SERIES3) $(SERIES1)
 
 docs/manpages.html: docs/manpages.html.tt
 	@rm -f $@
-	./bin/from-tt releases='master $(SERIES)' docs/manpages.html.tt
+	./bin/from-tt releases='master $(SERIES3) $(SERIES1)' docs/manpages.html.tt
 
 ######################################################################
 ##
@@ -192,7 +193,7 @@ newsflash.inc: news/newsflash.inc
 	head -7 $? >$@
 sitemap sitemap.txt:
 	@rm -f sitemap.txt
-	./bin/mk-sitemap master $(SERIES) > sitemap.txt
+	./bin/mk-sitemap master $(SERIES3) $(SERIES1) > sitemap.txt
 
 community/committers.inc: $(PERSONDB)
 	@rm -f $@
@@ -220,11 +221,11 @@ news/changelog.inc: news/changelog.md bin/mk-changelog
 		| pandoc -t html5 -f commonmark | ./bin/post-process-html5 >$@
 news/changelog.html: news/changelog.html.tt news/changelog.inc
 	@rm -f $@
-	./bin/from-tt 'releases=$(SERIES)' $<
-# Additionally, make news/changelog.html depend on clxyz.txt, where xyz
-# comes from the release number x.y.z.  This permits it to be automatically
+	./bin/from-tt 'releases=$(SERIES3) $(SERIES1)' $<
+# Additionally, make news/changelog.html depend on clxy[z]z.txt, where xy[z]
+# comes from the release number x.y[.z].  This permits it to be automatically
 # recreated whenever there's a new major release.
-news/changelog.html: $(foreach S,$(SERIES),news/cl$(subst .,,$(S)).txt)
+news/changelog.html: $(foreach S,$(SERIES3) $(SERIES1),news/cl$(subst .,,$(S)).txt)
 
 # mknews_changelogtxt creates a target and ruleset for any changelog text
 # file depending on the CHANGES file from the target release.
@@ -240,9 +241,14 @@ endef
 # $(CHECKOUTS)/openssl/CHANGES.md
 $(eval $(call mknews_changelogtxt,changelog.md,openssl/CHANGES.md))
 
-# Create the targets 'news/clxyz.txt' for all current releases, taking the
-# source from $(CHECKOUTS)/openssl-x.y.z-stable/CHANGES
-$(foreach S,$(SERIES),\
+# Create the target 'news/clxy.md' for all releases from 3.0 and on, taking
+# the source from $(CHECKOUTS)/openssl-x.y/CHANGES.md
+$(foreach S,$(SERIES3),\
+$(eval $(call mknews_changelogtxt,cl$(subst .,,$(S)).txt,openssl-$(S)/CHANGES.md))
+
+# Create the targets 'news/clxyz.txt' for all current pre-3.0 releases,
+# taking the source from $(CHECKOUTS)/openssl-x.y.z-stable/CHANGES
+$(foreach S,$(SERIES1),\
 $(eval $(call mknews_changelogtxt,cl$(subst .,,$(S)).txt,openssl-$(S)-stable/CHANGES)))
 
 # mknews_noteshtml creates two targets and rulesets for creating notes from
@@ -260,10 +266,16 @@ news/openssl-$(1)-notes.inc: $(CHECKOUTS)/$(2) bin/mk-notes
 	./bin/mk-notes $(1) < $(CHECKOUTS)/$(2) > $$@
 endef
 
+# Create the targets 'news/openssl-x.y-notes.html' and
+# 'news/openssl-x.y-notes.inc' for each release number x.y starting with 3.0,
+# taking the source from the news file given as second argument.
+$(foreach S,$(SERIES3),\
+$(eval $(call mknews_noteshtml,$(S),openssl-$(S)/NEWS.md)))
+
 # Create the targets 'news/openssl-x.y.z-notes.html' and
-# 'news/openssl-x.y.z-notes.inc' for each release number x.y.z, taking
-# the source from the news file given as second argument.
-$(foreach S,$(SERIES),\
+# 'news/openssl-x.y.z-notes.inc' for each pre-3.0 release number x.y.z,
+# taking the source from the news file given as second argument.
+$(foreach S,$(SERIES1),\
 $(eval $(call mknews_noteshtml,$(S),openssl-$(S)-stable/NEWS)))
 
 news/newsflash.inc: news/newsflash.txt
@@ -292,9 +304,10 @@ endef
 # 'news/vulnerabilities.inc'
 $(eval $(call mknews_vulnerability,,))
 
-# Create the vulnerability index 'news/vulnerabilities-x.y.z.html' and
-# 'news/vulnerabilities-x.y.z.inc' for each release x.y.z
-$(foreach S,$(SERIES) $(OLDSERIES),$(eval $(call mknews_vulnerability,-$(S),-b $(S))))
+# Create the vulnerability index 'news/vulnerabilities-x.y[.z].html' and
+# 'news/vulnerabilities-x.y[.z].inc' for each release x.y[.z]
+$(foreach S,$(SERIES3) $(SERIES1) $(OLDSERIES),\
+$(eval $(call mknews_vulnerability,-$(S),-b $(S))))
 
 source/.htaccess: $(wildcard source/openssl-*.tar.gz) bin/mk-latest
 	@rm -f @?
@@ -330,11 +343,11 @@ endef
 # We also create a list specifically for the old FIPS module, carefully
 # crafting an HTML title with an uppercase 'FIPS' while the subdirectory
 # remains named 'fips'
-$(foreach S,fips $(FUTURESERIES) $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsourceindex,$(S),$(patsubst fips,FIPS,$(S)))))
+$(foreach S,fips $(SERIES3) $(SERIES1) $(OLDSERIES2),$(eval $(call mkoldsourceindex,$(S),$(patsubst fips,FIPS,$(S)))))
 
 source/old/index.html: source/old/index.html.tt bin/from-tt
 	@rm -f $@
-	./bin/from-tt releases='$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips' $<
+	./bin/from-tt releases='$(SERIES3) $(SERIES1) $(OLDSERIES2) fips' $<
 
 # Because these the indexes of old tarballs will inevitably be newer
 # than the tarballs that are moved into their respective directory,
