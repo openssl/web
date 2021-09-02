@@ -260,7 +260,7 @@ $(eval $(call mknews_changelogtxt,changelog.md,openssl/CHANGES.md))
 # Create the target 'news/clxy.md' for all releases from 3.0 and on, taking
 # the source from $(CHECKOUTS)/openssl-x.y/CHANGES.md
 $(foreach S,$(SERIES3),\
-$(eval $(call mknews_changelogtxt,cl$(subst .,,$(S)).txt,openssl-$(S)/CHANGES.md))
+$(eval $(call mknews_changelogtxt,cl$(subst .,,$(S)).txt,openssl-$(S)/CHANGES.md)))
 
 # Create the targets 'news/clxyz.txt' for all current pre-3.0 releases,
 # taking the source from $(CHECKOUTS)/openssl-x.y.z-stable/CHANGES
