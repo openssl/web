@@ -10,8 +10,13 @@
 	  <header><h2>FIPS-140</h2></header>
 	  <div class="entry-content">
 
-	    <p>The current validation of a cryptographic
-	    module (Module) compatible with the OpenSSL 1.0.2
+        <p>Note that this page contains historic information about our legacy
+			OpenSSL FIPS Object Module (FOM) 2.0. For information about the OpenSSL
+	    FOM 3.0 refer to
+	    <a href="https://www.openssl.org/docs/man3.0/man7/fips_module.html">the FIPS module manual page</a>
+	    </p>
+	    <p>The most recent validation of a cryptographic
+	    module (Module) compatible with OpenSSL 1.0.2
 	    is v2.0.16, FIPS 140-2 certificate <a
 	    href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/1747">#1747</a>.
 	    This Module is documented in the
@@ -32,10 +37,6 @@
             The OpenSSL project is no longer maintaining either the 1747
             or the 2398 module. This includes adding platforms to those
             validations.
-            We are starting work on a new validation, after the 1.1.1
-            release completes.
-            That module will have a small set of validated operational
-            environments.
             The OpenSSL project is no longer involved in private label
             validations nor adding platforms to the existing certificates.
             </p>
@@ -69,7 +70,7 @@
 	      API can be converted to use validated cryptography with minimal
 	      effort.</li>
 
-	      <li>The OpenSSL FIPS Object Module validation is "delivered" in
+	      <li>The OpenSSL FIPS Object Module 2.0 validation is "delivered" in
 	      source code form, meaning that if you can use it exactly as is
 	      and can build it (according to the very specific documented
 	      instructions) for your platform, then you can use it as

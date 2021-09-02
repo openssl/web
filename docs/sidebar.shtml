@@ -10,7 +10,7 @@
 	<a href="manpages.html">Manpages</a>
       </li>
       <li>
-        <a href="fips.html">FIPS-140 Validation</a>
+        <a href="fips.html">Legacy FIPS-140 Validation</a>
       </li>
     </ul>
   </section>
