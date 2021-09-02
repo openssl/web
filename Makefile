@@ -238,7 +238,7 @@ news/changelog.inc: news/changelog.md bin/mk-changelog
 news/changelog.html: news/changelog.html.tt news/changelog.inc
 	@rm -f $@
 	./bin/from-tt 'releases=$(SERIES)' $<
-# Additionally, make news/changelog.html depend on clxy[z]z.txt, where xy[z]
+# Additionally, make news/changelog.html depend on clxy[z].txt, where xy[z]
 # comes from the release number x.y[.z].  This permits it to be automatically
 # recreated whenever there's a new major release.
 news/changelog.html: $(foreach S,$(SERIES),news/cl$(subst .,,$(S)).txt)
