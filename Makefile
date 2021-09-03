@@ -196,9 +196,9 @@ manpages: $(foreach S,$(MANSERIES),man-apropos-$(S) man-index-$(S))
 mancross:
 	./bin/mk-mancross master $(SERIES)
 
-docs/manpages.html: docs/manpages.html.tt
+docs/manpages.html: docs/manpages.html.tt Makefile bin/from-tt
 	@rm -f $@
-	./bin/from-tt releases='master $(SERIES)' docs/manpages.html.tt
+	./bin/from-tt releases='master $(SERIES)' $<
 
 docs/mansidebar.html: docs/mansidebar.html.tt Makefile bin/from-tt
 	@rm -f $@
@@ -240,7 +240,7 @@ news/changelog.inc: news/changelog.md bin/mk-changelog
 	@rm -f $@
 	(echo 'Table of contents'; sed -e '1,/^OpenSSL Releases$$/d' < $<) \
 		| pandoc -t html5 -f commonmark | ./bin/post-process-html5 >$@
-news/changelog.html: news/changelog.html.tt news/changelog.inc
+news/changelog.html: news/changelog.html.tt news/changelog.inc Makefile bin/from-tt
 	@rm -f $@
 	./bin/from-tt 'releases=$(SERIES)' $<
 # Additionally, make news/changelog.html depend on clxy[z].txt, where xy[z]
@@ -366,7 +366,7 @@ endef
 # remains named 'fips'
 $(foreach S,fips $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsourceindex,$(S),$(patsubst fips,FIPS,$(S)))))
 
-source/old/index.html: source/old/index.html.tt bin/from-tt
+source/old/index.html: source/old/index.html.tt Makefile bin/from-tt
 	@rm -f $@
 	./bin/from-tt releases='$(SERIES) $(OLDSERIES2) fips' $<
 
