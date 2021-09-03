@@ -60,6 +60,7 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 docs/OpenSSLStrategicArchitecture.html \
 	 docs/OpenSSL300Design.html \
 	 docs/manpages.html \
+	 docs/mansidebar.shtml \
          news/changelog.html \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
@@ -198,6 +199,10 @@ mancross:
 docs/manpages.html: docs/manpages.html.tt
 	@rm -f $@
 	./bin/from-tt releases='master $(SERIES)' docs/manpages.html.tt
+
+docs/mansidebar.html: docs/mansidebar.html.tt Makefile bin/from-tt
+	@rm -f $@
+	./bin/from-tt releases='master $(SERIES)' $<
 
 ######################################################################
 ##
