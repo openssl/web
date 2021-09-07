@@ -60,7 +60,7 @@ SIMPLE = newsflash.inc sitemap.txt \
 	 docs/OpenSSLStrategicArchitecture.html \
 	 docs/OpenSSL300Design.html \
 	 docs/manpages.html \
-	 docs/mansidebar.shtml \
+	 docs/mansidebar.html \
          news/changelog.html \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \

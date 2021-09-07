@@ -36,7 +36,7 @@
 	  </footer>
 	</article>
       </div>
-      <!--#include virtual="/inc/mansidebar.shtml" -->
+      <!--#include virtual="/docs/mansidebar.html" -->
     </div>
   </div>
 <!--#include virtual="/inc/footer.shtml" -->
