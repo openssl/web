@@ -5,6 +5,7 @@
 # headings.  URL paths must all be absolute.
 Date: Item
 
+13-Sep-2021: New Blog post: <a href="https://www.openssl.org/blog/blog/2021/09/13/LetsEncryptRootCertExpire/">Old Let’s Encrypt Root Certificate Expiration and OpenSSL 1.0.2</a>
 07-Sep-2021: Final version of OpenSSL 3.0.0 is now available: please download and upgrade!
 24-Aug-2021: <a href="/news/secadv/20210824.txt">Security Advisory</a>: two security fixes
 24-Aug-2021: OpenSSL 1.1.1l is now available, including bug and security fixes
