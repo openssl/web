@@ -7,59 +7,216 @@
 
     <div id="main">
       <div id="content">
-	<div class="blog-index">
-	  <article>
-	    <header>
-	      <h1>Platform Policy</h1>
-	    </header>
+        <div class="blog-index">
+          <article>
+            <header>
+              <h1>Platform Policy</h1>
+            </header>
+            <div class="entry-content">
+              <p>Platforms are classified as "primary", "secondary", "community"
+                 and "unadopted". Support for a new platform should only be
+                 added if it is being adopted as a primary, secondary or
+                 community platform.</a></p>
+              <dl>
+                <dt>Primary</dt>
+                <dd>
+                  <em>Definition:</em> A platform that is regularly tested
+                  through project CI on a project owned and managed system
+                  <br/><br/>
 
-	    <div class="entry-content">
+                  New Pull Requests (PRs) should not be merged unless the
+                  primary platforms are showing as "green" in CI. If the CI
+                  breaks for a branch (such as for a stable version or master)
+                  then it should be fixed as a priority.<br/><br/>
+                </dd>
+                <dt>Secondary</dt>
+                <dd>
+                  <em>Definition:</em> A platform that is regularly tested
+                  through project CI on a system that is not owned or managed by
+                  the project. At least one project committer must have access
+                  to the system and be able and willing to support it.<br/><br/>
 
-	      <p><em>NOTE: Work In Progress</em></p>
+                  New Pull Requests (PRs) should avoid introducing new breaks to
+                  CI in secondary platforms where possible but may still be
+                  merged where a resolution is not easily achievable without
+                  access to the platform. If the CI for a branch (such as for a
+                  stable version or master) on a secondary platform breaks, then
+                  a resolution should be sought as soon as is practically
+                  possible and before a release is made from the branch.<br/><br/>
+                </dd>
+                <dt>Community</dt>
+                <dd>
+                  <em>Definition:</em> Platforms that one or more members of the
+                  OpenSSL community have volunteered to support. May or may not
+                  be in project CI. Members of the community providing support
+                  do not have to be committers.<br/><br/>
 
-	      <p>Each platform is classified as:</p>
-	      <dl>
-		<dt>Primary</dt>
-		<dd>
-		  Target(s) on which the majority of OpenSSL
-		  development occurs<br>
+                  Where a community platform is in project CI then new Pull
+                  Requests (PRs) should avoid introducing new breaks to CI on
+                  such platforms where possible but may still be merged where a
+                  resolution is not easily achievable without access to the
+                  platform. If the CI for a branch (such as for a
+                  stable version or master) on a community platform breaks, then
+                  an attempt should be made to contact the community maintainer
+                  to request a fix. In the event that a community platform is
+                  broken in CI for a protacted period then it may be dropped
+                  from CI.<br/>
 
-		  <em>The current primary development platform is
-		    Linux.</em>
-		</dd>
-		<dt>Secondary</dt>
-		<dd>
-		  Targets which at least one team member actively supports, or the
-		  platform is covered by CI and at least one team member has access to
-		  the platform.<br>
+                  If defects are raised that are specific to a community
+                  platform then the community maintainer may be contacted to
+                  help find a resolution. If a community maintainer is
+                  unresponsive, or unable to provide fixes then the platform may
+                  be moved to "unadopted".<br/><br/>
+                </dd>
+                <dt>Unadopted</dt>
+                <dd>
+                  <em>Definition:</em> Platforms that no one has volunteered to
+                  support.<br/><br/>
+                  Support may still be provided for such platforms where
+                  possible without access to the platform itself. Platform
+                  specific issues may be left unresolved where it is not
+                  feasible to find a suitable fix. Support for such platforms
+                  may be removed entirely from the OpenSSL code base in future
+                  releases.
+                </dd>
+              </dl>
+              <p>
+                The current primary platforms are:
 
-		  <em>The current secondary development platforms
-		    are: FreeBSD, Windows (Visual Studio, MinGW), MacOS
-		    X and VMS</em>
-		</dd>
-		<dt>Community</dt>
-		<dd>Targets that one or more members of the OpenSSL
-		  community supports</dd>
-		<dt>Unknown</dt>
-		<dd>Targets that the team doesn't know the status of</dd>
-		    <dt>Deprecated</dt>
-		<dd>Targets that the team plans to remove from the OpenSSL
-		  code base</dd>
-	      </dl>
+                <table summary="Primary Platforms">
+                  <tr>
+                    <th>Target</th>
+                    <th>&nbsp;&nbsp;</th>
+                    <th>O/S</th>
+                    <th>&nbsp;&nbsp;</th>
+                    <th>Architecture</th>
+                    <th>&nbsp;&nbsp;</th>
+                    <th>Toolchain</th>
+                  </tr>
+                  <tr>
+                    <td>linux-x86_64</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>Ubuntu Server 20.04.3</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>x86_64</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>gcc 9.3.0</td>
+                  </tr>
+                  <tr>
+                    <td>BSD-x86_64</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>FreeBSD 13.0</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>x86_64</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>??</td>
+                  </tr>
+                  <tr>
+                    <td>VC-WIN64A</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>Windows 10</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>x86_64</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>Visual Studio 2019 Community Edition</td>
+                  </tr>
+                  <tr>
+                    <td>mingw64</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>Windows 10</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>x86_64</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>MinGW (64 bit) and MSYS2</td>
+                  </tr>
+                  <tr>
+                    <td>darwin64-x86_64</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>Mac OS Big Sur (11)</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>x86_64</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>clang 12.?</td>
+                  </tr>
+                  <tr>
+                    <td>darwin64-arm64</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>Mac OS Big Sur (11)</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>AArch64 (M1)</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>clang 12.?</td>
+                  </tr>
+                </table>
+              </p>
+              <p>
+                The current secondary platforms are:
 
-	    </div>
-	    <footer>
-	      You are here: <a href="/">Home</a>
-	      : <a href="/policies"> Policies</a>
-	      : <a href="">Platform Policy</a>.
-	      <br><a href="/sitemap.txt">Sitemap</a>
-	    </footer>
-	  </article>
-	</div>
-	<!--#include virtual="sidebar.shtml" -->
+                <table summary="Secondary Platforms">
+                  <tr>
+                    <th>Target</th>
+                    <th>&nbsp;&nbsp;</th>
+                    <th>O/S</th>
+                    <th>&nbsp;&nbsp;</th>
+                    <th>Architecture</th>
+                    <th>&nbsp;&nbsp;</th>
+                    <th>Toolchain</th>
+                    <th>&nbsp;&nbsp;</th>
+                    <th>Nominated Committer(s)</th>
+                  </tr>
+                  <tr>
+                    <td>??</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>??</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>??</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>??</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>??</td>
+                  </tr>
+                </table>
+              </p>
+              <p>
+                The current community platforms are:
+
+                <table summary="Community Platforms">
+                  <tr>
+                    <th>Target</th>
+                    <th>&nbsp;&nbsp;</th>
+                    <th>O/S</th>
+                    <th>&nbsp;&nbsp;</th>
+                    <th>Architecture</th>
+                    <th>&nbsp;&nbsp;</th>
+                    <th>Toolchain</th>
+                    <th>&nbsp;&nbsp;</th>
+                    <th>Nominated Community Member(s)</th>
+                  </tr>
+                  <tr>
+                    <td>??</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>OpenVMS 9.1</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>Itanium</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>??</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td>@levitte</td>
+                  </tr>
+                </table>
+              </p>
+            </div>
+            <footer>
+              You are here: <a href="/">Home</a>
+              : <a href="/policies"> Policies</a>
+              : <a href="">Platform Policy</a>.
+              <br><a href="/sitemap.txt">Sitemap</a>
+            </footer>
+          </article>
+        </div>
+        <!--#include virtual="sidebar.shtml" -->
       </div>
     </div>
-
     <!--#include virtual="/inc/footer.shtml" -->
   </body>
 </html>
