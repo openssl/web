@@ -6,7 +6,7 @@ CHECKOUTS = /var/cache/openssl/checkouts
 ##  Snapshot directory
 SNAP = $(CHECKOUTS)/openssl
 ## Where releases are found.
-RELEASEDIR = /var/www/openssl/source
+RELEASEDIR = /srv/ftp/source
 
 ## The OMC repository checkout can be used for dependencies.
 ## By default, we don't assume it, as not everyone has access to it.
