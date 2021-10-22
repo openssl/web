@@ -12,7 +12,8 @@ my @tarballs =
 
 my %series = ();
 foreach(@tarballs) {
-	my ($version, $serie) = /^openssl-((\d+\.\d+\.\d+)[a-z]*)\./;
+    my ($version, $serie) =
+        /^openssl-(?|(([01]\.\d+\.\d+)[a-z]*)|((\d+\.\d+)\.\d+))\./;
 	$series{$serie} = $_;
 }
 my $latest = $series{ (reverse sort keys %series)[0] };

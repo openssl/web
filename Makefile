@@ -332,7 +332,7 @@ $(eval $(call mknews_vulnerability,-$(S),-b $(S))))
 
 source/.htaccess: $(wildcard source/openssl-*.tar.gz) bin/mk-latest
 	@rm -f @?
-	./bin/mk-latest source >$@
+	./bin/mk-latest $(RELEASEDIR) >$@
 source/index.inc: $(wildcard $(RELEASEDIR)/openssl-*.tar.gz) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist $(RELEASEDIR) '' 'openssl-*.tar.gz' >$@
