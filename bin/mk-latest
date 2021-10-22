@@ -24,41 +24,9 @@ print <<"EOF";
 # Instead, edit bin/mk-latest in the master branch of openssl-web.git
 #####
 
-RewriteEngine on
-RewriteBase /source
-# First, rewrite all the 'latest' URLs
-RewriteRule ^latest.tar.gz\$ $latest [L,R=302,NC]
+Redirect "/source/latest.tar.gz" "/source/$latest"
 EOF
 
-foreach (sort keys %series) {
-	my $rule = "openssl-$_-latest.tar.gz";
-	#don't bother: $rule =~ s|\.|\\.|g;
-	my $target = $series{$_};
-	print "RewriteRule ^$rule\$ $target [L,R=302,NC]\n";
-}
-
-print <<\EOF;
-
-# Old distro's are in subdirs.
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(openssl-0\.9\.\d.*) old/0.9.x/$1 [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(openssl-3\.(\d+).*) old/3.$2/$1 [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(openssl-(\d+\.\d+\.\d+).*) old/$2/$1 [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^openssl-(fips.*)  old/fips/openssl-$1 [L]
-
-<Files *.gz.asc>
-    RemoveEncoding .gz
-</Files>
-<Files *.gz.md5>
-    RemoveEncoding .gz
-</Files>
-<Files *.gz.sha1>
-    RemoveEncoding .gz
-</Files>
-<Files *.gz.sha256>
-    RemoveEncoding .gz
-</Files>
+print <<"EOF" foreach (sort keys %series);
+Redirect "/source/openssl-$_-latest.tar.gz" "/source/$series{$_}"
 EOF
