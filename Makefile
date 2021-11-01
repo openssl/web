@@ -350,9 +350,11 @@ source/index.inc: $(wildcard $(RELEASEDIR)/openssl-*.tar.gz) bin/mk-filelist
 # $(1) = release, $(2) = release title
 define mkoldsourceindex
 source/old/$(1)/index.inc: $(wildcard $(RELEASEDIR)/old/$(1)/*.gz) bin/mk-filelist
+	@mkdir -p `dirname $$@`
 	@rm -f $$@
 	./bin/mk-filelist $(RELEASEDIR)/old/$(1) '' '*.gz' > $$@
 source/old/$(1)/index.html: source/old/sub-index.html.tt bin/from-tt
+	@mkdir -p `dirname $$@`
 	@rm -f $$@
 	./bin/from-tt -d source/old/$(1) \
 		      release='$(1)' releasetitle='Old $(2) Releases' \
@@ -367,6 +369,7 @@ endef
 $(foreach S,fips $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsourceindex,$(S),$(patsubst fips,FIPS,$(S)))))
 
 source/old/index.html: source/old/index.html.tt Makefile bin/from-tt
+	@mkdir -p `dirname $@`
 	@rm -f $@
 	./bin/from-tt releases='$(SERIES) $(OLDSERIES2) fips' $<
 
