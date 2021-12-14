@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/python3
 #
 # Convert our XML file to a HTML file for the web page
 # let's replace vulnerabilities.xsl
@@ -35,7 +35,7 @@ def merge_affects(issue,base):
        else:
           alist[-1].append(ver)
        prev = ver
-       if (unicode.isdigit(ver[-1])):   # First version after 1.0.1 is 1.0.1a
+       if (str.isdigit(ver[-1])):   # First version after 1.0.1 is 1.0.1a
            anext = ver + "a"
        elif (ver[-1] == "y"):
            anext = ver[:-1] + "za"    # We ran out of letters once so y->za->zb....
@@ -63,7 +63,7 @@ parser.add_option("-b", "--base", help="only include vulnerabilities for this ma
 
 # We need an output directory not stdout because we might write multiple files
 if not options.input:
-   print "needs input file"
+   print("needs input file")
    parser.print_help()
    exit();
 
@@ -153,5 +153,5 @@ if allissues != "":
 else:
     preface += "No vulnerabilities fixed"
 
-sys.stdout.write(preface.encode('utf-8'))
-
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stdout.write(preface)

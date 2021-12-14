@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/python3
 
 import json, sys
 
@@ -10,13 +10,11 @@ for member in json:
     github = '--'
     for names in member:
         if type(names) == type({}):
-            if names.has_key(u'github'):
-                github = names[u'github']
+            if 'github' in names:
+                github = names['github']
         elif names.find(' ') != -1:
             name = names
     if name and github:
-        name = name.encode('ascii', 'xmlcharrefreplace')
-        github = github.encode('ascii', 'xmlcharrefreplace')
         if github == '--':
             url = 'https://github.com/openssl'
         else:
@@ -26,4 +24,4 @@ for member in json:
 
 members.sort()
 for m in members:
-    print m
+    print(m)
