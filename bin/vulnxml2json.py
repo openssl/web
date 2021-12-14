@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/python3
 #
 # Convert our XML file to a JSON file as accepted by Mitre for CNA purposes
 # as per https://github.com/CVEProject/automation-working-group/blob/master/cve_json_schema/DRAFT-JSON-file-format-v4.md
@@ -7,7 +7,7 @@
 #
 
 from xml.dom import minidom
-import HTMLParser
+from html.parser import HTMLParser
 import simplejson as json
 import codecs
 import re
@@ -34,7 +34,7 @@ parser.add_option("-o", "--outputdir", help="output directory for json file (def
 (options, args) = parser.parse_args()
 
 if not options.input:
-   print "needs input file"
+   print("needs input file")
    parser.print_help()
    exit();
 
@@ -42,7 +42,7 @@ if options.schema:
    try:
       response = urllib.urlopen(options.schema)
    except:
-      print "Problem opening schema: try downloading it manually then specify it using --schema option: %s" % options.schema
+      print(f'Problem opening schema: try downloading it manually then specify it using --schema option: {options.schema}')
       exit()
    schema_doc = json.loads(response.read())
 
@@ -151,17 +151,17 @@ for issue in cvej:
 
     f = codecs.open(options.outputdir+"/"+fn, 'w', 'utf-8')
     f.write(json.dumps(issue, sort_keys=True, indent=4, separators=(',',': ')))
-    print "wrote %s" %(options.outputdir+"/"+fn)
+    print(f'wrote {options.outputdir+"/"+fn}')
     f.close()
 
     try:
        validate(issue, schema_doc)
-       print "%s passed validation" % (fn)
+       print(f'{fn} passed validation')
     except jsonschema.exceptions.ValidationError as incorrect:
        v = Draft4Validator(schema_doc)
        errors = sorted(v.iter_errors(issue), key=lambda e: e.path)
        for error in errors:
-          print "%s did not pass validation: %s" % (fn,str(error.message))
+          print(f'{fn} did not pass validation: {str(error.message)}')
     except NameError:
-       print "%s skipping validation, no schema defined" %(fn)
+       print(f'{fn} skipping validation, no schema defined')
        
