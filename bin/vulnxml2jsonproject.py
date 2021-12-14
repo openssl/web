@@ -23,7 +23,7 @@ def merge_affects(issue,base):
        if (not base or base in version):
            vlist.append(version)
     for ver in sorted(vlist):
-       # print "version %s (last was %s, next was %s)" %(ver,prev,anext)
+       # print(f'version {ver} (last was {prev}, next was {anext})')
        if (ver != anext):
           alist.append([ver])
        elif len(alist[-1]) > 1:
@@ -31,7 +31,7 @@ def merge_affects(issue,base):
        else:
           alist[-1].append(ver)
        prev = ver
-       if (unicode.isdigit(ver[-1])):   # First version after 1.0.1 is 1.0.1a
+       if (str.isdigit(ver[-1])):   # First version after 1.0.1 is 1.0.1a
            anext = ver + "a"
        elif (ver[-1] == "y"):
            anext = ver[:-1] + "za"    # We ran out of letters once so y->za->zb....

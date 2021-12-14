@@ -7,7 +7,7 @@
 #
 
 from xml.dom import minidom
-from html.parser import HTMLParser
+import html
 import simplejson as json
 import codecs
 import re
@@ -40,7 +40,7 @@ if not options.input:
 
 if options.schema:
    try:
-      response = urllib.urlopen(options.schema)
+      response = urllib.request.urlopen(options.schema)
    except:
       print(f'Problem opening schema: try downloading it manually then specify it using --schema option: {options.schema}')
       exit()
@@ -79,7 +79,7 @@ for issue in dom.getElementsByTagName('issue'):
             if desc:
                 desc += " "
             desc += re.sub('<[^<]+?>', '', d.toxml().strip())
-    desc = HTMLParser.HTMLParser().unescape(desc)
+    desc = html.unescape(desc)
     problemtype = "(undefined)"
     if issue.getElementsByTagName('problemtype'):
         problemtype = issue.getElementsByTagName('problemtype')[0].childNodes[0].nodeValue.strip()    
@@ -124,7 +124,7 @@ for issue in dom.getElementsByTagName('issue'):
         
     vv = list()
     for affects in issue.getElementsByTagName('fixed'): # OpenSSL and httpd since April 2018 does it this way
-       text = "Fixed in %s %s (Affected %s)" %(cfg.config['product_name'],affects.getAttribute('version'),cfg.merge_affects(issue,affects.getAttribute("base")))
+       text = f'Fixed in {cfg.config["product_name"]} {affects.getAttribute("version")} (Affected {cfg.merge_affects(issue,affects.getAttribute("base"))})'
        # Let's condense into a list form since the format of this field is 'free text' at the moment, not machine readable (as per mail with George Theall)
        vv.append({"version_value":text})
        # Mitre want the fixed/affected versions in the text too
@@ -132,7 +132,7 @@ for issue in dom.getElementsByTagName('issue'):
 
 #    if issue.getAttribute('fixed'): # httpd used to do it this way
 #        base = ".".join(issue.getAttribute("fixed").split('.')[:-1])+"."
-#        text = "Fixed in %s %s (Affected %s)" %(cfg.config['product_name'],issue.getAttribute('fixed'),cfg.merge_affects(issue,base))
+#        text = f'Fixed in {cfg.config["product_name"]} {cfg.merge_affects(issue,base)}'
 #        vv.append({"version_value":text})
 #        # Mitre want the fixed/affected versions in the text too
 #        desc += " "+text+"."            
