@@ -1607,12 +1607,13 @@ issue.
     <affects base="1.0.2" version="1.0.2f"/>
     <affects base="1.0.2" version="1.0.2g"/>
     <affects base="1.0.2" version="1.0.2h"/>
-    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>    
+    <fixed base="1.0.2" version="1.0.2i" date="20160922"/>
+    <fixed base="1.1.0" version="1.1.0" date="20160825"/>
     <problemtype>cryptographic weakness</problemtype>
     <title>SWEET32 attack on Triple-DES</title>
     <description>
       Because DES (and triple-DES) has only a 64-bit block size,
-      birthday attacks are a real concern. With the ability to run
+      birthday attacks are a real concern. For example, with the ability to run
       Javascript in a browser, it is possible to send enough traffic
       to cause a collision, and then use that information to recover
       something like a session Cookie.
@@ -1634,8 +1635,7 @@ issue.
       treating RC4. It is not compiled by default; you have to use
       “enable-weak-ssl-ciphers” as a config option. Even when those
       ciphers are compiled, triple-DES is only in the “MEDIUM”
-      keyword. In addition, because this is a new release, we also
-      removed it from the “DEFAULT” keyword.
+      keyword. In addition we also removed it from the “DEFAULT” keyword.
     </description>
     <advisory url="https://www.openssl.org/blog/blog/2016/08/24/sweet32/"/>
     <reported source="Karthik Bhargavan and Gaetan Leurent from Inria"/>
