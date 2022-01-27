@@ -154,15 +154,15 @@ man-apropos-$(2): man-pages-$(2)
 endef
 define makemanindexes
 man-index-$(2):
-	./bin/from-tt -d docs/man$(2)/man1 releases='$(SERIES)' release='$(2)' \
+	./bin/from-tt -d docs/man$(2)/man1 releases='$(MANSERIES)' release='$(2)' \
 		      < docs/sub-man1-index.html.tt > docs/man$(2)/man1/index.html
-	./bin/from-tt -d docs/man$(2)/man3 releases='$(SERIES)' release='$(2)' \
+	./bin/from-tt -d docs/man$(2)/man3 releases='$(MANSERIES)' release='$(2)' \
 		      < docs/sub-man3-index.html.tt > docs/man$(2)/man3/index.html
-	./bin/from-tt -d docs/man$(2)/man5 releases='$(SERIES)' release='$(2)' \
+	./bin/from-tt -d docs/man$(2)/man5 releases='$(MANSERIES)' release='$(2)' \
 		      < docs/sub-man5-index.html.tt > docs/man$(2)/man5/index.html
-	./bin/from-tt -d docs/man$(2)/man7 releases='$(SERIES)' release='$(2)' \
+	./bin/from-tt -d docs/man$(2)/man7 releases='$(MANSERIES)' release='$(2)' \
 		      < docs/sub-man7-index.html.tt > docs/man$(2)/man7/index.html
-	./bin/from-tt -d docs/man$(2) releases='$(SERIES)' release='$(2)' \
+	./bin/from-tt -d docs/man$(2) releases='$(MANSERIES)' release='$(2)' \
 		      < docs/sub-index.html.tt > docs/man$(2)/index.html
 endef
 define makemanuals1
@@ -194,15 +194,15 @@ manmaster: man-apropos-master man-index-master
 manpages: $(foreach S,$(MANSERIES),man-apropos-$(S) man-index-$(S))
 
 mancross:
-	./bin/mk-mancross master $(SERIES)
+	./bin/mk-mancross master $(MANSERIES)
 
 docs/manpages.html: docs/manpages.html.tt Makefile bin/from-tt
 	@rm -f $@
-	./bin/from-tt releases='master $(SERIES)' $<
+	./bin/from-tt releases='master $(MANSERIES)' $<
 
 docs/mansidebar.html: docs/mansidebar.html.tt Makefile bin/from-tt
 	@rm -f $@
-	./bin/from-tt releases='master $(SERIES)' $<
+	./bin/from-tt releases='master $(MANSERIES)' $<
 
 ######################################################################
 ##
