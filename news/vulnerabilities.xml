@@ -52,6 +52,7 @@
     <affects base="1.0.2" version="1.0.2x"/>
     <affects base="1.0.2" version="1.0.2y"/>
     <affects base="1.0.2" version="1.0.2za"/>
+    <affects base="1.0.2" version="1.0.2zb"/>
     <fixed base="3.0" version="3.0.1" date="20211214">
       <git hash="3bf7b73ea7123045b8f972badc67ed6878e6c37f"/>
     </fixed>
