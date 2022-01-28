@@ -5,6 +5,7 @@
 # headings.  URL paths must all be absolute.
 Date: Item
 
+28-Jan-2022: <a href="/news/secadv/20220128.txt">Security Advisory</a>: MIPS Carry Propagation Bug</a>
 14-Dec-2021: OpenSSL 3.0.1 is now available, including bug and security fixes
 14-Dec-2021: OpenSSL 1.1.1m is now available, including bug fixes
 08-Dec-2021: Project roadmap dropped, as it needs reworking
