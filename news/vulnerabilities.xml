@@ -8056,6 +8056,10 @@ default and not common.</description>
   <advisory url="/news/secadv/20140605.txt"/>
 </issue>
 
+  <nonissue base="0.9.8" cve="2010-0928">This was not treated as a security issue as it is outside of the OpenSSL threat model</nonissue>
+  <nonissue base="0.9.8" cve="2007-6755" ref="https://marc.info/?l=openssl-announce&amp;m=138747119822324">Not an issue</nonissue>
+  <nonissue base="none" cve="2002-20001" ref="https://github.com/openssl/openssl/issues/17374">We do not consider this to be a vulnerability in OpenSSL</nonissue>
+
   <statement base="none">Note: All OpenSSL versions before 1.1.1 are out of support and no longer receiving updates.  Extended support is available for 1.0.2 from OpenSSL Software Services for premium support customers.</statement>
   <statement base="0.9.6">OpenSSL 0.9.6 is out of support and no longer receiving updates.</statement>
   <statement base="0.9.7">OpenSSL 0.9.7 is out of support and no longer receiving updates.</statement>
@@ -8066,5 +8070,3 @@ default and not common.</description>
   <statement base="1.1.0">OpenSSL 1.1.0 is out of support since 12th September 2019 and no longer receiving updates.</statement>
 
 </security>
-
-

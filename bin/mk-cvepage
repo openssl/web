@@ -100,7 +100,7 @@ for issue in sorted(issues, key=lambda x: (x.getAttribute('public'), x.getElemen
 
     allissues += "<dt>"
     if cve:
-        allissues += "<a href=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-%s\" name=\"CVE-%s\">CVE-%s</a> " %(cve,cve,cve)
+        allissues += "<a href=\"https://cve.org/CVERecord?id=CVE-%s\" name=\"CVE-%s\">CVE-%s</a> " %(cve,cve,cve)
     for adv in issue.getElementsByTagName('advisory'):
         allissues += "<a href=\"%s\">(OpenSSL advisory)</a> " %(adv.getAttribute("url"))
     for sev in issue.getElementsByTagName('impact'):
@@ -153,5 +153,18 @@ if allissues != "":
 else:
     preface += "No vulnerabilities fixed"
 
+nonissues = ""
+for nonissue in dom.getElementsByTagName("nonissue"):
+    if (not options.base or nonissue.getAttribute("base") in (options.base or "none")):
+        cve = "CVE-"+nonissue.getAttribute("cve")
+        ref = nonissue.getAttribute("ref")
+        nonissues += "<li><a href=\"https://cve.org/CVERecord?id=%s\" name=\"%s\">%s</a>: " %(cve,cve,cve)        
+        nonissues += nonissue.firstChild.data.strip()
+        if (ref):
+            nonissues += ": <a href=\""+ref+"\">"+ref+"</a>"
+        nonissues +="</li>"
+if (nonissues != ""):
+    preface += "<h3>Not Vulnerabilities</h3><ul>" + nonissues + "</ul>"
+    
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stdout.write(preface)
