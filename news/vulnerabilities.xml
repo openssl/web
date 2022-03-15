@@ -7,7 +7,107 @@
 
 <!-- The updated attribute should be the same as the first public issue,
      unless an old entry was updated. -->
-<security updated="20220128">
+<security updated="20220315">
+  <issue public="20220315">
+    <impact severity="High"/>
+    <cve name="2022-0778"/>
+    <affects base="3.0" version="3.0.0"/>
+    <affects base="3.0" version="3.0.1"/>
+    <affects base="1.1.1" version="1.1.1"/>
+    <affects base="1.1.1" version="1.1.1a"/>
+    <affects base="1.1.1" version="1.1.1b"/>
+    <affects base="1.1.1" version="1.1.1c"/>
+    <affects base="1.1.1" version="1.1.1d"/>
+    <affects base="1.1.1" version="1.1.1e"/>
+    <affects base="1.1.1" version="1.1.1f"/>
+    <affects base="1.1.1" version="1.1.1g"/>
+    <affects base="1.1.1" version="1.1.1h"/>
+    <affects base="1.1.1" version="1.1.1i"/>
+    <affects base="1.1.1" version="1.1.1j"/>
+    <affects base="1.1.1" version="1.1.1k"/>
+    <affects base="1.1.1" version="1.1.1l"/>
+    <affects base="1.1.1" version="1.1.1m"/>
+    <affects base="1.0.2" version="1.0.2"/>
+    <affects base="1.0.2" version="1.0.2a"/>
+    <affects base="1.0.2" version="1.0.2b"/>
+    <affects base="1.0.2" version="1.0.2c"/>
+    <affects base="1.0.2" version="1.0.2d"/>
+    <affects base="1.0.2" version="1.0.2e"/>
+    <affects base="1.0.2" version="1.0.2f"/>
+    <affects base="1.0.2" version="1.0.2g"/>
+    <affects base="1.0.2" version="1.0.2h"/>
+    <affects base="1.0.2" version="1.0.2i"/>
+    <affects base="1.0.2" version="1.0.2j"/>
+    <affects base="1.0.2" version="1.0.2k"/>
+    <affects base="1.0.2" version="1.0.2l"/>
+    <affects base="1.0.2" version="1.0.2m"/>
+    <affects base="1.0.2" version="1.0.2n"/>
+    <affects base="1.0.2" version="1.0.2o"/>
+    <affects base="1.0.2" version="1.0.2p"/>
+    <affects base="1.0.2" version="1.0.2q"/>
+    <affects base="1.0.2" version="1.0.2r"/>
+    <affects base="1.0.2" version="1.0.2s"/>
+    <affects base="1.0.2" version="1.0.2t"/>
+    <affects base="1.0.2" version="1.0.2u"/>
+    <affects base="1.0.2" version="1.0.2v"/>
+    <affects base="1.0.2" version="1.0.2w"/>
+    <affects base="1.0.2" version="1.0.2x"/>
+    <affects base="1.0.2" version="1.0.2y"/>
+    <affects base="1.0.2" version="1.0.2za"/>
+    <affects base="1.0.2" version="1.0.2zb"/>
+    <affects base="1.0.2" version="1.0.2zc"/>
+    <fixed base="3.0" version="3.0.2" date="20220315">
+      <git hash="a466912611aa6cbdf550cd10601390e587451246"/>
+    </fixed>
+    <fixed base="1.1.1" version="1.1.1n" date="20220315">
+      <git hash="3118eb64934499d93db3230748a452351d1d9a65"/>
+    </fixed>
+    <fixed base="1.0.2" version="1.0.2zd" date="20220315">
+      <git hash="380085481c64de749a6dd25cdf0bcf4360b30f83"/>
+    </fixed>
+    <problemtype>Infinite loop</problemtype>
+    <title>Infinite loop in BN_mod_sqrt() reachable when parsing certificates</title>
+    <description>
+The BN_mod_sqrt() function, which computes a modular square root, contains
+a bug that can cause it to loop forever for non-prime moduli.
+
+Internally this function is used when parsing certificates that contain
+elliptic curve public keys in compressed form or explicit elliptic curve
+parameters with a base point encoded in compressed form.
+
+It is possible to trigger the infinite loop by crafting a certificate that
+has invalid explicit curve parameters.
+
+Since certificate parsing happens prior to verification of the certificate
+signature, any process that parses an externally supplied certificate may thus
+be subject to a denial of service attack. The infinite loop can also be
+reached when parsing crafted private keys as they can contain explicit
+elliptic curve parameters.
+
+Thus vulnerable situations include:
+
+ - TLS clients consuming server certificates
+ - TLS servers consuming client certificates
+ - Hosting providers taking certificates or private keys from customers
+ - Certificate authorities parsing certification requests from subscribers
+ - Anything else which parses ASN.1 elliptic curve parameters
+
+Also any other applications that use the BN_mod_sqrt() where the attacker
+can control the parameter values are vulnerable to this DoS issue.
+
+In the OpenSSL 1.0.2 version the public key is not parsed during initial
+parsing of the certificate which makes it slightly harder to trigger
+the infinite loop. However any operation which requires the public key
+from the certificate will trigger the infinite loop. In particular the
+attacker can use a self-signed certificate to trigger the loop during
+verification of the certificate signature.
+
+This issue affects OpenSSL versions 1.0.2, 1.1.1 and 3.0.  It was
+addressed in the releases of 1.1.1n and 3.0.2 on the 15th March 2022.
+    </description>
+    <advisory url="/news/secadv/20220315.txt"/>
+    <reported source="Tavis Ormandy (Google)"/>
+  </issue>
   <issue public="20220128">
     <impact severity="Moderate"/>
     <cve name="2021-4160"/>
