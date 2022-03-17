@@ -56,11 +56,6 @@ FUTURESERIES=
 SIMPLE = newsflash.inc \
 	 community/committers.inc community/otc.inc \
 	 community/omc.inc community/omc-alumni.inc \
-	 docs/faq.inc docs/fips.inc \
-	 docs/OpenSSLStrategicArchitecture.html \
-	 docs/OpenSSL300Design.html \
-	 docs/manpages.html \
-	 docs/mansidebar.html \
 	 roadmap.html \
          news/changelog.html \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
@@ -75,6 +70,11 @@ SIMPLE = newsflash.inc \
 	 source/old/index.html
 SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
 
+SIMPLEDOCS = docs/faq.inc docs/fips.inc \
+	     docs/OpenSSLStrategicArchitecture.html \
+	     docs/OpenSSL300Design.html \
+	     docs/manpages.html \
+	     docs/mansidebar.html
 
 .SUFFIXES: .md .html
 
@@ -82,14 +82,18 @@ SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$
 	@rm -f $@
 	./bin/md-to-html5 $<
 
-all: suball manmaster mancross sitemap akamai-purge
+all: suball subdocs manmaster mancross sitemap akamai-purge
 
 suball: $(SIMPLE) $(SRCLISTS)
 
-relupd: suball manpages mancross sitemap akamai-purge
+relupd: suball docs sitemap akamai-purge
+
+docs: subdocs manpages mancross
+
+subdocs: $(SIMPLEDOCS)
 
 clean:
-	rm -f $(SIMPLE) $(SRCLISTS)
+	rm -f $(SIMPLE) $(SIMPLEDOCS) $(SRCLISTS)
 
 akamai-purge:
 	./bin/purge-one-hour
@@ -205,6 +209,13 @@ docs/mansidebar.html: docs/mansidebar.html.tt Makefile bin/from-tt
 	@rm -f $@
 	./bin/from-tt releases='master $(MANSERIES)' $<
 
+docs/faq.inc: $(wildcard docs/faq-[0-9]-*.txt) bin/mk-faq
+	@rm -f $@
+	./bin/mk-faq docs/faq-[0-9]-*txt >$@
+docs/fips.inc: $(wildcard docs/fips/*) bin/mk-filelist
+	@rm -f $@
+	./bin/mk-filelist docs/fips fips/ '*' >$@
+
 ######################################################################
 ##
 ##  $(SIMPLE) -- SIMPLE GENERATED FILES
@@ -229,13 +240,6 @@ community/omc.inc: $(PERSONDB)
 	./bin/mk-omc -n -e -l -p -t 'OMC Members' omc omc-inactive > $@
 community/omc-alumni.inc: $(PERSONDB)
 	./bin/mk-omc -n -l -t 'OMC Alumni' omc-alumni omc-emeritus > $@
-
-docs/faq.inc: $(wildcard docs/faq-[0-9]-*.txt) bin/mk-faq
-	@rm -f $@
-	./bin/mk-faq docs/faq-[0-9]-*txt >$@
-docs/fips.inc: $(wildcard docs/fips/*) bin/mk-filelist
-	@rm -f $@
-	./bin/mk-filelist docs/fips fips/ '*' >$@
 
 news/changelog.inc: news/changelog.md bin/mk-changelog
 	@rm -f $@
