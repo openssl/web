@@ -53,7 +53,7 @@ MANSERIES=$(MANSERIES3) $(MANSERIES1)
 FUTURESERIES=
 
 # All simple generated files.
-SIMPLE = newsflash.inc sitemap.txt \
+SIMPLE = newsflash.inc \
 	 community/committers.inc community/otc.inc \
 	 community/omc.inc community/omc-alumni.inc \
 	 docs/faq.inc docs/fips.inc \
@@ -81,11 +81,11 @@ SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$
 	@rm -f $@
 	./bin/md-to-html5 $<
 
-all: suball manmaster mancross akamai-purge
+all: suball manmaster mancross sitemap akamai-purge
 
 suball: $(SIMPLE) $(SRCLISTS)
 
-relupd: suball manpages mancross akamai-purge
+relupd: suball manpages mancross sitemap akamai-purge
 
 clean:
 	rm -f $(SIMPLE) $(SRCLISTS)
