@@ -66,8 +66,8 @@ SIMPLE = newsflash.inc \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).inc) \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).html) \
 	 policies/glossary.html \
-	 policies/general/index.inc \
-	 policies/technical/index.inc \
+	 policies/general/index.html \
+	 policies/technical/index.html \
 	 source/.htaccess \
 	 source/index.inc \
 	 source/old/index.html
@@ -239,6 +239,8 @@ technical-policies: $(TECHNICAL_POLICIES) bin/md-to-html5 Makefile
 	done
 policies/technical/index.inc: technical-policies bin/mk-md-titlelist Makefile
 	./bin/mk-md-titlelist '' $(TECHNICAL_POLICIES) > $@
+policies/technical/index.html: \
+	policies/technical/index.md policies/technical/index.inc
 
 .PHONY: general-policies
 general-policies: $(GENERAL_POLICIES) bin/md-to-html5 Makefile
@@ -249,6 +251,8 @@ general-policies: $(GENERAL_POLICIES) bin/md-to-html5 Makefile
 	done
 policies/general/index.inc: general-policies bin/mk-md-titlelist Makefile
 	./bin/mk-md-titlelist '' $(GENERAL_POLICIES) > $@
+policies/general/index.html: \
+	policies/general/index.md policies/general/index.inc
 
 policies/glossary.html: $(GLOSSARY) bin/md-to-html5 Makefile
 	./bin/md-to-html5 -o policies/glossary.html < "$(GLOSSARY)"
