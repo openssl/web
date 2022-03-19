@@ -18,9 +18,6 @@
       <li>
         <a href="../secpolicy.html">Security Policy</a>
       </li>
-      <li>
-        <a href="../committers.html">Policy for Committers</a>
-      </li>
       <!--#include virtual="index.inc"-->
     </ul>
   </section>
