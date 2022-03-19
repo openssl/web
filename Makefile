@@ -65,6 +65,8 @@ SIMPLE = newsflash.inc \
 	 news/vulnerabilities.html \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).inc) \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).html) \
+	 policies/general/index.inc \
+	 policies/technical/index.inc \
 	 source/.htaccess \
 	 source/index.inc \
 	 source/old/index.html
@@ -75,6 +77,11 @@ SIMPLEDOCS = docs/faq.inc docs/fips.inc \
 	     docs/OpenSSL300Design.html \
 	     docs/manpages.html \
 	     docs/mansidebar.html
+
+all_GENERAL_POLICIES=$(wildcard $(CHECKOUTS)/general-policies/policies/*.md)
+all_TECHNICAL_POLICIES=$(wildcard $(CHECKOUTS)/technical-policies/policies/*.md)
+GENERAL_POLICIES=$(filter-out $(CHECKOUTS)/general-policies/policies/README.md,$(all_GENERAL_POLICIES))
+TECHNICAL_POLICIES=$(filter-out $(CHECKOUTS)/general-policies/policies/README.md,$(all_TECHNICAL_POLICIES))
 
 .SUFFIXES: .md .html
 
@@ -215,6 +222,31 @@ docs/faq.inc: $(wildcard docs/faq-[0-9]-*.txt) bin/mk-faq
 docs/fips.inc: $(wildcard docs/fips/*) bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist docs/fips fips/ '*' >$@
+
+######################################################################
+##
+##  Policy page building section
+##
+
+.PHONY: technical-policies
+technical-policies: $(TECHNICAL_POLICIES) bin/md-to-html5 Makefile
+	for x in $(TECHNICAL_POLICIES); do \
+		d=$$(dirname $$x); \
+		f=$$(basename $$x .md); \
+		./bin/md-to-html5 -o policies/technical/"$$f".html < $$x; \
+	done
+policies/technical/index.inc: technical-policies bin/mk-md-titlelist Makefile
+	./bin/mk-md-titlelist '' $(TECHNICAL_POLICIES) > $@
+
+.PHONY: technical-policies
+general-policies: $(GENERAL_POLICIES) bin/md-to-html5 Makefile
+	for x in $(GENERAL_POLICIES); do \
+		d=$$(dirname "$$x"); \
+		f=$$(basename "$$x" .md); \
+		./bin/md-to-html5 -o policies/general/"$$f".html < "$$x"; \
+	done
+policies/general/index.inc: general-policies bin/mk-md-titlelist Makefile
+	./bin/mk-md-titlelist '' $(GENERAL_POLICIES) > $@
 
 ######################################################################
 ##
