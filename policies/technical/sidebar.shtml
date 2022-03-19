@@ -1,0 +1,10 @@
+<!-- sidebar.inc -->
+<aside class="sidebar">
+  <section>
+    <h1><a href=".">Technical Policies</a></h1>
+    <ul>
+      <!--#include virtual="index.inc"-->
+    </ul>
+  </section>
+</aside>
+<!-- end -->
