@@ -1,0 +1,40 @@
+#! /usr/bin/perl
+
+use strict;
+use warnings;
+use File::Basename;
+
+die "Missing args\n" if $#ARGV < 1;
+my $URLBASE = $ARGV[0]; shift;
+my @L = @ARGV;
+
+my %entries = ();
+foreach my $l (@L) {
+    my $filename = basename($l, '.md') . '.html';
+    open my $fh, '<', $l
+        or die "Trying to read $l: $!\n";
+
+    my $title = $filename;      # Default to file name if no title found
+    my $lastline;
+    while (<$fh>) {
+        s|\R$||;                # Better chomp
+        if (m|^# (.*)|) {
+            $title = $1;
+            last;
+        } elsif (m|^=+$|) {
+            $title = $lastline;
+            last;
+        }
+        $lastline=$_;
+    }
+    die "Undefined title in $l"
+        unless defined $title;
+    die "Duplicate title '$title' in $entries{$title} and $filename"
+        if defined $entries{$title};
+    $entries{$title} = $filename;
+    close $fh;
+}
+
+foreach my $t (sort keys %entries) {
+    print "<li><a href='$URLBASE$entries{$t}'>$t</a></li>\n";
+}
