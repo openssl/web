@@ -235,7 +235,10 @@ technical-policies: $(TECHNICAL_POLICIES) bin/md-to-html5 Makefile
 	for x in $(TECHNICAL_POLICIES); do \
 		d=$$(dirname $$x); \
 		f=$$(basename $$x .md); \
-		./bin/md-to-html5 -o policies/technical/"$$f".html < $$x; \
+		cat "$$x" \
+			| sed -E -e 's!https?://github\.com/openssl/(general|technical)-policies/blob/master/policies/(.*)\.md!../\1/\2.html!' \
+			| sed -E -e 's!\.\./general/glossary\.html!../glossary.html!' \
+			| ./bin/md-to-html5 -o policies/technical/"$$f".html; \
 	done
 policies/technical/index.inc: technical-policies bin/mk-md-titlelist Makefile
 	./bin/mk-md-titlelist '' $(TECHNICAL_POLICIES) > $@
@@ -247,7 +250,10 @@ general-policies: $(GENERAL_POLICIES) bin/md-to-html5 Makefile
 	for x in $(GENERAL_POLICIES); do \
 		d=$$(dirname "$$x"); \
 		f=$$(basename "$$x" .md); \
-		./bin/md-to-html5 -o policies/general/"$$f".html < "$$x"; \
+		cat "$$x" \
+			| sed -E -e 's!https?://github\.com/openssl/(general|technical)-policies/blob/master/policies/(.*)\.md!../\1/\2.html!' \
+			| sed -E -e 's!\.\./general/glossary\.html!../glossary.html!' \
+			| ./bin/md-to-html5 -o policies/general/"$$f".html; \
 	done
 policies/general/index.inc: general-policies bin/mk-md-titlelist Makefile
 	./bin/mk-md-titlelist '' $(GENERAL_POLICIES) > $@
@@ -255,7 +261,10 @@ policies/general/index.html: \
 	policies/general/index.md policies/general/index.inc
 
 policies/glossary.html: $(GLOSSARY) bin/md-to-html5 Makefile
-	./bin/md-to-html5 -o policies/glossary.html < "$(GLOSSARY)"
+	cat "$(GLOSSARY)" \
+		| sed -E -e 's!https?://github\.com/openssl/(general|technical)-policies/blob/master/policies/(.*)\.md!\1/\2.html!' \
+		| sed -E -e 's!general/glossary\.html!glossary.html!' \
+		| ./bin/md-to-html5 -o policies/glossary.html
 
 ######################################################################
 ##
