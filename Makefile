@@ -65,6 +65,7 @@ SIMPLE = newsflash.inc \
 	 news/vulnerabilities.html \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).inc) \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).html) \
+	 policies/glossary.html \
 	 policies/general/index.inc \
 	 policies/technical/index.inc \
 	 source/.htaccess \
@@ -78,9 +79,10 @@ SIMPLEDOCS = docs/faq.inc docs/fips.inc \
 	     docs/manpages.html \
 	     docs/mansidebar.html
 
+GLOSSARY=$(CHECKOUTS)/general-policies/policies/glossary.md
 all_GENERAL_POLICIES=$(wildcard $(CHECKOUTS)/general-policies/policies/*.md)
 all_TECHNICAL_POLICIES=$(wildcard $(CHECKOUTS)/technical-policies/policies/*.md)
-GENERAL_POLICIES=$(filter-out $(CHECKOUTS)/general-policies/policies/README.md,$(all_GENERAL_POLICIES))
+GENERAL_POLICIES=$(filter-out $(CHECKOUTS)/general-policies/policies/README.md $(GLOSSARY),$(all_GENERAL_POLICIES))
 TECHNICAL_POLICIES=$(filter-out $(CHECKOUTS)/technical-policies/policies/README.md,$(all_TECHNICAL_POLICIES))
 
 .SUFFIXES: .md .html
@@ -247,6 +249,9 @@ general-policies: $(GENERAL_POLICIES) bin/md-to-html5 Makefile
 	done
 policies/general/index.inc: general-policies bin/mk-md-titlelist Makefile
 	./bin/mk-md-titlelist '' $(GENERAL_POLICIES) > $@
+
+policies/glossary.html: $(GLOSSARY) bin/md-to-html5 Makefile
+	./bin/md-to-html5 -o policies/glossary.html < "$(GLOSSARY)"
 
 ######################################################################
 ##
