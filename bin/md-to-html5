@@ -161,7 +161,10 @@ for f in "$@"; do
 	fi
     ) | (
 	cd $dir
-	pandoc -t html5 --template="$template" \
+	pandoc -t html5 -f markdown --template="$template" \
+               --tab-stop=8 --base-header-level=2 \
+               -M author-meta='OpenSSL Foundation, Inc.' \
+               -M lang=en \
 	       -M pagetitle="$title" \
 	       $def_isindex -M top="$top"
     ) | (

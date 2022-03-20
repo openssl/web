@@ -1,0 +1,38 @@
+<header role="banner">
+    <hgroup>
+        <h1>
+            <a href="$top$">
+                <span id="header-open-text">Open</span><span id="header-ssl-text">SSL</span>
+            </a>
+        </h1>
+        <h2>Cryptography and SSL/TLS Toolkit</h2>
+    </hgroup>
+</header>
+
+<nav role="navigation">
+    <form action="https://www.google.com/search" method="get">
+        <fieldset role="search">
+            <input type="hidden" name="sitesearch" value="www.openssl.org" />
+            <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+    </form>
+
+    <ul class="main-navigation">
+        <li><a href="$top$" title="Home page">Home</a></li>
+        <li><a href="$top$blog/" title="Team blog">Blog</a></li>
+        <li><a href="$top$source/" title="Source code">Downloads</a></li>
+        <li><a href="$top$docs/" title="FAQ, FIPS, manpages, ...">Docs</a></li>
+        <li><a href="$top$news/" title="Latest information">News</a></li>
+        <li><a href="$top$policies/" title="How we operate">Policies</a></li>
+        <li><a href="$top$community/" title="Blog, bugs, email, ...">Community</a></li>
+        <li><a href="$top$support/" title="Commercial support and contracting">Support</a></li>
+    </ul>
+</nav>
+
+<div id="main">
+    <div id="content">
+        <div class="blog-index">
+            <article>
+$if(state)$
+                <span class="state">$state$</span>
+$endif$

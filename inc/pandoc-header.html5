@@ -1,0 +1,34 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+<link rel="canonical" href="https://www.openssl.org/">
+<link rel="icon" href="$top$favicon.ico">
+<link rel="stylesheet" type="text/css"
+      href="$top$inc/screen.css" media="screen, projection">
+
+<script src="$top$inc/modernizr-2.0.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="./inc/libs/jquery-3.5.1.min.js"%3E%3C/script%3E'))</script>
+<script type="text/javascript" src="$top$inc/octopress.js"></script>
+
+<link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic">
+<link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic">
+
+<!--[if lt IE 9]>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<style type="text/css">
+ .state {
+     position: fixed;
+     color: rgba(0,0,0,0.025);
+     font-family: sans-serif;
+     font-size: 25vh;
+     transform-origin: right top;
+     transform: rotate(-45deg);
+     z-index: 100;
+ }
+</style>
