@@ -1,0 +1,56 @@
+#! /usr/bin/perl
+
+use strict;
+use warnings;
+use File::Basename;
+
+my $debug = $ENV{DEBUG};
+
+# $ARGV[0] holds the keyword for the output markup we make a template for.
+# The template itself is read from stdin, and the modified template is written
+# to stdout.
+
+local $/;                       # Slurp mode
+my $here = dirname($0);
+my $language = $ARGV[0] // 'html5';
+
+# Find template partials to inject
+my %partials =
+    ( header => { filename => "$here/../inc/pandoc-header.$language" },
+      prologue => { filename => "$here/../inc/pandoc-body-prologue.$language" },
+      epilogue => { filename => "$here/../inc/pandoc-body-epilogue.$language" } );
+foreach (keys %partials) {
+    if (-f $partials{$_}->{filename}) {
+        print STDERR "DEBUG: there is a $_\n" if $debug;
+        open my $fh, '<', $partials{$_}->{filename}
+            or die "Trying to read $partials{$_}->{filename}: $!";
+        $partials{$_}->{contents} = <$fh>;
+        close $fh;
+    }
+}
+
+local $_ = <STDIN>;             # Slurp STDIN
+
+# Inject extra header code, before the original template's 'header-include'
+# section
+if (defined $partials{header}->{contents}) {
+    print STDERR "DEBUG: injecting header\n" if $debug;
+    s|(\$for\(header-includes\)\$\s*\$header-includes\$\s*\$endfor\$)|$partials{header}->{contents}\n$1|;
+}
+
+# Inject our body prologue, before the original template's 'include-before'
+# section, which is immediately after the <body> tag.
+if (defined $partials{prologue}->{contents}) {
+    print STDERR "DEBUG: injecting prologue\n" if $debug;
+    s|(\$for\(include-before\)\$\s*\$include-before\$\s*\$endfor\$)|$partials{prologue}->{contents}\n$1|;
+}
+
+# Inject our body epilogue, after the original template's 'include-after'
+# section, which is immediately before the </body> tag end.
+if (defined $partials{epilogue}->{contents}) {
+    print STDERR "DEBUG: injecting epilogue\n" if $debug;
+    s|(\$for\(include-after\)\$\s*\$include-after\$\s*\$endfor\$)|$1\n$partials{epilogue}->{contents}|;
+}
+
+# print the result to STDOUT
+print;

@@ -113,6 +113,14 @@ simple: all
 generated: all
 rebuild: all
 
+# For our use of pandoc for full documents, we create a template suitable
+# for us.
+inc/pandoc-template.html5: inc/pandoc-header.html5 inc/pandoc-body-prologue.html5 inc/pandoc-body-epilogue.html5 bin/mk-pandoc-template Makefile
+	pandoc --print-default-template=html5 \
+		| ./bin/mk-pandoc-template html5 > $@
+# Make bin/md-to-html5 depend on inc/pandoc-template.html5
+bin/md-to-html5: inc/pandoc-template.html5
+
 ######################################################################
 ##
 ##  Man-page building section

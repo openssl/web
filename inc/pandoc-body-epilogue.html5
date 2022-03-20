@@ -1,0 +1,32 @@
+                <footer>
+                    You are here:
+$if(breadcrumbs)$
+                    $breadcrumbs$
+$endif$
+$if(is-index)$
+$else$
+                    : <a href="">$title$</a>
+$endif$
+                    <br/><a href="$top$sitemap.txt">Sitemap</a>
+                </footer>
+            </article>
+        </div>
+        <aside class="sidebar">
+            <section>
+$if(sidebar)$
+                $sidebar$
+$endif$
+            </section>
+        </aside>
+    </div>
+</div>
+
+<footer role="contentinfo">
+    <p>
+        Please report problems with this website to webmaster at openssl.org.
+    </p>
+    <p>
+        Copyright &copy; 1999-2021, OpenSSL Project Authors.
+        All Rights Reserved.
+    </p>
+</footer>
