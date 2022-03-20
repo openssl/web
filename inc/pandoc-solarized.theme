@@ -1,0 +1,113 @@
+{
+    "text-color": "#839496",
+    "line-number-color": "#839496",
+    "line-number-background-color": null,
+    "text-styles": {
+        "Other": {
+            "text-color": "#839496"
+        },
+        "Comment": {
+            "text-color": "#586e75",
+            "italic": true
+        },
+        "BaseN": {
+            "text-color": "#2aa198"
+        },
+        "Float": {
+            "text-color": "#2aa198"
+        },
+        "Constant": {
+            "text-color": "#2aa198"
+        },
+        "String": {
+            "text-color": "#2aa198"
+        },
+        "VerbatimString": {
+            "text-color": "#2aa198"
+        },
+        "Documentation": {
+            "text-color": "#2aa198"
+        },
+        "Char": {
+            "text-color": "#d33682"
+        },
+        "DecVal": {
+            "text-color": "#2aa198"
+        },
+        "Information": {
+            "text-color": "#2aa198",
+            "bold": true,
+            "italic": true
+        },
+
+        "Function": {
+            "text-color": "#268bd2",
+            "bold": true
+        },
+        "Variable": {
+            "text-color": "#268bd2"
+        },
+        "BuiltIn": {
+            "text-color": "#268bd2"
+        },
+        "Attribute": {
+            "text-color": "#268bd2"
+        },
+        "Extension": {
+            "text-color": null
+        },
+
+        "Keyword": {
+            "text-color": "#859900",
+            "bold": true
+        },
+        "Operator": {
+            "text-color": "#859900",
+            "bold": true
+        },
+        "ControlFlow": {
+            "text-color": "#859900",
+            "bold": true
+        },
+
+        "Preprocessor": {
+            "text-color": "#cb4b16"
+        },
+
+        "DataType": {
+            "text-color": "#b58900"
+        },
+
+        "CommentVar": {
+            "text-color": "#dc322f",
+            "bold": true
+        },
+        "SpecialString": {
+            "text-color": "#dc322f"
+        },
+        "SpecialChar": {
+            "text-color": "#dc322f"
+        },
+        "Annotation": {
+            "text-color": "#dc322f"
+        },
+
+
+        "Error": {
+            "text-color": "#dc322f",
+            "bold": true
+        },
+        "Warning": {
+            "text-color": "#dc322f",
+            "bold": true,
+            "italic": true
+        },
+        "Alert": {
+            "text-color": "#d33682",
+            "bold": true
+        },
+        "Import": {
+            "text-color": null
+        }
+    }
+}
