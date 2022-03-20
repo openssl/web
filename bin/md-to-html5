@@ -3,7 +3,13 @@
 HERE=$(cd $(dirname $0); pwd)
 THIS=$(basename $0)
 
+# Our HTML5 template, produced from the default pandoc template with some
+# massaging by 'mk-pandoc-template'.
 template="$HERE/../inc/pandoc-template.html5"
+
+# Use the solarized highlight theme, since that's what we use in the blog
+# See https://pandoc.org/MANUAL.html#syntax-highlighting
+highlightstyle="$HERE/../inc/pandoc-solarized.theme"
 
 ######################################################################
 #
@@ -163,6 +169,7 @@ for f in "$@"; do
     ) | (
 	cd $dir
 	pandoc -t html5 -f markdown --template="$template" \
+               --highlight-style="$highlightstyle" \
                --tab-stop=8 --base-header-level=2 \
                -M author-meta='OpenSSL Foundation, Inc.' \
                -M lang=en \
