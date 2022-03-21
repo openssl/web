@@ -61,6 +61,7 @@ SIMPLE = newsflash.inc \
 	 docs/OpenSSL300Design.html \
 	 docs/manpages.html \
 	 docs/mansidebar.html \
+	 roadmap.html \
          news/changelog.html \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
