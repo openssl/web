@@ -82,7 +82,7 @@ SIMPLEDOCS = docs/faq.inc docs/fips.inc \
 	@rm -f $@
 	./bin/md-to-html5 $<
 
-all: suball docs sitemap akamai-purge
+all: suball manmaster mancross sitemap akamai-purge
 
 suball: $(SIMPLE) $(SRCLISTS)
 
