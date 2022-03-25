@@ -83,7 +83,7 @@ GLOSSARY=$(CHECKOUTS)/general-policies/policies/glossary.md
 all_GENERAL_POLICIES=$(wildcard $(CHECKOUTS)/general-policies/policies/*.md)
 all_TECHNICAL_POLICIES=$(wildcard $(CHECKOUTS)/technical-policies/policies/*.md)
 GENERAL_POLICIES=$(filter-out $(CHECKOUTS)/general-policies/policies/README.md $(GLOSSARY),$(all_GENERAL_POLICIES))
-TECHNICAL_POLICIES=$(filter-out $(CHECKOUTS)/general-policies/policies/README.md,$(all_TECHNICAL_POLICIES))
+TECHNICAL_POLICIES=$(filter-out $(CHECKOUTS)/technical-policies/policies/README.md,$(all_TECHNICAL_POLICIES))
 
 .SUFFIXES: .md .html
 
