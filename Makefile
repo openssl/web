@@ -253,7 +253,7 @@ policies/technical/index.inc: technical-policies bin/mk-md-titlelist Makefile
 policies/technical/index.html: \
 	policies/technical/index.md policies/technical/index.inc
 
-.PHONY: technical-policies
+.PHONY: general-policies
 general-policies: $(GENERAL_POLICIES) bin/md-to-html5 Makefile
 	for x in $(GENERAL_POLICIES); do \
 		d=$$(dirname "$$x"); \
