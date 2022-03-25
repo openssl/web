@@ -1,9 +1,5 @@
 ---
 title: OpenSSL Technical Policies
-subtitle: |
-    First issued 30th September 2020
-    <br />
-    Moved to GitHub Nov 2021
 ---
 These are the technical policies and procedures established by the OTC
 in accordance with the [project bylaws].
