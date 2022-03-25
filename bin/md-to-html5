@@ -37,9 +37,10 @@ option is mandatory.
 In usage 2, the templates are read from the files given as argument, and
 the processing result for each of them is written to a corresponding file
 without the '.md' suffix.  All given file names must have the '.md' suffix.
+In this usage, the --output option is forbidden.
 
-In both usages, one can also set template variables with with the form
-key=value.  They must come before any file name."
+In both usages, one can also set template variables with the form key=value.
+They must come before any file name."
 
 # Standard getopt calling sequence
 if ! TEMP=$(getopt -o "$shortopts" --long "$longopts" -n $THIS -- "$@"); then
