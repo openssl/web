@@ -12,6 +12,7 @@ Redirect permanent /licenses/ /policies/cla.html
 Redirect permanent  /.well-known/acme-challenge/MX5CvUJNvymcKf22SNORcfjGk4oGQyIWJiBc_johfYo http://dcv.akamai.com/.well-known/acme-challenge/MX5CvUJNvymcKf22SNORcfjGk4oGQyIWJiBc_johfYo
 
 Redirect permanent /snapshot /source/snapshot
+Redirect permanent /policies/codingstyle.html /policies/technical/coding-style.html
 
 <Files *.md5>
 ForceType application/binary
