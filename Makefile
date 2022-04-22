@@ -293,7 +293,7 @@ community/committers.inc: $(PERSONDB)
 	@rm -f Members
 
 community/otc.inc: $(PERSONDB)
-	./bin/mk-omc -n -t 'OTC Members' otc otc-inactive > $@
+	./bin/mk-omc -n -p -t 'OTC Members' otc otc-inactive > $@
 community/omc.inc: $(PERSONDB)
 	./bin/mk-omc -n -e -l -p -t 'OMC Members' omc omc-inactive > $@
 community/omc-alumni.inc: $(PERSONDB)
