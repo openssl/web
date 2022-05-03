@@ -5,6 +5,9 @@
 # headings.  URL paths must all be absolute.
 Date: Item
 
+03-May-2022: <a href="/news/secadv/20220503.txt">Security Advisory</a>: two moderate and two low severity fixes</a>
+03-May-2022: OpenSSL 3.0.3 is now available, including bug and security fixes
+03-May-2022: OpenSSL 1.1.1o is now available, including bug and security fixes
 15-Mar-2022: <a href="/news/secadv/20220315.txt">Security Advisory</a>: one high severity fix</a>
 15-Mar-2022: OpenSSL 3.0.2 is now available, including bug and security fixes
 15-Mar-2022: OpenSSL 1.1.1n is now available, including bug and security fixes
