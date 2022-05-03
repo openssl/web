@@ -15,11 +15,11 @@ of the script.
 Use of the c_rehash script is considered obsolete and should be replaced
 by the OpenSSL rehash command line tool.
 
-This issue affects OpenSSL versions 1.0.2, 1.1.1 and 3.0.0.
+This issue affects OpenSSL versions 1.0.2, 1.1.1 and 3.0.
 
 OpenSSL 1.0.2 users should upgrade to 1.0.2ze (premium support customers only)
 OpenSSL 1.1.1 users should upgrade to 1.1.1o
-OpenSSL 3.0.0 users should upgrade to 3.0.3
+OpenSSL 3.0 users should upgrade to 3.0.3
 
 This issue was reported to OpenSSL on the 2nd April 2022.  It was found by
 Elison Niven of Sophos.  The fix was developed by Tomas Mraz from OpenSSL.
