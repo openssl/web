@@ -299,7 +299,7 @@ community/omc.inc: $(PERSONDB)
 community/omc-alumni.inc: $(PERSONDB)
 	./bin/mk-omc -n -l -t 'OMC Alumni' omc-alumni omc-emeritus > $@
 
-news/changelog.inc: news/changelog.md bin/mk-changelog
+news/changelog.inc: news/changelog.txt bin/mk-changelog
 	@rm -f $@
 	(echo 'Table of contents'; sed -e '1,/^OpenSSL Releases$$/d' < $<) \
 		| pandoc -t html5 -f commonmark | ./bin/post-process-html5 >$@
@@ -321,9 +321,14 @@ news/$(1): $(CHECKOUTS)/$(2)
 	cp $$? $$@
 endef
 
-# Create the target 'news/changelog.md', taking the source from
+# Create the target 'news/changelog.txt', taking the source from
 # $(CHECKOUTS)/openssl/CHANGES.md
-$(eval $(call mknews_changelogtxt,changelog.md,openssl/CHANGES.md))
+# We use the .txt extension for multiple purposes:
+# 1. So the web server maps to the MIME type text/plain
+# 2. To ensure there's no need to publish any .md file (since they're all
+#    supposed to be used to generate .html files)
+# 3. Because it was changelog.txt before, a well known target.  Why change it?
+$(eval $(call mknews_changelogtxt,changelog.txt,openssl/CHANGES.md))
 
 # Create the target 'news/clxy.md' for all releases from 3.0 and on, taking
 # the source from $(CHECKOUTS)/openssl-x.y/CHANGES.md
