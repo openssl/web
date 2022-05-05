@@ -53,10 +53,19 @@ MANSERIES=$(MANSERIES3) $(MANSERIES1)
 FUTURESERIES=
 
 # All simple generated files.
-SIMPLE = newsflash.inc \
+
+# The H_ variables hold renderings of .md files present in the local
+# repository.  This does not include .md files taken from other repositories,
+# they have their own special handling.
+H_TOP = $(addsuffix .html,$(basename $(shell git ls-files -- *.md)))
+H_POLICIES = $(addsuffix .html,\
+               $(basename $(shell git ls-files -- policies/general/*.md \
+                                                  policies/technical/*.md)))
+
+SIMPLE = $(H_TOP) \
+	 newsflash.inc \
 	 community/committers.inc community/otc.inc \
 	 community/omc.inc community/omc-alumni.inc \
-	 roadmap.html \
          news/changelog.html \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
@@ -65,9 +74,8 @@ SIMPLE = newsflash.inc \
 	 news/vulnerabilities.html \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).inc) \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).html) \
+	 $(H_POLICIES) \
 	 policies/glossary.html \
-	 policies/general/index.html \
-	 policies/technical/index.html \
 	 source/.htaccess \
 	 source/index.inc \
 	 source/old/index.html
@@ -251,7 +259,8 @@ technical-policies: $(TECHNICAL_POLICIES) bin/md-to-html5
 policies/technical/index.inc: technical-policies bin/mk-md-titlelist Makefile
 	./bin/mk-md-titlelist '' $(TECHNICAL_POLICIES) > $@
 policies/technical/index.html: \
-	policies/technical/index.md policies/technical/index.inc
+	policies/technical/index.md policies/technical/index.inc \
+	policies/technical/dirdata.yaml
 
 .PHONY: general-policies
 general-policies: $(GENERAL_POLICIES) bin/md-to-html5
@@ -266,9 +275,10 @@ general-policies: $(GENERAL_POLICIES) bin/md-to-html5
 policies/general/index.inc: general-policies bin/mk-md-titlelist Makefile
 	./bin/mk-md-titlelist '' $(GENERAL_POLICIES) > $@
 policies/general/index.html: \
-	policies/general/index.md policies/general/index.inc
+	policies/general/index.md policies/general/index.inc \
+	policies/general/dirdata.yaml
 
-policies/glossary.html: $(GLOSSARY) bin/md-to-html5
+policies/glossary.html: $(GLOSSARY) bin/md-to-html5 policies/dirdata.yaml
 	cat "$(GLOSSARY)" \
 		| sed -E -e 's!https?://github\.com/openssl/(general|technical)-policies/blob/master/policies/(.*)\.md!\1/\2.html!' \
 		| sed -E -e 's!general/glossary\.html!glossary.html!' \
@@ -446,3 +456,18 @@ source/old/index.html: source/old/index.html.tt Makefile bin/from-tt Makefile
 # we must declare them phony, or they will not be regenerated when
 # they should.
 .PHONY : $(SRCLISTS) FORCE
+
+# Extra HTML dependencies (apart from the markdown file it comes from)
+
+# makehtmldepend creates a standard dependency for HTML files rendered from
+# markdown files
+# $(1) = HTML file
+define makehtmldepend
+$(1): bin/md-to-html5 $(dirname $(1))dirdata.yaml
+endef
+
+# Generate standard dependencies for our known HTML outputs.
+$(foreach H, \
+  $(H_TOP) \
+  $(H_POLICIES) \
+,$(eval $(call makehtmldepend,$(H))))
