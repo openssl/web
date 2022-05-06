@@ -226,10 +226,10 @@ docs/mansidebar.html: docs/mansidebar.html.tt Makefile bin/from-tt
 	@rm -f $@
 	./bin/from-tt releases='master $(MANSERIES)' $<
 
-docs/faq.inc: $(wildcard docs/faq-[0-9]-*.txt) bin/mk-faq
+docs/faq.inc: $(wildcard docs/faq-[0-9]-*.txt) Makefile bin/mk-faq
 	@rm -f $@
 	./bin/mk-faq docs/faq-[0-9]-*txt >$@
-docs/fips.inc: $(wildcard docs/fips/*) bin/mk-filelist
+docs/fips.inc: $(wildcard docs/fips/*) Makefile bin/mk-filelist
 	@rm -f $@
 	./bin/mk-filelist docs/fips fips/ '*' >$@
 
@@ -239,7 +239,7 @@ docs/fips.inc: $(wildcard docs/fips/*) bin/mk-filelist
 ##
 
 .PHONY: technical-policies
-technical-policies: $(TECHNICAL_POLICIES) bin/md-to-html5 Makefile
+technical-policies: $(TECHNICAL_POLICIES) bin/md-to-html5
 	for x in $(TECHNICAL_POLICIES); do \
 		d=$$(dirname $$x); \
 		f=$$(basename $$x .md); \
@@ -254,7 +254,7 @@ policies/technical/index.html: \
 	policies/technical/index.md policies/technical/index.inc
 
 .PHONY: general-policies
-general-policies: $(GENERAL_POLICIES) bin/md-to-html5 Makefile
+general-policies: $(GENERAL_POLICIES) bin/md-to-html5
 	for x in $(GENERAL_POLICIES); do \
 		d=$$(dirname "$$x"); \
 		f=$$(basename "$$x" .md); \
@@ -268,7 +268,7 @@ policies/general/index.inc: general-policies bin/mk-md-titlelist Makefile
 policies/general/index.html: \
 	policies/general/index.md policies/general/index.inc
 
-policies/glossary.html: $(GLOSSARY) bin/md-to-html5 Makefile
+policies/glossary.html: $(GLOSSARY) bin/md-to-html5
 	cat "$(GLOSSARY)" \
 		| sed -E -e 's!https?://github\.com/openssl/(general|technical)-policies/blob/master/policies/(.*)\.md!\1/\2.html!' \
 		| sed -E -e 's!general/glossary\.html!glossary.html!' \
@@ -282,24 +282,24 @@ policies/glossary.html: $(GLOSSARY) bin/md-to-html5 Makefile
 newsflash.inc: news/newsflash.inc
 	@rm -f $@
 	head -7 $? >$@
-sitemap sitemap.txt:
+sitemap sitemap.txt: bin/mk-sitemap Makefile
 	@rm -f sitemap.txt
 	./bin/mk-sitemap master $(SERIES) > sitemap.txt
 
-community/committers.inc: $(PERSONDB)
+community/committers.inc: $(PERSONDB) bin/mk-committers Makefile
 	@rm -f $@
 	wget -q https://api.openssl.org/0/Group/commit/Members
 	./bin/mk-committers <Members >$@
 	@rm -f Members
 
-community/otc.inc: $(PERSONDB)
+community/otc.inc: $(PERSONDB) bin/mk-omc Makefile
 	./bin/mk-omc -n -p -t 'OTC Members' otc otc-inactive > $@
-community/omc.inc: $(PERSONDB)
+community/omc.inc: $(PERSONDB) bin/mk-omc Makefile
 	./bin/mk-omc -n -e -l -p -t 'OMC Members' omc omc-inactive > $@
-community/omc-alumni.inc: $(PERSONDB)
+community/omc-alumni.inc: $(PERSONDB) bin/mk-omc Makefile
 	./bin/mk-omc -n -l -t 'OMC Alumni' omc-alumni omc-emeritus > $@
 
-news/changelog.inc: news/changelog.txt bin/mk-changelog
+news/changelog.inc: news/changelog.txt bin/post-process-html5 Makefile
 	@rm -f $@
 	(echo 'Table of contents'; sed -e '1,/^OpenSSL Releases$$/d' < $<) \
 		| pandoc -t html5 -f commonmark | ./bin/post-process-html5 >$@
@@ -347,10 +347,10 @@ $(eval $(call mknews_changelogtxt,cl$(subst .,,$(S)).txt,openssl-$(S)-stable/CHA
 #
 # $(1) = release version, $(2) = NEWS file, relative to CHECKOUTS
 define mknews_noteshtml
-news/openssl-$(1)-notes.html: news/openssl-notes.html.tt
+news/openssl-$(1)-notes.html: news/openssl-notes.html.tt bin/from-tt Makefile
 	@rm -f $$@
 	./bin/from-tt -d news -i $$< -o $$@ release='$(1)'
-news/openssl-$(1)-notes.inc: $(CHECKOUTS)/$(2) bin/mk-notes
+news/openssl-$(1)-notes.inc: $(CHECKOUTS)/$(2) bin/mk-notes Makefile
 	@rm -f $$@
 	./bin/mk-notes $(1) < $(CHECKOUTS)/$(2) > $$@
 endef
@@ -367,7 +367,7 @@ $(eval $(call mknews_noteshtml,$(S),openssl-$(S)/NEWS.md)))
 $(foreach S,$(SERIES1),\
 $(eval $(call mknews_noteshtml,$(S),openssl-$(S)-stable/NEWS)))
 
-news/newsflash.inc: news/newsflash.txt
+news/newsflash.inc: news/newsflash.txt Makefile
 	sed <$? >$@ \
 	    -e '/^#/d' \
 	    -e 's@^@<tr><td class="d">@' \
@@ -381,10 +381,10 @@ news/newsflash.inc: news/newsflash.txt
 #
 # $(1) = output file mod, $(2) = release version switch, $(3) = release version
 define mknews_vulnerability
-news/vulnerabilities$(1).inc: bin/mk-cvepage news/vulnerabilities.xml
+news/vulnerabilities$(1).inc: bin/mk-cvepage news/vulnerabilities.xml Makefile
 	@rm -f $$@
 	./bin/mk-cvepage -i news/vulnerabilities.xml $(2) > $$@
-news/vulnerabilities$(1).html: news/vulnerabilities.html.tt bin/from-tt
+news/vulnerabilities$(1).html: news/vulnerabilities.html.tt bin/from-tt Makeflie
 	@rm -f $$@
 	./bin/from-tt -d news vulnerabilitiesinc='vulnerabilities$(1).inc' < $$< > $$@
 endef
@@ -398,10 +398,10 @@ $(eval $(call mknews_vulnerability,,))
 $(foreach S,$(SERIES) $(OLDSERIES),\
 $(eval $(call mknews_vulnerability,-$(S),-b $(S))))
 
-source/.htaccess: $(wildcard source/openssl-*.tar.gz) bin/mk-latest
+source/.htaccess: $(wildcard source/openssl-*.tar.gz) bin/mk-latest Makefile
 	@rm -f @?
 	./bin/mk-latest $(RELEASEDIR) >$@
-source/index.inc: $(wildcard $(RELEASEDIR)/openssl-*.tar.gz) bin/mk-filelist
+source/index.inc: $(wildcard $(RELEASEDIR)/openssl-*.tar.gz) bin/mk-filelist Makefile
 	@rm -f $@
 	./bin/mk-filelist $(RELEASEDIR) '' 'openssl-*.tar.gz' >$@
 
@@ -417,11 +417,11 @@ source/index.inc: $(wildcard $(RELEASEDIR)/openssl-*.tar.gz) bin/mk-filelist
 #
 # $(1) = release, $(2) = release title
 define mkoldsourceindex
-source/old/$(1)/index.inc: $(wildcard $(RELEASEDIR)/old/$(1)/*.gz) bin/mk-filelist
+source/old/$(1)/index.inc: $(wildcard $(RELEASEDIR)/old/$(1)/*.gz) bin/mk-filelist Makefile
 	@mkdir -p `dirname $$@`
 	@rm -f $$@
 	./bin/mk-filelist $(RELEASEDIR)/old/$(1) '' '*.gz' > $$@
-source/old/$(1)/index.html: source/old/sub-index.html.tt bin/from-tt
+source/old/$(1)/index.html: source/old/sub-index.html.tt bin/from-tt Makefile
 	@mkdir -p `dirname $$@`
 	@rm -f $$@
 	./bin/from-tt -d source/old/$(1) \
@@ -436,7 +436,7 @@ endef
 # remains named 'fips'
 $(foreach S,fips $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsourceindex,$(S),$(patsubst fips,FIPS,$(S)))))
 
-source/old/index.html: source/old/index.html.tt Makefile bin/from-tt
+source/old/index.html: source/old/index.html.tt Makefile bin/from-tt Makefile
 	@mkdir -p `dirname $@`
 	@rm -f $@
 	./bin/from-tt releases='$(SERIES) $(OLDSERIES2) fips' $<
