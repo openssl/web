@@ -384,7 +384,7 @@ define mknews_vulnerability
 news/vulnerabilities$(1).inc: bin/mk-cvepage news/vulnerabilities.xml Makefile
 	@rm -f $$@
 	./bin/mk-cvepage -i news/vulnerabilities.xml $(2) > $$@
-news/vulnerabilities$(1).html: news/vulnerabilities.html.tt bin/from-tt Makeflie
+news/vulnerabilities$(1).html: news/vulnerabilities.html.tt bin/from-tt Makefile
 	@rm -f $$@
 	./bin/from-tt -d news vulnerabilitiesinc='vulnerabilities$(1).inc' < $$< > $$@
 endef
