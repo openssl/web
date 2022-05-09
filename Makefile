@@ -281,7 +281,7 @@ policies/glossary.html: $(GLOSSARY) bin/md-to-html5
 .PHONY: sitemap
 newsflash.inc: news/newsflash.inc
 	@rm -f $@
-	head -7 $? >$@
+	head -7 $< >$@
 sitemap sitemap.txt: bin/mk-sitemap Makefile
 	@rm -f sitemap.txt
 	./bin/mk-sitemap master $(SERIES) > sitemap.txt
@@ -318,7 +318,7 @@ news/changelog.html: $(foreach S,$(SERIES),news/cl$(subst .,,$(S)).txt)
 define mknews_changelogtxt
 news/$(1): $(CHECKOUTS)/$(2)
 	@rm -f $$@
-	cp $$? $$@
+	cp $$< $$@
 endef
 
 # Create the target 'news/changelog.txt', taking the source from
@@ -368,7 +368,7 @@ $(foreach S,$(SERIES1),\
 $(eval $(call mknews_noteshtml,$(S),openssl-$(S)-stable/NEWS)))
 
 news/newsflash.inc: news/newsflash.txt Makefile
-	sed <$? >$@ \
+	sed <$< >$@ \
 	    -e '/^#/d' \
 	    -e 's@^@<tr><td class="d">@' \
 	    -e 's@: @</td><td class="t">@' \
