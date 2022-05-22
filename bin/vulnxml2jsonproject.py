@@ -33,12 +33,18 @@ def merge_affects(issue,base):
        prev = ver
        parts = ver.split('.')
        # Deal with 3.0 version scheme
+<<<<<<< HEAD
        try:
            if int(parts[0])>=3:
                anext = '.'.join(parts[:-1])+'.'+str(int(parts[-1])+1)
                continue
        except:
            pass
+=======
+       if int(parts[0])>=3:
+           anext = '.'.join(parts[:-1])+'.'+str(int(parts[-1])+1)
+           continue
+>>>>>>> 030e5ac (in vulnerabilities.html, Fixed in OpenSSL 3.0.3 (git commit) (Affected 3.0.0,3.0.1,3.0.2))
        # Deal with pre 3.0 version scheme
        if (str.isdigit(ver[-1])):   # First version after 1.0.1 is 1.0.1a
            anext = ver + "a"
