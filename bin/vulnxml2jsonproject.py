@@ -5,6 +5,7 @@ config = dict()
 config['project'] = "openssl"
 config['vendor_name'] = "OpenSSL"
 config['product_name'] = "OpenSSL"
+config['orgId'] = "b3476cb9-2e3d-41a6-98d0-0f47421a65b6"
 config['cve_meta_assigner'] = "openssl-security@openssl.org"
 # Versions of OpenSSL we never released, to allow us to display ranges
 config['neverreleased'] = "1.0.0h,"
