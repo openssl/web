@@ -71,7 +71,7 @@ for issue in dom.getElementsByTagName('issue'):
     cve['containers']['cna']={"providerMetadata": {"orgId":cfg.config['orgId'],"shortName":cfg.config['project']}}
     datepublic = issue.getAttribute("public")
     if datepublic:
-       cve['containers']['cna']['datePublic'] = datepublic[:4]+'-'+datepublic[4:6]+'-'+datepublic[6:8]
+       cve['containers']['cna']['datePublic'] = datepublic[:4]+'-'+datepublic[4:6]+'-'+datepublic[6:8]+"T00:00:00Z"
     if issue.getElementsByTagName('title'):
        cve['containers']['cna']['title'] = issue.getElementsByTagName('title')[0].childNodes[0].nodeValue.strip()
     desc = ""
@@ -81,10 +81,10 @@ for issue in dom.getElementsByTagName('issue'):
                 desc += " "
             desc += re.sub('<[^<]+?>', '', d.toxml().strip())
     desc = html.unescape(desc)
-    problemtype = "(undefined)"
+#    problemtype = "(undefined)"
     if issue.getElementsByTagName('problemtype'):
         problemtype = issue.getElementsByTagName('problemtype')[0].childNodes[0].nodeValue.strip()
-    cve['containers']['cna']['problemTypes'] = [{ "descriptions": [ { "lang":"en", "description": problemtype} ] }]
+        cve['containers']['cna']['problemTypes'] = [{ "descriptions": [ { "lang":"en", "description": problemtype} ] }]
     impact = issue.getElementsByTagName('impact') # openssl does it like this
     if impact:
         cve['containers']['cna']['metrics'] = [ {  "format":"other", "other":{ "content":{"text":impact[0].getAttribute('severity')}, "type":cfg.config['security_policy_url']+impact[0].getAttribute('severity')}}]                                                
@@ -128,7 +128,20 @@ for issue in dom.getElementsByTagName('issue'):
     for affects in issue.getElementsByTagName('fixed'): # OpenSSL and httpd since April 2018 does it this way
        text = f'Fixed in {cfg.config["product_name"]} {affects.getAttribute("version")} (Affected {cfg.merge_affects(issue,affects.getAttribute("base"))})'
        # Let's condense into a list form since the format of this field is 'free text' at the moment, not machine readable (as per mail with George Theall)
-       vv.append({"version":text,"status":"affected"})
+       print (cvename)
+       earliestver = cfg.earliest_affects(issue,affects.getAttribute("base"))
+       if (not earliestver):
+          earliestver = affects.getAttribute("base")
+       versiontype = "custom"
+       try:
+          if int(affects.getAttribute("base").split('.')[0])>=3:
+             versiontype = "semver"
+       except:
+          pass
+       if (earliestver != affects.getAttribute("version")):
+           vv.append({"version":earliestver,"versionType":versiontype,"lessThan":affects.getAttribute("version"),"status":"affected"})
+       else: # like CVE-2016-2183
+           vv.append({"version":earliestver,"status":"unaffected"})          
        # Mitre want the fixed/affected versions in the text too
        desc += " "+text+"."
 
