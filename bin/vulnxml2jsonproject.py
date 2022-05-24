@@ -13,16 +13,27 @@ config['security_policy_url'] = "https://www.openssl.org/policies/secpolicy.html
 config['git_prefix'] = "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h="
 config['default_reference_prefix'] = "https://www.openssl.org"
 
-def merge_affects(issue,base):
-    # let's merge the affects into a nice list which is better for Mitre text but we have to take into account our stange lettering scheme
-    prev = ""
-    anext = ""
-    alist = list()
+def get_vlist(issue,base):
     vlist = list()
     for affects in issue.getElementsByTagName('affects'): # so we can sort them
        version = affects.getAttribute("version")
        if (not base or base in version):
            vlist.append(version)
+    return vlist
+    
+def earliest_affects(issue,base):
+    vlist = get_vlist(issue,base)
+    if (not vlist):
+        return None
+    ver = sorted(vlist)[0]
+    return ver
+
+def merge_affects(issue,base):
+    # let's merge the affects into a nice list which is better for Mitre text but we have to take into account our stange lettering scheme
+    prev = ""
+    anext = ""
+    alist = list()
+    vlist = get_vlist(issue,base)
     for ver in sorted(vlist):
        # print(f'version {ver} (last was {prev}, next was {anext})')
        if (ver != anext):
