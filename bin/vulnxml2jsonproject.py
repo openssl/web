@@ -33,9 +33,12 @@ def merge_affects(issue,base):
        prev = ver
        parts = ver.split('.')
        # Deal with 3.0 version scheme
-       if int(parts[0])>=3:
-           anext = '.'.join(parts[:-1])+'.'+str(int(parts[-1])+1)
-           continue
+       try:
+           if int(parts[0])>=3:
+               anext = '.'.join(parts[:-1])+'.'+str(int(parts[-1])+1)
+               continue
+       except:
+           pass
        # Deal with pre 3.0 version scheme
        if (str.isdigit(ver[-1])):   # First version after 1.0.1 is 1.0.1a
            anext = ver + "a"

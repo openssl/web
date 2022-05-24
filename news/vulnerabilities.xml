@@ -3594,7 +3594,7 @@ issue.
     <affects base="1.0.2" version="1.0.2c"/>
     <affects base="1.0.2" version="1.0.2d"/>
     <affects base="1.0.2" version="1.0.2e"/>
-    <fixed base="1.0.2" version="1.0.2f" date="2016-0701"/>
+    <fixed base="1.0.2" version="1.0.2f" date="20160128"/>
 
     <description>
       Historically OpenSSL usually only ever generated DH parameters based on "safe"
