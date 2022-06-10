@@ -6,7 +6,7 @@ CHECKOUTS = /var/cache/openssl/checkouts
 ##  Snapshot directory
 SNAP = $(CHECKOUTS)/openssl
 ##  OTC data directory
-OTCDATA = $(CHECKOUTS)/otc
+OMCDATA = $(CHECKOUTS)/data
 ## Where releases are found.
 RELEASEDIR = /srv/ftp/source
 
@@ -379,7 +379,7 @@ $(eval $(call mknews_noteshtml,$(S),openssl-$(S)/NEWS.md)))
 $(foreach S,$(SERIES1),\
 $(eval $(call mknews_noteshtml,$(S),openssl-$(S)-stable/NEWS)))
 
-news/newsflash.inc: $(OTCDATA)/release-data/newsflash.txt Makefile
+news/newsflash.inc: $(OMCDATA)/newsflash.txt Makefile
 	sed <$< >$@ \
 	    -e '/^#/d' \
 	    -e 's@^@<tr><td class="d">@' \
