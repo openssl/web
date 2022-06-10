@@ -461,10 +461,16 @@ news/vulnerabilities.xml: $(OMCDATA)/vulnerabilities.xml
 #
 # $(1) = output file mod, $(2) = release version switch, $(3) = release version
 define mknews_vulnerability
-news/vulnerabilities$(1).inc: bin/mk-cvepage news/vulnerabilities.xml Makefile
+news/vulnerabilities$(1).inc: bin/mk-cvepage $(OMCDATA)/vulnerabilities.xml \
+			      Makefile
 	@rm -f $$@
+<<<<<<< HEAD
 	./bin/mk-cvepage -i news/vulnerabilities.xml $(2) > $$@
 news/vulnerabilities$(1).md: news/vulnerabilities.md.tt bin/from-tt Makefile
+=======
+	./bin/mk-cvepage -i $(OMCDATA)/vulnerabilities.xml $(2) > $$@
+news/vulnerabilities$(1).html: news/vulnerabilities.html.tt bin/from-tt Makefile
+>>>>>>> 495edf0 (Use the moved secadv files too (drop the copies in this repository))
 	@rm -f $$@
 	./bin/from-tt -d news vulnerabilitiesinc='vulnerabilities$(1).inc' < $$< > $$@
 endef
