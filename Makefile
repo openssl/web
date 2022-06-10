@@ -72,6 +72,7 @@ SIMPLE = $(H_TOP) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
 	 news/newsflash.inc \
+	 news/secadv \
 	 news/vulnerabilities.inc \
 	 news/vulnerabilities.html \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).inc) \
@@ -393,9 +394,10 @@ news/newsflash.inc: $(OMCDATA)/newsflash.txt Makefile
 #
 # $(1) = output file mod, $(2) = release version switch, $(3) = release version
 define mknews_vulnerability
-news/vulnerabilities$(1).inc: bin/mk-cvepage news/vulnerabilities.xml Makefile
+news/vulnerabilities$(1).inc: bin/mk-cvepage $(OMCDATA)/vulnerabilities.xml \
+			      Makefile
 	@rm -f $$@
-	./bin/mk-cvepage -i news/vulnerabilities.xml $(2) > $$@
+	./bin/mk-cvepage -i $(OMCDATA)/vulnerabilities.xml $(2) > $$@
 news/vulnerabilities$(1).html: news/vulnerabilities.html.tt bin/from-tt Makefile
 	@rm -f $$@
 	./bin/from-tt -d news vulnerabilitiesinc='vulnerabilities$(1).inc' < $$< > $$@
@@ -416,6 +418,23 @@ source/.htaccess: $(wildcard source/openssl-*.tar.gz) bin/mk-latest Makefile
 source/index.inc: $(wildcard $(RELEASEDIR)/openssl-*.tar.gz) bin/mk-filelist Makefile
 	@rm -f $@
 	./bin/mk-filelist $(RELEASEDIR) '' 'openssl-*.tar.gz' >$@
+
+# mknews_secadv creates a target to copy a secadv file from $(OMCDATA)/secadv
+# to news/secadv/.
+# $(1) = file name
+define mknews_secadv
+news/secadv/$(1): $(OMCDATA)/secadv/$(1)
+	cp $$< $$@
+endef
+
+# Get the set of files in $(OMCDATA)/secadv/
+SECADV_FILES = $(shell cd $(OMCDATA)/secadv/; git ls-files)
+$(foreach F,$(SECADV_FILES),$(eval $(call mknews_secadv,$(F))))
+
+mkdirnews_secadv: FORCE
+	mkdir -p news/secadv
+news/secadv: mkdirnews_secadv $(addprefix news/secadv/,$(SECADV_FILES))
+.PHONY: news/secadv mkdirnews_secadv
 
 ######################################################################
 ##
