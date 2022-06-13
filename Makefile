@@ -5,7 +5,7 @@
 CHECKOUTS = /var/cache/openssl/checkouts
 ##  Snapshot directory
 SNAP = $(CHECKOUTS)/openssl
-##  OTC data directory
+##  OMC data directory
 OMCDATA = $(CHECKOUTS)/data
 ## Where releases are found.
 RELEASEDIR = /srv/ftp/source
