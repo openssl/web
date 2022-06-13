@@ -116,7 +116,6 @@ clean:
 	rm -f $(SIMPLE) $(SIMPLEDOCS) $(SRCLISTS)
 
 akamai-purge:
-	./bin/purge-one-hour
 
 # Legacy targets
 hack-source_htaccess: all
