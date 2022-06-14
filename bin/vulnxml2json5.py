@@ -11,6 +11,7 @@ import html
 import simplejson as json
 import codecs
 import re
+import datetime
 from optparse import OptionParser
 
 # for validation
@@ -69,6 +70,9 @@ for issue in dom.getElementsByTagName('issue'):
     cve['cveMetadata']= { "cveId": "CVE-"+cvename, "assignerOrgId": cfg.config['orgId'], "state":"PUBLISHED" }
     cve['containers'] = dict()
     cve['containers']['cna']={"providerMetadata": {"orgId":cfg.config['orgId'],"shortName":cfg.config['project']}}
+
+    cve['containers']['cna']['x_generator']={"importer":"vulnxml2json5.py "+str(datetime.datetime.now())}
+    
     datepublic = issue.getAttribute("public")
     if datepublic:
        cve['containers']['cna']['datePublic'] = datepublic[:4]+'-'+datepublic[4:6]+'-'+datepublic[6:8]+"T00:00:00Z"
@@ -87,7 +91,10 @@ for issue in dom.getElementsByTagName('issue'):
         cve['containers']['cna']['problemTypes'] = [{ "descriptions": [ { "lang":"en", "description": problemtype} ] }]
     impact = issue.getElementsByTagName('impact') # openssl does it like this
     if impact:
-        cve['containers']['cna']['metrics'] = [ {  "format":"other", "other":{ "content":{"text":impact[0].getAttribute('severity')}, "type":cfg.config['security_policy_url']+impact[0].getAttribute('severity')}}]                                                
+        cve['containers']['cna']['metrics'] = [ {  "format":"other", "other":{ "content":{"text":impact[0].getAttribute('severity')}, "type":cfg.config['security_policy_url']+impact[0].getAttribute('severity')}}]
+    else:
+        # Impact is required or vulnogram will default to cvss
+        cve['containers']['cna']['metrics'] = [ {  "format":"other", "other":{ "content":{"text":"unknown"}, "type":cfg.config['security_policy_url']}}]
     impact = issue.getElementsByTagName('severity')  # httpd does it like this
     if impact:
         cve['containers']['cna']['metrics'] = [ { "format":"Other", "scenarios": [ {"lang":"en", "value":impact[0].childNodes[0].nodeValue, "url":cfg.config['security_policy_url']+impact[0].childNodes[0].nodeValue } ]}]
