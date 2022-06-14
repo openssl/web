@@ -91,7 +91,7 @@ for issue in dom.getElementsByTagName('issue'):
         cve['containers']['cna']['problemTypes'] = [{ "descriptions": [ { "lang":"en", "description": problemtype} ] }]
     impact = issue.getElementsByTagName('impact') # openssl does it like this
     if impact:
-        cve['containers']['cna']['metrics'] = [ {  "format":"other", "other":{ "content":{"text":impact[0].getAttribute('severity')}, "type":cfg.config['security_policy_url']+impact[0].getAttribute('severity')}}]
+        cve['containers']['cna']['metrics'] = [ {  "format":"other", "other":{ "content":{"text":impact[0].getAttribute('severity')}, "type":cfg.config['security_policy_url']+impact[0].getAttribute('severity').lower()}}]
     else:
         # Impact is required or vulnogram will default to cvss
         cve['containers']['cna']['metrics'] = [ {  "format":"other", "other":{ "content":{"text":"unknown"}, "type":cfg.config['security_policy_url']}}]
