@@ -86,7 +86,7 @@ for issue in dom.getElementsByTagName('issue'):
     cve['problemtype'] = { "problemtype_data": [ { "description" : [ { "lang":"eng", "value": problemtype} ] } ] }
     impact = issue.getElementsByTagName('impact') # openssl does it like this
     if impact:
-        cve['impact'] = [ { "lang":"eng", "value":impact[0].getAttribute('severity'), "url":cfg.config['security_policy_url']+impact[0].getAttribute('severity') } ]
+        cve['impact'] = [ { "lang":"eng", "value":impact[0].getAttribute('severity'), "url":cfg.config['security_policy_url']+impact[0].getAttribute('severity').lower() } ]
     impact = issue.getElementsByTagName('severity')  # httpd does it like this
     if impact:
         cve['impact'] = [ { "lang":"eng", "value":impact[0].childNodes[0].nodeValue, "url":cfg.config['security_policy_url']+impact[0].childNodes[0].nodeValue } ]
