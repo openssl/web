@@ -13,6 +13,7 @@ Redirect permanent  /.well-known/acme-challenge/MX5CvUJNvymcKf22SNORcfjGk4oGQyIW
 
 Redirect permanent /snapshot /source/snapshot
 Redirect permanent /policies/codingstyle.html /policies/technical/coding-style.html
+Redirect permanent /policies/secpolicy.html /policies/general/security-policy.html
 
 <Files *.md5>
 ForceType application/binary
