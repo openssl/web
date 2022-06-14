@@ -135,7 +135,6 @@ for issue in dom.getElementsByTagName('issue'):
     for affects in issue.getElementsByTagName('fixed'): # OpenSSL and httpd since April 2018 does it this way
        text = f'Fixed in {cfg.config["product_name"]} {affects.getAttribute("version")} (Affected {cfg.merge_affects(issue,affects.getAttribute("base"))})'
        # Let's condense into a list form since the format of this field is 'free text' at the moment, not machine readable (as per mail with George Theall)
-       print (cvename)
        earliestver = cfg.earliest_affects(issue,affects.getAttribute("base"))
        if (not earliestver):
           earliestver = affects.getAttribute("base")
@@ -150,7 +149,8 @@ for issue in dom.getElementsByTagName('issue'):
        else: # like CVE-2016-2183
            vv.append({"version":earliestver,"status":"unaffected"})          
        # Mitre want the fixed/affected versions in the text too
-       desc += " "+text+"."
+       # let's not do this for json 5
+       # desc += " "+text+"."
 
 #    if issue.getAttribute('fixed'): # httpd used to do it this way
 #        base = ".".join(issue.getAttribute("fixed").split('.')[:-1])+"."
