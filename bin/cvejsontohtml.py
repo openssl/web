@@ -1,28 +1,44 @@
+#! /usr/bin/python3
+#
+# Convert our JSON vulnerability files to HTML files for the web page
+
 import json
+import codecs
 import os
 import re
 import xml.sax.saxutils as saxutils 
 from optparse import OptionParser
+import datetime
+import sys
 parser = OptionParser()
  
-parser.add_option("-v","--version",help="major version to filter on",dest="filterversion")
+parser.add_option("-b","--base",help="major version to filter on",dest="base")
 parser.add_option("-e","--extratext",help="extra text to add to description",dest="extratext")
 parser.add_option("-i","--inputdirectory",help="directory of json files",dest="directory")
 (options,args) = parser.parse_args()
 
-
 def natural_sort_key(s, _nsre=re.compile('([0-9]+)')):
     return [int(text) if text.isdigit() else text.lower()
             for text in _nsre.split(s)]   
-            
-filterversion = options.filterversion or ""
+
+def getbasefor(fixedin):
+    dotparts = re.search('^(\d)\.(\d)\.(\d)',fixedin)
+    if not dotparts:
+        return None
+    if int(dotparts.group(1))<3:
+        # Old style, the base is first 3 digits no letters
+        return dotparts.group(1)+"."+dotparts.group(2)+"."+dotparts.group(3)
+    return dotparts.group(1)+"."+dotparts.group(2)        
+
+base = options.base or ""
 cves = []
 entries = {}
+allbase = []
 
 for x in os.listdir(options.directory or "./"):
     if x.endswith(".json"):
         try:
-            fd = open(options.directory+x)
+            fd = codecs.open(options.directory+x,"r","utf-8")
             cve = json.load(fd)
             cves.append(cve)
         except:
@@ -36,27 +52,39 @@ for cve in cves:
     cveid = cve["cveMetadata"]["cveId"]
     for version in cna["affected"][0]["versions"]:
        fixedin = version["version"]
-       if (fixedin.startswith(filterversion)):
+       fixedbase = getbasefor(fixedin)
+       if fixedbase and fixedbase not in allbase:
+           allbase.append(fixedbase)
+       if (fixedin.startswith(base)):
            datepublic = cna["datePublic"]+"-"+cveid
            entries[datepublic]=cve
 
+allbase = sorted(allbase, reverse=True)
+           
 lastfixedv = ""
 productname = ""
 sections = []
 lastyear = ""
+allyears = []
+allissues = ""
 for k,cve in sorted(entries.items(), reverse=True):
     year = k.split('-')[0]
 
     if (lastyear != year):
-        print("<h1>"+year+"</h1>")
+        if (lastyear != ""):
+            allissues += "</dl>";
+        allissues += "<h3><a name=\"y%s\">%s</a></h3>\n<dl>" %(year,year)            
+        allyears.append(year)
         lastyear = year
 
     cna = cve["containers"]["cna"]
     e = {}
-    e['cveid'] = cve["cveMetadata"]["cveId"]
+    cveid = cve["cveMetadata"]["cveId"]
 
+    allissues += "<dt>"
     # CVE name
-    print("<a href=\"https://cve.org/CVERecord?id="+e['cveid']+"\">"+e['cveid']+"</a>")
+    if cve:
+        allissues += "<a href=\"https://cve.org/CVERecord?id=%s\" name=\"%s\">%s</a> " %(cveid,cveid,cveid)        
 
     # Advisory (use the title instead of openssl advisory)
     title= "(OpenSSL Advisory)"
@@ -68,31 +96,36 @@ for k,cve in sorted(entries.items(), reverse=True):
             if "vendor-advisory" in ref["tags"]:
                 url = ref["url"]
                 refs = "<a href=\""+url+"\">"+title+"</a>"
-    print (" "+refs)
+    allissues += " "+refs
 
     # Impact
     for metric in cna["metrics"]:
         if "other" in metric["format"]:
             impact = metric["other"]["content"]["text"]
             if not "unknown" in impact:
-                print(" <a href=\""+metric["other"]["type"]+"\">["+impact+" severity]</a>")
+                 allissues += " <a href=\""+metric["other"]["type"]+"\">["+impact+" severity]</a>"
             
     # Date
     datepublic =cna["datePublic"]
-    print(" "+datepublic)
+    t = datetime.datetime(int(datepublic[:4]), int(datepublic[5:7]), int(datepublic[8:10]), 0, 0)
+    allissues += t.strftime(" %d %B %Y: ")    
 
+    allissues += "<a href=\"#toc\"><img src=\"/img/up.gif\"/></a></dt>\n<dd>"
+    
     # Description
     for desc in cna["descriptions"]:
-        print(desc["value"])
+        allissues += desc["value"]
 
     # Credits
     if ("credits" in cna):
         for credit in cna["credits"]:
-            print("Reported by "+credit["value"])
+            allissues += " Reported by "+credit["value"]+"."
 
     affects = []
     product = cna["affected"][0]
     productname = product['product']
+    allissues += "<ul>"
+    also = []
     for ver in product["versions"]:
         if "lessThan" in ver:
             fixedin = ver["lessThan"]
@@ -101,39 +134,44 @@ for k,cve in sorted(entries.items(), reverse=True):
             for reference in cna["references"]:
                 if reference["name"].startswith(fixedin+" git"):
                     git = reference["url"]
-                    text = "Fixed in "+productname+" "+fixedin
-                    if (git != ""):
-                        text += " <a href=\""+git+"\">(git commit)</a>"
-                    text += " (Affected since "+earliest+")"
-                    print (text)
 
-    # Got everything ready to print out now
-    
-# Everything is sorted and pretty, this should be some python template thing
+            if base:
+                if (not earliest.startswith(base)):
+                    also.append("OpenSSL <a href=\"vulnerabilities-%s.html#%s\">%s</a>" %( getbasefor(earliest), cveid, fixedin))
+                    continue
+            allissues += "<li>Fixed in OpenSSL %s " %(fixedin)
+            if (git != ""):
+                allissues += "<a href=\"%s\">(git commit)</a> " %(git)
+            allissues += "(Affected since "+earliest+")"       
+            allissues += "</li>"
+    if also:
+         allissues += "<li>This issue was also addressed in "+ ", ".join( also)
+    allissues += "</ul></dd>\n"
 
-print ("<h1>"+productname+" "+filterversion+" vulnerabilities</h1>")
-print ("<p>This page lists all security vulnerabilities fixed in released versions of "+productname+" "+filterversion+". Each vulnerability is given a security <a href=\"/security/impact_levels.html\">impact rating</a> by the Apache security team - please note that this rating may well vary from platform to platform.  We also list the versions the flaw is known to affect, and where a flaw has not been verified list the version with a question mark.</p>")
-print ("<p>Please note that if a vulnerability is shown below as being fixed in a \"-dev\" release then this means that a fix has been applied to the development source tree and will be part of an upcoming full release.</p>")
-print ("<p>Please send comments or corrections for these vulnerabilities to the <a href=\"/security_report.html\">Security Team</a>.</p> <br/>")
+preface = "<!-- do not edit this file it is autogenerated, edit vulnerabilities.xml -->"
+bases = []
+for base in allbase:
+    if (options.base and base in options.base):
+        bases.append("%s" %(base))
+    else:
+        bases.append( "<a href=\"vulnerabilities-%s.html\">%s</a>" %(base,base))
+preface += "<p>Show issues fixed only in OpenSSL " + ", ".join(bases)
+if options.base:
+    preface += ", or <a href=\"vulnerabilities.html\">all versions</a></p>"
+    preface += "<h2>Fixed in OpenSSL %s</h2>" %(options.base)
+else:
+    preface += "</p>"
 
-if (options.extratext):
-    print ("<p>"+options.extratext+"</p><br/>")
+if len(allyears)>1: # If only vulns in this year no need for the year table of contents
+    preface += "<p><a name=\"toc\">Jump to year: </a>" + ", ".join( "<a href=\"#y%s\">%s</a>" %(year,year) for year in allyears)
+preface += "</p>"
+if allissues != "":
+    preface += allissues + "</dl>"
+else:
+    preface += "No vulnerabilities fixed"
 
-for sectioncves in sections:
-    print ("\n<h1 id=\""+sectioncves["fixed"]+"\">Fixed in "+sectioncves["product"]+" "+sectioncves["fixed"]+"</h1><dl>\n")
-    for e in sectioncves["cves"]:
-        html = "<dt><h3 id=\""+e['cveid']+"\">"+e['impact']+": <name name=\""+e['cveid']+"\">"+saxutils.escape(e['title'])+"</name>\n";
-        html += "(<a href=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name="+e['cveid']+"\">"+e['cveid']+"</a>)</h3></dt>\n";
-        desc = saxutils.escape(e['desc'])
-        desc = re.sub(r'\n','</p><p>', desc)
-        html += "<dd><p>"+desc+"</p>\n"
-        if (e['credit'] != ""): html += "<p>Acknowledgements: "+saxutils.escape(e['credit'])+"</p>\n"
-        html += "<table class=\"cve\">"
-        e['timetable'].append(["Affects",e['affects']]);
-        for ti in e['timetable']:
-            html+= "<tr><td class=\"cve-header\">"+ti[0]+"</td><td class=\"cve-value\">"+ti[1]+"</td></tr>\n"
-        html+= "</table></dd>"
-        print (html.encode("utf-8"))
-    print ("</dl></br/>")
+# TODO NONISSUES
 
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stdout.write(preface)
 
