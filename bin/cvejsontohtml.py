@@ -88,9 +88,10 @@ for k,cve in sorted(entries.items(), reverse=True):
 
     # Advisory (use the title instead of openssl advisory)
     title= "(OpenSSL Advisory)"
+    refs = ""
     if "title" in cna:
         title = cna['title']
-    refs = title
+        refs = title
     for ref in cna["references"]:
         if "tags" in ref:
             if "vendor-advisory" in ref["tags"]:
