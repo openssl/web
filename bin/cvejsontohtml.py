@@ -47,17 +47,23 @@ for x in os.listdir(options.directory or "./"):
 
 # Filter on version 
 # We want to sort on reverse date then cve name
+statements = ""
 for cve in cves:
-    cna = cve["containers"]["cna"]
-    cveid = cve["cveMetadata"]["cveId"]
-    for version in cna["affected"][0]["versions"]:
-       fixedin = version["version"]
-       fixedbase = getbasefor(fixedin)
-       if fixedbase and fixedbase not in allbase:
-           allbase.append(fixedbase)
-       if (fixedin.startswith(base)):
-           datepublic = cna["datePublic"]+"-"+cveid
-           entries[datepublic]=cve
+    if "statements" in cve:
+        for statement in cve["statements"]:
+            if (statement["base"] in (options.base or "none")):
+                statements +="<p>"+statement["text"].strip()+"</p>"
+    if "containers" in cve:
+        cna = cve["containers"]["cna"]
+        cveid = cve["cveMetadata"]["cveId"]
+        for version in cna["affected"][0]["versions"]:
+            fixedin = version["version"]
+            fixedbase = getbasefor(fixedin)
+            if fixedbase and fixedbase not in allbase:
+                allbase.append(fixedbase)
+            if (fixedin.startswith(base)):
+                datepublic = cna["datePublic"]+"-"+cveid
+                entries[datepublic]=cve
 
 allbase = sorted(allbase, reverse=True)
            
@@ -162,7 +168,7 @@ if options.base:
     preface += "<h2>Fixed in OpenSSL %s</h2>" %(options.base)
 else:
     preface += "</p>"
-
+preface += statements
 if len(allyears)>1: # If only vulns in this year no need for the year table of contents
     preface += "<p><a name=\"toc\">Jump to year: </a>" + ", ".join( "<a href=\"#y%s\">%s</a>" %(year,year) for year in allyears)
 preface += "</p>"
