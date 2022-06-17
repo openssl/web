@@ -48,11 +48,15 @@ for x in os.listdir(options.directory or "./"):
 # Filter on version 
 # We want to sort on reverse date then cve name
 statements = ""
+disputedcve = {}
 for cve in cves:
     if "statements" in cve:
         for statement in cve["statements"]:
             if (statement["base"] in (options.base or "none")):
                 statements +="<p>"+statement["text"].strip()+"</p>"
+    if "disputed" in cve:
+        for dispute in cve["disputed"]:
+            disputedcve[dispute["cve"]]=dispute
     if "containers" in cve:
         cna = cve["containers"]["cna"]
         cveid = cve["cveMetadata"]["cveId"]
@@ -177,8 +181,14 @@ if allissues != "":
 else:
     preface += "No vulnerabilities fixed"
 
-# TODO NONISSUES
+nonissues = ""
+for nonissue in disputedcve:
+    if (not options.base or disputedcve[nonissue]["base"] in (options.base or "none")):
+        nonissues += "<li><a href=\"https://cve.org/CVERecord?id=%s\" name=\"%s\">%s</a>: " %(nonissue,nonissue,nonissue)        
+        nonissues += disputedcve[nonissue]["text"]
+        nonissues +="</li>"
+if (nonissues != ""):
+    preface += "<h3>Not Vulnerabilities</h3><ul>" + nonissues + "</ul>"    
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stdout.write(preface)
-
