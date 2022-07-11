@@ -63,6 +63,7 @@ H_TOP = $(addsuffix .html,$(basename $(shell git ls-files -- *.md)))
 H_COMMUNITY = $(addsuffix .html,\
                 $(basename $(shell git ls-files -- community/*.md)))
 <<<<<<< HEAD
+<<<<<<< HEAD
 # We filter out any file starting with 'sub-'...  they get special treatment
 H_DOCS = $(addsuffix .html,\
            $(basename $(shell git ls-files -- docs/*.md \
@@ -71,6 +72,9 @@ H_DOCS = $(addsuffix .html,\
 H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
 =======
 >>>>>>> 7943bed (Convert all community/*.html to .md)
+=======
+H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
+>>>>>>> 6b0605c (Convert all news/*.html to .md)
 H_POLICIES = $(addsuffix .html,\
                $(basename $(shell git ls-files -- policies/*.md \
                                                   policies/general/*.md \
@@ -470,6 +474,7 @@ news/vulnerabilities$(1).inc: bin/mk-cvepage news/vulnerabilities.xml Makefile
 <<<<<<< HEAD
 	./bin/mk-cvepage -i news/vulnerabilities.xml $(2) > $$@
 news/vulnerabilities$(1).md: news/vulnerabilities.md.tt bin/from-tt Makefile
+<<<<<<< HEAD
 =======
 	./bin/mk-cvepage -i $(OMCDATA)/vulnerabilities.xml $(2) > $$@
 =======
@@ -477,6 +482,8 @@ news/vulnerabilities$(1).md: news/vulnerabilities.md.tt bin/from-tt Makefile
 >>>>>>> 092206a (Make sure that news/vulnerabilities.xml is still publically accessible)
 news/vulnerabilities$(1).html: news/vulnerabilities.html.tt bin/from-tt Makefile
 >>>>>>> 495edf0 (Use the moved secadv files too (drop the copies in this repository))
+=======
+>>>>>>> 6b0605c (Convert all news/*.html to .md)
 	@rm -f $$@
 	./bin/from-tt -d news vulnerabilitiesinc='vulnerabilities$(1).inc' < $$< > $$@
 endef
@@ -574,12 +581,16 @@ $(foreach H, \
   $(H_TOP) \
   $(H_COMMUNITY) \
 <<<<<<< HEAD
+<<<<<<< HEAD
   $(H_DOCS) \
   $(filter %.html,$(MANMASTER_TARGETS)) \
   $(filter %.html,$(MANPAGES_TARGETS)) \
   $(H_NEWS) \
 =======
 >>>>>>> 7943bed (Convert all community/*.html to .md)
+=======
+  $(H_NEWS) \
+>>>>>>> 6b0605c (Convert all news/*.html to .md)
   $(H_POLICIES) \
   $(H_SOURCE) \
   $(H_SUPPORT) \
