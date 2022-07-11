@@ -130,7 +130,12 @@ for k,cve in sorted(entries.items(), reverse=True):
     # Credits
     if ("credits" in cna):
         for credit in cna["credits"]:
-            allissues += " Reported by "+credit["value"]+"."
+            creditprefix = " Reported by "
+            if "type" in credit and "remediation dev" in credit["type"]:
+                creditprefix = " Fix developed by "
+            elif "type" in credit and "finder" not in credit["type"]:
+                creditprefix = " Thanks to "
+            allissues += creditprefix+credit["value"]+"."
 
     affects = []
     product = cna["affected"][0]

@@ -84,6 +84,8 @@ for issue in dom.getElementsByTagName('issue'):
             if desc:
                 desc += " "
             desc += re.sub('<[^<]+?>', '', d.toxml().strip())
+            if not desc.endswith(".") and not desc.endswith(". "):
+               desc += ". "
     desc = html.unescape(desc)
 #    problemtype = "(undefined)"
     if issue.getElementsByTagName('problemtype'):
@@ -103,9 +105,9 @@ for issue in dom.getElementsByTagName('issue'):
     
     credit = list()
     for reported in issue.getElementsByTagName('reported'):  # openssl style credits
-        credit.append( { "lang":"en", "value":re.sub('[\n ]+',' ', reported.getAttribute("source"))} )
+        credit.append( { "lang":"en", "type": "finder", "value":re.sub('[\n ]+',' ', reported.getAttribute("source"))} )
     for reported in issue.getElementsByTagName('acknowledgements'): # ASF httpd style credits
-        credit.append(  { "lang":"en", "value":re.sub('[\n ]+',' ', reported.childNodes[0].nodeValue.strip())} )
+        credit.append(  { "lang":"en", "type":"finder",  "value":re.sub('[\n ]+',' ', reported.childNodes[0].nodeValue.strip())} )
     if credit:
         cve['containers']['cna']['credits']=credit
 
