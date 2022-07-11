@@ -60,6 +60,7 @@ FUTURESERIES=
 # repository.  This does not include .md files taken from other repositories,
 # they have their own special handling.
 H_TOP = $(addsuffix .html,$(basename $(shell git ls-files -- *.md)))
+H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
 H_POLICIES = $(addsuffix .html,\
                $(basename $(shell git ls-files -- policies/general/*.md \
                                                   policies/technical/*.md)))
@@ -315,7 +316,7 @@ news/changelog.inc: news/changelog.txt bin/post-process-html5 Makefile
 	@rm -f $@
 	(echo 'Table of contents'; sed -e '1,/^OpenSSL Releases$$/d' < $<) \
 		| pandoc -t html5 -f commonmark | ./bin/post-process-html5 >$@
-news/changelog.html: news/changelog.html.tt news/changelog.inc Makefile bin/from-tt
+news/changelog.md: news/changelog.md.tt news/changelog.inc Makefile bin/from-tt
 	@rm -f $@
 	./bin/from-tt 'releases=$(SERIES)' $<
 # Additionally, make news/changelog.html depend on clxy[z].txt, where xy[z]
@@ -359,7 +360,7 @@ $(eval $(call mknews_changelogtxt,cl$(subst .,,$(S)).txt,openssl-$(S)-stable/CHA
 #
 # $(1) = release version, $(2) = NEWS file, relative to CHECKOUTS
 define mknews_noteshtml
-news/openssl-$(1)-notes.html: news/openssl-notes.html.tt bin/from-tt Makefile
+news/openssl-$(1)-notes.md: news/openssl-notes.md.tt bin/from-tt Makefile
 	@rm -f $$@
 	./bin/from-tt -d news -i $$< -o $$@ release='$(1)'
 news/openssl-$(1)-notes.inc: $(CHECKOUTS)/$(2) bin/mk-notes Makefile
@@ -400,7 +401,7 @@ define mknews_vulnerability
 news/vulnerabilities$(1).inc: bin/mk-cvepage news/vulnerabilities.xml Makefile
 	@rm -f $$@
 	./bin/mk-cvepage -i news/vulnerabilities.xml $(2) > $$@
-news/vulnerabilities$(1).html: news/vulnerabilities.html.tt bin/from-tt Makefile
+news/vulnerabilities$(1).md: news/vulnerabilities.md.tt bin/from-tt Makefile
 	@rm -f $$@
 	./bin/from-tt -d news vulnerabilitiesinc='vulnerabilities$(1).inc' < $$< > $$@
 endef

@@ -1,0 +1,18 @@
+# Changelog
+
+When a release is created, that branch is forked off, and its changelog
+is also forked. For example, none of the changes after 0.9.8n appear in
+the other logs, because 1.0.0 was created after that release and before
+0.9.8o. Any changes that are merged across branches, however, should
+have an entry in each branch\'s changelog.
+
+This is the changelog for the master branch, the one that is currently
+in active development. The plain-text / markdown version of this
+document is available here: [changelog.txt](changelog.txt)
+
+For other branches, the changelogs are distributed with the source, but
+are also available here:
+
+[% FOREACH release IN releases.split('\s+').reverse -%]
+-   [[% release %]]([% release.replace('\.', '') %].txt)
+[% END -%]
