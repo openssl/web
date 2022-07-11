@@ -64,11 +64,17 @@ H_COMMUNITY = $(addsuffix .html,\
                 $(basename $(shell git ls-files -- community/*.md)))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # We filter out any file starting with 'sub-'...  they get special treatment
 H_DOCS = $(addsuffix .html,\
            $(basename $(shell git ls-files -- docs/*.md \
                                               docs/*.md.tt \
                               | grep -v '/sub-')))
+=======
+H_DOCS = $(addsuffix .html,\
+           $(basename $(shell git ls-files -- docs/*.md \
+                                              docs/*.md.tt )))
+>>>>>>> 5875392 (Convert docs/*.html to .md)
 H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,7 +110,12 @@ SIMPLE = $(H_TOP) \
 	 $(H_COMMUNITY) \
 	 community/committers.inc community/otc.inc \
 	 community/omc.inc community/omc-alumni.inc \
+<<<<<<< HEAD
 	 news/changelog.html \
+=======
+	 $(H_DOCS) \
+         news/changelog.html \
+>>>>>>> 5875392 (Convert docs/*.html to .md)
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
 	 $(H_NEWS) \
@@ -327,6 +338,17 @@ docs/mansidebar.html: docs/mansidebar.html.tt Makefile bin/from-tt
 docs/faq.inc: $(wildcard docs/faq-[0-9]-*.txt) Makefile bin/mk-faq
 	@rm -f $@
 	./bin/mk-faq docs/faq-[0-9]-*txt >$@
+<<<<<<< HEAD
+=======
+
+# We don't want to include our web source files in the list of FIPS files
+# to be downloaded, so we filter them out.  ./bin/mk-filelist can handle
+# multiple file arguments.  Trust git ls-files over $(wildcard ...)
+FIPS_FILES = $(filter-out %.yaml %.md %.tt,$(shell git ls-files -- docs/fips))
+docs/fips.inc: $(FIPS_FILES) Makefile bin/mk-filelist
+	@rm -f $@
+	./bin/mk-filelist docs/fips fips/ $(notdir $(FIPS_FILES)) >$@
+>>>>>>> 5875392 (Convert docs/*.html to .md)
 
 ######################################################################
 ##
@@ -596,9 +618,13 @@ $(foreach H, \
   $(H_COMMUNITY) \
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   $(H_DOCS) \
   $(filter %.html,$(MANMASTER_TARGETS)) \
   $(filter %.html,$(MANPAGES_TARGETS)) \
+=======
+  $(H_DOCS) \
+>>>>>>> 5875392 (Convert docs/*.html to .md)
   $(H_NEWS) \
 =======
 >>>>>>> 7943bed (Convert all community/*.html to .md)

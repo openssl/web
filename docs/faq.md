@@ -1,5 +1,6 @@
 ---
 breadcrumb: Frequently Asked Questions
+<<<<<<< HEAD
 header-includes: |
   <script>
   $(function(){
@@ -8,6 +9,8 @@ header-includes: |
     });
   });
   </script>
+=======
+>>>>>>> 5875392 (Convert docs/*.html to .md)
 ---
 # Frequently Asked Questions
 
