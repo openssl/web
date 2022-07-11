@@ -7,6 +7,7 @@ community/committers.inc
 community/omc-alumni.inc
 community/otc.inc
 community/omc.inc
+community/*.html
 docs/OpenSSL300Design.html
 docs/OpenSSLStrategicArchitecture.html
 docs/faq.inc
