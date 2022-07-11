@@ -63,10 +63,11 @@ H_TOP = $(addsuffix .html,$(basename $(shell git ls-files -- *.md)))
 H_COMMUNITY = $(addsuffix .html,\
                 $(basename $(shell git ls-files -- community/*.md)))
 H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
-H_SUPPORT = $(addsuffix .html,$(basename $(shell git ls-files -- support/*.md)))
 H_POLICIES = $(addsuffix .html,\
-               $(basename $(shell git ls-files -- policies/general/*.md \
+               $(basename $(shell git ls-files -- policies/*.md \
+                                                  policies/general/*.md \
                                                   policies/technical/*.md)))
+H_SUPPORT = $(addsuffix .html,$(basename $(shell git ls-files -- support/*.md)))
 
 SIMPLE = $(H_TOP) \
 	 newsflash.inc \

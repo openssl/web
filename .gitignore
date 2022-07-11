@@ -26,6 +26,11 @@ news/vulnerabilities*.inc
 news/vulnerabilities*.md
 news/*.html
 newsflash.inc
+policies/*.html
+policies/general/*.html
+policies/general/*.inc
+policies/technical/*.html
+policies/technical/*.inc
 source/*.gz*
 source/*.patch
 source/.htaccess
