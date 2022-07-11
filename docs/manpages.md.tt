@@ -1,0 +1,10 @@
+---
+breadcrumb: Manpages
+---
+# Manpages
+
+The manual pages for all releases are available online:
+
+[% FOREACH release IN releases.split('\s+') -%]
+-   [[% release %]](man[% release %])
+[% END -%]

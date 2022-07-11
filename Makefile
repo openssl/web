@@ -62,6 +62,9 @@ FUTURESERIES=
 H_TOP = $(addsuffix .html,$(basename $(shell git ls-files -- *.md)))
 H_COMMUNITY = $(addsuffix .html,\
                 $(basename $(shell git ls-files -- community/*.md)))
+H_DOCS = $(addsuffix .html,\
+           $(basename $(shell git ls-files -- docs/*.md \
+                                              docs/*.md.tt )))
 H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
 H_POLICIES = $(addsuffix .html,\
                $(basename $(shell git ls-files -- policies/*.md \
@@ -74,6 +77,7 @@ SIMPLE = $(H_TOP) \
 	 $(H_COMMUNITY) \
 	 community/committers.inc community/otc.inc \
 	 community/omc.inc community/omc-alumni.inc \
+	 $(H_DOCS) \
          news/changelog.html \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
@@ -236,7 +240,7 @@ manpages: $(foreach S,$(MANSERIES),man-apropos-$(S) man-index-$(S))
 mancross:
 	./bin/mk-mancross master $(MANSERIES)
 
-docs/manpages.html: docs/manpages.html.tt Makefile bin/from-tt
+docs/manpages.md: docs/manpages.md.tt Makefile bin/from-tt
 	@rm -f $@
 	./bin/from-tt releases='master $(MANSERIES)' $<
 
@@ -501,6 +505,7 @@ endef
 $(foreach H, \
   $(H_TOP) \
   $(H_COMMUNITY) \
+  $(H_DOCS) \
   $(H_NEWS) \
   $(H_POLICIES) \
   $(H_SUPPORT) \

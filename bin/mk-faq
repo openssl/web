@@ -1,6 +1,7 @@
 #! /bin/sh
 
 cat <<EOF
+<div class='faq'>
 <h3><a name='toc'>Table of Contents</a></h3>
 <ol>
 EOF
@@ -28,3 +29,7 @@ EOF
 	| sed -E -e 's/ id="[-a-z]*">/>/' \
 	| sed -E -e 's/<([^<>]*)>\|([A-Z]*[0-9]*)\|/<\1 id="\2">/'
 done
+
+cat <<EOF
+</div>
+EOF
