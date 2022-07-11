@@ -62,12 +62,15 @@ FUTURESERIES=
 H_TOP = $(addsuffix .html,$(basename $(shell git ls-files -- *.md)))
 H_COMMUNITY = $(addsuffix .html,\
                 $(basename $(shell git ls-files -- community/*.md)))
+<<<<<<< HEAD
 # We filter out any file starting with 'sub-'...  they get special treatment
 H_DOCS = $(addsuffix .html,\
            $(basename $(shell git ls-files -- docs/*.md \
                                               docs/*.md.tt \
                               | grep -v '/sub-')))
 H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
+=======
+>>>>>>> 7943bed (Convert all community/*.html to .md)
 H_POLICIES = $(addsuffix .html,\
                $(basename $(shell git ls-files -- policies/*.md \
                                                   policies/general/*.md \
@@ -570,10 +573,13 @@ endef
 $(foreach H, \
   $(H_TOP) \
   $(H_COMMUNITY) \
+<<<<<<< HEAD
   $(H_DOCS) \
   $(filter %.html,$(MANMASTER_TARGETS)) \
   $(filter %.html,$(MANPAGES_TARGETS)) \
   $(H_NEWS) \
+=======
+>>>>>>> 7943bed (Convert all community/*.html to .md)
   $(H_POLICIES) \
   $(H_SOURCE) \
   $(H_SUPPORT) \
