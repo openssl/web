@@ -1,5 +1,4 @@
-Getting Started as a contributor
-================================
+# Getting Started as a contributor
 
 We're always looking for people who want to help out. Here are some 
 tips to getting started. First, get familiar with the information on

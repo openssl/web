@@ -1,5 +1,4 @@
-Binaries and Engines
-====================
+# Binaries and Engines
 
 The OpenSSL project does not distribute any code in binary form, and does
 not officially recommend any specific binary distributions. An informal list

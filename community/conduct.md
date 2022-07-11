@@ -1,5 +1,4 @@
-Code of Conduct
-===============
+# Code of Conduct
 
 The OpenSSL community consists primarily, although not solely, of its online
 presence in mailing lists and activities such as the blog postings and

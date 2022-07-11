@@ -1,5 +1,4 @@
-Thanks!
-=======
+# Thanks!
 
 We'd like to thank the following individuals and organizations who
 contribute to the OpenSSL project.

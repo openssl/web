@@ -1,12 +1,10 @@
-List of Committers
-==================
+# List of Committers
 
 The current list of [committers](/policies/omc-bylaws.html#committers) is
 listed below. These are the people who can commit changes to the OpenSSL
 source tree, with appropriate code reviews.
 
-Committers
-----------
+## Committers
 
 <table width="50%" summary="Committers">
 <tr>

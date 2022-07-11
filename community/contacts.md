@@ -1,5 +1,4 @@
-Contact Information
-===================
+# Contact Information
 
 The *OpenSSL Software Foundation* (OSF) represents the OpenSSL project in
 most legal capacities including contributor license agreements, managing

@@ -1,5 +1,4 @@
-OpenSSL Technical Committee
-===========================
+# OpenSSL Technical Committee
 
 The [OpenSSL Technical Committee](/policies/omc-bylaws.html#OTC) represents
 the official technical voice of the project. All OTC decisions are taken on
