@@ -71,6 +71,7 @@ H_DOCS = $(addsuffix .html,\
                               | grep -v '/sub-')))
 H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 7943bed (Convert all community/*.html to .md)
 =======
@@ -79,10 +80,13 @@ H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
 =======
 H_SUPPORT = $(addsuffix .html,$(basename $(shell git ls-files -- support/*.md)))
 >>>>>>> 7e79f7d (Convert all support/*.html to .md)
+=======
+>>>>>>> 53e9ec1 (Convert all policies/*.html to .md)
 H_POLICIES = $(addsuffix .html,\
                $(basename $(shell git ls-files -- policies/*.md \
                                                   policies/general/*.md \
                                                   policies/technical/*.md)))
+<<<<<<< HEAD
 # We filter out any file starting with 'sub-'...  they get special treatment
 H_SOURCE= $(addsuffix .html,\
             $(basename $(shell git ls-files -- source/*.md \
@@ -91,6 +95,8 @@ H_SOURCE= $(addsuffix .html,\
                        $(basename $(shell git ls-files -- source/*.md.tt \
                                                           source/old/*.md.tt \
                                           | grep -v '/sub-'))))
+=======
+>>>>>>> 53e9ec1 (Convert all policies/*.html to .md)
 H_SUPPORT = $(addsuffix .html,$(basename $(shell git ls-files -- support/*.md)))
 
 SIMPLE = $(H_TOP) \

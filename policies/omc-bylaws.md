@@ -3,6 +3,11 @@ breadcrumb: Bylaws
 ---
 # OpenSSL Bylaws
 
+<<<<<<< HEAD
+=======
+#### First issued 13th February 2017 Last modified 10th December 2019
+
+>>>>>>> 53e9ec1 (Convert all policies/*.html to .md)
 This document defines the bylaws under which the OpenSSL Project
 operates. It defines the different project roles, how they contribute to
 the project, and how project decisions are made.
@@ -134,8 +139,12 @@ internal resources.
 
 ### [OMC Voting Procedures]{#omc-voting}
 
+<<<<<<< HEAD
 A vote to change these bylaws more than just an edit (see [Minor
 Edits](#minor-edits) below) will pass if it obtains an in favour vote
+=======
+A vote to change these bylaws will pass if it obtains an in favour vote
+>>>>>>> 53e9ec1 (Convert all policies/*.html to .md)
 by more than two thirds of the active OMC members and less than one
 quarter votes against by the active OMC members. A vote that does not
 change these bylaws will pass if it has had a vote registered from a
@@ -170,6 +179,7 @@ otherwise not affect the outcome of the vote.
 All votes and their outcomes should be recorded and available to all OMC
 members.
 
+<<<<<<< HEAD
 ### Minor Edits
 
 Minor bylaw edits that do not change the meaning of the edited bylaws do not
@@ -183,6 +193,8 @@ should be labelled with the minor edit label.
 Approved submissions shall only be applied after a 24-hour delay from the
 approval.
 
+=======
+>>>>>>> 53e9ec1 (Convert all policies/*.html to .md)
 ## [OpenSSL Technical Committee (OTC)]{#OTC}
 
 The OTC represents the official technical voice of the project. All OTC
@@ -352,6 +364,9 @@ of absence:
 The following changes have been made since the bylaws were first issued
 13-February-2017.
 
+<<<<<<< HEAD
 .   17-July-2022. Added a clause on minor edits of these bylaws.
+=======
+>>>>>>> 53e9ec1 (Convert all policies/*.html to .md)
 -   21-November-2019. Added *OTC*. and other related changes.
 -   20-December-2017. Added *Leave of absence* section.
