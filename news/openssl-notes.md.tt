@@ -1,0 +1,13 @@
+---
+breadcrumb: OpenSSL [% release %] Series Release Notes
+---
+# OpenSSL [% release %] Series Release Notes
+
+The major changes and known issues for the [% release %] branch of the
+OpenSSL toolkit are summarised below. The contents reflect the current
+state of the [`NEWS`](../policies/glossary.html#news) file inside the
+git repository.
+
+More details can be found in the [ChangeLog](changelog.html).
+
+<!--#include virtual="openssl-[% release %]-notes.inc" -->

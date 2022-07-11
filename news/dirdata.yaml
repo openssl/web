@@ -1,0 +1,12 @@
+---
+breadcrumbs:
+  - |
+    [Home](/) : [News](.)
+sidebar:
+  - |
+    # [News](.)
+
+    -   [Newslog](newslog.html)
+    -   [Vulnerabilities](vulnerabilities.html)
+    -   [Changelog](changelog.html)
+---

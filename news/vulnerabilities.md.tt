@@ -1,0 +1,9 @@
+---
+breadcrumb: Vulnerabilities
+---
+# Vulnerabilities
+
+If you think you have found a security bug in OpenSSL,
+please [report it to us](/community/#securityreports).
+
+<!--#include virtual="[% vulnerabilitiesinc %]" -->
