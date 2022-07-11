@@ -1,5 +1,4 @@
-Welcome to OpenSSL!
-===================
+# Welcome to OpenSSL!
 
 The OpenSSL Project develops and maintains the OpenSSL software - a robust,
 commercial-grade, full-featured toolkit for general-purpose cryptography and
