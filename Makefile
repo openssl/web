@@ -60,12 +60,15 @@ FUTURESERIES=
 # repository.  This does not include .md files taken from other repositories,
 # they have their own special handling.
 H_TOP = $(addsuffix .html,$(basename $(shell git ls-files -- *.md)))
+H_COMMUNITY = $(addsuffix .html,\
+                $(basename $(shell git ls-files -- community/*.md)))
 H_POLICIES = $(addsuffix .html,\
                $(basename $(shell git ls-files -- policies/general/*.md \
                                                   policies/technical/*.md)))
 
 SIMPLE = $(H_TOP) \
 	 newsflash.inc \
+	 $(H_COMMUNITY) \
 	 community/committers.inc community/otc.inc \
 	 community/omc.inc community/omc-alumni.inc \
          news/changelog.html \
@@ -492,5 +495,6 @@ endef
 # Generate standard dependencies for our known HTML outputs.
 $(foreach H, \
   $(H_TOP) \
+  $(H_COMMUNITY) \
   $(H_POLICIES) \
 ,$(eval $(call makehtmldepend,$(H))))
