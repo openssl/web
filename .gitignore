@@ -3,6 +3,7 @@
 *.cross
 blog
 sitemap.txt
+./*.html
 community/committers.inc
 community/omc-alumni.inc
 community/otc.inc
