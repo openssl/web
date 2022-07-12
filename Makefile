@@ -63,6 +63,7 @@ H_TOP = $(addsuffix .html,$(basename $(shell git ls-files -- *.md)))
 H_COMMUNITY = $(addsuffix .html,\
                 $(basename $(shell git ls-files -- community/*.md)))
 H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
+H_SUPPORT = $(addsuffix .html,$(basename $(shell git ls-files -- support/*.md)))
 H_POLICIES = $(addsuffix .html,\
                $(basename $(shell git ls-files -- policies/general/*.md \
                                                   policies/technical/*.md)))
@@ -86,7 +87,8 @@ SIMPLE = $(H_TOP) \
 	 policies/glossary.html \
 	 source/.htaccess \
 	 source/index.inc \
-	 source/old/index.html
+	 source/old/index.html \
+	 $(H_SUPPORT)
 SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
 
 SIMPLEDOCS = docs/faq.inc docs/fips.inc \
@@ -500,4 +502,5 @@ $(foreach H, \
   $(H_COMMUNITY) \
   $(H_NEWS) \
   $(H_POLICIES) \
+  $(H_SUPPORT) \
 ,$(eval $(call makehtmldepend,$(H))))
