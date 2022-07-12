@@ -104,10 +104,10 @@ contrary to OMC policies or decisions.
 OMC members may become inactive. In order to remain active a member
 must, in any calendar quarter, contribute by:
 
--   a) Having authored, or been recorded as a reviewer of, at least
+-   a\) Having authored, or been recorded as a reviewer of, at least
     one commit made to any OpenSSL repository (including non-code
     based ones) and
--   b) vote in at least two-thirds of the OMC votes closed in the
+-   b\) vote in at least two-thirds of the OMC votes closed in the
     first two months of the quarter and the last month of the preceding
     quarter.
 
@@ -215,13 +215,13 @@ decision-making process are the ones listed below.
 OTC members may become inactive. In order to remain active a member
 must, in any calendar quarter, contribute by:
 
--   a) Having authored, or been recorded as a reviewer of, at least one
+-   a\) Having authored, or been recorded as a reviewer of, at least one
     commit made to any OpenSSL repository (including non-code based
     ones) and
--   b) vote in at least two-thirds of the OTC votes closed in the first
+-   b\) vote in at least two-thirds of the OTC votes closed in the first
     two months of the quarter and the last month of the preceding
     quarter and
--   c) maintain committer status.
+-   c\) maintain committer status.
 
 The above rules will be applied at the beginning of each calender
 quarter. It does not apply if the OTC member was first appointed, or
@@ -324,15 +324,15 @@ committer will be deemed to have become active as of the date of return.
 All of the following criteria must be met in order to qualify as a leave
 of absence:
 
--   a) the member must request via email to the OMC a leave of absence
+-   a\) the member must request via email to the OMC a leave of absence
     at least one week in advance of the requested period of leave;
--   b) only one leave of absence is permitted per calendar year;
--   c) the leave of absence must specify the date of return from the
+-   b\) only one leave of absence is permitted per calendar year;
+-   c\) the leave of absence must specify the date of return from the
     leave of absence;
--   d) the length of the leave of absence shall be a minimum of one
+-   d\) the length of the leave of absence shall be a minimum of one
     calendar month and shall not exceed three calendar months (one
     quarter); and
--   e) the leave of absence applies to all the roles within the project
+-   e\) the leave of absence applies to all the roles within the project
     (i.e. OMC, OTC and committer if all three roles apply).
 
 # [Bylaws Update History]{#update}
