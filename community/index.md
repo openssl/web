@@ -8,7 +8,7 @@ ask everyone to follow our [code of conduct](conduct.html).
 
 Here are some of the ways you can join the community and contribute;
 see the links on the right-hand side.
-The \"[getting started](getting-started.html)\" page has some ideas.
+The "[getting started](getting-started.html)" page has some ideas.
 We maintain several [mailing lists](mailinglists.html).
 Anyone can join, but you must be a member of a list to post to it.
 We have a [public wiki](https://wiki.openssl.org), and anyone can
@@ -22,7 +22,7 @@ While we only distribute source, some members of the community make
 Finally we'd also like to [thank](thanks.html) several groups for help
 with the project infrastructure over time.
 
-## Reporting Security Bugs {#securityreports}
+## <a name="securityreports">Reporting Security Bugs</a>
 
 If you think you have found a security bug in OpenSSL, please send mail to
 <openssl-security@openssl.org>. Encryption is not required, but if you want
@@ -37,12 +37,13 @@ Please note that we do not run a Bug Bounty program, although third parties
 reward correctly reported and confirmed security issues in the OpenSSL
 codebase.
 
-All fixed security bugs are listed on our [vulnerabilities page](/news/vulnerabilities.html)
+All fixed security bugs are listed on our
+[vulnerabilities page](/news/vulnerabilities.html).
 
-## Reporting Bugs {#bugs}
+## <a name="bugs">Reporting Bugs</a>
 
 To report a bug or make an enhancement request, please open an issue on
-GitHub, by clicking \"new issue\" on this page:
+GitHub, by clicking "new issue" on this page:
 <https://github.com/openssl/openssl/issues>. If you also have code, you
 do not need to open both an issue and a pull request.
 
