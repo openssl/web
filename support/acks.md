@@ -36,28 +36,34 @@ note sponsors may choose to remain anonymous.
 ### Gold:
 
 <div class="sponsorsection">
-[![NGINX](/img/nginx-logo-med.png){.sponsorlogo}](https://www.nginx.com/)
-[![Shiguredo Inc.](/img/shiguredo-logo-med.png){.sponsorlogo}](https://shiguredo.jp/)
+
+[<span class="sponsorlogo">![NGINX](/img/nginx-logo-med.png)</span>](https://www.nginx.com/)
+[<span class="sponsorlogo">![Shiguredo Inc.](/img/shiguredo-logo-med.png)</span>](https://shiguredo.jp/)
+
 </div>
 
 ### Silver:
 
 <div class="sponsorsection">
+
 [Activision](https://activision.com/)
 
 [CarGurus](https://cargurus.com/)
 
 [VeriSign, Inc.](https://www.verisign.com/)
+
 </div>
 
 ### Bronze:
 
 <div class="sponsorsection">
+
 [beslist.nl](https://beslist.nl/)
 
 [Jameson Lopp](https://www.lopp.net/)
 
 [Mercedes-Benz AG](https://opensource.mercedes-benz.com/)
+
 </div>
 
 ------------------------------------------------------------------------
