@@ -1,3 +1,6 @@
+---
+title: Support
+---
 # Commercial Support
 
 In addition to joining the [community,](/community) you can make a direct

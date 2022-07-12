@@ -1,3 +1,6 @@
+---
+title: Contracts
+---
 # Support Contracts
 
 In addition to [community](/community) support,
