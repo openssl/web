@@ -1,5 +1,5 @@
 ---
-title: PGP Key
+breadcrumb: PGP Key
 ---
 # PGP Key
 

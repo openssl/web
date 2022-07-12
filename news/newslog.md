@@ -1,5 +1,5 @@
 ---
-title: Newslog
+breadcrumb: Newslog
 ---
 # Newslog
 
