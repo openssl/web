@@ -101,6 +101,9 @@ H_POLICIES = $(addsuffix .html,\
                                                   policies/general/*.md \
                                                   policies/technical/*.md)))
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4eb497a (Convert all source/*.html to .md)
 # We filter out any file starting with 'sub-'...  they get special treatment
 H_SOURCE= $(addsuffix .html,\
             $(basename $(shell git ls-files -- source/*.md \
@@ -109,8 +112,11 @@ H_SOURCE= $(addsuffix .html,\
                        $(basename $(shell git ls-files -- source/*.md.tt \
                                                           source/old/*.md.tt \
                                           | grep -v '/sub-'))))
+<<<<<<< HEAD
 =======
 >>>>>>> 53e9ec1 (Convert all policies/*.html to .md)
+=======
+>>>>>>> 4eb497a (Convert all source/*.html to .md)
 H_SUPPORT = $(addsuffix .html,$(basename $(shell git ls-files -- support/*.md)))
 
 SIMPLE = $(H_TOP) \
@@ -139,9 +145,12 @@ SIMPLE = $(H_TOP) \
 	 source/.htaccess \
 	 source/index.inc \
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	 source/old/index.html \
 >>>>>>> 7e79f7d (Convert all support/*.html to .md)
+=======
+>>>>>>> 4eb497a (Convert all source/*.html to .md)
 	 $(H_SUPPORT)
 SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
 
@@ -644,8 +653,12 @@ $(foreach H, \
 >>>>>>> 6b0605c (Convert all news/*.html to .md)
   $(H_POLICIES) \
 <<<<<<< HEAD
+<<<<<<< HEAD
   $(H_SOURCE) \
 =======
 >>>>>>> 7e79f7d (Convert all support/*.html to .md)
+=======
+  $(H_SOURCE) \
+>>>>>>> 4eb497a (Convert all source/*.html to .md)
   $(H_SUPPORT) \
 ,$(eval $(call makehtmldepend,$(H))))
