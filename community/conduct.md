@@ -1,5 +1,5 @@
 ---
-title: Conduct
+breadcrumb: Conduct
 ---
 # Code of Conduct
 

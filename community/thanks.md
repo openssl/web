@@ -1,5 +1,5 @@
 ---
-title: Thanks!
+breadcrumb: Thanks!
 ---
 # Thanks!
 

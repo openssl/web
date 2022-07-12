@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+breadcrumb: Getting Started
 ---
 # Getting Started as a contributor
 
