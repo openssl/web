@@ -24,3 +24,4 @@ fixes, see our [Vulnerabilities](news/vulnerabilities.html) page.
 <table class="newsflash" width="90%">
 <!--#include virtual="newsflash.inc"-->
 <tr><td class="d">[More...](news)</td><td class="t"></td></tr>
+</table>
