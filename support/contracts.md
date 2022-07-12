@@ -1,5 +1,5 @@
 ---
-title: Contracts
+breadcrumb: Contracts
 ---
 # Support Contracts
 
