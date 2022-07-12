@@ -67,6 +67,14 @@ H_POLICIES = $(addsuffix .html,\
                $(basename $(shell git ls-files -- policies/*.md \
                                                   policies/general/*.md \
                                                   policies/technical/*.md)))
+# We filter out any file starting with 'sub-'...  they get special treatment
+H_SOURCE= $(addsuffix .html,\
+            $(basename $(shell git ls-files -- source/*.md \
+                                               source/old/*.md \
+                               | grep -v '/sub-') \
+                       $(basename $(shell git ls-files -- source/*.md.tt \
+                                                          source/old/*.md.tt \
+                                          | grep -v '/sub-'))))
 H_SUPPORT = $(addsuffix .html,$(basename $(shell git ls-files -- support/*.md)))
 
 SIMPLE = $(H_TOP) \
@@ -86,9 +94,9 @@ SIMPLE = $(H_TOP) \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).html) \
 	 $(H_POLICIES) \
 	 policies/glossary.html \
+	 $(H_SOURCE) \
 	 source/.htaccess \
 	 source/index.inc \
-	 source/old/index.html \
 	 $(H_SUPPORT)
 SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
 
@@ -503,5 +511,6 @@ $(foreach H, \
   $(H_COMMUNITY) \
   $(H_NEWS) \
   $(H_POLICIES) \
+  $(H_SOURCE) \
   $(H_SUPPORT) \
 ,$(eval $(call makehtmldepend,$(H))))
