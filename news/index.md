@@ -1,3 +1,6 @@
+---
+title: News
+---
 # News
 
 To get the latest source, see the [Downloads](/source) section. This also

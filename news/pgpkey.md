@@ -1,3 +1,6 @@
+---
+title: PGP Key
+---
 # PGP Key
 
 Mail sent to <openssl-security@openssl.org> can be encrypted with our

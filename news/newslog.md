@@ -1,3 +1,6 @@
+---
+title: Newslog
+---
 # Newslog
 
 Here is a terse log of all OpenSSL announcements. They are almost
