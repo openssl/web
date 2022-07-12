@@ -2,10 +2,10 @@
                     You are here:
 $if(breadcrumbs)$
                     $breadcrumbs$
-$endif$
 $if(is-index)$
 $else$
-                    : <a href="">$title$</a>
+                    : <a href="">$breadcrumb$</a>
+$endif$
 $endif$
                     <br/><a href="$top$sitemap.txt">Sitemap</a>
                 </footer>
