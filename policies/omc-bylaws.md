@@ -1,5 +1,5 @@
 ---
-title: Bylaws
+breadcrumb: Bylaws
 ---
 # OpenSSL Bylaws
 

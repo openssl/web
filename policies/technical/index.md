@@ -1,5 +1,5 @@
 ---
-title: OpenSSL Technical Policies
+breadcrumb: OpenSSL Technical Policies
 ---
 These are the technical policies and procedures established by the OTC
 in accordance with the [project bylaws].

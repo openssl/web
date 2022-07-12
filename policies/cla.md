@@ -1,5 +1,5 @@
 ---
-title: Contributor Agreements
+breadcrumb: Contributor Agreements
 ---
 # Contributor Agreements
 
