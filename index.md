@@ -2,7 +2,7 @@
 
 The OpenSSL Project develops and maintains the OpenSSL software - a robust,
 commercial-grade, full-featured toolkit for general-purpose cryptography and
-secure communication. The project\'s technical decision making is managed by
+secure communication. The project's technical decision making is managed by
 the [OpenSSL Technical Committee](/community/otc.html) (OTC) and the project
 governance is managed by the [OpenSSL Management Committee](/community/omc.html)
 (OMC). The project operates under formal [Bylaws](/policies/omc-bylaws.html).
@@ -23,4 +23,4 @@ fixes, see our [Vulnerabilities](news/vulnerabilities.html) page.
 
 <table class="newsflash" width="90%">
 <!--#include virtual="newsflash.inc"-->
-<tr><td class="d">[More\...](news)</td><td class="t"></td></tr>
+<tr><td class="d">[More...](news)</td><td class="t"></td></tr>
