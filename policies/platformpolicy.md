@@ -47,7 +47,7 @@ Community
     If defects are raised that are specific to a community platform then
     the community maintainer may be contacted to help find a resolution.
     If a community maintainer is unresponsive, or unable to provide
-    fixes then the platform may be moved to "unadopted\".
+    fixes then the platform may be moved to "unadopted".
 
 Unadopted
 :   *Definition:* Platforms that no one has volunteered to support.
