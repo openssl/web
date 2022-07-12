@@ -29,3 +29,4 @@ source/.htaccess
 source/index.inc
 source/old/*/
 source/snapshot
+support/*.html

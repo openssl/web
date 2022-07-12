@@ -60,6 +60,7 @@ FUTURESERIES=
 # repository.  This does not include .md files taken from other repositories,
 # they have their own special handling.
 H_TOP = $(addsuffix .html,$(basename $(shell git ls-files -- *.md)))
+H_SUPPORT = $(addsuffix .html,$(basename $(shell git ls-files -- support/*.md)))
 H_POLICIES = $(addsuffix .html,\
                $(basename $(shell git ls-files -- policies/general/*.md \
                                                   policies/technical/*.md)))
@@ -81,7 +82,8 @@ SIMPLE = $(H_TOP) \
 	 policies/glossary.html \
 	 source/.htaccess \
 	 source/index.inc \
-	 source/old/index.html
+	 source/old/index.html \
+	 $(H_SUPPORT)
 SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
 
 SIMPLEDOCS = docs/faq.inc docs/fips.inc \
@@ -493,4 +495,5 @@ endef
 $(foreach H, \
   $(H_TOP) \
   $(H_POLICIES) \
+  $(H_SUPPORT) \
 ,$(eval $(call makehtmldepend,$(H))))
