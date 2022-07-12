@@ -1,3 +1,6 @@
+---
+title: Community
+---
 # Community
 
 OpenSSL source is maintained by a [team of committers](committers.html).

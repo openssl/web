@@ -1,3 +1,6 @@
+---
+title: OMC Alumni
+---
 # OpenSSL Management Committee - Alumni
 
 We gratefully acknowledge the contributions of the following alumni (who

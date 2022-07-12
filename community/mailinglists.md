@@ -1,3 +1,6 @@
+---
+title: Mailing Lists
+---
 # Mailing Lists
 
 Here are the [mailing lists](https://mta.openssl.org/) we run. You must

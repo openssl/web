@@ -1,3 +1,6 @@
+---
+title: Getting Started
+---
 # Getting Started as a contributor
 
 We're always looking for people who want to help out. Here are some 

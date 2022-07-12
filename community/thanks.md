@@ -1,3 +1,6 @@
+---
+title: Thanks!
+---
 # Thanks!
 
 We'd like to thank the following individuals and organizations who

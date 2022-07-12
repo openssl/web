@@ -1,3 +1,6 @@
+---
+title: OMC
+---
 # OpenSSL Management Committee
 
 The [OpenSSL Management Committee](/policies/omc-bylaws.html#OMC)

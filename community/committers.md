@@ -1,3 +1,6 @@
+---
+title: Committers
+---
 # List of Committers
 
 The current list of [committers](/policies/omc-bylaws.html#committers) is

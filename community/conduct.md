@@ -1,3 +1,6 @@
+---
+title: Conduct
+---
 # Code of Conduct
 
 The OpenSSL community consists primarily, although not solely, of its online

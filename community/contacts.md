@@ -1,3 +1,6 @@
+---
+title: Contact Us
+---
 # Contact Information
 
 The *OpenSSL Software Foundation* (OSF) represents the OpenSSL project in

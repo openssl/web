@@ -1,3 +1,6 @@
+---
+title: OTC
+---
 # OpenSSL Technical Committee
 
 The [OpenSSL Technical Committee](/policies/omc-bylaws.html#OTC) represents
