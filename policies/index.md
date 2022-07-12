@@ -26,7 +26,7 @@ The OpenSSL project is managed by the OpenSSL Management Committee
 (OMC), as defined by the [project bylaws](omc-bylaws.html). It is
 represented in most legal and formal capacities by the OpenSSL Software
 Foundation, a Delaware (US) non-profit corporation which has its own
-[bylaws](osf-bylaws.pdf) as a legal document. Signing one of our CLA\'s
+[bylaws](osf-bylaws.pdf) as a legal document. Signing one of our CLA's
 grants certain rights to OSF.
 
 In addition, the OMC establishes and maintains the [general policies](general/),

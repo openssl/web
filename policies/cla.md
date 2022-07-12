@@ -23,7 +23,7 @@ as trivial without requiring a CLA.
 
 In practice, it is required that the author (in the git commit message)
 and all approving team members (in the pull request thread) agree that a
-change is trivial. The author has to add "CLA: trivial" in the commit
+change is trivial. The author has to add `CLA: trivial` in the commit
 message separated by an empty line from the rest of the message. The
 reviewers will normally post a statement to the effect of "I agree that
 it is a trivial change."

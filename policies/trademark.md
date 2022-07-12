@@ -81,17 +81,15 @@ always prohibited.
     of OpenSSL, produced by the OpenSSL project, or endorsed by the
     OpenSSL project.
 
-2.  Acknowledge OpenSSL Software Foundation\'s ownership of the OpenSSL
-    trademark prominently. For example:\
-    \
+2.  Acknowledge OpenSSL Software Foundation's ownership of the OpenSSL
+    trademark prominently. For example:
 
     \[TRADEMARK\] is a ("registered," if applicable) trademark owned by
     the OpenSSL Software Foundation.
 
 3.  Include a disclaimer of sponsorship, affiliation, or endorsement by
     OpenSSL on your website and on all related printed materials. For
-    example:\
-    \
+    example:
 
     X PROJECT is not affiliated with OpenSSL. OpenSSL is a registered
     trademark owned by OpenSSL Software Foundation.

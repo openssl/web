@@ -22,7 +22,7 @@ changing our current LTS policies and practices.
 The current 1.1.1 versioning scheme remains unchanged:
 
 > *As of release 1.0.0 the OpenSSL versioning scheme was improved to
-> better meet developers\' and vendors\' expectations. Letter releases,
+> better meet developers' and vendors' expectations. Letter releases,
 > such as 1.0.2a, exclusively contain bug and security fixes and no new
 > features. Releases that change the last digit, e.g. 1.1.0 vs. 1.1.1,
 > can and are likely to contain new features, but in a way that does not
@@ -82,8 +82,8 @@ criteria:
     closed (see below).
 -   Clean builds in Travis and Appveyor for two days.
 -   run-checker.sh succeeds on 2 consecutive days before release.
--   No open Coverity issues (not flagged as \"False Positive\" or
-    \"Ignore\").
+-   No open Coverity issues (not flagged as "False Positive" or
+    "Ignore").
 
 Valid reasons for closing an issue/PR with a milestone for the version
 might be:
@@ -93,7 +93,7 @@ might be:
     possible)
 -   Working as intended
 -   Deliberate decision not to fix this issue until a later release
-    (this wouldn\'t actually close the issue/PR but change the milestone
+    (this wouldn't actually close the issue/PR but change the milestone
     instead)
 -   Not enough information and unable to contact reporter
 

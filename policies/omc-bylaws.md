@@ -14,7 +14,7 @@ Users include any individual or organisation that downloads, installs,
 compiles, or uses the OpenSSL command line applications or the OpenSSL
 libraries or the OpenSSL documentation. This includes OpenSSL-based
 derivatives such as patched versions of OpenSSL provided through OS
-distributions, often known as \"downstream\" versions.
+distributions, often known as "downstream" versions.
 
 Users may request help and assistance from the project through any
 appropriate forum as designated by the OpenSSL Management Committee
