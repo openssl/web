@@ -72,6 +72,7 @@ SIMPLE = $(H_TOP) \
          news/changelog.html \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
+	 $(H_NEWS) \
 	 news/newsflash.inc \
 	 news/secadv \
 	 news/vulnerabilities.inc \
@@ -493,5 +494,6 @@ endef
 # Generate standard dependencies for our known HTML outputs.
 $(foreach H, \
   $(H_TOP) \
+  $(H_NEWS) \
   $(H_POLICIES) \
 ,$(eval $(call makehtmldepend,$(H))))
