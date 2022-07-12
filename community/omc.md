@@ -9,7 +9,7 @@ are taken on the basis of a vote.
 
 The current OMC consists of (in alphabetical order):
 
-<!--#include virtual="omc.inc" -->
+<p><!--#include virtual="omc.inc" --></p>
 
 Names with an (I) are currently inactive as defined in our
 [bylaws](/policies/omc-bylaws.html).

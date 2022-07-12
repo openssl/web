@@ -9,9 +9,7 @@ the basis of a vote.
 
 The current OTC consists of (in alphabetical order):
 
-<!--#include virtual="otc.inc" -->
-
-<p>&nbsp;</p>
+<p><!--#include virtual="otc.inc" --></p>
 
 Names with an (I) are currently inactive as defined in our
 [bylaws](/policies/omc-bylaws.html).

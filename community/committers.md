@@ -9,6 +9,7 @@ source tree, with appropriate code reviews.
 
 ## Committers
 
+<p>
 <table width="50%" summary="Committers">
 <tr>
   <td wdith="50%">Name</td>
@@ -16,3 +17,4 @@ source tree, with appropriate code reviews.
 </tr>
 <!--#include virtual="committers.inc" -->
 </table>
+</p>
