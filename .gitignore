@@ -35,6 +35,7 @@ policies/technical/*.html
 policies/technical/*.inc
 source/*.gz*
 source/*.patch
+source/*.html
 source/.htaccess
 source/index.inc
 source/old/*/
