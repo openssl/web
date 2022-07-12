@@ -70,11 +70,15 @@ H_DOCS = $(addsuffix .html,\
                                               docs/*.md.tt \
                               | grep -v '/sub-')))
 H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
+<<<<<<< HEAD
 =======
 >>>>>>> 7943bed (Convert all community/*.html to .md)
 =======
 H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
 >>>>>>> 6b0605c (Convert all news/*.html to .md)
+=======
+H_SUPPORT = $(addsuffix .html,$(basename $(shell git ls-files -- support/*.md)))
+>>>>>>> 7e79f7d (Convert all support/*.html to .md)
 H_POLICIES = $(addsuffix .html,\
                $(basename $(shell git ls-files -- policies/*.md \
                                                   policies/general/*.md \
@@ -109,6 +113,10 @@ SIMPLE = $(H_TOP) \
 	 $(H_SOURCE) \
 	 source/.htaccess \
 	 source/index.inc \
+<<<<<<< HEAD
+=======
+	 source/old/index.html \
+>>>>>>> 7e79f7d (Convert all support/*.html to .md)
 	 $(H_SUPPORT)
 SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
 
@@ -592,6 +600,9 @@ $(foreach H, \
   $(H_NEWS) \
 >>>>>>> 6b0605c (Convert all news/*.html to .md)
   $(H_POLICIES) \
+<<<<<<< HEAD
   $(H_SOURCE) \
+=======
+>>>>>>> 7e79f7d (Convert all support/*.html to .md)
   $(H_SUPPORT) \
 ,$(eval $(call makehtmldepend,$(H))))

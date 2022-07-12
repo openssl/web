@@ -48,6 +48,11 @@ note sponsors may choose to remain anonymous.
 
 [Activision](https://activision.com/)
 
+<<<<<<< HEAD
+=======
+[CarGurus](https://cargurus.com/)
+
+>>>>>>> 7e79f7d (Convert all support/*.html to .md)
 [VeriSign, Inc.](https://www.verisign.com/)
 
 </div>
@@ -58,9 +63,15 @@ note sponsors may choose to remain anonymous.
 
 [beslist.nl](https://beslist.nl/)
 
+<<<<<<< HEAD
 [Mercedes-Benz AG](https://opensource.mercedes-benz.com/)
 
 [SAKURA internet Inc](https://www.sakura.ad.jp/en/corporate/)
+=======
+[Jameson Lopp](https://www.lopp.net/)
+
+[Mercedes-Benz AG](https://opensource.mercedes-benz.com/)
+>>>>>>> 7e79f7d (Convert all support/*.html to .md)
 
 </div>
 
