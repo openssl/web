@@ -36,6 +36,8 @@ source/*.patch
 source/*.html
 source/.htaccess
 source/index.inc
+source/old/*.html
+source/old/*.md
 source/old/*/
 source/snapshot
 support/*.html

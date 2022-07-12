@@ -1,0 +1,12 @@
+---
+breadcrumbs: |
+  [Home](/) : [Downloads](../..) : [Old Releases](../) : [[% release %]](.)
+sidebar: |
+  # [Downloads](.)
+
+  -   [Git Repository](../../gitrepo.html)
+  -   [License](../../license.html)
+  -   [OCB License](../../OCB-patent-grant-OpenSSL.pdf)
+  -   [Old Releases](../)
+  -   [Mirror Sites](../../mirror.html)
+---

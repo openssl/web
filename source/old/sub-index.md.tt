@@ -1,0 +1,17 @@
+---
+breadcrumb: [% release %]
+---
+# [% releasetitle %]
+
+<p>
+<table>
+  <tr>
+    <td>KBytes&nbsp;</td>
+    <td>Date&nbsp;&nbsp;</td>
+    <td>File&nbsp;</td>
+  </tr>
+  <!--#include virtual="index.inc" -->
+</table>
+</p>
+
+<!--#include virtual="/inc/legalities.shtml" -->

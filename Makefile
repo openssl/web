@@ -470,12 +470,21 @@ source/old/$(1)/index.inc: $(wildcard $(RELEASEDIR)/old/$(1)/*.gz) bin/mk-fileli
 	@mkdir -p `dirname $$@`
 	@rm -f $$@
 	./bin/mk-filelist $(RELEASEDIR)/old/$(1) '' '*.gz' > $$@
-source/old/$(1)/index.html: source/old/sub-index.html.tt bin/from-tt Makefile
+source/old/$(1)/index.md: source/old/sub-index.md.tt bin/from-tt Makefile
 	@mkdir -p `dirname $$@`
 	@rm -f $$@
 	./bin/from-tt -d source/old/$(1) \
 		      release='$(1)' releasetitle='Old $(2) Releases' \
 		      < $$< > $$@
+endef
+define mkoldsourcedirdata
+source/old/$(1)/dirdata.yaml: source/old/sub-dirdata.yaml.tt bin/from-tt Makefile
+	@mkdir -p `dirname $$@`
+	@rm -f $$@
+	./bin/from-tt -d source/old/$(1) \
+		      release='$(1)' releasetitle='Old $(2) Releases' \
+		      < $$< > $$@
+source/old/$(1)/index.html: source/old/$(1)/dirdata.yaml
 endef
 
 # Create the update tarball index 'source/old/x.y.z/index.html' and
@@ -484,8 +493,9 @@ endef
 # crafting an HTML title with an uppercase 'FIPS' while the subdirectory
 # remains named 'fips'
 $(foreach S,fips $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsourceindex,$(S),$(patsubst fips,FIPS,$(S)))))
+$(foreach S,fips $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsourcedirdata,$(S),$(patsubst fips,FIPS,$(S)))))
 
-source/old/index.html: source/old/index.html.tt Makefile bin/from-tt Makefile
+source/old/index.md: source/old/index.md.tt Makefile bin/from-tt Makefile
 	@mkdir -p `dirname $@`
 	@rm -f $@
 	./bin/from-tt releases='$(SERIES) $(OLDSERIES2) fips' $<

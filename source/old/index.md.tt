@@ -1,0 +1,12 @@
+---
+breadcrumb: Old Releases
+---
+# Old Releases
+
+Here are the old releases.
+
+[% FOREACH release IN releases.split('\s+') -%]
+-   [[% release %]]([% release %])
+[% END -%]
+
+<!--#include virtual="/inc/legalities.shtml" -->
