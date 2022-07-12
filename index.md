@@ -21,7 +21,9 @@ fixes, see our [Vulnerabilities](news/vulnerabilities.html) page.
 
 ### Latest News
 
+<p>
 <table class="newsflash" width="90%">
 <!--#include virtual="newsflash.inc"-->
 <tr><td class="d">[More...](news)</td><td class="t"></td></tr>
 </table>
+</p>
