@@ -1,3 +1,6 @@
+---
+title: Bylaws
+---
 # OpenSSL Bylaws
 
 #### First issued 13th February 2017 Last modified 10th December 2019

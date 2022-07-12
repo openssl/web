@@ -1,3 +1,6 @@
+---
+title: Trademark Policy
+---
 # Trademark Policy
 
 #### Last modified 27th October 2017

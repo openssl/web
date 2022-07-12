@@ -1,3 +1,6 @@
+---
+title: Platform Policy
+---
 # Platform Policy
 
 Platforms are classified as "primary", "secondary", "community"

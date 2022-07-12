@@ -1,3 +1,6 @@
+---
+title: Policies
+---
 # Policies
 
 In this section we try to document as many of our policies and

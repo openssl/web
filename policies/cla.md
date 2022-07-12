@@ -1,3 +1,6 @@
+---
+title: Contributor Agreements
+---
 # Contributor Agreements
 
 Every non-trivial contribution needs to be covered by a signed
