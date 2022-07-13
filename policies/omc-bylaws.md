@@ -140,11 +140,16 @@ internal resources.
 ### [OMC Voting Procedures]{#omc-voting}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 A vote to change these bylaws more than just an edit (see [Minor
 Edits](#minor-edits) below) will pass if it obtains an in favour vote
 =======
 A vote to change these bylaws will pass if it obtains an in favour vote
 >>>>>>> 53e9ec1 (Convert all policies/*.html to .md)
+=======
+A vote to change these bylaws more than just an edit (see [Minor
+Edits](#minor-edits) below) will pass if it obtains an in favour vote
+>>>>>>> b381b00 (policies/omc-bylaws.md: Add a clause on minor edits)
 by more than two thirds of the active OMC members and less than one
 quarter votes against by the active OMC members. A vote that does not
 change these bylaws will pass if it has had a vote registered from a
@@ -180,6 +185,9 @@ All votes and their outcomes should be recorded and available to all OMC
 members.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b381b00 (policies/omc-bylaws.md: Add a clause on minor edits)
 ### Minor Edits
 
 Minor bylaw edits that do not change the meaning of the edited bylaws do not
@@ -193,8 +201,11 @@ should be labelled with the minor edit label.
 Approved submissions shall only be applied after a 24-hour delay from the
 approval.
 
+<<<<<<< HEAD
 =======
 >>>>>>> 53e9ec1 (Convert all policies/*.html to .md)
+=======
+>>>>>>> b381b00 (policies/omc-bylaws.md: Add a clause on minor edits)
 ## [OpenSSL Technical Committee (OTC)]{#OTC}
 
 The OTC represents the official technical voice of the project. All OTC
