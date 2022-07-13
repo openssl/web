@@ -27,3 +27,5 @@ fixes, see our [Vulnerabilities](news/vulnerabilities.html) page.
 <tr><td class="d">[More...](news)</td><td class="t"></td></tr>
 </table>
 </p>
+
+<!--#include virtual="/inc/legalities.shtml" -->
