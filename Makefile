@@ -113,6 +113,7 @@ GENERAL_POLICIES=$(filter-out $(CHECKOUTS)/general-policies/policies/README.md $
 TECHNICAL_POLICIES=$(filter-out $(CHECKOUTS)/technical-policies/policies/README.md,$(all_TECHNICAL_POLICIES))
 
 .SUFFIXES: .md .html
+.PHONY : FORCE
 
 .md.html:
 	@rm -f $@
@@ -499,12 +500,6 @@ source/old/index.md: source/old/index.md.tt Makefile bin/from-tt Makefile
 	@mkdir -p `dirname $@`
 	@rm -f $@
 	./bin/from-tt releases='$(SERIES) $(OLDSERIES2) fips' $<
-
-# Because these the indexes of old tarballs will inevitably be newer
-# than the tarballs that are moved into their respective directory,
-# we must declare them phony, or they will not be regenerated when
-# they should.
-.PHONY : $(SRCLISTS) FORCE
 
 # Extra HTML dependencies (apart from the markdown file it comes from)
 
