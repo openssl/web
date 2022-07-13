@@ -136,7 +136,8 @@ internal resources.
 
 ### [OMC Voting Procedures]{#omc-voting}
 
-A vote to change these bylaws will pass if it obtains an in favour vote
+A vote to change these bylaws more than just an edit (see [Minor
+Edits](#minor-edits) below) will pass if it obtains an in favour vote
 by more than two thirds of the active OMC members and less than one
 quarter votes against by the active OMC members. A vote that does not
 change these bylaws will pass if it has had a vote registered from a
@@ -170,6 +171,19 @@ otherwise not affect the outcome of the vote.
 
 All votes and their outcomes should be recorded and available to all OMC
 members.
+
+### Minor Edits
+
+Minor bylaw edits that do not change the meaning of the edited bylaws do not
+require this voting process. Typical examples of such edits are spelling,
+grammar, and formatting fixes.
+
+These edits are done via pull requests that are approved by two OMC members
+where neither of them is the author of the submission. The pull request
+should be labelled with the minor edit label.
+
+Approved submissions shall only be applied after a 24-hour delay from the
+approval.
 
 ## [OpenSSL Technical Committee (OTC)]{#OTC}
 
