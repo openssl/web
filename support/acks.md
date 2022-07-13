@@ -5,7 +5,7 @@ breadcrumb: Acknowledgements
 
 The OpenSSL project depends on volunteer efforts and financial support
 from the end user community. That support comes in [many
-forms.](donations.html)
+forms](donations.html).
 
 ## <a href="current">Sponsorship Donations</a>
 
@@ -37,8 +37,8 @@ note sponsors may choose to remain anonymous.
 
 <div class="sponsorsection">
 
-[<span class="sponsorlogo">![NGINX](/img/nginx-logo-med.png)</span>](https://www.nginx.com/)
-[<span class="sponsorlogo">![Shiguredo Inc.](/img/shiguredo-logo-med.png)</span>](https://shiguredo.jp/)
+[![NGINX](/img/nginx-logo-med.png){.sponsorlogo}](https://www.nginx.com/)
+[![Shiguredo Inc.](/img/shiguredo-logo-med.png){.sponsorlogo}](https://shiguredo.jp/)
 
 </div>
 
