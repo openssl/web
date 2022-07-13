@@ -1569,10 +1569,10 @@ body > footer p:last-child {
 /* OPENSSL WEBSITE ADDITIONS */
 
 /* newsflash table */
-table > tr:first-child, table > thead {
+table > tr:first-child, table > thead, table > :not(thead + tbody) > tr:first-child {
     font-weight: bold; border-bottom: 1px solid black;
 }
-table > tr:nth-child(even), table > tbody > tr:nth-child(odd) {
+table > tr:nth-child(even), table > thead + tbody > tr:nth-child(odd), table > :not(thead + tbody) > tr:nth-child(even) {
     background-color: #D9f0ff;
 }
 td.d { float: left; width: 20%; }
