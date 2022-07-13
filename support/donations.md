@@ -22,6 +22,8 @@ organisation under Section 501(c)(3) of the U.S. Internal Revenue Code.
 We provide [Acknowledgements for sponsors](acks.html) depending on the level
 of funding:
 
+<p>
+
 | Level                         | Acknowledgement                                                   |
 |-------------------------------|-------------------------------------------------------------------|
 | Exceptional<br />\$75,000+/yr | Logo placement on openssl.org<br />Acknowledgement on openssl.org |
@@ -29,3 +31,5 @@ of funding:
 | Gold<br />\$20,000+/yr        | Logo placement on openssl.org<br />Acknowledgement on openssl.org |
 | Silver<br />\$10,000+/yr      | Acknowledgement on openssl.org                                    |
 | Bronze<br />\$5,000+/yr       | Acknowledgement on openssl.org                                    |
+
+</p>
