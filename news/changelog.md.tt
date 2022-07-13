@@ -17,5 +17,5 @@ For other branches, the changelogs are distributed with the source, but
 are also available here:
 
 [% FOREACH release IN releases.split('\s+').reverse -%]
--   [[% release %]]([% release.replace('\.', '') %].txt)
+-   [[% release %]](cl[% release.replace('\.', '') %].txt)
 [% END -%]
