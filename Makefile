@@ -65,6 +65,7 @@ H_COMMUNITY = $(addsuffix .html,\
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # We filter out any file starting with 'sub-'...  they get special treatment
 H_DOCS = $(addsuffix .html,\
            $(basename $(shell git ls-files -- docs/*.md \
@@ -75,6 +76,13 @@ H_DOCS = $(addsuffix .html,\
            $(basename $(shell git ls-files -- docs/*.md \
                                               docs/*.md.tt )))
 >>>>>>> 5875392 (Convert docs/*.html to .md)
+=======
+# We filter out any file starting with 'sub-'...  they get special treatment
+H_DOCS = $(addsuffix .html,\
+           $(basename $(shell git ls-files -- docs/*.md \
+                                              docs/*.md.tt \
+                              | grep -v '/sub-')))
+>>>>>>> c3d5e2f (Convert docs/sub-*.html.tt to .md.tt)
 H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -622,9 +630,12 @@ $(foreach H, \
   $(H_DOCS) \
   $(filter %.html,$(MANMASTER_TARGETS)) \
   $(filter %.html,$(MANPAGES_TARGETS)) \
+<<<<<<< HEAD
 =======
   $(H_DOCS) \
 >>>>>>> 5875392 (Convert docs/*.html to .md)
+=======
+>>>>>>> c3d5e2f (Convert docs/sub-*.html.tt to .md.tt)
   $(H_NEWS) \
 =======
 >>>>>>> 7943bed (Convert all community/*.html to .md)
