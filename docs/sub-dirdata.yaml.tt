@@ -1,0 +1,13 @@
+---
+breadcrumbs: |
+  [Home]([% top %]) :
+  [Documentation]([% top %]docs) :
+  [Manpages]([% top %]docs/manpages.html)[% IF release.defined %] :
+  [[% release %]]([% top %]docs/man[% release %])[% END %]
+sidebar: |
+  # [Manpages]([% top %]docs/manpages.html)
+
+[% FOREACH release IN releases.split('\s+') -%]
+  -   [[% release %]]([% top %]docs/man[% release %])
+[% END -%]
+---

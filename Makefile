@@ -62,9 +62,11 @@ FUTURESERIES=
 H_TOP = $(addsuffix .html,$(basename $(shell git ls-files -- *.md)))
 H_COMMUNITY = $(addsuffix .html,\
                 $(basename $(shell git ls-files -- community/*.md)))
+# We filter out any file starting with 'sub-'...  they get special treatment
 H_DOCS = $(addsuffix .html,\
            $(basename $(shell git ls-files -- docs/*.md \
-                                              docs/*.md.tt )))
+                                              docs/*.md.tt \
+                              | grep -v '/sub-')))
 H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
 H_POLICIES = $(addsuffix .html,\
                $(basename $(shell git ls-files -- policies/*.md \
@@ -99,8 +101,7 @@ SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$
 SIMPLEDOCS = docs/faq.inc docs/fips.inc \
 	     docs/OpenSSLStrategicArchitecture.html \
 	     docs/OpenSSL300Design.html \
-	     docs/manpages.html \
-	     docs/mansidebar.html
+	     docs/manpages.html
 
 GLOSSARY=$(CHECKOUTS)/general-policies/policies/glossary.md
 all_GENERAL_POLICIES=$(wildcard $(CHECKOUTS)/general-policies/policies/*.md)
@@ -190,34 +191,70 @@ man-pages-$(2):
 	./bin/mk-manpages3 $(CHECKOUTS)/$(1) $(2) docs/man$(2)
 endef
 define makemanapropos
-man-apropos-$(2): man-pages-$(2)
-	./bin/mk-apropos docs/man$(2)/man1 > docs/man$(2)/man1/index.inc
-	./bin/mk-apropos docs/man$(2)/man3 > docs/man$(2)/man3/index.inc
-	./bin/mk-apropos docs/man$(2)/man5 > docs/man$(2)/man5/index.inc
-	./bin/mk-apropos docs/man$(2)/man7 > docs/man$(2)/man7/index.inc
+docs/man$(2)/man1/index.inc: bin/mk-apropos Makefile
+	./bin/mk-apropos docs/man$(2)/man1 > $$@
+docs/man$(2)/man3/index.inc: bin/mk-apropos Makefile
+	./bin/mk-apropos docs/man$(2)/man3 > $$@
+docs/man$(2)/man5/index.inc: bin/mk-apropos Makefile
+	./bin/mk-apropos docs/man$(2)/man5 > $$@
+docs/man$(2)/man7/index.inc: bin/mk-apropos Makefile
+	./bin/mk-apropos docs/man$(2)/man7 > $$@
 endef
 define makemanindexes
-man-index-$(2):
-	./bin/from-tt -d docs/man$(2)/man1 releases='$(MANSERIES)' release='$(2)' \
-		      < docs/sub-man1-index.html.tt > docs/man$(2)/man1/index.html
-	./bin/from-tt -d docs/man$(2)/man3 releases='$(MANSERIES)' release='$(2)' \
-		      < docs/sub-man3-index.html.tt > docs/man$(2)/man3/index.html
-	./bin/from-tt -d docs/man$(2)/man5 releases='$(MANSERIES)' release='$(2)' \
-		      < docs/sub-man5-index.html.tt > docs/man$(2)/man5/index.html
-	./bin/from-tt -d docs/man$(2)/man7 releases='$(MANSERIES)' release='$(2)' \
-		      < docs/sub-man7-index.html.tt > docs/man$(2)/man7/index.html
-	./bin/from-tt -d docs/man$(2) releases='$(MANSERIES)' release='$(2)' \
-		      < docs/sub-index.html.tt > docs/man$(2)/index.html
+docs/man$(2)/man1/index.md: docs/sub-man1-index.md.tt bin/from-tt Makefile
+	./bin/from-tt -d docs/man$(2)/man1 \
+                      releases='$(MANSERIES)' release='$(2)' \
+		      < $$< > $$@
+docs/man$(2)/man3/index.md: docs/sub-man3-index.md.tt bin/from-tt Makefile
+	./bin/from-tt -d docs/man$(2)/man3 \
+                      releases='$(MANSERIES)' release='$(2)' \
+		      < $$< > $$@
+docs/man$(2)/man5/index.md: docs/sub-man5-index.md.tt bin/from-tt Makefile
+	./bin/from-tt -d docs/man$(2)/man5 \
+                      releases='$(MANSERIES)' release='$(2)' \
+		      < $$< > $$@
+docs/man$(2)/man7/index.md: docs/sub-man7-index.md.tt bin/from-tt Makefile
+	./bin/from-tt -d docs/man$(2)/man7 \
+                      releases='$(MANSERIES)' release='$(2)' \
+		      < $$< > $$@
+docs/man$(2)/index.md: docs/sub-index.md.tt bin/from-tt Makefile
+	./bin/from-tt -d docs/man$(2) \
+                      releases='$(MANSERIES)' release='$(2)' \
+		      < $$< > $$@
+endef
+define makemandirdata
+docs/man$(2)/man1/dirdata.yaml: docs/sub-dirdata.yaml.tt bin/from-tt Makefile
+	./bin/from-tt -d docs/man$(2)/man1 \
+		      releases='$(MANSERIES)' release='$(2)' \
+		      < $$< > $$@
+docs/man$(2)/man3/dirdata.yaml: docs/sub-dirdata.yaml.tt bin/from-tt Makefile
+	./bin/from-tt -d docs/man$(2)/man3 \
+		      releases='$(MANSERIES)' release='$(2)' \
+		      < $$< > $$@
+docs/man$(2)/man5/dirdata.yaml: docs/sub-dirdata.yaml.tt bin/from-tt Makefile
+	./bin/from-tt -d docs/man$(2)/man5 \
+		      releases='$(MANSERIES)' release='$(2)' \
+		      < $$< > $$@
+docs/man$(2)/man7/dirdata.yaml: docs/sub-dirdata.yaml.tt bin/from-tt Makefile
+	./bin/from-tt -d docs/man$(2)/man7 \
+		      releases='$(MANSERIES)' release='$(2)' \
+		      < $$< > $$@
+docs/man$(2)/dirdata.yaml: docs/sub-dirdata.yaml.tt bin/from-tt Makefile
+	./bin/from-tt -d docs/man$(2) \
+                      releases='$(MANSERIES)' release='$(2)' \
+		      < $$< > $$@
 endef
 define makemanuals1
 $(eval $(call makemanpages1,$(1),$(2)))
 $(eval $(call makemanapropos,$(1),$(2)))
 $(eval $(call makemanindexes,$(1),$(2)))
+$(eval $(call makemandirdata,$(1),$(2)))
 endef
 define makemanuals3
 $(eval $(call makemanpages3,$(1),$(2)))
 $(eval $(call makemanapropos,$(1),$(2)))
 $(eval $(call makemanindexes,$(1),$(2)))
+$(eval $(call makemandirdata,$(1),$(2)))
 endef
 
 # Now that we have the generating macros in place, let's use them!
@@ -234,8 +271,17 @@ $(foreach S,$(MANSERIES3),$(eval $(call makemanuals3,openssl-$(S),$(S))))
 # source from $(CHECKOUTS)/openssl-x.y.z-stable/doc
 $(foreach S,$(MANSERIES1),$(eval $(call makemanuals1,openssl-$(S)-stable,$(S))))
 
-manmaster: man-apropos-master man-index-master
-manpages: $(foreach S,$(MANSERIES),man-apropos-$(S) man-index-$(S))
+MANMASTER_TARGETS = \
+        man-pages-master docs/manmaster/index.html \
+        $(foreach SEC,1 3 5 7, docs/manmaster/man$(SEC)/index.inc \
+                               docs/manmaster/man$(SEC)/index.html)
+manmaster: $(MANMASTER_TARGETS)
+MANPAGES_TARGETS = \
+        $(foreach S,$(MANSERIES), \
+          man-pages-$(S) docs/man$(S)/index.html \
+          $(foreach SEC,1 3 5 7, docs/man$(S)/man$(SEC)/index.inc \
+                                 docs/man$(S)/man$(SEC)/index.html))
+manpages: manmaster $(MANPAGES_TARGETS)
 
 mancross:
 	./bin/mk-mancross master $(MANSERIES)
@@ -511,6 +557,8 @@ $(foreach H, \
   $(H_TOP) \
   $(H_COMMUNITY) \
   $(H_DOCS) \
+  $(filter %.html,$(MANMASTER_TARGETS)) \
+  $(filter %.html,$(MANPAGES_TARGETS)) \
   $(H_NEWS) \
   $(H_POLICIES) \
   $(H_SUPPORT) \
