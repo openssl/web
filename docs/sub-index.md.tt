@@ -1,0 +1,14 @@
+---
+breadcrumb: [% release %]
+---
+# Manpages for [% release %]
+
+The manual pages for the [% release %] branch are
+available here.
+The OpenSSL documentation is divided into the following
+sections:
+
+-   [Commands](man1)
+-   [Libraries](man3)
+-   [File Formats](man5)
+-   [Overviews](man7)
