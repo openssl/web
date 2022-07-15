@@ -99,7 +99,7 @@ if [ $# -eq 0 ]; then
 	cd $dir
 	( cat $HERE/../inc/common.tt;
           if [ -n "$input" ]; then cat "$HERE/../$input"; else cat; fi ) \
-        | eval "$tpagecmd --define 'dir=$HERE/../${dir:-filedir}'" \
+        | eval "$tpagecmd --define 'dir=$dir'" \
         | ( if [ -n "$output" ]; then cat > "$HERE/../$output"; else cat; fi )
     )
 else
@@ -132,7 +132,7 @@ else
 	    if ! (
 		    cd $filedir
 		    ( cat $HERE/../inc/common.tt; cat $base.tt ) | \
-			eval "$tpagecmd --define 'dir=${dir:-filedir}'" \
+			eval "$tpagecmd --define 'dir=${dir:-$filedir}'" \
 			     > $base
 		); then
 		exit $?
