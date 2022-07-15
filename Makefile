@@ -544,7 +544,7 @@ source/old/index.html: source/old/index.html.tt Makefile bin/from-tt Makefile
 # markdown files
 # $(1) = HTML file
 define makehtmldepend
-$(1): bin/md-to-html5 $(dirname $(1))dirdata.yaml
+$(1): bin/md-to-html5 $(dir $(1))dirdata.yaml
 endef
 
 # Generate standard dependencies for our known HTML outputs.
