@@ -3,8 +3,6 @@ breadcrumb: Bylaws
 ---
 # OpenSSL Bylaws
 
-#### First issued 13th February 2017 Last modified 10th December 2019
-
 This document defines the bylaws under which the OpenSSL Project
 operates. It defines the different project roles, how they contribute to
 the project, and how project decisions are made.
