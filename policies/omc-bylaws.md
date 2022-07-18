@@ -354,5 +354,6 @@ of absence:
 The following changes have been made since the bylaws were first issued
 13-February-2017.
 
+.   17-July-2022. Added a clause on minor edits of these bylaws.
 -   21-November-2019. Added *OTC*. and other related changes.
 -   20-December-2017. Added *Leave of absence* section.
