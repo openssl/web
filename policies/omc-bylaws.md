@@ -376,8 +376,12 @@ The following changes have been made since the bylaws were first issued
 13-February-2017.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .   17-July-2022. Added a clause on minor edits of these bylaws.
 =======
 >>>>>>> 53e9ec1 (Convert all policies/*.html to .md)
+=======
+.   17-July-2022. Added a clause on minor edits of these bylaws.
+>>>>>>> 9a9ad64 (Update policies/omc-bylaws.md with a history line re the minor edit clause)
 -   21-November-2019. Added *OTC*. and other related changes.
 -   20-December-2017. Added *Leave of absence* section.
