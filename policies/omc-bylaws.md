@@ -4,10 +4,13 @@ breadcrumb: Bylaws
 # OpenSSL Bylaws
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #### First issued 13th February 2017 Last modified 10th December 2019
 
 >>>>>>> 53e9ec1 (Convert all policies/*.html to .md)
+=======
+>>>>>>> b4e4ea1 (Remove the top date record)
 This document defines the bylaws under which the OpenSSL Project
 operates. It defines the different project roles, how they contribute to
 the project, and how project decisions are made.
