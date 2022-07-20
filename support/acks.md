@@ -64,14 +64,19 @@ note sponsors may choose to remain anonymous.
 [beslist.nl](https://beslist.nl/)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [Mercedes-Benz AG](https://opensource.mercedes-benz.com/)
 
 [SAKURA internet Inc](https://www.sakura.ad.jp/en/corporate/)
 =======
 [Jameson Lopp](https://www.lopp.net/)
 
+=======
+>>>>>>> ca21782 (Add Bronze sponsor Sakura Internet, remove Bronze sponsor Jameson Lopp)
 [Mercedes-Benz AG](https://opensource.mercedes-benz.com/)
 >>>>>>> 7e79f7d (Convert all support/*.html to .md)
+
+[SAKURA Internet Inc](https://www.sakura.ad.jp/en/corporate/)
 
 </div>
 
