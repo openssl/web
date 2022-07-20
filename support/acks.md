@@ -62,7 +62,7 @@ note sponsors may choose to remain anonymous.
 
 [Mercedes-Benz AG](https://opensource.mercedes-benz.com/)
 
-[SAKURA Internet Inc](https://www.sakura.ad.jp/en/corporate/)
+[SAKURA internet Inc](https://www.sakura.ad.jp/en/corporate/)
 
 </div>
 
