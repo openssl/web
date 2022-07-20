@@ -68,6 +68,7 @@ note sponsors may choose to remain anonymous.
 [Mercedes-Benz AG](https://opensource.mercedes-benz.com/)
 
 [SAKURA internet Inc](https://www.sakura.ad.jp/en/corporate/)
+<<<<<<< HEAD
 =======
 [Jameson Lopp](https://www.lopp.net/)
 
@@ -77,6 +78,8 @@ note sponsors may choose to remain anonymous.
 >>>>>>> 7e79f7d (Convert all support/*.html to .md)
 
 [SAKURA Internet Inc](https://www.sakura.ad.jp/en/corporate/)
+=======
+>>>>>>> 8a04d70 (Correct case as asked)
 
 </div>
 
