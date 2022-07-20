@@ -60,9 +60,9 @@ note sponsors may choose to remain anonymous.
 
 [beslist.nl](https://beslist.nl/)
 
-[Jameson Lopp](https://www.lopp.net/)
-
 [Mercedes-Benz AG](https://opensource.mercedes-benz.com/)
+
+[SAKURA Internet Inc](https://www.sakura.ad.jp/en/corporate/)
 
 </div>
 
