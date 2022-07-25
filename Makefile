@@ -87,8 +87,7 @@ SIMPLE = $(H_TOP) \
 	 $(H_COMMUNITY) \
 	 community/committers.inc community/otc.inc \
 	 community/omc.inc community/omc-alumni.inc \
-	 $(H_DOCS) \
-         news/changelog.html \
+	 news/changelog.html \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
 	 $(H_NEWS) \
@@ -106,7 +105,8 @@ SIMPLE = $(H_TOP) \
 	 $(H_SUPPORT)
 SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
 
-SIMPLEDOCS = docs/faq.inc docs/fips.inc \
+SIMPLEDOCS = $(H_DOCS) \
+	     docs/faq.inc docs/fips.inc \
 	     docs/OpenSSLStrategicArchitecture.html \
 	     docs/OpenSSL300Design.html \
 	     docs/manpages.html
