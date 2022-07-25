@@ -125,11 +125,15 @@ SIMPLE = $(H_TOP) \
 	 community/committers.inc community/otc.inc \
 	 community/omc.inc community/omc-alumni.inc \
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 news/changelog.html \
 =======
 	 $(H_DOCS) \
          news/changelog.html \
 >>>>>>> 5875392 (Convert docs/*.html to .md)
+=======
+	 news/changelog.html \
+>>>>>>> da1a36f (Move $(H_DOCS) into $(SIMPLEDOCS))
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
 	 $(H_NEWS) \
@@ -155,7 +159,11 @@ SIMPLE = $(H_TOP) \
 SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
 
 SIMPLEDOCS = $(H_DOCS) \
+<<<<<<< HEAD
 	     docs/faq.inc \
+=======
+	     docs/faq.inc docs/fips.inc \
+>>>>>>> da1a36f (Move $(H_DOCS) into $(SIMPLEDOCS))
 	     docs/OpenSSLStrategicArchitecture.html \
 	     docs/OpenSSL300Design.html \
 	     docs/manpages.html
