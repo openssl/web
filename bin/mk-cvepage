@@ -122,7 +122,10 @@ for issue in sorted(issues, key=lambda x: (x.getAttribute('public'), x.getElemen
                 continue
         allissues += "<li>Fixed in OpenSSL %s " %(affects.getAttribute('version'))
         for git in affects.getElementsByTagName('git'):
-            allissues += "<a href=\"https://github.com/openssl/openssl/commit/%s\">(git commit)</a> " %(git.getAttribute('hash'))            
+            if (affects.getAttribute('premium')):
+                allissues += "<a href=\"/support/contracts.html?githash=%s\">(premium support)</a> " %(git.getAttribute('hash'))
+            else:
+                allissues += "<a href=\"https://github.com/openssl/openssl/commit/%s\">(git commit)</a> " %(git.getAttribute('hash'))
         allissues += "(Affected "+merge_affects(issue,affects.getAttribute("base"))+")"       
         allissues += "</li>"
     if also:
