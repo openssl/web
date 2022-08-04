@@ -111,6 +111,7 @@ The current community platforms are:
 | nonstop-nse\_spt        |        | NonStop OSS J06.22 |        | ia64 ipl32 SPT          |        | c99             |        | \@rsbeckerca                                            |
 | nonstop-nse\_spt\_floss |        | NonStop OSS J06.22 |        | ia64 ipl32 SPT FLOSS    |        | c99             |        | \@rsbeckerca                                            |
 | linux64-loongarch64     |        | Linux              |        | loongarch64             |        | gcc             |        | \@shipujin                                              |
+| BSD-armv4               |        | FreeBSD            |        | armv4                   |        | LLVM            |        | \@pkubaj                                                |
 | BSD-ppc                 |        | FreeBSD            |        | ppc                     |        | LLVM            |        | \@pkubaj                                                |
 | BSD-ppc64               |        | FreeBSD            |        | ppc64                   |        | LLVM            |        | \@pkubaj                                                |
 | BSD-ppc64le             |        | FreeBSD            |        | ppc64le                 |        | LLVM            |        | \@pkubaj                                                |
