@@ -128,9 +128,13 @@ The current community platforms are:
 | nonstop-nse\_spt\_floss |        | NonStop OSS J06.22 |        | ia64 ipl32 SPT FLOSS    |        | c99             |        | \@rsbeckerca                                            |
 | linux64-loongarch64     |        | Linux              |        | loongarch64             |        | gcc             |        | \@shipujin                                              |
 <<<<<<< HEAD
+<<<<<<< HEAD
 | BSD-armv4               |        | FreeBSD            |        | armv4                   |        | LLVM            |        | \@pkubaj                                                |
 =======
 >>>>>>> 53e9ec1 (Convert all policies/*.html to .md)
+=======
+| BSD-armv4               |        | FreeBSD            |        | armv4                   |        | LLVM            |        | \@pkubaj                                                |
+>>>>>>> 3390e47 (Add BSD-armv4 platform)
 | BSD-ppc                 |        | FreeBSD            |        | ppc                     |        | LLVM            |        | \@pkubaj                                                |
 | BSD-ppc64               |        | FreeBSD            |        | ppc64                   |        | LLVM            |        | \@pkubaj                                                |
 | BSD-ppc64le             |        | FreeBSD            |        | ppc64le                 |        | LLVM            |        | \@pkubaj                                                |
