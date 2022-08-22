@@ -13,7 +13,6 @@ import sys
 parser = OptionParser()
  
 parser.add_option("-b","--base",help="major version to filter on",dest="base")
-parser.add_option("-e","--extratext",help="extra text to add to description",dest="extratext")
 parser.add_option("-i","--inputdirectory",help="directory of json files",dest="directory")
 (options,args) = parser.parse_args()
 
