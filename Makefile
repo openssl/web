@@ -106,7 +106,7 @@ SIMPLE = $(H_TOP) \
 SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
 
 SIMPLEDOCS = $(H_DOCS) \
-	     docs/faq.inc docs/fips.inc \
+	     docs/faq.inc \
 	     docs/OpenSSLStrategicArchitecture.html \
 	     docs/OpenSSL300Design.html \
 	     docs/manpages.html
@@ -306,14 +306,6 @@ docs/mansidebar.html: docs/mansidebar.html.tt Makefile bin/from-tt
 docs/faq.inc: $(wildcard docs/faq-[0-9]-*.txt) Makefile bin/mk-faq
 	@rm -f $@
 	./bin/mk-faq docs/faq-[0-9]-*txt >$@
-
-# We don't want to include our web source files in the list of FIPS files
-# to be downloaded, so we filter them out.  ./bin/mk-filelist can handle
-# multiple file arguments.  Trust git ls-files over $(wildcard ...)
-FIPS_FILES = $(filter-out %.yaml %.md %.tt,$(shell git ls-files -- docs/fips))
-docs/fips.inc: $(FIPS_FILES) Makefile bin/mk-filelist
-	@rm -f $@
-	./bin/mk-filelist docs/fips fips/ $(notdir $(FIPS_FILES)) >$@
 
 ######################################################################
 ##
