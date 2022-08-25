@@ -4,6 +4,7 @@ breadcrumb: FIPS-140
 # FIPS-140
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 OpenSSL version 3 contains a FIPS module, see [the FIPS module manual
 page] for more information.
 
@@ -17,14 +18,15 @@ Note that this page contains historic information about our legacy
 OpenSSL FIPS Object Module (FOM) 2.0. For information about the
 OpenSSL FOM 3.0 refer to
 [the FIPS module manual page](https://www.openssl.org/docs/man3.0/man7/fips_module.html)
+=======
+OpenSSL version 3 contains a FIPS module, see [the FIPS module manual
+page] for more information.
+>>>>>>> acd43c2 (Following an OMC decision, remove all FOM v2 information)
 
-The most recent validation of a cryptographic module (Module) compatible
-with OpenSSL 1.0.2 is v2.0.16, FIPS 140-2 certificate
-[\#1747](https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/1747).
-This Module is documented in the [2.0 User Guide](fips/UserGuide-2.0.pdf);
-the [source code](/source/openssl-fips-2.0.16.tar.gz), and
-[Security Policy](fips/SecurityPolicy-2.0.16.pdf) are also available.
+This FIPS module is validated, and has the certificate number [\#4282].
+The certificate page includes a link to the Security Policy.
 
+<<<<<<< HEAD
 For various bureaucratic reasons, the same module is also available as
 validation
 [\#2398](https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/2398)
@@ -69,3 +71,7 @@ Please please read the [User Guide](fips/UserGuide.pdf).
     source based validated module directly. You must obtain your own
     validation.
 >>>>>>> 5875392 (Convert docs/*.html to .md)
+=======
+[the FIPS module manual page]: https://www.openssl.org/docs/man3.0/man7/fips_module.html
+[\#4282]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4282
+>>>>>>> acd43c2 (Following an OMC decision, remove all FOM v2 information)

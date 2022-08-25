@@ -160,10 +160,14 @@ SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$
 
 SIMPLEDOCS = $(H_DOCS) \
 <<<<<<< HEAD
+<<<<<<< HEAD
 	     docs/faq.inc \
 =======
 	     docs/faq.inc docs/fips.inc \
 >>>>>>> da1a36f (Move $(H_DOCS) into $(SIMPLEDOCS))
+=======
+	     docs/faq.inc \
+>>>>>>> acd43c2 (Following an OMC decision, remove all FOM v2 information)
 	     docs/OpenSSLStrategicArchitecture.html \
 	     docs/OpenSSL300Design.html \
 	     docs/manpages.html
@@ -366,6 +370,7 @@ docs/faq.inc: $(wildcard docs/faq-[0-9]-*.txt) Makefile bin/mk-faq
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 # We don't want to include our web source files in the list of FIPS files
 # to be downloaded, so we filter them out.  ./bin/mk-filelist can handle
 # multiple file arguments.  Trust git ls-files over $(wildcard ...)
@@ -375,6 +380,8 @@ docs/fips.inc: $(FIPS_FILES) Makefile bin/mk-filelist
 	./bin/mk-filelist docs/fips fips/ $(notdir $(FIPS_FILES)) >$@
 >>>>>>> 5875392 (Convert docs/*.html to .md)
 
+=======
+>>>>>>> acd43c2 (Following an OMC decision, remove all FOM v2 information)
 ######################################################################
 ##
 ##  Policy page building section
