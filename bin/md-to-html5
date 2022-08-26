@@ -170,7 +170,7 @@ for f in "$@"; do
 	cd $dir
 	pandoc -t html5 -f markdown --template="$template" \
                --highlight-style="$highlightstyle" \
-               --tab-stop=8 --base-header-level=2 \
+               --tab-stop=8 --shift-heading-level-by=1 \
                -M author-meta='OpenSSL Foundation, Inc.' \
                -M lang=en \
 	       -M pagetitle="$title" \
