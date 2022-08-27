@@ -1,6 +1,9 @@
 ---
 breadcrumb: Frequently Asked Questions
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 08ed685 (Restore the FAQ accordion functionality)
 header-includes: |
   <script>
   $(function(){
@@ -9,8 +12,11 @@ header-includes: |
     });
   });
   </script>
+<<<<<<< HEAD
 =======
 >>>>>>> 5875392 (Convert docs/*.html to .md)
+=======
+>>>>>>> 08ed685 (Restore the FAQ accordion functionality)
 ---
 # Frequently Asked Questions
 
