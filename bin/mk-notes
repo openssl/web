@@ -8,9 +8,28 @@ my $copy = 0;
 my $in_ul = 0;
 while ( <STDIN> ) {
     chomp;
-    if (/^\s*(Major changes between|Known issues in).*(\d+\.\d+\.\d+)\D.*\[(.*)\]:?$/) {
-	my $release_series = $2;
-	my $release_date = $3;
+
+    # For NEWS.md, skip over this sort of title
+    #
+    # OpenSSL 3.0
+    # -----------
+    #
+    # This is unique for OpenSSL version 3.0 and up
+    next if (/^OpenSSL/ || /^-------/);
+
+    my $release_series;         # Undefined by default
+    my $release_date;           # Undefined by default
+    if (/^###\s*(Major changes between|Known issues in).*(\d+\.\d+)\.\d+.*\[(.*)\]$/) {
+	# This is the form used in NEWS.md, in OpenSSL version 3.0 and on
+	$release_series = $2;
+	$release_date = $3;
+    } elsif (/^\s*(Major changes between|Known issues in).*(\d+\.\d+\.\d+)\D.*\[(.*)\]:?$/) {
+	# This is the form used in NEWS, in OpenSSL before version 3.0
+	$release_series = $2;
+	$release_date = $3;
+    }
+
+    if (defined $release_date) {
 	if ($release_date !~ /^in pre-release|\d+\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s\d+$/) {
 	    # The rationale to not simply stop when encountering another title
 	    # line is that it's unreleased stuff that also exist in another
@@ -37,12 +56,13 @@ while ( <STDIN> ) {
 	s|&|&amp;|sg;
 	s|<|&lt;|sg;
 	s|>|&gt;|sg;
-	if (s/^\s+o\s+/<li>/ && !$in_ul) {
+	if (s/^\s+(o|\*)\s+/<li>/ && !$in_ul) {
 	    print "<ul>\n";
 	    $in_ul = 1;
 	}
 	s/CVE-\d{4}-\d{4,}/<a href=vulnerabilities.html#$&>$&<\/a>/g;
 	print;
+	print "\n";
     }
 }
 if ($in_ul) {
