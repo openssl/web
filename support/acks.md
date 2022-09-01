@@ -48,8 +48,6 @@ note sponsors may choose to remain anonymous.
 
 [Activision](https://activision.com/)
 
-[CarGurus](https://cargurus.com/)
-
 [VeriSign, Inc.](https://www.verisign.com/)
 
 </div>
