@@ -49,10 +49,13 @@ note sponsors may choose to remain anonymous.
 [Activision](https://activision.com/)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 [CarGurus](https://cargurus.com/)
 
 >>>>>>> 7e79f7d (Convert all support/*.html to .md)
+=======
+>>>>>>> 9b54d5b (Remove sponsor)
 [VeriSign, Inc.](https://www.verisign.com/)
 
 </div>
