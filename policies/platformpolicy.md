@@ -83,6 +83,9 @@ The current primary platforms are:
 The current secondary platforms are:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6dcc3d4 (Move VMS on IA64 and X86_64 from community to secondary)
 | Target       | &nbsp; | O/S         | &nbsp; | Architecture | &nbsp; | Toolchain       | &nbsp; | Nominated Committer(s) |
 |--------------|--------|-------------|--------|--------------|--------|-----------------|--------|------------------------|
 | vms-ia64     |        | OpenVMS 8.4 |        | ia64         |        | VSI C 7.4       |        | \@levitte              |
@@ -93,11 +96,14 @@ The current secondary platforms are:
 [^1]: [VMS] 32 bit pointer build
 [^2]: [VMS] 64 bit pointer build
 [^3]: [VMS] cross compile on ia64, currently build only
+<<<<<<< HEAD
 =======
 | Target | &nbsp; | O/S | &nbsp; | Architecture | &nbsp; | Toolchain | &nbsp; | Nominated Committer(s) |
 |--------|--------|-----|--------|--------------|--------|-----------|--------|------------------------|
 | ??     |        | ??  |        | ??           |        | ??        |        | ??                     |
 >>>>>>> 53e9ec1 (Convert all policies/*.html to .md)
+=======
+>>>>>>> 6dcc3d4 (Move VMS on IA64 and X86_64 from community to secondary)
 
 The current community platforms are:
 
@@ -107,12 +113,15 @@ The current community platforms are:
 | vms-alpha-p32           |        | OpenVMS 8.4        |        | alpha                   |        | VSI C 7.4 [^1]  |        | \@levitte                                               |
 | vms-alpha-p64           |        | OpenVMS 8.4        |        | alpha                   |        | VSI C 7.4 [^2]  |        | \@levitte                                               |
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 | vms-ia64                |        | OpenVMS 8.4        |        | ia64                    |        | VSI C 7.4       |        | \@levitte                                               |
 | vms-ia64-p32            |        | OpenVMS 8.4        |        | ia64                    |        | VSI C 7.4 [^1]  |        | \@levitte                                               |
 | vms-ia64-p64            |        | OpenVMS 8.4        |        | ia64                    |        | VSI C 7.4 [^2]  |        | \@levitte                                               |
 | vms-x86\_64             |        | OpenVMS 8.4        |        | x86\_64                 |        | VSI C X7.4 [^3] |        | \@levitte                                               |
 >>>>>>> 53e9ec1 (Convert all policies/*.html to .md)
+=======
+>>>>>>> 6dcc3d4 (Move VMS on IA64 and X86_64 from community to secondary)
 | nonstop-nsx             |        | NonStop OSS L21.06 |        | x86\_64 ilp32           |        | c99             |        | \@rsbeckerca                                            |
 | nonstop-nsx\_put        |        | NonStop OSS L21.06 |        | x86\_64 ilp32 PUT       |        | c99             |        | \@rsbeckerca                                            |
 | nonstop-nsx\_64         |        | NonStop OSS L21.06 |        | x86\_64 lp64            |        | c99             |        | \@rsbeckerca                                            |
@@ -147,12 +156,15 @@ The current community platforms are:
 | linux-aarch64           |        | Linux              |        | aarch64                 |        | gcc             |        | \@zorrorffm \@daniel-hu-arm \@xkqian \@tom-cosgrove-arm |
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 [^1]: [VMS] 32 bit pointer build
 [^2]: [VMS] 64 bit pointer build
 [^3]: [VMS] cross compile on ia64, currently build only
 
 >>>>>>> 53e9ec1 (Convert all policies/*.html to .md)
+=======
+>>>>>>> 6dcc3d4 (Move VMS on IA64 and X86_64 from community to secondary)
 The current unadopted platforms are:
 
 | Target                 | &nbsp; | O/S                               | &nbsp; | Architecture        | &nbsp; | Toolchain               |
