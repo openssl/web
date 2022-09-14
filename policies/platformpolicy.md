@@ -82,9 +82,16 @@ The current primary platforms are:
 
 The current secondary platforms are:
 
-| Target | &nbsp; | O/S | &nbsp; | Architecture | &nbsp; | Toolchain | &nbsp; | Nominated Committer(s) |
-|--------|--------|-----|--------|--------------|--------|-----------|--------|------------------------|
-| ??     |        | ??  |        | ??           |        | ??        |        | ??                     |
+| Target       | &nbsp; | O/S         | &nbsp; | Architecture | &nbsp; | Toolchain       | &nbsp; | Nominated Committer(s) |
+|--------------|--------|-------------|--------|--------------|--------|-----------------|--------|------------------------|
+| vms-ia64     |        | OpenVMS 8.4 |        | ia64         |        | VSI C 7.4       |        | \@levitte              |
+| vms-ia64-p32 |        | OpenVMS 8.4 |        | ia64         |        | VSI C 7.4 [^1]  |        | \@levitte              |
+| vms-ia64-p64 |        | OpenVMS 8.4 |        | ia64         |        | VSI C 7.4 [^2]  |        | \@levitte              |
+| vms-x86\_64  |        | OpenVMS 8.4 |        | x86\_64      |        | VSI C X7.4 [^3] |        | \@levitte              |
+
+[^1]: [VMS] 32 bit pointer build
+[^2]: [VMS] 64 bit pointer build
+[^3]: [VMS] cross compile on ia64, currently build only
 
 The current community platforms are:
 
@@ -93,10 +100,6 @@ The current community platforms are:
 | vms-alpha               |        | OpenVMS 8.4        |        | alpha                   |        | VSI C 7.4       |        | \@levitte                                               |
 | vms-alpha-p32           |        | OpenVMS 8.4        |        | alpha                   |        | VSI C 7.4 [^1]  |        | \@levitte                                               |
 | vms-alpha-p64           |        | OpenVMS 8.4        |        | alpha                   |        | VSI C 7.4 [^2]  |        | \@levitte                                               |
-| vms-ia64                |        | OpenVMS 8.4        |        | ia64                    |        | VSI C 7.4       |        | \@levitte                                               |
-| vms-ia64-p32            |        | OpenVMS 8.4        |        | ia64                    |        | VSI C 7.4 [^1]  |        | \@levitte                                               |
-| vms-ia64-p64            |        | OpenVMS 8.4        |        | ia64                    |        | VSI C 7.4 [^2]  |        | \@levitte                                               |
-| vms-x86\_64             |        | OpenVMS 8.4        |        | x86\_64                 |        | VSI C X7.4 [^3] |        | \@levitte                                               |
 | nonstop-nsx             |        | NonStop OSS L21.06 |        | x86\_64 ilp32           |        | c99             |        | \@rsbeckerca                                            |
 | nonstop-nsx\_put        |        | NonStop OSS L21.06 |        | x86\_64 ilp32 PUT       |        | c99             |        | \@rsbeckerca                                            |
 | nonstop-nsx\_64         |        | NonStop OSS L21.06 |        | x86\_64 lp64            |        | c99             |        | \@rsbeckerca                                            |
@@ -122,10 +125,6 @@ The current community platforms are:
 | solaris64-sparcv9-cc    |        | Solaris            |        | Sparc V9 64 bit         |        | Sun C           |        | \@orcl-jlana \@cernoseka                                |
 | linux64-s390x           |        | Linux              |        | s390x                   |        | gcc             |        | \@juergenchrist \@ifranzki                              |
 | linux-aarch64           |        | Linux              |        | aarch64                 |        | gcc             |        | \@zorrorffm \@daniel-hu-arm \@xkqian \@tom-cosgrove-arm |
-
-[^1]: [VMS] 32 bit pointer build
-[^2]: [VMS] 64 bit pointer build
-[^3]: [VMS] cross compile on ia64, currently build only
 
 The current unadopted platforms are:
 
