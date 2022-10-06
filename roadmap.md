@@ -3,7 +3,7 @@ breadcrumb: Roadmap
 ---
 # OpenSSL project roadmap
 
-### Last modified 23 March 2022
+### Last modified 4 October 2022
 
 This document is the OpenSSL project roadmap. It is a living document
 and is expected to change over time. Objectives and dates should be
@@ -19,19 +19,23 @@ than others.
 OpenSSL is taking a multi-staged approach to the implementation of the
 [QUIC] transport protocol:
 
-- For OpenSSL 3.1, the focus is on providing a client side single stream
+- For OpenSSL 3.2, the focus is on providing a client side single stream
 QUIC implementation.
 
-- OpenSSL 3.2 will follow approximately six months later implementing more
+- OpenSSL 3.3 will follow approximately six months later implementing more
 of the protocol.
 
-- OpenSSL 3.3 aims to complete the implementation a further six months later.
+- OpenSSL 3.4 aims to complete the implementation a further six months later.
 
 [QUIC]: https://datatracker.ietf.org/doc/html/rfc9000
 
 #### FIPS
 
-The OpenSSL FIPS provider for 3.x is still progressing through the validation.
+- OpenSSL 3.0 FIPS Provider has had its FIPS 140-2 validation certificate issued.
+See the [blog post]: https://www.openssl.org/blog/blog/2022/08/24/FIPS-validation-certificate-issued/
+
+- The OpenSSL 3.1 release will be about FIPS 140-3 validation submission.
+See the [blog post]: https://www.openssl.org/blog/blog/2022/09/30/fips-140-3/
 
 #### Post-quantum cryptography
 
