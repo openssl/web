@@ -69,12 +69,11 @@ H_DOCS = $(addsuffix .html,\
                               | grep -v '/sub-')))
 H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
 H_POLICIES = $(addsuffix .html,\
-               $(basename $(shell git ls-files -- policies/*.md \
-                                                  policies/general/*.md \
-                                                  policies/technical/*.md)))
-H_POLICY_SUPPL = $(addsuffix .html,\
-                   $(basename $(shell git ls-files -- \
-                                      policies/policy-supplemental/*.md)))
+               $(basename $(shell git ls-files -- \
+                                  policies/*.md \
+                                  policies/general/*.md \
+                                  policies/technical/*.md \
+                                  policies/general-supplemental/*.md)))
 # We filter out any file starting with 'sub-'...  they get special treatment
 H_SOURCE= $(addsuffix .html,\
             $(basename $(shell git ls-files -- source/*.md \
@@ -102,7 +101,6 @@ SIMPLE = $(H_TOP) \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).inc) \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).html) \
 	 $(H_POLICIES) \
-	 $(H_POLICY_SUPPL) \
 	 policies/glossary.html \
 	 $(H_SOURCE) \
 	 source/.htaccess \
@@ -118,8 +116,10 @@ SIMPLEDOCS = $(H_DOCS) \
 
 GLOSSARY=$(CHECKOUTS)/general-policies/policies/glossary.md
 all_GENERAL_POLICIES=$(wildcard $(CHECKOUTS)/general-policies/policies/*.md)
+all_GENERAL_POLICY_SUPPL=$(wildcard $(CHECKOUTS)/general-policies/policy-supplemental/*.md)
 all_TECHNICAL_POLICIES=$(wildcard $(CHECKOUTS)/technical-policies/policies/*.md)
 GENERAL_POLICIES=$(filter-out $(CHECKOUTS)/general-policies/policies/README.md $(GLOSSARY),$(all_GENERAL_POLICIES))
+GENERAL_POLICY_SUPPL=$(filter-out $(CHECKOUTS)/general-policies/policy-supplemental/README.md,$(all_GENERAL_POLICY_SUPPL))
 TECHNICAL_POLICIES=$(filter-out $(CHECKOUTS)/technical-policies/policies/README.md,$(all_TECHNICAL_POLICIES))
 
 .SUFFIXES: .md .html
@@ -319,11 +319,13 @@ docs/faq.inc: $(wildcard docs/faq-[0-9]-*.txt) Makefile bin/mk-faq
 
 .PHONY: technical-policies
 technical-policies: $(TECHNICAL_POLICIES) bin/md-to-html5
+	mkdir -p policies/technical
 	for x in $(TECHNICAL_POLICIES); do \
 		d=$$(dirname $$x); \
 		f=$$(basename $$x .md); \
 		cat "$$x" \
 			| sed -E -e 's!https?://github\.com/openssl/(general|technical)-policies/blob/master/policies/(.*)\.md!../\1/\2.html!' \
+			| sed -E -e 's!https?://github\.com/openssl/(general|technical)-policies/blob/master/policy-supplemental/(.*)\.md!../\1-supplemental/\2.html!' \
 			| sed -E -e 's!\.\./general/glossary\.html!../glossary.html!' \
 			| ./bin/md-to-html5 -o policies/technical/"$$f".html; \
 	done
@@ -335,19 +337,32 @@ policies/technical/index.html: \
 
 .PHONY: general-policies
 general-policies: $(GENERAL_POLICIES) bin/md-to-html5
+	mkdir -p policies/general
 	for x in $(GENERAL_POLICIES); do \
 		d=$$(dirname "$$x"); \
 		f=$$(basename "$$x" .md); \
 		cat "$$x" \
 			| sed -E -e 's!https?://github\.com/openssl/(general|technical)-policies/blob/master/policies/(.*)\.md!../\1/\2.html!' \
+			| sed -E -e 's!https?://github\.com/openssl/(general|technical)-policies/blob/master/policy-supplemental/(.*)\.md!../\1-supplemental/\2.html!' \
+			| sed -E -e 's!\.\./policy-supplemental/(.*)\.html!../general-supplemental/\1.html!' \
 			| sed -E -e 's!\.\./general/glossary\.html!../glossary.html!' \
 			| ./bin/md-to-html5 -o policies/general/"$$f".html; \
 	done
-policies/general/index.inc: general-policies bin/mk-md-titlelist Makefile
+policies/general/index.inc: general-policies general-policy-supplemental bin/mk-md-titlelist Makefile
 	./bin/mk-md-titlelist '' $(GENERAL_POLICIES) > $@
 policies/general/index.html: \
 	policies/general/index.md policies/general/index.inc \
 	policies/general/dirdata.yaml
+
+.PHONY: general-policy-supplemental
+general-policy-supplemental: $(GENERAL_POLICY_SUPPL) bin/md-to-html5
+	mkdir -p policies/general-supplemental
+	for x in $(GENERAL_POLICY_SUPPL); do \
+		d=$$(dirname "$$x"); \
+		f=$$(basename "$$x" .md); \
+		cat "$$x" \
+			| ./bin/md-to-html5 -o policies/general-supplemental/"$$f".html; \
+	done
 
 policies/glossary.html: $(GLOSSARY) bin/md-to-html5 policies/dirdata.yaml
 	cat "$(GLOSSARY)" \
