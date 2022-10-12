@@ -72,6 +72,9 @@ H_POLICIES = $(addsuffix .html,\
                $(basename $(shell git ls-files -- policies/*.md \
                                                   policies/general/*.md \
                                                   policies/technical/*.md)))
+H_POLICY_SUPPL = $(addsuffix .html,\
+                   $(basename $(shell git ls-files -- \
+                                      policies/policy-supplemental/*.md)))
 # We filter out any file starting with 'sub-'...  they get special treatment
 H_SOURCE= $(addsuffix .html,\
             $(basename $(shell git ls-files -- source/*.md \
@@ -99,6 +102,7 @@ SIMPLE = $(H_TOP) \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).inc) \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).html) \
 	 $(H_POLICIES) \
+	 $(H_POLICY_SUPPL) \
 	 policies/glossary.html \
 	 $(H_SOURCE) \
 	 source/.htaccess \
