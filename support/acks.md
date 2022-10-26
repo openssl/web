@@ -7,7 +7,7 @@ The OpenSSL project depends on volunteer efforts and financial support
 from the end user community. That support comes in [many
 forms](donations.html).
 
-## <a href="current">Sponsorship Donations</a>
+## Sponsorship Donations
 
 We would like to identify and thank the following sponsors for their
 donations which give significant support to the OpenSSL project. Please
