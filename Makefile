@@ -95,6 +95,7 @@ SIMPLE = $(H_TOP) \
 	 $(H_NEWS) \
 	 news/newsflash.inc \
 	 news/secadv \
+	 news/secjson \
 	 news/vulnerabilities.inc \
 	 news/vulnerabilities.html \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).inc) \
@@ -512,14 +513,31 @@ news/secadv/$(1): $(OMCDATA)/secadv/$(1)
 	cp $$< $$@
 endef
 
+# mknews_secjson creates a target to copy a security json file from $(OMCDATA)/vulnerabilities-json
+# to news/secjson/.
+# $(1) = file name
+define mknews_secjson
+news/secjson/$(1): $(OMCDATA)/vulnerabilities-json/$(1)
+	cp $$< $$@
+endef
+
 # Get the set of files in $(OMCDATA)/secadv/
 SECADV_FILES = $(shell cd $(OMCDATA)/secadv/; git ls-files)
 $(foreach F,$(SECADV_FILES),$(eval $(call mknews_secadv,$(F))))
+
+# Get the set of files in $(OMCDATA)/vulnerabilities-json/
+SECJSON_FILES = $(shell cd $(OMCDATA)/vulnerabilities-json/; git ls-files)
+$(foreach F,$(SECJSON_FILES),$(eval $(call mknews_secjson,$(F))))
 
 mkdirnews_secadv: FORCE
 	mkdir -p news/secadv
 news/secadv: mkdirnews_secadv $(addprefix news/secadv/,$(SECADV_FILES))
 .PHONY: news/secadv mkdirnews_secadv
+
+mkdirnews_secjson: FORCE
+	mkdir -p news/secjson
+news/secjson: mkdirnews_secjson $(addprefix news/secjson/,$(SECJSON_FILES))
+.PHONY: news/secjson mkdirnews_secjson
 
 ######################################################################
 ##
