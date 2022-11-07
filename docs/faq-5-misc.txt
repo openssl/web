@@ -91,21 +91,8 @@
 
 *   How does the versioning scheme work?
 
-    After the release of OpenSSL 1.0.0 the versioning scheme changed. Letter
-    releases (e.g. 1.0.1a) can only contain bug and security fixes and no
-    new features. Minor releases change the last number (e.g. 1.0.2) and
-    can contain new features that retain binary compatibility. Changes to
-    the middle number are considered major releases and neither source nor
-    binary compatibility is guaranteed.
-
-    Therefore the answer to the common question "when will feature X be
-    backported to OpenSSL 1.0.0/0.9.8?" is "never" but it could appear
-    in the next minor release.
-
-*   What happens when the letter release reaches z?
-
-    It was decided after the release of OpenSSL 0.9.8y the next version should
-    be 0.9.8za then 0.9.8zb and so on.
+    Please see
+    https://www.openssl.org/policies/general/versioning-policy.html.
 
 *   Do you have a bug bounty program?
 
