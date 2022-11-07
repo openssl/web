@@ -470,10 +470,6 @@ news/newsflash.inc: $(OMCDATA)/newsflash.txt Makefile
 	    -e 's@: @</td><td class="t">@' \
 	    -e 's@$$@</td></tr>@'
 
-# Make sure we have a copy of vulnerabilities.xml among our public web files
-news/vulnerabilities.xml: $(OMCDATA)/vulnerabilities.xml
-	cp $< $@
-
 # mknews_vulnerability creates two targets and rulesets for creating
 # vulnerability lists for each release.  One target is to create a wrapping
 # HTML file from a template, the other is to create the inclusion file with
@@ -481,9 +477,9 @@ news/vulnerabilities.xml: $(OMCDATA)/vulnerabilities.xml
 #
 # $(1) = output file mod, $(2) = release version switch, $(3) = release version
 define mknews_vulnerability
-news/vulnerabilities$(1).inc: bin/mk-cvepage news/vulnerabilities.xml Makefile
+news/vulnerabilities$(1).inc: bin/cvejsontohtml.py news/secjson Makefile
 	@rm -f $$@
-	./bin/mk-cvepage -i news/vulnerabilities.xml $(2) > $$@
+	python3 ./bin/cvejsontohtml.py -i news/secjson $(2) > $$@
 news/vulnerabilities$(1).md: news/vulnerabilities.md.tt bin/from-tt Makefile
 	@rm -f $$@
 	./bin/from-tt -d news vulnerabilitiesinc='vulnerabilities$(1).inc' < $$< > $$@
