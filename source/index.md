@@ -23,11 +23,22 @@ used. Users of these older versions are encouraged to upgrade to 3.0 as
 soon as possible. Extended support for 1.0.2 to gain access to security
 fixes for that version is [available](/support/contracts.html).
 
-OpenSSL 3.0 is the latest major version of OpenSSL. The OpenSSL FIPS
-Object Module (FOM) 3.0 is an integrated part of the OpenSSL 3.0
-download. You do not need to download the 3.0 FOM separately. Refer to
-the installation instructions inside the download, and use the
-"enable-fips" compile time configuration option to build it.
+
+The following OpenSSL version(s) are FIPS validated.
+
+OpenSSL 3.0.0. Refer to the [Certificate](https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4282)
+and [Security Policy](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4282.pdf)
+
+Please follow the Security Policy instructions to download, build and
+install a validated OpenSSL FIPS provider.
+Other OpenSSL Releases MAY use the validated FIPS provider, but
+MUST NOT build and use their own FIPS provider.
+
+Information about how to configure and use the FIPS provider in your
+applications is available on the FIPS module man page.
+You must also read the module security policy and follow the specific
+build and installation instructions included in it.
+
 
 For an overview of some of the key concepts in OpenSSL 3.0 see the
 libcrypto [manual
