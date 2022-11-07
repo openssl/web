@@ -35,10 +35,7 @@
 
 *   I need a FIPS validated offering
 
-    Please see
-    https://www.openssl.org/docs/fips.html; the OpenSSL project is no longer
-    involved in private label validations nor adding platforms to the existing
-    certificates.
+    Please see https://www.openssl.org/docs/fips.html.
 
 *   How can I contact the OpenSSL developers?
 
