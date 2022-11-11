@@ -36,6 +36,9 @@ OpenSSL 3.0 will support an application having TLS connections that
 are in FIPS mode (using the OpenSSL FIPS Cryptographic Module 3.0) and
 TLS connections that are in non-FIPS mode simultaneously.
 
+For more up to date information related to 3.0 please follow the links
+at [openssl.org/docs] (https://www.openssl.org/docs)
+
 ## Terms Used in This Document {#terms-used-in-this-document}
 
 The following terms, in alphabetical order,  are used in this
@@ -137,10 +140,7 @@ The architecture shall have the following features:
         libcrypto)
     b.  Legacy, with implementations of older algorithms (e.g, DES,
         MDC2, MD2, Blowfish, CAST)
-    c.  Engines, which include a compatibility layer between engines
-        designed for older versions of OpenSSL, and the new Provider
-        based approach.
-    d.  FIPS, which implements the OpenSSL FIPS Cryptographic Module
+    c.  FIPS, which implements the OpenSSL FIPS Cryptographic Module
         3.0; this can be loaded dynamically at runtime.
 *   The Core enables access to the operations offered by providers to
     applications (and other providers). The Core is the mechanism via
@@ -201,20 +201,24 @@ here are as follows:
 *   FIPS Provider: Implements a set of algorithms that are FIPS
     validated and are made available via the Core. This includes the
     following supporting services:
-    *   POST: Power On Self Test
-    *   KAT: Known Answer Tests
-    *   Integrity Check
+    *   POST: Power On Self Test that perform:
+        *   KAT: Known Answer Tests
+        *   Integrity Check
     *   Low Level Implementations: This is the set of components that
         actually implement the cryptographic primitives (to meet the
         FIPS-mandated self-contained requirement).
-*   Engines Provider: A shim that allows existing engines to work
-    when called via the Core.
 *   Legacy Provider: Provides implementations of older algorithms that
     will be exposed via EVP-level APIs.
 *   3rd Party Providers: Eventually, third-parties may provide their
     own providers. A third-party provider, like any other provider,
     implements a set of algorithms that will be accessible to
     applications and other providers via the Core.
+*   Null Provider: A provider that does nothing. This can be useful
+    for testing that the correct library context is used.
+*   Base Provider: A provider for serialization of keys. The FIPS
+    provider requires this since it does not contain methods to
+    load keys. The Base provider is also embedded in the default
+    provider.
 
 ### Packaging View {#package-view}
 
@@ -268,12 +272,17 @@ The physical packages new to this release are:
 *   Legacy module. This contains implementations of legacy
     algorithms.
 
-Engines will be built with a provider shim, to allow them to work as
-usual for cases when an ENGINE pointer is passed to some functions,
-and as providers when acting as default implementations. Engines
-compiled for pre-3.0.0 OpenSSL will need to be recompiled to work with
-OpenSSL 3.0.0. Details in
-[The ENGINE API](#the-engine-api) further down.
+It was originally intended that Engines would be built with a
+provider shim, to allow them to work as usual for cases when an
+ENGINE pointer is passed to some functions, and as providers when
+acting as default implementations.
+Investigations during development, showed that this approach had
+problematic edge cases. The workaround for now is that there are two
+code paths currently when EVP calls are made. For engines support,
+the legacy code is used for 'legacy keys'. The long term plan is
+to remove engines and the legacy code paths from the code base.
+Anything written as an engine will need to be rewritten as a
+provider once engines are removed.
 
 ## Core and Provider Design {#core-and-provider-design}
 
