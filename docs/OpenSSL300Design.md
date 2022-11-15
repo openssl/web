@@ -140,10 +140,7 @@ The architecture shall have the following features:
         libcrypto)
     b.  Legacy, with implementations of older algorithms (e.g, DES,
         MDC2, MD2, Blowfish, CAST)
-    c.  ~~Engines, which include a compatibility layer between engines
-        designed for older versions of OpenSSL, and the new Provider
-        based approach.~~ This was not implemented.
-    d.  FIPS, which implements the OpenSSL FIPS Cryptographic Module
+    c.  FIPS, which implements the OpenSSL FIPS Cryptographic Module
         3.0; this can be loaded dynamically at runtime.
 *   The Core enables access to the operations offered by providers to
     applications (and other providers). The Core is the mechanism via
@@ -210,8 +207,6 @@ here are as follows:
     *   Low Level Implementations: This is the set of components that
         actually implement the cryptographic primitives (to meet the
         FIPS-mandated self-contained requirement).
-*   ~~ Engines Provider: A shim that allows existing engines to work
-    when called via the Core. ~~
 *   Legacy Provider: Provides implementations of older algorithms that
     will be exposed via EVP-level APIs.
 *   3rd Party Providers: Eventually, third-parties may provide their
@@ -273,18 +268,13 @@ The physical packages new to this release are:
     there may be gaps/jumps in its version number since the previous
     release.
 
-*   ~~ Legacy module. This contains implementations of legacy
-    algorithms. ~~ This was not implemeted.
-
 *   Legacy module. This contains implementations of legacy
     algorithms.
 
-~~Engines will be built with a provider shim, to allow them to work as
+It was originally intended that Engines would be built with a
+provider shim, to allow them to work as
 usual for cases when an ENGINE pointer is passed to some functions,
-and as providers when acting as default implementations. Engines
-compiled for pre-3.0.0 OpenSSL will need to be recompiled to work with
-OpenSSL 3.0.0. Details in
-[The ENGINE API](#the-engine-api) further down.~~
+and as providers when acting as default implementations.
 Investigations during development, showed that this approach had
 problematic edge cases. The workaround for now is that there are two
 code paths currently when EVP calls are made. For engines support,
