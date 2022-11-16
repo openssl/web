@@ -216,8 +216,9 @@ here are as follows:
 *   Null Provider: A provider that does nothing. This can be useful
     for testing that the correct library context is used.
 *   Base Provider: A provider for serialization of keys. The FIPS
-    provider requires this since it does not contains methods to
-    load keys. The Base provider is also embedded in the core.
+    provider requires this since it does not contain methods to
+    load keys. The Base provider is also embedded in the default
+    provider.
 
 ### Packaging View {#package-view}
 
@@ -272,9 +273,9 @@ The physical packages new to this release are:
     algorithms.
 
 It was originally intended that Engines would be built with a
-provider shim, to allow them to work as
-usual for cases when an ENGINE pointer is passed to some functions,
-and as providers when acting as default implementations.
+provider shim, to allow them to work as usual for cases when an
+ENGINE pointer is passed to some functions, and as providers when
+acting as default implementations.
 Investigations during development, showed that this approach had
 problematic edge cases. The workaround for now is that there are two
 code paths currently when EVP calls are made. For engines support,
