@@ -93,7 +93,7 @@ for k,cve in sorted(entries.items(), reverse=True):
     allissues += "<dt>"
     # CVE name
     if cve:
-        allissues += "<a href=\"https://cve.org/CVERecord?id=%s\" name=\"%s\">%s</a> " %(cveid,cveid,cveid)        
+        allissues += "<a href=\"https://www.cve.org/CVERecord?id=%s\" name=\"%s\">%s</a> " %(cveid,cveid,cveid)        
 
     # Advisory (use the title instead of openssl advisory)
     title= "(OpenSSL Advisory)"
@@ -188,7 +188,7 @@ else:
 nonissues = ""
 for nonissue in disputedcve:
     if (not options.base or disputedcve[nonissue]["base"] in (options.base or "none")):
-        nonissues += "<li><a href=\"https://cve.org/CVERecord?id=%s\" name=\"%s\">%s</a>: " %(nonissue,nonissue,nonissue)        
+        nonissues += "<li><a href=\"https://www.cve.org/CVERecord?id=%s\" name=\"%s\">%s</a>: " %(nonissue,nonissue,nonissue)        
         nonissues += disputedcve[nonissue]["text"]
         nonissues +="</li>"
 if (nonissues != ""):
