@@ -479,7 +479,7 @@ news/newsflash.inc: $(OMCDATA)/newsflash.txt Makefile
 define mknews_vulnerability
 news/vulnerabilities$(1).inc: bin/cvejsontohtml.py news/secjson Makefile
 	@rm -f $$@
-	python3 ./bin/cvejsontohtml.py -i news/secjson $(2) > $$@
+	python3 ./bin/cvejsontohtml.py -i news/secjson/ $(2) > $$@
 news/vulnerabilities$(1).md: news/vulnerabilities.md.tt bin/from-tt Makefile
 	@rm -f $$@
 	./bin/from-tt -d news vulnerabilitiesinc='vulnerabilities$(1).inc' < $$< > $$@
