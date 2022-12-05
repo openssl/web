@@ -156,7 +156,10 @@ for k,cve in sorted(entries.items(), reverse=True):
                     continue
             allissues += "<li>Fixed in OpenSSL %s " %(fixedin)
             if (git != ""):
-                allissues += "<a href=\"%s\">(git commit)</a> " %(git)
+                if (fixedin.startswith("1.0.2") and fixedin[5]>='w'):  # 1.0.2w and above hack
+                    allissues += "<a href=\"/support/contracts.html?giturl=%s\">(premium support)</a> " %(git)
+                else:
+                    allissues += "<a href=\"%s\">(git commit)</a> " %(git)
             allissues += "(Affected since "+earliest+")"       
             allissues += "</li>"
     if also:
