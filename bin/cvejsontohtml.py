@@ -142,6 +142,22 @@ for k,cve in sorted(entries.items(), reverse=True):
     allissues += "<ul>"
     also = []
     for ver in product["versions"]:
+        if "lessThanOrEqual" in ver:   # It's not in a release yet!
+            lastaffected = ver["lessThanOrEqual"]
+            earliest = ver["version"]
+            git = ""
+            for reference in cna["references"]:
+                if "github.com" in reference["url"] and "name" not in reference:
+                    git = reference["url"]
+
+            if base:
+                if (not earliest.startswith(base)):
+                    also.append("OpenSSL <a href=\"vulnerabilities-%s.html#%s\">%s</a>" %( getbasefor(earliest), cveid, fixedin))
+                    continue
+            allissues += "<li>Affects %s up to and including OpenSSL %s " %(earliest, lastaffected)
+            if (git != ""):
+                    allissues += "<a href=\"%s\">(fix in git commit)</a> " %(git)
+            allissues += "</li>"            
         if "lessThan" in ver:
             fixedin = ver["lessThan"]
             earliest = ver["version"]
