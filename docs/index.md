@@ -21,5 +21,5 @@ features and commands. It is updated often, and is available at
 <https://www.feistyduck.com/books/openssl-cookbook/>. It is highly
 recommended.
 
-Historic information about our legacy OpenSSL FIPS Object Module (FOM)
-2.0 [FIPS 140-2 validation](fips.html) is also available.
+Information related to the OpenSSL FIPS Validation
+[FIPS 140-2 validation](fips.html) is also available.
