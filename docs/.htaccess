@@ -2,7 +2,6 @@ RewriteEngine on
 RewriteRule ^fips/fipsnotes.html /docs/fipsnotes.html [L,R=302,NC]
 RewriteRule ^fips/fipsvalidation.html /docs/fipsvalidation.html [L,R=302,NC]
 RewriteRule ^fips/index.html /docs/fips/fips.html [L,R=302,NC]
-RewriteRule ^misc/OCB-patent-grant-OpenSSL.pdf /source/OCB-patent-grant-OpenSSL.pdf [L,R=302,NC]
 RewriteRule ^manmaster/apps/config.html /docs/manmaster/man5/config.html [L,R=302,NC]
 RewriteRule ^manmaster/apps/x509v3_config.html /docs/manmaster/man5/x509v3_config.html [L,R=302,NC]
 RewriteRule ^manmaster/crypto/bio.html /docs/manmaster/man7/bio.html [L,R=302,NC]
