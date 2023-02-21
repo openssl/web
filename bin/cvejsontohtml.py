@@ -124,15 +124,17 @@ for k,cve in sorted(entries.items(), reverse=True):
     
     # Description
     for desc in cna["descriptions"]:
-        allissues += desc["value"]
+        # Trailing \n's are ignored, double \n are paragraph breaks
+        allissues += desc["value"].rstrip('\n').replace('\n\n',"</dd><dd>")
 
     # Credits
     if ("credits" in cna):
+        allissues += "</dd><dd>"
         for credit in cna["credits"]:
-            creditprefix = " Reported by "
+            creditprefix = " Found by "
             if "type" in credit and "remediation dev" in credit["type"]:
                 creditprefix = " Fix developed by "
-            elif "type" in credit and "finder" not in credit["type"]:
+            elif "type" in credit and ("finder" not in credit["type"] and "reporter" not in credit["type"]):
                 creditprefix = " Thanks to "
             allissues += creditprefix+credit["value"]+"."
 
