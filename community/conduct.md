@@ -10,8 +10,9 @@ OpenSSL Management Committee, whose members are listed here:
 [https://www.openssl.org/community/omc.html](omc.html)
 
 We strive to be an open and inclusive community where anyone can contribute.
-Contributions should be judged on their own merits; we don't care about your
-gender identity, race, political beliefs, age, or similar attributes.
+All contributions should be judged based on their own merit, regardless of the
+gender, race, political beliefs, age, or similar attributes of the person
+making them.
 
 If we see that one or more members of the community are generally abusive,
 harassing others, or seem to be trying to intimidate them into leaving the
