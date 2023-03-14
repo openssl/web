@@ -23,6 +23,7 @@ while ( <STDIN> ) {
 	# This is the form used in NEWS.md, in OpenSSL version 3.0 and on
 	$release_series = $2;
 	$release_date = $3;
+	s|###\s*||sg;
     } elsif (/^\s*(Major changes between|Known issues in).*(\d+\.\d+\.\d+)\D.*\[(.*)\]:?$/) {
 	# This is the form used in NEWS, in OpenSSL before version 3.0
 	$release_series = $2;
