@@ -3,7 +3,7 @@ breadcrumb: Release Strategy
 ---
 # Release Strategy
 
-#### First issued 23rd December 2014 Last modified 7th January 2020
+#### First issued 23rd December 2014 Last modified 14th March 2023
 
 As of release 3.0.0, the OpenSSL versioning scheme is changing to a more
 contemporary format: MAJOR.MINOR.PATCH
@@ -42,8 +42,11 @@ The current 1.1.1 versioning scheme remains unchanged:
 With regards to current and future releases the OpenSSL project has
 adopted the following policy:
 
+-   Version 3.1 will be supported until 2025-03-14
 -   Version 3.0 will be supported until 2026-09-07 (LTS).
--   Version 1.1.1 will be supported until 2023-09-11 (LTS).
+-   Version 1.1.1 will be supported until 2023-09-11 (LTS). Extended support for
+    1.1.1 to gain access to security fixes beyond that date for that version is
+    [available](/support/contracts.html).
 -   Version 1.0.2 is no longer supported. Extended support for 1.0.2 to
     gain access to security fixes for that version is
     [available](/support/contracts.html).

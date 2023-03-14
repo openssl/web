@@ -31,7 +31,7 @@ US\$50,000 annually
 -   A support contract designed to meet the needs of Enterprise customers
 -   Provides extended support for LTS releases (including 1.0.2) beyond
     the public EOL date for as long as it remains commercially viable to
-    do so.
+    do so. This will also include 1.1.1 when that is beyond its public EOL date.
 -   Extended support includes provision of security fixes
 
 The premium support plan is intended for the large enterprise using
