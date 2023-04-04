@@ -66,7 +66,7 @@ a number of programs to be installed:
 
 -   [Template Toolkit].  The Debian package is `libtemplate-perl`
 -   [Pandoc].  The Debian package is `pandoc`
--   git
+-   `python3`, `wget` and `OpenSSL::Query` perl module.
 
 It also requires a checkout of a number of repositories and branches.  Some
 of the repositories may need specific access.  The `Makefile` requires that
@@ -81,6 +81,9 @@ layout:
 -   `openssl`
     (checkout of <https://github.com/openssl/openssl.git>,
     `master` branch)
+-   `openssl-3.1`
+    (checkout of <https://github.com/openssl/openssl.git>,
+    `openssl-3.1` branch)
 -   `openssl-3.0`
     (checkout of <https://github.com/openssl/openssl.git>,
     `openssl-3.0` branch)
@@ -89,7 +92,7 @@ layout:
     `OpenSSL_1_1_1-stable` branch)
 
 The checkouts directory can be given to `make` with the `CHECKOUTS`
-variable:
+variable. It is important to use an absolute path:
 
 ``` console
 $ make CHECKOUTS=/PATH/TO/checkouts
