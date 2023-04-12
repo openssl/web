@@ -66,7 +66,9 @@ a number of programs to be installed:
 
 -   [Template Toolkit].  The Debian package is `libtemplate-perl`
 -   [Pandoc].  The Debian package is `pandoc`
--   `python3`, `wget` and `OpenSSL::Query` perl module.
+-   [OpenSSL::Query], a perl module that you install in normal perly way.
+    It's not in CPAN.
+-   `git`, `python3`, `wget`
 
 It also requires a checkout of a number of repositories and branches.  Some
 of the repositories may need specific access.  The `Makefile` requires that
@@ -104,3 +106,4 @@ $ make CHECKOUTS=/PATH/TO/checkouts
 [Markdown guide]: https://www.markdownguide.org
 [Markdown guide extended syntax]: https://www.markdownguide.org/extended-syntax/
 [Github Flavored Markdown]: https://github.github.com/gfm/
+[OpenSSL::Query]: https://github.com/openssl/omc-tools/tree/master/OpenSSL-Query
