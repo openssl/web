@@ -66,8 +66,7 @@ a number of programs to be installed:
 
 -   [Template Toolkit].  The Debian package is `libtemplate-perl`
 -   [Pandoc].  The Debian package is `pandoc`
--   [OpenSSL::Query], a perl module that you install in normal perly way.
-    It's not in CPAN.
+-   [OpenSSL::Query], see its README.md for installation instructions.
 -   `git`, `python3`, `wget`
 
 It also requires a checkout of a number of repositories and branches.  Some
