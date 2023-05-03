@@ -24,10 +24,18 @@ to 3.1 or 3.0 as soon as possible. Extended support for 1.0.2 to gain access to
 security fixes for that version is [available](/support/contracts.html).
 
 
-The following OpenSSL version(s) are FIPS validated.
+The following OpenSSL version(s) are FIPS validated:
 
-OpenSSL 3.0.0. Refer to the [Certificate](https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4282)
-and [Security Policy](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4282.pdf)
+&nbsp;OpenSSL Version&nbsp; | &nbsp;Certificate&nbsp; | &nbsp;Security Policy&nbsp;
+:-: | :-: | :-:
+3.0.0 | [certificate][cert 3.0.0] | [security policy][secpol 3.0.0]
+
+[cert 3.0.0]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4282
+[secpol 3.0.0]: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4282.pdf
+
+<br>
+For a list of CVEs and their impact on validated FIPS providers, visit the
+[CVEs and FIPS](/news/fips-cve.html) page.
 
 Please follow the Security Policy instructions to download, build and
 install a validated OpenSSL FIPS provider.
