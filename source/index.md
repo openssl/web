@@ -28,10 +28,12 @@ The following OpenSSL version(s) are FIPS validated:
 
 &nbsp;OpenSSL Version&nbsp; | &nbsp;Certificate&nbsp; | &nbsp;Security Policy&nbsp;
 :-: | :-: | :-:
-3.0.0 | [certificate][cert 3.0.0] | [security policy][secpol 3.0.0]
+3.0.8 | [certificate][cert4282] | [security policy][secpol 3.0.8]
+3.0.0 | [certificate][cert4282] | [security policy][secpol 3.0.0]
 
-[cert 3.0.0]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4282
-[secpol 3.0.0]: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4282.pdf
+[cert4282]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4282
+[secpol 3.0.0]: fips-doc/openssl-3.0.0-security-policy-2023-01-26.pdf
+[secpol 3.0.8]: fips-doc/openssl-3.0.8-security-policy-2023-05-05.pdf
 
 <br>
 For a list of CVEs and their impact on validated FIPS providers, visit the
@@ -41,7 +43,7 @@ Please follow the Security Policy instructions to download, build and
 install a validated OpenSSL FIPS provider.
 Other OpenSSL Releases MAY use the validated FIPS provider, but
 MUST NOT build and use their own FIPS provider. For example you can build
-OpenSSL 3.1 and use the OpenSSL 3.0.0 FIPS provider with it.
+OpenSSL 3.1 and use the OpenSSL 3.0.8 FIPS provider with it.
 
 Information about how to configure and use the FIPS provider in your
 applications is available on the FIPS module man page.
