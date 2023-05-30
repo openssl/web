@@ -12,6 +12,7 @@ relevance to it:
 
 CVE ID | Fixed | FIPS? | Notes
 ----- | :-: | :-: | :---------------
+[CVE-2023-2650] | 3.0.9 | no |
 [CVE-2023-1255] | 3.0.9 | **yes** | Possible denial of service on Arm 64 (aarch64) using AES XTS mode
 [CVE-2023-0466] | 3.0.9 | no |
 [CVE-2023-0465] | 3.0.9 | no |
@@ -41,6 +42,7 @@ CVE ID | Fixed | FIPS? | Notes
 [CVE-2021-4044] | 3.0.1 | no |
 | | | | **Release of 3.0.0 FIPS provider**
 
+[CVE-2023-2650]: https://www.openssl.org/news/vulnerabilities.html#CVE-2023-2650
 [CVE-2023-1255]: https://www.openssl.org/news/vulnerabilities.html#CVE-2023-1255
 [CVE-2023-0466]: https://www.openssl.org/news/vulnerabilities.html#CVE-2023-0466
 [CVE-2023-0465]: https://www.openssl.org/news/vulnerabilities.html#CVE-2023-0465
