@@ -37,7 +37,6 @@ note sponsors may choose to remain anonymous.
 
 <div class="sponsorsection">
 
-[![NGINX](/img/nginx-logo-med.png){.sponsorlogo}](https://www.nginx.com/)
 [![Shiguredo Inc.](/img/shiguredo-logo-med.png){.sponsorlogo}](https://shiguredo.jp/)
 
 </div>
