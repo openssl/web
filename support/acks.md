@@ -59,6 +59,8 @@ note sponsors may choose to remain anonymous.
 
 [beslist.nl](https://beslist.nl/)
 
+[Mercedes-Benz AG](https://opensource.mercedes-benz.com/)
+
 [SAKURA internet Inc](https://www.sakura.ad.jp/en/corporate/)
 
 </div>
