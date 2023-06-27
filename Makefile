@@ -547,7 +547,7 @@ news/secjson: mkdirnews_secjson $(addprefix news/secjson/,$(SECJSON_FILES))
 #
 # $(1) = release, $(2) = release title
 define mkoldsourceindex
-source/old/$(1)/index.inc: $(wildcard $(RELEASEDIR)/old/$(1)/*.gz) bin/mk-filelist Makefile
+source/old/$(1)/index.inc: $(RELEASEDIR)/old/$(1) bin/mk-filelist Makefile
 	@mkdir -p `dirname $$@`
 	@rm -f $$@
 	./bin/mk-filelist $(RELEASEDIR)/old/$(1) '' '*.gz' > $$@
