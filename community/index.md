@@ -25,6 +25,13 @@ While we only distribute source, some members of the community make
 Finally we'd also like to [thank](thanks.html) several groups for help
 with the project infrastructure over time.
 
+## <a name="mission">Our Mission and Values</a>
+The OpenSSL Project’s mission statement and core set of values serve as
+guides to our decision-making processes and the way we approach our daily
+work as committed members of the project. These guiding principles ensure
+that our actions and contributions align with the purpose of the project.
+[Learn more...](mission.html)
+
 ## <a name="securityreports">Reporting Security Bugs</a>
 
 If you think you have found a security bug in OpenSSL, please send mail to

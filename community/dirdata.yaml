@@ -6,6 +6,7 @@ sidebar:
   - |
     # [Community](.)
 
+    -   [Our Mission and Values](mission.html)
     -   [List of Committers](committers.html)
     -   [OpenSSL Technical Committee](otc.html)
     -   [OpenSSL Management Committee](omc.html)
