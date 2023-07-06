@@ -13,7 +13,16 @@ who are collectively shaping a safer, privacy-respecting digital future.
 ![team](/img/openssl2023.png "Some of the OpenSSL team in 2023")
 
 ## Aleš Mareček
-TBD
+SysOps and DevOps Engineer, Security enthusiast, Quality driven, Bug hunter,
+Open source ambassador.
+To be honest and responsible are one of the core values I keep. I believe that
+meritocracy and transparency are inseparable parts from the way to build a
+successful community.
+I'm into security since 1998 when my personal OpenBSD server and firewall
+started playing zeroes and ones games on Internet. At that time I met OpenSSL
+for the first time. During a couple of years I was using and testing OpenSSL
+libraries in both work and personal lives. Finally I joined OpenSSL in 2022 to
+become a part of the project as Sys/DevOps.
 
 ## Anton Arapov
 Joining the OpenSSL team in February 2023, I brought along experience from
@@ -27,10 +36,14 @@ to contribute to our shared mission of enhancing digital security through
 reliable encryption solutions.
 
 ## Hugo Landau
-TBD
+I'm a software and infrastructure engineer with a background in networking,
+security and cryptography. An OTC member, I take principal responsibility for
+the development of OpenSSL's QUIC functionality. As a strong believer in the
+values of open source, I'm proud to be part of the OpenSSL project given its
+instrumental role in the security of internet infrastructure.
 
 ## Kurt Roeckx
-TBD
+To Be Defined =)
 
 ## Mark J Cox
 I am proud to have been one of the original founders of the OpenSSL project
@@ -48,20 +61,28 @@ As well as development I am also active in the governance of OpenSSL including
 as a member of OpenSSL's management and technical committees.
 
 ## Paul Dale
-TBD
+I worked sporadically with OpenSSL on embedded systems from the early 2000s and
+started contributing back to the project in 2016, finally joining the team full
+time in 2021 to concentrate on making OpenSSL better than ever. I have a special
+interest in entropy and randomness and am a member of the management and
+technical committees.
 
 ## Richard Levitte
-TBD
+To Be Defined =)
 
 ## Tam Dale
 I joined the project in July 2023, and as the only non-technical contractor,  
 there’s been quite a learning curve.  My role is to manage our support 
-contracts, assist our Customers and  Sponsors, manage the day to day 
+contracts, assist our Customers and Sponsors, manage the day to day 
 operational side of the Project, as well as to develop procedures and policies 
 that support the Project’s long term goals.
 
 ## Tim Hudson
-TBD
+Co-founded SSLeay in 1996, worked on RSA's "forks" from 1998-2007, joined
+old-OSF for OpenSSL commercial activities in 2008-2014, officially joined the
+"OpenSSL Project" as a volunteer in 2014. Member of the OMC, OTC, and a
+committer. Focused on governance, long term sustainability, business
+relationships, practical application of security technologies for the project.
 
 ## Tomáš Mráz
 I developed and maintained various security and crypto-related software at
