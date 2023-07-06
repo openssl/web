@@ -54,7 +54,11 @@ TBD
 TBD
 
 ## Tam Dale
-TBD
+I joined the project in July 2023, and as the only non-technical contractor,  
+there’s been quite a learning curve.  My role is to manage our support 
+contracts, assist our Customers and  Sponsors, manage the day to day 
+operational side of the Project, as well as to develop procedures and policies 
+that support the Project’s long term goals.
 
 ## Tim Hudson
 TBD
