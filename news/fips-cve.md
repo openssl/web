@@ -9,14 +9,13 @@ to the validated FIPS providers, a few of them are applicable.  This table
 lists all of the CVEs issued since the FIPS providers' releases and their
 relevance to it:
 
-
-CVE ID | Fixed | FIPS? | Notes
------ | :-: | :-: | :---------------
-[CVE-2023-2650] | 3.0.9 | no |
-[CVE-2023-1255] | 3.0.9 | **yes** | Possible denial of service on Arm 64 (aarch64) using AES XTS mode
-[CVE-2023-0466] | 3.0.9 | no |
-[CVE-2023-0465] | 3.0.9 | no |
-[CVE-2023-0464] | 3.0.9 | no |
+**CVE ID** | **Fixed** | **FIPS?** | **Notes**
+----- | --: | :-: | :---------------
+[CVE-2023-2650] | 3.0.9<br>3.1.1 | no |
+[CVE-2023-1255] | 3.0.9<br>3.1.1 | **yes** | Possible denial of service on Arm 64 (aarch64) using AES XTS mode
+[CVE-2023-0466] | 3.0.9<br>3.1.1 | no |
+[CVE-2023-0465] | 3.0.9<br>3.1.1 | no |
+[CVE-2023-0464] | 3.0.9<br>3.1.1 | no |
 | | | | **Release of 3.0.8 FIPS provider**
 [CVE-2023-0401] | 3.0.8 | no |
 [CVE-2023-0286] | 3.0.8 | no |
