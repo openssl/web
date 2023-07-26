@@ -10,7 +10,7 @@ security and privacy tools. Our dedicated team is at the helm of the OpenSSL
 project, ensuring secure digital interactions. Here, you'll meet the individuals
 who are collectively shaping a safer, privacy-respecting digital future.
 
-![team](/img/faces/openssl2023.png "Some of the OpenSSL team in 2023")
+![Some of the OpenSSL team in 2023](/img/faces/openssl2023.png "Some of the OpenSSL team in 2023")
 
 ## Aleš Mareček
 SysOps and DevOps Engineer, Security enthusiast, Quality driven, Bug hunter,
