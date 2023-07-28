@@ -14,6 +14,17 @@ of the numbering, see our [release strategy](/policies/releasestrat.html).)
 All releases can be found at [/source/old](old). A list of mirror sites can be
 found [here](mirror.html).
 
+<p>
+<table>
+  <tr>
+    <td>KBytes&nbsp;</td>
+    <td>Date&nbsp;&nbsp;</td>
+    <td>File&nbsp;</td>
+  </tr>
+  <!--#include virtual="index.inc" -->
+</table>
+</p>
+
 *Note:* The latest stable version is the 3.1 series supported until 14th March
 2025. Also available is the 3.0 series which is a Long Term Support (LTS)
 version and is supported until 7th September 2026. The previous LTS version (the
@@ -57,17 +68,6 @@ page](https://www.openssl.org/docs/man3.1/man7/crypto.html). Information
 and notes about migrating existing applications to OpenSSL 3.1 (and 3.0) are
 available in the [OpenSSL 3.1 Migration
 Guide](https://www.openssl.org/docs/man3.1/man7/migration_guide.html)
-
-<p>
-<table>
-  <tr>
-    <td>KBytes&nbsp;</td>
-    <td>Date&nbsp;&nbsp;</td>
-    <td>File&nbsp;</td>
-  </tr>
-  <!--#include virtual="index.inc" -->
-</table>
-</p>
 
 When building a release for the first time, please make sure to look at
 the INSTALL file in the distribution along with any NOTES file
