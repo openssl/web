@@ -80,6 +80,11 @@ PGP keys for the signatures are available from the
 [OTC page](https://www.openssl.org/community/otc.html). Current members that
 sign releases include Richard Levitte, Matt Caswell, Paul Dale, and Tomas Mraz.
 
+The releases can be also signed by the OpenSSL OMC key with fingerprint
+[EFC0 A467 D613 CB83 C7ED 6D30 D894 E2CE 8B3D 79F5].
+
+[EFC0 A467 D613 CB83 C7ED 6D30 D894 E2CE 8B3D 79F5]: https://keys.openpgp.org/search?q=openssl-omc%40openssl.org
+
 Each day we make a snapshot of each development branch. They can be
 found at <https://www.openssl.org/source/snapshot/>. These daily
 snapshots of the source tree are provided for convenience only and not
