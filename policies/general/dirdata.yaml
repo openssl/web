@@ -6,7 +6,6 @@ sidebar:
   - |
     # [General Policies](.)
 
-    -   [Trademark Policy](../trademark.html)
     -   [Release Strategy](../releasestrat.html)
         <!--#include virtual="index.inc" -->
 ---
