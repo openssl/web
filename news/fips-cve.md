@@ -11,6 +11,7 @@ relevance to it:
 
 **CVE ID** | **Fixed** | **FIPS?** | **Notes**
 ----- | --: | :-: | :---------------
+[CVE-2023-4807] | 3.0.11<br>3.1.3 | no |
 [CVE-2023-3817] | 3.0.10<br>3.1.2 | no |
 [CVE-2023-3446] | 3.0.10<br>3.1.2 | no |
 [CVE-2023-2975] | 3.0.10<br>3.1.2 | no |
@@ -44,6 +45,7 @@ relevance to it:
 [CVE-2021-4044] | 3.0.1 | no |
 | | | | **Release of 3.0.0 FIPS provider**
 
+[CVE-2023-4807]: https://www.openssl.org/news/vulnerabilities.html#CVE-2023-4807
 [CVE-2023-3817]: https://www.openssl.org/news/vulnerabilities.html#CVE-2023-3817
 [CVE-2023-3446]: https://www.openssl.org/news/vulnerabilities.html#CVE-2023-3446
 [CVE-2023-2975]: https://www.openssl.org/news/vulnerabilities.html#CVE-2023-2975
