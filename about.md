@@ -130,7 +130,14 @@ As well as development I am also active in the governance of OpenSSL including
 as a member of OpenSSL's management and technical committees.
 
 ## Neil Horman
-To Be Defined =)
+I've been an open source contributor for the last 20 years, focusing on various
+projects throughout the ecosystem. My primary focus has been on networking,
+cryptography, and various low-level system utilities. I'm currently the
+maintainer of the irqbalance and rngd daemons. At various times, I've maintained
+the SCTP networking protocol and the cryptographic X9.31 pseudo-random number
+generator in the Linux kernel. While I have enjoyably spent most of my career
+fixing bugs, I'm looking forward to contributing to large-scale development in
+OpenSSL.
 
 ## Paul Dale
 I worked sporadically with OpenSSL on embedded systems from the early 2000s and
