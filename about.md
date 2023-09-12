@@ -108,6 +108,9 @@ the development of OpenSSL's QUIC functionality. As a strong believer in the
 values of open source, I'm proud to be part of the OpenSSL project given its
 instrumental role in the security of internet infrastructure.
 
+## Kajal Sapkota
+To Be Defined =)
+
 ## Kurt Roeckx
 To Be Defined =)
 
@@ -125,6 +128,9 @@ of major features in OpenSSL over the years including the implementation of
 TLSv1.3, the new provider architecture in 3.0, the new FIPS module and QUIC.
 As well as development I am also active in the governance of OpenSSL including
 as a member of OpenSSL's management and technical committees.
+
+## Neil Horman
+To Be Defined =)
 
 ## Paul Dale
 I worked sporadically with OpenSSL on embedded systems from the early 2000s and
