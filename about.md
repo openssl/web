@@ -114,7 +114,7 @@ To Be Defined =)
 ## Kurt Roeckx
 To Be Defined =)
 
-## Mark J Cox
+## Mark J Cox (emeritus)
 I am proud to have been one of the original founders of the OpenSSL project
 back in 1998. Throughout the years, I have contributed my expertise in security
 vulnerability handling, management, and finance. Presently, my primary focus is
