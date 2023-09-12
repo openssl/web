@@ -101,6 +101,9 @@ leading teams in OpenStack and OpenShift projects. Now at OpenSSL, I am
 committed to utilising my experience to contribute to our shared mission of
 enhancing digital security.
 
+## Dmitry Misharov
+To Be Defined =)
+
 ## Hugo Landau
 I'm a software and infrastructure engineer with a background in networking,
 security and cryptography. An OTC member, I take principal responsibility for
@@ -178,5 +181,8 @@ OpenSSL 3.0 release and get the FIPS provider module validated. Currently, my
 primary focus is developing the implementation of the QUIC protocol in OpenSSL
 and making sure we respond to issues raised on our github project in a timely
 manner.
+
+## Tomáš Vávra
+To Be Defined =)
 
 ---
