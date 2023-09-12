@@ -93,18 +93,6 @@ who are collectively shaping a safer, privacy-respecting digital future.
   </g>
 </svg>
 
-## Aleš Mareček
-SysOps and DevOps Engineer, Security enthusiast, Quality driven, Bug hunter,
-Open source ambassador.
-To be honest and responsible are one of the core values I keep. I believe that
-meritocracy and transparency are inseparable parts from the way to build a
-successful community.
-I'm into security since 1998 when my personal OpenBSD server and firewall
-started playing zeroes and ones games on Internet. At that time I met OpenSSL
-for the first time. During a couple of years I was using and testing OpenSSL
-libraries in both work and personal lives. Finally I joined OpenSSL in 2022 to
-become a part of the project as Sys/DevOps.
-
 ## Anton Arapov
 Joining the OpenSSL team in February 2023, I brought along experience from
 previous roles in Red Hat and Mavenir. At Red Hat, I had the opportunity to
