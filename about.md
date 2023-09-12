@@ -95,14 +95,11 @@ who are collectively shaping a safer, privacy-respecting digital future.
 
 ## Anton Arapov
 Joining the OpenSSL team in February 2023, I brought along experience from
-previous roles in Red Hat and Mavenir. At Red Hat, I had the opportunity to
-grow from an engineer to an engineering manager, contributing to the Linux
-Kernel and later leading teams in OpenStack and OpenShift projects. My journey
-then led me to Mavenir, where I applied my skills and knowledge to help align
-the company's telecom products and services with the realities of a modern
-cloud environment. Now at OpenSSL, I am committed to utilizing my experience
-to contribute to our shared mission of enhancing digital security through
-reliable encryption solutions.
+previous roles in Red Hat. At Red Hat, I had the opportunity to grow from an
+engineer to an engineering manager, contributing to the Linux Kernel and later
+leading teams in OpenStack and OpenShift projects. Now at OpenSSL, I am
+committed to utilising my experience to contribute to our shared mission of
+enhancing digital security.
 
 ## Hugo Landau
 I'm a software and infrastructure engineer with a background in networking,
