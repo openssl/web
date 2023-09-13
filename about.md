@@ -149,7 +149,12 @@ interest in entropy and randomness and am a member of the management and
 technical committees.
 
 ## Richard Levitte
-To Be Defined =)
+I've been an active FOSS contributor since 1990, with a focus on the
+operating system OpenVMS at the time.  Back then, I mainly ported diverse
+GNU programs (most of all newer versions of Emacs) to that operating system.
+In the late 1990's, I became interested in cryptography, which led me to
+SSLeay, and then to the OpenSSL Project, which I became an active member of
+in late 1999.  This has been my most consistent FOSS activity ever since.
 
 ## Tam Dale
 I joined the project in July 2023, and as the only non-technical contractor,
