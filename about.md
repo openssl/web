@@ -102,7 +102,13 @@ committed to utilising my experience to contribute to our shared mission of
 enhancing digital security.
 
 ## Dmitry Misharov
-To Be Defined =)
+I am a DevOps enthusiast with a knack for Python, cloud technologies, and
+rigorous testing. My journey through roles at renowned organizations, such as
+Red Hat, has sharpened my skills in building robust automation solutions,
+containerization, and maintaining CI/CD pipelines. I am passionate about open
+source and am proud to be part of the OpenSSL Software Foundation team. With a
+strong foundation in Python, a commitment to quality, and a belief in the power
+of open collaboration, I am ready to tackle any challenge that comes my way.
 
 ## Hugo Landau
 I'm a software and infrastructure engineer with a background in networking,
