@@ -117,6 +117,9 @@ the development of OpenSSL's QUIC functionality. As a strong believer in the
 values of open source, I'm proud to be part of the OpenSSL project given its
 instrumental role in the security of internet infrastructure.
 
+## James Muir
+To Be Defined =)
+
 ## Kajal Sapkota
 To Be Defined =)
 
