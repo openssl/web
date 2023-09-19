@@ -45,8 +45,6 @@ note sponsors may choose to remain anonymous.
 
 <div class="sponsorsection">
 
-[Activision](https://activision.com/)
-
 [VeriSign, Inc.](https://www.verisign.com/)
 
 [Microsoft](https://www.microsoft.com/)
