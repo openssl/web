@@ -28,12 +28,14 @@ found [here](mirror.html).
 *Note:* The latest stable version is the 3.1 series supported until 14th March
 2025. Also available is the 3.0 series which is a Long Term Support (LTS)
 version and is supported until 7th September 2026. The previous LTS version (the
-1.1.1 series) is also available and is supported until 11th September 2023. All
-older versions (including 1.1.0, 1.0.2, 1.0.0 and 0.9.8) are now out of support
-and should not be used. Users of these older versions are encouraged to upgrade
-to 3.1 or 3.0 as soon as possible. Extended support for 1.0.2 to gain access to
-security fixes for that version is [available](/support/contracts.html).
-
+1.1.1 series) is also available but has recently gone out of support. Users
+should transition to 3.0 or 3.1 as soon as possible. A pre-release (not for
+production use) version of our forthcoming 3.2 release is also available for
+testing purposes. All older versions (including 1.1.0, 1.0.2, 1.0.0 and 0.9.8)
+are now out of support and should not be used. Users of these older versions are
+encouraged to upgrade to 3.1 or 3.0 as soon as possible. Extended support for
+1.1.1 and 1.0.2 to gain access to security fixes for that version is
+[available](/support/contracts.html).
 
 The following OpenSSL version(s) are FIPS validated:
 
