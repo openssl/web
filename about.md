@@ -181,4 +181,14 @@ primary focus is developing the implementation of the QUIC protocol in OpenSSL
 and making sure we respond to issues raised on our github project in a timely
 manner.
 
+## Neil Horman
+I've been an open-source contributor for the last 20 years, focusing on various
+projects throughout the ecosystem.  I've been primarily focused on networking,
+cryptography, and various low-level system utilities.  I'm currently the maintainer
+of the Irqbalance and Rngd daemons, and at various times I've been the maintainer
+of the SCTP networking protocol, and the cryptographic X9.31 pseudo-random number
+generator in the Linux kernel.  While most of my career has been enjoyably spent
+working on fixing bugs, I'm looking forward to contributing to larger scale 
+development in OpenSSL.
+
 ---
