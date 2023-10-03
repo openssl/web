@@ -78,7 +78,10 @@ H_POLICIES = $(addsuffix .html,\
                                   policies/*.md \
                                   policies/general/*.md \
                                   policies/technical/*.md \
-                                  policies/general-supplemental/*.md)))
+                                  policies/general-supplemental/*.md)) \
+               $(basename $(basename $(shell git ls-files -- \
+                                             policies/general/*.md \
+                                             policies/technical/*.md))))
 # We filter out any file starting with 'sub-'...  they get special treatment
 H_SOURCE= $(addsuffix .html,\
             $(basename $(shell git ls-files -- source/*.md \
@@ -322,7 +325,8 @@ docs/faq.md: docs/faq.inc
 ##
 
 .PHONY: technical-policies
-technical-policies: $(TECHNICAL_POLICIES) bin/md-to-html5
+technical-policies: $(TECHNICAL_POLICIES) policies/technical/dirdata.yaml \
+                    bin/md-to-html5
 	mkdir -p policies/technical
 	for x in $(TECHNICAL_POLICIES); do \
 		d=$$(dirname $$x); \
@@ -335,12 +339,13 @@ technical-policies: $(TECHNICAL_POLICIES) bin/md-to-html5
 	done
 policies/technical/index.inc: technical-policies bin/mk-md-titlelist Makefile
 	./bin/mk-md-titlelist '' $(TECHNICAL_POLICIES) > $@
-policies/technical/index.html: \
-	policies/technical/index.md policies/technical/index.inc \
-	policies/technical/dirdata.yaml
+policies/technical/index.md: policies/technical/index.inc
+policies/technical/dirdata.yaml: policies/technical/index.inc
+policies/technical/index.html: policies/technical/index.md
 
 .PHONY: general-policies
-general-policies: $(GENERAL_POLICIES) bin/md-to-html5
+general-policies: $(GENERAL_POLICIES) policies/general/dirdata.yaml \
+                  bin/md-to-html5
 	mkdir -p policies/general
 	for x in $(GENERAL_POLICIES); do \
 		d=$$(dirname "$$x"); \
@@ -354,9 +359,9 @@ general-policies: $(GENERAL_POLICIES) bin/md-to-html5
 	done
 policies/general/index.inc: general-policies general-policy-supplemental bin/mk-md-titlelist Makefile
 	./bin/mk-md-titlelist '' $(GENERAL_POLICIES) > $@
-policies/general/index.html: \
-	policies/general/index.md policies/general/index.inc \
-	policies/general/dirdata.yaml
+policies/general/index.md: policies/general/index.inc
+policies/general/dirdata.yaml: policies/general/index.inc
+policies/general/index.html: policies/general/index.md
 
 .PHONY: general-policy-supplemental
 general-policy-supplemental: $(GENERAL_POLICY_SUPPL) bin/md-to-html5
