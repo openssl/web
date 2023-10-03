@@ -60,7 +60,7 @@ FUTURESERIES=
 # repository.  This does not include .md files taken from other repositories,
 # they have their own special handling.
 H_TOP = $(addsuffix .html,\
-          $(basename $(shell git ls-files -- *.md)) \
+          $(basename $(shell git ls-files -- *.md | grep -v '^README')) \
           $(basename $(basename $(shell git ls-files -- *.md.tt))))
 H_COMMUNITY = $(addsuffix .html,\
                 $(basename $(shell git ls-files -- community/*.md)) \
