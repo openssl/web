@@ -10,4 +10,4 @@ git repository.
 
 More details can be found in the [ChangeLog](changelog.html).
 
-<!--#include virtual="openssl-[% release %]-notes.inc" -->
+[% INCLUDE "openssl-$release-notes.inc" %]

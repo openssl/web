@@ -70,7 +70,9 @@ H_DOCS = $(addsuffix .html,\
            $(basename $(shell git ls-files -- docs/*.md \
                                               docs/*.md.tt \
                               | grep -v '/sub-')))
-H_NEWS = $(addsuffix .html,$(basename $(shell git ls-files -- news/*.md)))
+H_NEWS = $(addsuffix .html,\
+           $(basename $(shell git ls-files -- news/*.md)) \
+           $(basename $(basename $(shell git ls-files -- news/*.md.tt))))
 H_POLICIES = $(addsuffix .html,\
                $(basename $(shell git ls-files -- \
                                   policies/*.md \
@@ -89,15 +91,10 @@ H_SUPPORT = $(addsuffix .html,$(basename $(shell git ls-files -- support/*.md)))
 
 SIMPLE = $(H_TOP) \
 	 $(H_COMMUNITY) \
-	 news/changelog.html \
-	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
 	 $(H_NEWS) \
 	 news/secadv \
 	 news/secjson \
-	 news/vulnerabilities.inc \
-	 news/vulnerabilities.html \
-	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).inc) \
 	 $(foreach S,$(SERIES) $(OLDSERIES),news/vulnerabilities-$(S).html) \
 	 $(H_POLICIES) \
 	 policies/glossary.html \
@@ -411,7 +408,8 @@ news/changelog.inc: news/changelog.txt bin/post-process-html5 Makefile
 	@rm -f $@
 	(echo 'Table of contents'; sed -e '1,/^OpenSSL Releases$$/d' < $<) \
 		| pandoc -t html5 -f commonmark | ./bin/post-process-html5 >$@
-news/changelog.md: news/changelog.md.tt news/changelog.inc Makefile bin/from-tt
+news/changelog.md: news/changelog.md.tt news/changelog.inc \
+                   bin/from-tt Makefile
 	@rm -f $@
 	./bin/from-tt 'releases=$(SERIES)' $<
 # Additionally, make news/changelog.html depend on clxy[z].txt, where xy[z]
@@ -455,7 +453,9 @@ $(eval $(call mknews_changelogtxt,cl$(subst .,,$(S)).txt,openssl-$(S)-stable/CHA
 #
 # $(1) = release version, $(2) = NEWS file, relative to CHECKOUTS
 define mknews_noteshtml
-news/openssl-$(1)-notes.md: news/openssl-notes.md.tt bin/from-tt Makefile
+news/openssl-$(1)-notes.md: news/openssl-notes.md.tt \
+                            news/openssl-$(1)-notes.inc \
+                            bin/from-tt Makefile
 	@rm -f $$@
 	./bin/from-tt -d news -i $$< -o $$@ release='$(1)'
 news/openssl-$(1)-notes.inc: $(CHECKOUTS)/$(2) bin/mk-notes Makefile
@@ -492,7 +492,9 @@ define mknews_vulnerability
 news/vulnerabilities$(1).inc: bin/cvejsontohtml.py news/secjson Makefile
 	@rm -f $$@
 	python3 ./bin/cvejsontohtml.py -i news/secjson/ $(2) > $$@
-news/vulnerabilities$(1).md: news/vulnerabilities.md.tt bin/from-tt Makefile
+news/vulnerabilities$(1).md: news/vulnerabilities.md.tt \
+                             news/vulnerabilities$(1).inc \
+                             bin/from-tt Makefile
 	@rm -f $$@
 	./bin/from-tt -d news vulnerabilitiesinc='vulnerabilities$(1).inc' < $$< > $$@
 endef
@@ -595,6 +597,8 @@ source/old/index.md: source/old/index.md.tt Makefile bin/from-tt Makefile
 
 # Extra inc -> markdown dependencies
 
+news/newslog.md: news/newsflash.inc
+news/pgpkey.md: news/openssl-security.asc
 
 # Extra HTML dependencies (apart from the markdown file it comes from)
 
