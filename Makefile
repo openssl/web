@@ -59,7 +59,9 @@ FUTURESERIES=
 # The H_ variables hold renderings of .md files present in the local
 # repository.  This does not include .md files taken from other repositories,
 # they have their own special handling.
-H_TOP = $(addsuffix .html,$(basename $(shell git ls-files -- *.md)))
+H_TOP = $(addsuffix .html,\
+          $(basename $(shell git ls-files -- *.md)) \
+          $(basename $(basename $(shell git ls-files -- *.md.tt))))
 H_COMMUNITY = $(addsuffix .html,\
                 $(basename $(shell git ls-files -- community/*.md)) \
                 $(basename $(basename $(shell git ls-files -- community/*.md.tt))))
@@ -86,13 +88,11 @@ H_SOURCE= $(addsuffix .html,\
 H_SUPPORT = $(addsuffix .html,$(basename $(shell git ls-files -- support/*.md)))
 
 SIMPLE = $(H_TOP) \
-	 newsflash.inc \
 	 $(H_COMMUNITY) \
 	 news/changelog.html \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
 	 $(H_NEWS) \
-	 news/newsflash.inc \
 	 news/secadv \
 	 news/secjson \
 	 news/vulnerabilities.inc \
@@ -385,6 +385,8 @@ policies/glossary.html: $(GLOSSARY) bin/md-to-html5 policies/dirdata.yaml
 newsflash.inc: news/newsflash.inc
 	@rm -f $@
 	head -7 $< >$@
+index.md: newsflash.inc inc/legalities.md
+
 sitemap sitemap.txt: bin/mk-sitemap Makefile
 	@rm -f sitemap.txt
 	./bin/mk-sitemap master $(SERIES) > sitemap.txt
