@@ -8,6 +8,6 @@ release notices.
 
 <p>
 <table class="newsflash" width="90%">
-  <!--#include virtual="newsflash.inc"-->
+  [% INCLUDE "newsflash.inc" %]
 </table>
 </p>
