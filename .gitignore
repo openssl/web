@@ -28,8 +28,12 @@ news/changelog.md
 news/changelog.txt
 news/cl*.txt
 news/newsflash.inc
+news/newslog.md
 news/openssl-*-notes.md
 news/openssl-*-notes.inc
+news/pgpkey.md
+news/secadv/
+news/secjson/
 news/vulnerabilities*.inc
 news/vulnerabilities*.md
 news/*.html
