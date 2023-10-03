@@ -10,8 +10,8 @@ breadcrumb: [% release %]
     <td>Date&nbsp;&nbsp;</td>
     <td>File&nbsp;</td>
   </tr>
-  <!--#include virtual="index.inc" -->
+  [% INCLUDE "index.inc" %]
 </table>
 </p>
 
-<!--#include virtual="/inc/legalities.shtml" -->
+[% INCLUDE "../../../inc/legalities.md" %]

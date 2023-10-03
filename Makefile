@@ -103,9 +103,8 @@ SIMPLE = $(H_TOP) \
 	 policies/glossary.html \
 	 $(H_SOURCE) \
 	 source/.htaccess \
-	 source/index.inc \
 	 $(H_SUPPORT)
-SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
+SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.html)
 
 SIMPLEDOCS = $(H_DOCS) \
 	     docs/OpenSSLStrategicArchitecture.html \
@@ -570,7 +569,9 @@ source/old/$(1)/index.inc: $(RELEASEDIR)/old/$(1) bin/mk-filelist Makefile
 	@mkdir -p `dirname $$@`
 	@rm -f $$@
 	./bin/mk-filelist $(RELEASEDIR)/old/$(1) '' '*.gz' > $$@
-source/old/$(1)/index.md: source/old/sub-index.md.tt bin/from-tt Makefile
+source/old/$(1)/index.md: source/old/sub-index.md.tt inc/legalities.md \
+                          source/old/$(1)/index.inc \
+                          bin/from-tt Makefile
 	@mkdir -p `dirname $$@`
 	@rm -f $$@
 	./bin/from-tt -d source/old/$(1) \
@@ -595,7 +596,8 @@ endef
 $(foreach S,fips $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsourceindex,$(S),$(patsubst fips,FIPS,$(S)))))
 $(foreach S,fips $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsourcedirdata,$(S),$(patsubst fips,FIPS,$(S)))))
 
-source/old/index.md: source/old/index.md.tt Makefile bin/from-tt Makefile
+source/old/index.md: source/old/index.md.tt inc/legalities.md \
+                     Makefile bin/from-tt Makefile
 	@mkdir -p `dirname $@`
 	@rm -f $@
 	./bin/from-tt releases='$(SERIES) $(OLDSERIES2) fips' $<
@@ -604,6 +606,7 @@ source/old/index.md: source/old/index.md.tt Makefile bin/from-tt Makefile
 
 news/newslog.md: news/newsflash.inc
 news/pgpkey.md: news/openssl-security.asc
+source/index.md: source/index.inc
 
 # Extra HTML dependencies (apart from the markdown file it comes from)
 
