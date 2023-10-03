@@ -5,7 +5,7 @@ These are the general policies and procedures established by the OMC.
 
 <p>
     <ul>
-        <!--#include virtual="index.inc" -->
+        [% INCLUDE "index.inc" %]
     </ul>
 </p>
 
