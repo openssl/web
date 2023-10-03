@@ -9,4 +9,4 @@ Here are the old releases.
 -   [[% release %]]([% release %])
 [% END -%]
 
-<!--#include virtual="/inc/legalities.shtml" -->
+[% INCLUDE "../../inc/legalities.md" %]
