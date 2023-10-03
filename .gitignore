@@ -18,6 +18,7 @@ docs/OpenSSLStrategicArchitecture.html
 docs/faq.inc
 docs/fips.inc
 docs/man*/
+docs/manpages.md
 docs/*.html
 docs/fips/*.html
 inc/pandoc-template.html5
