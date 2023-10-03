@@ -1,0 +1,9 @@
+---
+breadcrumbs: >-
+  [Home](/) : [Policies](/policies) : [General](.)
+sidebar: |
+  # [General Policies](.)
+
+  -   [Release Strategy](../releasestrat.html)
+      [% INCLUDE "index.inc" %]
+---
