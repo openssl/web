@@ -11,4 +11,4 @@ header-includes: |
 ---
 # Frequently Asked Questions
 
-<!--#include virtual="faq.inc" -->
+[% INCLUDE "faq.inc" %]

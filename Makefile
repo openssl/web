@@ -108,7 +108,6 @@ SIMPLE = $(H_TOP) \
 SRCLISTS = $(foreach S,$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips,source/old/$(S)/index.inc source/old/$(S)/index.html)
 
 SIMPLEDOCS = $(H_DOCS) \
-	     docs/faq.inc \
 	     docs/OpenSSLStrategicArchitecture.html \
 	     docs/OpenSSL300Design.html \
 	     docs/manpages.html
@@ -216,19 +215,27 @@ docs/man$(2)/man7/index.inc: bin/mk-apropos Makefile
 	./bin/mk-apropos docs/man$(2)/man7 > $$@
 endef
 define makemanindexes
-docs/man$(2)/man1/index.md: docs/sub-man1-index.md.tt bin/from-tt Makefile
+docs/man$(2)/man1/index.md: docs/sub-man1-index.md.tt \
+                            docs/man$(2)/man1/index.inc \
+                            bin/from-tt Makefile
 	./bin/from-tt -d docs/man$(2)/man1 \
                       releases='$(MANSERIES)' release='$(2)' \
 		      < $$< > $$@
-docs/man$(2)/man3/index.md: docs/sub-man3-index.md.tt bin/from-tt Makefile
+docs/man$(2)/man3/index.md: docs/sub-man3-index.md.tt \
+                            docs/man$(2)/man3/index.inc \
+                            bin/from-tt Makefile
 	./bin/from-tt -d docs/man$(2)/man3 \
                       releases='$(MANSERIES)' release='$(2)' \
 		      < $$< > $$@
-docs/man$(2)/man5/index.md: docs/sub-man5-index.md.tt bin/from-tt Makefile
+docs/man$(2)/man5/index.md: docs/sub-man5-index.md.tt \
+                            docs/man$(2)/man5/index.inc \
+                            bin/from-tt Makefile
 	./bin/from-tt -d docs/man$(2)/man5 \
                       releases='$(MANSERIES)' release='$(2)' \
 		      < $$< > $$@
-docs/man$(2)/man7/index.md: docs/sub-man7-index.md.tt bin/from-tt Makefile
+docs/man$(2)/man7/index.md: docs/sub-man7-index.md.tt \
+                            docs/man$(2)/man7/index.inc \
+                            bin/from-tt Makefile
 	./bin/from-tt -d docs/man$(2)/man7 \
                       releases='$(MANSERIES)' release='$(2)' \
 		      < $$< > $$@
@@ -288,14 +295,12 @@ $(foreach S,$(MANSERIES1),$(eval $(call makemanuals1,openssl-$(S)-stable,$(S))))
 
 MANMASTER_TARGETS = \
         man-pages-master docs/manmaster/index.html \
-        $(foreach SEC,1 3 5 7, docs/manmaster/man$(SEC)/index.inc \
-                               docs/manmaster/man$(SEC)/index.html)
+        $(foreach SEC,1 3 5 7, docs/manmaster/man$(SEC)/index.html)
 manmaster: $(MANMASTER_TARGETS)
 MANPAGES_TARGETS = \
         $(foreach S,$(MANSERIES), \
           man-pages-$(S) docs/man$(S)/index.html \
-          $(foreach SEC,1 3 5 7, docs/man$(S)/man$(SEC)/index.inc \
-                                 docs/man$(S)/man$(SEC)/index.html))
+          $(foreach SEC,1 3 5 7, docs/man$(S)/man$(SEC)/index.html))
 manpages: manmaster $(MANPAGES_TARGETS)
 
 mancross:
@@ -312,6 +317,7 @@ docs/mansidebar.html: docs/mansidebar.html.tt Makefile bin/from-tt
 docs/faq.inc: $(wildcard docs/faq-[0-9]-*.txt) Makefile bin/mk-faq
 	@rm -f $@
 	./bin/mk-faq docs/faq-[0-9]-*txt >$@
+docs/faq.md: docs/faq.inc
 
 ######################################################################
 ##

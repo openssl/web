@@ -9,6 +9,6 @@ breadcrumb: file formats
     <td>NAME</td>
     <td>Description</td>
   </tr>
-  <!--#include virtual="index.inc" -->
+  [% INCLUDE "index.inc" %]
 </table>
 </p>
