@@ -1,9 +1,10 @@
 *~
 *.swp
 *.cross
-blog
-sitemap.txt
-./*.html
+/blog
+/sitemap.txt
+/*.html
+/index.md
 community/committers.inc
 community/committers.md
 community/omc-alumni.inc

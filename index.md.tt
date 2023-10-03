@@ -23,9 +23,9 @@ fixes, see our [Vulnerabilities](news/vulnerabilities.html) page.
 
 <p>
 <table class="newsflash" width="90%">
-<!--#include virtual="newsflash.inc"-->
+[% INCLUDE "newsflash.inc" %]
 <tr><td class="d">[More...](news)</td><td class="t"></td></tr>
 </table>
 </p>
 
-<!--#include virtual="/inc/legalities.shtml" -->
+[% INCLUDE "./inc/legalities.md" %]
