@@ -3,7 +3,8 @@ breadcrumbs: >-
   [Home]([% top %]) :
   [Documentation]([% top %]docs) :
   [Manpages]([% top %]docs/manpages.html)[% IF release.defined %] :
-  [[% release %]]([% top %]docs/man[% release %])[% END %]
+  [[% release %]]([% top %]docs/man[% release %])[% IF sectnum.defined %] :
+  [man[% sectnum %]]([% top %]docs/man[% release %]/man[% sectnum %])[% END %][% END %]
 sidebar: |
   # [Manpages]([% top %]docs/manpages.html)
 
