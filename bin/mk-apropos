@@ -4,15 +4,15 @@
 dir=$1
 cd $dir
 
-for m in `find . -name '*.html' | sort`; do
-    description=`grep -F '<!-- OSSL: description:' $m | sed -e 's|^[^:]*: *||' -e 's|^[^:]*: *||' -e 's| *-->||'`
+for m in `find . -name '*.md.tt' | sort`; do
+    description=`grep '^OSSL-description:' $m | sed -e 's|^[^:]*: *||' -e 's|^ *"||' -e 's|" *||'`
     # If there isn't a description, it isn't a manpage and should not be
     # included
     if [ "$description" = "" ]; then
 	continue
     fi
     manfile=`echo $m | sed -e 's|\./||'`
-    manname=`basename $manfile .html`
+    manname=`basename $manfile .md.tt`
     origmanfile=`echo $manfile | sed -e "s|^$subdir|$origsubdir|"`
-    echo "<tr><td><a href=\"$manfile\">$manname</a></td><td>$description</td></tr>"
+    echo "| [$manname]($manname.html) | $description |"
 done

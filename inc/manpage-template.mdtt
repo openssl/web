@@ -1,0 +1,10 @@
+---
+OSSL-subdir: man$sectnum$
+OSSL-section: $sectnum$
+OSSL-description: "$description$"
+breadcrumb: $name$
+[% INCLUDE "$name$.cross" %]
+---
+## $name$
+
+[% INCLUDE "$origname$.inc" %]

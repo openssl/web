@@ -64,83 +64,49 @@ sub main {
                 print $fh $out or $class->die("Can't print $outinc: $!");
                 close($fh) or $class->die("Can't close $outinc: $!");
 
-                my @htmlnames =
+                my @mdttnames =
                     map { (my $x = $_) =~ s|/|-|g; $x } @{$data{names}};
                 # Older OpenSSL pods have file names that do not correspond
                 # to any of the names in the NAME section.
                 # Strictly speaking, we shouldn't use that name, but HTML
                 # pages with that name have been produced in the past, so
                 # we keep doing so as long as it's relevant.
-                if (! grep { $_ eq $origbase } @htmlnames) {
-                    push @htmlnames, $origbase;
+                if (! grep { $_ eq $origbase } @mdttnames) {
+                    push @mdttnames, $origbase;
                 }
-                foreach my $htmlname (@htmlnames) {
-                    my $htmlfile = File::Spec->catdir( "man$data{sectnum}",
-                                                       "$htmlname.html" );
-                    my $outhtml = File::Spec->catfile( $wwwdir, $htmlfile );
-                    $out = $class->genhtml( $release, $title, $origbase,
-                                            $htmlname, %data );
-                    open( $fh, ">", $outhtml )
-                        or $class->die("Can't open $outhtml: $!");
-                    print $fh $out or $class->die("Can't print $outhtml: $!");
-                    close($fh) or $class->die("Can't close $outhtml: $!");
+                foreach my $mdttname (@mdttnames) {
+                    my $mdttfile = File::Spec->catdir( "man$data{sectnum}",
+                                                       "$mdttname.md.tt" );
+                    my $outmdtt = File::Spec->catfile( $wwwdir, $mdttfile );
+                    $out = $class->genmdtt( $release, $title, $origbase,
+                                            $mdttname, %data );
+                    open( $fh, ">", $outmdtt )
+                        or $class->die("Can't open $outmdtt: $!");
+                    print $fh $out or $class->die("Can't print $outmdtt: $!");
+                    close($fh) or $class->die("Can't close $outmdtt: $!");
                 }
             }
         }
     }
 }
 
-# Generate manpag HTML wrapper
-sub genhtml {
-    my ( $class, $release, $title, $origbase, $htmlbase, %data ) = @_;
+# Generate manpage markdown template wrapper
+sub genmdtt {
+    my ( $class, $release, $title, $origbase, $mdttbase, %data ) = @_;
+    # Note that the .inc file is pure HTML.
+    # That's OK, markdown can include HTML, by definition.
     return <<EOH;
-<!DOCTYPE html>
-<html lang="en">
-<!-- OSSL: original subdir: $data{subdir} -->
-<!-- OSSL: subdir: man$data{sectnum} -->
-<!-- OSSL: section: $data{sectnum} -->
-<!-- OSSL: description: $data{description} -->
-<!--#include virtual="/inc/head.shtml" -->
-<body>
-<!--#include virtual="/inc/banner.shtml" -->
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-        <article>
-          <header><h2>$title</h2></header>
-          <div class="entry-content">
-            <p>
-<!--#include virtual="$origbase.inc" -->
-            </p>
-          </div>
-          <footer>
-            You are here: <a href="/">Home</a>
-            : <a href="/docs">Docs</a>
-            : <a href="/docs/manpages.html">Manpages</a>
-            : <a href="/docs/man$release/">$release</a>
-            : <a href="/docs/man$release/man$data{sectnum}">man$data{sectnum}</a>
-            : <a href="/docs/man$release/man$data{sectnum}/$htmlbase.html">$htmlbase</a>
-            <br/><a href="/sitemap.txt">Sitemap</a>
-          </footer>
-        </article>
-      </div>
-      <aside class="sidebar">
-        <section>
-          <h1><a href="/docs/man$release/">$release manpages</a></h1>
-          <ul>
-            <li><a href="../man1">Commands</a></li>
-            <li><a href="../man3">Libraries</a></li>
-            <li><a href="../man5">File Formats</a></li>
-            <li><a href="../man7">Overviews</a></li>
-          </ul>
-        </section>
-<!--#include virtual="$htmlbase.cross" -->
-      </aside>
-    </div>
-  </div>
-<!--#include virtual="/inc/footer.shtml" -->
-</body>
-</html>
+---
+OSSL-original-subdir: $data{subdir}
+OSSL-subdir: man$data{sectnum}
+OSSL-section: $data{sectnum}
+OSSL-description: "$data{description}"
+breadcrumb: $mdttbase
+[% INCLUDE "$mdttbase.cross" %]
+---
+## $title
+
+[% INCLUDE "$origbase.inc" %]
 EOH
 }
 
@@ -263,34 +229,44 @@ __END__
 
 =head1 NAME
 
-mk-manpages - htmlize man pages from POD for the OpenSSL website
+mk-manpagetts - man pages from POD into markdown/html templates
 
 =head1 SYNOPSIS
 
-mk-manpages [options] <SrcDir> <RelVer> <WwwDir>
+ mk-manpagetts [options] <SrcDir> <RelVer> <WwwDir>
 
   <SrcDir>   doc directory of release <RelVer>, example 'OpenSSL_1_0_2-stable/doc'
   <RelVer>   version number associated with <SrcDir>, example '1.0.2'
-  <WwwDir>   top level directory beneath which generated html is stored, example 'web'
+  <WwwDir>   top level directory beneath which generated template is stored,
+             example 'web'
 
     --help    display a brief help message
     --man     display full documentation
 
+This script is only useful with pre-3.0 OpenSSL.  For OpenSSL 3.0 and on,
+please use mk-manpagetts3.
+
 =head1 DESCRIPTION
 
-This utility is run on a web server generate the htmlized version of
-OpenSSL documentation from the original POD.  The resultant directory
+This utility is run on a web server generate the markdown/html template version
+of OpenSSL documentation from the original POD.  The resultant directory
 structure may look something like the following (where the contents of
 index.html do not come from this tool):
 
  $ ls some/path/to/web
  man1.0.2    man1.1.0    manmaster
  $ ls some/path/to/web/man1.0.2
- apps        crypto      index.html  ssl
+ index.html  man1        man3        man5        man7
  $ ls some/path/to/web/man1.0.2/apps
- CA.pl.html
- asn1parse.html
- c_rehash.html
+ CA.pl.md.tt
+ asn1parse.md.tt
+ c_rehash.md.tt
  ...
+
+The result needs further processing by other tools.  Among others, the .md.tt
+files rely on the presence of a corresponding .cross file, which is usually
+produced later, when all .md.tt files are in place.  To finish everything off,
+the .md.tt files need to be passed through C<tpage>, and the resulting markdown
+must be converted into pure html with a well chosen tool.
 
 =cut
