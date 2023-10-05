@@ -21,39 +21,31 @@ for r in $releases; do
     echo >&2 -n "$r : "
     for s in 1 3 5 7; do
 	echo >&2 -n $s
-	for f in docs/man$r/man$s/*.html; do
+	for f in docs/man$r/man$s/*.md.tt; do
 	    $debug -n '.'
-	    # Check that it's a rendered manpage
-	    if grep -F '<!-- OSSL: description:' $f > /dev/null; then
-		existsin=''
-		b=`basename $f .html`
-		for x in $releases; do
-		    if [ "$x" = "$r" ]; then
-			continue
-		    fi
-		    if [ -f "docs/man$x/man$s/$b.html" ]; then
-			existsin="$existsin $x"
-		    fi
-		done
-		(
-		    if [ "$existsin" != "" ]; then
+	    existsin=''
+	    b=`basename $f .md.tt`
+	    for x in $releases; do
+		if [ "$x" = "$r" ]; then
+		    continue
+		fi
+		if [ -f "docs/man$x/man$s/$b.md.tt" ]; then
+		    existsin="$existsin $x"
+		fi
+	    done
+	    (
+		if [ "$existsin" != "" ]; then
+		    cat <<EOF
+sidebar: |
+  # This manpage
+EOF
+		    for x in $existsin; do
 			cat <<EOF
-  <section>
-    <h1>This manpage</h1>
-    <ul>
+  -   [$x version]([% top %]docs/man$x/man$s/$b.html)
 EOF
-			for x in $existsin; do
-			    cat <<EOF
-      <li><a href="/docs/man$x/man$s/$b.html">$x version</a></li>
-EOF
-			done
-			cat <<EOF
-    </ul>
-  </section>
-EOF
-		    fi
-		) > docs/man$r/man$s/$b.cross
-	    fi
+		    done
+		fi
+	    ) > docs/man$r/man$s/$b.cross
 	done
     done
     echo >&2
