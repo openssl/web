@@ -15,6 +15,6 @@ source tree, with appropriate code reviews.
   <td wdith="50%">Name</td>
   <td wdith="50%">GitHub ID</td>
 </tr>
-[% INCLUDE "committers.inc" %]
+<!--#include virtual="committers.inc" -->
 </table>
 </p>

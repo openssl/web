@@ -61,8 +61,7 @@ FUTURESERIES=
 # they have their own special handling.
 H_TOP = $(addsuffix .html,$(basename $(shell git ls-files -- *.md)))
 H_COMMUNITY = $(addsuffix .html,\
-                $(basename $(shell git ls-files -- community/*.md)) \
-                $(basename $(basename $(shell git ls-files -- community/*.md.tt))))
+                $(basename $(shell git ls-files -- community/*.md)))
 # We filter out any file starting with 'sub-'...  they get special treatment
 H_DOCS = $(addsuffix .html,\
            $(basename $(shell git ls-files -- docs/*.md \
@@ -88,6 +87,8 @@ H_SUPPORT = $(addsuffix .html,$(basename $(shell git ls-files -- support/*.md)))
 SIMPLE = $(H_TOP) \
 	 newsflash.inc \
 	 $(H_COMMUNITY) \
+	 community/committers.inc community/otc.inc \
+	 community/omc.inc community/omc-alumni.inc \
 	 news/changelog.html \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.inc) \
 	 $(foreach S,$(SERIES),news/openssl-$(S)-notes.html) \
@@ -388,16 +389,13 @@ community/committers.inc: $(PERSONDB) bin/mk-committers Makefile
 	wget -q https://api.openssl.org/0/Group/commit/Members
 	./bin/mk-committers <Members >$@
 	@rm -f Members
-community/committers.md: community/committers.inc
 
 community/otc.inc: $(PERSONDB) bin/mk-omc Makefile
 	./bin/mk-omc -n -p -t 'OTC Members' otc otc-inactive > $@
 community/omc.inc: $(PERSONDB) bin/mk-omc Makefile
 	./bin/mk-omc -n -e -l -p -t 'OMC Members' omc omc-inactive > $@
-community/omc.md: community/omc.inc
 community/omc-alumni.inc: $(PERSONDB) bin/mk-omc Makefile
 	./bin/mk-omc -n -l -t 'OMC Alumni' omc-alumni omc-emeritus > $@
-community/omc-alumni.md: community/omc-alumni.inc
 
 news/changelog.inc: news/changelog.txt bin/post-process-html5 Makefile
 	@rm -f $@
@@ -584,9 +582,6 @@ source/old/index.md: source/old/index.md.tt Makefile bin/from-tt Makefile
 	@mkdir -p `dirname $@`
 	@rm -f $@
 	./bin/from-tt releases='$(SERIES) $(OLDSERIES2) fips' $<
-
-# Extra inc -> markdown dependencies
-
 
 # Extra HTML dependencies (apart from the markdown file it comes from)
 
