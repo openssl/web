@@ -1,11 +1,13 @@
 ---
-breadcrumbs: >-
-  [Home](/) : [Policies](.)
-sidebar: |
-  # [Policies](.)
+breadcrumbs:
+  - |
+    [Home](/) : [Policies](.)
+sidebar:
+  - |
+    # [Policies](.)
 
-  -   [OpenSSL Bylaws](omc-bylaws.html)
-  -   [General Policies](general/)
-  -   [Technical Policies](technical/)
-  -   [Contributor Agreements](cla.html)
+    -   [OpenSSL Bylaws](omc-bylaws.html)
+    -   [General Policies](general/)
+    -   [Technical Policies](technical/)
+    -   [Contributor Agreements](cla.html)
 ---

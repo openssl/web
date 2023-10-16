@@ -6,7 +6,7 @@ in accordance with the [project bylaws].
 
 <p>
     <ul>
-        [% INCLUDE "index.inc" %]
+        <!--#include virtual="index.inc" -->
     </ul>
 </p>
 
