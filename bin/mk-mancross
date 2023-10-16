@@ -12,12 +12,6 @@ if [ "$DEBUG" != "" ]; then
 fi
 
 for r in $releases; do
-    # For those doing a test build, the docs for all the version might not
-    # be present.  That's fine, just skip them.
-    if ! [ -d docs/man$r ]; then
-        continue
-    fi
-
     echo >&2 -n "$r : "
     for s in 1 3 5 7; do
 	echo >&2 -n $s
