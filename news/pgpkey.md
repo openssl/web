@@ -8,5 +8,5 @@ team PGP key, below. The plain-text document of the key is available
 here: [openssl-security.asc](openssl-security.asc)
 
 <pre>
-[% INCLUDE "openssl-security.asc" %]
+<!--#include virtual="openssl-security.asc" -->
 </pre>
