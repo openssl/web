@@ -1,0 +1,12 @@
+---
+breadcrumbs:
+  - |
+    [Home](/) : [Policies](/policies) : [Technical](.)
+sidebar:
+  - |
+    # [Technical Policies](.)
+
+    <ul>
+    <!--#include virtual="index.inc" -->
+    </ul>
+---
