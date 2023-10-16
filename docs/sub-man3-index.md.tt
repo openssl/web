@@ -7,6 +7,12 @@ This is the OpenSSL API for the SSL and Crypto libraries.
 The [ssl](../man7/ssl.html) and [crypto](../man7/crypto.html) manpages
 are general overviews of those libraries.
 
-| NAME | Description |
-| ---- | ----------- |
-[% INCLUDE "index.inc" %]
+<p>
+<table style="border-spacing: 10px 0;">
+  <tr>
+    <td>NAME</td>
+    <td>Description</td>
+  </tr>
+  [% INCLUDE "index.inc" %]
+</table>
+</p>
