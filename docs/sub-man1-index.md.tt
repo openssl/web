@@ -12,6 +12,6 @@ the commands.
     <td>NAME</td>
     <td>Description</td>
   </tr>
-  [% INCLUDE "index.inc" %]
+  <!--#include virtual="index.inc" -->
 </table>
 </p>
