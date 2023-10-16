@@ -48,7 +48,6 @@ source/*.patch
 source/*.html
 source/.htaccess
 source/index.inc
-source/index.md
 source/old/*.html
 source/old/*.md
 source/old/*/

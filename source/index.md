@@ -21,7 +21,7 @@ found [here](mirror.html).
     <td>Date&nbsp;&nbsp;</td>
     <td>File&nbsp;</td>
   </tr>
-  [% INCLUDE "index.inc" %]
+  <!--#include virtual="index.inc" -->
 </table>
 </p>
 
@@ -94,4 +94,4 @@ even guaranteed to compile. Note that keeping a git local repository and
 updating it every 24 hours is equivalent and will often be faster and
 more efficient.
 
-[% INCLUDE "../inc/legalities.md" %]
+<!--#include virtual="/inc/legalities.shtml" -->
