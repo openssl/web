@@ -54,5 +54,3 @@ source/old/*.md
 source/old/*/
 source/snapshot
 support/*.html
-tmp-build/
-tmp-install/
