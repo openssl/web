@@ -1,11 +1,13 @@
 ---
-breadcrumbs: >-
-  [Home](/) : [News](.)
-sidebar: |
-  # [News](.)
+breadcrumbs:
+  - |
+    [Home](/) : [News](.)
+sidebar:
+  - |
+    # [News](.)
 
-  -   [Newslog](newslog.html)
-  -   [Vulnerabilities](vulnerabilities.html)
-  -   [CVEs and FIPS](fips-cve.html)
-  -   [Changelog](changelog.html)
+    -   [Newslog](newslog.html)
+    -   [Vulnerabilities](vulnerabilities.html)
+    -   [CVEs and FIPS](fips-cve.html)
+    -   [Changelog](changelog.html)
 ---
