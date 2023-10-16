@@ -1,10 +1,12 @@
 ---
-breadcrumbs: >-
-  [Home](/) : [Documentation](.)
-sidebar: |
-  # Documentation
+breadcrumbs:
+  - |
+    [Home](/) : [Documentation](.)
+sidebar:
+  - |
+    # Documentation
 
-  -   [FAQ](faq.html)
-  -   [Manpages](manpages.html)
-  -   [FIPS-140 Validation](fips.html)
+    -   [FAQ](faq.html)
+    -   [Manpages](manpages.html)
+    -   [FIPS-140 Validation](fips.html)
 ---

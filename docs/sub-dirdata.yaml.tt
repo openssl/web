@@ -1,5 +1,5 @@
 ---
-breadcrumbs: >-
+breadcrumbs: |
   [Home]([% top %]) :
   [Documentation]([% top %]docs) :
   [Manpages]([% top %]docs/manpages.html)[% IF release.defined %] :
