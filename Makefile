@@ -122,14 +122,12 @@ GENERAL_POLICIES=$(filter-out $(CHECKOUTS)/general-policies/policies/README.md $
 GENERAL_POLICY_SUPPL=$(filter-out $(CHECKOUTS)/general-policies/policy-supplemental/README.md,$(all_GENERAL_POLICY_SUPPL))
 TECHNICAL_POLICIES=$(filter-out $(CHECKOUTS)/technical-policies/policies/README.md,$(all_TECHNICAL_POLICIES))
 
+.SUFFIXES: .md .html
 .PHONY : FORCE
 
-%.html : %.md bin/md-to-html5
+.md.html:
 	@rm -f $@
 	./bin/md-to-html5 $<
-% : %.tt bin/from-tt
-	@rm -f $@
-	./bin/from-tt $<
 
 all: suball subdocs manmaster mancross sitemap akamai-purge
 
