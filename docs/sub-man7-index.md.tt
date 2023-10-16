@@ -3,6 +3,12 @@ breadcrumb: overviews
 ---
 # OpenSSL overviews
 
-| NAME | Description |
-| ---- | ----------- |
-[% INCLUDE "index.inc" %]
+<p>
+<table style="border-spacing: 10px 0;">
+  <tr>
+    <td>NAME</td>
+    <td>Description</td>
+  </tr>
+  [% INCLUDE "index.inc" %]
+</table>
+</p>

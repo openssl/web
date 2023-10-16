@@ -6,6 +6,12 @@ breadcrumb: commands
 The [openssl](openssl.html) manpage provides a general overview of all
 the commands.
 
-| NAME | Description |
-| ---- | ----------- |
-[% INCLUDE "index.inc" %]
+<p>
+<table style="border-spacing: 10px 0;">
+  <tr>
+    <td>NAME</td>
+    <td>Description</td>
+  </tr>
+  [% INCLUDE "index.inc" %]
+</table>
+</p>

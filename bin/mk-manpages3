@@ -30,8 +30,8 @@ srcdir=tmp-install/share/doc/openssl/html
         description="$($HERE/all-html-man-names < $destdir/$G | sed -e 's|^.* - ||' -e 's|\&|\\\&|g')"
         names="$($HERE/all-html-man-names < $destdir/$G | sed -e 's| - .*||' -e 's|, *| |g' -e 's|/|-|g')"
         for name in $names; do
-            G=$Dn/$name.md.tt
-	    cat $HERE/../inc/manpage-template.mdtt \
+            G=$Dn/$name.html
+	    cat $HERE/../inc/manpage-template.html5 \
                 | sed -E \
                       -e "s|\\\$release\\\$|$series|g" \
                       -e "s|\\\$sectnum\\\$|$section|g" \

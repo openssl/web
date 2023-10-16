@@ -128,13 +128,13 @@ TECHNICAL_POLICIES=$(filter-out $(CHECKOUTS)/technical-policies/policies/README.
 	@rm -f $@
 	./bin/from-tt $<
 
-all: suball subdocs manmastertts mancross manhtml sitemap akamai-purge
+all: suball subdocs manmaster mancross sitemap akamai-purge
 
 suball: $(SIMPLE) $(SRCLISTS)
 
 relupd: suball docs sitemap akamai-purge
 
-docs: subdocs manpagetts mancross manhtml
+docs: subdocs manpages mancross
 
 subdocs: $(SIMPLEDOCS)
 
@@ -171,9 +171,9 @@ bin/md-to-html5: inc/pandoc-template.html5
 ##
 ##  A lot of the work is made with generated rules.
 
-# makemanpagetts1 and makemanpagetts3 creates rules for targets like man-pagetts-1.1.1,
-# to build the set of man-page templates.  makemanpagetts1 is used for pre-3.0 OpenSSL,
-# while makemanpagetts3 is used for OpenSSL 3.0 and on.
+# makemanpages1 and makemanpages3 creates rules for targets like man-pages-1.1.1,
+# to build the set of man-pages.  makemanpages1 is used for pre-3.0 OpenSSL,
+# while makemanpages3 is used for OpenSSL 3.0 and on.
 # makemanapropos creates rules for targets like man-apropos-1.1.1, to build
 # 'apropos' like indexes for all the manpages.
 # makemanindexes creates rules for targets like man-index-1.1.1, to build the
@@ -182,26 +182,26 @@ bin/md-to-html5: inc/pandoc-template.html5
 # $(1) = input directory in CHECKOUTS, $(2) = release version
 
 # This variant is for pre-3.0 documentation
-define makemanpagetts1
-man-pagetts-$(2):
+define makemanpages1
+man-pages-$(2):
 	@rm -rf docs/man$(2)
 	@mkdir -p docs/man$(2) \
 		  docs/man$(2)/man1 \
 		  docs/man$(2)/man3 \
 		  docs/man$(2)/man5 \
 		  docs/man$(2)/man7
-	./bin/mk-manpagetts $(CHECKOUTS)/$(1)/doc $(2) docs/man$(2)
+	./bin/mk-manpages $(CHECKOUTS)/$(1)/doc $(2) docs/man$(2)
 endef
 # This variant is for 3.0 documentation
-define makemanpagetts3
-man-pagetts-$(2):
+define makemanpages3
+man-pages-$(2):
 	@rm -rf docs/man$(2)
 	@mkdir -p docs/man$(2) \
 		  docs/man$(2)/man1 \
 		  docs/man$(2)/man3 \
 		  docs/man$(2)/man5 \
 		  docs/man$(2)/man7
-	./bin/mk-manpagetts3 $(CHECKOUTS)/$(1) $(2) docs/man$(2)
+	./bin/mk-manpages3 $(CHECKOUTS)/$(1) $(2) docs/man$(2)
 endef
 define makemanapropos
 docs/man$(2)/man1/index.inc: bin/mk-apropos Makefile
@@ -246,19 +246,19 @@ endef
 define makemandirdata
 docs/man$(2)/man1/dirdata.yaml: docs/sub-dirdata.yaml.tt bin/from-tt Makefile
 	./bin/from-tt -d docs/man$(2)/man1 \
-		      releases='$(MANSERIES)' release='$(2)' sectnum=1 \
+		      releases='$(MANSERIES)' release='$(2)' \
 		      < $$< > $$@
 docs/man$(2)/man3/dirdata.yaml: docs/sub-dirdata.yaml.tt bin/from-tt Makefile
 	./bin/from-tt -d docs/man$(2)/man3 \
-		      releases='$(MANSERIES)' release='$(2)' sectnum=3 \
+		      releases='$(MANSERIES)' release='$(2)' \
 		      < $$< > $$@
 docs/man$(2)/man5/dirdata.yaml: docs/sub-dirdata.yaml.tt bin/from-tt Makefile
 	./bin/from-tt -d docs/man$(2)/man5 \
-		      releases='$(MANSERIES)' release='$(2)' sectnum=5 \
+		      releases='$(MANSERIES)' release='$(2)' \
 		      < $$< > $$@
 docs/man$(2)/man7/dirdata.yaml: docs/sub-dirdata.yaml.tt bin/from-tt Makefile
 	./bin/from-tt -d docs/man$(2)/man7 \
-		      releases='$(MANSERIES)' release='$(2)' sectnum=7 \
+		      releases='$(MANSERIES)' release='$(2)' \
 		      < $$< > $$@
 docs/man$(2)/dirdata.yaml: docs/sub-dirdata.yaml.tt bin/from-tt Makefile
 	./bin/from-tt -d docs/man$(2) \
@@ -266,13 +266,13 @@ docs/man$(2)/dirdata.yaml: docs/sub-dirdata.yaml.tt bin/from-tt Makefile
 		      < $$< > $$@
 endef
 define makemanuals1
-$(eval $(call makemanpagetts1,$(1),$(2)))
+$(eval $(call makemanpages1,$(1),$(2)))
 $(eval $(call makemanapropos,$(1),$(2)))
 $(eval $(call makemanindexes,$(1),$(2)))
 $(eval $(call makemandirdata,$(1),$(2)))
 endef
 define makemanuals3
-$(eval $(call makemanpagetts3,$(1),$(2)))
+$(eval $(call makemanpages3,$(1),$(2)))
 $(eval $(call makemanapropos,$(1),$(2)))
 $(eval $(call makemanindexes,$(1),$(2)))
 $(eval $(call makemandirdata,$(1),$(2)))
@@ -292,39 +292,18 @@ $(foreach S,$(MANSERIES3),$(eval $(call makemanuals3,openssl-$(S),$(S))))
 # source from $(CHECKOUTS)/openssl-x.y.z-stable/doc
 $(foreach S,$(MANSERIES1),$(eval $(call makemanuals1,openssl-$(S)-stable,$(S))))
 
-MANMASTER_DIRS = \
-	$(foreach SEC,1 3 5 7, docs/manmaster/man$(SEC))
-MANMASTERTT_TARGETS = \
-        man-pagetts-master \
-        docs/manmaster/dirdata.yaml docs/manmaster/index.html \
-        $(foreach D,$(MANMASTER_DIRS), $(D)/dirdata.yaml $(D)/index.html)
-manmastertts: $(MANMASTERTT_TARGETS)
-MANPAGE_DIRS = \
+MANMASTER_TARGETS = \
+        man-pages-master docs/manmaster/index.html \
+        $(foreach SEC,1 3 5 7, docs/manmaster/man$(SEC)/index.html)
+manmaster: $(MANMASTER_TARGETS)
+MANPAGES_TARGETS = \
         $(foreach S,$(MANSERIES), \
-          $(foreach SEC,1 3 5 7, docs/man$(S)/man$(SEC)))
-MANPAGETT_TARGETS = \
-        $(foreach S,$(MANSERIES), man-pagetts-$(S) \
-          docs/man$(S)/dirdata.yaml docs/man$(S)/index.html) \
-        $(foreach D,$(MANPAGE_DIRS), $(D)/dirdata.yaml $(D)/index.html)
-manpagetts: manmastertts $(MANPAGETT_TARGETS)
+          man-pages-$(S) docs/man$(S)/index.html \
+          $(foreach SEC,1 3 5 7, docs/man$(S)/man$(SEC)/index.html))
+manpages: manmaster $(MANPAGES_TARGETS)
 
 mancross:
 	./bin/mk-mancross master $(MANSERIES)
-
-# We can't get all the files when make is started, but we can make the
-# patterns for a for loop.
-MANHTML_TTPATTERNS=$(foreach D,$(MANMASTER_DIRS) $(MANPAGE_DIRS), $(D)/*.md.tt)
-manhtml:
-	@set -e; for t in $(MANHTML_TTPATTERNS); do \
-		if ! [ -f "$$t" ]; then continue; fi; \
-		d="$$(dirname $$t)"; \
-		h="$$(basename "$$t" .md.tt)"; \
-		i=; \
-		if [ "$$h" = "index" ]; then i=" -i"; fi; \
-		echo "$$t -> $$h.html"; \
-		./bin/from-tt -d "$$d" < "$$d/$$h.md.tt" \
-			| ./bin/md-to-html5$$i -o "$$d/$$h.html"; \
-	done
 
 docs/manpages.md: docs/manpages.md.tt Makefile bin/from-tt
 	@rm -f $@
