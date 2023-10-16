@@ -1,19 +1,21 @@
 ---
-breadcrumbs: >-
-  [Home](/) : [Community](.)
-sidebar: |
-  # [Community](.)
+breadcrumbs:
+  - |
+    [Home](/) : [Community](.)
+sidebar:
+  - |
+    # [Community](.)
 
-  -   [Our Mission and Values](mission.html)
-  -   [List of Committers](committers.html)
-  -   [OpenSSL Technical Committee](otc.html)
-  -   [OpenSSL Management Committee](omc.html)
-  -   [Code of Conduct](conduct.html)
-  -   [Contact Information](contacts.html)
-  -   [Getting Started as a Contributor](getting-started.html)
-  -   [Mailing Lists](mailinglists.html)
-  -   [Wiki](https://wiki.openssl.org)
-  -   [Blog](/blog)
-  -   [Binaries and Engines](binaries.html)
-  -   [Thanks!](thanks.html)
+    -   [Our Mission and Values](mission.html)
+    -   [List of Committers](committers.html)
+    -   [OpenSSL Technical Committee](otc.html)
+    -   [OpenSSL Management Committee](omc.html)
+    -   [Code of Conduct](conduct.html)
+    -   [Contact Information](contacts.html)
+    -   [Getting Started as a Contributor](getting-started.html)
+    -   [Mailing Lists](mailinglists.html)
+    -   [Wiki](https://wiki.openssl.org)
+    -   [Blog](/blog)
+    -   [Binaries and Engines](binaries.html)
+    -   [Thanks!](thanks.html)
 ---

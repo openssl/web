@@ -5,13 +5,9 @@ blog
 sitemap.txt
 ./*.html
 community/committers.inc
-community/committers.md
 community/omc-alumni.inc
-community/omc-alumni.md
 community/otc.inc
-community/otc.md
 community/omc.inc
-community/omc.md
 community/*.html
 docs/OpenSSL300Design.html
 docs/OpenSSLStrategicArchitecture.html
