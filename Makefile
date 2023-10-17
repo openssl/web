@@ -334,11 +334,6 @@ docs/mansidebar.html: docs/mansidebar.html.tt Makefile bin/from-tt
 	@rm -f $@
 	./bin/from-tt releases='master $(MANSERIES)' $<
 
-docs/faq.inc: $(wildcard docs/faq-[0-9]-*.txt) Makefile bin/mk-faq
-	@rm -f $@
-	./bin/mk-faq docs/faq-[0-9]-*txt >$@
-docs/faq.md: docs/faq.inc
-
 ######################################################################
 ##
 ##  Policy page building section

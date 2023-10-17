@@ -73,10 +73,9 @@ Guide](https://www.openssl.org/docs/man3.1/man7/migration_guide.html)
 
 When building a release for the first time, please make sure to look at
 the INSTALL file in the distribution along with any NOTES file
-applicable to your platform. If you have problems, look at the FAQ,
-which can be found [online](/docs/faq.html). If you still need more
-help, then join the [openssl-users](/community/mailinglists.html) email
-list and post a question there.
+applicable to your platform. If you have problems, then join the
+[openssl-users](/community/mailinglists.html) email list and post a
+question there.
 
 PGP keys for the signatures are available from the
 [OTC page](https://www.openssl.org/community/otc.html). Current members that

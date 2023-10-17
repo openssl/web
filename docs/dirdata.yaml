@@ -4,7 +4,6 @@ breadcrumbs: >-
 sidebar: |
   # Documentation
 
-  -   [FAQ](faq.html)
   -   [Manpages](manpages.html)
   -   [FIPS-140 Validation](fips.html)
 ---
