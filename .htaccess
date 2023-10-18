@@ -6,7 +6,6 @@ Options +ExecCGI +FollowSymLinks
 Redirect permanent /about/releasestrat.html /policies/releasestrat.html
 Redirect permanent /licenses/openssl_ccla.pdf /policies/openssl_ccla.pdf
 Redirect permanent /licenses/openssl_icla.pdf /policies/openssl_icla.pdf
-Redirect permanent /support/faq.html /docs/faq.html
 Redirect permanent /licenses /policies/cla.html
 Redirect permanent /licenses/ /policies/cla.html
 Redirect permanent  /.well-known/acme-challenge/MX5CvUJNvymcKf22SNORcfjGk4oGQyIWJiBc_johfYo http://dcv.akamai.com/.well-known/acme-challenge/MX5CvUJNvymcKf22SNORcfjGk4oGQyIWJiBc_johfYo

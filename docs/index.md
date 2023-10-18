@@ -3,8 +3,6 @@ breadcrumb: Documentation
 ---
 # Documentation
 
-The [frequently-asked questions (FAQ)](faq.html) page is available.
-
 A good starting point for understanding some of the key concepts in
 OpenSSL 3.0 is the libcrypto
 [manual page](https://www.openssl.org/docs/man3.0/man7/crypto.html).

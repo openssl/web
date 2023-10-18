@@ -21,7 +21,7 @@
         <li><a href="$top$" title="Home page">Home</a></li>
         <li><a href="$top$blog/" title="Team blog">Blog</a></li>
         <li><a href="$top$source/" title="Source code">Downloads</a></li>
-        <li><a href="$top$docs/" title="FAQ, FIPS, manpages, ...">Docs</a></li>
+        <li><a href="$top$docs/" title="FIPS, manpages, ...">Docs</a></li>
         <li><a href="$top$news/" title="Latest information">News</a></li>
         <li><a href="$top$policies/" title="How we operate">Policies</a></li>
         <li><a href="$top$community/" title="Blog, bugs, email, ...">Community</a></li>

@@ -16,7 +16,6 @@ community/omc.md
 community/*.html
 docs/OpenSSL300Design.html
 docs/OpenSSLStrategicArchitecture.html
-docs/faq.inc
 docs/fips.inc
 docs/man*/
 docs/manpages.md
