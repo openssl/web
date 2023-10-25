@@ -34,8 +34,8 @@ production use) version of our forthcoming 3.2 release is also available for
 testing purposes. All older versions (including 1.1.1, 1.1.0, 1.0.2, 1.0.0 and
 0.9.8) are now out of support and should not be used. Users of these older
 versions are encouraged to upgrade to 3.1 or 3.0 as soon as possible. Extended
-support for 1.1.1 and 1.0.2 to gain access to security fixes for that version is
-[available](/support/contracts.html).
+support for 1.1.1 and 1.0.2 to gain access to security fixes for those versions
+is [available](/support/contracts.html).
 
 The following OpenSSL version(s) are FIPS validated:
 
