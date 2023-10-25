@@ -43,7 +43,7 @@ OLDSERIES=1.1.1 1.1.0 1.0.2 1.0.1 1.0.0 0.9.8 0.9.7 0.9.6
 OLDSERIES2=1.1.1 1.1.0 1.0.2 1.0.1 1.0.0 0.9.x
 ##  Series for manual layouts, named similar to SERIES1, SERIES3, SERIES
 MANSERIES1=1.1.1 1.0.2
-MANSERIES3=3.1 3.0
+MANSERIES3=3.2 3.1 3.0
 MANSERIES=$(MANSERIES3) $(MANSERIES1)
 
 ##  Future series, i.e. a series that hasn't had any final release yet.
@@ -52,7 +52,7 @@ MANSERIES=$(MANSERIES3) $(MANSERIES1)
 ##  to make alpha and beta releases.
 ##  We distinguish them to avoid having to produce notes, vulnerability
 ##  documents, ... but still being able to present tarballs.
-FUTURESERIES=
+FUTURESERIES=3.2
 
 # All simple generated files.
 
