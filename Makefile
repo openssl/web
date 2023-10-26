@@ -609,14 +609,14 @@ endef
 # We also create a list specifically for the old FIPS module, carefully
 # crafting an HTML title with an uppercase 'FIPS' while the subdirectory
 # remains named 'fips'
-$(foreach S,fips $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsourceindex,$(S),$(patsubst fips,FIPS,$(S)))))
-$(foreach S,fips $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsourcedirdata,$(S),$(patsubst fips,FIPS,$(S)))))
+$(foreach S,fips $(FUTURESERIES) $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsourceindex,$(S),$(patsubst fips,FIPS,$(S)))))
+$(foreach S,fips $(FUTURESERIES) $(SERIES) $(OLDSERIES2),$(eval $(call mkoldsourcedirdata,$(S),$(patsubst fips,FIPS,$(S)))))
 
 source/old/index.md: source/old/index.md.tt inc/legalities.md \
                      Makefile bin/from-tt Makefile
 	@mkdir -p `dirname $@`
 	@rm -f $@
-	./bin/from-tt releases='$(SERIES) $(OLDSERIES2) fips' $<
+	./bin/from-tt releases='$(FUTURESERIES) $(SERIES) $(OLDSERIES2) fips' $<
 
 # Extra inc -> markdown dependencies
 
