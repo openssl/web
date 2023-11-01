@@ -16,7 +16,7 @@ procedures as possible. We do this for two reasons:
 
 By being as transparent as possible, we hope to reduce the chance that
 people are surprised by what we do, and we hope to help maintain predictable
-behavior within the project. This includes how spend some money, as detailed
+behavior within the project. This includes how we spend some money, as detailed
 in the [travel reimbursement policy](general/travel-policy.html).
 
 If you want to contribute code or fixes to the project, please read the
