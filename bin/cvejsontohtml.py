@@ -10,6 +10,7 @@ import xml.sax.saxutils as saxutils
 from optparse import OptionParser
 import datetime
 import sys
+
 parser = OptionParser()
  
 parser.add_option("-b","--base",help="major version to filter on",dest="base")
@@ -105,6 +106,8 @@ for k,cve in sorted(entries.items(), reverse=True):
         if "tags" in ref:
             if "vendor-advisory" in ref["tags"]:
                 url = ref["url"]
+                if url.startswith("https://www.openssl.org/news/"):
+                    url = url.replace("https://www.openssl.org/news/","")
                 refs = "<a href=\""+url+"\">"+title+"</a>"
     allissues += " "+refs
 
@@ -113,14 +116,18 @@ for k,cve in sorted(entries.items(), reverse=True):
         if "other" in metric["format"]:
             impact = metric["other"]["content"]["text"]
             if not "unknown" in impact:
-                 allissues += " <a href=\""+metric["other"]["type"]+"\">["+impact+" severity]</a>"
+                 metric_url = metric["other"]["type"]
+                 if metric["other"]["type"].startswith("https://www.openssl.org/policies/"):
+                     metric_url = metric_url.replace("https://www.openssl.org/","../")
+                    
+                 allissues += f" <a href=\"{metric_url}\">[{impact} severity]</a>"
             
     # Date
     datepublic =cna["datePublic"]
     t = datetime.datetime(int(datepublic[:4]), int(datepublic[5:7]), int(datepublic[8:10]), 0, 0)
     allissues += t.strftime(" %d %B %Y: ")    
 
-    allissues += "<a href=\"#toc\"><img src=\"/img/up.gif\"/></a></dt>\n<dd>"
+    allissues += "<a href=\"#toc\"><img src=\"../img/up.gif\"/></a></dt>\n<dd>"
     
     # Description
     for desc in cna["descriptions"]:
@@ -158,6 +165,10 @@ for k,cve in sorted(entries.items(), reverse=True):
                     continue
             allissues += "<li>Affects %s up to and including OpenSSL %s " %(earliest, lastaffected)
             if (git != ""):
+                    issue = git.split('/')[-1]
+                    if git.startswith("https://git.openssl.org/"):
+                        commitId=git.split(";")[-1].split("=")[-1]
+                        git = f"https://github.com/openssl/openssl/commit/{commitId}"
                     allissues += "<a href=\"%s\">(fix in git commit)</a> " %(git)
             allissues += "</li>"            
         if "lessThan" in ver:
@@ -174,6 +185,9 @@ for k,cve in sorted(entries.items(), reverse=True):
                     continue
             allissues += "<li>Fixed in OpenSSL %s " %(fixedin)
             if (git != ""):
+                if git.startswith("https://git.openssl.org/"):
+                        commitId=git.split(";")[-1].split("=")[-1]
+                        git = f"https://github.com/openssl/openssl/commit/{commitId}"
                 if (fixedin.startswith("1.0.2") and fixedin[5]>='w'):  # 1.0.2w and above hack
                     allissues += "<a href=\"/support/contracts.html?giturl=%s\">(premium support)</a> " %(git)
                 else:

@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 releases="$*"
 
@@ -20,22 +20,22 @@ for r in $releases; do
 
     echo >&2 -n "$r : "
     for s in 1 3 5 7; do
-	echo >&2 -n $s
-	for f in docs/man$r/man$s/*.md.tt; do
-	    $debug -n '.'
-	    existsin=''
-	    b=`basename $f .md.tt`
-	    for x in $releases; do
-		if [ "$x" = "$r" ]; then
-		    continue
-		fi
-		if [ -f "docs/man$x/man$s/$b.md.tt" ]; then
-		    existsin="$existsin $x"
-		fi
-	    done
-	    (
-		if [ "$existsin" != "" ]; then
-		    cat <<EOF
+		echo >&2 -n $s
+		for f in docs/man$r/man$s/*.md.tt; do
+			$debug -n '.'
+			existsin=''
+			b=$(basename "$f" .md.tt)
+			for x in $releases; do
+				if [ "$x" = "$r" ]; then
+					continue
+				fi
+				if [ -f "docs/man$x/man$s/$b.md.tt" ]; then
+					existsin="$existsin $x"
+				fi
+			done
+			(
+			if [ "$existsin" != "" ]; then
+				cat <<EOF
 sidebar: |
   # This manpage
 EOF
@@ -45,8 +45,8 @@ EOF
 EOF
 		    done
 		fi
-	    ) > docs/man$r/man$s/$b.cross
-	done
+	    ) > "docs/man$r/man$s/$b.cross"
+		done
     done
     echo >&2
 done
