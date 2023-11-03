@@ -5,10 +5,10 @@ breadcrumb: Documentation
 
 A good starting point for understanding some of the key concepts in
 OpenSSL 3.0 is the libcrypto
-[manual page](https://www.openssl.org/docs/man3.0/man7/crypto.html).
+[manual page](man3.0/man7/crypto.html).
 Information and notes about migrating existing applications to OpenSSL
 3.0 are available in the
-[OpenSSL 3.0 Migration Guide](https://www.openssl.org/docs/man3.0/man7/migration_guide.html)
+[OpenSSL 3.0 Migration Guide](man3.0/man7/migration_guide.html)
 
 The [manual pages](manpages.html) for all supported releases are
 available.

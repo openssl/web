@@ -1,0 +1,6 @@
+#!/bin/bash
+make suball CHECKOUTS=/Users/vavrat/Development/openssl/web/checkouts PERSONDB=/Users/vavrat/Development/openssl/web/checkouts/data/persondb.yaml FORCE=-f
+make docs CHECKOUTS=/Users/vavrat/Development/openssl/web/checkouts PERSONDB=/Users/vavrat/Development/openssl/web/checkouts/data/persondb.yaml FORCE=-f
+  
+  
+#make all CHECKOUTS=/Users/vavrat/Development/openssl/web/checkouts PERSONDB=/Users/vavrat/Development/openssl/web/checkouts/data/persondb.yaml FORCE=-f

@@ -1,0 +1,31 @@
+#!/bin/bash
+# shellcheck source=job_pool.sh
+. ./bin/job_pool.sh
+
+
+function process_file()
+{
+    t=$1
+    d=${t%/*}
+    #echo $DIR
+	#h="$(basename "$t" .md.tt)";
+    h1="${t##*/}"
+    h="${h1%.md.tt}"
+    i=;
+    if [ "$h" = "index" ]; then i=" -i"; fi;
+    time_elapsed=$( TIMEFORMAT="%R"; { time ./bin/from-tt -d $d < $d/$h.md.tt | ./bin/md-to-html5$i -o $d/$h.html; } 2>&1 )
+    echo "$t -> $d/$h.html - $time_elapsed seconds"    
+    
+    true
+}   
+CPUS=$(nproc --all)
+job_pool_init $CPUS 0
+
+for t in $1; do
+    if ! [ -f "$t" ]; then continue; fi;
+    job_pool_run process_file $t
+done
+
+job_pool_shutdown
+
+#./bin/mk-manhtml ' docs/manmaster/man1/*.md.tt  docs/manmaster/man3/*.md.tt  docs/manmaster/man5/*.md.tt  docs/manmaster/man7/*.md.tt  docs/man3.2/man1/*.md.tt  docs/man3.2/man3/*.md.tt  docs/man3.2/man5/*.md.tt  docs/man3.2/man7/*.md.tt  docs/man3.1/man1/*.md.tt  docs/man3.1/man3/*.md.tt  docs/man3.1/man5/*.md.tt  docs/man3.1/man7/*.md.tt  docs/man3.0/man1/*.md.tt  docs/man3.0/man3/*.md.tt  docs/man3.0/man5/*.md.tt  docs/man3.0/man7/*.md.tt  docs/man1.1.1/man1/*.md.tt  docs/man1.1.1/man3/*.md.tt  docs/man1.1.1/man5/*.md.tt  docs/man1.1.1/man7/*.md.tt  docs/man1.0.2/man1/*.md.tt  docs/man1.0.2/man3/*.md.tt  docs/man1.0.2/man5/*.md.tt  docs/man1.0.2/man7/*.md.tt'

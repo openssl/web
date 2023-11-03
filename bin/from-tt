@@ -106,37 +106,41 @@ else
     errfiles=
     nofiles=
     for f in "$@"; do
-	base=$(basename "$f" .tt)
+		base_with_ext="${f##*/}"
+		base=${base_with_ext%.tt}
+		# base=$(basename "$f" .tt)
 
-	if [ "$base" = "$f" ]; then
-	    errfiles="$errfiles '$f'"
-	elif [ ! -f "$f" ]; then
-	    nofiles="$nofiles '$f'"
-	fi
+		if [ "$base" = "$f" ]; then
+	    	errfiles="$errfiles '$f'"
+		elif [ ! -f "$f" ]; then
+	    	nofiles="$nofiles '$f'"
+		fi
     done
     if [ -n "$errfiles" ]; then
-	echo >&2 "Files not ending with .tt:$errfiles"
+		echo >&2 "Files not ending with .tt:$errfiles"
     fi
     if [ -n "$nofiles" ]; then
-	echo >&2 "Files no present:$nofiles"
+		echo >&2 "Files no present:$nofiles"
     fi
     if [ -n "$errfiles" -o -n "$nofiles" ]; then
-	exit 1
+		exit 1
     fi
 
     for f in "$@"; do
-	base=$(basename "$f" .tt)
-	filedir=$(dirname "$f")
+		base_with_ext="${f##*/}"
+		base=${base_with_ext%.tt}
+		# base=$(basename "$f" .tt)
+		filedir=$(dirname "$f")
 
-	if [ "$f" != "$base" ]; then
-	    if ! (
-		    cd $filedir
-		    ( cat $HERE/../inc/common.tt; cat $base.tt ) | \
-			eval "$tpagecmd --define 'dir=${dir:-$filedir}'" \
-			     > $base
-		); then
-		exit $?
-	    fi
-	fi
+		if [ "$f" != "$base" ]; then
+	    	if ! (
+		    	cd $filedir
+		    	( cat $HERE/../inc/common.tt; cat $base.tt ) | \
+				eval "$tpagecmd --define 'dir=${dir:-$filedir}'" \
+			     	> $base
+			); then
+			exit $?
+	    	fi
+		fi
     done
 fi

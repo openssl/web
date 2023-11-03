@@ -16,7 +16,7 @@ We maintain several [mailing lists](mailinglists.html).
 Anyone can join, but you must be a member of a list to post to it.
 We have a [public wiki](https://wiki.openssl.org), and anyone can
 request an account and start adding content.
-We have a [team blog](/blog), where members of the development team
+We have a [team blog](/blog/), where members of the development team
 will occasionally post.
 
 While we only distribute source, some members of the community make
@@ -48,7 +48,7 @@ reward correctly reported and confirmed security issues in the OpenSSL
 codebase.
 
 All fixed security bugs are listed on our
-[vulnerabilities page](/news/vulnerabilities.html).
+[vulnerabilities page](../news/vulnerabilities.html).
 
 ## <a name="bugs">Reporting Bugs</a>
 
