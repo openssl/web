@@ -1,7 +1,8 @@
 #! /bin/sh
+. ./bin/utils.sh
 
-HERE=$(cd $(dirname $0); pwd)
-THIS=$(basename $0)
+HERE=$(cd $(dirname_custom $0); pwd)
+THIS=$(basename_custom $0)
 
 # Our HTML5 template, produced from the default pandoc template with some
 # massaging by 'mk-pandoc-template'.
@@ -87,13 +88,13 @@ done
 # output files.
 if [ $# -eq 0 ]; then
     if [ -z "$output" ]; then
-	echo >&2 'Output path must be set with -o / --output in this mode'
-	exit 1
+	    echo >&2 'Output path must be set with -o / --output in this mode'
+	    exit 1
     fi
 
-    if [ "$(basename "$output" .html)" = "$output" ]; then
-	echo >&2 'Output path must end with .html'
-	exit 1
+    if [ "$(basename_custom "$output" .html)" = "$output" ]; then
+	    echo >&2 'Output path must end with .html'
+	    exit 1
     fi
 
     # Set '-' to mean stdin / stdout
@@ -109,7 +110,7 @@ nofiles=
 for f in "$@"; do
     [ "$f" = "-" ] && continue
 
-    base=$(basename "$f" .md)
+    base=$(basename_custom "$f" .md)
 
     if [ "$base" = "$f" ]; then
 	errfiles="$errfiles '$f'"
@@ -129,14 +130,14 @@ fi
 
 for f in "$@"; do
     if [ "$f" != "-" ]; then
-	base=$(basename "$f" .md)
+	base=$(basename_custom "$f" .md)
 	dir=$(dirname "$f")
 
 	if [ "$f" = "$base" ]; then
 	    continue;
 	fi
     else
-	base=$(basename "$output" .html)
+	base=$(basename_custom "$output" .html)
 	dir=$(dirname "$output")
     fi
 
