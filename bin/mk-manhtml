@@ -1,16 +1,14 @@
 #!/bin/bash
 # shellcheck source=job_pool.sh
+. ./bin/utils.sh
 . ./bin/job_pool.sh
 
 
 function process_file()
 {
     t=$1
-    d=${t%/*}
-    #echo $DIR
-	#h="$(basename "$t" .md.tt)";
-    h1="${t##*/}"
-    h="${h1%.md.tt}"
+    d=$(dirname_custom $t)
+    h="$(basename_custom $t md.tt)"
     i=;
     if [ "$h" = "index" ]; then i=" -i"; fi;
     time_elapsed=$( TIMEFORMAT="%R"; { time ./bin/from-tt -d $d < $d/$h.md.tt | ./bin/md-to-html5$i -o $d/$h.html; } 2>&1 )
