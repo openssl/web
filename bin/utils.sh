@@ -13,6 +13,7 @@ function basename_custom {
   	fi
 }
 
+# returns dirname from filepath
 function dirname_custom {
   if [[ -n $1 ]]; then
     filepath=$1
@@ -20,6 +21,7 @@ function dirname_custom {
   fi
 }
 
+# Find line matching TEXT parse string and return it
 function get_description {
   FILE="$1"
   TEXT='^OSSL-description:'
