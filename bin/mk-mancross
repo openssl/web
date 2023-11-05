@@ -40,7 +40,7 @@ for r in $releases; do
 			(
 			if [ "$existsin" != "" ]; then
 				echo "sidebar: |"
-        echo "# This manpage"
+        echo "  # This manpage"
 		    for x in $existsin; do
           echo "  -  [$x version]([% top %]docs/man$x/man$s/$b.html)"
 		    done

@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 . ./bin/utils.sh
 
 HERE=$(cd $(dirname_custom $0); pwd)
@@ -110,7 +110,7 @@ nofiles=
 for f in "$@"; do
     [ "$f" = "-" ] && continue
 
-    base=$(basename_custom "$f" .md)
+    base=$(basename_custom "$f" md)
 
     if [ "$base" = "$f" ]; then
 	errfiles="$errfiles '$f'"
