@@ -80,8 +80,8 @@ H_POLICIES = $(addsuffix .html,\
                                   policies/technical/*.md \
                                   policies/general-supplemental/*.md)) \
                $(basename $(basename $(shell git ls-files -- \
-                                             policies/general/*.md \
-                                             policies/technical/*.md))))
+                                             policies/general/*.md.tt \
+                                             policies/technical/*.md.tt))))
 # We filter out any file starting with 'sub-'...  they get special treatment
 H_SOURCE= $(addsuffix .html,\
             $(basename $(shell git ls-files -- source/*.md \
