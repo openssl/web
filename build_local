@@ -2,5 +2,8 @@
 make suball CHECKOUTS=/Users/vavrat/Development/openssl/web/checkouts PERSONDB=/Users/vavrat/Development/openssl/web/checkouts/data/persondb.yaml FORCE=-f
 make docs CHECKOUTS=/Users/vavrat/Development/openssl/web/checkouts PERSONDB=/Users/vavrat/Development/openssl/web/checkouts/data/persondb.yaml FORCE=-f
   
-  
+#rsync -avRL  --progress --exclude=/Makefile --exclude=.git/*** --exclude=bin/*** --exclude=docs/*** --exclude=tmp-build/*** --exclude=tmp-install/*** --exclude=**/*.md --exclude=**/*.tt --exclude=checkouts/*** --delete-excluded --delete-delay --delay-updates . /tmp/web
+rsync -avRL  --progress --exclude=/Makefile --exclude=/.idea --exclude=/.vscode --exclude=**/*.cross --exclude=**/*.yaml --exclude=**/*.inc --exclude=.git/*** --exclude=bin/*** --exclude=tmp-build/*** --exclude=tmp-install/*** --exclude=**/*.md --exclude=**/*.tt --exclude=checkouts/*** --delete-excluded --delete-delay --delay-updates . /tmp/web
+#rsync -av --exclude=**/*.md  --exclude=**/*.tt  --exclude=**/*.cross --exclude=**/*.inc --delete-excluded --delete-delay --delay-updates docs/ /tmp/web/docs
+
 #make all CHECKOUTS=/Users/vavrat/Development/openssl/web/checkouts PERSONDB=/Users/vavrat/Development/openssl/web/checkouts/data/persondb.yaml FORCE=-f

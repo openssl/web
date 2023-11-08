@@ -375,7 +375,6 @@ general-policies: $(GENERAL_POLICIES) policies/general/dirdata.yaml \
 	done
 policies/general/index.inc: general-policies general-policy-supplemental bin/mk-md-titlelist Makefile
 	./bin/mk-md-titlelist '' $(GENERAL_POLICIES) > $@
-policies/general/index.md: policies/general/index.inc
 policies/general/dirdata.yaml: policies/general/index.inc
 policies/general/index.html: policies/general/index.md
 

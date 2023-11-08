@@ -14,7 +14,7 @@ for m in $(find . -name '*.md.tt' | sort); do
 	continue
     fi
     manfile=$(basename_custom $m)
-    manname=$(basename_custom $manfile .md.tt)
+    manname=$(basename_custom $manfile md.tt)
     #origmanfile=$(echo $manfile | sed -e "s|^$subdir|$origsubdir|")
     echo "| [$manname]($manname.html) | $description |"
 done
