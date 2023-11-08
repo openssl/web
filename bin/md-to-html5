@@ -130,14 +130,14 @@ fi
 
 for f in "$@"; do
     if [ "$f" != "-" ]; then
-	base=$(basename_custom "$f" .md)
+	base=$(basename_custom "$f" md)
 	dir=$(dirname "$f")
 
 	if [ "$f" = "$base" ]; then
 	    continue;
 	fi
     else
-	base=$(basename_custom "$output" .html)
+	base=$(basename_custom "$output" html)
 	dir=$(dirname "$output")
     fi
 
