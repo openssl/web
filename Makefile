@@ -36,7 +36,7 @@ PERSONDB=FORCE
 ##  need to make the distinction, because certain files are produced
 ##  differently.
 SERIES1=
-SERIES3=3.1 3.0
+SERIES3=3.2 3.1 3.0
 SERIES=$(SERIES3) $(SERIES1)
 ##  Older series.  The second type is for source listings
 OLDSERIES=1.1.1 1.1.0 1.0.2 1.0.1 1.0.0 0.9.8 0.9.7 0.9.6
@@ -52,7 +52,7 @@ MANSERIES=$(MANSERIES3) $(MANSERIES1)
 ##  to make alpha and beta releases.
 ##  We distinguish them to avoid having to produce notes, vulnerability
 ##  documents, ... but still being able to present tarballs.
-FUTURESERIES=3.2
+FUTURESERIES=
 
 # All simple generated files.
 
