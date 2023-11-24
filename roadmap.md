@@ -35,4 +35,6 @@ OpenSSL as a whole will be priorities.
 
 ## FIPS
 
-TODO TALK ABOUT FIPS
+We also continue to work towards a FIPS 140-3 validation. This effort is ongoing
+concurrently to any given release. We do not have a specific date or release for
+FIPS 140-3 confirmed at this time.
