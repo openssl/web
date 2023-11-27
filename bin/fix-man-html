@@ -1,0 +1,12 @@
+#! /usr/bin/env perl
+
+# The pod source may contain things that can be reinterpreted as markdown,
+# and thereby rendered incorrectly.  This script fixes that, usually by
+# replacing some character with the corresponding HTML character entity.
+
+local $/;                       # Slurp the whole file
+my $contents = <STDIN>;
+
+$contents =~ s|\]\(|\&rbrack;(|g; # ]( suggests a markdown link
+
+print $contents;

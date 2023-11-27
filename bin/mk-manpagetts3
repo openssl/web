@@ -24,7 +24,10 @@ srcdir=tmp-install/share/doc/openssl/html
     if [ "$F" != "$Dn/$Fn" ]; then
         # HTML file, which we treat specially
         G=$Dn/$Fn.inc
-        $HERE/strip-man-html < $srcdir/$F > $destdir/$G
+        cat $srcdir/$F \
+            | $HERE/strip-man-html \
+            | $HERE/fix-man-html \
+            > $destdir/$G
 
         section=$(basename $Dn | sed -e 's|^man||')
         description="$($HERE/all-html-man-names < $destdir/$G | sed -e 's|^.* - ||' -e 's|\&|\\\&|g')"

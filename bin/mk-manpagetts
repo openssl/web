@@ -59,6 +59,10 @@ sub main {
 
                 # Get main HTML output
                 my $out = $class->geninc( $release, $inpod, %data );
+
+                # Fix HTML output where it could be reinterpretted as markdown
+                $out =~ s|\]\(|\&rbrack;(|g; # ]( suggests a markdown link
+
                 open( my $fh, ">", $outinc )
                     or $class->die("Can't open $outinc: $!");
                 print $fh $out or $class->die("Can't print $outinc: $!");
