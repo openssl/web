@@ -417,6 +417,7 @@ community/committers.md: community/committers.inc
 
 community/otc.inc: $(PERSONDB) bin/mk-omc Makefile
 	./bin/mk-omc -n -p -t 'OTC Members' otc otc-inactive > $@
+community/otc.md: community/otc.inc
 community/omc.inc: $(PERSONDB) bin/mk-omc Makefile
 	./bin/mk-omc -n -e -l -p -t 'OMC Members' omc omc-inactive > $@
 community/omc.md: community/omc.inc
