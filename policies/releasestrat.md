@@ -3,26 +3,25 @@ breadcrumb: Release Strategy
 ---
 # Release Strategy
 
-#### First issued 23rd December 2014 Last modified 14th March 2023
+#### First issued 23rd December 2014 Last modified 30th November 2023
 
-As of release 3.0.0, the OpenSSL versioning scheme is changing to a more
-contemporary format: MAJOR.MINOR.PATCH
+From 3.0.0 and above, the OpenSSL versioning scheme uses the format:
+MAJOR.MINOR.PATCH
 
 With this format, API/ABI compatibility will be guaranteed for the same
-MAJOR version number. Previously we guaranteed API/ABI compatibility
-across the same MAJOR.MINOR combination.
+MAJOR version number.
 
 -   MAJOR: API/ABI incompatible changes will increase this number
 -   MINOR: API/ABI compatible feature releases will change this
 -   PATCH: Bug fix releases will increment this number. We also allow
     backporting of accessor functions in these releases.
 
-This more closely aligns with the expectations of users who are familiar
+This approximately aligns with the expectations of users who are familiar
 with semantic versioning. However, we have not adopted semantic
 versioning in the strict sense of its rules, because it would mean
 changing our current LTS policies and practices.
 
-The current 1.1.1 versioning scheme remains unchanged:
+For version 1.1.1 and before, the old versioning scheme is used:
 
 > *As of release 1.0.0 the OpenSSL versioning scheme was improved to
 > better meet developers' and vendors' expectations. Letter releases,
@@ -42,13 +41,11 @@ The current 1.1.1 versioning scheme remains unchanged:
 With regards to current and future releases the OpenSSL project has
 adopted the following policy:
 
+-   Version 3.2 will be supported until 2025-11-23
 -   Version 3.1 will be supported until 2025-03-14
 -   Version 3.0 will be supported until 2026-09-07 (LTS).
--   Version 1.1.1 will be supported until 2023-09-11 (LTS). Extended support for
-    1.1.1 to gain access to security fixes beyond that date for that version is
-    [available](/support/contracts.html).
--   Version 1.0.2 is no longer supported. Extended support for 1.0.2 to
-    gain access to security fixes for that version is
+-   Versions 1.1.1 and 1.0.2 are no longer supported. Extended support for 1.1.1
+    and 1.0.2 to gain access to security fixes for those versions is
     [available](/support/contracts.html).
 -   Versions 1.1.0, 1.0.1, 1.0.0 and 0.9.8 are no longer supported.
 
