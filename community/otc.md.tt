@@ -7,6 +7,25 @@ The [OpenSSL Technical Committee](/policies/omc-bylaws.html#OTC) represents
 the official technical voice of the project. All OTC decisions are taken on
 the basis of a vote.
 
+Minutes of the OTC meetings are [published on Github][otc-minutes],
+alongside [past votes][otc-votes],
+approved [technical policies][otc-tech-policies],
+as well as [draft policies][otc-tech-policy-drafts]
+under discussion.
+
+One of the tools through which the OTC steers the project
+on technical matters is through raising and discussing
+["OTC holds"][otc-holds] on incoming [issues][gh-issues]
+and [pull-requests][gh-prs].
+
+[otc-minutes]: https://github.com/openssl/otc/tree/master/meeting-minutes
+[otc-votes]: https://github.com/openssl/technical-policies/tree/master/votes
+[otc-tech-policies]: https://github.com/openssl/technical-policies/tree/master/policies
+[otc-tech-policy-drafts]: https://github.com/openssl/technical-policies/pulls
+[otc-holds]: https://github.com/openssl/openssl/labels/hold%3A%20need%20otc%20decision
+[gh-issues]: https://github.com/openssl/openssl/issues
+[gh-prs]: https://github.com/openssl/openssl/pulls
+
 The current OTC consists of (in alphabetical order):
 
 <p>[% INCLUDE "otc.inc" %]</p>
