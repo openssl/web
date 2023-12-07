@@ -1,75 +1,34 @@
 #!/bin/bash
 
-mkdir checkouts
-if [ ! -d "checkouts/data" ]; then
-    gh repo clone git@github.openssl.org:omc/data.git checkouts/data -- --depth 1
-else
-    cd checkouts/data
-    echo -n "checkouts/data - "
-    git pull
-    cd ../..
-fi
-if [ ! -d "checkouts/general-policies" ]; then
-    gh repo clone https://github.com/openssl/general-policies.git checkouts/general-policies -- --depth=1
-else
-    cd checkouts/general-policies
-    echo -n "checkouts/general-policies - "
-    git pull
-    cd ../..
-fi
-if [ ! -d "checkouts/technical-policies" ]; then
-    gh repo clone https://github.com/openssl/technical-policies.git checkouts/technical-policies -- --depth=1
-else
-    cd checkouts/technical-policies
-    echo -n "checkouts/technical-policies - "
-    git pull
-    cd ../..
-fi
-if [ ! -d "checkouts/openssl" ]; then
-    gh repo clone https://github.com/openssl/openssl.git checkouts/openssl -- --depth=1 --branch master
-else
-    cd checkouts/openssl
-    echo -n "checkouts/openssl - "
-    git pull
-    cd ../..
-fi
-if [ ! -d "checkouts/openssl-3.2" ]; then
-    gh repo clone https://github.com/openssl/openssl.git checkouts/openssl-3.2 -- --depth=1 --branch openssl-3.2
-else
-    cd checkouts/openssl-3.2
-    echo -n "checkouts/openssl-3.2 - "
-    git pull
-    cd ../..
-fi
-if [ ! -d "checkouts/openssl-3.1" ]; then
-    gh repo clone https://github.com/openssl/openssl.git checkouts/openssl-3.1 -- --depth=1 --branch openssl-3.1
-else
-    cd checkouts/openssl-3.1
-    echo -n "checkouts/openssl-3.1 - "
-    git pull
-    cd ../..
-fi
-if [ ! -d "checkouts/openssl-3.0" ]; then
-    gh repo clone https://github.com/openssl/openssl.git checkouts/openssl-3.0 -- --depth=1 --branch openssl-3.0
-else
-    cd checkouts/openssl-3.0
-    echo -n "checkouts/openssl-3.0 - "
-    git pull
-    cd ../..
-fi
-if [ ! -d "checkouts/openssl-1.1.1-stable" ]; then
-    gh repo clone https://github.com/openssl/openssl.git checkouts/openssl-1.1.1-stable -- --depth=1 --branch OpenSSL_1_1_1-stable
-else
-    cd checkouts/openssl-1.1.1-stable
-    echo -n "checkouts/openssl-1.1.1-stable - "
-    git pull
-    cd ../..
-fi
-if [ ! -d "checkouts/openssl-1.0.2-stable" ]; then
-    gh repo clone https://github.com/openssl/openssl.git checkouts/openssl-1.0.2-stable -- --depth=1 --branch OpenSSL_1_0_2-stable
-else
-    cd checkouts/openssl-1.0.2-stable
-    echo -n "checkouts/openssl-1.0.2-stable - "
-    git pull
-    cd ../..
-fi
+mkdir -p checkouts
+declare -A repo
+repo["data"]="https://github.openssl.org/omc/data.git"
+repo["general-policies"]="https://github.com/openssl/general-policies.git"
+repo["technical-policies"]="https://github.com/openssl/technical-policies.git"
+repo["openssl"]="https://github.com/openssl/openssl.git master"
+repo["openssl-3.2"]="https://github.com/openssl/openssl.git openssl-3.2"
+repo["openssl-3.1"]="https://github.com/openssl/openssl.git openssl-3.1"
+repo["openssl-3.0"]="https://github.com/openssl/openssl.git openssl-3.0"
+repo["openssl-1.1.1-stable"]="https://github.com/openssl/openssl.git OpenSSL_1_1_1-stable"
+repo["openssl-1.0.2-stable"]="https://github.com/openssl/openssl.git OpenSSL_1_0_2-stable"
+
+for folder_key in "${!repo[@]}"; do
+    declare val
+    read -a "val" <<<"${repo[$folder_key]}"
+    REPO_URL=${val[0]}
+    REPO_BRANCH=${val[1]}
+    echo "Processing repository $REPO_URL and storing to: checkouts/$folder_key"
+    branch_cmd=''
+    if [ ! -z $REPO_BRANCH ]; then
+        branch_cmd="--branch $REPO_BRANCH"
+    fi
+    if [ ! -d checkouts/$folder_key ]; then
+        echo "Cloning repository to folder $folder_key: "
+        gh repo clone $REPO_URL checkouts/$folder_key -- --depth=1 $branch_cmd
+    else
+        cd checkouts/$folder_key || exit
+        echo -n "Already exists so updating checkouts/$folder_key - "
+        git pull
+        cd ../..
+    fi
+done

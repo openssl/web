@@ -59,24 +59,6 @@ srcdir=tmp-install/share/doc/openssl/html
     if [ "$F" != "$Dn/$Fn" ]; then
         # HTML file, which we treat specially
         job_pool_run process_file $F $HERE $series $Dn $Fn $srcdir $destdir
-        # G=$Dn/$Fn.inc
-        # echo "strip-man-html < $srcdir/$F > $destdir/$G"
-        # $HERE/strip-man-html < $srcdir/$F > $destdir/$G
-
-        # section=$(basename $Dn | sed -e 's|^man||')
-        # description="$($HERE/all-html-man-names < $destdir/$G | sed -e 's|^.* - ||' -e 's|\&|\\\&|g')"
-        # names="$($HERE/all-html-man-names < $destdir/$G | sed -e 's| - .*||' -e 's|, *| |g' -e 's|/|-|g')"
-        # for name in $names; do
-        #     G=$Dn/$name.md.tt
-	    #     cat $HERE/../inc/manpage-template.mdtt \
-        #         | sed -E \
-        #               -e "s|\\\$release\\\$|$series|g" \
-        #               -e "s|\\\$sectnum\\\$|$section|g" \
-        #               -e "s|\\\$description\\\$|$description|g" \
-        #               -e "s|\\\$name\\\$|$name|g" \
-        #               -e "s|\\\$origname\\\$|$Fn|g" \
-        #               > $destdir/$G
-        # done
     else
         # Other file types, such as images.  We simply copy those
         G=$Dn/$Fn

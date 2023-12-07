@@ -39,8 +39,8 @@ foreach my $groupname (@ARGV) {
         my $locale = $query->find_person_tag($email, 'country');
         my $pgpid = $query->find_person_tag($email, 'pgp');
         $data{$name} = { email => $email, locale => $locale, pgpid => $pgpid,
-            active             => !!($groupname !~ m|-inactive$|),
-            emeritus           => !!($groupname =~ m|-emeritus$|) };
+                        active => !!($groupname !~ m|-inactive$|),
+                      emeritus => !!($groupname =~ m|-emeritus$|) };
     }
 }
 
@@ -53,7 +53,7 @@ push @columns, 'PGP Key ID' if $options{pgp};
 print "<table summary=\"$options{title}\">\n";
 print "  <tr>\n";
 print join("    <th>&nbsp;&nbsp;</th>\n",
-    map {"    <th>$_</th>\n"} @columns);
+           map {"    <th>$_</th>\n"} @columns);
 print "  </tr>\n";
 
 foreach my $key (sort {mk_sortable($a) cmp mk_sortable($b)} keys %data) {

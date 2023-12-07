@@ -2,8 +2,8 @@
 . ./bin/utils.sh
 
 HERE=$(
-  cd $(dirname_custom $0)
-  pwd
+    cd "$(dirname_custom $0)" || exit
+    pwd
 )
 THIS=$(basename_custom $0)
 
@@ -48,37 +48,37 @@ They must come before any file name."
 
 # Standard getopt calling sequence
 if ! TEMP=$(getopt -o "$shortopts" --long "$longopts" -n $THIS -- "$@"); then
-  echo >&2 "$usage"
-  exit 1
+    echo >&2 "$usage"
+    exit 1
 fi
 eval set -- "$TEMP"
 unset TEMP
 
 # Check the parsed options
 while true; do
-  case "$1" in
-  '-o' | '--output')
-    output="$2"
-    shift 2
-    ;;
-  '-i' | '--index')
-    index=1
-    shift
-    ;;
-  '-h' | '--help')
-    echo >&2 "$usage"
-    exit 0
-    ;;
-  '--')
-    shift
-    break
-    ;;
-  *)
-    echo >&2 'Internal error!'
-    echo >&2 "$usage"
-    exit 1
-    ;;
-  esac
+    case "$1" in
+    '-o' | '--output')
+        output="$2"
+        shift 2
+        ;;
+    '-i' | '--index')
+        index=1
+        shift
+        ;;
+    '-h' | '--help')
+        echo >&2 "$usage"
+        exit 0
+        ;;
+    '--')
+        shift
+        break
+        ;;
+    *)
+        echo >&2 'Internal error!'
+        echo >&2 "$usage"
+        exit 1
+        ;;
+    esac
 done
 
 ######################################################################
@@ -90,100 +90,99 @@ done
 # --output.  Otherwise, read from the input files and write to corresponding
 # output files.
 if [ $# -eq 0 ]; then
-  if [ -z "$output" ]; then
-    echo >&2 'Output path must be set with -o / --output in this mode'
-    exit 1
-  fi
+    if [ -z "$output" ]; then
+        echo >&2 'Output path must be set with -o / --output in this mode'
+        exit 1
+    fi
 
-  if [ "$(basename_custom "$output" .html)" = "$output" ]; then
-    echo >&2 'Output path must end with .html'
-    exit 1
-  fi
+    if [ "$(basename_custom "$output" .html)" = "$output" ]; then
+        echo >&2 'Output path must end with .html'
+        exit 1
+    fi
 
-  # Set '-' to mean stdin / stdout
-  set -- -
+    # Set '-' to mean stdin / stdout
+    set -- -
 elif [ -n "$output" ]; then
-  echo >&2 '-o / --output is confusing in this mode'
-  exit 1
+    echo >&2 '-o / --output is confusing in this mode'
+    exit 1
 fi
 
 # Check that all the arguments are existing and correctly named files
 errfiles=
 nofiles=
 for f in "$@"; do
-  [ "$f" = "-" ] && continue
+    [ "$f" = "-" ] && continue
 
-  base=$(basename_custom "$f" md)
+    base=$(basename_custom "$f" md)
 
-  if [ "$base" = "$f" ]; then
-    errfiles="$errfiles '$f'"
-  elif [ ! -f "$f" ]; then
-    nofiles="$nofiles '$f'"
-  fi
+    if [ "$base" = "$f" ]; then
+        errfiles="$errfiles '$f'"
+    elif [ ! -f "$f" ]; then
+        nofiles="$nofiles '$f'"
+    fi
 done
 if [ -n "$errfiles" ]; then
-  echo >&2 "Files not ending with .md:$errfiles"
+    echo >&2 "Files not ending with .md:$errfiles"
 fi
 if [ -n "$nofiles" ]; then
-  echo >&2 "Files no present:$nofiles"
+    echo >&2 "Files no present:$nofiles"
 fi
-if [ -n "$errfiles" -o -n "$nofiles" ]; then
-  exit 1
+if [ -n "$errfiles" ] || [ -n "$nofiles" ]; then
+    exit 1
 fi
 title_prefix=""
 for f in "$@"; do
-  if [ "$f" != "-" ]; then
-    base=$(basename_custom "$f" md)
-    dir=$(dirname "$f")
-    input=$(grep "breadcrumb: " < $f);
-    prefix=${input#"breadcrumb: "}
-    if [ ! -z "$prefix" ]
-    then
-      title_prefix="[ ${prefix} ] - "
+    if [ "$f" != "-" ]; then
+        base=$(basename_custom "$f" md)
+        dir=$(dirname "$f")
+        input=$(grep "breadcrumb: " <$f)
+        prefix=${input#"breadcrumb: "}
+        if [ ! -z "$prefix" ]; then
+            title_prefix="[ ${prefix} ] - "
+        fi
+
+        if [ "$f" = "$base" ]; then
+            continue
+        fi
+    else
+        base=$(basename_custom "$output" html)
+        dir=$(dirname "$output")
     fi
 
-    if [ "$f" = "$base" ]; then
-      continue
+    if [ "$dir" = "." ] || [ "$dir" = "" ]; then
+        title="/$base.html"
+        top=""
+    else
+        title="$title_prefix/$dir/$base.html"
+        top=$(echo "$dir" | sed -E -e 's|[^/]+|..|g')/
     fi
-  else
-    base=$(basename_custom "$output" html)
-    dir=$(dirname "$output")
-  fi
 
-  if [ "$dir" = "." -o "$dir" = "" ]; then
-    title="/$base.html"
-    top=""
-  else
-    title="$title_prefix/$dir/$base.html"
-    top=$(echo "$dir" | sed -E -e 's|[^/]+|..|g')/
-  fi
+    # is it an index file?
+    def_isindex=
+    if [ -n "$index" ] || [ "$base" = "index" ]; then
+        def_isindex="-M is-index=true"
+    fi
 
-  # is it an index file?
-  def_isindex=
-  if [ -n "$index" -o "$base" = "index" ]; then
-    def_isindex="-M is-index=true"
-  fi
+    # metadata
+    meta_file=""
+    input_file=""
+    meta="$dir/dirdata.yaml"
+    if [ -f "$meta" ]; then
+        meta_file="$HERE/../$meta"
+    fi
 
-  # metadata
-  meta_file=""
-  input_file=""
-  meta="$dir/dirdata.yaml"
-  if [ -f "$meta" ]; then
-    meta_file="$HERE/../$meta"
-  fi
+    if [ "$f" = "-" ]; then
+        input_file="-"
+    else
+        input_file="$HERE/../$f"
+    fi
 
-  if [ "$f" = "-" ]; then
-    input_file="-"
-  else
-    input_file="$HERE/../$f"
-  fi
-
-  pandoc -t html5 -f markdown --template="$template" \
-    --highlight-style="$highlightstyle" \
-    --tab-stop=8 --shift-heading-level-by=1 \
-    -M author-meta='OpenSSL Foundation, Inc.' \
-    -M lang=en \
-    -M pagetitle="$title" \
-    $def_isindex -M top="$top" -o "$dir/$base.html" $meta_file $input_file
+    pandoc -t html5 -f markdown --template="$template" \
+        --highlight-style="$highlightstyle" \
+        --tab-stop=8 --shift-heading-level-by=1 \
+        -M author-meta='OpenSSL Foundation, Inc.' \
+        -M lang=en \
+        -M pagetitle="$title" \
+        $def_isindex -M top="$top" -o "$dir/$base.html" $meta_file $input_file
 
 done
