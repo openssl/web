@@ -53,7 +53,7 @@ push @columns, 'PGP Key ID' if $options{pgp};
 print "<table summary=\"$options{title}\">\n";
 print "  <tr>\n";
 print join("    <th>&nbsp;&nbsp;</th>\n",
-    map {"    <th>$_</th>\n"} @columns);
+		map {"    <th>$_</th>\n"} @columns);
 print "  </tr>\n";
 
 foreach my $key (sort {mk_sortable($a) cmp mk_sortable($b)} keys %data) {

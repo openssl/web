@@ -2,7 +2,7 @@
 . ./bin/utils.sh
 
 HERE=$(
-  cd $(dirname_custom $0)
+  cd "$(dirname_custom $0)" || exit
   pwd
 )
 THIS=$(basename_custom $0)
@@ -127,7 +127,7 @@ fi
 if [ -n "$nofiles" ]; then
   echo >&2 "Files no present:$nofiles"
 fi
-if [ -n "$errfiles" -o -n "$nofiles" ]; then
+if [ -n "$errfiles" ] || [ -n "$nofiles" ]; then
   exit 1
 fi
 title_prefix=""
@@ -150,7 +150,7 @@ for f in "$@"; do
     dir=$(dirname "$output")
   fi
 
-  if [ "$dir" = "." -o "$dir" = "" ]; then
+  if [ "$dir" = "." ] || [ "$dir" = "" ]; then
     title="/$base.html"
     top=""
   else
@@ -160,7 +160,7 @@ for f in "$@"; do
 
   # is it an index file?
   def_isindex=
-  if [ -n "$index" -o "$base" = "index" ]; then
+  if [ -n "$index" ] || [ "$base" = "index" ]; then
     def_isindex="-M is-index=true"
   fi
 
