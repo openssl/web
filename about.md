@@ -117,9 +117,6 @@ the development of OpenSSL's QUIC functionality. As a strong believer in the
 values of open source, I'm proud to be part of the OpenSSL project given its
 instrumental role in the security of internet infrastructure.
 
-## James Muir
-To Be Defined =)
-
 ## Kajal Sapkota
 To Be Defined =)
 
@@ -144,13 +141,6 @@ generator in the Linux kernel. While I have enjoyably spent most of my career
 fixing bugs, I'm looking forward to contributing to large-scale development in
 OpenSSL.
 
-## Paul Dale
-I worked sporadically with OpenSSL on embedded systems from the early 2000s and
-started contributing back to the project in 2016, finally joining the team full
-time in 2021 to concentrate on making OpenSSL better than ever. I have a special
-interest in entropy and randomness and am a member of the management and
-technical committees.
-
 ## Richard Levitte
 I've been an active FOSS contributor since 1990, with a focus on the
 operating system OpenVMS at the time.  Back then, I mainly ported diverse
@@ -158,6 +148,9 @@ GNU programs (most of all newer versions of Emacs) to that operating system.
 In the late 1990's, I became interested in cryptography, which led me to
 SSLeay, and then to the OpenSSL Project, which I became an active member of
 in late 1999.  This has been my most consistent FOSS activity ever since.
+
+## Saša Nedvědický
+To Be Defined =)
 
 ## Tim Hudson
 Co-founded SSLeay in 1996, worked on RSA's "forks" from 1998-2007, joined
