@@ -34,6 +34,3 @@ function get_description {
         fi
     done <"$FILE"
 }
-
-# get_descriptiom ../docs/man3.2/man3/BIO_get_rpoll_descriptor.md.tt
-# basename_custom docs/manmaster/man3/CMS_SignedData_free.md.tt md.tt

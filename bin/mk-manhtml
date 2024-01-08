@@ -25,5 +25,3 @@ for t in $1; do
 done
 
 job_pool_shutdown
-
-#./bin/mk-manhtml ' docs/manmaster/man1/*.md.tt  docs/manmaster/man3/*.md.tt  docs/manmaster/man5/*.md.tt  docs/manmaster/man7/*.md.tt  docs/man3.2/man1/*.md.tt  docs/man3.2/man3/*.md.tt  docs/man3.2/man5/*.md.tt  docs/man3.2/man7/*.md.tt  docs/man3.1/man1/*.md.tt  docs/man3.1/man3/*.md.tt  docs/man3.1/man5/*.md.tt  docs/man3.1/man7/*.md.tt  docs/man3.0/man1/*.md.tt  docs/man3.0/man3/*.md.tt  docs/man3.0/man5/*.md.tt  docs/man3.0/man7/*.md.tt  docs/man1.1.1/man1/*.md.tt  docs/man1.1.1/man3/*.md.tt  docs/man1.1.1/man5/*.md.tt  docs/man1.1.1/man7/*.md.tt  docs/man1.0.2/man1/*.md.tt  docs/man1.0.2/man3/*.md.tt  docs/man1.0.2/man5/*.md.tt  docs/man1.0.2/man7/*.md.tt'
