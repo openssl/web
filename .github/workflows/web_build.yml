@@ -1,0 +1,37 @@
+###
+name: Automatic web build
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  push:
+    branches:
+      - master
+      - automation
+jobs:
+  # This workflow contains a single job called "greet"
+  build_web_site:
+    # The type of runner that the job will run on
+    runs-on: [ ubuntu-22.04-self-hosted ]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Runs a single command using the runners shell
+      - name: Show available accounts
+        run: gcloud auth list
+      - name: Store service account key file
+        run: |
+          cat << EOF > /tmp/key.json
+          ${{ secrets.SERVICE_ACCOUNT_KEY }}
+          EOF
+      - name: Activate service account
+        run: gcloud auth activate-service-account --key-file=/tmp/key.json
+      - name: Show available accounts
+        run: gcloud auth list
+      - name: Trigger web build
+        run: gcloud run jobs execute pu-cdn-build-web-job-production --region europe-north1 --wait
+      - name: Remove service account
+        run: gcloud auth revoke
+      - name: Remove service account key file
+        run: rm -f /tmp/key.json
+

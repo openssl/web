@@ -48,7 +48,7 @@ reward correctly reported and confirmed security issues in the OpenSSL
 codebase.
 
 All fixed security bugs are listed on our
-[vulnerabilities page](../news/vulnerabilities.html).
+[vulnerabilities page](/news/vulnerabilities.html).
 
 ## <a name="bugs">Reporting Bugs</a>
 
