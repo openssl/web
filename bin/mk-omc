@@ -11,36 +11,36 @@ use HTML::Entities;
 my %options = ();
 GetOptions(
     \%options,
-    'name|n',			# Show name
-    'email|e',			# Show email
-    'locale|l',			# Show locale
-    'pgp|p',			# Show PGP key ID
-    'activity|a',		# Show whether person is active
-    'title|t=s',		# Title of the resulting table
-    'help|?',			# Help
-    'man',			# Full manual
-   ) or pod2usage(2);
+    'name|n',     # Show name
+    'email|e',    # Show email
+    'locale|l',   # Show locale
+    'pgp|p',      # Show PGP key ID
+    'activity|a', # Show whether person is active
+    'title|t=s',  # Title of the resulting table
+    'help|?',     # Help
+    'man',        # Full manual
+) or pod2usage(2);
 
 pod2usage(1) unless $options{title};
 pod2usage(1)
     unless ($options{name} || $options{email} || $options{locale}
-		|| $options{activity} || $options{pgp});
+        || $options{activity} || $options{pgp});
 pod2usage(1) if $options{help};
 pod2usage(-exitval => 0, -verbose => 2) if $options{man};
 
 my $query = OpenSSL::Query->new();
 
-my %data = ();			# Indexed by name, value is a hash table of vals
+my %data = (); # Indexed by name, value is a hash table of vals
 foreach my $groupname (@ARGV) {
     my @members = $query->members_of($groupname);
     foreach my $ids (@members) {
-	my $name = (grep m|\s|, @$ids)[0];
-	my $email = (grep m|\@openssl\.org$|, @$ids)[0];
-	my $locale = $query->find_person_tag($email, 'country');
-	my $pgpid = $query->find_person_tag($email, 'pgp');
-	$data{$name} = { email => $email, locale => $locale, pgpid => $pgpid,
-			 active => !!($groupname !~ m|-inactive$|),
-			 emeritus => !!($groupname =~ m|-emeritus$|) };
+        my $name = (grep m|\s|, @$ids)[0];
+        my $email = (grep m|\@openssl\.org$|, @$ids)[0];
+        my $locale = $query->find_person_tag($email, 'country');
+        my $pgpid = $query->find_person_tag($email, 'pgp');
+        $data{$name} = { email => $email, locale => $locale, pgpid => $pgpid,
+                        active => !!($groupname !~ m|-inactive$|),
+                      emeritus => !!($groupname =~ m|-emeritus$|) };
     }
 }
 
@@ -53,36 +53,35 @@ push @columns, 'PGP Key ID' if $options{pgp};
 print "<table summary=\"$options{title}\">\n";
 print "  <tr>\n";
 print join("    <th>&nbsp;&nbsp;</th>\n",
-	   map { "    <th>$_</th>\n" } @columns);
+           map {"    <th>$_</th>\n"} @columns);
 print "  </tr>\n";
 
-foreach my $key (sort { mk_sortable($a) cmp mk_sortable($b) } keys %data) {
+foreach my $key (sort {mk_sortable($a) cmp mk_sortable($b)} keys %data) {
     my $pgpurl = $data{$key}->{pgpid} if $options{pgp};
     $pgpurl =~ s|\s+||g if $pgpurl;
-    $pgpurl =
-	"https://keys.openpgp.org/search?q=$pgpurl"
-	if $pgpurl;
+    $pgpurl = "https://keys.openpgp.org/search?q=$pgpurl"
+        if $pgpurl;
 
     my @columndata = ();
     push @columndata,
-	join('',
-	     $data{$key}->{active} ? "" : "<i>",
-	     encode_entities($key),
-	     $data{$key}->{active} ? "" : "</i> (I)",
-	     $data{$key}->{emeritus} ? " (OMC Emeritus)" : "")
-	if $options{name};
+        join('',
+            $data{$key}->{active} ? "" : "<i>",
+            encode_entities($key),
+            $data{$key}->{active} ? "" : "</i> (I)",
+            $data{$key}->{emeritus} ? " (OMC Emeritus)" : "")
+        if $options{name};
     push @columndata,
-	"<a href='mailto:$data{$key}->{email}'>$data{$key}->{email}</a>"
-	if $options{email};
+        "<a href='mailto:$data{$key}->{email}'>$data{$key}->{email}</a>"
+        if $options{email};
     push @columndata, $data{$key}->{locale} if $options{locale};
     push @columndata,
-	$data{$key}->{pgpid}
-	? "<a href='$pgpurl'>$data{$key}->{pgpid}</a>" : '&nbsp;'
-	if $options{pgp};
+        $data{$key}->{pgpid}
+            ? "<a href='$pgpurl'>$data{$key}->{pgpid}</a>" : '&nbsp;'
+        if $options{pgp};
 
     print "  <tr>\n";
     print join("    <td>&nbsp;&nbsp;</td>\n",
-	       map { "    <td>$_</td>\n" } @columndata);
+        map {"    <td>$_</td>\n"} @columndata);
     print "  </tr>\n";
 }
 

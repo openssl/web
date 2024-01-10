@@ -1,6 +1,11 @@
 #! /bin/bash
 
-HERE=$(cd $(dirname $0); pwd)
+. ./bin/utils.sh
+
+HERE=$(
+  cd "$(dirname_custom $0)" || exit
+  pwd
+)
 THIS=$(basename $0)
 
 dir=
@@ -35,108 +40,116 @@ key=value.  They must come before any file name."
 
 # Standard getopt calling sequence
 if ! TEMP=$(getopt -o "$shortopts" --long "$longopts" -n $THIS -- "$@"); then
-    echo >&2 "$usage"
-    exit 1
+  echo >&2 "$usage"
+  exit 1
 fi
 eval set -- "$TEMP"
 unset TEMP
 
 # Check the parsed options
 while true; do
-    case "$1" in
-	'-d' | '--dir' )
-	    dir="$2"
-	    shift 2
-	    continue
-	    ;;
-	'-i' | '--input' )
-	    input="$2"
-	    shift 2
-	    continue
-	    ;;
-	'-o' | '--output' )
-	    output="$2"
-	    shift 2
-	    continue
-	    ;;
-	'-h' | '--help' )
-	    echo >&2 "$usage"
-	    exit 0
-	    ;;
-	'--' )
-	    shift
-	    break
-	    ;;
-	* )
-	    echo >&2 'Internal error!'
-            echo >&2 "$usage"
-	    exit 1
-	    ;;
-    esac
+  case "$1" in
+  '-d' | '--dir')
+    dir="$2"
+    shift 2
+    continue
+    ;;
+  '-i' | '--input')
+    input="$2"
+    shift 2
+    continue
+    ;;
+  '-o' | '--output')
+    output="$2"
+    shift 2
+    continue
+    ;;
+  '-h' | '--help')
+    echo >&2 "$usage"
+    exit 0
+    ;;
+  '--')
+    shift
+    break
+    ;;
+  *)
+    echo >&2 'Internal error!'
+    echo >&2 "$usage"
+    exit 1
+    ;;
+  esac
 done
 
 tpagecmd="tpage"
 while true; do
-    case "$1" in
-	*=* )
-	    tpagecmd="$tpagecmd --define '$1'"
-	    shift
-	    ;;
-	* )
-	    break
-	    ;;
-    esac
-done    
+  case "$1" in
+  *=*)
+    tpagecmd="$tpagecmd --define '$1'"
+    shift
+    ;;
+  *)
+    break
+    ;;
+  esac
+done
 
 # If there are no other arguments, read from stdin, write to stdout.
 # Otherwise, read from the input files and write to corresponding output files.
 if [ $# -eq 0 ]; then
-    if [ -z "$dir" ]; then
-	echo >&2 'Directory must be set with -d / --dir in this mode'
-	exit 1
-    fi
+  if [ -z "$dir" ]; then
+    echo >&2 'Directory must be set with -d / --dir in this mode'
+    exit 1
+  fi
+  (
+    cd $dir || exit
     (
-	cd $dir
-	( cat $HERE/../inc/common.tt;
-          if [ -n "$input" ]; then cat "$HERE/../$input"; else cat; fi ) \
-        | eval "$tpagecmd --define 'dir=$dir'" \
-        | ( if [ -n "$output" ]; then cat > "$HERE/../$output"; else cat; fi )
-    )
+      cat $HERE/../inc/common.tt
+      if [ -n "$input" ]; then cat "$HERE/../$input"; else cat; fi
+    ) |
+      eval "$tpagecmd --define 'dir=$dir'" |
+      (if [ -n "$output" ]; then cat >"$HERE/../$output"; else cat; fi)
+  )
 else
-    errfiles=
-    nofiles=
-    for f in "$@"; do
-	base=$(basename "$f" .tt)
+  errfiles=
+  nofiles=
+  for f in "$@"; do
+    base_with_ext="${f##*/}"
+    base=${base_with_ext%.tt}
+    # base=$(basename "$f" .tt)
 
-	if [ "$base" = "$f" ]; then
-	    errfiles="$errfiles '$f'"
-	elif [ ! -f "$f" ]; then
-	    nofiles="$nofiles '$f'"
-	fi
-    done
-    if [ -n "$errfiles" ]; then
-	echo >&2 "Files not ending with .tt:$errfiles"
+    if [ "$base" = "$f" ]; then
+      errfiles="$errfiles '$f'"
+    elif [ ! -f "$f" ]; then
+      nofiles="$nofiles '$f'"
     fi
-    if [ -n "$nofiles" ]; then
-	echo >&2 "Files no present:$nofiles"
-    fi
-    if [ -n "$errfiles" -o -n "$nofiles" ]; then
-	exit 1
-    fi
+  done
+  if [ -n "$errfiles" ]; then
+    echo >&2 "Files not ending with .tt:$errfiles"
+  fi
+  if [ -n "$nofiles" ]; then
+    echo >&2 "Files no present:$nofiles"
+  fi
+  if [ -n "$errfiles" ] || [ -n "$nofiles" ]; then
+    exit 1
+  fi
 
-    for f in "$@"; do
-	base=$(basename "$f" .tt)
-	filedir=$(dirname "$f")
+  for f in "$@"; do
+    base_with_ext="${f##*/}"
+    base=${base_with_ext%.tt}
+    filedir=$(dirname "$f")
 
-	if [ "$f" != "$base" ]; then
-	    if ! (
-		    cd $filedir
-		    ( cat $HERE/../inc/common.tt; cat $base.tt ) | \
-			eval "$tpagecmd --define 'dir=${dir:-$filedir}'" \
-			     > $base
-		); then
-		exit $?
-	    fi
-	fi
-    done
+    if [ "$f" != "$base" ]; then
+      if ! (
+        cd $filedir
+        (
+          cat $HERE/../inc/common.tt
+          cat $base.tt
+        ) |
+          eval "$tpagecmd --define 'dir=${dir:-$filedir}'" \
+            >$base
+      ); then
+        exit $?
+      fi
+    fi
+  done
 fi

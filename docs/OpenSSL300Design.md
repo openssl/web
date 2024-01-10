@@ -37,7 +37,7 @@ are in FIPS mode (using the OpenSSL FIPS Cryptographic Module 3.0) and
 TLS connections that are in non-FIPS mode simultaneously.
 
 For more up to date information related to 3.0 please follow the links
-at [openssl.org/docs] (https://www.openssl.org/docs)
+at [www.openssl.org/docs](/docs/index.html)
 
 ## Terms Used in This Document {#terms-used-in-this-document}
 

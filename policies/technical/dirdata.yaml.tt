@@ -3,8 +3,6 @@ breadcrumbs: >-
   [Home](/) : [Policies](/policies) : [Technical](.)
 sidebar: |
   # [Technical Policies](.)
+[% INCLUDE "index.inc" %]
 
-  <ul>
-  [% INCLUDE "index.inc" %]
-  </ul>
 ---

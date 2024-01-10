@@ -1,7 +1,11 @@
-#! /bin/sh
+#! /bin/bash
+. ./bin/utils.sh
 
-HERE=$(cd $(dirname $0); pwd)
-THIS=$(basename $0)
+HERE=$(
+    cd "$(dirname_custom $0)" || exit
+    pwd
+)
+THIS=$(basename_custom $0)
 
 # Our HTML5 template, produced from the default pandoc template with some
 # massaging by 'mk-pandoc-template'.
@@ -53,27 +57,27 @@ unset TEMP
 # Check the parsed options
 while true; do
     case "$1" in
-	'-o' | '--output' )
-	    output="$2"
-	    shift 2
-	    ;;
-	'-i' | '--index' )
-	    index=1
-	    shift
-	    ;;
-	'-h' | '--help' )
-	    echo >&2 "$usage"
-	    exit 0
-	    ;;
-	'--' )
-	    shift
-	    break
-	    ;;
-	* )
-	    echo >&2 'Internal error!'
-	    echo >&2 "$usage"
-	    exit 1
-	    ;;
+    '-o' | '--output')
+        output="$2"
+        shift 2
+        ;;
+    '-i' | '--index')
+        index=1
+        shift
+        ;;
+    '-h' | '--help')
+        echo >&2 "$usage"
+        exit 0
+        ;;
+    '--')
+        shift
+        break
+        ;;
+    *)
+        echo >&2 'Internal error!'
+        echo >&2 "$usage"
+        exit 1
+        ;;
     esac
 done
 
@@ -87,13 +91,13 @@ done
 # output files.
 if [ $# -eq 0 ]; then
     if [ -z "$output" ]; then
-	echo >&2 'Output path must be set with -o / --output in this mode'
-	exit 1
+        echo >&2 'Output path must be set with -o / --output in this mode'
+        exit 1
     fi
 
-    if [ "$(basename "$output" .html)" = "$output" ]; then
-	echo >&2 'Output path must end with .html'
-	exit 1
+    if [ "$(basename_custom "$output" .html)" = "$output" ]; then
+        echo >&2 'Output path must end with .html'
+        exit 1
     fi
 
     # Set '-' to mean stdin / stdout
@@ -109,12 +113,12 @@ nofiles=
 for f in "$@"; do
     [ "$f" = "-" ] && continue
 
-    base=$(basename "$f" .md)
+    base=$(basename_custom "$f" md)
 
     if [ "$base" = "$f" ]; then
-	errfiles="$errfiles '$f'"
+        errfiles="$errfiles '$f'"
     elif [ ! -f "$f" ]; then
-	nofiles="$nofiles '$f'"
+        nofiles="$nofiles '$f'"
     fi
 done
 if [ -n "$errfiles" ]; then
@@ -123,59 +127,62 @@ fi
 if [ -n "$nofiles" ]; then
     echo >&2 "Files no present:$nofiles"
 fi
-if [ -n "$errfiles" -o -n "$nofiles" ]; then
+if [ -n "$errfiles" ] || [ -n "$nofiles" ]; then
     exit 1
 fi
-
+title_prefix=""
 for f in "$@"; do
     if [ "$f" != "-" ]; then
-	base=$(basename "$f" .md)
-	dir=$(dirname "$f")
+        base=$(basename_custom "$f" md)
+        dir=$(dirname "$f")
+        input=$(grep "breadcrumb: " <$f)
+        prefix=${input#"breadcrumb: "}
+        if [ ! -z "$prefix" ]; then
+            title_prefix="[ ${prefix} ] - "
+        fi
 
-	if [ "$f" = "$base" ]; then
-	    continue;
-	fi
+        if [ "$f" = "$base" ]; then
+            continue
+        fi
     else
-	base=$(basename "$output" .html)
-	dir=$(dirname "$output")
+        base=$(basename_custom "$output" html)
+        dir=$(dirname "$output")
     fi
 
-    if [ "$dir" = "." -o "$dir" = "" ]; then
-	title="/$base.html"
-	top=""
+    if [ "$dir" = "." ] || [ "$dir" = "" ]; then
+        title="/$base.html"
+        top=""
     else
-	title="/$dir/$base.html"
-	top=`echo "$dir" | sed -E -e 's|[^/]+|..|g'`/
+        title="$title_prefix/$dir/$base.html"
+        top=$(echo "$dir" | sed -E -e 's|[^/]+|..|g')/
     fi
 
     # is it an index file?
     def_isindex=
-    if [ -n "$index" -o "$base" = "index" ]; then
-	def_isindex="-M is-index=true"
+    if [ -n "$index" ] || [ "$base" = "index" ]; then
+        def_isindex="-M is-index=true"
     fi
 
-    (
-	# metadata
-	meta="$dir/dirdata.yaml"
-	if [ -f "$meta" ]; then
-	    cat $meta
-	fi
+    # metadata
+    meta_file=""
+    input_file=""
+    meta="$dir/dirdata.yaml"
+    if [ -f "$meta" ]; then
+        meta_file="$HERE/../$meta"
+    fi
 
-	if [ "$f" = "-" ]; then
-	    cat
-	else
-	    cat "$f"
-	fi
-    ) | (
-	cd $dir
-	pandoc -t html5 -f markdown --template="$template" \
-               --highlight-style="$highlightstyle" \
-               --tab-stop=8 --shift-heading-level-by=1 \
-               -M author-meta='OpenSSL Foundation, Inc.' \
-               -M lang=en \
-	       -M pagetitle="$title" \
-	       $def_isindex -M top="$top"
-    ) | (
-	cat > "$dir/$base.html"
-    )
+    if [ "$f" = "-" ]; then
+        input_file="-"
+    else
+        input_file="$HERE/../$f"
+    fi
+
+    pandoc -t html5 -f markdown --template="$template" \
+        --highlight-style="$highlightstyle" \
+        --tab-stop=8 --shift-heading-level-by=1 \
+        -M author-meta='OpenSSL Foundation, Inc.' \
+        -M lang=en \
+        -M pagetitle="$title" \
+        $def_isindex -M top="$top" -o "$dir/$base.html" $meta_file $input_file
+
 done

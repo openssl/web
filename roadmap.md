@@ -32,10 +32,10 @@ of the protocol.
 #### FIPS
 
 - OpenSSL 3.0 FIPS Provider has had its FIPS 140-2 validation certificate issued.
-See the [blog post]: https://www.openssl.org/blog/blog/2022/08/24/FIPS-validation-certificate-issued/
+See the [blog post](/blog/blog/2022/08/24/FIPS-validation-certificate-issued/)
 
 - The OpenSSL 3.1 release will be about FIPS 140-3 validation submission.
-See the [blog post]: https://www.openssl.org/blog/blog/2022/09/30/fips-140-3/
+See the [blog post](/blog/blog/2022/09/30/fips-140-3/)
 
 #### Post-quantum cryptography
 

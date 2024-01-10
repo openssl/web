@@ -3,7 +3,9 @@
 # pod2html creates complete pages, but we want embeddable ones.
 # Fortunately, it's easy to find the stuff that need to go away.
 
-local $/;                       # Slurp the whole file
+use strict;
+use warnings;
+local $/; # Slurp the whole file
 my $contents = <STDIN>;
 
 $contents =~ m@^<h1 id="NAME">NAME</h1>@m;
@@ -13,5 +15,7 @@ $contents = $`;                 # </body> and everything after is stripped
 
 # Adapt all H tags to be wrapped inside H1 and H2
 $contents =~ s@(</?h)(\d)(\s|>)@$1.($2 + 2).$3@emg;
+#added from /bin/fix-man-html
+$contents =~ s|\]\(|\&rbrack;(|g; # ]( suggests a markdown link
 
 print $contents;

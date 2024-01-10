@@ -139,7 +139,7 @@ docs: subdocs manpagetts mancross manhtml
 subdocs: $(SIMPLEDOCS)
 
 clean:
-	rm -f $(SIMPLE) $(SIMPLEDOCS) $(SRCLISTS)
+	rm -rf $(SIMPLE) $(SIMPLEDOCS) $(SRCLISTS)
 
 akamai-purge:
 
@@ -315,16 +315,7 @@ mancross:
 # patterns for a for loop.
 MANHTML_TTPATTERNS=$(foreach D,$(MANMASTER_DIRS) $(MANPAGE_DIRS), $(D)/*.md.tt)
 manhtml:
-	@set -e; for t in $(MANHTML_TTPATTERNS); do \
-		if ! [ -f "$$t" ]; then continue; fi; \
-		d="$$(dirname $$t)"; \
-		h="$$(basename "$$t" .md.tt)"; \
-		i=; \
-		if [ "$$h" = "index" ]; then i=" -i"; fi; \
-		echo "$$t -> $$h.html"; \
-		./bin/from-tt -d "$$d" < "$$d/$$h.md.tt" \
-			| ./bin/md-to-html5$$i -o "$$d/$$h.html"; \
-	done
+	./bin/mk-manhtml '$(MANHTML_TTPATTERNS)'
 
 docs/manpages.md: docs/manpages.md.tt Makefile bin/from-tt
 	@rm -f $@

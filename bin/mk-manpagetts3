@@ -1,9 +1,44 @@
 #! /bin/bash -e
 
+. ./bin/job_pool.sh
+
+function process_file(){
+    F=$1
+    HERE=$2
+    series=$3
+    Dn=$4
+    Fn=$5
+    srcdir=$6
+    destdir=$7
+
+    G=$Dn/$Fn.inc
+    echo "strip-man-html < $srcdir/$F > $destdir/$G"
+    $HERE/strip-man-html < $srcdir/$F > $destdir/$G
+
+    section=$(basename $Dn | sed -e 's|^man||')
+    description="$($HERE/all-html-man-names < $destdir/$G | sed -e 's|^.* - ||' -e 's|\&|\\\&|g')"
+    names="$($HERE/all-html-man-names < $destdir/$G | sed -e 's| - .*||' -e 's|, *| |g' -e 's|/|-|g')"
+    for name in $names; do
+        G=$Dn/$name.md.tt
+        cat $HERE/../inc/manpage-template.mdtt \
+            | sed -E \
+                -e "s|\\\$release\\\$|$series|g" \
+                -e "s|\\\$sectnum\\\$|$section|g" \
+                -e "s|\\\$description\\\$|$description|g" \
+                -e "s|\\\$name\\\$|$name|g" \
+                -e "s|\\\$origname\\\$|$Fn|g" \
+                > $destdir/$G
+    done
+}
+
+CPUS=$(nproc --all)
+job_pool_init $CPUS 0
+
 HERE=$(dirname $0)
 checkoutdir=$1
 series=$2
 destdir=$3
+CPUS=$(nproc --all)
 
 rm -rf tmp-build
 rm -rf tmp-install
@@ -13,7 +48,7 @@ install=$(cd tmp-install; pwd)
 
 (
     cd tmp-build
-    $checkoutdir/Configure --prefix=$install && make install_html_docs
+    $checkoutdir/Configure --prefix=$install && make -j $CPUS install_html_docs
 )
 
 srcdir=tmp-install/share/doc/openssl/html
@@ -23,30 +58,13 @@ srcdir=tmp-install/share/doc/openssl/html
 
     if [ "$F" != "$Dn/$Fn" ]; then
         # HTML file, which we treat specially
-        G=$Dn/$Fn.inc
-        cat $srcdir/$F \
-            | $HERE/strip-man-html \
-            | $HERE/fix-man-html \
-            > $destdir/$G
-
-        section=$(basename $Dn | sed -e 's|^man||')
-        description="$($HERE/all-html-man-names < $destdir/$G | sed -e 's|^.* - ||' -e 's|\&|\\\&|g')"
-        names="$($HERE/all-html-man-names < $destdir/$G | sed -e 's| - .*||' -e 's|, *| |g' -e 's|/|-|g')"
-        for name in $names; do
-            G=$Dn/$name.md.tt
-	    cat $HERE/../inc/manpage-template.mdtt \
-                | sed -E \
-                      -e "s|\\\$release\\\$|$series|g" \
-                      -e "s|\\\$sectnum\\\$|$section|g" \
-                      -e "s|\\\$description\\\$|$description|g" \
-                      -e "s|\\\$name\\\$|$name|g" \
-                      -e "s|\\\$origname\\\$|$Fn|g" \
-                      > $destdir/$G
-        done
+        job_pool_run process_file $F $HERE $series $Dn $Fn $srcdir $destdir
     else
         # Other file types, such as images.  We simply copy those
         G=$Dn/$Fn
         mkdir -p $destdir/$Dn
-        cp $srcdir/$F $destdir/$G
+        cp -v $srcdir/$F $destdir/$G
     fi
 done
+
+job_pool_shutdown

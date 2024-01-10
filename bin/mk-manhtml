@@ -1,0 +1,27 @@
+#!/bin/bash
+# shellcheck source=job_pool.sh
+. ./bin/utils.sh
+. ./bin/job_pool.sh
+
+
+function process_file()
+{
+    t=$1
+    d=$(dirname_custom $t)
+    h="$(basename_custom $t md.tt)"
+    i=;
+    if [ "$h" = "index" ]; then i=" -i"; fi;
+    time_elapsed=$( TIMEFORMAT="%R"; { time ./bin/from-tt -d $d < $d/$h.md.tt | ./bin/md-to-html5$i -o $d/$h.html; } 2>&1 )
+    echo "$t -> $d/$h.html - $time_elapsed seconds"    
+    
+    true
+}   
+CPUS=$(nproc --all)
+job_pool_init $CPUS 0
+
+for t in $1; do
+    if ! [ -f "$t" ]; then continue; fi;
+    job_pool_run process_file $t
+done
+
+job_pool_shutdown

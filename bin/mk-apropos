@@ -1,18 +1,20 @@
-#! /bin/sh
+#! /bin/bash
 # $1 is the top of the manual page tree to look through
+. ./bin/utils.sh
 
 dir=$1
-cd $dir
+cd $dir || exit
 
-for m in `find . -name '*.md.tt' | sort`; do
-    description=`grep '^OSSL-description:' $m | sed -e 's|^[^:]*: *||' -e 's|^ *"||' -e 's|" *||'`
+for m in $(find . -name '*.md.tt' | sort); do
+    #    description=$(grep '^OSSL-description:' $m | sed -e 's|^[^:]*: *||' -e 's|^ *"||' -e 's|" *||')
+    description=$(get_description $m)
     # If there isn't a description, it isn't a manpage and should not be
     # included
     if [ "$description" = "" ]; then
-	continue
+        continue
     fi
-    manfile=`echo $m | sed -e 's|\./||'`
-    manname=`basename $manfile .md.tt`
-    origmanfile=`echo $manfile | sed -e "s|^$subdir|$origsubdir|"`
+    manfile=$(basename_custom $m)
+    manname=$(basename_custom $manfile md.tt)
+    #origmanfile=$(echo $manfile | sed -e "s|^$subdir|$origsubdir|")
     echo "| [$manname]($manname.html) | $description |"
 done

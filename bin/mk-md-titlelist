@@ -36,5 +36,5 @@ foreach my $l (@L) {
 }
 
 foreach my $t (sort keys %entries) {
-    print "<li><a href='$URLBASE$entries{$t}'>$t</a></li>\n";
+    print "      <li><a href='$URLBASE$entries{$t}'>$t</a></li>\n";
 }
