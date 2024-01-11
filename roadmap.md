@@ -3,70 +3,48 @@ breadcrumb: Roadmap
 ---
 # OpenSSL project roadmap
 
-### Last modified 4 October 2022
+Updated: 11 January 2024
 
-This document is the OpenSSL project roadmap. It is a living document
-and is expected to change over time. Objectives and dates should be
-considered aspirational.
+Please note that the current project roadmap represents a plan and vision and is
+not set in stone. As with any dynamic project, our roadmap is subject to change
+based on ongoing development insights, user feedback, and evolving priorities.
+We encourage our community to follow the project's progress and participate in
+its evolution. Stay updated and engage with us through our [project board],
+where you can track real-time updates, milestones, and changes.
 
-## Objectives
+### OpenSSL 3.3
 
-Some of these objectives can be achieved more easily and quickly
-than others.
+From OpenSSL 3.3 onwards, the [Release Steering Committee] oversees the release
+cycle. We have adopted a [time-based release policy], with scheduled releases
+every April and October. Therefore, our goal is to release version 3.3 this
+April.
 
-#### QUIC
+We plan to introduce multi-stream QUIC server support in OpenSSL 3.3,
+complementing the [client-side support] included in OpenSSL 3.2.
 
-OpenSSL is taking a multi-staged approach to the implementation of the
-[QUIC] transport protocol:
+Furthermore, we aspire to advance in various areas, including performance
+enhancements. However, we are not committing to delivering these improvements in
+OpenSSL 3.3.
 
-- For OpenSSL 3.2, the focus is on providing a client side single stream
-QUIC implementation.
+As with any OpenSSL feature release, OpenSSL 3.3 may also include additional
+features based on contributions from our community.
 
-- OpenSSL 3.3 will follow approximately six months later implementing more
-of the protocol.
+### FIPS
 
-- OpenSSL 3.4 aims to complete the implementation a further six months later.
+On December 29, 2023, we submitted our FIPS 140-3 validation report to NIST's
+[Cryptographic Module Validation Program] (CMVP) and are actively working
+towards achieving FIPS 140-3 validation. This endeavour is a continuous process
+that runs alongside our regular release schedule. We do not have a confirmed
+date or release for FIPS 140-3 certification.
 
-[QUIC]: https://datatracker.ietf.org/doc/html/rfc9000
+### How do I track the progress?
 
-#### FIPS
+For the latest updates, please visit our project board:
+- [QUIC server support](https://github.com/orgs/openssl/projects/2/views/31?pane=issue&itemId=31713456)
 
-- OpenSSL 3.0 FIPS Provider has had its FIPS 140-2 validation certificate issued.
-See the [blog post](/blog/blog/2022/08/24/FIPS-validation-certificate-issued/)
 
-- The OpenSSL 3.1 release will be about FIPS 140-3 validation submission.
-See the [blog post](/blog/blog/2022/09/30/fips-140-3/)
-
-#### Post-quantum cryptography
-
-A cryptographic algorithm needs to be defined by a national or
-international standard before it will be considered for inclusion into
-OpenSSL.  Although, there is work in progress to select
-[post-quantum algorithms] for standardisation, currently none have been.
-OpenSSL will not be including any of the candidate algorithms until the
-selection process is complete.
-
-For those interested in using the proposed algorithms now, the
-[Open Quantum Safe] project has written a [provider] for OpenSSL 3.x
-which includes the candidates.
-
-[post-quantum algorithms]: https://csrc.nist.gov/Projects/post-quantum-cryptography
-[Open Quantum Safe]: https://openquantumsafe.org/
-[provider]: https://github.com/open-quantum-safe/oqs-provider
-
-#### Substantial features
-
-There are a number of pull requests which represent substantial
-features.  Each will require a significant time investment by the
-project's contractors to review before they can be included in OpenSSL.
-These features should be included gradually over upcoming releases.
-
-1. Argon2 KDFs ([RFC 9106]; openssl/openssl#12255 & openssl/openssl#12256)
-2. Attribute Certificates ([RFC 5755]; openssl/openssl#15857)
-3. Hybrid Public Key Encryption ([RFC 9180]; openssl/openssl#17172)
-4. Raw Public Keys ([RFC 7250]; openssl/openssl#16620)
-
-[RFC 5755]: https://datatracker.ietf.org/doc/html/rfc5755
-[RFC 7250]: https://datatracker.ietf.org/doc/html/rfc7250
-[RFC 9106]: https://datatracker.ietf.org/doc/html/rfc9106
-[RFC 9180]: https://datatracker.ietf.org/doc/html/rfc9180
+[project board]:https://github.com/orgs/openssl/projects/2/views/28
+[Release Steering Committee]:https://www.openssl.org/policies/general/release-policy.html#fn2
+[time-based release policy]:https://www.openssl.org/policies/general/release-policy.html
+[client-side support]:https://github.com/openssl/openssl/blob/openssl-3.2/README-QUIC.md
+[Cryptographic Module Validation Program]:https://csrc.nist.gov/projects/cryptographic-module-validation-program
