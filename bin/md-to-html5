@@ -177,7 +177,8 @@ for f in "$@"; do
         input_file="$HERE/../$f"
     fi
 
-    pandoc -t html5 -f markdown --template="$template" \
+    pandoc -t html5 -f markdown-markdown_in_html_blocks \
+        --template="$template" \
         --highlight-style="$highlightstyle" \
         --tab-stop=8 --shift-heading-level-by=1 \
         -M author-meta='OpenSSL Foundation, Inc.' \
