@@ -11,6 +11,10 @@ relevance to it:
 
 **CVE ID** | **Fixed** | **FIPS?** | **Notes**
 ----- | --: | :-: | :---------------
+[CVE-2023-6237] | 3.0.13<br>3.1.5<br>3.2.1 | **yes** | EVP_PKEY_public_check() can take a long time
+[CVE-2023-6129] | 3.0.13<br>3.1.5<br>3.2.1 | no | 3.0.13, 3.1.5 and 3.2.1 are not released yet
+[CVE-2023-5678] | 3.0.13<br>3.1.5 | no | 3.0.13 and 3.1.5 are not released yet
+[CVE-2023-5363] | 3.0.12<br>3.1.4 | no |
 [CVE-2023-4807] | 3.0.11<br>3.1.3 | no |
 [CVE-2023-3817] | 3.0.10<br>3.1.2 | no |
 [CVE-2023-3446] | 3.0.10<br>3.1.2 | no |
@@ -45,6 +49,10 @@ relevance to it:
 [CVE-2021-4044] | 3.0.1 | no |
 | | | | **Release of 3.0.0 FIPS provider**
 
+[CVE-2023-6237]: /news/vulnerabilities.html#CVE-2023-6237
+[CVE-2023-6129]: /news/vulnerabilities.html#CVE-2023-6129
+[CVE-2023-5678]: /news/vulnerabilities.html#CVE-2023-5678
+[CVE-2023-5363]: /news/vulnerabilities.html#CVE-2023-5363
 [CVE-2023-4807]: /news/vulnerabilities.html#CVE-2023-4807
 [CVE-2023-3817]: /news/vulnerabilities.html#CVE-2023-3817
 [CVE-2023-3446]: /news/vulnerabilities.html#CVE-2023-3446
