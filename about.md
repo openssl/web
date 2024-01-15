@@ -150,7 +150,11 @@ SSLeay, and then to the OpenSSL Project, which I became an active member of
 in late 1999.  This has been my most consistent FOSS activity ever since.
 
 ## Saša Nedvědický
-To Be Defined =)
+I joined OpenSSL project in Jan 2024. Came from Oracle/Solaris where I was
+maintaining various components (MIT-kerberos, network firewall). The Solaris
+job also brought me to OpenBSD community where I co-maintain pf(4). Preferred
+OS is unix, preferred language is C. I always try to follow [Zen of
+Python](https://en.wikipedia.org/wiki/Zen_of_Python).
 
 ## Tim Hudson
 Co-founded SSLeay in 1996, worked on RSA's "forks" from 1998-2007, joined
