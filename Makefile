@@ -128,11 +128,11 @@ TECHNICAL_POLICIES=$(filter-out $(CHECKOUTS)/technical-policies/policies/README.
 	@rm -f $@
 	./bin/from-tt $<
 
-all: suball subdocs manmastertts mancross manhtml sitemap akamai-purge
+all: suball subdocs manmastertts mancross manhtml akamai-purge
 
 suball: $(SIMPLE) $(SRCLISTS)
 
-relupd: suball docs sitemap akamai-purge
+relupd: suball docs akamai-purge
 
 docs: subdocs manpagetts mancross manhtml
 
@@ -389,15 +389,11 @@ policies/glossary.html: $(GLOSSARY) bin/md-to-html5 policies/dirdata.yaml
 ##
 ##  $(SIMPLE) -- SIMPLE GENERATED FILES
 ##
-.PHONY: sitemap
+.PHONY:
 newsflash.inc: news/newsflash.inc
 	@rm -f $@
 	head -7 $< >$@
 index.md: newsflash.inc inc/legalities.md
-
-sitemap sitemap.txt: bin/mk-sitemap Makefile
-	@rm -f sitemap.txt
-	./bin/mk-sitemap master $(SERIES) > sitemap.txt
 
 community/committers.inc: $(PERSONDB) bin/mk-committers Makefile
 	@rm -f $@

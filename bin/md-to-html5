@@ -156,7 +156,9 @@ for f in "$@"; do
         title="$title_prefix/$dir/$base.html"
         top=$(echo "$dir" | sed -E -e 's|[^/]+|..|g')/
     fi
-
+    if [ "$base" = "err404" ]; then
+      top="/"
+    fi
     # is it an index file?
     def_isindex=
     if [ -n "$index" ] || [ "$base" = "index" ]; then
