@@ -213,8 +213,9 @@ for k, cve in sorted(entries.items(), reverse=True):
                     commitId = git.split(";")[-1].split("=")[-1]
                     git = f"https://github.com/openssl/openssl/commit/{commitId}"
                 if (
-                    fixedin.startswith("1.0.2") and fixedin[5] >= "w"
-                ):  # 1.0.2w and above hack
+                    (fixedin.startswith("1.0.2") and fixedin[5] >= "v")
+                    or (fixedin.startswith("1.1.1") and fixedin[5] >= "x")
+                ):  # 1.0.2v/1.1.1x and above hack
                     allissues += (
                         '<a href="/support/contracts.html?giturl=%s">(premium support)</a> '
                         % (git)
