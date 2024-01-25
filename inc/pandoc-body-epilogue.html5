@@ -7,7 +7,7 @@ $else$
                     : <a href="">$breadcrumb$</a>
 $endif$
 $endif$
-                    <br/><a href="$top$sitemap.txt">Sitemap</a>
+                    <br/><a href="$top$sitemap.xml">Sitemap</a>
                 </footer>
             </article>
         </div>
