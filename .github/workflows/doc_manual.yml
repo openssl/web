@@ -13,26 +13,11 @@ jobs:
   # This workflow contains a single job called "greet"
   build_doc_site:
     # The type of runner that the job will run on
-    runs-on: [ ubuntu-22.04-self-hosted ]
+    runs-on: [ doc-builder-22.04 ]
 #    runs-on: [ self-hosted ]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Runs a single command using the runners shell
-    - name: Show auth
-      run: gcloud auth list
-    - name: store secrets file
-      run: |
-          cat << EOF > /tmp/key.json
-          ${{ secrets.SERVICE_ACCOUNT_KEY }}
-          EOF
-    - name: activate service account
-      run: gcloud auth activate-service-account --key-file=/tmp/key.json
-    - name: Show auth
-      run: gcloud auth list
-    - name: Trigger doc build
-      run: gcloud run jobs execute pu-cdn-build-doc-job-production --region europe-north1 --wait
-    - name: Remove service account
-      run: gcloud auth revoke
-    - name: Remove access key file
-      run: rm -f /tmp/key.json
+      # Runs a single command using the runners shell
+      - name: Build_web
+        run: /scripts/build_doc.sh
