@@ -39,6 +39,8 @@ note sponsors may choose to remain anonymous.
 
 [![Shiguredo Inc.](/img/shiguredo-logo-med.png){.sponsorlogo}](https://shiguredo.jp/)
 
+[![NetApp](/img/netapp-logo-med.jpg){.sponsorlogo}](https://www.netapp.com/)
+
 </div>
 
 ### Silver:
