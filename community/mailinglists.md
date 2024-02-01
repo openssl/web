@@ -16,6 +16,8 @@ by all other members of the list.
 | [openssl-dev](https://mta.openssl.org/mailman/listinfo/openssl-dev)           | This is now a read-only list, and is archived.                                    |
 | [openssl-users](https://mta.openssl.org/mailman/listinfo/openssl-users)       | Any questions about building, using, etc., OpenSSL itself.                        |
 
+<p>&nbsp;</p>
+
 ## Archives
 
 Public archives can be found at the following locations:
@@ -27,6 +29,8 @@ Public archives can be found at the following locations:
 | openssl-project      | <https://marc.info/?l=openssl-project><br /><https://www.mail-archive.com/openssl-project@openssl.org/>                                                                 |
 | openssl-dev archives | <https://marc.info/?l=openssl-dev><br /><https://www.mail-archive.com/openssl-dev@openssl.org/><br /><https://groups.google.com/groups?group=mailing.openssl.dev>       |
 | openssl-commits      | <https://marc.info/?l=openssl-cvs><br /><https://groups.google.com/groups?group=mailing.openssl.cvs>                                                                    |
+
+<p>&nbsp;</p>
 
 Archives can also be found at our [mail server](https://mta.openssl.org/),
 under the page for each mailing list.
