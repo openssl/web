@@ -20,6 +20,7 @@ relevance to it:
 [CVE-2023-3817] | 3.0.10<br>3.1.2 | no |
 [CVE-2023-3446] | 3.0.10<br>3.1.2 | no |
 [CVE-2023-2975] | 3.0.10<br>3.1.2 | no |
+| | | | **Release of 3.0.9 FIPS provider**
 [CVE-2023-2650] | 3.0.9<br>3.1.1 | no |
 [CVE-2023-1255] | 3.0.9<br>3.1.1 | **yes** | Possible denial of service on Arm 64 (aarch64) using AES XTS mode
 [CVE-2023-0466] | 3.0.9<br>3.1.1 | no |
@@ -50,6 +51,7 @@ relevance to it:
 [CVE-2021-4044] | 3.0.1 | no |
 | | | | **Release of 3.0.0 FIPS provider**
 
+[CVE-2024-0727]: /news/vulnerabilities.html#CVE-2024-0727
 [CVE-2023-6237]: /news/vulnerabilities.html#CVE-2023-6237
 [CVE-2023-6129]: /news/vulnerabilities.html#CVE-2023-6129
 [CVE-2023-5678]: /news/vulnerabilities.html#CVE-2023-5678
