@@ -34,13 +34,14 @@ these older versions are encouraged to upgrade to 3.2 or 3.0 as soon as
 possible. Extended support for 1.1.1 and 1.0.2 to gain access to security fixes
 for those versions is [available](/support/contracts.html).
 
-The following OpenSSL version(s) are FIPS validated:
+The following OpenSSL version(s) are FIPS validated. Versions marked as historic
+were previously validated, but are no longer listed on the current certificate:
 
 &nbsp;OpenSSL Version&nbsp; | &nbsp;Certificate&nbsp; | &nbsp;Security Policy&nbsp;
 :-: | :-: | :-:
 3.0.9 | [certificate][cert4282] | [security policy][secpol 3.0.9]
 3.0.8 | [certificate][cert4282] | [security policy][secpol 3.0.8]
-3.0.0 | [certificate][cert4282] | [security policy][secpol 3.0.0]
+3.0.0 (historic) | [certificate][cert4282] | [security policy][secpol 3.0.0]
 
 [cert4282]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4282
 [secpol 3.0.0]: fips-doc/openssl-3.0.0-security-policy-2023-01-26.pdf
