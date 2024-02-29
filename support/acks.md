@@ -47,8 +47,6 @@ note sponsors may choose to remain anonymous.
 
 <div class="sponsorsection">
 
-[VeriSign, Inc.](https://www.verisign.com/)
-
 </div>
 
 ### Bronze:
