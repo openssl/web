@@ -33,6 +33,14 @@ note sponsors may choose to remain anonymous.
   }
 </style>
 
+### Platinum:
+
+<div class="sponsorsection">
+
+[![Bloomberg](/img/Bloomberg-LP-(Black).png){.sponsorlogo}](https://www.bloomberg.com/company/)
+
+</div>
+
 ### Gold:
 
 <div class="sponsorsection">
@@ -40,12 +48,6 @@ note sponsors may choose to remain anonymous.
 [![Shiguredo Inc.](/img/shiguredo-logo-med.png){.sponsorlogo}](https://shiguredo.jp/)
 
 [![NetApp](/img/netapp-logo-med.jpg){.sponsorlogo}](https://www.netapp.com/)
-
-</div>
-
-### Silver:
-
-<div class="sponsorsection">
 
 </div>
 
