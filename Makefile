@@ -36,14 +36,14 @@ PERSONDB=FORCE
 ##  need to make the distinction, because certain files are produced
 ##  differently.
 SERIES1=
-SERIES3=3.2 3.1 3.0
+SERIES3=3.3 3.2 3.1 3.0
 SERIES=$(SERIES3) $(SERIES1)
 ##  Older series.  The second type is for source listings
 OLDSERIES=1.1.1 1.1.0 1.0.2 1.0.1 1.0.0 0.9.8 0.9.7 0.9.6
 OLDSERIES2=1.1.1 1.1.0 1.0.2 1.0.1 1.0.0 0.9.x
 ##  Series for manual layouts, named similar to SERIES1, SERIES3, SERIES
 MANSERIES1=1.1.1 1.0.2
-MANSERIES3=3.2 3.1 3.0
+MANSERIES3=3.3 3.2 3.1 3.0
 MANSERIES=$(MANSERIES3) $(MANSERIES1)
 
 ##  Future series, i.e. a series that hasn't had any final release yet.
