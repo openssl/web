@@ -63,11 +63,4 @@ note sponsors may choose to remain anonymous.
 
 </div>
 
-------------------------------------------------------------------------
 
-## Other Donations
-
-We also would like to thank those who contribute via [GitHub
-Sponsors](https://github.com/sponsors/openssl), as well as the
-organizations who contribute [in-kind donations to the
-project](/community/thanks.html).
