@@ -15,6 +15,7 @@ Redirect permanent /policies/codingstyle.html /policies/technical/coding-style.h
 Redirect permanent /policies/secpolicy.html /policies/general/security-policy.html
 Redirect permanent /policies/travel.html /policies/general/travel-policy.html
 Redirect permanent /policies/platformpolicy.html /policies/general/platform-policy.html
+Redirect permanent /community/thanks.html /support/acks.html
 
 <Files *.md5>
 ForceType application/binary
