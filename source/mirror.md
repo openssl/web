@@ -6,8 +6,6 @@ breadcrumb: Mirrors
 You can download the latest distribution files from the following FTP
 areas:
 
-<p>
-
 | Locale | URL                                                |
 |--------|----------------------------------------------------|
 | CZ     | <ftp://ftp.fi.muni.cz/pub/openssl/>                |
@@ -17,7 +15,5 @@ areas:
 | HU     | <ftp://ftp.kfki.hu/pub/packages/security/openssl/> |
 | PL     | <ftp://guest.kuria.katowice.pl/pub/openssl/>       |
 | PL     | <rsync://ftp.tpnet.pl/pub/security/openssl/>       |
-
-</p>
 
 We are not interested in adding additional mirrors at the time.
