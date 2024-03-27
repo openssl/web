@@ -8,9 +8,6 @@ The OpenSSL project relies on funding to maintain and improve OpenSSL.
 You can support the OpenSSL project financially with the purchase of a
 [support contract](contracts.html), or by a sponsorship donation.
 
-We can accept smaller sponsorship donations via
-[GitHub Sponsors](https://github.com/sponsors/openssl).
-
 We do not have a PayPal account. Please do not donate to any PayPal
 account claiming to be associated with us!
 
