@@ -12,6 +12,19 @@ We encourage our community to follow the project's progress and participate in
 its evolution. Stay updated and engage with us through our [project board],
 where you can track real-time updates, milestones, and changes.
 
+### OpenSSL 3.4
+OpenSSL 3.4 is targeting the following enhancements:
+* Expanded use of RCU locks where appropriate for performance enhancements
+* Optimization of algorithm fetching to improve performance
+* Composite algorithm implementations
+* Implementation of Attribute Certificates
+* Elimination of the use of atexit
+* Server-side QUIC support
+
+As in our prior release the [Release Steering Comittee] will oversee the release
+cycle.  Our target release schedule can be viewed [here](https://github.com/orgs/openssl/projects/11/views/23)
+
+
 ### OpenSSL 3.3
 
 From OpenSSL 3.3 onwards, the [Release Steering Committee] oversees the release
