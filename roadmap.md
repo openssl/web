@@ -15,11 +15,10 @@ where you can track real-time updates, milestones, and changes.
 ### OpenSSL 3.4
 OpenSSL 3.4 is targeting the following enhancements:
 * Expanded use of RCU locks where appropriate for performance enhancements
-* Optimization of of algorithm fetching to improve performance
+* Optimization of algorithm fetching to improve performance
 * Composite algorithm implementations
 * Implementation of Attribute Certificates
 * Elimination of the use of atexit
-* DTLS 1.3 support
 * QUIC Unreliable datagram extensions (RFC 9221)
 
 As in our prior release the [Release Steering Comittee] will oversee the release
