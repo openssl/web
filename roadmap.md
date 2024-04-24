@@ -19,7 +19,7 @@ OpenSSL 3.4 is targeting the following enhancements:
 * Composite algorithm implementations
 * Implementation of Attribute Certificates
 * Elimination of the use of atexit
-* QUIC Unreliable datagram extensions (RFC 9221)
+* Server-side QUIC support 
 
 As in our prior release the [Release Steering Comittee] will oversee the release
 cycle.  Our target release schedule can be viewed [here](https://github.com/orgs/openssl/projects/11/views/23)
