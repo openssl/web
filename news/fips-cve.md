@@ -11,8 +11,11 @@ relevance to it:
 
 **CVE ID** | **Fixed** | **FIPS?** | **Notes**
 ----- | --: | :-: | :---------------
+[CVE-2024-4741] | 3.0.14<br>3.1.6<br>3.2.2<br>3.3.1 | no |
+[CVE-2024-4603] | 3.0.14<br>3.1.6<br>3.2.2<br>3.3.1 | **yes** | EVP_PKEY_public_check() can take a long time. **Workaround:** First check the value returned by EVP_PKEY_get_bits() and reject too large keys.
+[CVE-2024-2511] | 3.0.14<br>3.1.6<br>3.2.2 | no |
 [CVE-2024-0727] | 3.0.13<br>3.1.5<br>3.2.1 | no |
-[CVE-2023-6237] | 3.0.13<br>3.1.5<br>3.2.1 | **yes** | EVP_PKEY_public_check() can take a long time
+[CVE-2023-6237] | 3.0.13<br>3.1.5<br>3.2.1 | **yes** | EVP_PKEY_public_check() can take a long time. **Workaround:** First check the value returned by EVP_PKEY_get_bits() and reject too large keys.
 [CVE-2023-6129] | 3.0.13<br>3.1.5<br>3.2.1 | no |
 [CVE-2023-5678] | 3.0.13<br>3.1.5 | no |
 [CVE-2023-5363] | 3.0.12<br>3.1.4 | no |
@@ -51,6 +54,9 @@ relevance to it:
 [CVE-2021-4044] | 3.0.1 | no |
 | | | | **Release of 3.0.0 FIPS provider**
 
+[CVE-2024-4714]: /news/vulnerabilities.html#CVE-2024-4741
+[CVE-2024-4603]: /news/vulnerabilities.html#CVE-2024-4603
+[CVE-2024-2511]: /news/vulnerabilities.html#CVE-2024-2511
 [CVE-2024-0727]: /news/vulnerabilities.html#CVE-2024-0727
 [CVE-2023-6237]: /news/vulnerabilities.html#CVE-2023-6237
 [CVE-2023-6129]: /news/vulnerabilities.html#CVE-2023-6129
