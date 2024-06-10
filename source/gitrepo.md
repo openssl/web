@@ -3,33 +3,8 @@ breadcrumb: Git Repository
 ---
 # Git Repository
 
-The OpenSSL software is developed using a Git repository. Read-only access
-to the repository is available at git.openssl.org. We also maintain a
-downstream clone on GitHub, at <https://github.com/openssl/openssl> on
-GitHub. This repository is updated with every commit and is accessible
-through a number of protocols.
-
-On the OpenSSL repository we only support the *git* protocol. Use the
-following command to clone the git repository including all available
-branches and tags:
-
-``` console
-$ git clone git://git.openssl.org/openssl.git
-```
-
-Access to specific branches is possible via the standard branch and
-checkout commands. See the discussion of branch naming below for more
-information.
-
-On Windows, once the repository is cloned, you should ensure that line
-endings are set correctly:
-
-``` console
-$ cd openssl
-$ git config core.autocrlf false
-$ git config core.eol lf
-$ git checkout .
-```
+The OpenSSL software is developed using a git repository. The
+repository is available on GitHub at <https://github.com/openssl/openssl>.
 
 ## Git branch names and tagging
 
