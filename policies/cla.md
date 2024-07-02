@@ -44,7 +44,7 @@ sign their own ICLA as an individual.
 
 If you have not already done so, please complete and sign a printout of
 the above ICLA (and CCLA if necessary), then scan and email a pdf file
-of the Agreement(s) to <legal@opensslfoundation.org>.
+of the Agreement(s) to <cla@openssl.org>.
 
 If you prefer snail mail, send an original signed Agreement to the
 
